@@ -1,0 +1,40 @@
+﻿<EntityChart>
+  <Name>FailedTemplates</Name>
+  <Kind>Column</Kind>
+  <LimitCount>3</LimitCount>
+  <Fetch version="1.0">
+    <entity name="resco_questionnaire">
+      <filter type="and">
+        <condition attribute="resco_istemplate" operator="eq" value="0"/>
+        <condition attribute="resco_result" operator="eq" value="Failed"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#FF0000FF</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#FF0000FF</Color>
+  </TargetValue>
+  <SerializedBindings/>
+  <Attributes>
+    <EntityName>resco_questionnaire</EntityName>
+    <CamelCase>resco_questionnaire</CamelCase>
+  </Attributes>
+  <Series>
+    <Series>
+      <Attribute>resco_questionnaireid</Attribute>
+      <Color>#FF1eff00</Color>
+    </Series>
+  </Series>
+  <GroupBySeries>
+    <GroupBySeries>
+      <Attribute>resco_templateid</Attribute>
+    </GroupBySeries>
+  </GroupBySeries>
+  <Axis>resco_templateid</Axis>
+  <BarStyle>Stacked</BarStyle>
+</EntityChart>

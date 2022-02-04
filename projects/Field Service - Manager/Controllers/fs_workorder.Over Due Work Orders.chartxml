@@ -1,0 +1,41 @@
+﻿<EntityChart>
+  <Name>Over Due Work Orders</Name>
+  <Kind>Gauge</Kind>
+  <LimitCount>3</LimitCount>
+  <Fetch version="1.0">
+    <entity name="fs_workorder">
+      <filter type="and">
+        <condition attribute="duedate" operator="olderthan-x-hours" value="1"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+    <ValueType>Constant</ValueType>
+    <NumericValue>1</NumericValue>
+  </MinValue>
+  <MaxValue>
+    <Color>#FF0000FF</Color>
+    <ValueType>Constant</ValueType>
+    <NumericValue>10</NumericValue>
+  </MaxValue>
+  <TargetValue>
+    <Attribute>id</Attribute>
+    <Color>#FF0000FF</Color>
+  </TargetValue>
+  <SerializedBindings/>
+  <Attributes>
+    <EntityName>fs_workorder</EntityName>
+    <CamelCase>fs_workorder</CamelCase>
+  </Attributes>
+  <Series>
+    <Series>
+      <Attribute>id</Attribute>
+      <Color>#FFfb9d51</Color>
+    </Series>
+  </Series>
+  <GroupBySeries>
+    <GroupBySeries/>
+  </GroupBySeries>
+  <Axis/>
+</EntityChart>

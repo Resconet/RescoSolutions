@@ -1,0 +1,98 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>fs_agreementjob</EntityName>
+    <CamelCase>fs_agreementjob</CamelCase>
+  </Attributes>
+  <Name>Default</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <AutoHeader>2</AutoHeader>
+  <OrderBy>name</OrderBy>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SerializedBindings>
+    <string>fs_agreementid</string>
+    <string>statuscode</string>
+    <string>fs_assetid</string>
+    <string>id</string>
+    <string>name</string>
+    <string>fs_validfrom</string>
+    <string>fs_validto</string>
+    <string>fs_agreementid.fs_agreement.fs_customerid</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>90</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary_blue</StyleName>
+          <Bounds>16,8,178,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <StyleName>Primary Right</StyleName>
+          <Bounds>200,8,108,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_validfrom">
+          <StyleName>Secondary Right</StyleName>
+          <Bounds>180,47,128,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_validto">
+          <StyleName>Secondary Right</StyleName>
+          <Bounds>180,64,128,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_assetid">
+          <StyleName>gray</StyleName>
+          <Bounds>86,64,93,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Agreement:">
+          <IsConstant>true</IsConstant>
+          <StyleName>Secondary</StyleName>
+          <Bounds>16,47,64,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_agreementid">
+          <StyleName>gray</StyleName>
+          <Bounds>86,47,93,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Asset:">
+          <IsConstant>true</IsConstant>
+          <StyleName>Secondary</StyleName>
+          <Bounds>16,64,64,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Customer:">
+          <IsConstant>true</IsConstant>
+          <StyleName>Secondary</StyleName>
+          <Bounds>16,30,64,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_agreementid.fs_agreement.fs_customerid">
+          <StyleName>gray</StyleName>
+          <Bounds>86,30,222,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

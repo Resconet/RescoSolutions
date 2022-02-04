@@ -1,0 +1,68 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>resco_questionnaire</EntityName>
+    <CamelCase>resco_questionnaire</CamelCase>
+    <ClassBinding>
+      <SerializedClassBinding name="#Name" label="Localized Name" type="String"/>
+      <SerializedClassBinding name="#Description" label="Localized Description" type="String"/>
+      <SerializedClassBinding name="#LocalizedResult" label="Localized Result" type="String"/>
+    </ClassBinding>
+  </Attributes>
+  <Name>Reuse</Name>
+  <Kind>LookupList</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>resco_name</OrderBy>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SerializedBindings>
+    <string>createdby</string>
+    <string>createdon</string>
+    <string>resco_questionnaireid</string>
+    <string>resco_istemplate</string>
+    <string>resco_localization</string>
+    <string>resco_name</string>
+    <string>resco_options</string>
+    <string>resco_templateid</string>
+    <string>resco_templatedependent</string>
+    <string>resco_templateid.resco_questionnaire.resco_localization</string>
+    <string>resco_templateid.resco_questionnaire.resco_options</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.resco_istemplate&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:0&lt;/arg&gt;&lt;/condition&gt;&lt;group e="true" op="Or"&gt;&lt;group e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.resco_templatedependent&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:1&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.(resco_templateid.resco_questionnaire.resco_options)&lt;/var&gt;&lt;op&gt;Contains&lt;/op&gt;&lt;arg&gt;String:&amp;quot;copyStaticImages&amp;quot;:false&lt;/arg&gt;&lt;/condition&gt;&lt;/group&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.resco_options&lt;/var&gt;&lt;op&gt;Contains&lt;/op&gt;&lt;arg&gt;String:&amp;quot;copyStaticImages&amp;quot;:false&lt;/arg&gt;&lt;/condition&gt;&lt;/group&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Row.(inspections.survey).Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:QuestionnaireIconTemplate&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>52</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="#Name">
+          <StyleName>0102 h2</StyleName>
+          <Bounds>62,2,250,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="createdby">
+          <StyleName>0103 p grey</StyleName>
+          <Bounds>62,31,131,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="createdon">
+          <StyleName>0103 p grey</StyleName>
+          <Bounds>194,31,117,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>15</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="inspections.survey">
+          <IsConstant>true</IsConstant>
+          <StyleName>QuestionnaireIcon</StyleName>
+          <Bounds>9,3,42,42</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

@@ -1,0 +1,26 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>fs_workorderincident</EntityName>
+  <CamelCase>fs_workorderincident</CamelCase>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="name"/>
+        <DetailItem SchemaName="incidenttemplateid"/>
+        <DetailItem SchemaName="workorderid"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>WorkOrder Products List</Name>
+      <Binding SchemaName="fs_workorderproduct.workorderincidentid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiOrientation="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>WorkOrder Tasks List</Name>
+      <Binding SchemaName="fs_workordertask.workorderincidentid"/>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

@@ -1,0 +1,69 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>fs_agreementjobdate</EntityName>
+    <CamelCase>fs_agreementjobdate</CamelCase>
+  </Attributes>
+  <Name>List</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>800</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>fs_agreementjobid</string>
+    <string>fs_jobdate</string>
+    <string>id</string>
+    <string>name</string>
+    <string>fs_workorderid</string>
+    <string>fs_agreementjobid.fs_agreementjob.fs_assetid</string>
+    <string>fs_agreementjobid.fs_agreementjob.name</string>
+    <string>fs_agreementjobid.fs_agreementjob.fs_agreementid.fs_agreement.fs_customerid</string>
+    <string>fs_workorderid.fs_workorder.workorder_number</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>25</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="fs_agreementjobid">
+          <StyleName>primary</StyleName>
+          <Bounds>0,0,56,25</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_workorderid.fs_workorder.workorder_number">
+          <StyleName>primary_blue</StyleName>
+          <Bounds>55,0,55,25</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_jobdate">
+          <StyleName>primary</StyleName>
+          <Bounds>204,0,50,25</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_agreementjobid.fs_agreementjob.name">
+          <StyleName>primary_blue</StyleName>
+          <Bounds>254,0,66,25</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_agreementjobid.fs_agreementjob.fs_assetid">
+          <StyleName>primary_blue</StyleName>
+          <Bounds>109,0,45,25</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_agreementjobid.fs_agreementjob.fs_agreementid.fs_agreement.fs_customerid">
+          <StyleName>primary_blue</StyleName>
+          <Bounds>153,0,52,25</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

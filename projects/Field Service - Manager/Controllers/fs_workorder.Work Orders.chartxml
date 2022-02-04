@@ -1,0 +1,31 @@
+﻿<EntityChart>
+  <Name>Work Orders</Name>
+  <Kind>Column</Kind>
+  <LimitCount>3</LimitCount>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#FF0000FF</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#FF0000FF</Color>
+  </TargetValue>
+  <SerializedBindings/>
+  <Attributes>
+    <EntityName>fs_workorder</EntityName>
+    <CamelCase>fs_workorder</CamelCase>
+  </Attributes>
+  <Series>
+    <Series>
+      <Attribute>statuscode</Attribute>
+      <Color>#FF0000FF</Color>
+    </Series>
+  </Series>
+  <GroupBySeries>
+    <GroupBySeries>
+      <Attribute>statuscode</Attribute>
+    </GroupBySeries>
+  </GroupBySeries>
+  <Axis>statuscode</Axis>
+</EntityChart>

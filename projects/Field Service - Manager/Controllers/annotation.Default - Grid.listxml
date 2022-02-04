@@ -1,0 +1,44 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>annotation</EntityName>
+    <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Default - Grid</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>subject</OrderBy>
+  <SerializedBindings>
+    <string>id</string>
+    <string>isdocument</string>
+    <string>notetext</string>
+    <string>subject</string>
+  </SerializedBindings>
+  <IsHidden>true</IsHidden>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>129</Width>
+      <Height>120</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="subject">
+          <StyleName>Secondary</StyleName>
+          <Bounds>8,97,118,19</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>noteimage</StyleName>
+          <Bounds>24,7,85,85</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

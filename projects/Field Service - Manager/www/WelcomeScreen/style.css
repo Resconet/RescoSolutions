@@ -1,0 +1,197 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #2079e4;
+}
+
+html {
+  display: flex;
+  color: #ffffff;
+}
+
+.swiper {
+  height: 100%;
+}
+
+.swiper-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 80px 100px 0 40px;
+}
+
+.swiper-description,
+.swiper-title,
+.resco-wiki {
+  width: 55%;
+  padding-left: 40px;
+}
+.swiper-description a,
+.swiper-title a,
+.resco-wiki a {
+  color: #ffffff;
+}
+
+.swiper-description {
+  width: 45%;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.swiper-welcome {
+  font-size: 18px;
+}
+
+.swiper-title {
+  font-size: 64px;
+  line-height: 65px;
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+
+.resco-wiki {
+  font-weight: bottom;
+  font-size: 30px;
+  padding-top: 40px;
+}
+
+.swiper-close-button {
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  cursor: pointer;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: 90%;
+  color: #ffffff;
+  width: auto;
+  border-radius: 12px;
+  width: 15%;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  padding: 6px 0;
+  width: 20%;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: none;
+}
+.swiper-button-next img,
+.swiper-button-prev img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  margin-top: 3px;
+}
+
+.swiper-button-prev {
+  left: 5%;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+}
+.swiper-button-prev img {
+  margin-right: 18px;
+}
+
+.swiper-button-next,
+.swiper-button-started {
+  right: 5%;
+  background-color: #f2a854;
+  border: 1px solid #f2a854;
+}
+.swiper-button-next img,
+.swiper-button-started img {
+  margin-left: 18px;
+}
+
+.swiper-button-started {
+  position: absolute;
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+  z-index: 10;
+  justify-content: center;
+  left: auto;
+  top: 90%;
+  color: #ffffff;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 27px;
+  align-items: center;
+  padding: 6px 0;
+  width: 25%;
+  right: 5%;
+  background-color: #f2a854;
+  display: none;
+  cursor: pointer;
+}
+.swiper-button-started a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.swiper-slide {
+  background: no-repeat;
+  background-position: right 0% bottom 59%;
+}
+
+.slide-1 {
+  background-image: url("img/asset.png");
+}
+
+.slide-2 {
+  background-image: url("img/schedule.png");
+}
+
+.slide-3 {
+  background-image: url("img/order.png");
+}
+
+.slide-4 {
+  background-image: url("img/forms.png");
+}
+
+.slide-5 {
+  background-image: url("img/mobile-app.png");
+}
+
+.swiper-button-disabled {
+  display: none;
+}
+
+@media screen and (max-width : 1000px),
+screen and (max-height: 650px) {
+	body {
+		zoom: 0.8;
+	}
+}
+
+@media screen and (max-width : 800px),
+screen and (max-height: 550px) {
+	body {
+		zoom: 0.6;
+	}
+}
+
+@media screen and (max-width : 600px),
+screen and (max-height: 450px) {
+	body {
+		zoom: 0.4;
+	}
+}
+
+@media screen and (max-width : 400px),
+screen and (max-height: 250px) {
+	body {
+		zoom: 0.2;
+	}
+}

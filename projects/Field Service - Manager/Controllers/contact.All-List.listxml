@@ -1,0 +1,82 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>contact</EntityName>
+    <CamelCase>contact</CamelCase>
+  </Attributes>
+  <Name>All-List</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>800</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>telephone1</string>
+    <string>address1_city</string>
+    <string>contacttype</string>
+    <string>parentcustomerid</string>
+    <string>emailaddress1</string>
+    <string>name</string>
+    <string>id</string>
+    <string>mobilephone</string>
+    <string>resco_portalaccess</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="contact">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>65</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>5,4,143,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="parentcustomerid">
+          <StyleName>primary_blue</StyleName>
+          <Bounds>149,4,102,28</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="address1_city">
+          <StyleName>primary</StyleName>
+          <Bounds>253,4,63,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="telephone1">
+          <StyleName>primary_blue</StyleName>
+          <Bounds>6,35,115,28</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="contacttype">
+          <StyleName>Primary Right Blue</StyleName>
+          <Bounds>216,35,54,28</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resco_portalaccess">
+          <StyleName>primary</StyleName>
+          <Bounds>272,35,42,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="emailaddress1">
+          <StyleName>primary_blue</StyleName>
+          <Bounds>123,35,90,28</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

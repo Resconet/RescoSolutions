@@ -1,0 +1,8 @@
+﻿<tree entity="fs_agreementjobdate" view="Default">
+  <parent entity="fs_agreementjob" view="Maintenance Job" levelField="fs_agreementjobid">
+    <parent entity="fs_agreement" view="Approved Agreements" levelField="fs_agreementid">
+      <parent entity="account" view="Active Customers" levelField="fs_customerid"/>
+    </parent>
+  </parent>
+  <child entity="fs_workorder" view="WorkOrders" levelField="originatingagreementjobdateid"/>
+</tree>

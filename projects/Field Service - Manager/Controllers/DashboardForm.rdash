@@ -1,0 +1,15 @@
+﻿<Dashboard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0">
+  <Columns>2</Columns>
+  <Rows>3</Rows>
+  <Items>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="fs_workorderschedule;fs_workorderschedule.WorkOrder Schedules" Options="3">
+      <Bounds>0,1,1,2</Bounds>
+    </DashboardComponent>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="fs_workorder;fs_workorder.Work Orders" Options="3">
+      <Bounds>0,0,2,1</Bounds>
+    </DashboardComponent>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="incident" Options="3">
+      <Bounds>1,1,1,2</Bounds>
+    </DashboardComponent>
+  </Items>
+</Dashboard>
