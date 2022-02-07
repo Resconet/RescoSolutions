@@ -1,0 +1,41 @@
+name: $(Date:yyMMdd)$(rev:-r)
+
+pool:
+  vmImage: ubuntu-latest
+
+jobs:
+- job: build_mobile_projects
+  displayName: Build Mobile Projects
+  steps:
+  - checkout: self
+    fetchDepth: 1
+
+  - bash: |
+      find projects -mindepth 1 -maxdepth 1 -type d -print0 | while read -d $'\0' dir; do
+        name=$(basename "$dir")
+        project=$(grep "$name" config.xml | sed 's/.* url="\(.*\)".*/\1/g')
+        echo $name: $project
+        pushd "$dir"
+        zip -r ../data.zip *
+        mkdir -p "$(Build.ArtifactStagingDirectory)/$(dirname $project)"
+        echo -e -n '<?xml version="1.0" encoding="utf-8"?>\n<data xmlns="https://schema.resco.net/mobilecrm/woodford/config/data">' > "$(Build.ArtifactStagingDirectory)/$project"
+        base64 -w 0 ../data.zip >> "$(Build.ArtifactStagingDirectory)/$project"
+        echo '</data>' >> "$(Build.ArtifactStagingDirectory)/$project"
+        rm ../data.zip
+        popd
+      done
+      cp -v config.* $(Build.ArtifactStagingDirectory)
+     displayName: Prepare Mobile Projects
+
+  - publish: $(Build.ArtifactStagingDirectory)
+    displayName: Publish Artifact
+    condition: and(succeeded(), not(startsWith(variables['Build.SourceBranch'], 'refs/pull/')))
+    artifact: mobile-projects
+
+  - bash: |
+      version=$(echo $(Build.SourceBranch) | cut -d / -f 3)
+      PAT=$(echo -n :$(System.AccessToken) | base64 -w 0)
+      URL=$(System.CollectionUri)$(System.TeamProject)/_apis/build/retention/leases?api-version=6.0-preview.1
+      curl -H "Content-Type: application/json" -H "Authorization: Basic $PAT" $URL --data "[{'daysValid': 90, 'definitionId': $(System.DefinitionId), 'ownerId': 'RM: Release $version', 'protectPipeline': false, 'runId': $(Build.BuildId)}]"
+    displayName: Lease Build
+    condition: and(succeeded(), startsWith(variables['Build.SourceBranch'], 'refs/tags/'))

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration xmlns="http://schema.resco.net/mobilecrm/woodford/configuration">
+	<woodford>
+		<mobileprojecttemplates>
+			<mobileprojecttemplate id="resco:CrmDefault" displayname="Default" target="Crm" url="config/mobileprojects/crm/default.zip.xml" />
+			<mobileprojecttemplate id="resco:CrmInspector" displayname="Inspector" target="Crm" url="config/mobileprojects/crm/inspector.zip.xml" />
+			<mobileprojecttemplate id="resco:CrmScheduleManager" displayname="Schedule Manager" target="Crm" url="config/mobileprojects/crm/schedulemanager.zip.xml" />
+			<mobileprojecttemplate id="resco:CrmRoutesMobileUser" displayname="Routes Mobile User" target="Crm" url="config/mobileprojects/crm/routesmobileuser.zip.xml" />
+			<mobileprojecttemplate id="resco:XrmDefault" displayname="Sales" target="Xrm" url="config/mobileprojects/xrm/default.zip.xml" />
+			<mobileprojecttemplate id="resco:XrmService" displayname="Field Service - Manager" target="Xrm" url="config/mobileprojects/xrm/defaultservice.zip.xml" />
+			<mobileprojecttemplate id="resco:XrmServiceTechnician" displayname="Field Service - Field Worker" target="Xrm" url="config/mobileprojects/xrm/defaultservicetechnician.zip.xml" />
+			<mobileprojecttemplate id="resco:XrmServiceDispatcher" displayname="Field Service - Dispatcher" target="Xrm" url="config/mobileprojects/xrm/defaultservicedispatcher.zip.xml" />
+			<mobileprojecttemplate id="resco:XrmServiceContractor" displayname="Field Service - Contractor" target="Xrm" url="config/mobileprojects/xrm/defaultservicecontractor.zip.xml" />
+			<mobileprojecttemplate id="resco:XrmSimple" displayname="Simple Sales" target="Xrm" url="config/mobileprojects/xrm/defaultsimple.zip.xml" />
+			<mobileprojecttemplate id="resco:XrmCustomer" displayname="External Customer" target="Xrm" url="config/mobileprojects/xrm/defaultcustomer.zip.xml" />
+			<mobileprojecttemplate id="resco:XrmCityOperator" displayname="City - Operator" target="Xrm" url="config/mobileprojects/xrm/cityoperator.zip.xml" />
+			<mobileprojecttemplate id="resco:XrmCityTechnician" displayname="City - Technician" target="Xrm" url="config/mobileprojects/xrm/citytechnician.zip.xml" />
+			<mobileprojecttemplate id="resco:XrmCityCitizen" displayname="City - Citizen" target="Xrm" url="config/mobileprojects/xrm/citycitizen.zip.xml" />
+			<mobileprojecttemplate id="resco:XrmInspector" displayname="Inspections - Inspector" target="Xrm" url="config/mobileprojects/xrm/inspector.zip.xml" />
+			<mobileprojecttemplate id="resco:XrmInspection" displayname="Inspections - Manager" target="Xrm" url="config/mobileprojects/xrm/defaultinspection.zip.xml" />
+			<mobileprojecttemplate id="resco:XrmHoustonAdmin" displayname="Houston - Administrator" target="Xrm" url="config/mobileprojects/xrm/houstonadmin.zip.xml" />
+			<mobileprojecttemplate id="resco:XrmHoustonExpert" displayname="Houston - Expert" target="Xrm" url="config/mobileprojects/xrm/houstonexpert.zip.xml" />
+			<mobileprojecttemplate id="resco:XrmHoustonKnowledgeManager" displayname="Houston - Knowledge Manager" target="Xrm" url="config/mobileprojects/xrm/houstonknowledgemanager.zip.xml" />
+			<mobileprojecttemplate id="resco:XrmHoustonMobileUser" displayname="Houston - Mobile User" target="Xrm" url="config/mobileprojects/xrm/houstonmobileuser.zip.xml" />
+			<mobileprojecttemplate id="resco:XrmRoutes" displayname="Routes - Default" target="Xrm" url="config/mobileprojects/xrm/routesdefault.zip.xml" />
+			<mobileprojecttemplate id="resco:XrmPortal:Dark" displayname="Portal - Dark" target="Xrm" type="Portal" url="config/mobileprojects/xrm/portal-dark.zip.xml" />
+			<mobileprojecttemplate id="resco:XrmPortal:Light" displayname="Portal - Light" target="Xrm" type="Portal" url="config/mobileprojects/xrm/portal-light.zip.xml" />
+			<mobileprojecttemplate id="resco:XrmPortal:Contractor" displayname="Portal - Contractor" target="Xrm" type="Portal" url="config/mobileprojects/xrm/portal-contractor.zip.xml" />
+			<mobileprojecttemplate id="resco:SalesforceDefault" displayname="Default (Mobile Sales scenario)" target="Salesforce" url="config/mobileprojects/salesforce/default.zip.xml" />
+			<mobileprojecttemplate id="resco:SalesforceInspections" displayname="Inspections (requires Resco custom objects)" target="Salesforce" url="config/mobileprojects/salesforce/inspections.zip.xml" />
+			<mobileprojecttemplate id="resco:SalesforceFieldService" displayname="Field Service (requires Field Service Lightning objects)" target="Salesforce" url="config/mobileprojects/salesforce/fieldservice.zip.xml" />
+		</mobileprojecttemplates>
+	</woodford>
+</configuration>
