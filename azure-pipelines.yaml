@@ -1,5 +1,18 @@
 name: $(Date:yyMMdd)$(rev:-r)
 
+trigger:
+  batch: true
+  branches:
+    include:
+      - master
+      - release/*
+  paths:
+    include:
+      - projects
+  tags:
+    include:
+      - "*"
+
 pool:
   vmImage: ubuntu-latest
 
@@ -25,7 +38,7 @@ jobs:
         popd
       done
       cp -v config.* $(Build.ArtifactStagingDirectory)
-     displayName: Prepare Mobile Projects
+    displayName: Prepare Mobile Projects
 
   - publish: $(Build.ArtifactStagingDirectory)
     displayName: Publish Artifact
