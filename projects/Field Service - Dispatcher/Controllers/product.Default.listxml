@@ -1,0 +1,73 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>product</EntityName>
+    <CamelCase>Product</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Default</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>transactioncurrencyid</string>
+    <string>currentcost</string>
+    <string>id</string>
+    <string>productnumber</string>
+    <string>isservice</string>
+    <string>name</string>
+    <string>producttypecode</string>
+    <string>quantityonhand</string>
+  </SerializedBindings>
+  <MaxColumns>3</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>300</Width>
+      <Height>109</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary_blue</StyleName>
+          <Bounds>94,6,190,25</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="currentcost">
+          <StyleName>r_currency</StyleName>
+          <Bounds>213,63,70,16</Bounds>
+          <CellKind>3</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="productnumber">
+          <StyleName>Secondary</StyleName>
+          <Bounds>16,82,70,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="isservice">
+          <StyleName>gray</StyleName>
+          <Bounds>94,32,190,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>ProductList</StyleName>
+          <Bounds>12,6,75,75</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Current Cost">
+          <IsConstant>true</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>94,63,117,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

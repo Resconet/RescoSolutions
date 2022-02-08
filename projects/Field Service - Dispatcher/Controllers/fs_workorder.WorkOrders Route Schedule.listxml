@@ -1,0 +1,57 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>fs_workorder</EntityName>
+    <CamelCase>fs_workorder</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>WorkOrders Route Schedule</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>isamountsystemcalculated</string>
+    <string>completionpercent</string>
+    <string>createdon</string>
+    <string>transactioncurrencyid</string>
+    <string>customerid</string>
+    <string>discountamount</string>
+    <string>discountpercentage</string>
+    <string>isestimatesystemcalculated</string>
+    <string>estimatedamount</string>
+    <string>estimatedduration</string>
+    <string>id</string>
+    <string>modifiedon</string>
+    <string>name</string>
+    <string>ownerid</string>
+    <string>owningbusinessunit</string>
+    <string>pricelevelid</string>
+    <string>statecode</string>
+    <string>statuscode</string>
+    <string>territoryid</string>
+    <string>totalamount</string>
+    <string>totalduration</string>
+    <string>customerid.account.address1_latitude</string>
+    <string>customerid.account.address1_longitude</string>
+  </SerializedBindings>
+  <HasGpsFields>true</HasGpsFields>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>60</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>8,10,227,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

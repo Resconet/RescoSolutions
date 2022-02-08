@@ -1,0 +1,35 @@
+﻿<EntityChart>
+  <Name>Default</Name>
+  <Kind>Line</Kind>
+  <LimitCount>3</LimitCount>
+  <DrillDownFields>resco_propertyid</DrillDownFields>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#FF0000FF</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#FF0000FF</Color>
+  </TargetValue>
+  <SerializedBindings/>
+  <Attributes>
+    <EntityName>resco_propertylog</EntityName>
+    <CamelCase>resco_propertylog</CamelCase>
+  </Attributes>
+  <Series>
+    <Series>
+      <Attribute>rawnumericvalue</Attribute>
+      <Color>#FF0000FF</Color>
+      <Aggregation>Average</Aggregation>
+    </Series>
+  </Series>
+  <GroupBySeries>
+    <GroupBySeries>
+      <Attribute>readingtime</Attribute>
+      <DateGrouping>Day</DateGrouping>
+    </GroupBySeries>
+  </GroupBySeries>
+  <Axis>readingtime</Axis>
+  <DateGrouping>Day</DateGrouping>
+</EntityChart>

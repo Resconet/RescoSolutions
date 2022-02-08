@@ -1,0 +1,45 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>fs_locationtag</EntityName>
+    <CamelCase>fs_locationtag</CamelCase>
+  </Attributes>
+  <Name>Assets</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SerializedBindings>
+    <string>functionallocationid</string>
+    <string>id</string>
+    <string>name</string>
+    <string>tagid</string>
+    <string>positionx</string>
+    <string>positiony</string>
+    <string>tagid.fs_asset.name</string>
+    <string>tagid.resco_functionallocation.name</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="fs_locationtag">
+      <link-entity name="fs_asset" alias="L0" from="id" to="tagid" link-type="inner"/>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="tagid.fs_asset.name">
+          <StyleName>primary</StyleName>
+          <Bounds>10,2,302,29</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

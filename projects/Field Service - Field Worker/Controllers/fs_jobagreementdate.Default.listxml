@@ -1,0 +1,57 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>fs_jobagreementdate</EntityName>
+    <CamelCase>fs_jobagreementdate</CamelCase>
+  </Attributes>
+  <Name>Default</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>fs_jobdate</OrderBy>
+  <SerializedBindings>
+    <string>id</string>
+    <string>fs_jobdate</string>
+    <string>name</string>
+    <string>statuscode</string>
+    <string>resco_recurrenceid.resco_recurrence.name</string>
+  </SerializedBindings>
+  <CalendarFields>fs_jobdate;fs_jobdate</CalendarFields>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="fs_jobagreementdate"/>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="fs_jobdate">
+          <StyleName>primary_date</StyleName>
+          <Bounds>177,2,141,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <StyleName>r_gray</StyleName>
+          <Bounds>210,31,108,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resco_recurrenceid.resco_recurrence.name">
+          <StyleName>Secondary</StyleName>
+          <Bounds>10,31,199,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary_date</StyleName>
+          <Bounds>10,2,166,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

@@ -1,0 +1,45 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="1" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>fs_resource</EntityName>
+  <CamelCase>fs_resource</CamelCase>
+  <WorkflowItemChanged>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;&lt;branch e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;group e="false" op="And"&gt;&lt;condition e="true"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;arg&gt;String:targetid&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.targetid&lt;/var&gt;&lt;arg&gt;String:account&lt;/arg&gt;&lt;op&gt;TypeOf&lt;/op&gt;&lt;/condition&gt;&lt;/group&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;definition e="true"&gt;&lt;var&gt;target_account&lt;/var&gt;&lt;arg&gt;var:Entity.targetid&lt;/arg&gt;&lt;arg&gt;String:account&lt;/arg&gt;&lt;func&gt;LoadReference&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.name&lt;/var&gt;&lt;arg&gt;var:target_account.name&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.targetid&lt;/var&gt;&lt;arg&gt;String:contact&lt;/arg&gt;&lt;op&gt;TypeOf&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;arg&gt;String:targetid&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;definition e="true"&gt;&lt;var&gt;target_contact&lt;/var&gt;&lt;arg&gt;var:Entity.targetid&lt;/arg&gt;&lt;arg&gt;String:contact&lt;/arg&gt;&lt;func&gt;LoadReference&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.name&lt;/var&gt;&lt;arg&gt;var:target_contact.name&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.targetid&lt;/var&gt;&lt;arg&gt;String:systemuser&lt;/arg&gt;&lt;op&gt;TypeOf&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;arg&gt;String:targetid&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;definition e="true"&gt;&lt;var&gt;target_user&lt;/var&gt;&lt;arg&gt;var:Entity.targetid&lt;/arg&gt;&lt;arg&gt;String:systemuser&lt;/arg&gt;&lt;func&gt;LoadReference&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.name&lt;/var&gt;&lt;arg&gt;var:target_user.name&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowItemChanged>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables /&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <SharedVariableNames/>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="targetid"/>
+        <DetailItem SchemaName="hourlyrate"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="SignatureTab" flexiHeight="100px" NameModified="0" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\cmd_images@2x.png" IsIconNameReadOnly="0">
+      <Name>Photo</Name>
+      <NoteSubject>ListImage</NoteSubject>
+      <Commands>1052686</Commands>
+      <Flags>0</Flags>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiOrientation="1" NameModified="0" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\fs_workorder@2x.png" IsIconNameReadOnly="0">
+      <Name>Skills</Name>
+      <CustomName>Skills</CustomName>
+      <Binding SchemaName="fs_skill.resourceid.fs_resourceskill.skillid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiOrientation="1" NameModified="0" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
+      <Name>Territories</Name>
+      <CustomName>Territories</CustomName>
+      <Binding SchemaName="fs_territory.resourceid.fs_resourceterritory.territoryid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\invoice@2x.png" IsIconNameReadOnly="0">
+      <Name>Time-Off List</Name>
+      <Binding SchemaName="fs_time_off.resourceid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
+      <Name>Notes</Name>
+      <CustomName>Notes</CustomName>
+      <Binding SchemaName="annotation.objectid"/>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

@@ -1,0 +1,62 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>fs_agreement</EntityName>
+  <CamelCase>fs_agreement</CamelCase>
+  <WorkflowLoad>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Form.agreement_number.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;branch e="true" info="Service Agreement number placeholder text" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.agreement_number&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.agreement_number.PlaceholderText&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Service Agreement number will be generated upon saving.  &lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.IsNew&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.fs_customerid.Focus&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowLoad>
+  <WorkflowItemChanged>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="Latitude, Longitude" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.fs_customerid&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:fs_customerid&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;definition e="false"&gt;&lt;var&gt;account&lt;/var&gt;&lt;func&gt;LoadReference&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;arg&gt;var:Entity.fs_customerid&lt;/arg&gt;&lt;arg&gt;String:account&lt;/arg&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.Latitude&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:account.address1_latitude&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.Longitude&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:account.address1_longitude&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Map.IsLoaded&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:statuscode&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:10000&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.statuscode.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Normal_Green_background&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:2&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.statuscode.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Normal_Red_background&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.statuscode.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Normal&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowItemChanged>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;SharedVariable usage="OnChangeEnabled"&gt;&lt;Name&gt;Latitude&lt;/Name&gt;&lt;CrmType&gt;Decimal&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;SharedVariable usage="OnChangeEnabled"&gt;&lt;Name&gt;Longitude&lt;/Name&gt;&lt;CrmType&gt;Decimal&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <SharedVariableNames>
+    <string>Latitude</string>
+    <string>Longitude</string>
+  </SharedVariableNames>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand OnExecuteButton</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="agreement_number" Style="Normal_EditorGrey"/>
+        <DetailItem SchemaName="name"/>
+        <DetailItem SchemaName="fs_customerid">
+          <LookupViews>&lt;lookup&gt;&lt;extra&gt;&lt;views&gt;account.*:account.@Active Accounts&lt;/views&gt;&lt;/extra&gt;&lt;extra&gt;&lt;views&gt;account.Active Accounts&lt;/views&gt;&lt;/extra&gt;&lt;dialog&gt;1&lt;/dialog&gt;&lt;/lookup&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="$Table1" grid="true">
+          <Columns>*;*</Columns>
+          <Rows>Auto;Auto</Rows>
+          <Items>
+            <DetailItem SchemaName="fs_validfrom">
+              <GridPosition>0;0;1;2</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="fs_validto">
+              <GridPosition>1;0;1;2</GridPosition>
+            </DetailItem>
+          </Items>
+        </DetailItem>
+        <DetailItem SchemaName="statuscode"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="MapTab" flexi="0" flexiHeight="350px" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
+      <Name>Map</Name>
+      <CoordinatesBinding>Latitude;Longitude</CoordinatesBinding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="0" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\contact@2x.png" IsIconNameReadOnly="0" DocCommands="0">
+      <Name>Contacts List (*)</Name>
+      <Binding SchemaName="contact.@virtual"/>
+      <Views>&lt;extra&gt;&lt;views&gt;contact.Default&lt;/views&gt;&lt;filter entity="contact"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="contact"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="id" entityname="L0" operator="eq" value="{{fs_customerid}}"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;link-entity name="account" alias="L0" from="id" to="parentcustomerid" link-type="inner"/&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+    </FormTab>
+    <FormTab xsi:type="TreeTab" NameModified="0" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\salesorder@2x.png" IsIconNameReadOnly="0">
+      <Name>Maintenance Jobs</Name>
+      <Tree>Maintenance Jobs</Tree>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0" DocCommands="10" ListCommands="0">
+      <Name>Agreement Documents</Name>
+      <CustomName>Agreement Documents</CustomName>
+      <Binding SchemaName="annotation.objectid"/>
+      <Views>annotation.Default</Views>
+      <LookupViews>annotation.Default</LookupViews>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

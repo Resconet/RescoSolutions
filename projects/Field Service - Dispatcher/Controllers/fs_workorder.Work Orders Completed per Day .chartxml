@@ -1,0 +1,41 @@
+﻿<EntityChart>
+  <Name>Work Orders Completed per Day </Name>
+  <Kind>Column</Kind>
+  <LimitCount>3</LimitCount>
+  <Fetch version="1.0">
+    <entity name="fs_workorder">
+      <filter type="and">
+        <condition attribute="statuscode" operator="eq" value="2"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#FF0000FF</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#FF0000FF</Color>
+  </TargetValue>
+  <SerializedBindings/>
+  <Attributes>
+    <EntityName>fs_workorder</EntityName>
+    <CamelCase>fs_workorder</CamelCase>
+  </Attributes>
+  <Series>
+    <Series>
+      <Attribute>statuscode</Attribute>
+      <Color>#FF0000FF</Color>
+      <Aggregation>CountDistinct</Aggregation>
+    </Series>
+  </Series>
+  <GroupBySeries>
+    <GroupBySeries>
+      <Attribute>modifiedon</Attribute>
+      <DateGrouping>Day</DateGrouping>
+    </GroupBySeries>
+  </GroupBySeries>
+  <Axis>modifiedon</Axis>
+  <DateGrouping>Day</DateGrouping>
+</EntityChart>

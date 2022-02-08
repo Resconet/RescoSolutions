@@ -1,0 +1,67 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>fs_asset</EntityName>
+    <CamelCase>fs_asset</CamelCase>
+  </Attributes>
+  <Name>All Assets - Parent View</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>customerid</OrderBy>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SerializedBindings>
+    <string>customerid</string>
+    <string>id</string>
+    <string>lastservice</string>
+    <string>name</string>
+    <string>assetid</string>
+    <string>serialnumber</string>
+  </SerializedBindings>
+  <IsHidden>true</IsHidden>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="fs_asset">
+      <filter type="and">
+        <condition attribute="statuscode" operator="eq" value="1"/>
+        <condition attribute="assetid" operator="null"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>54</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>Primary</StyleName>
+          <Bounds>41,8,267,17</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="serialnumber">
+          <StyleName>Secondary</StyleName>
+          <Bounds>68,28,240,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="SN#">
+          <IsConstant>true</IsConstant>
+          <StyleName>Secondary</StyleName>
+          <Bounds>41,28,25,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Home.violet-WindMill.png">
+          <IsConstant>true</IsConstant>
+          <StyleName>Icon</StyleName>
+          <Bounds>8,17,20,20</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

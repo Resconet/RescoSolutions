@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityChart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>fs_workorderschedule</EntityName>
+    <CamelCase>fs_workorderschedule</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>Finished Work Orders by Week</Name>
+  <IsHidden>false</IsHidden>
+  <Kind>Column</Kind>
+  <IsDefault>false</IsDefault>
+  <LabelStyle>Inside</LabelStyle>
+  <PieDonutRatio>50</PieDonutRatio>
+  <BarStyle>Default</BarStyle>
+  <AreaStyle>Default</AreaStyle>
+  <DrillDownFields>endedon;name;resourceid;scheduledstart;statuscode;targetid;workorderid</DrillDownFields>
+  <DrillDownEnabled>true</DrillDownEnabled>
+  <Series>
+    <Series>
+      <Attribute>id</Attribute>
+      <Aggregation>CountDistinct</Aggregation>
+      <Color>#FF0000FF</Color>
+    </Series>
+    <Series>
+      <Attribute>workorderid</Attribute>
+      <Color>#FF0000FF</Color>
+    </Series>
+  </Series>
+  <Axis>endedon</Axis>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#FF0000FF</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#FF0000FF</Color>
+  </TargetValue>
+  <DateGrouping>Week</DateGrouping>
+  <Fetch version="1.0">
+    <entity name="fs_workorderschedule">
+      <filter type="and">
+        <condition attribute="endedon" operator="not-null" />
+        <condition attribute="targetid" operator="eq-userid" />
+      </filter>
+    </entity>
+  </Fetch>
+  <LimitCount>3</LimitCount>
+</EntityChart>

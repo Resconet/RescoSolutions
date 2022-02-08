@@ -1,0 +1,44 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>fs_incidenttemplate</EntityName>
+  <CamelCase>fs_incidenttemplate</CamelCase>
+  <WorkflowLoad>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Form.transactioncurrencyid.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.pricelevelid.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/Workflow&gt;</WorkflowLoad>
+  <WorkflowItemChanged>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="Update Price List field with predefined EUR or USD " &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.transactioncurrencyid&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.transactioncurrencyid&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Lookup:transactioncurrency,600adfac-3b0b-df11-aa25-0003ff9c98bb,Euro&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.pricelevelid&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Lookup:pricelevel,ec1341ac-4e0b-df11-a3d5-0003ff9c98bb,Retail EUR&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.transactioncurrencyid&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Lookup:transactioncurrency,af05b07e-89b4-e111-9c9a-00155d0b710a,US Dollar&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.pricelevelid&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Lookup:pricelevel,93c89028-0702-47e1-b391-1ecbd271c8de,Retail US&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowItemChanged>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <SharedVariableNames/>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="name"/>
+        <DetailItem SchemaName="transactioncurrencyid"/>
+        <DetailItem SchemaName="pricelevelid"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="ispriceoverridden"/>
+        <DetailItem SchemaName="estimatedamount"/>
+        <DetailItem SchemaName="isdurationoverridden"/>
+        <DetailItem SchemaName="estimatedduration"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="6" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Products@2x.png" IsIconNameReadOnly="0">
+      <Name>Products</Name>
+      <CustomName>Products</CustomName>
+      <Binding SchemaName="fs_incidenttemplateproduct.incidenttemplateid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="6" flexiOrientation="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Tasks@2x.png" IsIconNameReadOnly="0">
+      <Name>Tasks</Name>
+      <CustomName>Tasks</CustomName>
+      <Binding SchemaName="fs_incidenttemplatetask.incidenttemplateid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiOrientation="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Skills@2x.png" IsIconNameReadOnly="0">
+      <Name>Skills</Name>
+      <CustomName>Skills</CustomName>
+      <Binding SchemaName="fs_incidenttemplateskill.incidenttemplateid"/>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

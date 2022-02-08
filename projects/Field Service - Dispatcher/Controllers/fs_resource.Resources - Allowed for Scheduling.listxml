@@ -1,0 +1,91 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>fs_resource</EntityName>
+    <CamelCase>fs_resource</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Resources - Allowed for Scheduling</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SerializedBindings>
+    <string>createdon</string>
+    <string>hourlyrate</string>
+    <string>id</string>
+    <string>modifiedon</string>
+    <string>name</string>
+    <string>ownerid</string>
+    <string>owningbusinessunit</string>
+    <string>statecode</string>
+    <string>statuscode</string>
+    <string>targetid</string>
+    <string>targetid.systemuser.allowedforscheduling</string>
+    <string>targetid.systemuser.name</string>
+    <string>targetid.systemuser.customerid.contact.contacttype</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="Template change for Contractor" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.targetid&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.(targetid.systemuser.customerid.contact.contacttype)&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Picklist:10000&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:1&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <Fetch version="1.0">
+    <entity name="fs_resource">
+      <link-entity name="systemuser" alias="L0" from="id" to="targetid" link-type="inner">
+        <filter type="and">
+          <condition attribute="allowedforscheduling" operator="eq" value="1"/>
+        </filter>
+      </link-entity>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>36</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="targetid">
+          <StyleName>primary</StyleName>
+          <Bounds>56,6,180,23</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="targetid">
+          <StyleName>ListNoteImage</StyleName>
+          <Bounds>4,6,49,23</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Contractor</Name>
+      <Width>240</Width>
+      <Height>36</Height>
+      <SerializedBackground>-855310</SerializedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="targetid">
+          <StyleName>primary</StyleName>
+          <Bounds>56,6,89,23</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="targetid">
+          <StyleName>ListNoteImage</StyleName>
+          <Bounds>4,6,49,23</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="targetid.systemuser.customerid.contact.contacttype">
+          <StyleName>r_orange</StyleName>
+          <Bounds>147,6,75,22</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

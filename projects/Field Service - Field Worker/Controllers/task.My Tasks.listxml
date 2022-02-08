@@ -1,0 +1,68 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>task</EntityName>
+    <CamelCase>Task</CamelCase>
+    <WrapperClass>MobileCrm.Model.ActivityListItem</WrapperClass>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding>
+      <SerializedClassBinding name="#DateLabel" label="DateLabel" type="String"/>
+      <SerializedClassBinding name="#End" label="End" type="String"/>
+      <SerializedClassBinding name="#Icon" label="Icon" type="String"/>
+      <SerializedClassBinding name="#IsDirty" label="IsDirty" type="String"/>
+      <SerializedClassBinding name="#Start" label="Start" type="String"/>
+    </ClassBinding>
+  </Attributes>
+  <Name>My Tasks</Name>
+  <Kind>List</Kind>
+  <IsDefault>true</IsDefault>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>!scheduledend</OrderBy>
+  <SerializedBindings>
+    <string>id</string>
+    <string>name</string>
+    <string>regardingobjectid</string>
+    <string>scheduledend</string>
+    <string>scheduledstart</string>
+    <string>statecode</string>
+    <string>statuscode</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="task">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+        <condition attribute="ownerid" operator="eq-userid"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>56</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>16,8,290,23</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="scheduledend">
+          <StyleName>gray</StyleName>
+          <Bounds>16,32,187,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <StyleName>r_gray</StyleName>
+          <Bounds>205,32,101,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

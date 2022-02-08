@@ -1,0 +1,38 @@
+﻿<EntityForm xsi:dummy="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>fs_workordertask</EntityName>
+  <CamelCase>fs_workordertask</CamelCase>
+  <WorkflowLoad>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="Inspection Tab is not visible if it does not contains Questionnaire assigned" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.questionnaireid&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Inspections.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Inspections.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="Questionnaire field is not visible for Photo Evidence" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.name&lt;/var&gt;&lt;op&gt;Contains&lt;/op&gt;&lt;arg&gt;String:Photo&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.questionnaireid.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.questionnaireid.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="If Task does not contains &amp;quot;Photo&amp;quot; name than Photo Evidence is not Visible" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.name&lt;/var&gt;&lt;op&gt;DoesNotContain&lt;/op&gt;&lt;arg&gt;String:photo&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Photo Evidence.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Photo Evidence.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowLoad>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <PrimaryCommands>Delete||</PrimaryCommands>
+  <SharedVariableNames/>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand OnExecuteButton</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="name"/>
+        <DetailItem SchemaName="estimatedduration"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="statuscode"/>
+        <DetailItem SchemaName="questionnaireid"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0" ListCommands="257">
+      <Name>Inspections</Name>
+      <CustomName>Inspections</CustomName>
+      <Binding SchemaName="resco_questionnaire.@virtual"/>
+      <Views>&lt;extra&gt;&lt;views&gt;resco_questionnaire.In progress or completed&lt;/views&gt;&lt;filter entity="resco_questionnaire"&gt;&amp;lt;fetch&amp;gt;&amp;lt;entity name="resco_questionnaire"&amp;gt;	&amp;lt;filter type="and"&amp;gt;		&amp;lt;condition attribute='resco_istemplate' operator='eq' value='0' /&amp;gt;		&amp;lt;filter type="or"&amp;gt;			&amp;lt;condition attribute="resco_regardingid" operator="eq" value="{{id}}"/&amp;gt;			&amp;lt;condition attribute="resco_rawidvalue" entityname="QuestionLinkAlias" operator="eq" value="{{id}}"/&amp;gt;		&amp;lt;/filter&amp;gt;	&amp;lt;/filter&amp;gt;&amp;lt;link-entity name="resco_question" alias="QuestionLinkAlias" from="resco_questionnaireid" to="resco_questionnaireid" link-type="outer"/&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+      <LookupViews>&lt;extra&gt;&lt;views&gt;resco_questionnaire.Questionnaire Templates Lookup:resco_questionnaire.Reuse:resco_questionnaire.Templates&lt;/views&gt;&lt;filter entity="resco_questionnaire"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="resco_questionnaire"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="resco_istemplate" operator="eq" value="1"/&amp;gt;&amp;lt;condition attribute="resco_regardingid" operator="eq" value="{{questionnaireid}}"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
+      <Name>Photo Evidence</Name>
+      <CustomName>Photo Evidence</CustomName>
+      <Binding SchemaName="annotation.objectid"/>
+      <Views>annotation.Photo Evidence </Views>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

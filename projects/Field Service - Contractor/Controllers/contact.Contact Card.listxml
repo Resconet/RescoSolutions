@@ -1,0 +1,74 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>contact</EntityName>
+    <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Contact Card</Name>
+  <Kind>List</Kind>
+  <IsDefault>true</IsDefault>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>telephone1</string>
+    <string>parentcustomerid</string>
+    <string>emailaddress1</string>
+    <string>name</string>
+    <string>id</string>
+  </SerializedBindings>
+  <MaxColumns>10</MaxColumns>
+  <Search>
+    <attribute schema="name" method="BeginsWith"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>96</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>96,9,206,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="emailaddress1">
+          <StyleName>gray9</StyleName>
+          <Bounds>127,70,175,15</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="telephone1">
+          <StyleName>gray9</StyleName>
+          <Bounds>127,44,175,15</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>ListNoteImage</StyleName>
+          <Bounds>16,8,64,64</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>7</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Call">
+          <IsConstant>true</IsConstant>
+          <StyleName>Button Image</StyleName>
+          <Bounds>96,39,24,24</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Email">
+          <IsConstant>true</IsConstant>
+          <StyleName>Button Image</StyleName>
+          <Bounds>96,65,24,24</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

@@ -1,0 +1,39 @@
+﻿<EntityChart>
+  <Name>Completed Inspections Today</Name>
+  <Kind>Column</Kind>
+  <LimitCount>3</LimitCount>
+  <Fetch version="1.0">
+    <entity name="resco_questionnaire">
+      <filter type="and">
+        <condition attribute="resco_completionstatus" operator="eq" value="1"/>
+        <condition attribute="modifiedon" operator="today"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#FF0000FF</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#FF0000FF</Color>
+  </TargetValue>
+  <SerializedBindings/>
+  <Attributes>
+    <EntityName>resco_questionnaire</EntityName>
+    <CamelCase>resco_questionnaire</CamelCase>
+  </Attributes>
+  <Series>
+    <Series>
+      <Attribute>resco_completionstatus</Attribute>
+      <Color>#FFff7b00</Color>
+    </Series>
+  </Series>
+  <GroupBySeries>
+    <GroupBySeries>
+      <Attribute>resco_templateid</Attribute>
+    </GroupBySeries>
+  </GroupBySeries>
+  <Axis>resco_templateid</Axis>
+</EntityChart>

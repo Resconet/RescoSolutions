@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Segoe UI","Helvetica Neue", Helvetica, 'Roboto', sans-serif;
+    font-size: 10px;
+    background-color: #EEEEEE;
+}
+
+body {
+    font-size: 1.6rem;
+    overflow-x: hidden;
+
+    width: 100%;
+    min-height: 100vh;
+    margin-right: -28px;
+
+    padding: 2rem 2.4rem 0 5.2rem;
+
+    background-color: #EEEEEE;
+}

@@ -1,0 +1,62 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>fs_time_off</EntityName>
+    <CamelCase>fs_time_off</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Default</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>approved_by</string>
+    <string>approved_on</string>
+    <string>createdon</string>
+    <string>from</string>
+    <string>id</string>
+    <string>modifiedon</string>
+    <string>name</string>
+    <string>resourceid</string>
+    <string>to</string>
+    <string>type</string>
+    <string>approved_by.systemuser.name</string>
+    <string>resourceid.fs_resource.name</string>
+  </SerializedBindings>
+  <CalendarFields>from;to</CalendarFields>
+  <MaxColumns>0</MaxColumns>
+  <TemplateSelectorRule>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;&lt;definition e="false"&gt;&lt;var&gt;NameAndType&lt;/var&gt;&lt;arg&gt;var:Entity.(resourceid.fs_resource.name)&lt;/arg&gt;&lt;arg&gt;String: - &lt;/arg&gt;&lt;arg&gt;var:Entity.type&lt;/arg&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;/definition&gt;&lt;definition e="false"&gt;&lt;var&gt;Color&lt;/var&gt;&lt;func&gt;Clear&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;/definition&gt;&lt;branch info="CalendarColor" e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.type&lt;/var&gt;&lt;arg&gt;PicklistArray:2&lt;/arg&gt;&lt;op&gt;In&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Color&lt;/var&gt;&lt;arg&gt;String:ffff0000&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.type&lt;/var&gt;&lt;arg&gt;PicklistArray:1&lt;/arg&gt;&lt;op&gt;In&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Color&lt;/var&gt;&lt;arg&gt;String:ff00ff00&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="false" op="And" /&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Color&lt;/var&gt;&lt;arg&gt;String:ff0000ff&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>43</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="NameAndType">
+          <StyleName>primary</StyleName>
+          <Bounds>7,3,225,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="from">
+          <StyleName>gray</StyleName>
+          <Bounds>7,25,115,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="to">
+          <StyleName>gray</StyleName>
+          <Bounds>121,25,115,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties>
+    <SerializedClassBinding name="NameAndType" label="NameAndType" type="String"/>
+    <SerializedClassBinding name="Color" label="Color" type="String"/>
+  </CustomProperties>
+</EntityList>

@@ -1,0 +1,65 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>contact</EntityName>
+    <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>All Contacts</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>telephone1</string>
+    <string>parentcustomerid</string>
+    <string>emailaddress1</string>
+    <string>name</string>
+    <string>id</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Search>
+    <attribute schema="name" method="BeginsWith"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>56</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>73,8,146,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>1</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="emailaddress1">
+          <StyleName>r_gray</StyleName>
+          <Bounds>204,32,102,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>8</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="parentcustomerid">
+          <StyleName>gray</StyleName>
+          <Bounds>73,32,129,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="telephone1">
+          <StyleName>r_gray</StyleName>
+          <Bounds>221,9,85,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>8</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>ListNoteImage</StyleName>
+          <Bounds>16,8,40,40</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>7</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

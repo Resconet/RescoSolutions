@@ -1,0 +1,64 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>fs_workorderincident</EntityName>
+    <CamelCase>fs_workorderincident</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>WorkOrder Incidents</Name>
+  <Kind>List</Kind>
+  <IsDefault>true</IsDefault>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>completionpercent</string>
+    <string>createdon</string>
+    <string>id</string>
+    <string>incidenttemplateid</string>
+    <string>modifiedon</string>
+    <string>name</string>
+    <string>ownerid</string>
+    <string>owningbusinessunit</string>
+    <string>statecode</string>
+    <string>statuscode</string>
+    <string>workorderid</string>
+    <string>workorderid.fs_workorder.name</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>42</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>8,2,227,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="incidenttemplateid">
+          <StyleName>gray</StyleName>
+          <Bounds>8,26,159,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="completionpercent">
+          <StyleName>r_gray</StyleName>
+          <Bounds>167,26,65,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="workorderid.fs_workorder.name">
+          <StyleName>primary</StyleName>
+          <Bounds>104,3,136,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

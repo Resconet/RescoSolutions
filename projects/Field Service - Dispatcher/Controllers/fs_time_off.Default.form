@@ -1,0 +1,31 @@
+﻿<EntityForm version="2" flexi="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" fleximode="1" fullscreen="0" resize="0">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>fs_time_off</EntityName>
+  <CamelCase>fs_time_off</CamelCase>
+  <WorkflowSave>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;&lt;branch info="Validate dates" e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.from&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;ErrorMessage&lt;/var&gt;&lt;arg&gt;String:From date needs to be set&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.to&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;ErrorMessage&lt;/var&gt;&lt;arg&gt;String:To date needs to be set&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.to&lt;/var&gt;&lt;arg&gt;var:Entity.from&lt;/arg&gt;&lt;op&gt;LessEqual&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;ErrorMessage&lt;/var&gt;&lt;arg&gt;String:'From' must be before 'To'.&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowSave>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables /&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <SharedVariableNames />
+  <ClassBinding />
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="name" />
+        <DetailItem SchemaName="resourceid" />
+        <DetailItem xsi:type="SeparatorDetailItem" separator="true">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="from" />
+        <DetailItem SchemaName="to" />
+        <DetailItem SchemaName="type" />
+        <DetailItem xsi:type="SeparatorDetailItem" separator="true">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="approved_by" />
+        <DetailItem SchemaName="approved_on" />
+      </SerializedChildren>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

@@ -1,0 +1,135 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>fs_workordertask</EntityName>
+    <CamelCase>fs_workordertask</CamelCase>
+  </Attributes>
+  <Name>Work Order Task</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SerializedBindings>
+    <string>id</string>
+    <string>name</string>
+    <string>questionnaireid</string>
+    <string>statuscode</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>InProgress</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <Buttons>none</Buttons>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>8,7,195,35</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <IsFormatted>false</IsFormatted>
+          <StyleName>CheckMarkInProgress</StyleName>
+          <Bounds>204,8,47,35</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <StyleName>r_gray</StyleName>
+          <Bounds>251,8,60,35</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Scheduled</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <Buttons>custom_Inspection.Inspection.</Buttons>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>8,6,195,35</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <IsFormatted>false</IsFormatted>
+          <StyleName>CheckMarkScheduled</StyleName>
+          <Bounds>204,8,47,35</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <StyleName>r_gray</StyleName>
+          <Bounds>251,8,60,35</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Done</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>8,7,195,35</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <IsFormatted>false</IsFormatted>
+          <StyleName>CheckMarkCompleted</StyleName>
+          <Bounds>204,8,47,35</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <StyleName>r_gray</StyleName>
+          <Bounds>251,8,60,35</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Unfinished</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>8,7,195,35</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <IsFormatted>false</IsFormatted>
+          <StyleName>CheckMarkCanceled</StyleName>
+          <Bounds>204,8,47,35</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <StyleName>r_gray</StyleName>
+          <Bounds>251,8,60,35</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

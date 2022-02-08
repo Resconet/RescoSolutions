@@ -1,0 +1,68 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>account</EntityName>
+    <CamelCase>account</CamelCase>
+  </Attributes>
+  <Name>All-List</Name>
+  <Kind>List</Kind>
+  <IsDefault>true</IsDefault>
+  <AutoWideWidth>800</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>address1_city</string>
+    <string>emailaddress1</string>
+    <string>id</string>
+    <string>name</string>
+    <string>ownerid</string>
+    <string>statecode</string>
+    <string>fs_territory.fs_territory.name</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>64</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>4,4,131,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="address1_city">
+          <StyleName>primary</StyleName>
+          <Bounds>139,4,84,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="ownerid">
+          <StyleName>primary</StyleName>
+          <Bounds>224,34,93,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_territory.fs_territory.name">
+          <StyleName>primary</StyleName>
+          <Bounds>3,34,133,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statecode">
+          <StyleName>primary</StyleName>
+          <Bounds>139,34,84,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="emailaddress1">
+          <StyleName>primary</StyleName>
+          <Bounds>225,4,93,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

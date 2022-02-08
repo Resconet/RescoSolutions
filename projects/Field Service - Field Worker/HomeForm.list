@@ -1,0 +1,56 @@
+﻿<EntityListCollection>
+  <EntityName></EntityName>
+  <CamelCase>HomeItem</CamelCase>
+  <WrapperClass>MobileCrm.Controllers.HomeItem</WrapperClass>
+  <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
+  <ClassBinding>
+    <SerializedClassBinding name="#Title" label="Title" type="String"/>
+    <SerializedClassBinding name="#SubTitle" label="SubTitle" type="String"/>
+    <SerializedClassBinding name="#Icon" label="Icon" type="Boolean"/>
+  </ClassBinding>
+  <SerializedChildren>
+    <EntityList>
+      <Attributes>
+        <EntityName></EntityName>
+        <CamelCase>HomeItem</CamelCase>
+        <WrapperClass>MobileCrm.Controllers.HomeItem</WrapperClass>
+        <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
+        <ClassBinding>
+          <SerializedClassBinding name="#Title" label="Title" type="String"/>
+          <SerializedClassBinding name="#SubTitle" label="SubTitle" type="String"/>
+          <SerializedClassBinding name="#Icon" label="Icon" type="Boolean"/>
+        </ClassBinding>
+      </Attributes>
+      <Name>Default</Name>
+      <Kind>List</Kind>
+      <AutoWideWidth>0</AutoWideWidth>
+      <OrderBy></OrderBy>
+      <SerializedBindings/>
+      <MaxColumns>0</MaxColumns>
+      <SerializedTemplates>
+        <RowTemplate>
+          <DesignWidth>320</DesignWidth>
+          <DesignHeight>48</DesignHeight>
+          <Name>Default</Name>
+          <Width>320</Width>
+          <Height>48</Height>
+          <SerializedChildren>
+            <CellTemplate SchemaName="#Icon">
+              <StyleName>ImageCellStyle</StyleName>
+              <Bounds>16,9,30,30</Bounds>
+              <CellKind>1</CellKind>
+              <Anchor>5</Anchor>
+            </CellTemplate>
+            <CellTemplate SchemaName="#Title">
+              <StyleName>primary</StyleName>
+              <Bounds>60,9,227,30</Bounds>
+              <CellKind>0</CellKind>
+              <Anchor>13</Anchor>
+            </CellTemplate>
+          </SerializedChildren>
+        </RowTemplate>
+      </SerializedTemplates>
+      <CustomProperties/>
+    </EntityList>
+  </SerializedChildren>
+</EntityListCollection>

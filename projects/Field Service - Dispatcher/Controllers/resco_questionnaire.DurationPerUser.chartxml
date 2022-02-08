@@ -1,0 +1,39 @@
+﻿<EntityChart>
+  <Name>DurationPerUser</Name>
+  <Kind>Pie</Kind>
+  <LimitCount>3</LimitCount>
+  <Fetch version="1.0">
+    <entity name="resco_questionnaire">
+      <filter type="and">
+        <condition attribute="resco_istemplate" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#FF0000FF</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#FF0000FF</Color>
+  </TargetValue>
+  <SerializedBindings/>
+  <Attributes>
+    <EntityName>resco_questionnaire</EntityName>
+    <CamelCase>resco_questionnaire</CamelCase>
+  </Attributes>
+  <Series>
+    <Series>
+      <Attribute>resco_duration</Attribute>
+      <Color>#FF1eff00</Color>
+      <Aggregation>Average</Aggregation>
+    </Series>
+  </Series>
+  <GroupBySeries>
+    <GroupBySeries>
+      <Attribute>ownerid</Attribute>
+    </GroupBySeries>
+  </GroupBySeries>
+  <Axis>ownerid</Axis>
+</EntityChart>

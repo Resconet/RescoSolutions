@@ -1,0 +1,76 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>fs_agreement</EntityName>
+    <CamelCase>fs_agreement</CamelCase>
+  </Attributes>
+  <Name>All-List</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>800</AutoWideWidth>
+  <OrderBy>!agreement_number</OrderBy>
+  <SerializedBindings>
+    <string>createdon</string>
+    <string>fs_customerid</string>
+    <string>id</string>
+    <string>modifiedon</string>
+    <string>name</string>
+    <string>agreement_number</string>
+    <string>statecode</string>
+    <string>statuscode</string>
+    <string>fs_validfrom</string>
+    <string>fs_validto</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>86</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="agreement_number">
+          <StyleName>primary_blue</StyleName>
+          <Bounds>2,3,47,25</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_customerid">
+          <StyleName>primary_blue</StyleName>
+          <Bounds>52,31,265,25</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <StyleName>r_gray</StyleName>
+          <Bounds>247,3,70,25</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="createdon">
+          <StyleName>r_gray</StyleName>
+          <Bounds>243,58,75,25</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_validfrom">
+          <StyleName>r_gray</StyleName>
+          <Bounds>52,58,95,25</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_validto">
+          <StyleName>r_gray</StyleName>
+          <Bounds>148,58,94,25</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary_blue</StyleName>
+          <Bounds>52,3,194,25</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

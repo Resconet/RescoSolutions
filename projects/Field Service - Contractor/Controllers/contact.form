@@ -1,0 +1,70 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>contact</EntityName>
+  <CamelCase>contact</CamelCase>
+  <PrimaryCommands>Scan|||Favorite||</PrimaryCommands>
+  <SharedVariableNames/>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="parentcustomerid" Style="Normal"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="lastname" Style="Normal"/>
+        <DetailItem SchemaName="firstname" Style="Normal"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="mobilephone" Style="Normal"/>
+        <DetailItem SchemaName="telephone1" Style="Normal"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="emailaddress1" Style="Normal"/>
+        <DetailItem SchemaName="fax" Style="Normal"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Address@2x.png" IsIconNameReadOnly="0">
+      <Name>Address</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="address1_line1" Style="Normal"/>
+        <DetailItem SchemaName="address1_line2" Style="Normal"/>
+        <DetailItem SchemaName="address1_line3" Style="Normal"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address1_city" Style="Normal"/>
+        <DetailItem SchemaName="address1_postalcode" Style="Normal"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address1_stateorprovince" Style="Normal"/>
+        <DetailItem SchemaName="address1_country" Style="Normal"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="MapTab" flexiHeight="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
+      <Name>Map</Name>
+      <CoordinatesBinding>address1_latitude;address1_longitude</CoordinatesBinding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\contact@2x.png" IsIconNameReadOnly="0">
+      <Name>Contacts List</Name>
+      <Binding SchemaName="contact.parentcustomerid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\opportunity@2x.png" IsIconNameReadOnly="0">
+      <Name>Opportunities List</Name>
+      <Binding SchemaName="opportunity.customerid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\activity@2x.png" IsIconNameReadOnly="0">
+      <Name>Activity List</Name>
+      <Binding SchemaName="activity.regardingobjectid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
+      <Name>Notes List</Name>
+      <Binding SchemaName="annotation.objectid"/>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

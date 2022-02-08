@@ -1,0 +1,3 @@
+﻿fs_workorder.DetailView.WorkOrder=Info
+Service.subtitle=Subtitle
+Alert.NotCloseEnough=You are not close enough to the location, to start the job.

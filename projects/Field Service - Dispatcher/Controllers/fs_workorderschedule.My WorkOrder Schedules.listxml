@@ -1,0 +1,96 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>fs_workorderschedule</EntityName>
+    <CamelCase>fs_workorderschedule</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>My WorkOrder Schedules</Name>
+  <Kind>List</Kind>
+  <IsDefault>true</IsDefault>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>arrivedon</string>
+    <string>createdon</string>
+    <string>endedon</string>
+    <string>id</string>
+    <string>modifiedon</string>
+    <string>name</string>
+    <string>ownerid</string>
+    <string>owningbusinessunit</string>
+    <string>resourceid</string>
+    <string>scheduledend</string>
+    <string>scheduledon</string>
+    <string>scheduledstart</string>
+    <string>startedon</string>
+    <string>statecode</string>
+    <string>statuscode</string>
+    <string>targetid</string>
+    <string>windowend</string>
+    <string>windowstart</string>
+    <string>workorderid</string>
+    <string>workorderid.fs_workorder.name</string>
+    <string>workorderid.fs_workorder.customerid.account.address1_latitude</string>
+    <string>workorderid.fs_workorder.customerid.account.address1_longitude</string>
+    <string>workorderid.fs_workorder.customerid.account.address1_city</string>
+    <string>workorderid.fs_workorder.customerid.account.address1_country</string>
+    <string>workorderid.fs_workorder.customerid.account.address1_postalcode</string>
+    <string>workorderid.fs_workorder.customerid.account.address1_line1</string>
+  </SerializedBindings>
+  <HasGpsFields>true</HasGpsFields>
+  <CalendarFields>scheduledstart;scheduledend</CalendarFields>
+  <MaxColumns>0</MaxColumns>
+  <TemplateSelectorRule>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;definition e="false"&gt;&lt;var&gt;varTitle&lt;/var&gt;&lt;func&gt;Clear&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;/definition&gt;&lt;definition e="false"&gt;&lt;var&gt;varScheduledTimes&lt;/var&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;arg&gt;var:Entity.scheduledstart&lt;/arg&gt;&lt;arg&gt;String: - &lt;/arg&gt;&lt;arg&gt;var:Entity.scheduledend&lt;/arg&gt;&lt;/definition&gt;&lt;definition e="false"&gt;&lt;var&gt;Color&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;arg&gt;String:#FF9370DB&lt;/arg&gt;&lt;/definition&gt;&lt;definition e="false"&gt;&lt;var&gt;varIconName&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;arg&gt;String:Controls.CheckMarkEmpty.png&lt;/arg&gt;&lt;/definition&gt;&lt;definition e="false"&gt;&lt;var&gt;varAddress&lt;/var&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;arg&gt;var:Entity.(workorderid.fs_workorder.customerid.account.address1_line1)&lt;/arg&gt;&lt;arg&gt;String:, &lt;/arg&gt;&lt;arg&gt;var:Entity.(workorderid.fs_workorder.customerid.account.address1_city)&lt;/arg&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;varAddress&lt;/var&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;arg&gt;var:varAddress&lt;/arg&gt;&lt;arg&gt;String:, &lt;/arg&gt;&lt;arg&gt;var:Entity.(workorderid.fs_workorder.customerid.account.address1_postalcode)&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;varAddress&lt;/var&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;arg&gt;var:varAddress&lt;/arg&gt;&lt;arg&gt;String:, &lt;/arg&gt;&lt;arg&gt;var:Entity.(workorderid.fs_workorder.customerid.account.address1_country)&lt;/arg&gt;&lt;/function&gt;&lt;branch e="true" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.name&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;varTitle&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:Entity.name&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.(workorderid.fs_workorder.name)&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;varTitle&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:Entity.(workorderid.fs_workorder.name)&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="Or"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:2&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:3&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:4&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;varIconName&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Controls.CheckMarkInProgress.png&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:7&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;varIconName&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Controls.CheckMarkCanceled.png&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.varTitle.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Primary Gray&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:6&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;varIconName&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Controls.CheckMarkCompleted.png&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.varTitle.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Primary Green&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:1&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;varIconName&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Controls.CheckMarkScheduled.png&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <Fetch version="1.0">
+    <entity name="fs_workorderschedule">
+      <link-entity name="fs_resource" alias="L0" from="id" to="resourceid" link-type="inner">
+        <filter type="and">
+          <condition attribute="targetid" operator="eq-userid"/>
+        </filter>
+      </link-entity>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>72</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="varTitle">
+          <StyleName>primary</StyleName>
+          <Bounds>8,5,227,22</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="varScheduledTimes">
+          <StyleName>black</StyleName>
+          <Bounds>8,27,227,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="workorderid.fs_workorder.name">
+          <StyleName>gray</StyleName>
+          <Bounds>8,40,227,14</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="varAddress">
+          <StyleName>gray</StyleName>
+          <Bounds>8,54,227,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties>
+    <SerializedClassBinding name="varTitle" label="varTitle" type="String"/>
+    <SerializedClassBinding name="varScheduledTimes" label="varScheduledTimes" type="String"/>
+    <SerializedClassBinding name="Color" label="Color" type="String"/>
+    <SerializedClassBinding name="varIconName" label="varIconName" type="String"/>
+    <SerializedClassBinding name="varAddress" label="varAddress" type="String"/>
+  </CustomProperties>
+</EntityList>

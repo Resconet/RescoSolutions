@@ -1,0 +1,25 @@
+﻿<GlobalMap>
+  <Items>
+    <GlobalMapComponent>
+      <EntityName>account</EntityName>
+      <ViewName>Active Accounts</ViewName>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
+      <EntityName>account</EntityName>
+      <ViewName>All Accounts</ViewName>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
+      <EntityName>contact</EntityName>
+      <ViewName>Default</ViewName>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
+      <EntityName>resco_functionallocation</EntityName>
+      <ViewName>Default</ViewName>
+      <IsInitial>true</IsInitial>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
+      <EntityName>fs_workorder</EntityName>
+      <ViewName>Work Orders Route Schedule</ViewName>
+    </GlobalMapComponent>
+  </Items>
+</GlobalMap>

@@ -1,0 +1,14 @@
+﻿<RoutePlan>
+  <ActivityName>fs_workorderschedule</ActivityName>
+  <StartDateField>scheduledstart</StartDateField>
+  <EndDateField>scheduledend</EndDateField>
+  <DefaultAction>6</DefaultAction>
+  <LookupField>workorderid</LookupField>
+  <FilterFields>resourceid</FilterFields>
+  <DisableCompletion>true</DisableCompletion>
+  <ViewMode>true</ViewMode>
+  <StartAtWork>true</StartAtWork>
+  <WorkLocation>42.379276,-71.081281</WorkLocation>
+  <EnabledWorkflows>OnRouteItemAdded OnRouteItemCompleted</EnabledWorkflows>
+  <DisplayNameField>name</DisplayNameField>
+</RoutePlan>

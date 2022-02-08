@@ -1,0 +1,84 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>fs_workorderschedule</EntityName>
+    <CamelCase>fs_workorderschedule</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <Name>Today's Work Order Schedules</Name>
+  <Kind>DashboardList</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>arrivedon</string>
+    <string>createdon</string>
+    <string>endedon</string>
+    <string>id</string>
+    <string>modifiedon</string>
+    <string>name</string>
+    <string>ownerid</string>
+    <string>owningbusinessunit</string>
+    <string>resourceid</string>
+    <string>scheduledend</string>
+    <string>scheduledon</string>
+    <string>scheduledstart</string>
+    <string>startedon</string>
+    <string>statecode</string>
+    <string>statuscode</string>
+    <string>targetid</string>
+    <string>windowend</string>
+    <string>windowstart</string>
+    <string>workorderid</string>
+    <string>workorderid.fs_workorder.customerid</string>
+    <string>workorderid.fs_workorder.name</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="fs_workorderschedule">
+      <filter type="and">
+        <condition operator="today" attribute="scheduledstart" />
+      </filter>
+      <link-entity name="fs_resource" link-type="inner" to="resourceid" from="id" alias="L0">
+        <filter type="and">
+          <condition operator="eq-userid" attribute="targetid" />
+        </filter>
+      </link-entity>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>40</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="workorderid.fs_workorder.customerid">
+          <StyleName>primary</StyleName>
+          <Bounds>8,2,227,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="workorderid">
+          <StyleName>gray</StyleName>
+          <Bounds>8,26,103,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="scheduledstart">
+          <StyleName>gray</StyleName>
+          <Bounds>120,26,83,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>0</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <StyleName>r_gray</StyleName>
+          <Bounds>203,26,32,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>8</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties />
+</EntityList>
