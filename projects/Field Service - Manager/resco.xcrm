@@ -539,6 +539,8 @@
         <property schema="statuscode"/>
         <property schema="transactioncurrencyid"/>
         <property schema="versionnumber"/>
+        <property schema="warrantyenddate"/>
+        <property schema="warrantystartdate"/>
       </properties>
       <indexes>
         <index schema="idx_fs_asset_assetid" issystem="true">
@@ -1013,6 +1015,7 @@
         <property schema="completionpercent"/>
         <property schema="createdon"/>
         <property schema="customerid"/>
+        <property schema="description"/>
         <property schema="discountamount"/>
         <property schema="discountpercentage"/>
         <property schema="duedate"/>
@@ -1747,6 +1750,8 @@
         <property schema="statecode"/>
         <property schema="statuscode"/>
         <property schema="transactioncurrencyid"/>
+        <property schema="warrantyenddate"/>
+        <property schema="warrantystartdate"/>
       </properties>
       <indexes>
         <index schema="idx_product_defaultuomid" issystem="true">
@@ -1934,6 +1939,13 @@
         <property schema="resco_recordid"/>
         <property schema="resco_target"/>
       </properties>
+      <indexes>
+        <index schema="idx_resco_favorite_resco_name" issystem="true">
+          <fields>
+            <field schema="resco_name"/>
+          </fields>
+        </index>
+      </indexes>
     </entity>
     <entity schema="resco_functionallocation">
       <properties>

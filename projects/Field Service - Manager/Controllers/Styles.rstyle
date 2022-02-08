@@ -414,7 +414,7 @@
           <Value>-1</Value>
         </Property>
         <Property Name="EditorBackgroundColor" Type="System.Int32">
-          <Value>-2130706433</Value>
+          <Value>-1</Value>
         </Property>
       </Properties>
     </Style>

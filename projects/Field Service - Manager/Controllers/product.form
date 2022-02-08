@@ -16,10 +16,30 @@
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
           <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="productnumber"/>
-        <DetailItem SchemaName="name"/>
-        <DetailItem SchemaName="isservice"/>
-        <DetailItem SchemaName="producttypecode"/>
+        <DetailItem SchemaName="$Table2" grid="true">
+          <Columns>*;*</Columns>
+          <Rows>Auto;Auto;Auto</Rows>
+          <Items>
+            <DetailItem SchemaName="productnumber">
+              <GridPosition>0;0;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="name">
+              <GridPosition>1;0;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="isservice">
+              <GridPosition>0;1;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="producttypecode">
+              <GridPosition>1;1;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="warrantystartdate">
+              <GridPosition>0;2;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="warrantyenddate">
+              <GridPosition>1;2;1;1</GridPosition>
+            </DetailItem>
+          </Items>
+        </DetailItem>
         <DetailItem SchemaName="$Table1" grid="true">
           <Columns>*;*;*</Columns>
           <Rows>Auto;Auto</Rows>
