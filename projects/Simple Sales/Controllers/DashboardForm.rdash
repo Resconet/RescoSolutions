@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Dashboard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Columns>2</Columns>
+  <Rows>2</Rows>
+  <Items>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="deal">
+      <Bounds>0,0,1,2</Bounds>
+    </DashboardComponent>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="List" Binding="activity">
+      <Bounds>1,1,1,1</Bounds>
+    </DashboardComponent>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="List" Binding="deal">
+      <Bounds>1,0,1,1</Bounds>
+    </DashboardComponent>
+  </Items>
+</Dashboard>

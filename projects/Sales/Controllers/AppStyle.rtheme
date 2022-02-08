@@ -1,0 +1,47 @@
+﻿<ThemeItem Version="4">
+  <IsCustom>false</IsCustom>
+  <Label>All Platforms</Label>
+  <colors name="ListBackground" color="PAL:0"/>
+  <colors name="ListSelBackground" color="PAL:1"/>
+  <colors name="ListForeground" color="PAL:2"/>
+  <colors name="ListSelForeground" color="PAL:3"/>
+  <colors name="ListSeparator" color="PAL:4"/>
+  <colors name="TitleBackground" color="PAL:5"/>
+  <colors name="TitleForeground" color="PAL:3"/>
+  <colors name="ListHeaderForeground" color="PAL:6"/>
+  <colors name="ListHeaderBackground" color="PAL:7"/>
+  <colors name="SearchBackground" color="PAL:6"/>
+  <colors name="SearchForeground" color="PAL:8"/>
+  <colors name="SearchSelForeground" color="PAL:3"/>
+  <colors name="TabBackground" color="PAL:9"/>
+  <colors name="TabForeground" color="PAL:8"/>
+  <colors name="TabSelForeground" color="PAL:3"/>
+  <colors name="FormBackground" color="PAL:0"/>
+  <colors name="FormItemBackground" color="PAL:0"/>
+  <colors name="FormItemForeground" color="PAL:7"/>
+  <colors name="FormItemLabelForeground" color="PAL:2"/>
+  <colors name="FormItemDisabled" color="PAL:10"/>
+  <colors name="FormItemLink" color="PAL:3"/>
+  <colors name="FormItemSeparator" color="PAL:0"/>
+  <colors name="FormItemButton" color="PAL:3"/>
+  <colors name="GridBackground" color="PAL:6"/>
+  <colors name="GridBorder" color="PAL:11"/>
+  <colors name="HomeListBackground" color="PAL:6"/>
+  <colors name="HomeListSelBackground" color="PAL:12"/>
+  <colors name="HomeListForeground" color="PAL:2"/>
+  <colors name="HomeListSelForeground" color="PAL:7"/>
+  <colors name="HomeListSeparator" color="PAL:10"/>
+  <palette>4293980916</palette>
+  <palette>4292669429</palette>
+  <palette>4278190080</palette>
+  <palette>4278221039</palette>
+  <palette>4292403174</palette>
+  <palette>4294835966</palette>
+  <palette>4294967295</palette>
+  <palette>4278216396</palette>
+  <palette>4288655294</palette>
+  <palette>4294835709</palette>
+  <palette>4291348680</palette>
+  <palette>4292730333</palette>
+  <palette>4292078079</palette>
+</ThemeItem>

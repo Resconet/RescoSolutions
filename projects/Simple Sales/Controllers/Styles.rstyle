@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<GlobalStyles xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Styles>
+    <Style Name="NewRowStyle" Type="Row">
+      <Properties>
+        <Property Name="BackColor" Type="System.Int32">
+          <Value>-2692865</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="CrmDetail" Type="DetailView">
+      <Properties>
+        <Property Name="BackColor" Type="System.Int32">
+          <Value>-2692865</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="ImageCellStyle" Style="" Type="ImageCell">
+      <Properties>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-16777216</Value>
+        </Property>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>10</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="HorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="CrmDetailItem" Type="DVItem">
+      <Properties>
+        <Property Name="LabelBackColor" Type="System.Int32">
+          <Value>-1</Value>
+        </Property>
+        <Property Name="TextBackColor" Type="System.Int32">
+          <Value>-1</Value>
+        </Property>
+        <Property Name="LabelForeColor" Type="System.Int32">
+          <Value>-10119741</Value>
+        </Property>
+        <Property Name="TextForeColor" Type="System.Int32">
+          <Value>-16777216</Value>
+        </Property>
+        <Property Name="LabelFontSize" Type="System.Int32">
+          <Value>8</Value>
+        </Property>
+        <Property Name="TextFontSize" Type="System.Int32">
+          <Value>12</Value>
+        </Property>
+        <Property Name="LabelAlignment" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="LabelWidth" Type="System.Int32">
+          <Value>70</Value>
+        </Property>
+        <Property Name="ItemBorder" Type="System.Int32">
+          <Value>0</Value>
+        </Property>
+        <Property Name="LabelStyle" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="CrmDetailCaptionItem" Type="DVItem">
+      <Properties />
+    </Style>
+    <Style Name="CrmListItem" Type="DVItem">
+      <Properties>
+        <Property Name="LabelBackColor" Type="System.Int32">
+          <Value>-1</Value>
+        </Property>
+        <Property Name="TextBackColor" Type="System.Int32">
+          <Value>-1</Value>
+        </Property>
+        <Property Name="LabelForeColor" Type="System.Int32">
+          <Value>-10119741</Value>
+        </Property>
+        <Property Name="TextForeColor" Type="System.Int32">
+          <Value>-16777216</Value>
+        </Property>
+        <Property Name="LabelFontSize" Type="System.Int32">
+          <Value>8</Value>
+        </Property>
+        <Property Name="TextFontSize" Type="System.Int32">
+          <Value>12</Value>
+        </Property>
+        <Property Name="LabelAlignment" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="LabelWidth" Type="System.Int32">
+          <Value>5</Value>
+        </Property>
+        <Property Name="ItemBorder" Type="System.Int32">
+          <Value>0</Value>
+        </Property>
+        <Property Name="LabelStyle" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Normal" Type="DetailItem">
+      <Properties>
+      </Properties>
+    </Style>
+    <Style Name="MultiLine" Type="DetailItem">
+      <Properties>
+        <Property Name="IsMultiLine" Type="System.Boolean">
+          <Value>True</Value>
+        </Property>
+        <Property Name="LabelPosition" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="LabelHorizontalAlignment" Type="System.Int32">
+          <Value>3</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="ListEntityImage" Type="ImageCell">
+      <Properties>
+        <Property Name="ImageQuery" Type="System.String">
+          <Value>entityimage</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="ListNoteImage" Type="ImageCell">
+      <Properties>
+        <Property Name="ImageQuery" Type="System.String">
+          <Value>annotation;documentbody;subject;ListImage;objectid;{id}</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="FormEntityImage" Type="DetailItem">
+      <Properties>
+        <Property Name="ImageQuery" Type="System.String">
+          <Value>entityimage</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="FormNoteImage" Type="DetailItem">
+      <Properties>
+        <Property Name="ImageQuery" Type="System.String">
+          <Value>annotation;documentbody;subject;FormImage;objectid;{id}</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Primary" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>13</Value>
+        </Property>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-16777216</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Secondary" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>10</Value>
+        </Property>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-6710887</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Secondary Right" Style="Secondary" Type="TextCell">
+      <Properties>
+        <Property Name="HorizontalAlignment" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Secondary Center" Style="Secondary" Type="TextCell">
+      <Properties>
+        <Property Name="HorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Primary Center" Style="Primary" Type="TextCell">
+      <Properties>
+        <Property Name="HorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Primary Right" Style="Primary" Type="TextCell">
+      <Properties>
+        <Property Name="HorizontalAlignment" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Default" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>10</Value>
+        </Property>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-16777216</Value>
+        </Property>
+      </Properties>
+    </Style>
+  </Styles>
+</GlobalStyles>

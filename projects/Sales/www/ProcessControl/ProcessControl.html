@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name='viewport' content='initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no'>
+    <title></title>
+    <script src="../JSBridge.js"></script>
+    <link rel="stylesheet" type="text/css" href="processControl.css">
+</head>
+<body onload="init()" onresize="evaluateArrows()">
+	<script>
+        var activeState = "active";
+        var completedState = "completed";
+        var futureState = "future";
+        var processControlConfiguration;
+        var selectedView = "General";
+        var readOnly = false;
+        var finalStep;
+        var entityMeta;
+        var hiddenItem;
+        // Elements 
+        var selectedStepElement;
+        var descElement;
+        var descIconElement;
+        var buttonCurrentLabel;
+        var buttonCompleteLabel;
+        var stepContainer;
+        var scrollArrows;
+        var btnElement;
+
+        var processSteps = [];
+
+        function init(){
+            var urlParams = new URLSearchParams(window.location.search);
+            var processControlName = urlParams.get("name");           
+            initElements();
+            MobileCRM.bridge.command("getProcessControlConfiguration", processControlName, validateConfigAndInitialize, handleInitError, null);       
+            MobileCRM.bridge.enableZoom(false);
+        }
+
+        function initElements(){
+            descElement = document.getElementById("descriptionContainer");
+            descIconElement = document.getElementById("descriptionIcon");
+            descIconElement.style.display = "none";
+            scrollArrows = document.getElementsByClassName("scroll-arrow");
+            btnElement = document.getElementById('completeBtn');
+            buttonCurrentLabel = MobileCRM.Localization.getTextOrDefault("Process.Button.Current", "Mark as Current Stage");
+            buttonCompleteLabel = MobileCRM.Localization.getTextOrDefault("Process.Button.Completed", "Mark as Completed");
+            btnElement.innerHTML = buttonCurrentLabel;
+        }
+
+        function validateConfigAndInitialize(jsonConfig){           
+            loadColorSettings();     
+            processControlConfiguration = jsonConfig;
+            initOnChangeHandlers();
+            processSteps = decodeStepDescriptions(processControlConfiguration.steps);
+            var checkStepsFunction = checkOptionSetSteps;
+            MobileCRM.Metadata.requestObject(metaData => {	
+                entityMeta = metaData;
+                var entity = entityMeta.getEntity(processControlConfiguration.entity);
+                if (entity) {
+                    var prop = entity.getProperty(processControlConfiguration.field);
+                    if(prop && prop.type === 16)
+                    checkStepsFunction = checkStringlistSteps;                        	
+                }
+                checkStepsFunction(setUpProcessArrows);
+            }, 
+            error => {
+                MobileCRM.bridge.alert(error);
+                checkStepsFunction(setUpProcessArrows);
+            }, [this]);                 
+        }    
+
+        function initOnChangeHandlers(){
+            MobileCRM.UI.EntityForm.onChange(
+            function (entityForm) {
+                // First check whether the change handler is called due to desired item change
+                var changedItem = entityForm.context.changedItem;
+                if (changedItem == processControlConfiguration.field) {
+                    var detailView = null;
+                    detailView = entityForm.getDetailView(selectedView);                   
+                    if(detailView != null) {
+                        var stepItem = null;
+			            stepItem = detailView.getItemByName(changedItem);
+                        if(stepItem != null)
+                            loadStep(stepItem.value);                      
+                    }
+                }
+            },
+            true,
+            null
+            );
+            MobileCRM.UI.EntityForm.onSelectedViewChanged(function (entityForm) {
+                /// <param name="entityForm" type="MobileCRM.UI.EntityForm"/>
+                selectedView = entityForm.context.selectedView;
+            }, true, null);
+        }
+
+        function checkMode(entityForm, continueWith) {
+			if (!entityForm.canEdit) {
+				continueWith(true);
+			}			
+            else if (!isFieldEditable(entityForm)) {
+				continueWith(true);
+			}	
+			else {
+				var entity = entityMeta.getEntity(entityForm.entity.entityName);
+                if (entity) {
+                    var prop = entity.getProperty(processControlConfiguration.field);
+                    if (!prop){
+                        MobileCRM.bridge.alert(MobileCRM.Localization.getTextOrDefault("Process.Button.DisabledProperty", "Process field is disabled, steps cannot be loaded."));
+                        continueWith(true);
+                    }                       
+                    else if (prop.permission === 2) //can create
+                        continueWith(true);
+                    else if ((prop.permission & 2) == 0)
+                        continueWith(true);
+                    else
+                        continueWith(false);
+                }
+			}
+        }
+                
+        function isFieldEditable(entityForm) {
+			var detailViews = entityForm.detailViews;
+			var item;
+			if (detailViews) {
+				var nItems = detailViews.length;
+				for (var i = 0; i < nItems; i++) {
+					var dv = detailViews[i];
+					for (var itm of dv.items) {
+						if (itm.name === processControlConfiguration.field) {
+							item = itm;
+							break;
+						}
+					}
+				}
+			}
+			if (item) {
+				return item.isEnabled;
+            }
+            // If no detailItem for selected field is present, add hidden item with same name to make sure onchange still works
+            if(detailViews && detailViews.length > 0){
+                hiddenItem = new MobileCRM.UI.DetailViewItems.ComboBoxItem(processControlConfiguration.field, processControlConfiguration.field);
+                hiddenItem.value = "0";
+                hiddenItem.isVisible = false;
+			    detailViews[0].insertItem(hiddenItem, -1); // Place item as the last one.
+            }                
+			return true;
+        }
+        
+        function setMode(isReadonly){
+            readOnly = isReadonly;
+        }
+        
+
+        
+        function setUpProcessArrows(){             
+            stepContainer = document.getElementById("stepContainer");
+            var finalSteps = [];
+            var stepIndex = 1;
+            for(var step of processSteps){
+                // Final steps will be merged into one with command dialog                
+                if(!step.isFinal){
+                    stepContainer.appendChild(htmlToElements(step.createArrow2()));
+                    stepIndex++;
+                }                  
+                else
+                    finalSteps.push(step);
+            }
+            // Create final step with different methods than standard steps
+            var finalStepLabel = "Complete";
+            var finalStepDescription = "";
+            if(finalSteps.length > 0){
+                if(processControlConfiguration.finalStepLabel)
+                    finalStepLabel = processControlConfiguration.finalStepLabel;
+                if(processControlConfiguration.finalStepDescription)
+                    finalStepDescription = processControlConfiguration.finalStepDescription;
+                finalStep = new FinalStep(finalStepLabel, stepIndex, finalSteps);
+                finalStep.shortDescription = finalStepDescription;
+                stepContainer.appendChild(htmlToElements(finalStep.createFinalStepHtml()));
+                finalStep.finalStepLabelElement = document.getElementById("finalStepLabel");
+            }         
+            loadCurrentStepFromEntity();
+        }   
+
+        function decodeStepDescriptions(steps){
+            var stepObjects = [];
+            for(var s of steps){                
+                s.value = decodeURIComponent(s.value);
+                s.label = decodeURIComponent(s.label);
+                var processStepObj = new ProcessStep(s.label, s.value);
+                processStepObj.shortDescription = "";
+                if(s.description){            
+                    s.description = decodeURIComponent(s.description);                 
+                    processStepObj.shortDescription = s.description;
+                    //decodeURIComponent(s.longDescription);
+                    //decodeURIComponent(s.descriptionUrl);
+                }
+                if(s.isFinal)
+                    processStepObj.isFinal = s.isFinal === "True"? true: false;
+                processStepObj.index = stepObjects.length;
+                stepObjects.push(processStepObj);
+            }     
+            return stepObjects; 
+        }
+
+        /**
+        * @param {String} HTML representing any number of sibling elements
+        * @return {NodeList} 
+        */
+        function htmlToElements(html) {
+            var template = document.createElement('template');
+            html = html.trim();
+            template.innerHTML = html;
+            return template.content.firstChild;
+        }
+
+        function arrowClicked(elementId){ 
+            var element = document.getElementById(elementId);
+            setSelectedArrowState(element);
+        }
+
+        function buttonClicked(){
+            if(selectedStepElement && selectedStepElement.id === "finalStep"){
+                finalStep.openMessageBoxWithOptions();
+            }
+            else if(selectedStepElement && isActive(selectedStepElement)){
+                if(finalStep)
+                    finalStep.resetFinalStepLabel();
+                setArrowCompleted(selectedStepElement);
+            }
+            else if(selectedStepElement){
+                if(finalStep)
+                    finalStep.resetFinalStepLabel();
+                setArrowActive(selectedStepElement);
+            }
+        }
+
+        function setSelectedArrowState(element){
+            element.scrollIntoView(true);    
+            var oldSelectedElement = selectedStepElement;           
+            if(selectedStepElement){
+                // Deselect
+                selectedStepElement.classList.remove("selected");
+                selectedStepElement = null    
+                var btnElement = document.getElementById("completeBtn");
+                btnElement.className += " disabled";   
+                descElement.innerHTML = "";   
+                descIconElement.style.display = "none";
+            }
+            // Select
+            element.className += " selected";
+            selectedStepElement = element;
+            updateCompleteButton(selectedStepElement);
+            var step = processSteps.find(s => s.id === element.id);
+            var stepDesc = null;
+            if(step)
+                stepDesc = (step.shortDescription === "undefined" ? "": step.shortDescription);   
+            else if(element.id === finalStep.id)
+                stepDesc = (finalStep.shortDescription === "undefined" ? "": finalStep.shortDescription);             
+            if(stepDesc){
+                // Show asterisk if comment is filled
+                descIconElement.style.display = "block";    
+                descElement.innerHTML = stepDesc;  
+            }                     
+            evaluateArrows();                                   
+        }
+
+        function updateCompleteButton(selectedStepElement){
+            if(!readOnly){ // Disable complete button in readonly mode
+                btnElement.classList.remove("disabled");
+                btnElement.className += " active";
+                if(isActive(selectedStepElement) || selectedStepElement.id === "finalStep")
+                    btnElement.innerHTML = buttonCompleteLabel;                                   
+                else
+                    btnElement.innerHTML = buttonCurrentLabel;       
+            }
+        }
+
+        function isActive(element){
+            return element.classList.contains(activeState);
+        }
+
+        function setArrowActive(element){
+            if(!readOnly){           
+                var elementId = element.id;   
+                var stateFromClass = element.className;
+                setArrowCssClass(element, activeState, true);
+                var step = processSteps.find(s => s.id === elementId);         
+                if(step){
+                    setStepOnEntity(step.textValue);                
+                    setPreviousElementsToState(step.index, completedState);
+                    setNextElementsToState(step.index, futureState);
+                }
+            }
+        }
+
+        function setFinalStep(failCallback){    
+            if(!readOnly){       
+                var element = document.getElementById(finalStep.id);     
+                finalStep.openMessageBoxWithOptions(failCallback);  
+            }
+        }
+
+        function setArrowCompleted(element){
+            if(!readOnly){           
+                var elementId = element.id;   
+                var stateFromClass = element.className;
+                var step = processSteps.find(s => s.id === elementId);            
+                if(step){
+                    setArrowCssClass(element, completedState);               
+                    setPreviousElementsToState(step.index, completedState);
+                    setNextElementsToState(step.index, futureState);
+                    if(processSteps.length > step.index + 1){
+                        var nextElement = document.getElementById(processSteps[step.index + 1].id);
+                        if(nextElement)
+                            setArrowActive(nextElement);
+                        else
+                            setFinalStep(()=> setArrowCssClass(element, activeState));       
+                    }
+                    else{
+                        element.className += " selected";
+                        updateCompleteButton(element);
+                    }
+                }
+            }
+        }
+
+        function setStepOnEntity(value){
+            MobileCRM.UI.EntityForm.requestObject(
+                function (entityForm) {
+                    entityForm.entity.properties[processControlConfiguration.field] = value;
+                    var detailView = entityForm.getDetailView("General");
+                    // Set value to hidden detailitem to trigger onchange with selected value
+                    if (hiddenItem)
+                        hiddenItem.value = value;
+                    loadStep(value);     
+                },
+                function (err) { MobileCRM.bridge.alert(err); }
+            );   
+        }
+
+        function loadCurrentStepFromEntity(){
+            MobileCRM.UI.EntityForm.requestObject(
+                function (entityForm) {
+                    checkMode(entityForm, setMode);
+                    var stepValue = entityForm.entity.properties[processControlConfiguration.field];
+                    loadStep(stepValue);             
+                },
+                function (err) { MobileCRM.bridge.alert(err); }
+            );   
+        }
+   
+        function loadStep(stepValue){
+            if(!stepValue)
+                resetProcessComponent();
+            else{
+                var step = processSteps.find(s => s.textValue === stepValue + "");
+                if(step && !step.isFinal){
+                    var element = document.getElementById(step.id);            
+                    if(element){            
+                        setArrowCssClass(element, activeState);
+                        setPreviousElementsToState(step.index, completedState);
+                        setNextElementsToState(step.index, futureState);
+                        setSelectedArrowState(element);
+                    }
+                }
+                else if(step){
+                    var element = document.getElementById(finalStep.id);  
+                    if(element){            
+                        setArrowCssClass(element, completedState);
+                        setPreviousElementsToState(processSteps.length, completedState);
+                        setSelectedArrowState(element);
+                        evaluateArrows();
+                    }
+                }
+                else if(stepValue === -1)   // Default option (empty) for Dynamics, not really a step
+                    resetProcessComponent();
+                else{
+                    var errorMessage = MobileCRM.Localization.getTextOrDefault("Process.Button.UnknownValue", "Value is not defined as process step value.");
+                    MobileCRM.bridge.alert(stepValue + ": " + errorMessage); 
+                    resetProcessComponent();
+                }                               
+            }       
+        }
+
+        function resetProcessComponent(){
+            setNextElementsToState(-1, futureState);
+            setSelectedArrowState(document.getElementById(processSteps[0].id));
+        }
+
+        function loadColorSettings(){
+            // Loads background color for now - more customization options to come
+            MobileCRM.Application.getAppColor("FormBackground", function (color) {
+                /// <param name="color" type="String">String containing the color definition (e.g. "#FF0000" for red color).</param>
+                if (color) {
+                    document.body.style.backgroundColor = color;
+                }
+            });     
+        }
+
+        function setPreviousElementsToState(index, state){
+            for(var i = 0; i < index; i++){
+                var element = document.getElementById(processSteps[i].id);
+                setArrowCssClass(element, state);
+            }
+        }
+
+        function setNextElementsToState(index, state){
+            for(var i = index + 1; i < processSteps.length; i++){
+                var element = document.getElementById(processSteps[i].id);
+                setArrowCssClass(element, state);
+            }
+            if(finalStep){
+                var element = document.getElementById(finalStep.id);
+                setArrowCssClass(element, state);
+            }
+        }
+
+        function setArrowCssClass(element, state, scroll = false){
+            if(element){
+                if(scroll)
+                    element.scrollIntoView(true);
+                element.className = state;  
+            }                    
+        }
+
+        // Scroll arrows related
+
+        function moveLeft(){
+            if(selectedStepElement){
+                var current = processSteps.find(s => s.id === selectedStepElement.id);
+                if(current && current.index - 1 >= 0){
+                    var target = document.getElementById(processSteps[current.index - 1].id);                 
+                    setSelectedArrowState(target);
+                }
+                else if(!current)   // Moving from aggregate final step
+                {
+                    var notFinalSteps = processSteps.filter(s => !s.isFinal);
+                    target = document.getElementById(notFinalSteps[notFinalSteps.length - 1].id);
+                    setSelectedArrowState(target);
+                }
+            }          
+        }
+
+        function moveRight(){
+            if(selectedStepElement){
+                var current = processSteps.find(s => s.id === selectedStepElement.id);
+                if(current && processSteps.length > current.index + 1){
+                    var target = document.getElementById(processSteps[current.index + 1].id);
+                    if(!target) // Moving to aggregate final step
+                        target = document.getElementById(finalStep.id);
+                    setSelectedArrowState(target);
+                }               
+            }
+        }
+
+        function evaluateArrows(){
+            var w = window.innerWidth;
+            if(stepContainer){
+                var container = stepContainer.offsetWidth;
+                if(container < w){
+                    scrollArrows[0].style.display = "none";
+                    scrollArrows[1].style.display = "none";
+                }
+                else{
+                    scrollArrows[0].style.display = "block";
+                    scrollArrows[1].style.display = "block";
+                }
+            }
+        }
+
+        // Utils
+
+        /**
+         * For stringLists only, check whether configured step values still exist on entity.
+         * If steps cannot be checked, all steps will be used.
+         * @param {function} callback - after checking the stepValues.
+         */
+         function checkStringlistSteps(callback){
+            MobileCRM.Localization.initialize(
+                function (Localization) {
+                    var entity = processControlConfiguration.entity;
+                    var field = processControlConfiguration.field;
+                    var options = MobileCRM.Metadata.getStringListOptions(entity, field);
+                    if(options){
+                        var validSteps = [];
+                        for(var step of processSteps){                      
+                            if(options[entity + "." + field + "." + step.textValue])
+                                validSteps.push(step);      
+                        }
+                        processSteps = validSteps;
+                    }                  
+                    callback();
+                }, 
+                (error) => {
+                    MobileCRM.bridge.alert(error);
+                    callback();
+                }, 
+                null
+            );
+        }
+
+        /**
+         * For for optionsteps only, check whether configured step values still exist on entity.
+         * If steps cannot be checked, all steps will be used.
+         * @param {function} callback - after checking the stepValues.
+         */
+        function checkOptionSetSteps(callback){         
+            var validSteps = [];
+            MobileCRM.Metadata.getOptionSetValues(
+                processControlConfiguration.entity,
+                processControlConfiguration.field,
+                function (optionSetValues) {
+                    if(optionSetValues && optionSetValues.length > 0){                 
+                        var optionSetStringValues = Object.values(optionSetValues).map(v => v + "");
+                        for(var step of processSteps){
+                            if(optionSetStringValues.indexOf(step.textValue) > -1)
+                                validSteps.push(step);
+                        }
+                        processSteps = validSteps;
+                    }               
+                    callback();
+                }, 
+                (error) => {
+                    MobileCRM.bridge.alert(error);
+                    callback();
+                }, 
+                null
+            );
+        }
+
+        function makeSafeForCSS(name) {
+            return name.replace(/[^a-z0-9]/g, function(s) {
+                var c = s.charCodeAt(0);
+                if (c == 32) return '-';
+                if (c >= 65 && c <= 90) return '_' + s.toLowerCase();
+                return '__' + ('000' + c.toString(16)).slice(-4);
+            });
+        }
+
+        function handleInitError(error){
+            reportError(error);
+            hideProcess();
+        }
+
+        function reportError(error){
+            MobileCRM.bridge.alert(error);
+        }
+
+        function hideProcess(){
+            document.getElementsByTagName("BODY")[0].style.display = "none";
+        }
+
+        class ProcessStep{
+            /*label;
+            textValue;
+            id;
+            shortDescription = ""; // LongDescription, DescriptionUrl
+            isFinal = false;
+            element;
+            index;*/
+
+            constructor(label, textValue){
+                this.label = label;
+                this.textValue = textValue;
+                this.id = makeSafeForCSS(textValue);
+            }
+
+            createArrow2(){
+                var index = this.index + 1;
+                var arrowHtml = "<li id="+ this.id +" class=\"future\" onclick=\"arrowClicked(this.id)\">" +
+                "<i class=\"steps__index\">"+ index +"</i>"+
+                "<span class=\"steps__text\">" +
+                this.label
+                "</span>" +
+                "</li>";
+                return arrowHtml;
+            }
+
+        }
+
+        class FinalStep{
+
+            constructor(label, index, steps){
+                this.label = label;
+                this.index = index;
+                this.steps = steps; // ProcessStep[] where isFinal === true
+                this.id = "finalStep"; // Constant - there will be always only one step
+                this.cancelButtonLabel = MobileCRM.Localization.getTextOrDefault("Process.Button.Cancel", "Cancel");      
+                this.finalStepLabelElement = null;          
+            }
+
+            createFinalStepHtml(){
+                var arrowHtml = "<li id="+ this.id +" class=\"future\" onclick=\"arrowClicked(this.id)\">" +
+                "<i class=\"steps__index\">"+ this.index +"</i>"+
+                "<span id=\"finalStepLabel\" class=\"steps__text\">" +
+                this.label
+                "</span>" +
+                "</li>";
+                return arrowHtml;
+            }
+
+            openMessageBoxWithOptions(failCallback){
+                var popup = new MobileCRM.UI.MessageBox(this.label);
+                /// Add the buttons for message box
+                var labels = this.steps.map(s => s.label);
+                labels.push(this.cancelButtonLabel);
+                popup.items = labels;
+                /// If title is too long set the 'multi-line' to true
+                popup.multiLine = true;
+                popup.show(button => this.finishProcess(button, failCallback),
+                    function (err) {
+                        MobileCRM.bridge.alert(err); 
+                        if(failCallback)
+                            failCallback();
+                    }
+                );
+            }
+
+            finishProcess(button, failCallback){
+                if (button !== this.cancelButtonLabel){
+                    var step = this.steps.find(s => s.label === button);
+                    setStepOnEntity(step.textValue);
+                    var element = document.getElementById(this.id)
+                    setArrowCssClass(element, completedState); 
+                    this.setFinalStepLabel(button);
+                }
+                else if(failCallback)
+                    failCallback();               
+                return;
+            }
+
+            resetFinalStepLabel(){
+                if(this.finalStepLabelElement && this.finalStepLabelElement.innerHTML !== this.label)
+                    this.finalStepLabelElement.innerText = this.label;
+            }
+
+            setFinalStepLabel(label){
+                this.finalStepLabelElement.innerText = label;                           
+            }
+        }
+        
+    </script>
+    <div class="stepScrollableContrainer">
+        <div class="scroll-arrow scroll-arrow--left" onclick="moveLeft()"></div>
+        <ul id="stepContainer" class="steps" onresize="evaluateArrows()"></ul>
+        <div class="scroll-arrow scroll-arrow--right" onclick="moveRight()"></div>
+    </div>   
+    <div class="stepProperties">
+        <div class="stepProperties__descriptionLine">
+            <i id="descriptionIcon" class="stepProperties__description-icon"></i>
+            <div id="descriptionContainer" class="stepProperties__description"></div>
+        </div>    
+        <button id="completeBtn" class="stepProperties__select-button disabled" onclick="buttonClicked()"></button>
+    </div>
+</body>

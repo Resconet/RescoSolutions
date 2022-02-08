@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Tourplan xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Items>
+    <TourplanComponent>
+      <Binding>activity</Binding>
+      <IsEnabled>true</IsEnabled>
+    </TourplanComponent>
+    <TourplanComponent>
+      <Binding>appointment</Binding>
+      <IsEnabled>true</IsEnabled>
+    </TourplanComponent>
+    <TourplanComponent>
+      <Binding>task</Binding>
+      <IsEnabled>true</IsEnabled>
+    </TourplanComponent>
+  </Items>
+  <Version>5</Version>
+  <AllowedViews>activity.*:appointment.*:task.*</AllowedViews>
+  <MinDate xsi:nil="true" />
+  <MaxDate xsi:nil="true" />
+  <BusinessDaysMask>127</BusinessDaysMask>
+  <BusinessHours />
+  <ViewsMask>15</ViewsMask>
+</Tourplan>

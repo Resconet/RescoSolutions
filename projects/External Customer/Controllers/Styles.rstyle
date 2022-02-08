@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GlobalStyles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Styles>
+    <Style Name="primary" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>12</Value>
+        </Property>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-16777216</Value>
+        </Property>
+        <Property Name="FontWeight" Type="System.Int32">
+          <Value>0</Value>
+        </Property>
+        <Property Name="BackColor" Type="System.Int32">
+          <Value>16777215</Value>
+        </Property>
+        <Property Name="ShowBorder" Type="System.Boolean">
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="r_currency" Style="primary" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>12</Value>
+        </Property>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-16777216</Value>
+        </Property>
+        <Property Name="HorizontalAlignment" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="Format" Type="System.String">
+          <Value>{0:C2}</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="black" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>8</Value>
+        </Property>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-16777216</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="black_bold" Style="black" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>8</Value>
+        </Property>
+        <Property Name="FontWeight" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-16777216</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="black_auto" Style="black" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>8</Value>
+        </Property>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-16777216</Value>
+        </Property>
+        <Property Name="AutoHeight" Type="System.Boolean">
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="gray" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>8</Value>
+        </Property>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-10066330</Value>
+        </Property>
+        <Property Name="HorizontalAlignment" Type="System.Int32">
+          <Value>0</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="r_gray" Style="gray" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>8</Value>
+        </Property>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-10066330</Value>
+        </Property>
+        <Property Name="HorizontalAlignment" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="date" Style="gray" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>8</Value>
+        </Property>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-10066330</Value>
+        </Property>
+        <Property Name="Format" Type="System.String">
+          <Value>{0:g}</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="r_gray_currency" Style="r_gray" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>8</Value>
+        </Property>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-10066330</Value>
+        </Property>
+        <Property Name="Format" Type="System.String">
+          <Value>{0:C2}</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="gray_num" Style="gray" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>8</Value>
+        </Property>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-10066330</Value>
+        </Property>
+        <Property Name="Format" Type="System.String">
+          <Value>{0:0.00}</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="gray_bold" Style="gray" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>8</Value>
+        </Property>
+        <Property Name="FontWeight" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-10066330</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="gray9" Style="gray" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>9</Value>
+        </Property>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-10066330</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="large" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>12</Value>
+        </Property>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-16777216</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>0</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="large10" Style="large" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>10</Value>
+        </Property>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-16777216</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="large14" Style="large" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>14</Value>
+        </Property>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-16777216</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="large_auto" Style="large" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>12</Value>
+        </Property>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-16777216</Value>
+        </Property>
+        <Property Name="AutoHeight" Type="System.Boolean">
+          <Value>True</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="NewRowStyle" Type="Row">
+      <Properties>
+        <Property Name="BackColor" Type="System.Int32">
+          <Value>-2692865</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="CrmDetail" Type="DetailView">
+      <Properties>
+        <Property Name="BackColor" Type="System.Int32">
+          <Value>-2692865</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="ImageCellStyle" Style="" Type="ImageCell">
+      <Properties>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-16777216</Value>
+        </Property>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>10</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="HorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="CrmDetailItem" Type="DVItem">
+      <Properties>
+        <Property Name="LabelBackColor" Type="System.Int32">
+          <Value>-1</Value>
+        </Property>
+        <Property Name="TextBackColor" Type="System.Int32">
+          <Value>-1</Value>
+        </Property>
+        <Property Name="LabelForeColor" Type="System.Int32">
+          <Value>-10119741</Value>
+        </Property>
+        <Property Name="TextForeColor" Type="System.Int32">
+          <Value>-16777216</Value>
+        </Property>
+        <Property Name="LabelFontSize" Type="System.Int32">
+          <Value>8</Value>
+        </Property>
+        <Property Name="TextFontSize" Type="System.Int32">
+          <Value>12</Value>
+        </Property>
+        <Property Name="LabelAlignment" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="LabelWidth" Type="System.Int32">
+          <Value>70</Value>
+        </Property>
+        <Property Name="ItemBorder" Type="System.Int32">
+          <Value>0</Value>
+        </Property>
+        <Property Name="LabelStyle" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="CrmDetailCaptionItem" Type="DVItem">
+      <Properties />
+    </Style>
+    <Style Name="CrmListItem" Type="DVItem">
+      <Properties>
+        <Property Name="LabelBackColor" Type="System.Int32">
+          <Value>-1</Value>
+        </Property>
+        <Property Name="TextBackColor" Type="System.Int32">
+          <Value>-1</Value>
+        </Property>
+        <Property Name="LabelForeColor" Type="System.Int32">
+          <Value>-10119741</Value>
+        </Property>
+        <Property Name="TextForeColor" Type="System.Int32">
+          <Value>-16777216</Value>
+        </Property>
+        <Property Name="LabelFontSize" Type="System.Int32">
+          <Value>8</Value>
+        </Property>
+        <Property Name="TextFontSize" Type="System.Int32">
+          <Value>12</Value>
+        </Property>
+        <Property Name="LabelAlignment" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="LabelWidth" Type="System.Int32">
+          <Value>5</Value>
+        </Property>
+        <Property Name="ItemBorder" Type="System.Int32">
+          <Value>0</Value>
+        </Property>
+        <Property Name="LabelStyle" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Style>
+  </Styles>
+</GlobalStyles>

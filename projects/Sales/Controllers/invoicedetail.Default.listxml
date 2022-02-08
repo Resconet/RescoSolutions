@@ -1,0 +1,119 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>invoicedetail</EntityName>
+    <CamelCase>InvoiceDetail</CamelCase>
+    <WrapperClass>MobileCrm.Model.InvoiceDetail</WrapperClass>
+    <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
+    <ClassBinding>
+      <SerializedClassBinding name="#Amount" label="Amount" type="String"/>
+      <SerializedClassBinding name="#ExtendedAmountLabel" label="ExtendedAmountLabel" type="String"/>
+      <SerializedClassBinding name="#Invoice" label="Invoice" type="String"/>
+      <SerializedClassBinding name="#IsEditable" label="IsEditable" type="String"/>
+      <SerializedClassBinding name="#PricePerUnitLabel" label="PricePerUnitLabel" type="String"/>
+      <SerializedClassBinding name="#PrimaryName" label="PrimaryName" type="String"/>
+      <SerializedClassBinding name="#ProductPriceLevel" label="ProductPriceLevel" type="String"/>
+    </ClassBinding>
+  </Attributes>
+  <Name>Default</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy></OrderBy>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SerializedBindings>
+    <string>createdon</string>
+    <string>transactioncurrencyid</string>
+    <string>productid</string>
+    <string>extendedamount</string>
+    <string>id</string>
+    <string>invoiceid</string>
+    <string>manualdiscountamount</string>
+    <string>modifiedon</string>
+    <string>priceperunit</string>
+    <string>ispriceoverridden</string>
+    <string>quantity</string>
+    <string>isproductoverridden</string>
+    <string>tax</string>
+    <string>uomid</string>
+    <string>volumediscountamount</string>
+    <string>productdescription</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <ListOnChangeRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.quantity&lt;/var&gt;&lt;op&gt;LessEqual&lt;/op&gt;&lt;arg&gt;Decimal:0&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.quantity&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Decimal:1&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</ListOnChangeRule>
+  <ListCellRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:Plus&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.quantity&lt;/var&gt;&lt;func&gt;Addition&lt;/func&gt;&lt;arg&gt;Float:1&lt;/arg&gt;&lt;arg&gt;var:Entity.quantity&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:Minus&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.quantity&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Float:1&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.quantity&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Float:1&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.quantity&lt;/var&gt;&lt;func&gt;Addition&lt;/func&gt;&lt;arg&gt;Float:-1&lt;/arg&gt;&lt;arg&gt;var:Entity.quantity&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</ListCellRule>
+  <Fetch version="1.0">
+    <entity name="invoicedetail">
+      <filter type="and"/>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>400</Width>
+      <Height>67</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="#PrimaryName">
+          <StyleName>primary</StyleName>
+          <Bounds>2,2,398,25</Bounds>
+          <CellKind>3</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="extendedamount">
+          <StyleName>gray</StyleName>
+          <Bounds>319,47,81,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="quantity">
+          <StyleName>gray</StyleName>
+          <Bounds>160,47,53,20</Bounds>
+          <CellKind>3</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Qty:">
+          <IsConstant>true</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>160,27,54,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#PricePerUnitLabel">
+          <StyleName>gray</StyleName>
+          <Bounds>2,47,81,20</Bounds>
+          <CellKind>3</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Price Per Unit:">
+          <IsConstant>true</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>2,27,81,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Minus">
+          <IsConstant>true</IsConstant>
+          <StyleName>Minus</StyleName>
+          <Bounds>112,27,42,40</Bounds>
+          <CellKind>7</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Plus">
+          <IsConstant>true</IsConstant>
+          <StyleName>Plus</StyleName>
+          <Bounds>216,27,45,39</Bounds>
+          <CellKind>7</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Total Amount:">
+          <IsConstant>true</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>318,27,81,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

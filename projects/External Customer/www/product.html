@@ -1,0 +1,171 @@
+<html>
+<head>
+	<!-- Activate IE9 document mode, if available -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<!-- Defined iOS viewport -->
+	<meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=false">
+	<!--script type="text/javascript" src="jquery-1.7.1.min.js"></script-->
+	<script type="text/javascript" src="JSBridge.js"></script>
+
+	<style>
+/* CSS Reset */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+	margin:0;
+	padding:0;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img { 
+	border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style: normal;
+	font-weight: normal;
+}
+ol,ul {
+	list-style:none;
+}
+caption,th {
+	text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,q:after {
+	content:'';
+}
+abbr,acronym { border:0;
+}
+.clear        { clear: both; font: 1px/1px monospace; }
+.left         { float:left; }
+.right        { float:right; }
+img.left      { margin-right:1em; margin-bottom:1.8em; }
+img.right     { margin-left:1em; margin-bottom:1.8em; }
+.text-right   { text-align:right; }
+
+
+div.product {
+	padding: 20px;
+}
+h1 {
+	font-size: 2.2em;
+	border-bottom: 1px dotted #999;
+	border-top: 1px dotted #999;
+	text-align: center;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+p {
+	font-size: 1.1em;
+	padding: 10px 0 0 0;
+}
+img {
+	width: 100%;
+}
+h2#price {
+	font-size: 2em;
+	margin: 20px 0;
+	text-align: center;
+}
+h2#price span {
+	padding: 10px 20px;
+	background-color: #FFFDCF;
+	border: 1px solid #E1DFB0;
+	display: inline-block;
+}
+	</style>
+
+</head>
+<body onload="onBodyLoaded()"> 
+	<div id="card" class="product">
+		<img id="image" src="product-default.png" alt="Product photo">
+		<div class="text">
+			<h1 id="product-name">Product</h1>
+			<p id="description"></p>
+			<h2 id="price"><span></span></p>
+		</div>
+	</div>
+
+
+ 	<script>
+ 		var accountid = null;
+
+ 		function onBodyLoaded() {
+ 			// Request EntityForm object to get currently edited entity
+ 			MobileCRM.UI.EntityForm.requestObject(onEntityLoaded, displayError, null);
+ 		}
+
+ 		function onEntityLoaded(entityForm) {
+ 			var props = entityForm.entity.properties;
+ 			setInnerText("product-name", props["name"]);
+ 			setInnerText("description", props["description"]);
+ 			setInnerText("price", formatCurrency(props["price"]));
+
+ 			var fentity = new MobileCRM.FetchXml.Entity("annotation");
+ 			fentity.addAttribute("id");
+ 			fentity.filter = new MobileCRM.FetchXml.Filter();
+ 			fentity.filter.where("objectid", "eq", entityForm.entity.id);
+ 			fentity.filter.where("subject", "eq", "productimage");
+
+ 			var fetch = new MobileCRM.FetchXml.Fetch(fentity);
+			fetch.execute("DynamicEntities", function (res) { if(res) setImageData(res[0].properties.id, "image"); }, displayError, null);
+
+		}
+
+		function formatCurrency(Amount) {
+			var DecimalSeparator = Number("1.2").toLocaleString().substr(1, 1);
+
+			var AmountWithCommas = Number(Amount).toLocaleString();
+			var arParts = String(AmountWithCommas).split(DecimalSeparator);
+			var intPart = arParts[0];
+			var decPart = (arParts.length > 1 ? arParts[1] : '');
+			decPart = (decPart + '00').substr(0, 2);
+
+			return '$ ' + intPart + DecimalSeparator + decPart;
+		}
+
+		function setInnerText(elementId, text) {
+			document.getElementById(elementId).innerText = text ? text : " ";
+		}
+
+ 		function setImageData(annotationId, imgId) {
+ 			MobileCRM.DynamicEntity.loadDocumentBody(
+			"annotation",
+			annotationId,
+			function (result) {
+				// The result argument contains the string with base64-encoded data
+				var imgElement = document.getElementById(imgId);
+				imgElement.src = "data:image/jpeg;base64," + result;
+			},
+			displayError,
+			null
+			);
+		}
+
+		function displayError(error) {
+			alert("An error occurred: " + error);
+		}
+
+/*	    var params = window.location.search.substring(1).split('&');
+
+	    MobileCRM.DynamicEntity.loadById("account", params[0], function (entity) {
+	        var jqCard = $("#card");
+	        $("#address-street", jqCard).text(entity.properties.address1_line1);
+	        $("#address-city", jqCard).text(entity.properties.address1_city);
+	        $("#phone", jqCard).text(entity.properties.telephone1);
+	        $("img", jqCard).attr("src", "../MobileCrm/Images.Windows/Restaurant/" + entity.properties.id + ".png");
+	    },
+        function (err) {
+            alert(err);
+        },
+        this);*/
+
+	</script>
+
+</body>
+</html>
