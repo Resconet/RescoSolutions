@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML page to activate portal acccess</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1, user-scalable=no" />
+    <script src="../JSBridge.js"></script>
+  </head>
+  <body>
+    <script>
+        /**Form please wait dialog to block UI from any interraction. */
+        let plaseWaitDialog = null;
+        function registerCommands() {
+            MobileCRM.UI.EntityList.onCommand("custom_EnablePortalAccess", function (entityList) {
+                confirmWindow(function () {
+                    portalAccess(entityList, true);
+                }, "Are you sure you want to enable portal access?");
+            }, true, null);
+            MobileCRM.UI.EntityList.onCommand("custom_DisablePortalAccess", function (entityList) {
+                confirmWindow(function () {
+                    portalAccess(entityList, false);
+                }, "Are you sure you want to disable portal access?");
+            }, true, null);
+        }
+        function confirmWindow(continueWith, title) {
+            var msgBox = new MobileCRM.UI.MessageBox(title);
+            msgBox.items = ["Yes", "No"];
+            msgBox.show(function (btn) {
+                if (btn == "Yes") {
+                    continueWith.call(null);
+                }
+            }, MobileCRM.bridge.alert, null);
+        }
+        function portalAccess(entityList, enable) {
+            if (entityList.context) {
+                //plaseWaitDialog = MobileCRM.UI.Form.showPleaseWait(MobileCRM.Localization.getTextOrDefault("Msg.Loading", "..."));
+                var entities = entityList.context.entities;
+                if (entities) {
+                    var ids = [];
+                    entities.forEach(function (entity, index) {
+                        ids.push(entity.id);
+                    });
+                    fetchAndSaveEntities(entities[0].entityName, "resco_portalaccess", "id", enable, ids, function (entities) {
+                        saveEntityArrayRec(entities, null);
+                    });
+                }
+            }
+        }
+        /**
+         * Fetch entity with passed names and set each result from fetch with valid enable argument for specified entity property.
+         * @param entityName name of entity
+         * @param entityProperty property name to set
+         * @param entityPrimaryKeyName entityPrimaryName
+         * @param enable value to set for entityProperty
+         * @param entityIds entity ids what will be set and saved.
+         * @param saveMultiple If true, save multiple will be used, othrerwsie recursive entities save.
+         * @param continueWith Optional callback to continue with.
+         */
+        function fetchAndSaveEntities(entityName, entityProperty, entityPrimaryKeyName, enable, entityIds, saveCallback) {
+            var fEntity = new MobileCRM.FetchXml.Entity(entityName);
+            fEntity.addAttributes();
+            fEntity.filter = new MobileCRM.FetchXml.Filter();
+            var cond = new MobileCRM.FetchXml.Condition();
+            cond.attribute = entityPrimaryKeyName;
+            cond.operator = "in";
+            cond.values = entityIds;
+            fEntity.filter.conditions.push(cond);
+            var f = new MobileCRM.FetchXml.Fetch(fEntity);
+            f.execute("DynamicEntities", function (res) {
+                // set property for each entity and call mupltiple save
+                res.forEach(function (entity, index) {
+                    entity.properties[entityProperty] = enable;
+                }, null);
+                saveCallback.call(null, res);
+            }, _onError, null);
+        }
+        /**
+         * Save array of entities using multiple request.
+         * @remarks NOT IMPLEMENTED in the Web app.
+         * @param entities Array of dynamic entities
+         * @param continueWith Optional callback to continue with
+         */
+        function saveMultiple(entities, continueWith) {
+            MobileCRM.DynamicEntity.saveMultiple(entities, null, () => {
+                _closeWaitDialog();
+                if (continueWith)
+                    continueWith.call(null); // if defined ... close wait dialog in the last callback.
+            }, function (err) {
+                _onError("Save multiple request failed!.\n\n" + err);
+            }, null);
+        }
+        /**
+         * Save entity from array recursively.
+         * @param entities Array of dynamic entities
+         * @param continueWith Optional callback to continue with
+         */
+        function saveEntityArrayRec(entities, continueWith) {
+            if (entities.length == 0) {
+                _closeWaitDialog();
+                if (continueWith)
+                    continueWith.call(null);
+            }
+            else {
+                let e = entities.pop();
+                e.save(function (err) {
+                    if (err)
+                        _onError("Failed to save entity " + e.primaryName + "\nError:" + err);
+                    else
+                        saveEntityArrayRec(entities, continueWith);
+                });
+            }
+        }
+        /** Close wait dialog if is defined. */
+        function _closeWaitDialog() {
+            if (plaseWaitDialog !== null) {
+                plaseWaitDialog.close();
+                plaseWaitDialog = null;
+            }
+        }
+        /**
+         * Display error message and close wait dialog.
+         * @param err Error text
+         */
+        function _onError(err) {
+            _closeWaitDialog();
+            err = err || "";
+            MobileCRM.bridge.alert(" throws error \n\n" + err);
+        }
+        window.onload = function () {
+            registerCommands();
+        };
+    </script>
+  </body>
+</html>

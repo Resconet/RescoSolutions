@@ -1,0 +1,45 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>rh_model</EntityName>
+  <CamelCase>rh_model</CamelCase>
+  <PrimaryCommands>Delete||</PrimaryCommands>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand OnExecuteButton</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" flexiHeader="0" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="image1" image="true" imageActions="14" Style="HoustonModelImage">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="rh_name" Style="HoustonNormal"/>
+        <DetailItem SchemaName="rh_manufacturer" Style="HoustonNormal"/>
+        <DetailItem SchemaName="rh_description" Style="HoustonMultiline"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiOrientation="1" FlexiExpandVisibility="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\rh_modelexpert@2x.png" IsIconNameReadOnly="0" DocCommands="0">
+      <Name>Experts</Name>
+      <CustomName>Experts</CustomName>
+      <Binding SchemaName="rh_modelexpert.rh_modelid"/>
+      <Views>rh_modelexpert.*:rh_modelexpert.Default</Views>
+      <LookupViews>rh_modelexpert.*:rh_modelexpert.Default</LookupViews>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiOrientation="1" FlexiExpandVisibility="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\rh_guide@2x.png" IsIconNameReadOnly="0" DocCommands="0">
+      <Name>Guides</Name>
+      <CustomName>Guides</CustomName>
+      <Binding SchemaName="rh_guide.rh_modelid.rh_guidemodel.rh_guideid"/>
+      <Views>rh_guide.*:rh_guide.Default</Views>
+      <LookupViews>&lt;extra&gt;&lt;views&gt;rh_guide.*:rh_guide.Default&lt;/views&gt;&lt;filter entity="rh_guide"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="rh_guide"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="statuscode" operator="eq" value="473220002"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" FlexiExpandVisibility="2" NameModified="0" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\equipment@2x.png" IsIconNameReadOnly="0" DocCommands="0">
+      <Name>Equipment List</Name>
+      <Binding SchemaName="fs_asset.rh_modelid"/>
+      <Views>fs_asset.Associated List</Views>
+      <LookupViews>fs_asset.Associated List</LookupViews>
+    </FormTab>
+    <FormTab xsi:type="IFrameTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Web@2x.png" IsIconNameReadOnly="0">
+      <Name>Web</Name>
+      <Url>file://Resizer/index.html</Url>
+      <IsVisible>false</IsVisible>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>
