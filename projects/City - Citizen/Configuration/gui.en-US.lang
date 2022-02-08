@@ -1,0 +1,9 @@
+account.name=Name
+incident=Report
+incident+s=Reports
+incident.incidenttemplateid=Category
+incident.View.All Incidents=All Reports
+incident.View.My Incidents=My Reports
+incident.View.Upvoted Incidents=Upvoted Reports
+HomeTitle.MyIncidents=My Reports
+HomeTitle.AllIncidents=All Reports

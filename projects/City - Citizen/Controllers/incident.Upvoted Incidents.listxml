@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>incident</EntityName>
+    <CamelCase>incident</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>Upvoted Incidents</Name>
+  <Kind>List</Kind>
+  <IsDefault>false</IsDefault>
+  <IsHidden>true</IsHidden>
+  <HasGpsFields>true</HasGpsFields>
+  <AutoWideWidth>0</AutoWideWidth>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="incident">
+      <link-entity name="fs_upvotedincident" alias="L1" from="incidentid" to="id" link-type="inner">
+        <filter type="and">
+          <condition attribute="contactid" operator="eq-customeruserid" />
+        </filter>
+      </link-entity>
+    </entity>
+  </Fetch>
+  <OrderBy>name</OrderBy>
+  <SortAllowedFields>address1_city;address1_country;createdon;description;incidenttemplateid;name;address1_postalcode;address1_stateorprovince;statecode;statuscode;address1_line1</SortAllowedFields>
+  <FilterAllowedFields>address1_city;address1_country;createdon;description;incidenttemplateid;name;address1_postalcode;address1_stateorprovince;statecode;statuscode;address1_line1</FilterAllowedFields>
+  <SerializedBindings>
+    <string>address1_city</string>
+    <string>createdon</string>
+    <string>description</string>
+    <string>id</string>
+    <string>address1_latitude</string>
+    <string>address1_longitude</string>
+    <string>modifiedon</string>
+    <string>name</string>
+    <string>address1_postalcode</string>
+    <string>responsiblecontactid</string>
+    <string>statecode</string>
+    <string>statuscode</string>
+    <string>address1_line1</string>
+    <string>address1_line2</string>
+    <string>address1_line3</string>
+  </SerializedBindings>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>60</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>48,9,188,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Controls.liked.png">
+          <IsConstant>true</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>5,9,40,40</Bounds>
+          <CellKind>7</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="description">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>48,30,188,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="">
+          <IsConstant>true</IsConstant>
+          <StyleName>BlackSeparator</StyleName>
+          <Bounds>5,59,230,1</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties />
+  <SerializedChildren />
+  <Height>0</Height>
+  <IFrame />
+  <IFrameProvidesDS>false</IFrameProvidesDS>
+</EntityList>

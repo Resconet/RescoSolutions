@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Empty Offline HTML page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1, user-scalable=no" />
+    <script src="JSBridge.js"></script>
+</head>
+<body onload="onBodyLoaded()">
+    <script>
+    	var dataSource = new MobileCRM.UI.ListDataSource();
+    	// loadNextChunk method must be implemented explicitly
+    	dataSource.loadNextChunk = function (page, count) {
+
+    		if (!g_Configuration) {
+
+    			MobileCRM.Configuration.requestObject(function (config) {
+    				g_Configuration = config;
+    				LoadData(page, count, this);
+    			}, MobileCRM.bridge.alert, this);
+
+    		} else {
+
+    			LoadData(page, count, this);
+
+    		}
+
+    	};
+
+    	function LoadData(page, count, _this) {
+
+    		var fetch = _this.fetch; // Take a fetch provided for current entity view
+    		// Specify explicit page and count requested by application (optional - it's pre-set before this method is called).
+    		fetch.count = count;
+    		fetch.page = page;
+
+    		fetch.execute("DynamicEntities", function (entities) {
+
+    			var dataCount = entities.length;
+    			if (dataCount == 0) {
+    				this.chunkReady(entities);
+    			}
+    			else {
+    				g_Callbacks = 2;
+    				CountUpvotes(entities, this, dataCount);
+    				CheckVoted(entities, this, dataCount);
+    			}
+    		}, MobileCRM.bridge.alert, _this);
+    	}
+
+    	function CountUpvotes(entities, scope, dataCount) {
+    		for (var i = 0; i < entities.length; i++) {
+    			var countEntity = new MobileCRM.FetchXml.Entity("fs_upvotedincident");
+    			var attr = countEntity.addAttribute("id");
+    			attr.aggregate = "count";
+    			attr.alias = "upvotes_count";
+    			var filter = new MobileCRM.FetchXml.Filter();
+    			filter.where("incidentid", "eq", entities[i].id);
+    			countEntity.filter = filter;
+
+    			var countFetch = new MobileCRM.FetchXml.Fetch(countEntity);
+    			countFetch.aggregate = true;
+
+    			var newScope = { "scope": scope, "entities": entities, "i": i };
+    			countFetch.execute("DynamicEntities", function (res) {
+
+    				var upvotes = 0;
+    				var upvotes_text = " upvotes";
+
+    				if (res.length <= 0)
+    					upvotes = 0;
+    				else
+    					upvotes = res[0].properties["upvotes_count"];
+
+    				if (upvotes == 1)
+    					upvotes_text = " upvote";
+    				// this.entities[this.i].properties["resco_temp1"] = upvotes + upvotes_text;
+    				this.entities[this.i].properties["fs_upvotecount"] = upvotes + upvotes_text;
+
+    				if (--dataCount == 0) {
+    					// this.scope.chunkReady(this.entities);
+    					HandleChunkReady(this.entities, this.scope);
+    				}
+    			}, MobileCRM.bridge.alert, newScope);
+    		}
+    	}
+
+    	function CheckVoted(entities, scope, dataCount) {
+    		for (var i = 0; i < entities.length; i++) {
+    			var voteEntity = new MobileCRM.FetchXml.Entity("fs_upvotedincident");
+    			var attr = voteEntity.addAttribute("id");
+    			var filter = new MobileCRM.FetchXml.Filter();
+    			filter.where("incidentid", "eq", entities[i].id);
+    			filter.where("contactid", "eq", g_Configuration.settings.customerUserId.id);
+    			voteEntity.filter = filter;
+
+    			var voteFetch = new MobileCRM.FetchXml.Fetch(voteEntity);
+				voteFetch.count = 1;
+
+    			var newScope = { "scope": scope, "entities": entities, "i": i };
+    			voteFetch.execute("DynamicEntities", function (res) {
+
+    				var voted = false;
+    				if (res.length > 0)
+    					voted = true;
+
+    				// this.entities[this.i].properties["resco_temp2"] = voted;
+    				this.entities[this.i].properties["fs_upvotedbyuser"] = voted;
+
+    				if (--dataCount == 0) {
+    					// this.scope.chunkReady(this.entities);
+    					HandleChunkReady(this.entities, this.scope);
+    				}
+    			}, MobileCRM.bridge.alert, newScope);
+    		}
+    	}
+
+    	function HandleChunkReady(entities, scope) {
+			if(--g_Callbacks == 0)
+				scope.chunkReady(entities);
+    	}
+
+    	MobileCRM.UI.EntityList.setDataSource(dataSource);
+
+    	var g_Configuration = null;
+    	var g_Callbacks = 0;
+
+    	function onBodyLoaded() {
+    		MobileCRM.UI.EntityList.onClick(onClickHandler, true, null);
+    		MobileCRM.Configuration.requestObject(function (config) { g_Configuration = config; }, MobileCRM.bridge.alert, null);
+    	}
+
+    	function onClickHandler(entityList) {
+    		var context = entityList.context;
+    		var entity = entityList.context.entities[0];
+    		// var voted = entity.properties.resco_temp2;
+    		var voted = entity.properties.fs_upvotedbyuser;
+    		var cell = context.event.cell;
+    		if (cell) {
+
+    			if (voted) {
+    				DisplayMessage("Unfortunately this action is not possible.\n\nYou have already upvoted the incident " + entity.primaryName);
+    				return;
+    			}
+
+    			if (g_Configuration) {
+    				DisplayMessage("SUCCESS!\n\nYou have upvoted the incident " + entity.primaryName);
+    				var currentUser = new MobileCRM.Reference(g_Configuration.settings.customerUserId.entityName, g_Configuration.settings.customerUserId.id); // g_Configuration.settings. // WHERE IS CURRENT CUSTOMER?
+    				var upvote = MobileCRM.DynamicEntity.createNew("fs_upvotedincident", null, null);
+    				upvote.properties.contactid = currentUser;
+    				upvote.properties.incidentid = new MobileCRM.Reference("incident", entity.id);
+    				upvote.save(function (err) { if (err) MobileCRM.bridge.alert(err); });
+    				MobileCRM.UI.EntityList.reload();	// TODO: is this really a good idea? (is it necessary)
+    			}
+    		}
+    	}
+
+		function DisplayMessage(message) {
+			var popup = new MobileCRM.UI.MessageBox(message);
+			popup.items = ["OK"];
+			popup.multiLine = true;
+			popup.show(
+				function (button) {
+					return;
+				});
+    	}
+
+    </script>
+</body>
+</html>

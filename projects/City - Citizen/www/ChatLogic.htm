@@ -1,0 +1,38 @@
+<html>
+<head>
+	<!-- Activate IE9 document mode, if available -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<!-- Defined iOS viewport -->
+	<meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<script type="text/javascript" src="JSBridge.js"></script>
+</head>
+<body onload="onBodyLoaded()">
+	<script>
+		function onBodyLoaded() {
+
+
+			// register post save handler - post save, because we want to use chat service
+			MobileCRM.UI.EntityForm.onPostSave(
+				function (entityForm) {
+
+					var entity = entityForm.entity;
+					var postSuspend = entityForm.suspendPostSave();
+
+					// get chat service & subscribe
+					MobileCRM.Services.ChatService.getService(function (chatService) {
+
+						chatService.subscribeToEntityChannel(new MobileCRM.Reference(entity.entityName, entity.id, entity.primaryName), true,
+							function () {
+								postSuspend.resumePostSave();
+							}, postSuspend.resumePostSave);
+
+					}, postSuspend.resumePostSave);
+				},
+				MobileCRM.bridge.alert
+			);
+
+		}
+
+	</script>
+</body>
+</html>

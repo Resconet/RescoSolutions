@@ -1,0 +1,36 @@
+<html>
+<head>
+	<!-- Activate IE9 document mode, if available -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<!-- Defined iOS viewport -->
+	<meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<script type="text/javascript" src="JSBridge.js"></script>
+</head>
+<body onload="onBodyLoaded()">
+	<script>
+
+		var g_Configuration = null;
+
+		function onBodyLoaded() {
+			MobileCRM.UI.EntityList.onClick(onClickHandler, true, null);
+			MobileCRM.Configuration.requestObject( function (config) { g_Configuration = config; },MobileCRM.bridge.alert,null);
+		}
+
+		function onClickHandler(entityList) {
+			var context = entityList.context;
+			var entity = entityList.context.entities[0];
+			var cell = context.event.cell;
+			if (cell) {				
+				if(g_Configuration) {
+					MobileCRM.bridge.alert("You've upvoted incident " + entity.primaryName);
+					var currentUser = new MobileCRM.Reference("contact", "52bb06af-1589-46a2-b02d-c10c3a087aae" ); // g_Configuration.settings. // WHERE IS CURRENT CUSTOMER?
+					var upvote = MobileCRM.DynamicEntity.createNew("fs_upvotedincident", null, null);
+					upvote.properties.contactid = currentUser;
+					upvote.properties.incidentid = new MobileCRM.Reference("incident", entity.id);
+					upvote.save(function (err) { if (err) MobileCRM.bridge.alert(err); });
+				}
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+﻿<fetchcollection>
+	
+	<fetch>
+		<entity name='account'>
+			<filter>
+				<condition attribute='statuscode' operator='ne' value='2'/>
+			</filter>
+		</entity>
+	</fetch>
+
+	<fetch>
+		<entity name='contact'>
+			<filter>
+				<condition attribute='statuscode' operator='ne' value='2'/>
+			</filter>
+		</entity>
+	</fetch>
+
+	<fetch>
+		<entity name='quote'>
+			<filter>
+				<condition attribute='modifiedon' operator='last-x-days' value='30'/>
+			</filter>
+		</entity>
+	</fetch>
+
+	<fetch>
+		<entity name='salesorder'>
+			<filter>
+				<condition attribute='modifiedon' operator='last-x-days' value='30'/>
+			</filter>
+		</entity>
+	</fetch>
+
+	<fetch>
+		<entity name='invoice'>
+			<filter>
+				<condition attribute='modifiedon' operator='last-x-days' value='30'/>
+			</filter>
+		</entity>
+	</fetch>
+
+	<fetch>
+		<entity name='opportunity'>
+			<filter>
+				<condition attribute='modifiedon' operator='last-x-days' value='60'/>
+			</filter>
+		</entity>
+	</fetch>
+
+	<fetch>
+		<entity name='email'>
+			<filter>
+				<condition attribute='modifiedon' operator='last-x-days' value='60'/>
+			</filter>
+		</entity>
+	</fetch>
+
+	<fetch>
+		<entity name='phonecall'>
+			<filter>
+				<condition attribute='modifiedon' operator='last-x-days' value='60'/>
+			</filter>
+		</entity>
+	</fetch>
+	
+	<fetch>
+		<entity name='task'>
+			<filter>
+				<condition attribute='modifiedon' operator='last-x-days' value='60'/>
+			</filter>
+		</entity>
+	</fetch>
+
+	<fetch>
+		<entity name='appointment'>
+			<filter>
+				<condition attribute='modifiedon' operator='last-x-days' value='60'/>
+			</filter>
+		</entity>
+	</fetch>
+
+	<fetch>
+		<entity name='incident'>
+			<filter>
+				<condition attribute='modifiedon' operator='last-x-days' value='60'/>
+			</filter>
+		</entity>
+	</fetch>
+
+</fetchcollection>

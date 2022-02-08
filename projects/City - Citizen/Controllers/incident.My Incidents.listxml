@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>incident</EntityName>
+    <CamelCase>incident</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>My Incidents</Name>
+  <Kind>List</Kind>
+  <IsDefault>false</IsDefault>
+  <HasGpsFields>true</HasGpsFields>
+  <AutoWideWidth>0</AutoWideWidth>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="incident">
+      <filter type="and">
+        <condition attribute="customerid" operator="eq-customeruserid" />
+      </filter>
+    </entity>
+  </Fetch>
+  <OrderBy>!createdon</OrderBy>
+  <SortAllowedFields>address1_city;address1_country;createdon;description;name;address1_postalcode;address1_stateorprovince;statecode;statuscode;address1_line1</SortAllowedFields>
+  <FilterAllowedFields>address1_city;address1_country;createdon;description;incidenttemplateid;name;address1_postalcode;address1_stateorprovince;statecode;statuscode;address1_line1</FilterAllowedFields>
+  <SerializedBindings>
+    <string>address1_city</string>
+    <string>createdon</string>
+    <string>description</string>
+    <string>id</string>
+    <string>address1_latitude</string>
+    <string>address1_longitude</string>
+    <string>modifiedon</string>
+    <string>name</string>
+    <string>address1_postalcode</string>
+    <string>responsiblecontactid</string>
+    <string>statecode</string>
+    <string>statuscode</string>
+    <string>address1_line1</string>
+    <string>address1_line2</string>
+    <string>address1_line3</string>
+  </SerializedBindings>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>100</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>86,12,95,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>IncidentPhoto_list</StyleName>
+          <Bounds>9,13,70,70</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <IsConstant>false</IsConstant>
+          <StyleName>IncidentState</StyleName>
+          <Bounds>182,12,54,54</Bounds>
+          <CellKind>1</CellKind>
+          <IsFormatted>false</IsFormatted>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <IsConstant>false</IsConstant>
+          <StyleName>IncidentStateText</StyleName>
+          <Bounds>182,67,54,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="address1_line1">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary_9</StyleName>
+          <Bounds>86,38,95,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="description">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary_8_gray</StyleName>
+          <Bounds>86,60,95,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="">
+          <IsConstant>true</IsConstant>
+          <StyleName>BlackSeparator</StyleName>
+          <Bounds>7,99,226,1</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default-Copy</Name>
+      <Width>240</Width>
+      <Height>100</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>79,2,102,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>IncidentPhoto_list</StyleName>
+          <Bounds>7,4,66,66</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <IsConstant>false</IsConstant>
+          <StyleName>IncidentState</StyleName>
+          <Bounds>182,2,54,54</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <IsConstant>false</IsConstant>
+          <StyleName>IncidentStateText</StyleName>
+          <Bounds>182,57,54,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="address1_line1">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary_9</StyleName>
+          <Bounds>79,28,102,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="description">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary_8_gray</StyleName>
+          <Bounds>79,50,102,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="">
+          <IsConstant>true</IsConstant>
+          <StyleName>BlackSeparator</StyleName>
+          <Bounds>40,88,160,1</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default-Copy</Name>
+      <Width>240</Width>
+      <Height>100</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>86,2,95,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>IncidentPhoto_list</StyleName>
+          <Bounds>9,3,70,70</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <IsConstant>false</IsConstant>
+          <StyleName>IncidentState</StyleName>
+          <Bounds>182,2,54,54</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <IsConstant>false</IsConstant>
+          <StyleName>IncidentStateText</StyleName>
+          <Bounds>182,57,54,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="address1_line1">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary_9</StyleName>
+          <Bounds>86,28,95,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="description">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary_8_gray</StyleName>
+          <Bounds>86,50,95,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="">
+          <IsConstant>true</IsConstant>
+          <StyleName>BlackSeparator</StyleName>
+          <Bounds>7,88,226,1</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties />
+  <SerializedChildren />
+  <Height>0</Height>
+  <IFrameProvidesDS>false</IFrameProvidesDS>
+</EntityList>

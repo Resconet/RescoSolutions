@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Empty Offline HTML page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1, user-scalable=no" />
+    <script src="JSBridge.js"></script>
+</head>
+<body>
+    <script>
+    	var dataSource = new MobileCRM.UI.ListDataSource();
+    	// loadNextChunk method must be implemented explicitly
+    	dataSource.loadNextChunk = function (page, count) {
+    		var fetch = this.fetch; // Take a fetch provided for current entity view
+    		// Specify explicit page and count requested by application (optional - it's pre-set before this method is called).
+    		fetch.count = count;
+    		fetch.page = page;
+
+    		fetch.execute("DynamicEntities", function (entities) {
+
+    			var dataCount = entities.length;
+    			if (dataCount == 0) {
+    				this.chunkReady(entities);
+    			}
+    			else {
+    				CountUpvotes(entities, this, dataCount);
+    			}
+    		}, MobileCRM.bridge.alert, this);
+    	};
+
+    	function CountUpvotes(entities, scope, dataCount) {
+    		for (var i = 0; i < entities.length; i++) {
+    			var countEntity = new MobileCRM.FetchXml.Entity("fs_upvotedincident");
+    			var attr = countEntity.addAttribute("id");
+    			attr.aggregate = "count";
+    			attr.alias = "upvotes_count";
+    			var filter = new MobileCRM.FetchXml.Filter();
+    			filter.where("incidentid", "eq", entities[i].id);
+    			countEntity.filter = filter;
+
+    			var countFetch = new MobileCRM.FetchXml.Fetch(countEntity);
+    			countFetch.aggregate = true;
+
+    			var newScope = { "scope": scope, "entities": entities, "i": i };
+    			countFetch.execute("DynamicEntities", function (res) {
+
+    				var upvotes = 0;
+
+    				if (res.length <= 0)
+    					upvotes = 0;
+    				else
+    					upvotes = res[0].properties["upvotes_count"];
+
+    				this.entities[this.i].properties["fs_upvotecount"] = upvotes;
+
+    				if (--dataCount == 0) {
+    					this.scope.chunkReady(this.entities);
+    				}
+    			}, MobileCRM.bridge.alert, newScope);
+    		}
+    	}
+
+    	MobileCRM.UI.EntityList.setDataSource(dataSource);
+
+    </script>
+</body>
+</html>

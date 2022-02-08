@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>fs_workordertask</EntityName>
+    <CamelCase>fs_workordertask</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>Default</Name>
+  <Kind>List</Kind>
+  <IsDefault>false</IsDefault>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>assetid</string>
+    <string>completionpercent</string>
+    <string>createdon</string>
+    <string>description</string>
+    <string>estimatedduration</string>
+    <string>id</string>
+    <string>modifiedon</string>
+    <string>name</string>
+    <string>ownerid</string>
+    <string>owningbusinessunit</string>
+    <string>resourceid</string>
+    <string>statecode</string>
+    <string>statuscode</string>
+    <string>totalduration</string>
+    <string>workorderid</string>
+    <string>workorderincidentid</string>
+  </SerializedBindings>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>40</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>4,2,92,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="totalduration">
+          <IsConstant>false</IsConstant>
+          <StyleName>r_currency</StyleName>
+          <Bounds>166,2,70,24</Bounds>
+          <CellKind>3</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="completionpercent">
+          <IsConstant>false</IsConstant>
+          <StyleName>r_gray_percent</StyleName>
+          <Bounds>96,26,140,11</Bounds>
+          <CellKind>3</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="estimatedduration">
+          <IsConstant>false</IsConstant>
+          <StyleName>r_currency</StyleName>
+          <Bounds>96,2,70,24</Bounds>
+          <CellKind>3</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties />
+  <SerializedChildren />
+  <Height>0</Height>
+</EntityList>

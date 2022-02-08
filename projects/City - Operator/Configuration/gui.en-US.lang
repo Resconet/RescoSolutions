@@ -1,0 +1,8 @@
+fs_workorder=Work Order
+fs_workorder+s=Work Orders
+fs_workorder.customerid=Reported By
+fs_workorderschedule=Work Order Schedule
+fs_workorderschedule+s=Work Order Schedules
+incident.customerid=Reported By
+HomeItem.WorkOrders=Work Orders
+Welcome.Subtitle=Information & quick guide

@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>fs_workorderproduct</EntityName>
+    <CamelCase>fs_workorderproduct</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>Products and Services</Name>
+  <Kind>List</Kind>
+  <IsDefault>true</IsDefault>
+  <OrderBy>productdescription</OrderBy>
+  <SerializedBindings>
+    <string>extendedamount</string>
+    <string>assetid</string>
+    <string>createdon</string>
+    <string>transactioncurrencyid</string>
+    <string>duration</string>
+    <string>estimatedamount</string>
+    <string>estimatedmanualdiscountamount</string>
+    <string>estimatedduration</string>
+    <string>estimatedispriceoverridden</string>
+    <string>estimatedquantity</string>
+    <string>estimatedtax</string>
+    <string>estimatedpriceperunit</string>
+    <string>estimatedvolumediscountamount</string>
+    <string>id</string>
+    <string>isservice</string>
+    <string>manualdiscountamount</string>
+    <string>modifiedon</string>
+    <string>ownerid</string>
+    <string>owningbusinessunit</string>
+    <string>priceperunit</string>
+    <string>ispriceoverridden</string>
+    <string>productid</string>
+    <string>productdescription</string>
+    <string>quantity</string>
+    <string>isproductoverridden</string>
+    <string>statecode</string>
+    <string>statuscode</string>
+    <string>tax</string>
+    <string>uomid</string>
+    <string>isused</string>
+    <string>volumediscountamount</string>
+    <string>workorderid</string>
+    <string>workorderincidentid</string>
+    <string>resourceid</string>
+  </SerializedBindings>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>40</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="productdescription">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>26,2,70,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="quantity">
+          <IsConstant>false</IsConstant>
+          <StyleName>r_currency</StyleName>
+          <Bounds>166,2,70,24</Bounds>
+          <CellKind>3</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="estimatedamount">
+          <IsConstant>false</IsConstant>
+          <StyleName>r_gray</StyleName>
+          <Bounds>96,26,70,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="extendedamount">
+          <IsConstant>false</IsConstant>
+          <StyleName>r_gray</StyleName>
+          <Bounds>166,26,70,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="estimatedquantity">
+          <IsConstant>false</IsConstant>
+          <StyleName>r_currency</StyleName>
+          <Bounds>96,2,70,24</Bounds>
+          <CellKind>3</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="isservice">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>26,26,70,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="isused">
+          <IsConstant>false</IsConstant>
+          <StyleName>ProductUsage</StyleName>
+          <Bounds>4,2,23,35</Bounds>
+          <CellKind>6</CellKind>
+          <IsFormatted>false</IsFormatted>
+          <Anchor>7</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties />
+  <SerializedChildren />
+  <Height>0</Height>
+</EntityList>

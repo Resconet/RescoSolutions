@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GlobalMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Items>
+    <GlobalMapComponent>
+      <EntityName>account</EntityName>
+      <ViewName />
+      <IsInitial>true</IsInitial>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
+      <EntityName>contact</EntityName>
+      <ViewName />
+      <IsInitial>true</IsInitial>
+    </GlobalMapComponent>
+  </Items>
+</GlobalMap>

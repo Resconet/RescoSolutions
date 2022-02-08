@@ -1,0 +1,10 @@
+fs_workorder.View.WorkOrders=Objednávky práce
+fs_workorder.DetailView.Incidents=Incidenty
+fs_workorder.DetailView.Schedules=Rozpisy
+fs_workorder.DetailView.Tasks=Úlohy
+fs_workorder.DetailView.Skills=Zručnosti
+fs_workorderschedule.DetailView.Schedule=Rozpis
+Scheduler=Plánovač
+Scheduler.Subtitle=Priradenie práce k zdrojom
+Planner=Plánovanie
+Planner.Subtitle=Priradenie práce k zdrojom
