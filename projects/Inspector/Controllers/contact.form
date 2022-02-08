@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" flexi="1" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>contact</EntityName>
+  <CamelCase>contact</CamelCase>
+  <ClassBinding />
+  <SerializedChildren />
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" flexi="0" flexiHeader="1" flexiMaxLines="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="parentcustomerid" Style="Normal" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="ownerid" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem" Style="Normal" image="false" separator="true">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="lastname" Style="Normal" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="firstname" Style="Normal" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="jobtitle" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem" Style="Normal" image="false" separator="true">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="mobilephone" Style="Normal" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="telephone1" Style="Normal" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem" Style="Normal" image="false" separator="true">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="emailaddress1" Style="Normal" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="fax" Style="Normal" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" flexi="0" flexiHeader="1" flexiMaxLines="0">
+      <Name>Address</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="address1_line1" Style="Normal" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address1_line2" Style="Normal" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address1_line3" Style="Normal" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem" Style="Normal" image="false" separator="true">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address1_city" Style="Normal" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address1_postalcode" Style="Normal" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem" Style="Normal" image="false" separator="true">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address1_stateorprovince" Style="Normal" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address1_country" Style="Normal" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="MapTab" flexi="1" flexiHeight="1" flexiWidth="1" flexiHeader="1" flexiMaxLines="0">
+      <Name>Map</Name>
+      <CoordinatesBinding>address1_latitude;address1_longitude</CoordinatesBinding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeight="9" flexiHeader="1" flexiOrientation="1" flexiMaxLines="9" FlipMode="0">
+      <Name />
+      <LogicalName>activity.regardingobjectid</LogicalName>
+	  <Views>activity.*:activity.@All Activities</Views>
+      <Binding SchemaName="activity.regardingobjectid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeight="9" flexiHeader="1" flexiOrientation="1" flexiMaxLines="9" FlipMode="0">
+      <Name />
+      <LogicalName>annotation.objectid</LogicalName>
+      <Binding SchemaName="annotation.objectid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+  </SerializedChildrenV2>
+  <Navigation flexi="0" flexiHeader="1" flexiMaxLines="0">
+    <Name>Navigation</Name>
+    <SerializedChildren />
+  </Navigation>
+  <PrimaryCommands/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled</EnabledWorkflows>
+  <SerializedContactInfo />
+</EntityForm>

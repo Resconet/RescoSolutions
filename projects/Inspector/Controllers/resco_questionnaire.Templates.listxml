@@ -1,0 +1,74 @@
+﻿<EntityList UseSyncFilter="true">
+  <Attributes>
+    <EntityName>resco_questionnaire</EntityName>
+    <CamelCase>resco_questionnaire</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding>
+      <SerializedClassBinding name="#Name" label="Localized Name" type="String"/>
+      <SerializedClassBinding name="#Description" label="Localized Description" type="String"/>
+      <SerializedClassBinding name="#LocalizedResult" label="Localized Result" type="String"/>
+    </ClassBinding>
+  </Attributes>
+  <Name>Templates</Name>
+  <Kind>List</Kind>
+  <IsDefault>true</IsDefault>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>modifiedon</OrderBy>
+  <FilterAllowedFields>createdby;createdon;resco_name;resco_publishedon;resco_templateid;resco_version;statuscode</FilterAllowedFields>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SerializedBindings>
+    <string>createdon</string>
+    <string>resco_description</string>
+    <string>resco_folder</string>
+    <string>resco_istemplate</string>
+    <string>resco_languagecode</string>
+    <string>modifiedon</string>
+    <string>resco_name</string>
+    <string>resco_questionnaireid</string>
+    <string>statuscode</string>
+    <string>resco_templateid</string>
+    <string>resco_localization</string>
+    <string>resco_templateid.resco_questionnaire.resco_localization</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="resco_questionnaire">
+      <filter type="and">
+        <condition attribute="resco_istemplate" operator="eq" value="1"/>
+        <condition attribute="resco_issnippet" operator="eq" value="0"/>
+        <condition attribute="statuscode" operator="ne" value="473220003"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>90</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="#Name">
+          <StyleName>0102 h2</StyleName>
+          <Bounds>75,15,240,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#Description">
+          <StyleName>0103 p grey</StyleName>
+          <Bounds>75,39,240,39</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="inspections.green">
+          <IsConstant>true</IsConstant>
+          <StyleName>QuestionnaireIcon</StyleName>
+          <Bounds>15,15,42,42</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<EntityForm xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" flexi="1" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>deal</EntityName>
+  <CamelCase>deal</CamelCase>
+  <ClassBinding />
+  <SerializedChildren />
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" flexi="0" flexiHeader="1" flexiMaxLines="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="name" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="customerid" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="statuscode" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem" image="false" separator="true">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="transactioncurrencyid" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="discountamount" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="discountpercentage" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem" image="false" separator="true">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="isrevenuesystemcalculated" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="totalamount" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeight="3" flexiHeader="1" flexiOrientation="1" flexiMaxLines="3">
+      <Name>Activity List</Name>
+      <LogicalName>activity.regardingobjectid</LogicalName>
+	  <Views>activity.*:activity.@All Activities</Views>
+      <Binding SchemaName="activity.regardingobjectid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeight="9" flexiHeader="1" flexiOrientation="1" flexiMaxLines="9">
+      <Name>Deal Lines List</Name>
+      <LogicalName>dealline.dealid</LogicalName>
+      <Binding SchemaName="dealline.dealid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeight="3" flexiHeader="1" flexiOrientation="1" flexiMaxLines="3">
+      <Name>Notes List</Name>
+      <LogicalName>annotation.objectid</LogicalName>
+      <Binding SchemaName="annotation.objectid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+  </SerializedChildrenV2>
+  <Navigation flexi="0" flexiHeader="1" flexiMaxLines="0">
+    <Name>Navigation</Name>
+    <SerializedChildren />
+  </Navigation>
+  <PrimaryCommands>ChangeState||1;10000</PrimaryCommands>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedContactInfo />
+</EntityForm>

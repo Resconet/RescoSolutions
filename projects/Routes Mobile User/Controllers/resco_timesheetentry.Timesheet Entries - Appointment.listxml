@@ -1,0 +1,205 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>resco_timesheetentry</EntityName>
+    <CamelCase>resco_timesheetentry</CamelCase>
+  </Attributes>
+  <Name>Timesheet Entries - Appointment</Name>
+  <Kind>AssociatedList</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>!resco_starttime;!resco_endtime</OrderBy>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;SharedVariable usage="None"&gt;&lt;Name&gt;Time&lt;/Name&gt;&lt;CrmType&gt;String&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;SharedVariable usage="None"&gt;&lt;Name&gt;Date&lt;/Name&gt;&lt;CrmType&gt;String&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SerializedBindings>
+    <string>resco_appointmentid</string>
+    <string>resco_durationhours</string>
+    <string>resco_endtime</string>
+    <string>resco_name</string>
+    <string>resco_starttime</string>
+    <string>statuscode</string>
+    <string>resco_timesheetid</string>
+    <string>resco_timesheetentryid</string>
+  </SerializedBindings>
+  <IsHidden>true</IsHidden>
+  <MaxColumns>0</MaxColumns>
+  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:1&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.resco_endtime&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:1&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:2&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:2&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;definition e="false"&gt;&lt;var&gt;Start&lt;/var&gt;&lt;func&gt;FormatSingle&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;arg&gt;String:{0:h:mm tt}&lt;/arg&gt;&lt;arg&gt;var:Entity.resco_starttime&lt;/arg&gt;&lt;/definition&gt;&lt;definition e="false"&gt;&lt;var&gt;End&lt;/var&gt;&lt;func&gt;FormatSingle&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;arg&gt;String:{0:h:mm tt}&lt;/arg&gt;&lt;arg&gt;var:Entity.resco_endtime&lt;/arg&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.Time&lt;/var&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;arg&gt;var:Start&lt;/arg&gt;&lt;arg&gt;String: - &lt;/arg&gt;&lt;arg&gt;var:End&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.Date&lt;/var&gt;&lt;func&gt;FormatSingle&lt;/func&gt;&lt;arg&gt;String:{0:dd. MMM}&lt;/arg&gt;&lt;arg&gt;var:Entity.resco_starttime&lt;/arg&gt;&lt;/function&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <Fetch version="1.0">
+    <entity name="resco_timesheetentry"/>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>In Progress</Name>
+      <Width>320</Width>
+      <Height>90</Height>
+      <SerializedBackground>-789517</SerializedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="Date">
+          <StyleName>date</StyleName>
+          <Bounds>65,60,46,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resco_name">
+          <StyleName>0110 date</StyleName>
+          <Bounds>65,10,137,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Routes.TimesheetEntry.1">
+          <IsConstant>true</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>10,10,42,42</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="In Progress">
+          <IsConstant>true</IsConstant>
+          <StyleName>0112 red</StyleName>
+          <Bounds>208,10,100,17</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Time">
+          <StyleName>date</StyleName>
+          <Bounds>112,60,142,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resco_appointmentid">
+          <StyleName>0102 h2</StyleName>
+          <Bounds>65,35,243,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Finished</Name>
+      <Width>320</Width>
+      <Height>90</Height>
+      <SerializedBackground>-789517</SerializedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="Date">
+          <StyleName>date</StyleName>
+          <Bounds>65,60,46,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resco_name">
+          <StyleName>0110 date</StyleName>
+          <Bounds>65,10,137,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Routes.TimesheetEntry.3">
+          <IsConstant>true</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>10,10,42,42</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Finished">
+          <IsConstant>true</IsConstant>
+          <StyleName>0112 black</StyleName>
+          <Bounds>208,10,100,17</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Time">
+          <StyleName>date</StyleName>
+          <Bounds>112,60,142,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="hrs">
+          <IsConstant>true</IsConstant>
+          <StyleName>date</StyleName>
+          <Bounds>289,60,19,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resco_appointmentid">
+          <StyleName>0102 h2</StyleName>
+          <Bounds>65,35,243,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resco_durationhours">
+          <StyleName>date</StyleName>
+          <Bounds>262,60,26,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Closed</Name>
+      <Width>320</Width>
+      <Height>90</Height>
+      <SerializedBackground>-789517</SerializedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="Date">
+          <StyleName>date</StyleName>
+          <Bounds>65,60,46,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resco_name">
+          <StyleName>0110 date</StyleName>
+          <Bounds>65,10,138,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Routes.TimesheetEntry.4">
+          <IsConstant>true</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>10,10,42,42</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Closed">
+          <IsConstant>true</IsConstant>
+          <StyleName>0112 green</StyleName>
+          <Bounds>208,10,100,17</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Time">
+          <StyleName>date</StyleName>
+          <Bounds>112,60,142,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="hrs">
+          <IsConstant>true</IsConstant>
+          <StyleName>date</StyleName>
+          <Bounds>289,60,19,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resco_appointmentid">
+          <StyleName>0102 h2</StyleName>
+          <Bounds>65,35,243,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resco_durationhours">
+          <StyleName>date</StyleName>
+          <Bounds>262,60,26,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties>
+    <SerializedClassBinding name="Time" label="Shared.Time" type="String"/>
+    <SerializedClassBinding name="Date" label="Shared.Date" type="String"/>
+    <SerializedClassBinding name="Start" label="Start" type="String"/>
+    <SerializedClassBinding name="End" label="End" type="String"/>
+  </CustomProperties>
+</EntityList>

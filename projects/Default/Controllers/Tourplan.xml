@@ -1,0 +1,13 @@
+﻿<Tourplan>
+  <Items>
+    <TourplanComponent>
+      <Binding>appointment</Binding>
+    </TourplanComponent>
+    <TourplanComponent>
+      <Binding>serviceappointment</Binding>
+    </TourplanComponent>
+  </Items>
+  <Version>0</Version>
+  <BusinessDaysMask>0</BusinessDaysMask>
+  <ViewsMask>0</ViewsMask>
+</Tourplan>

@@ -1,0 +1,125 @@
+﻿<fetchcollection>
+  <fetch version="1.0">
+    <entity name="account">
+      <filter type="and">
+        <condition attribute="statuscode" operator="ne" value="2"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="contact">
+      <filter type="and">
+        <condition attribute="statuscode" operator="ne" value="2"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="quote">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="30"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="salesorder">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="30"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="invoice">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="30"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="opportunity">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="60"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="email">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="60"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="phonecall">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="60"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="task">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="60"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="appointment">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="60"/>
+      </filter>
+      <link-entity name="activityparty" alias="L0" from="activityid" to="activityid" link-type="inner">
+        <filter type="and">
+          <condition attribute="partyid" operator="eq-userid"/>
+        </filter>
+      </link-entity>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="incident">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="60"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="resco_questionnaire">
+      <filter type="and">
+        <filter type="or">
+          <condition attribute="resco_istemplate" operator="eq" value="0"/>
+          <filter type="and">
+            <condition attribute="resco_istemplate" operator="eq" value="1"/>
+            <condition attribute="statuscode" operator="eq" value="1"/>
+          </filter>
+        </filter>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="routes_timesheet">
+      <filter type="and">
+        <condition attribute="ownerid" operator="eq-userid"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="routes_timesheetentry">
+      <filter type="and">
+        <condition attribute="ownerid" operator="eq-userid"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="resco_timesheet">
+      <filter type="and">
+        <condition attribute="ownerid" operator="eq-userid"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="resco_timesheetentry">
+      <filter type="and">
+        <condition attribute="ownerid" operator="eq-userid"/>
+      </filter>
+    </entity>
+  </fetch>
+</fetchcollection>

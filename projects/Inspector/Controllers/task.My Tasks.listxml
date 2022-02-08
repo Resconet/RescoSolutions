@@ -1,0 +1,65 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>task</EntityName>
+    <CamelCase>Task</CamelCase>
+    <WrapperClass>MobileCrm.Model.ActivityListItem</WrapperClass>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding>
+      <SerializedClassBinding type="String" name="#DateLabel" label="DateLabel" />
+      <SerializedClassBinding type="String" name="#End" label="End" />
+      <SerializedClassBinding type="String" name="#Icon" label="Icon" />
+      <SerializedClassBinding type="String" name="#IsDirty" label="IsDirty" />
+      <SerializedClassBinding type="String" name="#Start" label="Start" />
+    </ClassBinding>
+  </Attributes>
+  <Name>My Tasks</Name>
+  <Kind>List</Kind>
+  <IsDefault>true</IsDefault>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>!scheduledend</OrderBy>
+  <SerializedBindings>
+    <string>scheduledend</string>
+    <string>statuscode</string>
+    <string>subject</string>
+    <string>activityid</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="task">
+      <filter type="and">
+        <condition operator="eq" attribute="statecode" value="0" />
+        <condition operator="eq-userid" attribute="ownerid" />
+      </filter>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>50</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="subject">
+          <StyleName>Primary</StyleName>
+          <Bounds>10,8,220,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="scheduledend">
+          <StyleName>Secondary</StyleName>
+          <Bounds>10,28,120,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <StyleName>Secondary Right</StyleName>
+          <Bounds>130,28,100,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties />
+</EntityList>

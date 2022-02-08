@@ -1,0 +1,36 @@
+﻿<EntityChart>
+  <Name>Weekly Preview</Name>
+  <Kind>Column</Kind>
+  <DateGrouping>Day</DateGrouping>
+  <LimitCount>3</LimitCount>
+  <Fetch version="1.0">
+    <entity name="routes_timesheetentry">
+      <filter type="and">
+        <condition attribute="routes_starttime" operator="this-week"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <Axis>routes_starttime</Axis>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#FF0000FF</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#FF0000FF</Color>
+  </TargetValue>
+  <SerializedBindings/>
+  <Attributes>
+    <EntityName>routes_timesheetentry</EntityName>
+    <CamelCase>routes_timesheetentry</CamelCase>
+  </Attributes>
+  <Series>
+    <Series>
+      <Attribute>routes_durationhours</Attribute>
+      <Color>#FF0000FF</Color>
+      <Aggregation>Sum</Aggregation>
+    </Series>
+  </Series>
+  <BarStyle>Grouped</BarStyle>
+</EntityChart>

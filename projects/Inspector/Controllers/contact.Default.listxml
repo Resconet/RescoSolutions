@@ -1,0 +1,59 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>contact</EntityName>
+    <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <Name>Default</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>fullname</OrderBy>
+  <SerializedBindings>
+    <string>contactid</string>
+    <string>emailaddress1</string>
+    <string>entityimage</string>
+    <string>fullname</string>
+    <string>jobtitle</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Search>
+    <attribute schema="fullname" method="BeginsWith" />
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>56</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="fullname">
+          <StyleName>Primary</StyleName>
+          <Bounds>60,12,170,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="jobtitle">
+          <StyleName>Secondary</StyleName>
+          <Bounds>60,32,70,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="emailaddress1">
+          <StyleName>Secondary Right</StyleName>
+          <Bounds>135,32,95,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>ListEntityImage</StyleName>
+          <Bounds>11,10,40,40</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties />
+</EntityList>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>incident</EntityName>
+  <CamelCase>Incident</CamelCase>
+  <SerializedChildren />
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="title">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="customerid">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="subjectid">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="prioritycode">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="casetypecode">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="customersatisfactioncode">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="statuscode">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+  </SerializedChildrenV2>
+  <Navigation>
+    <Name>Navigation</Name>
+    <SerializedChildren>
+      <DetailItem SchemaName="activity.regardingobjectid">
+        <IsConstant>false</IsConstant>
+      </DetailItem>
+      <DetailItem SchemaName="annotation.objectid">
+        <IsConstant>false</IsConstant>
+      </DetailItem>
+    </SerializedChildren>
+  </Navigation>
+  <SerializedContactInfo />
+</EntityForm>

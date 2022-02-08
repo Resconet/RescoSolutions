@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>product</EntityName>
+    <CamelCase>Product</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>Products in Parent PriceList</Name>
+  <Kind>LookupList</Kind>
+  <IsDefault>false</IsDefault>
+  <Fetch version="1.0">
+    <entity name="product">
+      <link-entity name="productpricelevel" from="productid" to="productid">
+        <filter type="and">
+          <condition attribute="pricelevelid" operator="eq" value="{{pricelevelid}}" />
+        </filter>
+      </link-entity>
+    </entity>
+  </Fetch>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>transactioncurrencyid</string>
+    <string>currentcost</string>
+    <string>productnumber</string>
+    <string>productid</string>
+    <string>name</string>
+    <string>producttypecode</string>
+    <string>quantityonhand</string>
+  </SerializedBindings>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>40</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>8,2,148,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="currentcost">
+          <IsConstant>false</IsConstant>
+          <StyleName>r_currency</StyleName>
+          <Bounds>156,2,76,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="productnumber">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>8,26,148,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties />
+  <Height>40</Height>
+</EntityList>

@@ -1,0 +1,9 @@
+﻿<RoutePlan>
+  <ActivityName>appointment</ActivityName>
+  <StartDateField>scheduledstart</StartDateField>
+  <EndDateField>scheduledend</EndDateField>
+  <DefaultAction>3</DefaultAction>
+  <LookupField>regardingobjectid</LookupField>
+  <EnabledWorkflows>OnRouteItemAdded OnRouteItemCompleted</EnabledWorkflows>
+  <CustomCompletionField>statuscode</CustomCompletionField>
+</RoutePlan>

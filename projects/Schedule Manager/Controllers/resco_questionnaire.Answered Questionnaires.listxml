@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>resco_questionnaire</EntityName>
+    <CamelCase>resco_Questionnaire</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>Answered Questionnaires</Name>
+  <Kind>List</Kind>
+  <IsDefault>false</IsDefault>
+  <AutoWideWidth>0</AutoWideWidth>
+  <AutoHeader>0</AutoHeader>
+  <MaxColumns>0</MaxColumns>
+  <OrderBy>!modifiedon</OrderBy>
+  <MultiSelectCommands>RunMobileReport||</MultiSelectCommands>
+  <SerializedBindings>
+    <string>resco_completionstatus</string>
+    <string>createdon</string>
+    <string>resco_description</string>
+    <string>resco_folder</string>
+    <string>resco_istemplate</string>
+    <string>resco_languagecode</string>
+    <string>modifiedon</string>
+    <string>resco_name</string>
+    <string>ownerid</string>
+    <string>resco_questionnaireid</string>
+    <string>resco_rules</string>
+    <string>resco_script</string>
+    <string>statuscode</string>
+    <string>resco_styles</string>
+    <string>resco_templateid</string>
+  </SerializedBindings>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>48</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="resco_name">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>48,2,114,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="createdon">
+          <IsConstant>false</IsConstant>
+          <StyleName>Secondary Right Date</StyleName>
+          <Bounds>162,2,70,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resco_description">
+          <IsConstant>false</IsConstant>
+          <StyleName>Secondary</StyleName>
+          <Bounds>48,26,114,19</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Cmd.Post">
+          <IsConstant>true</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>2,2,44,44</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="StatusTag">
+          <IsConstant>true</IsConstant>
+          <StyleName>GreenTag</StyleName>
+          <Bounds>234,2,5,43</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>11</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Status">
+          <IsConstant>false</IsConstant>
+          <StyleName>Secondary Right Green</StyleName>
+          <Bounds>162,26,70,19</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>RegularInspection</Name>
+      <Width>240</Width>
+      <Height>48</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="resco_name">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>48,2,114,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="createdon">
+          <IsConstant>false</IsConstant>
+          <StyleName>Secondary Right Date</StyleName>
+          <Bounds>162,2,70,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resco_description">
+          <IsConstant>false</IsConstant>
+          <StyleName>Secondary</StyleName>
+          <Bounds>48,26,114,19</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Home.AuditMap">
+          <IsConstant>true</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>2,2,44,44</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Status">
+          <IsConstant>false</IsConstant>
+          <StyleName>Secondary Right Green</StyleName>
+          <Bounds>162,26,70,19</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="StatusTag">
+          <IsConstant>true</IsConstant>
+          <StyleName>GreenTag</StyleName>
+          <Bounds>234,2,5,43</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>11</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Repair</Name>
+      <Width>240</Width>
+      <Height>48</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="resco_name">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>48,2,114,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="createdon">
+          <IsConstant>false</IsConstant>
+          <StyleName>Secondary Right Date</StyleName>
+          <Bounds>162,2,70,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resco_description">
+          <IsConstant>false</IsConstant>
+          <StyleName>Secondary</StyleName>
+          <Bounds>48,25,114,19</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Home.serviceappointment">
+          <IsConstant>true</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>2,2,44,44</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Status">
+          <IsConstant>false</IsConstant>
+          <StyleName>Secondary Right Green</StyleName>
+          <Bounds>162,26,70,19</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="StatusTag">
+          <IsConstant>true</IsConstant>
+          <StyleName>GreenTag</StyleName>
+          <Bounds>234,2,5,43</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>11</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <TemplateSelectorRule>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;&lt;definition e="false"&gt;&lt;var&gt;TemplateName&lt;/var&gt;&lt;arg&gt;var:Entity.resco_templateid&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;/definition&gt;&lt;definition e="false"&gt;&lt;var&gt;ThisName&lt;/var&gt;&lt;arg&gt;var:Entity.resco_name&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;/definition&gt;&lt;branch e="false"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="Or"&gt;&lt;condition e="false"&gt;&lt;var&gt;TemplateName&lt;/var&gt;&lt;arg&gt;String:Template Fixing Control Panel&lt;/arg&gt;&lt;op&gt;Contains&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;ThisName&lt;/var&gt;&lt;arg&gt;String:Template Fixing Control Panel&lt;/arg&gt;&lt;op&gt;Contains&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="false"&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;arg&gt;Integer:2&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="Or"&gt;&lt;condition e="false"&gt;&lt;var&gt;TemplateName&lt;/var&gt;&lt;arg&gt;String:Template Regular Inspection&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;ThisName&lt;/var&gt;&lt;arg&gt;String:Template Regular Inspection&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="false"&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;arg&gt;Integer:1&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And" /&gt;&lt;action e="false"&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;definition e="true"&gt;&lt;var&gt;Status&lt;/var&gt;&lt;func&gt;Clear&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;/definition&gt;&lt;branch e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.resco_completionstatus&lt;/var&gt;&lt;arg&gt;Integer:1&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Status&lt;/var&gt;&lt;arg&gt;String:Completed&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;function e="true"&gt;&lt;var&gt;Row.StatusTag.Style&lt;/var&gt;&lt;arg&gt;String:GreenTag&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;group e="false" op="Or"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.resco_completionstatus&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.resco_completionstatus&lt;/var&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;/group&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Status&lt;/var&gt;&lt;arg&gt;String:In Progress&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;function e="true"&gt;&lt;var&gt;Row.Status.Style&lt;/var&gt;&lt;arg&gt;String:Secondary Right Red&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;function e="true"&gt;&lt;var&gt;Row.StatusTag.Style&lt;/var&gt;&lt;arg&gt;String:RedTag&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <CustomProperties>
+    <SerializedClassBinding name="TemplateName" label="TemplateName" type="String" />
+    <SerializedClassBinding name="ThisName" label="ThisName" type="String" />
+    <SerializedClassBinding name="Status" label="Status" type="String" />
+  </CustomProperties>
+  <SerializedChildren />
+  <Height>0</Height>
+  <IFrameProvidesDS>false</IFrameProvidesDS>
+</EntityList>

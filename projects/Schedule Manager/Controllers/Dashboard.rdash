@@ -1,0 +1,19 @@
+﻿<Dashboard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0">
+  <Columns>2</Columns>
+  <Rows>2</Rows>
+  <Items>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="List" Binding="appointment;&lt;extra&gt;&lt;views&gt;appointment.Today&lt;/views&gt;&lt;actions&gt;0;0;1&lt;/actions&gt;&lt;/extra&gt;" Options="3">
+      <Bounds>0,0,1,1</Bounds>
+      <LegacyConfig>appointment;appointment.Today</LegacyConfig>
+    </DashboardComponent>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="appointment;appointment.This week's Appointments by User (Bar)" Options="3">
+      <Bounds>1,0,1,1</Bounds>
+    </DashboardComponent>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="appointment;appointment.This week's Appointments by User (Pie)" Options="3">
+      <Bounds>0,1,1,1</Bounds>
+    </DashboardComponent>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="appointment;appointment.This month's Appointments by Accounts (Chart)" Options="3">
+      <Bounds>1,1,1,1</Bounds>
+    </DashboardComponent>
+  </Items>
+</Dashboard>

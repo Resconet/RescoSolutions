@@ -1,0 +1,8 @@
+V3
+Default
+1
+<fetch version="1.0"><entity name="resco_report"><attribute name="createdon" /><attribute name="id" /><attribute name="modifiedon" /><attribute name="name" /><attribute name="regarding_entity" /><attribute name="parameters" /><order attribute="name" descending="0" /></entity></fetch>
+T;;240;50;240;40
+S;1003;0;Primary;10;8;220;20;13
+S;regarding_entity;0;Secondary;10;28;220;14;13
+

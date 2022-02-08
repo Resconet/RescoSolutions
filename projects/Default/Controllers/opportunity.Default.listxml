@@ -1,0 +1,189 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>opportunity</EntityName>
+    <CamelCase>Opportunity</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Default</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;SharedVariable usage="None"&gt;&lt;Name&gt;integer&lt;/Name&gt;&lt;CrmType&gt;Integer&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;SharedVariable usage="None"&gt;&lt;Name&gt;EstCloseDate&lt;/Name&gt;&lt;CrmType&gt;String&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SerializedBindings>
+    <string>transactioncurrencyid</string>
+    <string>estimatedclosedate</string>
+    <string>estimatedvalue</string>
+    <string>opportunityid</string>
+    <string>customerid</string>
+    <string>opportunityratingcode</string>
+    <string>name</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.integer&lt;/var&gt;&lt;func&gt;Clear&lt;/func&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.EstCloseDate&lt;/var&gt;&lt;func&gt;FormatSingle&lt;/func&gt;&lt;arg&gt;String:{0:dd. MMM, yyyy}&lt;/arg&gt;&lt;arg&gt;var:Entity.estimatedclosedate&lt;/arg&gt;&lt;/function&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.opportunityratingcode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Picklist:2&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:2&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.opportunityratingcode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Picklist:3&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:1&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>86</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>60,12,240,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="customerid">
+          <StyleName>gray</StyleName>
+          <Bounds>60,38,240,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="opportunityratingcode">
+          <StyleName>caption</StyleName>
+          <Bounds>0,48,60,12</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="estimatedvalue">
+          <StyleName>r_currency</StyleName>
+          <Bounds>240,55,60,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="View.rating hot.png">
+          <IsConstant>true</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>14,12,32,32</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="EstCloseDate">
+          <StyleName>link</StyleName>
+          <Bounds>140,59,99,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Est. close:">
+          <IsConstant>true</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>60,59,78,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>cold</Name>
+      <Width>320</Width>
+      <Height>86</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>60,12,240,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="customerid">
+          <StyleName>gray</StyleName>
+          <Bounds>60,38,240,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="opportunityratingcode">
+          <StyleName>caption</StyleName>
+          <Bounds>0,48,60,12</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="integer">
+          <StyleName>r_currency</StyleName>
+          <Bounds>206,55,94,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="View.rating cold.png">
+          <IsConstant>true</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>16,12,32,32</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="EstCloseDate">
+          <StyleName>link</StyleName>
+          <Bounds>135,59,70,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Est. close:">
+          <IsConstant>true</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>60,59,51,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>warm</Name>
+      <Width>320</Width>
+      <Height>86</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>60,12,240,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="customerid">
+          <StyleName>gray</StyleName>
+          <Bounds>60,38,240,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="opportunityratingcode">
+          <StyleName>caption</StyleName>
+          <Bounds>0,48,60,12</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="integer">
+          <StyleName>r_currency</StyleName>
+          <Bounds>207,56,93,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="View.rating warm.png">
+          <IsConstant>true</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>16,12,32,32</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="EstCloseDate">
+          <StyleName>link</StyleName>
+          <Bounds>135,59,70,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Est. close:">
+          <IsConstant>true</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>60,59,66,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties>
+    <SerializedClassBinding name="integer" label="Shared.integer" type="Integer"/>
+    <SerializedClassBinding name="EstCloseDate" label="Shared.EstCloseDate" type="String"/>
+  </CustomProperties>
+</EntityList>

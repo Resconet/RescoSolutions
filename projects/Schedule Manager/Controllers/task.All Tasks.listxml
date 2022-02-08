@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>task</EntityName>
+    <CamelCase>Task</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <WrapperClass>MobileCrm.Model.ActivityListItem</WrapperClass>
+    <ClassBinding>
+      <SerializedClassBinding name="#DateLabel" label="DateLabel" type="String" />
+      <SerializedClassBinding name="#End" label="End" type="String" />
+      <SerializedClassBinding name="#Icon" label="Icon" type="String" />
+      <SerializedClassBinding name="#IsDirty" label="IsDirty" type="String" />
+      <SerializedClassBinding name="#Start" label="Start" type="String" />
+    </ClassBinding>
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>All Tasks</Name>
+  <Kind>List</Kind>
+  <IsDefault>false</IsDefault>
+  <OrderBy>subject</OrderBy>
+  <SerializedBindings>
+    <string>statecode</string>
+    <string>scheduledend</string>
+    <string>ownerid</string>
+    <string>regardingobjectid</string>
+    <string>scheduledstart</string>
+    <string>statuscode</string>
+    <string>subject</string>
+    <string>activityid</string>
+  </SerializedBindings>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>40</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="subject">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>8,2,227,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="scheduledend">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>8,26,159,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <IsConstant>false</IsConstant>
+          <StyleName>r_gray</StyleName>
+          <Bounds>167,26,68,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties />
+  <Height>40</Height>
+</EntityList>

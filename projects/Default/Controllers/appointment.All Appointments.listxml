@@ -1,0 +1,63 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>appointment</EntityName>
+    <CamelCase>Appointment</CamelCase>
+    <WrapperClass>MobileCrm.Model.ActivityListItem</WrapperClass>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding>
+      <SerializedClassBinding name="#DateLabel" label="DateLabel" type="String"/>
+      <SerializedClassBinding name="#End" label="End" type="String"/>
+      <SerializedClassBinding name="#Icon" label="Icon" type="String"/>
+      <SerializedClassBinding name="#IsDirty" label="IsDirty" type="String"/>
+      <SerializedClassBinding name="#Start" label="Start" type="String"/>
+    </ClassBinding>
+  </Attributes>
+  <Name>All Appointments</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>subject</OrderBy>
+  <SerializedBindings>
+    <string>activityid</string>
+    <string>scheduledend</string>
+    <string>ownerid</string>
+    <string>regardingobjectid</string>
+    <string>scheduledstart</string>
+    <string>statecode</string>
+    <string>statuscode</string>
+    <string>subject</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="appointment"/>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>67</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="subject">
+          <StyleName>primary</StyleName>
+          <Bounds>20,12,280,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#DateLabel">
+          <StyleName>gray</StyleName>
+          <Bounds>20,38,180,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statecode">
+          <StyleName>r_gray</StyleName>
+          <Bounds>210,38,90,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

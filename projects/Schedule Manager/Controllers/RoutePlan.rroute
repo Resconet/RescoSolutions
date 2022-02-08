@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RoutePlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ActivityName>appointment</ActivityName>
+  <StartDateField>scheduledstart</StartDateField>
+  <EndDateField>scheduledend</EndDateField>
+  <DefaultAction>3</DefaultAction>
+  <LookupField>regardingobjectid</LookupField>
+  <SourceViews>account.*</SourceViews>
+  <FilterFields>ownerid</FilterFields>
+  <DisableCompletion>false</DisableCompletion>
+  <ViewMode>false</ViewMode>
+  <StartAtWork>true</StartAtWork>
+  <WorkLocation>42.391484,-71.049612</WorkLocation>
+  <EnabledWorkflows>OnRouteItemAdded OnRouteItemCompleted</EnabledWorkflows>
+</RoutePlan>

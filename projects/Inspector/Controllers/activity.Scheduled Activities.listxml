@@ -1,0 +1,76 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>activity</EntityName>
+    <CamelCase>ActivityPointer</CamelCase>
+    <WrapperClass>MobileCrm.Model.ActivityListItem</WrapperClass>
+    <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
+    <ClassBinding>
+      <SerializedClassBinding type="String" name="#DateLabel" label="DateLabel" />
+      <SerializedClassBinding type="String" name="#End" label="End" />
+      <SerializedClassBinding type="String" name="#Icon" label="Icon" />
+      <SerializedClassBinding type="String" name="#IsDirty" label="IsDirty" />
+      <SerializedClassBinding type="String" name="#Start" label="Start" />
+    </ClassBinding>
+  </Attributes>
+  <Name>Scheduled Activities</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>!scheduledend;scheduledstart</OrderBy>
+  <SerializedBindings>
+    <string>activityid</string>
+    <string>statecode</string>
+    <string>scheduledend</string>
+    <string>scheduledstart</string>
+    <string>subject</string>
+    <string>regardingobjectid.account.address1_latitude</string>
+    <string>regardingobjectid.account.address1_longitude</string>
+  </SerializedBindings>
+  <HasGpsFields>true</HasGpsFields>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="activity">
+      <filter type="and">
+        <condition operator="eq" attribute="statecode" value="3" />
+      </filter>
+    </entity>
+  </Fetch>
+  <Search>
+    <attribute schema="subject" method="BeginsWith" />
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>50</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="subject">
+          <StyleName>Primary</StyleName>
+          <Bounds>46,8,184,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#Icon">
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>10,12,26,26</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#DateLabel">
+          <StyleName>Secondary</StyleName>
+          <Bounds>46,28,120,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statecode">
+          <StyleName>Secondary Right</StyleName>
+          <Bounds>166,28,64,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties />
+</EntityList>

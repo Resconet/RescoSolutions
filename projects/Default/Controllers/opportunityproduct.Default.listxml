@@ -1,0 +1,117 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>opportunityproduct</EntityName>
+    <CamelCase>OpportunityProduct</CamelCase>
+    <WrapperClass>MobileCrm.Model.OpportunityProduct</WrapperClass>
+    <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
+    <ClassBinding>
+      <SerializedClassBinding name="#Amount" label="Amount" type="String"/>
+      <SerializedClassBinding name="#ExtendedAmountLabel" label="ExtendedAmountLabel" type="String"/>
+      <SerializedClassBinding name="#IsEditable" label="IsEditable" type="String"/>
+      <SerializedClassBinding name="#Opportunity" label="Opportunity" type="String"/>
+      <SerializedClassBinding name="#PriceLevels" label="PriceLevels" type="String"/>
+      <SerializedClassBinding name="#PricePerUnitLabel" label="PricePerUnitLabel" type="String"/>
+      <SerializedClassBinding name="#PrimaryName" label="PrimaryName" type="String"/>
+      <SerializedClassBinding name="#ProductPriceLevel" label="ProductPriceLevel" type="String"/>
+    </ClassBinding>
+  </Attributes>
+  <Name>Default</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy></OrderBy>
+  <SerializedBindings>
+    <string>createdon</string>
+    <string>transactioncurrencyid</string>
+    <string>productid</string>
+    <string>extendedamount</string>
+    <string>manualdiscountamount</string>
+    <string>modifiedon</string>
+    <string>opportunityid</string>
+    <string>opportunityproductid</string>
+    <string>ownerid</string>
+    <string>ispriceoverridden</string>
+    <string>priceperunit</string>
+    <string>quantity</string>
+    <string>tax</string>
+    <string>uomid</string>
+    <string>volumediscountamount</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>420</Width>
+      <Height>67</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="quantity">
+          <StyleName>gray</StyleName>
+          <Bounds>190,47,63,16</Bounds>
+          <CellKind>3</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#PricePerUnitLabel">
+          <StyleName>line</StyleName>
+          <Bounds>20,66,300,1</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>14</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Total Price:">
+          <IsConstant>true</IsConstant>
+          <StyleName>r_gray_currency</StyleName>
+          <Bounds>308,29,107,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="QTY:">
+          <IsConstant>true</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>189,29,54,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Price Per Unit:">
+          <IsConstant>true</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>4,29,122,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Minus">
+          <IsConstant>true</IsConstant>
+          <StyleName>Minus</StyleName>
+          <Bounds>148,29,38,37</Bounds>
+          <CellKind>7</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Plus">
+          <IsConstant>true</IsConstant>
+          <StyleName>Plus</StyleName>
+          <Bounds>256,29,40,37</Bounds>
+          <CellKind>7</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#PrimaryName">
+          <StyleName>primary</StyleName>
+          <Bounds>4,6,409,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="priceperunit">
+          <StyleName>primary</StyleName>
+          <Bounds>4,45,100,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#ExtendedAmountLabel">
+          <StyleName>r_gray_currency</StyleName>
+          <Bounds>308,46,107,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

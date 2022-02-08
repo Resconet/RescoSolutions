@@ -1,0 +1,27 @@
+<html>
+<head>
+    <!-- Activate latest IE document mode -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="styles/style.css">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+</head>
+<body>
+    <div class="component">
+        <!-- <div class="progress-shadow"></div> -->
+        <section class="progress-line">
+            <span class="progress-line-item selected">Scheduled</span>
+            <span class="progress-line-item"><i class="arrow-background" style="border-color: transparent transparent transparent #F2F2F2"></i><i class="arrow" style="opacity: 1; border-color: transparent transparent transparent #20A200"></i></i>Traveling</span>
+            <span class="progress-line-item"><i class="arrow-background"></i><i class="arrow"></i></i>Working</span>
+            <span class="progress-line-item"><i class="arrow-background"></i><i class="arrow"></i></i>Completed</span>
+        </section>
+        <section class="handler-buttons" id="buttons-container">
+            <button class="handler-button" id="break" action="travel">Travel</button>
+            <button class="handler-button" id="work" action="work">Work</button>
+        </section>
+    </div>
+    <!-- scripts -->    
+    <script src="scripts/JSBridge.js"></script>
+    <script src="scripts/data-management.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

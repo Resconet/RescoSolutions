@@ -1,0 +1,38 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="1" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>task</EntityName>
+  <CamelCase>task</CamelCase>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="regardingobjectid" Style="Normal"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="subject"/>
+        <DetailItem SchemaName="prioritycode" Style="Normal"/>
+        <DetailItem SchemaName="scheduledend" Style="Normal"/>
+        <DetailItem SchemaName="actualdurationminutes" Style="Normal"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="description" Style="Normal"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab">
+      <Name>Inspections</Name>
+      <CustomName>Inspections</CustomName>
+      <Binding SchemaName="resco_questionnaire.@virtual"/>
+      <Views>&lt;extra&gt;&lt;views&gt;resco_questionnaire.Answered Questionnaires:resco_questionnaire.Associated Questionnaires:resco_questionnaire.Completed This Week:resco_questionnaire.In progress or completed&lt;/views&gt;&lt;filter entity="resco_questionnaire"&gt;&amp;lt;fetch&amp;gt;&amp;lt;entity name="resco_questionnaire"&amp;gt;	&amp;lt;filter type="and"&amp;gt;		&amp;lt;condition attribute='resco_istemplate' operator='eq' value='0' /&amp;gt;		&amp;lt;filter type="or"&amp;gt;			&amp;lt;condition attribute="resco_regardingid" operator="eq" value="{{activityid}}"/&amp;gt;			&amp;lt;condition attribute="resco_rawidvalue" entityname="QuestionLinkAlias" operator="eq" value="{{activityid}}"/&amp;gt;		&amp;lt;/filter&amp;gt;	&amp;lt;/filter&amp;gt;&amp;lt;link-entity name="resco_question" alias="QuestionLinkAlias" from="resco_questionnaireid" to="resco_questionnaireid" link-type="outer"/&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+      <LookupViews>&lt;extra&gt;&lt;views&gt;resco_questionnaire.Answered Questionnaires:resco_questionnaire.Associated Questionnaires:resco_questionnaire.Questionnaire Templates Lookup:resco_questionnaire.Templates&lt;/views&gt;&lt;filter entity="resco_questionnaire"&gt;&amp;lt;fetch&amp;gt;&amp;lt;entity name='resco_questionnaire'&amp;gt;&amp;lt;filter&amp;gt;&amp;lt;condition attribute='resco_istemplate' operator='eq' value='1' /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="6" flexiOrientation="1" flexiMaxLines="9">
+      <Name>Notes List</Name>
+      <Binding SchemaName="annotation.objectid"/>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

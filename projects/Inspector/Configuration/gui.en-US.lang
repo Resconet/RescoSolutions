@@ -1,0 +1,12 @@
+﻿appointment.DetailView.InspectionTemplates=Templates
+appointment.DetailView.AnsweredInspections=Answered
+task.DetailView.InspectionTemplates=Inspection Templates
+task.DetailView.AnsweredInspections=Answered Inspections
+Setup=Settings
+Schedule=Schedule
+appointment.DetailView.CompletedInspections=Completed Inspections
+task.DetailView.CompletedInspections=Completed Inspections
+DashboardSchedule=Today's agenda
+HomeCompleted=Answered
+HomeTitle.TodaysAgenda=Today's Agenda
+HomeTitle.Tutorial=Tutorial

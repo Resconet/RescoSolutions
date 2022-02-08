@@ -1,0 +1,54 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>product</EntityName>
+    <CamelCase>Product</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <Name>Default</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>price</string>
+    <string>name</string>
+    <string>productid</string>
+    <string>productnumber</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="product">
+      <filter type="and" />
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>50</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>Primary</StyleName>
+          <Bounds>10,8,140,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="price">
+          <StyleName>Primary Right</StyleName>
+          <Bounds>150,8,80,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="productnumber">
+          <StyleName>Secondary</StyleName>
+          <Bounds>10,28,220,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties />
+</EntityList>

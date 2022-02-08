@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>serviceappointment</EntityName>
+  <CamelCase>ServiceAppointment</CamelCase>
+  <SerializedChildren />
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="serviceid">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="subject">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="location">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="scheduledstart">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="scheduledend">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="prioritycode">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+  </SerializedChildrenV2>
+  <Navigation>
+    <Name>Navigation</Name>
+    <SerializedChildren />
+  </Navigation>
+  <SerializedContactInfo />
+</EntityForm>
