@@ -1,0 +1,61 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="2" fullscreen="1" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>sf_account</EntityName>
+  <CamelCase>sf_account</CamelCase>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <PrimaryCommands>Delete|||Favorite||</PrimaryCommands>
+  <SharedVariableNames/>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" flexiHeader="2">
+      <Name>Account</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="ownerid2">
+          <LookupViews>&lt;lookup&gt;&lt;extra /&gt;&lt;extra&gt;&lt;views&gt;sf_user.@Lookup - All Users&lt;/views&gt;&lt;/extra&gt;&lt;/lookup&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="name"/>
+        <DetailItem SchemaName="phone"/>
+        <DetailItem SchemaName="website"/>
+        <DetailItem SchemaName="type"/>
+        <DetailItem SchemaName="industry"/>
+        <DetailItem SchemaName="description"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="MapTab" flexi="0" flexiHeight="1" flexiHeader="2">
+      <Name>Map</Name>
+      <CoordinatesBinding>billinglatitude;billinglongitude</CoordinatesBinding>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" flexiHeader="2">
+      <Name>Address</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="billingstreet"/>
+        <DetailItem SchemaName="billingcity"/>
+        <DetailItem SchemaName="billingstate"/>
+        <DetailItem SchemaName="billingpostalcode"/>
+        <DetailItem SchemaName="billingcountry"/>
+        <DetailItem SchemaName="billinglatitude"/>
+        <DetailItem SchemaName="billinglongitude"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="270px" flexiHeader="2" DocCommands="0" FlipMode="96">
+      <Name>Events List</Name>
+      <Binding SchemaName="sf_event.whatid"/>
+      <Views>&lt;extra&gt;&lt;filter entity="sf_event"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="sf_event"&amp;gt;&amp;lt;link-entity name="sf_account" alias="L0" from="id" to="whatid" link-type="inner" /&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+      <CalendarSetup>
+        <BusinessDaysMask>0</BusinessDaysMask>
+        <ViewsMask>12</ViewsMask>
+      </CalendarSetup>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="270px" flexiHeader="2" flexiOrientation="1" DocCommands="0" FlipMode="224" AllowAddExisting="true">
+      <Name>Contacts List</Name>
+      <Binding SchemaName="sf_contact.accountid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="270px" flexiWidth="1" flexiHeader="2" FlipMode="224" AllowAddExisting="true">
+      <Name>Files</Name>
+      <CustomName>Files</CustomName>
+      <Binding SchemaName="sf_contentdocumentlink.linkedentityid"/>
+      <LookupViews>sf_contentdocumentlink.All Files - Grid</LookupViews>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

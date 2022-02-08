@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MobileProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <OrganizationId>007801b0-badc-4096-be3b-037308b1fe9e</OrganizationId>
+  <Name>default</Name>
+  <Priority>0</Priority>
+  <Roles>
+    <item>
+      <key>
+        <guid>97f36384-2218-4b0c-811d-2a5b08ef21b2</guid>
+      </key>
+      <value>
+        <string>System Administrator</string>
+      </value>
+    </item>
+  </Roles>
+</MobileProjectInfo>

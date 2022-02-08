@@ -1,0 +1,6 @@
+﻿<ProcessControl>
+  <ProcessName>Process</ProcessName>
+  <Entity>sf_opportunity</Entity>
+  <Field>stagename</Field>
+  <ProcessSteps>Prospecting;undefined;undefined;undefined;false;false|Qualification;undefined;undefined;undefined;false;false|Needs Analysis;undefined;undefined;undefined;false;false|Value Proposition;undefined;undefined;undefined;false;false|Id. Decision Makers;undefined;undefined;undefined;false;false|Perception Analysis;undefined;undefined;undefined;false;false|Proposal/Price Quote;undefined;undefined;undefined;false;false|Negotiation/Review;undefined;undefined;undefined;false;false|Closed Lost;undefined;undefined;undefined;true;false|Closed Won;undefined;undefined;undefined;true;false|</ProcessSteps>
+</ProcessControl>

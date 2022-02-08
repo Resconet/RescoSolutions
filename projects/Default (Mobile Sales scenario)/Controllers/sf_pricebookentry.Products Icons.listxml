@@ -1,0 +1,59 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>sf_pricebookentry</EntityName>
+    <CamelCase>sf_pricebookentry</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Products Icons</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>10</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>id</string>
+    <string>unitprice</string>
+    <string>productcode</string>
+    <string>product2id</string>
+    <string>name</string>
+  </SerializedBindings>
+  <MaxColumns>5</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="sf_pricebookentry"/>
+  </Fetch>
+  <Search>
+    <attribute schema="name" method="BeginsWith"/>
+    <attribute schema="productcode" method="BeginsWith"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>150</Width>
+      <Height>180</Height>
+      <Buttons>none</Buttons>
+      <SerializedChildren>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>PricebookEntryFileImage</StyleName>
+          <Bounds>3,4,145,115</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>15</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="unitprice">
+          <StyleName>Inspections</StyleName>
+          <Bounds>3,153,141,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>15</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="name">
+          <StyleName>0102 h1</StyleName>
+          <Bounds>2,128,142,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityListCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
+  <CamelCase>MobileCrm.Controllers.AboutForm.AboutInfo</CamelCase>
+  <TypeName>MobileCrm.Controllers.AboutForm.AboutInfo</TypeName>
+  <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
+  <ClassBinding />
+  <SerializedChildren>
+    <EntityList>
+      <Attributes>
+        <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+        <ClassBinding />
+      </Attributes>
+      <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+      <Name>Default</Name>
+      <Kind>List</Kind>
+      <IsDefault>false</IsDefault>
+      <AutoWideWidth>0</AutoWideWidth>
+      <AutoHeader>0</AutoHeader>
+      <MaxColumns>0</MaxColumns>
+      <SerializedBindings>
+        <string>Icon</string>
+        <string>Manufacturer</string>
+        <string>PoweredBy</string>
+        <string>ProductSubTitle</string>
+        <string>ProductTitle</string>
+        <string>SupportEmail</string>
+        <string>Website</string>
+      </SerializedBindings>
+      <SerializedTemplates>
+        <RowTemplate>
+          <DesignWidth>240</DesignWidth>
+          <DesignHeight>40</DesignHeight>
+          <Name>Default</Name>
+          <Width>240</Width>
+          <Height>216</Height>
+          <SerializedBackground>0</SerializedBackground>
+          <SerializedSelectedBackground>0</SerializedSelectedBackground>
+          <SerializedChildren>
+            <CellTemplate SchemaName="Manufacturer">
+              <IsConstant>false</IsConstant>
+              <StyleName>large10</StyleName>
+              <Bounds>16,8,224,24</Bounds>
+              <CellKind>0</CellKind>
+              <Anchor>5</Anchor>
+            </CellTemplate>
+            <CellTemplate SchemaName="ProductTitle">
+              <IsConstant>false</IsConstant>
+              <StyleName>large14</StyleName>
+              <Bounds>16,32,224,32</Bounds>
+              <CellKind>0</CellKind>
+              <Anchor>5</Anchor>
+            </CellTemplate>
+            <CellTemplate SchemaName="ProductSubTitle">
+              <IsConstant>false</IsConstant>
+              <StyleName>large10</StyleName>
+              <Bounds>16,64,224,22</Bounds>
+              <CellKind>0</CellKind>
+              <Anchor>5</Anchor>
+            </CellTemplate>
+            <CellTemplate SchemaName="PoweredBy">
+              <IsConstant>false</IsConstant>
+              <StyleName>large10</StyleName>
+              <Bounds>16,90,224,36</Bounds>
+              <CellKind>0</CellKind>
+              <Anchor>5</Anchor>
+            </CellTemplate>
+            <CellTemplate SchemaName="Icon">
+              <IsConstant>false</IsConstant>
+              <StyleName>ImageCellStyle</StyleName>
+              <Bounds>16,131,85,36</Bounds>
+              <CellKind>1</CellKind>
+              <Anchor>5</Anchor>
+            </CellTemplate>
+            <CellTemplate SchemaName="Website">
+              <IsConstant>false</IsConstant>
+              <StyleName>large10</StyleName>
+              <Bounds>16,180,224,36</Bounds>
+              <CellKind>0</CellKind>
+              <Anchor>5</Anchor>
+            </CellTemplate>
+          </SerializedChildren>
+        </RowTemplate>
+      </SerializedTemplates>
+      <CustomProperties />
+      <SerializedChildren />
+      <Height>216</Height>
+      <IFrameProvidesDS>false</IFrameProvidesDS>
+    </EntityList>
+  </SerializedChildren>
+</EntityListCollection>

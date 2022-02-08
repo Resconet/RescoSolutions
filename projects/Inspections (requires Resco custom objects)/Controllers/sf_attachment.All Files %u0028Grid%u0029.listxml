@@ -1,0 +1,54 @@
+﻿<EntityList VisibilityMode="16384">
+  <Attributes>
+    <EntityName>sf_attachment</EntityName>
+    <CamelCase>sf_attachment</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding>
+      <SerializedClassBinding name="#FileSize" label="FileSize" type="String"/>
+    </ClassBinding>
+  </Attributes>
+  <Name>All Files (Grid)</Name>
+  <Kind>List</Kind>
+  <IsDefault>true</IsDefault>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>!createdon</OrderBy>
+  <SortAllowedFields>bodylength;contenttype;createdon;isprivate;modifiedon;name;ownerid2;parentid</SortAllowedFields>
+  <FilterAllowedFields>bodylength;contenttype;createdon;description;isprivate;modifiedon;name;ownerid2;parentid</FilterAllowedFields>
+  <MultiSelectCommands>Favorite|||Delete|||EmailLink|||EmailAttachment||</MultiSelectCommands>
+  <SerializedBindings>
+    <string>id2</string>
+    <string>bodylength</string>
+    <string>createdon</string>
+    <string>name</string>
+    <string>id</string>
+    <string>parentid</string>
+  </SerializedBindings>
+  <MaxColumns>5</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>120</Width>
+      <Height>140</Height>
+      <Buttons>none</Buttons>
+      <SerializedBackground>-789517</SerializedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>GridAttachmentImage</StyleName>
+          <Bounds>5,5,110,110</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>15</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="name">
+          <StyleName>gray_c</StyleName>
+          <Bounds>1,117,118,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>15</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

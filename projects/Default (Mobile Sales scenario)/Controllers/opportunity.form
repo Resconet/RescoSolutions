@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>opportunity</EntityName>
+  <CamelCase>opportunity</CamelCase>
+  <ClassBinding />
+  <SerializedChildren />
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="name" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="customerid" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="transactioncurrencyid" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="pricelevelid" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="isrevenuesystemcalculated" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="estimatedvalue" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="opportunityratingcode" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+  </SerializedChildrenV2>
+  <Navigation>
+    <Name>Navigation</Name>
+    <SerializedChildren>
+      <DetailItem SchemaName="opportunityproduct.opportunityid" Style="Normal">
+        <IsConstant>false</IsConstant>
+      </DetailItem>
+      <DetailItem SchemaName="activity.regardingobjectid" Style="Normal">
+        <IsConstant>false</IsConstant>
+      </DetailItem>
+      <DetailItem SchemaName="annotation.objectid" Style="Normal">
+        <IsConstant>false</IsConstant>
+      </DetailItem>
+    </SerializedChildren>
+  </Navigation>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled</EnabledWorkflows>
+  <SerializedContactInfo />
+</EntityForm>

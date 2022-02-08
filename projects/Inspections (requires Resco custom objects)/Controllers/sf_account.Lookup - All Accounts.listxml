@@ -1,0 +1,58 @@
+﻿<EntityList UseSyncFilter="true">
+  <Attributes>
+    <EntityName>sf_account</EntityName>
+    <CamelCase>sf_account</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Lookup - All Accounts</Name>
+  <Kind>LookupList</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <MultiSelectCommands>Delete|||Favorite||</MultiSelectCommands>
+  <SerializedBindings>
+    <string>name</string>
+    <string>phone</string>
+    <string>type</string>
+    <string>billinglatitude</string>
+    <string>billinglongitude</string>
+    <string>billingstate</string>
+    <string>isdeleted</string>
+    <string>id</string>
+  </SerializedBindings>
+  <IsHidden>true</IsHidden>
+  <HasGpsFields>true</HasGpsFields>
+  <MaxColumns>0</MaxColumns>
+  <Search>
+    <attribute schema="billingcity" method="Contains"/>
+    <attribute schema="billingcountry" method="Contains"/>
+    <attribute schema="industry" method="Contains"/>
+    <attribute schema="name" method="Contains"/>
+    <attribute schema="ownerid2" method="Contains" reference="true"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <Buttons>Delete;Favorite</Buttons>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>10,2,303,29</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="type">
+          <StyleName>gray</StyleName>
+          <Bounds>10,31,303,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

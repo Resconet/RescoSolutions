@@ -1,0 +1,12 @@
+﻿<Tourplan>
+  <Items>
+    <TourplanComponent>
+      <Binding>sf_event</Binding>
+    </TourplanComponent>
+  </Items>
+  <Version>1</Version>
+  <AllowedViews>@sf_event.*:sf_event.@All Events</AllowedViews>
+  <IsHub>true</IsHub>
+  <BusinessDaysMask>0</BusinessDaysMask>
+  <ViewsMask>0</ViewsMask>
+</Tourplan>

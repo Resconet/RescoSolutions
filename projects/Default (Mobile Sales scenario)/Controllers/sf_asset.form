@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>sf_asset</EntityName>
+  <CamelCase>sf_asset</CamelCase>
+  <ClassBinding />
+  <SerializedChildren />
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" flexi="0" flexiHeader="1" flexiMaxLines="0">
+      <Name>Asset</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="name" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="product2id" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="serialnumber" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="installdate" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="status" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="quantity" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="price" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="accountid" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+          <LookupViews>&lt;lookup&gt;&lt;extra /&gt;&lt;extra&gt;&lt;views&gt;sf_account.@Lookup - All Accounts&lt;/views&gt;&lt;/extra&gt;&lt;/lookup&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="contactid" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+          <LookupViews>&lt;lookup&gt;&lt;extra /&gt;&lt;extra&gt;&lt;filter entity="sf_contact"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="sf_contact"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="accountid" operator="eq" value="{{accountid}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;&lt;/lookup&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="iscompetitorproduct" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="purchasedate" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="usageenddate" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="description" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeader="1" flexiMaxLines="0" AllowAddExisting="true" FlipMode="0">
+      <Name>Cases List</Name>
+      <LogicalName>sf_case.assetid</LogicalName>
+      <Binding SchemaName="sf_case.assetid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeader="1" flexiMaxLines="0" FlipMode="0">
+      <Name>Work Orders List</Name>
+      <LogicalName>sf_workorder.assetid</LogicalName>
+      <Binding SchemaName="sf_workorder.assetid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeader="1" flexiMaxLines="0" FlipMode="0">
+      <Name>Events List</Name>
+      <LogicalName>sf_event.whatid</LogicalName>
+      <Binding SchemaName="sf_event.whatid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeader="1" flexiMaxLines="0" FlipMode="0">
+      <Name>Tasks List</Name>
+      <LogicalName>sf_task.whatid</LogicalName>
+      <Binding SchemaName="sf_task.whatid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeight="4" flexiHeader="1" flexiMaxLines="0" AllowAddExisting="true" FlipMode="0">
+      <Name>Files</Name>
+      <CustomName>Files</CustomName>
+      <LogicalName>sf_contentdocumentlink.linkedentityid</LogicalName>
+      <Binding SchemaName="sf_contentdocumentlink.linkedentityid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeader="1" flexiMaxLines="0" FlipMode="0">
+      <Name>Attachments List</Name>
+      <LogicalName>sf_attachment.parentid</LogicalName>
+      <Binding SchemaName="sf_attachment.parentid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeader="1" flexiMaxLines="0" FlipMode="0">
+      <Name>Notes List</Name>
+      <LogicalName>sf_note.parentid</LogicalName>
+      <Binding SchemaName="sf_note.parentid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+  </SerializedChildrenV2>
+  <Navigation flexi="0" flexiHeader="1" flexiMaxLines="0">
+    <Name>Navigation</Name>
+    <SerializedChildren />
+  </Navigation>
+  <SharedVariableNames />
+  <PrimaryCommands>Favorite|||Delete|||EmailLink||</PrimaryCommands>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedContactInfo />
+</EntityForm>

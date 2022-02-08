@@ -1,0 +1,7 @@
+﻿Manufacturer=
+ProductTitle=Mobile Sales
+ProductSubTitle=for Salesforce (v12.2)
+PoweredBy=Powered by Resco.Net
+Icon=Logo.Logo.png
+Website=https://www.resco.net/salesforce/
+SupportEmail=mobilecrm@resco.net

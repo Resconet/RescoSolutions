@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Tourplan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Items>
+    <TourplanComponent>
+      <Binding>sf_event</Binding>
+      <IsEnabled>false</IsEnabled>
+    </TourplanComponent>
+    <TourplanComponent>
+      <Binding>sf_task</Binding>
+      <IsEnabled>false</IsEnabled>
+    </TourplanComponent>
+  </Items>
+  <Version>1</Version>
+  <AllowedViews>@sf_event.All Events:sf_event.Delegated Events:sf_event.@My Events:sf_task.All Tasks:sf_task.Delegated Tasks:sf_task.@My Tasks</AllowedViews>
+  <IsHub>true</IsHub>
+  <MinDate xsi:nil="true" />
+  <MaxDate xsi:nil="true" />
+  <BusinessDaysMask>127</BusinessDaysMask>
+  <ViewsMask>15</ViewsMask>
+</Tourplan>

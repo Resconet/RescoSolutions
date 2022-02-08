@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityChart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>resco_question</EntityName>
+    <CamelCase>resco_question</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>Knowledgable</Name>
+  <IsHidden>false</IsHidden>
+  <Kind>Pie</Kind>
+  <IsDefault>false</IsDefault>
+  <LabelStyle>Inside</LabelStyle>
+  <PieDonutRatio>50</PieDonutRatio>
+  <BarStyle>Default</BarStyle>
+  <AreaStyle>Default</AreaStyle>
+  <DrillDownEnabled>true</DrillDownEnabled>
+  <Series>
+    <Series>
+      <Attribute>resco_label</Attribute>
+      <Color>#ff1f77B4</Color>
+    </Series>
+  </Series>
+  <Axis>resco_valuelabel</Axis>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#FF0000FF</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#FF0000FF</Color>
+  </TargetValue>
+  <DateGrouping>None</DateGrouping>
+  <LimitCount>3</LimitCount>
+</EntityChart>

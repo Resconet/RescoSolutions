@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" fullscreen="1" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>sf_quote</EntityName>
+  <CamelCase>sf_quote</CamelCase>
+  <ClassBinding />
+  <SerializedChildren />
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" flexi="0" flexiHeader="1" flexiMaxLines="0">
+      <Name>sf_quote</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="createdbyid" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="quotenumber" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="name" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="opportunityid" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="Oppty.accountid" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+          <LookupViews>&lt;lookup&gt;&lt;extra /&gt;&lt;extra&gt;&lt;views&gt;sf_account.@Lookup - All Accounts&lt;/views&gt;&lt;/extra&gt;&lt;/lookup&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="contractid" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="pricebook2id" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="expirationdate" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="issyncing" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="status" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="description" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" flexi="0" flexiHeader="1" flexiMaxLines="0">
+      <Name>Totals</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="subtotal" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="discount" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="totalprice" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="tax" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="shippinghandling" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="grandtotal" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" flexi="0" flexiHeader="1" flexiMaxLines="0">
+      <Name>PreparedFor</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="contactid" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="email" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="phone" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="fax" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeight="4" flexiHeader="1" flexiOrientation="1" flexiMaxLines="0" FlipMode="0">
+      <Name>Quote Line Items List</Name>
+      <LogicalName>sf_quotelineitem.quoteid</LogicalName>
+      <Binding SchemaName="sf_quotelineitem.quoteid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeight="4" flexiHeader="1" flexiMaxLines="0" FlipMode="0">
+      <Name>Quote PDFs List</Name>
+      <LogicalName>sf_quotedocument.quoteid</LogicalName>
+      <Binding SchemaName="sf_quotedocument.quoteid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeight="3" flexiHeader="1" flexiMaxLines="0" FlipMode="0">
+      <Name>Events List</Name>
+      <LogicalName>sf_event.whatid</LogicalName>
+      <Binding SchemaName="sf_event.whatid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeight="3" flexiHeader="1" flexiMaxLines="0" FlipMode="0">
+      <Name>Tasks List</Name>
+      <LogicalName>sf_task.whatid</LogicalName>
+      <Binding SchemaName="sf_task.whatid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="SignatureTab" flexi="1" flexiHeight="1" flexiWidth="1" flexiHeader="1" flexiMaxLines="0">
+      <Name>Signature</Name>
+      <Configuration />
+      <NoteSubject />
+      <EntityName>sf_attachment</EntityName>
+      <Commands>4097</Commands>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" flexi="0" flexiHeader="1" flexiMaxLines="0">
+      <Name>Address</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="billingname" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="billingstreet" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="billingcity" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="billingstate" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="billingpostalcode" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="billingcountry" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" flexi="0" flexiHeader="1" flexiMaxLines="0">
+      <Name>ShippingAddress</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="shippingname" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="shippingstreet" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="shippingcity" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="shippingstate" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="shippingpostalcode" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="shippingcountry" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeader="1" flexiMaxLines="0" AllowAddExisting="true" FlipMode="0">
+      <Name>Files</Name>
+      <CustomName>Files</CustomName>
+      <LogicalName>sf_contentdocumentlink.linkedentityid</LogicalName>
+      <Binding SchemaName="sf_contentdocumentlink.linkedentityid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeader="1" flexiMaxLines="0" FlipMode="0">
+      <Name>Attachments List</Name>
+      <LogicalName>sf_attachment.parentid</LogicalName>
+      <Binding SchemaName="sf_attachment.parentid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeight="3" flexiHeader="1" flexiMaxLines="0" FlipMode="0">
+      <Name>Notes List</Name>
+      <LogicalName>sf_note.parentid</LogicalName>
+      <Binding SchemaName="sf_note.parentid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+  </SerializedChildrenV2>
+  <Navigation flexi="0" flexiHeader="1" flexiMaxLines="0">
+    <Name>Navigation</Name>
+    <SerializedChildren />
+  </Navigation>
+  <WorkflowLoad>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;&lt;branch e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="true"&gt;&lt;var&gt;Entity.opportunityid&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.Oppty.@this&lt;/var&gt;&lt;arg&gt;var:Entity.opportunityid&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;function e="false"&gt;&lt;var&gt;Form.(Oppty.accountid).IsEnabled&lt;/var&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.pricebook2id.IsEnabled&lt;/var&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/Workflow&gt;</WorkflowLoad>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;SharedVariable usage="None"&gt;&lt;Name&gt;Oppty&lt;/Name&gt;&lt;CrmType&gt;Entity&lt;/CrmType&gt;&lt;InnerType&gt;sf_opportunity&lt;/InnerType&gt;&lt;/SharedVariable&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SharedVariableNames>
+    <string>Oppty.accountid</string>
+    <string>Oppty.amount</string>
+    <string>Oppty.campaignid</string>
+    <string>Oppty.closedate</string>
+    <string>Oppty.createdon</string>
+    <string>Oppty.description</string>
+    <string>Oppty.fiscal</string>
+    <string>Oppty.fiscalquarter</string>
+    <string>Oppty.fiscalyear</string>
+    <string>Oppty.forecastcategory</string>
+    <string>Oppty.forecastcategoryname</string>
+    <string>Oppty.hasopenactivity</string>
+    <string>Oppty.hasopportunitylineitem</string>
+    <string>Oppty.hasoverduetask</string>
+    <string>Oppty.id</string>
+    <string>Oppty.id2</string>
+    <string>Oppty.isclosed</string>
+    <string>Oppty.isdeleted</string>
+    <string>Oppty.iswon</string>
+    <string>Oppty.leadsource</string>
+    <string>Oppty.modifiedon</string>
+    <string>Oppty.name</string>
+    <string>Oppty.nextstep</string>
+    <string>Oppty.ownerid2</string>
+    <string>Oppty.pricebook2id</string>
+    <string>Oppty.probability</string>
+    <string>Oppty.stagename</string>
+    <string>Oppty.syncedquoteid</string>
+    <string>Oppty.transactioncurrencyid</string>
+    <string>Oppty.type</string>
+  </SharedVariableNames>
+  <PrimaryCommands>Favorite|||Delete|||RunMobileReport|||CreateOrder||</PrimaryCommands>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedContactInfo />
+</EntityForm>

@@ -1,0 +1,103 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>sf_pricebookentry</EntityName>
+    <CamelCase>sf_pricebookentry</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Products Icons 7</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>10</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>isactive</string>
+    <string>id</string>
+    <string>unitprice</string>
+    <string>productcode</string>
+    <string>product2id</string>
+    <string>name</string>
+    <string>product2id.sf_product2.description</string>
+    <string>product2id.sf_product2.family</string>
+  </SerializedBindings>
+  <MaxColumns>5</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="sf_pricebookentry"/>
+  </Fetch>
+  <Search>
+    <attribute schema="name" method="BeginsWith"/>
+    <attribute schema="productcode" method="BeginsWith"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>200</Width>
+      <Height>204</Height>
+      <Buttons>none</Buttons>
+      <SerializedSelectedBackground>-1447447</SerializedSelectedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="unitprice">
+          <StyleName>black</StyleName>
+          <Bounds>0,64,81,27</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>15</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="name">
+          <StyleName>black</StyleName>
+          <Bounds>0,18,83,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Product name:">
+          <IsConstant>true</IsConstant>
+          <StyleName>black_bold</StyleName>
+          <Bounds>0,0,82,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="List price:">
+          <IsConstant>true</IsConstant>
+          <StyleName>black_bold</StyleName>
+          <Bounds>1,46,83,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>PricebookEntryFileImage</StyleName>
+          <Bounds>85,1,115,125</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="product2id.sf_product2.description">
+          <StyleName>black</StyleName>
+          <Bounds>0,146,200,56</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Description:">
+          <IsConstant>true</IsConstant>
+          <StyleName>black_bold</StyleName>
+          <Bounds>0,127,200,17</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="product2id.sf_product2.family">
+          <StyleName>black</StyleName>
+          <Bounds>0,108,81,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Product family:">
+          <IsConstant>true</IsConstant>
+          <StyleName>black_bold</StyleName>
+          <Bounds>0,92,82,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

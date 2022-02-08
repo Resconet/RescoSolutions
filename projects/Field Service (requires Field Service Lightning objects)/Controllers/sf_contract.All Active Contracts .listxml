@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>sf_contract</EntityName>
+    <CamelCase>sf_contract</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>All Active Contracts </Name>
+  <Kind>List</Kind>
+  <IsDefault>true</IsDefault>
+  <AutoWideWidth>0</AutoWideWidth>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="sf_contract">
+      <filter type="and">
+        <condition attribute="status" operator="eq" value="Activated" />
+      </filter>
+    </entity>
+  </Fetch>
+  <Search>
+    <attribute schema="accountid" method="Contains" reference="true" />
+    <attribute schema="contractnumber" method="BeginsWith" />
+    <attribute schema="ownerid2" method="Contains" reference="true" />
+  </Search>
+  <OrderBy>contractnumber;id</OrderBy>
+  <MultiSelectCommands>Favorite|||Delete|||EmailLink||</MultiSelectCommands>
+  <SerializedBindings>
+    <string>accountid</string>
+    <string>enddate</string>
+    <string>id2</string>
+    <string>contractnumber</string>
+    <string>startdate</string>
+    <string>createdon</string>
+    <string>id</string>
+    <string>modifiedon</string>
+    <string>status</string>
+  </SerializedBindings>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>40</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <Buttons>Favorite;Delete;EmailLink</Buttons>
+      <SerializedChildren>
+        <CellTemplate SchemaName="contractnumber">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>8,2,225,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="accountid">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>8,26,66,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="startdate">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>74,26,55,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>8</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="enddate">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>129,26,60,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="status">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>189,25,38,12</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties />
+  <SerializedChildren />
+  <Height>0</Height>
+  <IFrameProvidesDS>false</IFrameProvidesDS>
+</EntityList>

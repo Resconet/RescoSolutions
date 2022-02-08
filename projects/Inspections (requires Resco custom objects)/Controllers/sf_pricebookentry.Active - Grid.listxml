@@ -1,0 +1,57 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>sf_pricebookentry</EntityName>
+    <CamelCase>sf_pricebookentry</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Active - Grid</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>id</string>
+    <string>unitprice</string>
+    <string>productcode</string>
+    <string>product2id</string>
+    <string>name</string>
+  </SerializedBindings>
+  <MaxColumns>10</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="sf_pricebookentry">
+      <filter type="and">
+        <condition attribute="isactive" operator="eq" value="1"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <Search>
+    <attribute schema="name" method="BeginsWith"/>
+    <attribute schema="productcode" method="BeginsWith"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>100</Width>
+      <Height>120</Height>
+      <Buttons>none</Buttons>
+      <SerializedChildren>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>PricebookEntryFileImage</StyleName>
+          <Bounds>2,3,95,93</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>15</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>1,98,99,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>15</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

@@ -1,0 +1,75 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>sf_attachment</EntityName>
+    <CamelCase>sf_attachment</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding>
+      <SerializedClassBinding name="#FileSize" label="FileSize" type="String"/>
+    </ClassBinding>
+  </Attributes>
+  <Name>Reports</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SortAllowedFields>bodylength;contenttype;createdon;id2;modifiedon;name;ownerid2;parentid</SortAllowedFields>
+  <FilterAllowedFields>contenttype;description;modifiedon;name;ownerid2;parentid</FilterAllowedFields>
+  <MultiSelectCommands>Favorite|||Delete|||EmailLink|||EmailAttachment||</MultiSelectCommands>
+  <SerializedBindings>
+    <string>id2</string>
+    <string>bodylength</string>
+    <string>createdon</string>
+    <string>name</string>
+    <string>id</string>
+    <string>modifiedon</string>
+    <string>parentid</string>
+  </SerializedBindings>
+  <IsHidden>true</IsHidden>
+  <CalendarFields>modifiedon;modifiedon</CalendarFields>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="sf_attachment">
+      <filter type="and">
+        <condition attribute="name" operator="like" value="%pdf"/>
+      </filter>
+      <link-entity name="resco_questionnaire" alias="L0" from="resco_questionnaireid" to="parentid" link-type="inner"/>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>100</Height>
+      <SerializedBackground>-789517</SerializedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>0102 h2</StyleName>
+          <Bounds>75,38,230,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="parentid">
+          <StyleName>0103 p grey</StyleName>
+          <Bounds>75,64,230,19</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>15</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="inspections.pdf">
+          <IsConstant>true</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>15,15,42,42</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="createdon">
+          <StyleName>0110 date</StyleName>
+          <Bounds>75,15,230,19</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

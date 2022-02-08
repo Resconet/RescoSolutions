@@ -1,0 +1,13 @@
+﻿<RoutePlan>
+  <ActivityName>sf_event</ActivityName>
+  <StartDateField>startdatetime</StartDateField>
+  <EndDateField>enddatetime</EndDateField>
+  <DefaultAction>-1</DefaultAction>
+  <LookupField>whatid</LookupField>
+  <SourceViews>sf_account.*:sf_account.@My Accounts</SourceViews>
+  <FilterFields>ownerid2</FilterFields>
+  <DisableCompletion>true</DisableCompletion>
+  <DefaultStartHour>09:00</DefaultStartHour>
+  <DefaultDuration>30</DefaultDuration>
+  <EnabledWorkflows>OnRouteItemAdded OnRouteItemCompleted</EnabledWorkflows>
+</RoutePlan>

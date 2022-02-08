@@ -1,0 +1,14 @@
+﻿<RoutePlan>
+  <ActivityName>sf_event</ActivityName>
+  <StartDateField>startdatetime</StartDateField>
+  <EndDateField>enddatetime</EndDateField>
+  <DefaultAction>-1</DefaultAction>
+  <LookupField>whatid</LookupField>
+  <SourceViews>@sf_account.*</SourceViews>
+  <DisableCompletion>true</DisableCompletion>
+  <DefaultStartHour>08:00</DefaultStartHour>
+  <DefaultDuration>30</DefaultDuration>
+  <EnabledWorkflows>OnRouteItemAdded OnRouteItemCompleted</EnabledWorkflows>
+  <WorkflowRouteItemAdded>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.subject&lt;/var&gt;&lt;arg&gt;String:Visit @ &lt;/arg&gt;&lt;arg&gt;var:Entity.whatid&lt;/arg&gt;&lt;func&gt;Concat&lt;/func&gt;&lt;/function&gt;&lt;/Workflow&gt;</WorkflowRouteItemAdded>
+  <CustomCompletionField>resco_iscompleted__c</CustomCompletionField>
+</RoutePlan>

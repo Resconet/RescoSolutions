@@ -1,0 +1,105 @@
+﻿<EntityList UseSyncFilter="true">
+  <Attributes>
+    <EntityName>sf_event</EntityName>
+    <CamelCase>sf_event</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>All Events</Name>
+  <Kind>List</Kind>
+  <IsDefault>true</IsDefault>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>startdatetime</OrderBy>
+  <SortAllowedFields>accountid;ownerid2;createdbyid;createdon;durationinminutes;lastmodifiedbyid;modifiedon;whoid;isprivate;whatid;startdatetime;subject</SortAllowedFields>
+  <FilterAllowedFields>accountid;durationinminutes;lastmodifiedbyid;modifiedon;whoid;isprivate;startdatetime;subject</FilterAllowedFields>
+  <MultiSelectCommands>Favorite|||Delete|||EmailLink||</MultiSelectCommands>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;SharedVariable usage="None"&gt;&lt;Name&gt;address_line&lt;/Name&gt;&lt;CrmType&gt;String&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;SharedVariable usage="None"&gt;&lt;Name&gt;time_line&lt;/Name&gt;&lt;CrmType&gt;String&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;SharedVariable usage="None"&gt;&lt;Name&gt;date_line&lt;/Name&gt;&lt;CrmType&gt;String&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SerializedBindings>
+    <string>accountid</string>
+    <string>isalldayevent</string>
+    <string>activitydate</string>
+    <string>enddatetime</string>
+    <string>id</string>
+    <string>whoid</string>
+    <string>isprivate</string>
+    <string>whatid</string>
+    <string>startdatetime</string>
+    <string>subject</string>
+    <string>accountid.sf_account.billingcity</string>
+    <string>accountid.sf_account.billinglatitude</string>
+    <string>accountid.sf_account.billinglongitude</string>
+    <string>accountid.sf_account.billingstreet</string>
+    <string>whoid.sf_contact.phone</string>
+    <string>whoid.sf_contact.email</string>
+  </SerializedBindings>
+  <HasGpsFields>true</HasGpsFields>
+  <CalendarFields>startdatetime;enddatetime</CalendarFields>
+  <MaxColumns>0</MaxColumns>
+  <TemplateSelectorRule>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.address_line&lt;/var&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;arg&gt;var:Entity.(accountid.sf_account.billingstreet)&lt;/arg&gt;&lt;arg&gt;String:, &lt;/arg&gt;&lt;arg&gt;var:Entity.(accountid.sf_account.billingcity)&lt;/arg&gt;&lt;/function&gt;&lt;definition e="false"&gt;&lt;var&gt;var1&lt;/var&gt;&lt;func&gt;FormatSingle&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;arg&gt;String:{0:h:mm tt}&lt;/arg&gt;&lt;arg&gt;var:Entity.startdatetime&lt;/arg&gt;&lt;/definition&gt;&lt;definition e="false"&gt;&lt;var&gt;var2&lt;/var&gt;&lt;func&gt;FormatSingle&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;arg&gt;String:{0:h:mm tt}&lt;/arg&gt;&lt;arg&gt;var:Entity.enddatetime&lt;/arg&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.time_line&lt;/var&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;arg&gt;var:var1&lt;/arg&gt;&lt;arg&gt;String: – &lt;/arg&gt;&lt;arg&gt;var:var2&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.date_line&lt;/var&gt;&lt;func&gt;FormatSingle&lt;/func&gt;&lt;arg&gt;String:{0:dd. MMM}&lt;/arg&gt;&lt;arg&gt;var:Entity.startdatetime&lt;/arg&gt;&lt;/function&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <Fetch version="1.0">
+    <entity name="sf_event"/>
+  </Fetch>
+  <Search>
+    <attribute schema="accountid" method="BeginsWith" reference="true"/>
+    <attribute schema="ownerid2" method="BeginsWith" reference="true"/>
+    <attribute schema="subject" method="Contains"/>
+    <attribute schema="whatid" method="BeginsWith" reference="true"/>
+    <attribute schema="whoid" method="Contains" reference="true"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>140</Height>
+      <Buttons>Call;Email;SMS</Buttons>
+      <SerializedChildren>
+        <CellTemplate SchemaName="subject">
+          <StyleName>0102 h2</StyleName>
+          <Bounds>10,50,293,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="time_line">
+          <StyleName>0101 title</StyleName>
+          <Bounds>10,18,194,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="address_line">
+          <StyleName>0103 p grey</StyleName>
+          <Bounds>50,102,253,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="date_line">
+          <StyleName>0110 date right</StyleName>
+          <Bounds>204,18,99,17</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="inspections.address">
+          <IsConstant>true</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>10,80,30,40</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="accountid">
+          <StyleName>0103 p</StyleName>
+          <Bounds>50,80,253,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties>
+    <SerializedClassBinding name="address_line" label="Shared.address_line" type="String"/>
+    <SerializedClassBinding name="time_line" label="Shared.time_line" type="String"/>
+    <SerializedClassBinding name="date_line" label="Shared.date_line" type="String"/>
+    <SerializedClassBinding name="var1" label="var1" type="String"/>
+    <SerializedClassBinding name="var2" label="var2" type="String"/>
+  </CustomProperties>
+</EntityList>

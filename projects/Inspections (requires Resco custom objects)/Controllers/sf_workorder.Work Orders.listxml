@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>sf_workorder</EntityName>
+    <CamelCase>sf_workorder</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>Work Orders</Name>
+  <Kind>List</Kind>
+  <IsDefault>false</IsDefault>
+  <HasGpsFields>true</HasGpsFields>
+  <AutoWideWidth>0</AutoWideWidth>
+  <AutoHeader>0</AutoHeader>
+  <MaxColumns>0</MaxColumns>
+  <OrderBy>workordernumber</OrderBy>
+  <SerializedBindings>
+    <string>accountid</string>
+    <string>city</string>
+    <string>country</string>
+    <string>createdbyid</string>
+    <string>createdon</string>
+    <string>duration</string>
+    <string>durationinminutes</string>
+    <string>durationtype</string>
+    <string>enddate</string>
+    <string>id</string>
+    <string>latitude</string>
+    <string>longitude</string>
+    <string>modifiedon</string>
+    <string>startdate</string>
+    <string>state</string>
+    <string>status</string>
+    <string>statuscategory</string>
+    <string>id2</string>
+    <string>workordernumber</string>
+  </SerializedBindings>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>40</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="workordernumber">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>8,2,227,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="accountid">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>118,24,117,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>10</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="city">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>8,26,107,14</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>6</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <Height>0</Height>
+  <IFrameProvidesDS>false</IFrameProvidesDS>
+</EntityList>

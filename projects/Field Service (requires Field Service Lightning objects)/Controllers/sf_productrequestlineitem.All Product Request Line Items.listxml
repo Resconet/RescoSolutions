@@ -1,0 +1,99 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>sf_productrequestlineitem</EntityName>
+    <CamelCase>sf_productrequestlineitem</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>All Product Request Line Items</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy/>
+  <SerializedBindings>
+    <string>accountid</string>
+    <string>caseid</string>
+    <string>createdon</string>
+    <string>destinationlocationid</string>
+    <string>id</string>
+    <string>lastmodifiedbyid</string>
+    <string>lastmodifieddate</string>
+    <string>workorderlineitemid</string>
+    <string>modifiedon</string>
+    <string>needbydate</string>
+    <string>product2id</string>
+    <string>parentid</string>
+    <string>productrequestlineitemnumber</string>
+    <string>quantityrequested</string>
+    <string>quantityunitofmeasure</string>
+    <string>sourcelocationid</string>
+    <string>workorderid</string>
+  </SerializedBindings>
+  <CalendarFields>needbydate;needbydate</CalendarFields>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="sf_productrequestlineitem">
+      <attribute name="productrequestlineitemnumber"/>
+      <attribute name="lastmodifieddate"/>
+      <attribute name="product2id"/>
+      <attribute name="destinationlocationid"/>
+      <attribute name="sourcelocationid"/>
+      <attribute name="accountid"/>
+      <attribute name="id"/>
+      <attribute name="createdon"/>
+      <attribute name="modifiedon"/>
+      <attribute name="lastmodifiedbyid"/>
+      <attribute name="parentid"/>
+      <attribute name="workorderid"/>
+      <attribute name="workorderlineitemid"/>
+      <attribute name="caseid"/>
+    </entity>
+  </Fetch>
+  <Search>
+    <attribute schema="id2" method="BeginsWith"/>
+    <attribute schema="parentid" method="BeginsWith" reference="true"/>
+    <attribute schema="product2id" method="BeginsWith" reference="true"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>40</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="product2id">
+          <StyleName>primary</StyleName>
+          <Bounds>39,2,147,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="quantityrequested">
+          <StyleName>Primary Right</StyleName>
+          <Bounds>186,2,45,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="sourcelocationid">
+          <StyleName>gray</StyleName>
+          <Bounds>39,26,147,12</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="quantityunitofmeasure">
+          <StyleName>r_gray</StyleName>
+          <Bounds>186,26,45,12</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>PricebookEntryFileImage</StyleName>
+          <Bounds>2,2,36,36</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

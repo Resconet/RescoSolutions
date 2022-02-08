@@ -1,0 +1,118 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="2" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>sf_contact</EntityName>
+  <CamelCase>sf_contact</CamelCase>
+  <WorkflowLoad>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="2020Q2" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.ownerid2&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.createdon&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.ownerid2&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:Configuration.systemuserid&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.IsNew&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Create new event.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Create new task.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Create new event.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Create new task.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowLoad>
+  <WorkflowSave>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.name&lt;/var&gt;&lt;arg&gt;var:Entity.firstname&lt;/arg&gt;&lt;arg&gt;String: &lt;/arg&gt;&lt;arg&gt;var:Entity.lastname&lt;/arg&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;/function&gt;&lt;/Workflow&gt;</WorkflowSave>
+  <WorkflowButtonCommand>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="2020Q2 - Create a new event button" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:Create new event&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;definition e="false"&gt;&lt;var&gt;CreateEvent&lt;/var&gt;&lt;func&gt;NewInstance&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;arg&gt;String:sf_event&lt;/arg&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;CreateEvent.whatid&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:Entity.accountid&lt;/arg&gt;&lt;/function&gt;&lt;definition e="false"&gt;&lt;var&gt;OpenEvent&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;type&gt;Lookup&lt;/type&gt;&lt;arg&gt;var:CreateEvent.@this&lt;/arg&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;OpenEvent&lt;/var&gt;&lt;func&gt;OpenForm&lt;/func&gt;&lt;arg&gt;String:&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:Create new task&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;definition e="false"&gt;&lt;var&gt;CreateTask&lt;/var&gt;&lt;func&gt;NewInstance&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;arg&gt;String:sf_task&lt;/arg&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;CreateTask.whatid&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:Entity.accountid&lt;/arg&gt;&lt;/function&gt;&lt;definition e="false"&gt;&lt;var&gt;OpenTask&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;type&gt;Lookup&lt;/type&gt;&lt;arg&gt;var:CreateTask.@this&lt;/arg&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;OpenTask&lt;/var&gt;&lt;func&gt;OpenForm&lt;/func&gt;&lt;arg&gt;String:&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowButtonCommand>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <PrimaryCommands>Delete|||Favorite||</PrimaryCommands>
+  <SharedVariableNames/>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand OnExecuteButton</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_contact@2x.png" IsIconNameReadOnly="0">
+      <Name>sf_contact</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="$Table1" grid="true">
+          <Columns>*;*</Columns>
+          <Rows>Auto;Auto;Auto;Auto;Auto;Auto;Auto;Auto;Auto;Auto</Rows>
+          <Items>
+            <DetailItem SchemaName="image1" image="true" imageActions="68169734" Style="Table Image Content">
+              <IsConstant>true</IsConstant>
+              <GridPosition>0;0;2;3</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="firstname" Style="Table">
+              <GridPosition>0;3;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="lastname" Style="Table">
+              <GridPosition>1;3;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="title" Style="Table">
+              <GridPosition>0;4;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="department" Style="Table">
+              <GridPosition>1;4;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="email" Style="Table">
+              <GridPosition>0;5;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="accountid" Style="Table">
+              <GridPosition>0;6;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="mobilephone" Style="Table">
+              <GridPosition>0;7;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="phone" Style="Table">
+              <GridPosition>1;7;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="reportstoid" Style="Table">
+              <GridPosition>0;8;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="Create new event" button="true" buttonLabel="New event" buttonClickText="New event">
+              <IsConstant>true</IsConstant>
+              <GridPosition>0;9;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="Create new task" button="true" buttonLabel="New task" buttonClickText="New task">
+              <IsConstant>true</IsConstant>
+              <GridPosition>1;9;1;1</GridPosition>
+            </DetailItem>
+          </Items>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="MapTab" flexiHeight="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
+      <Name>Map</Name>
+      <CoordinatesBinding>mailinglatitude;mailinglongitude</CoordinatesBinding>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Address@2x.png" IsIconNameReadOnly="0">
+      <Name>Address</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="$Table2" grid="true">
+          <Columns>*;*</Columns>
+          <Rows>Auto;Auto;Auto;Auto;Auto</Rows>
+          <Items>
+            <DetailItem SchemaName="mailingstreet" Style="Table">
+              <GridPosition>0;0;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="mailingcity" Style="Table">
+              <GridPosition>0;1;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="mailingstate" Style="Table">
+              <GridPosition>1;1;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="mailingpostalcode" Style="Table">
+              <GridPosition>0;2;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="mailingcountry" Style="Table">
+              <GridPosition>1;2;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="mailinglatitude" Style="Table">
+              <GridPosition>0;3;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="mailinglongitude" Style="Table">
+              <GridPosition>1;3;1;1</GridPosition>
+            </DetailItem>
+          </Items>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_event@2x.png" IsIconNameReadOnly="0">
+      <Name>Events List</Name>
+      <Binding SchemaName="sf_event.whoid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_task@2x.png" IsIconNameReadOnly="0">
+      <Name>Tasks List</Name>
+      <Binding SchemaName="sf_task.whoid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_contentdocumentlink@2x.png" IsIconNameReadOnly="0" AllowAddExisting="true">
+      <Name>Files</Name>
+      <CustomName>Files</CustomName>
+      <Binding SchemaName="sf_contentdocumentlink.linkedentityid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_note@2x.png" IsIconNameReadOnly="0">
+      <Name>Notes List</Name>
+      <Binding SchemaName="sf_note.parentid"/>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

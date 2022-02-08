@@ -1,0 +1,79 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>sf_contentdocument</EntityName>
+    <CamelCase>sf_contentdocument</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>My Files</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>title</OrderBy>
+  <SerializedBindings>
+    <string>contentmodifieddate</string>
+    <string>id2</string>
+    <string>createdbyid</string>
+    <string>createdon</string>
+    <string>description</string>
+    <string>fileextension</string>
+    <string>filetype</string>
+    <string>id</string>
+    <string>isarchived</string>
+    <string>lastmodifiedbyid</string>
+    <string>lastmodifieddate</string>
+    <string>latestpublishedversionid</string>
+    <string>modifiedon</string>
+    <string>ownerid2</string>
+    <string>parentid</string>
+    <string>sharingoption</string>
+    <string>publishstatus</string>
+    <string>contentsize</string>
+    <string>title</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="sf_contentdocument">
+      <filter type="and">
+        <condition attribute="ownerid2" operator="eq-userid"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>40</Height>
+      <Buttons>none</Buttons>
+      <SerializedBackground>-789517</SerializedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="title">
+          <StyleName>primary</StyleName>
+          <Bounds>8,2,227,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="filetype">
+          <StyleName>gray</StyleName>
+          <Bounds>8,26,92,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="publishstatus">
+          <StyleName>gray</StyleName>
+          <Bounds>99,26,69,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="modifiedon">
+          <StyleName>r_gray</StyleName>
+          <Bounds>168,26,61,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityListCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
+  <CamelCase>HomeItem</CamelCase>
+  <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
+  <WrapperClass>MobileCrm.Controllers.HomeItem</WrapperClass>
+  <ClassBinding>
+    <SerializedClassBinding name="#Title" label="Title" type="String" />
+    <SerializedClassBinding name="#SubTitle" label="SubTitle" type="String" />
+    <SerializedClassBinding name="#Icon" label="Icon" type="Boolean" />
+  </ClassBinding>
+  <SerializedChildren>
+    <EntityList>
+      <Attributes>
+        <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+        <ClassBinding />
+      </Attributes>
+      <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+      <Name>Default</Name>
+      <Kind>List</Kind>
+      <IsDefault>false</IsDefault>
+      <AutoWideWidth>0</AutoWideWidth>
+      <AutoHeader>0</AutoHeader>
+      <MaxColumns>0</MaxColumns>
+      <SerializedBindings />
+      <SerializedTemplates>
+        <RowTemplate>
+          <DesignWidth>240</DesignWidth>
+          <DesignHeight>40</DesignHeight>
+          <Name>Default</Name>
+          <Width>320</Width>
+          <Height>57</Height>
+          <SerializedBackground>-13421773</SerializedBackground>
+          <SerializedSelectedBackground>-10643083</SerializedSelectedBackground>
+          <SerializedChildren>
+            <CellTemplate SchemaName="#Icon">
+              <IsConstant>false</IsConstant>
+              <StyleName>Image Cell Style Blue SF</StyleName>
+              <Bounds>3,3,50,50</Bounds>
+              <CellKind>1</CellKind>
+              <Anchor>5</Anchor>
+            </CellTemplate>
+            <CellTemplate SchemaName="#Title">
+              <IsConstant>false</IsConstant>
+              <StyleName>Primary White</StyleName>
+              <Bounds>61,16,251,22</Bounds>
+              <CellKind>0</CellKind>
+              <Anchor>13</Anchor>
+            </CellTemplate>
+          </SerializedChildren>
+        </RowTemplate>
+      </SerializedTemplates>
+      <CustomProperties />
+      <SerializedChildren />
+      <Height>48</Height>
+      <IFrameProvidesDS>false</IFrameProvidesDS>
+    </EntityList>
+  </SerializedChildren>
+</EntityListCollection>

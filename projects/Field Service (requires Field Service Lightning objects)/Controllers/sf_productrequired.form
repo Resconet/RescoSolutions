@@ -1,0 +1,54 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="3" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>sf_productrequired</EntityName>
+  <CamelCase>sf_productrequired</CamelCase>
+  <WorkflowLoad>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;&lt;branch e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.IsNew&lt;/var&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.quantityrequired&lt;/var&gt;&lt;arg&gt;Integer:1&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;branch e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Relationship.target&lt;/var&gt;&lt;arg&gt;String:sf_serviceappointment&lt;/arg&gt;&lt;op&gt;TypeOf&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;definition e="false"&gt;&lt;var&gt;varSA&lt;/var&gt;&lt;arg&gt;var:Relationship.target&lt;/arg&gt;&lt;arg&gt;String:sf_serviceappointment&lt;/arg&gt;&lt;func&gt;LoadReference&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;/definition&gt;&lt;branch e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;varSA.@this&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;varSA.parentrecordid&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;varSA.parentrecordid&lt;/var&gt;&lt;arg&gt;String:sf_workorder&lt;/arg&gt;&lt;op&gt;TypeOf&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.parentrecordid&lt;/var&gt;&lt;arg&gt;var:varSA.parentrecordid&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch info="if product is empty, show popup" e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.product2id&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Form.product2id.Focus&lt;/var&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowLoad>
+  <WorkflowItemChanged>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;&lt;branch e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;arg&gt;String:product2id&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.product2id&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="true"&gt;&lt;var&gt;Tabs.sf_product2.IsVisible&lt;/var&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;arg&gt;String:product2id&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.product2id&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;definition e="false"&gt;&lt;var&gt;varProduct&lt;/var&gt;&lt;arg&gt;var:Entity.product2id&lt;/arg&gt;&lt;arg&gt;String:sf_product2&lt;/arg&gt;&lt;func&gt;LoadReference&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;/definition&gt;&lt;branch e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;varProduct.@this&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.Product.@this&lt;/var&gt;&lt;arg&gt;var:varProduct.@this&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;function e="true"&gt;&lt;var&gt;Tabs.sf_product2.IsVisible&lt;/var&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowItemChanged>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;SharedVariable usage="None"&gt;&lt;Name&gt;Product&lt;/Name&gt;&lt;CrmType&gt;Entity&lt;/CrmType&gt;&lt;InnerType&gt;sf_product2&lt;/InnerType&gt;&lt;/SharedVariable&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <PrimaryCommands>Delete||</PrimaryCommands>
+  <SharedVariableNames>
+    <string>Product.createdon</string>
+    <string>Product.description</string>
+    <string>Product.family</string>
+    <string>Product.id</string>
+    <string>Product.id2</string>
+    <string>Product.isactive</string>
+    <string>Product.modifiedon</string>
+    <string>Product.name</string>
+    <string>Product.productcode</string>
+  </SharedVariableNames>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab">
+      <Name>sf_productrequired</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="parentrecordid">
+          <LookupViews>&lt;lookup&gt;&lt;extra&gt;&lt;actions&gt;0;;0&lt;/actions&gt;&lt;/extra&gt;&lt;extra&gt;&lt;actions&gt;0;;0&lt;/actions&gt;&lt;/extra&gt;&lt;dialog&gt;1&lt;/dialog&gt;&lt;/lookup&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="product2id">
+          <LookupViews>&lt;lookup&gt;&lt;extra&gt;&lt;actions&gt;0;;0&lt;/actions&gt;&lt;/extra&gt;&lt;extra&gt;&lt;actions&gt;0;;0&lt;/actions&gt;&lt;/extra&gt;&lt;dialog&gt;1&lt;/dialog&gt;&lt;/lookup&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="quantityrequired"/>
+        <DetailItem SchemaName="quantityunitofmeasure"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" flexi="1">
+      <Name>sf_product2</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="image1" image="true" Style="FormPricebookEntryFileImage">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="Product.name"/>
+        <DetailItem SchemaName="Product.productcode"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="Product.description"/>
+      </SerializedChildren>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

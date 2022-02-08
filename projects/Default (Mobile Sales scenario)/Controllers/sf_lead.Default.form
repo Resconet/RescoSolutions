@@ -1,0 +1,96 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>sf_lead</EntityName>
+  <CamelCase>sf_lead</CamelCase>
+  <WorkflowLoad>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.ownerid2&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.createdon&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="true"&gt;&lt;var&gt;Entity.ownerid2&lt;/var&gt;&lt;arg&gt;var:Configuration.systemuserid&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowLoad>
+  <WorkflowItemChanged>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;&lt;branch e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;arg&gt;String:status&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;branch e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="true"&gt;&lt;var&gt;Entity.isconverted&lt;/var&gt;&lt;arg&gt;Boolean:1&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="true"&gt;&lt;var&gt;Tabs.Conversions.IsVisible&lt;/var&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="false" op="And" /&gt;&lt;action e="true"&gt;&lt;function e="true"&gt;&lt;var&gt;Tabs.Conversions.IsVisible&lt;/var&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowItemChanged>
+  <WorkflowSave>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.name&lt;/var&gt;&lt;arg&gt;var:Entity.firstname&lt;/arg&gt;&lt;arg&gt;String: &lt;/arg&gt;&lt;arg&gt;var:Entity.lastname&lt;/arg&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;/function&gt;&lt;/Workflow&gt;</WorkflowSave>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables /&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <PrimaryCommands>Favorite|||Delete|||Convert||</PrimaryCommands>
+  <SharedVariableNames/>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Conversions@2x.png" IsIconNameReadOnly="0">
+      <Name>Conversions</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="isconverted"/>
+        <DetailItem SchemaName="converteddate"/>
+        <DetailItem SchemaName="convertedaccountid"/>
+        <DetailItem SchemaName="convertedcontactid"/>
+        <DetailItem SchemaName="convertedopportunityid"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_lead@2x.png" IsIconNameReadOnly="0">
+      <Name>sf_lead</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="ownerid2">
+          <LookupViews>&lt;lookup&gt;&lt;extra /&gt;&lt;extra&gt;&lt;views&gt;sf_user.Lookup - All Users&lt;/views&gt;&lt;/extra&gt;&lt;/lookup&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="status"/>
+        <DetailItem SchemaName="rating"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="salutation"/>
+        <DetailItem SchemaName="firstname"/>
+        <DetailItem SchemaName="lastname"/>
+        <DetailItem SchemaName="title"/>
+        <DetailItem SchemaName="company"/>
+        <DetailItem SchemaName="industry"/>
+        <DetailItem SchemaName="numberofemployees"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="phone"/>
+        <DetailItem SchemaName="mobilephone"/>
+        <DetailItem SchemaName="email"/>
+        <DetailItem SchemaName="website"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="leadsource"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" flexi="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Address@2x.png" IsIconNameReadOnly="0">
+      <Name>Address</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="street"/>
+        <DetailItem SchemaName="city"/>
+        <DetailItem SchemaName="state"/>
+        <DetailItem SchemaName="postalcode"/>
+        <DetailItem SchemaName="country"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="latitude"/>
+        <DetailItem SchemaName="longitude"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="MapTab" flexiHeight="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
+      <Name>Map</Name>
+      <CoordinatesBinding>latitude;longitude</CoordinatesBinding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_event@2x.png" IsIconNameReadOnly="0">
+      <Name>Events List</Name>
+      <Binding SchemaName="sf_event.whoid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_task@2x.png" IsIconNameReadOnly="0">
+      <Name>Tasks List</Name>
+      <Binding SchemaName="sf_task.whoid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Files@2x.png" IsIconNameReadOnly="0" AllowAddExisting="true">
+      <Name>Files</Name>
+      <CustomName>Files</CustomName>
+      <Binding SchemaName="sf_contentdocumentlink.linkedentityid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_attachment@2x.png" IsIconNameReadOnly="0">
+      <Name>Attachments List</Name>
+      <Binding SchemaName="sf_attachment.parentid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_note@2x.png" IsIconNameReadOnly="0">
+      <Name>Notes List</Name>
+      <Binding SchemaName="sf_note.parentid"/>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

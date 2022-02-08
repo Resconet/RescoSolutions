@@ -1,0 +1,35 @@
+﻿<EntityChart>
+  <Name>In Progress(0) Completed(1) Canceled(2)</Name>
+  <Kind>Donut</Kind>
+  <LimitCount>3</LimitCount>
+  <Fetch version="1.0">
+    <entity name="resco_questionnaire">
+      <filter type="and">
+        <condition attribute="resco_istemplate" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <Axis>resco_completionstatus</Axis>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#FF0000FF</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#FF0000FF</Color>
+  </TargetValue>
+  <SerializedBindings/>
+  <Attributes>
+    <EntityName>resco_questionnaire</EntityName>
+    <CamelCase>resco_questionnaire</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Series>
+    <Series>
+      <Attribute>resco_completionstatus</Attribute>
+      <Color>#FF1f77B4</Color>
+    </Series>
+  </Series>
+</EntityChart>

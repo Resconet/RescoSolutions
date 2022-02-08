@@ -1,0 +1,48 @@
+﻿<ThemeItem Version="4">
+  <IsCustom>false</IsCustom>
+  <Label>All Platforms</Label>
+  <ImagePath>resco:Modern2018</ImagePath>
+  <colors name="ListBackground" color="PAL:0"/>
+  <colors name="ListSelBackground" color="PAL:1"/>
+  <colors name="ListForeground" color="PAL:2"/>
+  <colors name="ListSelForeground" color="PAL:2"/>
+  <colors name="ListSeparator" color="PAL:3"/>
+  <colors name="TitleBackground" color="PAL:4"/>
+  <colors name="TitleForeground" color="PAL:0"/>
+  <colors name="ListHeaderForeground" color="PAL:5"/>
+  <colors name="ListHeaderBackground" color="PAL:2"/>
+  <colors name="SearchBackground" color="PAL:6"/>
+  <colors name="SearchForeground" color="PAL:2"/>
+  <colors name="SearchSelForeground" color="PAL:2"/>
+  <colors name="TabBackground" color="PAL:7"/>
+  <colors name="TabForeground" color="PAL:8"/>
+  <colors name="TabSelForeground" color="PAL:2"/>
+  <colors name="FormBackground" color="PAL:0"/>
+  <colors name="FormItemBackground" color="PAL:9"/>
+  <colors name="FormItemForeground" color="PAL:10"/>
+  <colors name="FormItemLabelForeground" color="PAL:10"/>
+  <colors name="FormItemDisabled" color="PAL:8"/>
+  <colors name="FormItemLink" color="PAL:4"/>
+  <colors name="FormItemSeparator" color="PAL:11"/>
+  <colors name="FormItemButton" color="PAL:2"/>
+  <colors name="GridBackground" color="PAL:0"/>
+  <colors name="GridBorder" color="PAL:12"/>
+  <colors name="HomeListBackground" color="PAL:0"/>
+  <colors name="HomeListSelBackground" color="PAL:1"/>
+  <colors name="HomeListForeground" color="PAL:2"/>
+  <colors name="HomeListSelForeground" color="PAL:2"/>
+  <colors name="HomeListSeparator" color="PAL:5"/>
+  <palette>4294967295</palette>
+  <palette>1008636159</palette>
+  <palette>4279644764</palette>
+  <palette>4292402662</palette>
+  <palette>4278218962</palette>
+  <palette>1457053158</palette>
+  <palette>4287090426</palette>
+  <palette>4294244089</palette>
+  <palette>4286611584</palette>
+  <palette>4294309365</palette>
+  <palette>4278190080</palette>
+  <palette>0</palette>
+  <palette>4292730333</palette>
+</ThemeItem>

@@ -1,0 +1,55 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="1" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>sf_contentversion</EntityName>
+  <CamelCase>sf_contentversion</CamelCase>
+  <WorkflowLoad>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;&lt;definition e="false"&gt;&lt;var&gt;isNewDocument&lt;/var&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;type&gt;Boolean&lt;/type&gt;&lt;/definition&gt;&lt;definition e="false"&gt;&lt;var&gt;isNewVersion&lt;/var&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;type&gt;Boolean&lt;/type&gt;&lt;/definition&gt;&lt;branch info="Setup isNewVersion variable" e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.contentdocumentid&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.IsNew&lt;/var&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;isNewVersion&lt;/var&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;function e="true"&gt;&lt;var&gt;isNewDocument&lt;/var&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.IsNew&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.contentdocumentid&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;isNewVersion&lt;/var&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;function e="true"&gt;&lt;var&gt;isNewDocument&lt;/var&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch info="Setup visibility for new document" e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;isNewDocument&lt;/var&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Form.ratingcount.IsVisible&lt;/var&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.reasonforchange.IsVisible&lt;/var&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.ratingcount.IsVisible&lt;/var&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.ratingcount.IsVisible&lt;/var&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowLoad>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables /&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <PrimaryCommands>Favorite|||Delete|||EmailLink||</PrimaryCommands>
+  <SharedVariableNames/>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" flexiHeader="2">
+      <Name>Document</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="title"/>
+        <DetailItem SchemaName="description"/>
+        <DetailItem SchemaName="tagcsv"/>
+        <DetailItem SchemaName="ratingcount"/>
+        <DetailItem SchemaName="contenturl"/>
+        <DetailItem SchemaName="reasonforchange"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" flexiHeader="2">
+      <Name>Details</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="versionnumber2"/>
+        <DetailItem SchemaName="publishstatus"/>
+        <DetailItem SchemaName="contentsize"/>
+        <DetailItem SchemaName="pathonclient"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="createdbyid"/>
+        <DetailItem SchemaName="createdon"/>
+        <DetailItem SchemaName="lastmodifiedbyid"/>
+        <DetailItem SchemaName="lastmodifieddate"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="4" flexiHeader="2" ListCommands="5">
+      <Name>RelatedObjects</Name>
+      <CustomName>RelatedObjects</CustomName>
+      <Binding SchemaName="sf_contentdocumentlink.@virtual"/>
+      <Views>&lt;extra&gt;&lt;views&gt;sf_contentdocumentlink.@Related Records&lt;/views&gt;&lt;filter entity="sf_contentdocumentlink"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="sf_contentdocumentlink"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="contentdocumentid" operator="eq" value="{{contentdocumentid}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="4" flexiHeader="2">
+      <Name>AllVersions</Name>
+      <CustomName>AllVersions</CustomName>
+      <Binding SchemaName="sf_contentversion.@virtual"/>
+      <Views>&lt;extra&gt;&lt;views&gt;sf_contentversion.@All Versions&lt;/views&gt;&lt;filter entity="sf_contentversion"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="sf_contentversion"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="contentdocumentid" operator="eq" value="{{contentdocumentid}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

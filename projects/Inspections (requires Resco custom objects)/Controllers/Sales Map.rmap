@@ -1,0 +1,16 @@
+﻿<GlobalMap>
+  <Items>
+    <GlobalMapComponent>
+      <EntityName>sf_account</EntityName>
+      <ViewName>All Accounts</ViewName>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
+      <EntityName>sf_contact</EntityName>
+      <ViewName>Contact Cards</ViewName>
+    </GlobalMapComponent>
+  </Items>
+  <Setup>
+    <AggregatePins>false</AggregatePins>
+    <ExpandPins>false</ExpandPins>
+  </Setup>
+</GlobalMap>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityChart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>resco_question</EntityName>
+    <CamelCase>resco_question</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>Completed per client</Name>
+  <IsHidden>false</IsHidden>
+  <Kind>Column</Kind>
+  <IsDefault>false</IsDefault>
+  <LabelStyle>Inside</LabelStyle>
+  <PieDonutRatio>50</PieDonutRatio>
+  <BarStyle>Default</BarStyle>
+  <AreaStyle>Default</AreaStyle>
+  <DrillDownEnabled>true</DrillDownEnabled>
+  <Series>
+    <Series>
+      <Attribute>resco_questionnaireid</Attribute>
+      <Color>#ff1f77B4</Color>
+    </Series>
+  </Series>
+  <Axis>resco_valuelabel</Axis>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#FF0000FF</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#FF0000FF</Color>
+  </TargetValue>
+  <DateGrouping>None</DateGrouping>
+  <Fetch version="1.0">
+    <entity name="resco_question">
+      <filter type="and">
+        <condition attribute="resco_name" operator="eq" value="accountlkp" />
+      </filter>
+      <link-entity name="resco_questionnaire" alias="L0" from="resco_questionnaireid" to="resco_questionnaireid" link-type="inner">
+        <filter type="and">
+          <condition attribute="resco_istemplate" operator="eq" value="0" />
+          <condition attribute="resco_completionstatus" operator="eq" value="1" />
+        </filter>
+      </link-entity>
+    </entity>
+  </Fetch>
+  <LimitCount>3</LimitCount>
+</EntityChart>

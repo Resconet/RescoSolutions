@@ -1,0 +1,74 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>sf_pricebookentry</EntityName>
+    <CamelCase>sf_pricebookentry</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Products Icons 2</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>10</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>id</string>
+    <string>unitprice</string>
+    <string>productcode</string>
+    <string>product2id</string>
+    <string>name</string>
+  </SerializedBindings>
+  <MaxColumns>5</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="sf_pricebookentry"/>
+  </Fetch>
+  <Search>
+    <attribute schema="name" method="BeginsWith"/>
+    <attribute schema="productcode" method="BeginsWith"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>120</Width>
+      <Height>120</Height>
+      <Buttons>none</Buttons>
+      <SerializedSelectedBackground>-1447447</SerializedSelectedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="unitprice">
+          <StyleName>black</StyleName>
+          <Bounds>10,103,100,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>15</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="name">
+          <StyleName>black</StyleName>
+          <Bounds>10,75,100,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Product name:">
+          <IsConstant>true</IsConstant>
+          <StyleName>black_bold</StyleName>
+          <Bounds>10,60,100,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="List price:">
+          <IsConstant>true</IsConstant>
+          <StyleName>black_bold</StyleName>
+          <Bounds>10,89,100,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>PricebookEntryFileImage</StyleName>
+          <Bounds>3,2,114,57</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

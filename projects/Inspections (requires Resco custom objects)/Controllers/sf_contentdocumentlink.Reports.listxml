@@ -1,0 +1,69 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>sf_contentdocumentlink</EntityName>
+    <CamelCase>sf_contentdocumentlink</CamelCase>
+  </Attributes>
+  <Name>Reports</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>contentdocumentid</string>
+    <string>id</string>
+    <string>linkedentityid</string>
+    <string>name</string>
+    <string>contentdocumentid.sf_contentdocument.latestpublishedversionid</string>
+    <string>contentdocumentid.sf_contentdocument.modifiedon</string>
+    <string>contentdocumentid.sf_contentdocument.contentsize</string>
+    <string>contentdocumentid.sf_contentdocument.title</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="sf_contentdocumentlink">
+      <link-entity name="sf_contentdocument" alias="L0" from="id" to="contentdocumentid" link-type="inner">
+        <link-entity name="sf_contentversion" alias="L1" from="id" to="latestpublishedversionid" link-type="inner">
+          <filter type="and">
+            <condition attribute="pathonclient" operator="like" value="%.pdf"/>
+          </filter>
+        </link-entity>
+      </link-entity>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>100</Height>
+      <SerializedBackground>-789517</SerializedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="contentdocumentid.sf_contentdocument.contentsize">
+          <StyleName>0102 h2</StyleName>
+          <Bounds>75,38,230,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="contentdocumentid.sf_contentdocument.modifiedon">
+          <StyleName>0103 p grey</StyleName>
+          <Bounds>75,64,230,19</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>15</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="inspections.pdf">
+          <IsConstant>true</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>15,15,42,42</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="contentdocumentid.sf_contentdocument.title">
+          <StyleName>0110 date</StyleName>
+          <Bounds>75,15,230,19</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

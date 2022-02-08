@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>resco_question</EntityName>
+    <CamelCase>resco_question</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>Questions</Name>
+  <Kind>List</Kind>
+  <IsDefault>false</IsDefault>
+  <AutoWideWidth>0</AutoWideWidth>
+  <AutoHeader>0</AutoHeader>
+  <MaxColumns>0</MaxColumns>
+  <OrderBy>resco_name</OrderBy>
+  <SerializedBindings>
+    <string>resco_answeredon</string>
+    <string>createdby</string>
+    <string>createdon</string>
+    <string>resco_defaultvalue</string>
+    <string>resco_description</string>
+    <string>resco_displayformat</string>
+    <string>resco_questiongroupid</string>
+    <string>resco_icon</string>
+    <string>resco_questionid</string>
+    <string>resco_index</string>
+    <string>resco_kind</string>
+    <string>resco_label</string>
+    <string>resco_max</string>
+    <string>resco_min</string>
+    <string>modifiedby</string>
+    <string>modifiedon</string>
+    <string>resco_name</string>
+    <string>resco_options</string>
+    <string>ownerid</string>
+    <string>resco_precision</string>
+    <string>resco_questionnaireid</string>
+    <string>resco_rawdatevalue</string>
+    <string>resco_rawidvalue</string>
+    <string>resco_rawnumericvalue</string>
+    <string>resco_required</string>
+    <string>resco_isseparator</string>
+    <string>statecode</string>
+    <string>statuscode</string>
+    <string>resco_style</string>
+    <string>resco_value</string>
+    <string>resco_valuelabel</string>
+    <string>resco_visible</string>
+    <string>resco_questionnaireid.resco_questionnaire.resco_questionnaireid</string>
+    <string>resco_questionnaireid.resco_questionnaire.resco_name</string>
+  </SerializedBindings>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>100</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="resco_name">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>7,2,101,25</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resco_questionid">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>7,41,227,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resco_rawidvalue">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>7,54,227,14</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resco_valuelabel">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>108,2,126,25</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resco_questionnaireid">
+          <IsConstant>false</IsConstant>
+          <StyleName>black</StyleName>
+          <Bounds>7,26,227,15</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resco_rawdatevalue">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>7,68,227,14</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resco_rawnumericvalue">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>7,82,227,14</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties />
+  <SerializedChildren />
+  <Height>0</Height>
+  <IFrameProvidesDS>false</IFrameProvidesDS>
+</EntityList>

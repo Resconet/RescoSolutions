@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>sf_task</EntityName>
+    <CamelCase>sf_task</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>My Tasks</Name>
+  <Kind>List</Kind>
+  <IsDefault>false</IsDefault>
+  <CalendarFields>activitydate;activitydate</CalendarFields>
+  <AutoWideWidth>0</AutoWideWidth>
+  <Fetch version="1.0">
+    <entity name="sf_task">
+      <filter type="and">
+        <condition attribute="ownerid2" operator="eq-userid" />
+      </filter>
+    </entity>
+  </Fetch>
+  <Search>
+    <attribute schema="subject" method="BeginsWith" />
+  </Search>
+  <OrderBy>activitydate;subject</OrderBy>
+  <MultiSelectCommands>Favorite|||Delete|||EmailLink||</MultiSelectCommands>
+  <SerializedBindings>
+    <string>activitydate</string>
+    <string>id</string>
+    <string>whoid</string>
+    <string>whatid</string>
+    <string>status</string>
+    <string>subject</string>
+    <string>tasksubtype</string>
+  </SerializedBindings>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>40</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <Buttons>Favorite;Delete;EmailLink</Buttons>
+      <SerializedChildren>
+        <CellTemplate SchemaName="whoid">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>151,1,84,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="whatid">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>151,21,84,19</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="tasksubtype">
+          <IsConstant>false</IsConstant>
+          <StyleName>Task Icon Style</StyleName>
+          <Bounds>2,1,36,39</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="status">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>43,21,48,19</Bounds>
+          <CellKind>3</CellKind>
+          <IsFormatted>false</IsFormatted>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="activitydate">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>91,21,60,19</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="subject">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>43,1,108,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <TemplateSelectorRule>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;&lt;definition e="false"&gt;&lt;var&gt;Color&lt;/var&gt;&lt;arg&gt;String:#FF000000&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;/definition&gt;&lt;branch e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.tasksubtype&lt;/var&gt;&lt;arg&gt;String:Call&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Color&lt;/var&gt;&lt;arg&gt;String:#FF48C3CC&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.tasksubtype&lt;/var&gt;&lt;arg&gt;String:Email&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Color&lt;/var&gt;&lt;arg&gt;String:#FFC3C3C3&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And" /&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Color&lt;/var&gt;&lt;arg&gt;String:#FF48C076&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <CustomProperties>
+    <SerializedClassBinding name="Color" label="Color" type="String" />
+  </CustomProperties>
+  <SerializedChildren />
+  <Height>0</Height>
+  <IFrameProvidesDS>false</IFrameProvidesDS>
+</EntityList>

@@ -1,0 +1,63 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>sf_contentdocumentlink</EntityName>
+    <CamelCase>sf_contentdocumentlink</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Related Records</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <MultiSelectCommands>Delete||</MultiSelectCommands>
+  <SerializedBindings>
+    <string>contentdocumentid</string>
+    <string>id2</string>
+    <string>id</string>
+    <string>linkedentityid</string>
+    <string>modifiedon</string>
+    <string>name</string>
+    <string>sharetype</string>
+    <string>visibility</string>
+  </SerializedBindings>
+  <IsHidden>true</IsHidden>
+  <MaxColumns>0</MaxColumns>
+  <Search>
+    <attribute schema="contentdocumentid" method="Contains" reference="true"/>
+    <attribute schema="linkedentityid" method="Contains" reference="true"/>
+    <attribute schema="sharetype" method="BeginsWith"/>
+    <attribute schema="visibility" method="BeginsWith"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>40</Height>
+      <Buttons>Delete;Open.sf_contentdocumentlink.linkedentityid</Buttons>
+      <SerializedBackground>-789517</SerializedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="linkedentityid">
+          <StyleName>primary</StyleName>
+          <Bounds>8,2,227,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="contentdocumentid">
+          <StyleName>gray</StyleName>
+          <Bounds>8,26,110,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="modifiedon">
+          <StyleName>r_gray</StyleName>
+          <Bounds>118,26,108,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

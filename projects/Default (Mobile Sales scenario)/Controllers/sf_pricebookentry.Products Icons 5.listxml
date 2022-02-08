@@ -1,0 +1,116 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>sf_pricebookentry</EntityName>
+    <CamelCase>sf_pricebookentry</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Products Icons 5</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>10</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>isactive</string>
+    <string>id</string>
+    <string>unitprice</string>
+    <string>productcode</string>
+    <string>product2id</string>
+    <string>name</string>
+    <string>product2id.sf_product2.description</string>
+    <string>product2id.sf_product2.family</string>
+  </SerializedBindings>
+  <MaxColumns>5</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="sf_pricebookentry"/>
+  </Fetch>
+  <Search>
+    <attribute schema="name" method="BeginsWith"/>
+    <attribute schema="productcode" method="BeginsWith"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>200</Width>
+      <Height>204</Height>
+      <Buttons>none</Buttons>
+      <SerializedSelectedBackground>-1447447</SerializedSelectedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="unitprice">
+          <StyleName>black</StyleName>
+          <Bounds>122,17,77,27</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>15</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="name">
+          <StyleName>black</StyleName>
+          <Bounds>1,116,118,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Product name:">
+          <IsConstant>true</IsConstant>
+          <StyleName>black_bold</StyleName>
+          <Bounds>0,100,118,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="List price:">
+          <IsConstant>true</IsConstant>
+          <StyleName>black_bold</StyleName>
+          <Bounds>121,1,78,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>PricebookEntryFileImage</StyleName>
+          <Bounds>0,1,117,99</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="product2id.sf_product2.description">
+          <StyleName>black</StyleName>
+          <Bounds>0,165,200,37</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Description:">
+          <IsConstant>true</IsConstant>
+          <StyleName>black_bold</StyleName>
+          <Bounds>0,145,200,17</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="product2id.sf_product2.family">
+          <StyleName>black</StyleName>
+          <Bounds>120,116,80,27</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Product family:">
+          <IsConstant>true</IsConstant>
+          <StyleName>black_bold</StyleName>
+          <Bounds>120,99,79,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="isactive">
+          <StyleName>black</StyleName>
+          <Bounds>120,63,77,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Active:">
+          <IsConstant>true</IsConstant>
+          <StyleName>black_bold</StyleName>
+          <Bounds>121,45,77,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

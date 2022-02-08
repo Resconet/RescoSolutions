@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityChart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>sf_contentversion</EntityName>
+    <CamelCase>sf_contentversion</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>Used storage by document type</Name>
+  <IsHidden>false</IsHidden>
+  <Kind>Pie</Kind>
+  <IsDefault>false</IsDefault>
+  <LabelStyle>Inside</LabelStyle>
+  <PieDonutRatio>50</PieDonutRatio>
+  <BarStyle>Default</BarStyle>
+  <AreaStyle>Default</AreaStyle>
+  <DrillDownFields>contentlocation;contentdocumentid;createdbyid;createdon;fileextension;filetype;islatest;lastmodifiedbyid;lastmodifieddate;ismajorversion;modifiedon;ownerid2;publishstatus;ratingcount;contentsize;tagcsv;contentmodifiedbyid</DrillDownFields>
+  <DrillDownEnabled>true</DrillDownEnabled>
+  <Series>
+    <Series>
+      <Attribute>contentsize</Attribute>
+      <Aggregation>Sum</Aggregation>
+      <Color>#ff1f77B4</Color>
+    </Series>
+  </Series>
+  <Axis>filetype</Axis>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#FF0000FF</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#FF0000FF</Color>
+  </TargetValue>
+  <DateGrouping>None</DateGrouping>
+  <LimitCount>3</LimitCount>
+</EntityChart>

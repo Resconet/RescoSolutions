@@ -1,0 +1,65 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>sf_contentdocument</EntityName>
+    <CamelCase>sf_contentdocument</CamelCase>
+  </Attributes>
+  <Name>Reports</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>title</OrderBy>
+  <SerializedBindings>
+    <string>id2</string>
+    <string>id</string>
+    <string>latestpublishedversionid</string>
+    <string>modifiedon</string>
+    <string>title</string>
+    <string>latestpublishedversionid.sf_contentversion.contentsize</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="sf_contentdocument">
+      <link-entity name="sf_contentversion" alias="L0" from="id" to="latestpublishedversionid" link-type="inner">
+        <filter type="and">
+          <condition attribute="pathonclient" operator="like" value="%.pdf"/>
+        </filter>
+      </link-entity>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>100</Height>
+      <SerializedBackground>-789517</SerializedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="latestpublishedversionid.sf_contentversion.contentsize">
+          <StyleName>0102 h2</StyleName>
+          <Bounds>75,38,230,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="modifiedon">
+          <StyleName>0103 p grey</StyleName>
+          <Bounds>75,64,230,19</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>15</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="inspections.pdf">
+          <IsConstant>true</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>15,15,42,42</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="title">
+          <StyleName>0110 date</StyleName>
+          <Bounds>75,15,230,19</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

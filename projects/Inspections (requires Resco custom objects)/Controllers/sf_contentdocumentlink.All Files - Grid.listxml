@@ -1,0 +1,62 @@
+﻿<EntityList VisibilityMode="16384">
+  <Attributes>
+    <EntityName>sf_contentdocumentlink</EntityName>
+    <CamelCase>sf_contentdocumentlink</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>All Files - Grid</Name>
+  <Kind>List</Kind>
+  <IsDefault>true</IsDefault>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>contentdocumentid</string>
+    <string>id2</string>
+    <string>id</string>
+    <string>linkedentityid</string>
+    <string>modifiedon</string>
+    <string>name</string>
+    <string>sharetype</string>
+    <string>visibility</string>
+    <string>contentdocumentid.sf_contentdocument.filetype</string>
+    <string>contentdocumentid.sf_contentdocument.latestpublishedversionid</string>
+  </SerializedBindings>
+  <MaxColumns>10</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="sf_contentdocumentlink"/>
+  </Fetch>
+  <Search>
+    <attribute schema="contentdocumentid" method="Contains" reference="true"/>
+    <attribute schema="linkedentityid" method="Contains" reference="true"/>
+    <attribute schema="sharetype" method="BeginsWith"/>
+    <attribute schema="visibility" method="BeginsWith"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>120</Width>
+      <Height>140</Height>
+      <Buttons>none</Buttons>
+      <SerializedBackground>-789517</SerializedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>GridDocumentLinkImage</StyleName>
+          <Bounds>5,5,110,110</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>15</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="contentdocumentid.sf_contentdocument.latestpublishedversionid">
+          <StyleName>gray_c</StyleName>
+          <Bounds>1,117,118,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>15</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

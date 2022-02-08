@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>sf_event</EntityName>
+    <CamelCase>sf_event</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>Lookup - All Events</Name>
+  <Kind>List</Kind>
+  <IsDefault>false</IsDefault>
+  <IsHidden>true</IsHidden>
+  <CalendarFields>startdatetime;enddatetime</CalendarFields>
+  <AutoWideWidth>0</AutoWideWidth>
+  <Fetch version="1.0">
+    <entity name="sf_event">
+      <filter type="and" />
+    </entity>
+  </Fetch>
+  <Search>
+    <attribute schema="subject" method="BeginsWith" />
+  </Search>
+  <OrderBy>startdatetime</OrderBy>
+  <SerializedBindings>
+    <string>id</string>
+    <string>whoid</string>
+    <string>isprivate</string>
+    <string>whatid</string>
+    <string>startdatetime</string>
+    <string>subject</string>
+  </SerializedBindings>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>40</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="whoid">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>150,1,85,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="whatid">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>150,21,85,19</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="isprivate">
+          <IsConstant>false</IsConstant>
+          <StyleName>Event Icon Style</StyleName>
+          <Bounds>2,0,36,39</Bounds>
+          <CellKind>1</CellKind>
+          <IsFormatted>false</IsFormatted>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="startdatetime">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>43,21,107,19</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="subject">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>43,1,107,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <TemplateSelectorRule>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;&lt;definition e="false"&gt;&lt;var&gt;Color&lt;/var&gt;&lt;arg&gt;String:#FF000000&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;/definition&gt;&lt;branch e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.isprivate&lt;/var&gt;&lt;arg&gt;Boolean:1&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Color&lt;/var&gt;&lt;arg&gt;String:#FFCC6666&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="false" op="And" /&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Color&lt;/var&gt;&lt;arg&gt;String:#FF728BC8&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <CustomProperties>
+    <SerializedClassBinding name="Color" label="Color" type="String" />
+  </CustomProperties>
+  <SerializedChildren />
+  <Height>0</Height>
+  <IFrameProvidesDS>false</IFrameProvidesDS>
+</EntityList>

@@ -1,0 +1,27 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="0" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>sf_orderitem</EntityName>
+  <CamelCase>sf_orderitem</CamelCase>
+  <WorkflowItemChanged>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.quantity&lt;/var&gt;&lt;op&gt;LessEqual&lt;/op&gt;&lt;arg&gt;Float:0&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.quantity&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Float:1&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.unitprice&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:Entity.listprice&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowItemChanged>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <SharedVariableNames/>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_orderitem@2x.png" IsIconNameReadOnly="0">
+      <Name>sf_orderitem</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="image" image="true" imageActions="0" Style="FormPricebookEntryFileImage">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="orderid"/>
+        <DetailItem SchemaName="pricebookentryid"/>
+        <DetailItem SchemaName="listprice"/>
+        <DetailItem SchemaName="unitprice"/>
+        <DetailItem SchemaName="quantity"/>
+        <DetailItem SchemaName="description"/>
+      </SerializedChildren>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

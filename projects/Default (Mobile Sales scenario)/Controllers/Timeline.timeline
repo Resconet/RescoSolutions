@@ -1,0 +1,21 @@
+﻿<timeline>
+  <entity name="sf_task">
+    <regardingField>whatid</regardingField>
+    <ownerField>ownerid2</ownerField>
+    <subjectField>subject</subjectField>
+    <descriptionField>description</descriptionField>
+    <sortDateField>activitydate</sortDateField>
+    <dueDateField>activitydate</dueDateField>
+    <statusField>status</statusField>
+    <closedStatuses></closedStatuses>
+  </entity>
+  <entity name="sf_event">
+    <regardingField>whatid</regardingField>
+    <ownerField>ownerid2</ownerField>
+    <subjectField>subject</subjectField>
+    <descriptionField>description</descriptionField>
+    <sortDateField>startdatetime</sortDateField>
+    <dueDateField>activitydatetime</dueDateField>
+    <closedStatuses></closedStatuses>
+  </entity>
+</timeline>

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>sf_order</EntityName>
+    <CamelCase>sf_order</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>My Active Orders</Name>
+  <Kind>List</Kind>
+  <IsDefault>false</IsDefault>
+  <AutoWideWidth>0</AutoWideWidth>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="sf_order">
+      <filter type="and">
+        <condition attribute="status" operator="eq" value="Activated" />
+        <condition attribute="ownerid2" operator="eq-userid" />
+      </filter>
+    </entity>
+  </Fetch>
+  <Search>
+    <attribute schema="accountid" method="Contains" reference="true" />
+    <attribute schema="ordernumber" method="BeginsWith" />
+  </Search>
+  <OrderBy>ordernumber;id</OrderBy>
+  <MultiSelectCommands>Favorite|||Delete|||EmailLink||</MultiSelectCommands>
+  <SerializedBindings>
+    <string>accountid</string>
+    <string>id</string>
+    <string>totalamount</string>
+    <string>ordernumber</string>
+    <string>effectivedate</string>
+    <string>status</string>
+  </SerializedBindings>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>40</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <Buttons>Favorite;Delete;EmailLink</Buttons>
+      <SerializedChildren>
+        <CellTemplate SchemaName="ordernumber">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>0,2,232,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="accountid">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>0,26,111,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="effectivedate">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>111,26,50,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>8</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="totalamount">
+          <IsConstant>false</IsConstant>
+          <StyleName>r_gray</StyleName>
+          <Bounds>161,26,69,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>8</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="status">
+          <IsConstant>false</IsConstant>
+          <StyleName>r_gray</StyleName>
+          <Bounds>170,9,56,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>8</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties />
+  <SerializedChildren />
+  <Height>0</Height>
+  <IFrameProvidesDS>false</IFrameProvidesDS>
+</EntityList>

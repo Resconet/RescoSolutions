@@ -1,0 +1,24 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="0" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>sf_orderitem</EntityName>
+  <CamelCase>sf_orderitem</CamelCase>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab">
+      <Name>sf_orderitem</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="image" image="true" Style="FormPricebookEntryFileImage">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="orderid"/>
+        <DetailItem SchemaName="pricebookentryid"/>
+        <DetailItem SchemaName="listprice"/>
+        <DetailItem SchemaName="unitprice"/>
+        <DetailItem SchemaName="quantity"/>
+        <DetailItem SchemaName="description"/>
+      </SerializedChildren>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

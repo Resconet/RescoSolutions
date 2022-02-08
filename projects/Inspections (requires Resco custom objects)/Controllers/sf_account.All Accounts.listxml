@@ -1,0 +1,75 @@
+﻿<EntityList UseSyncFilter="true">
+  <Attributes>
+    <EntityName>sf_account</EntityName>
+    <CamelCase>sf_account</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>All Accounts</Name>
+  <Kind>List</Kind>
+  <IsDefault>true</IsDefault>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <MultiSelectCommands>Delete|||Favorite|||Export|||EmailLink||</MultiSelectCommands>
+  <SerializedBindings>
+    <string>id2</string>
+    <string>name</string>
+    <string>phone</string>
+    <string>type</string>
+    <string>billingcountry</string>
+    <string>billinglatitude</string>
+    <string>billinglongitude</string>
+    <string>billingstate</string>
+    <string>isdeleted</string>
+    <string>id</string>
+    <string>industry</string>
+    <string>shippinglatitude</string>
+    <string>shippinglongitude</string>
+  </SerializedBindings>
+  <HasGpsFields>true</HasGpsFields>
+  <MaxColumns>0</MaxColumns>
+  <Search>
+    <attribute schema="billingcity" method="Contains"/>
+    <attribute schema="billingcountry" method="Contains"/>
+    <attribute schema="industry" method="Contains"/>
+    <attribute schema="name" method="Contains"/>
+    <attribute schema="ownerid2" method="Contains" reference="true"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>57</Height>
+      <Buttons>Call;Email;Favorite</Buttons>
+      <SerializedChildren>
+        <CellTemplate SchemaName="type">
+          <StyleName>Secondary</StyleName>
+          <Bounds>2,34,190,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="billingcountry">
+          <StyleName>SecondaryRightDate</StyleName>
+          <Bounds>192,34,121,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>2,2,190,31</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="industry">
+          <StyleName>SecondaryRightDate</StyleName>
+          <Bounds>192,13,121,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

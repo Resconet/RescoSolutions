@@ -1,0 +1,74 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>sf_product2</EntityName>
+    <CamelCase>sf_product2</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Active Products</Name>
+  <Kind>List</Kind>
+  <IsDefault>true</IsDefault>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <MultiSelectCommands>Favorite|||Delete|||EmailLink||</MultiSelectCommands>
+  <SerializedBindings>
+    <string>isactive</string>
+    <string>id</string>
+    <string>modifiedon</string>
+    <string>productcode</string>
+    <string>description</string>
+    <string>family</string>
+    <string>name</string>
+  </SerializedBindings>
+  <MaxColumns>10</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="sf_product2">
+      <filter type="and">
+        <condition attribute="isactive" operator="eq" value="1"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <Search>
+    <attribute schema="family" method="BeginsWith"/>
+    <attribute schema="name" method="BeginsWith"/>
+    <attribute schema="productcode" method="BeginsWith"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>80</Height>
+      <Buttons>Favorite;Delete;EmailLink</Buttons>
+      <SerializedChildren>
+        <CellTemplate SchemaName="productcode">
+          <StyleName>gray_bold</StyleName>
+          <Bounds>1,66,65,14</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>66,1,169,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>ListFileImage</StyleName>
+          <Bounds>1,1,65,64</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="description">
+          <StyleName>gray</StyleName>
+          <Bounds>68,27,167,51</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

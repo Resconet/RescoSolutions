@@ -1,0 +1,84 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="2" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>sf_contract</EntityName>
+  <CamelCase>sf_contract</CamelCase>
+  <WorkflowLoad>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.ownerid2&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.createdon&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="true"&gt;&lt;var&gt;Entity.ownerid2&lt;/var&gt;&lt;arg&gt;var:Configuration.systemuserid&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowLoad>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables /&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <PrimaryCommands>Favorite|||Delete|||CreateQuote|||CreateOrder||</PrimaryCommands>
+  <SharedVariableNames/>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+      <Name>Contract</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="ownerid2"/>
+        <DetailItem SchemaName="contractnumber"/>
+        <DetailItem SchemaName="accountid">
+          <LookupViews>&lt;lookup&gt;&lt;extra /&gt;&lt;extra&gt;&lt;views&gt;sf_account.@Lookup - All Accounts&lt;/views&gt;&lt;/extra&gt;&lt;/lookup&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="pricebook2id"/>
+        <DetailItem SchemaName="status"/>
+        <DetailItem SchemaName="startdate"/>
+        <DetailItem SchemaName="enddate"/>
+        <DetailItem SchemaName="contractterm"/>
+        <DetailItem SchemaName="ownerexpirationnotice"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+      <Name>Address</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="billingstreet"/>
+        <DetailItem SchemaName="billingcity"/>
+        <DetailItem SchemaName="billingpostalcode"/>
+        <DetailItem SchemaName="billingstate"/>
+        <DetailItem SchemaName="billingcountry"/>
+        <DetailItem SchemaName="billinglatitude"/>
+        <DetailItem SchemaName="billinglongitude"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" flexi="1" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+      <Name>Details</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="specialterms"/>
+        <DetailItem SchemaName="description"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="customersignedid"/>
+        <DetailItem SchemaName="customersignedtitle"/>
+        <DetailItem SchemaName="customersigneddate"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="companysignedid"/>
+        <DetailItem SchemaName="companysigneddate"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="4" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+      <Name>Orders List</Name>
+      <Binding SchemaName="sf_order.contractid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+      <Name>Events List</Name>
+      <Binding SchemaName="sf_event.whatid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+      <Name>Tasks List</Name>
+      <Binding SchemaName="sf_task.whatid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0" AllowAddExisting="true">
+      <Name>Files</Name>
+      <CustomName>Files</CustomName>
+      <Binding SchemaName="sf_contentdocumentlink.linkedentityid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+      <Name>Attachments List</Name>
+      <Binding SchemaName="sf_attachment.parentid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+      <Name>Notes List</Name>
+      <Binding SchemaName="sf_note.parentid"/>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GlobalMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Items>
+    <GlobalMapComponent>
+      <EntityName>sf_account</EntityName>
+      <ViewName>My Accounts</ViewName>
+      <IsInitial>false</IsInitial>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
+      <EntityName>sf_contact</EntityName>
+      <ViewName>My Contacts</ViewName>
+      <IsInitial>false</IsInitial>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
+      <EntityName>sf_lead</EntityName>
+      <ViewName>My Open Leads</ViewName>
+      <IsInitial>false</IsInitial>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
+      <EntityName>sf_account</EntityName>
+      <ViewName>All Accounts</ViewName>
+      <IsInitial>true</IsInitial>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
+      <EntityName>sf_contact</EntityName>
+      <ViewName>All Contacts</ViewName>
+      <IsInitial>true</IsInitial>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
+      <EntityName>sf_lead</EntityName>
+      <ViewName>All Leads</ViewName>
+      <IsInitial>true</IsInitial>
+    </GlobalMapComponent>
+  </Items>
+  <Setup>
+    <Latitude xsi:nil="true" />
+    <Longitude xsi:nil="true" />
+    <Zoom xsi:nil="true" />
+    <LatitudeField />
+    <LongitudeField />
+    <AggregatePins xsi:nil="true" />
+    <ExpandPins xsi:nil="true" />
+  </Setup>
+</GlobalMap>

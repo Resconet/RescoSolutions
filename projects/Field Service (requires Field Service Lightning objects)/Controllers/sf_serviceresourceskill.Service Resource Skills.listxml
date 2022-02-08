@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>sf_serviceresourceskill</EntityName>
+    <CamelCase>sf_serviceresourceskill</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>Service Resource Skills</Name>
+  <Kind>List</Kind>
+  <IsDefault>false</IsDefault>
+  <AutoWideWidth>0</AutoWideWidth>
+  <AutoHeader>0</AutoHeader>
+  <MaxColumns>0</MaxColumns>
+  <OrderBy>skillnumber</OrderBy>
+  <SerializedBindings>
+    <string>createdbyid</string>
+    <string>createdon</string>
+    <string>isdeleted</string>
+    <string>effectiveenddate</string>
+    <string>id</string>
+    <string>lastmodifiedbyid</string>
+    <string>lastmodifieddate</string>
+    <string>lastreferenceddate</string>
+    <string>lastvieweddate</string>
+    <string>modifiedon</string>
+    <string>serviceresourceid</string>
+    <string>id2</string>
+    <string>skillnumber</string>
+    <string>skillid</string>
+    <string>skilllevel</string>
+    <string>effectivestartdate</string>
+  </SerializedBindings>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>40</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="skillid">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>8,2,155,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="varSkillLevel">
+          <IsConstant>false</IsConstant>
+          <StyleName>Primary Right</StyleName>
+          <Bounds>163,2,67,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="serviceresourceid">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>8,26,222,14</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <TemplateSelectorRule>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;&lt;definition e="false"&gt;&lt;var&gt;varSkillLevel&lt;/var&gt;&lt;arg&gt;String:(&lt;/arg&gt;&lt;arg&gt;var:Entity.skilllevel&lt;/arg&gt;&lt;arg&gt;String:)&lt;/arg&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;/definition&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <CustomProperties>
+    <SerializedClassBinding name="varSkillLevel" label="varSkillLevel" type="String" />
+  </CustomProperties>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables /&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SerializedChildren />
+  <Height>0</Height>
+  <IFrameProvidesDS>false</IFrameProvidesDS>
+</EntityList>

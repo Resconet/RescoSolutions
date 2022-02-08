@@ -1,0 +1,186 @@
+﻿<fetchcollection>
+  <fetch version="1.0">
+    <entity name="account">
+      <filter type="and">
+        <condition attribute="statuscode" operator="ne" value="2"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="contact">
+      <filter type="and">
+        <condition attribute="statuscode" operator="ne" value="2"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="quote">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="30"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="salesorder">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="30"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="invoice">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="30"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="opportunity">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="60"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="email">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="60"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="phonecall">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="60"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="task">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="60"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="appointment">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="60"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="incident">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="60"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="sf_account"/>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="sf_contact"/>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="sf_lead">
+      <filter type="and">
+        <condition attribute="isconverted" operator="ne" value="1"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="sf_event">
+      <filter type="and">
+        <filter type="or">
+          <condition attribute="ownerid2" operator="eq-userid"/>
+          <condition attribute="createdbyid" operator="eq-userid"/>
+        </filter>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="sf_task">
+      <filter type="and">
+        <filter type="or">
+          <condition attribute="ownerid2" operator="eq-userid"/>
+          <condition attribute="createdbyid" operator="eq-userid"/>
+        </filter>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="sf_case"/>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="sf_pricebookentry"/>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="sf_pricebook2"/>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="sf_order"/>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="sf_note">
+      <filter type="and">
+        <condition attribute="ownerid2" operator="eq-userid"/>
+        <condition attribute="modifiedon" operator="last-x-days" value="365"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="sf_contentdocument">
+      <filter type="and">
+        <condition attribute="isarchived" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="sf_contentdocumentlink"/>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="sf_contentversion">
+      <filter type="and">
+        <condition attribute="islatest" operator="eq" value="1"/>
+      </filter>
+      <link-entity name="sf_contentdocument" alias="L0" from="id" to="contentdocumentid" link-type="inner">
+        <filter type="and">
+          <condition attribute="isarchived" operator="eq" value="0"/>
+        </filter>
+      </link-entity>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="sf_attachment"/>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="resco_questionnaire">
+      <filter type="and">
+        <filter type="or">
+          <condition attribute="resco_istemplate" operator="eq" value="0"/>
+          <filter type="and">
+            <condition attribute="resco_istemplate" operator="eq" value="1"/>
+            <filter type="or">
+              <condition attribute="statuscode" operator="eq" value="1"/>
+              <condition attribute="statuscode" operator="eq" value="473220002"/>
+              <condition attribute="statuscode" operator="eq" value="473220003"/>
+            </filter>
+          </filter>
+        </filter>
+        <filter type="or">
+          <condition attribute="resco_issnippet" operator="eq" value="0"/>
+          <condition attribute="resco_issnippet" operator="null"/>
+        </filter>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="resco_usersettings">
+      <filter type="or">
+        <condition attribute="resco_kind" operator="like" value="App.%"/>
+        <condition attribute="resco_kind" operator="like" value="Global.%"/>
+      </filter>
+    </entity>
+  </fetch>
+</fetchcollection>

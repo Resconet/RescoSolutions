@@ -1,0 +1,69 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>sf_attachment</EntityName>
+    <CamelCase>sf_attachment</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding>
+      <SerializedClassBinding name="#FileSize" label="FileSize" type="String"/>
+    </ClassBinding>
+  </Attributes>
+  <Name>All Files</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SortAllowedFields>bodylength;contenttype;createdon;isprivate;modifiedon;name;ownerid2;parentid</SortAllowedFields>
+  <FilterAllowedFields>contenttype;description;isprivate;modifiedon;name;ownerid2;parentid</FilterAllowedFields>
+  <MultiSelectCommands>Favorite|||Delete|||EmailLink|||EmailAttachment||</MultiSelectCommands>
+  <SerializedBindings>
+    <string>id2</string>
+    <string>bodylength</string>
+    <string>createdon</string>
+    <string>name</string>
+    <string>id</string>
+    <string>modifiedon</string>
+    <string>parentid</string>
+  </SerializedBindings>
+  <CalendarFields>modifiedon;modifiedon</CalendarFields>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="sf_attachment"/>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>40</Height>
+      <Buttons>Favorite;Delete;EmailLink;EmailAttachment</Buttons>
+      <SerializedBackground>-789517</SerializedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>8,2,142,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="modifiedon">
+          <StyleName>r_gray</StyleName>
+          <Bounds>150,2,84,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="parentid">
+          <StyleName>gray</StyleName>
+          <Bounds>8,26,168,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#FileSize">
+          <StyleName>r_gray</StyleName>
+          <Bounds>176,26,58,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

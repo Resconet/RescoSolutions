@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityChart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>sf_workorder</EntityName>
+    <CamelCase>sf_workorder</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>Work Orders by Status</Name>
+  <IsHidden>false</IsHidden>
+  <Kind>Funnel</Kind>
+  <IsDefault>false</IsDefault>
+  <LabelStyle>Inside</LabelStyle>
+  <PieDonutRatio>50</PieDonutRatio>
+  <BarStyle>Default</BarStyle>
+  <AreaStyle>Default</AreaStyle>
+  <DrillDownFields>accountid;assetid;caseid;city;contactid;country;createdbyid;createdon;discount;isclosed;lastmodifiedbyid;modifiedon;ownerid2;parentworkorderid;pricebook2id;priority;rootworkorderid;status;street;totalprice;postalcode</DrillDownFields>
+  <DrillDownEnabled>true</DrillDownEnabled>
+  <Series>
+    <Series>
+      <Attribute>status</Attribute>
+      <Color>#ff1f77B4</Color>
+    </Series>
+  </Series>
+  <Axis>status</Axis>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#FF0000FF</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#FF0000FF</Color>
+  </TargetValue>
+  <DateGrouping>None</DateGrouping>
+  <LimitCount>3</LimitCount>
+</EntityChart>

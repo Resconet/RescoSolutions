@@ -1,0 +1,60 @@
+﻿<EntityList VisibilityMode="16384">
+  <Attributes>
+    <EntityName>sf_contentdocument</EntityName>
+    <CamelCase>sf_contentdocument</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>My Files (Grid)</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>title</OrderBy>
+  <SerializedBindings>
+    <string>id2</string>
+    <string>fileextension</string>
+    <string>filetype</string>
+    <string>id</string>
+    <string>isarchived</string>
+    <string>latestpublishedversionid</string>
+    <string>modifiedon</string>
+    <string>ownerid2</string>
+    <string>publishstatus</string>
+    <string>contentsize</string>
+    <string>title</string>
+  </SerializedBindings>
+  <MaxColumns>8</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="sf_contentdocument">
+      <filter type="and">
+        <condition attribute="ownerid2" operator="eq-userid"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>120</Width>
+      <Height>140</Height>
+      <Buttons>none</Buttons>
+      <SerializedBackground>-789517</SerializedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>GridDocumentImage</StyleName>
+          <Bounds>5,5,110,110</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>15</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="title">
+          <StyleName>gray_c</StyleName>
+          <Bounds>1,117,118,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>15</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

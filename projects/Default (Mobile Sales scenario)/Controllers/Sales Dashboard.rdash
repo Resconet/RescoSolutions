@@ -1,0 +1,22 @@
+﻿<Dashboard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0">
+  <Columns>2</Columns>
+  <Rows>2</Rows>
+  <Items>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="List" Binding="sf_event;&lt;extra&gt;&lt;views&gt;sf_event.All Events:sf_event.Delegated Events:sf_event.My Events:sf_event.@My Upcoming Events&lt;/views&gt;&lt;actions&gt;96;0;1&lt;/actions&gt;&lt;calendar&gt;&lt;BusinessDaysMask&gt;0&lt;/BusinessDaysMask&gt;&lt;ViewsMask&gt;7&lt;/ViewsMask&gt;&lt;/calendar&gt;&lt;/extra&gt;" Options="3">
+      <Bounds>0,1,1,1</Bounds>
+      <LegacyConfig>sf_event;sf_event.All Events:sf_event.Delegated Events:sf_event.My Events:sf_event.@My Upcoming Events</LegacyConfig>
+    </DashboardComponent>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="List" Binding="sf_lead;&lt;extra&gt;&lt;views&gt;sf_lead.All Leads:sf_lead.All Open Leads:sf_lead.@My Open Leads&lt;/views&gt;&lt;charts&gt;sf_lead.*:sf_lead.@By Rating&lt;/charts&gt;&lt;actions&gt;130;;4&lt;/actions&gt;&lt;/extra&gt;">
+      <Bounds>0,0,1,1</Bounds>
+      <LegacyConfig>sf_lead;sf_lead.All Leads:sf_lead.All Open Leads:sf_lead.@My Open Leads</LegacyConfig>
+    </DashboardComponent>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="List" Binding="sf_opportunity;&lt;extra&gt;&lt;views&gt;sf_opportunity.All Open Opportunities:sf_opportunity.All Opportunities:sf_opportunity.@My Open Opportunities&lt;/views&gt;&lt;charts&gt;sf_opportunity.*:sf_opportunity.@By Stage&lt;/charts&gt;&lt;actions&gt;162;;4&lt;/actions&gt;&lt;/extra&gt;">
+      <Bounds>1,0,1,1</Bounds>
+      <LegacyConfig>sf_opportunity;sf_opportunity.All Open Opportunities:sf_opportunity.All Opportunities:sf_opportunity.@My Open Opportunities</LegacyConfig>
+    </DashboardComponent>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="List" Binding="sf_task;&lt;extra&gt;&lt;views&gt;sf_task.@My Open Tasks:sf_task.My Tasks&lt;/views&gt;&lt;actions&gt;160;;1&lt;/actions&gt;&lt;/extra&gt;" Options="3">
+      <Bounds>1,1,1,1</Bounds>
+      <LegacyConfig>sf_task;sf_task.@My Open Tasks:sf_task.My Tasks</LegacyConfig>
+    </DashboardComponent>
+  </Items>
+</Dashboard>
