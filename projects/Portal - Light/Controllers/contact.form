@@ -1,0 +1,97 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="1" fleximode="1" fullscreen="1" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>contact</EntityName>
+  <CamelCase>contact</CamelCase>
+  <WorkflowLoad>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Form.parentcustomerid.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/Workflow&gt;</WorkflowLoad>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <PrimaryCommands></PrimaryCommands>
+  <SharedVariableNames/>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="SignatureTab" flexi="0" flexiHeight="400px" flexiHeader="0" FlexiExpandVisibility="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>Profile</Name>
+      <NoteSubject>ListImage</NoteSubject>
+      <EntityName>annotation</EntityName>
+      <Commands>1061004</Commands>
+      <Flags>0</Flags>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" flexiHeight="4" flexiHeader="0" FlexiExpandVisibility="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <AutoGridColumns>1</AutoGridColumns>
+      <SerializedChildren>
+        <DetailItem SchemaName="$Table1" grid="true">
+          <Columns>*;*</Columns>
+          <Rows>Auto;Auto;Auto;Auto;Auto;Auto;Auto;Auto</Rows>
+          <Items>
+            <DetailItem SchemaName="parentcustomerid" Style="Table">
+              <GridPosition>0;2;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="firstname" Style="Table">
+              <GridPosition>0;0;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="lastname" Style="Table">
+              <GridPosition>1;0;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="jobtitle" Style="Table">
+              <GridPosition>0;1;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+              <IsConstant>true</IsConstant>
+              <GridPosition>0;3;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="mobilephone" Style="Table">
+              <GridPosition>0;4;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="telephone1" Style="Table">
+              <GridPosition>1;4;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="emailaddress1" Style="Table">
+              <GridPosition>0;5;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="fax" Style="Table">
+              <GridPosition>0;6;2;1</GridPosition>
+            </DetailItem>
+          </Items>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" flexi="1" flexiWidth="1" flexiHeader="0" FlexiExpandVisibility="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Address@2x.png" IsIconNameReadOnly="0">
+      <Name>Address</Name>
+      <AutoGridColumns>1</AutoGridColumns>
+      <SerializedChildren>
+        <DetailItem SchemaName="$Table2" grid="true">
+          <Columns>*;*</Columns>
+          <Rows>Auto;Auto;Auto;Auto;Auto;Auto;Auto</Rows>
+          <Items>
+            <DetailItem SchemaName="address1_line1" Style="Table">
+              <GridPosition>0;0;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="address1_line2" Style="Table">
+              <GridPosition>0;1;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="address1_line3" Style="Table">
+              <GridPosition>1;1;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="address1_city" Style="Table">
+              <GridPosition>0;2;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="address1_postalcode" Style="Table">
+              <GridPosition>1;2;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="address1_stateorprovince" Style="Table">
+              <GridPosition>0;3;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="address1_country" Style="Table">
+              <GridPosition>1;3;1;1</GridPosition>
+            </DetailItem>
+          </Items>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="MapTab" flexiHeight="300px" flexiWidth="1" flexiHeader="0" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
+      <Name>Map</Name>
+      <CoordinatesBinding>address1_latitude;address1_longitude</CoordinatesBinding>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

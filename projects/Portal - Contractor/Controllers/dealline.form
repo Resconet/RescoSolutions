@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<EntityForm xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>dealline</EntityName>
+  <CamelCase>dealline</CamelCase>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab">
+      <Name>General</Name>
+      <CanRename>true</CanRename>
+      <SerializedChildren>
+        <DetailItem SchemaName="productid">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="quantity">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="priceperunit">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="extendedamount">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+  </SerializedChildrenV2>
+  <Navigation>
+    <Name>Navigation</Name>
+    <CanRename>true</CanRename>
+    <SerializedChildren />
+  </Navigation>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+</EntityForm>

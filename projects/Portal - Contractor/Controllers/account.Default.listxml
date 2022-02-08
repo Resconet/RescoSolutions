@@ -1,0 +1,63 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>account</EntityName>
+    <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Default</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>id</string>
+    <string>name</string>
+    <string>address1_line1</string>
+    <string>address1_postalcode</string>
+    <string>address1_city</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="account">
+      <filter type="and"/>
+    </entity>
+  </Fetch>
+  <Search>
+    <attribute schema="name" method="BeginsWith"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>80</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>Primary</StyleName>
+          <Bounds>13,15,293,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="address1_line1">
+          <StyleName>Secondary</StyleName>
+          <Bounds>13,41,147,22</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="address1_postalcode">
+          <StyleName>Secondary</StyleName>
+          <Bounds>159,41,66,22</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>8</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="address1_city">
+          <StyleName>Secondary Right</StyleName>
+          <Bounds>225,41,80,22</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>8</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

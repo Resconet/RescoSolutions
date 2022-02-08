@@ -1,0 +1,6 @@
+﻿<ProcessControl>
+  <ProcessName>Process1</ProcessName>
+  <Entity>incident</Entity>
+  <Field>statuscode</Field>
+  <ProcessSteps>10000;undefined;undefined;undefined;false;false|1;undefined;undefined;undefined;false;false|2;undefined;undefined;undefined;false;false|10001;undefined;undefined;undefined;false;false|10002;undefined;undefined;undefined;false;false|5;undefined;undefined;undefined;false;false|6;undefined;undefined;undefined;false;false|10003;undefined;undefined;undefined;false;false|10004;undefined;undefined;undefined;false;false|10005;undefined;undefined;undefined;false;false|10006;undefined;undefined;undefined;false;false|</ProcessSteps>
+</ProcessControl>

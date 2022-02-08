@@ -1,0 +1,18 @@
+﻿<Tourplan>
+  <Items>
+    <TourplanComponent>
+      <Binding>fs_time_off</Binding>
+    </TourplanComponent>
+    <TourplanComponent>
+      <Binding>fs_workorderschedule</Binding>
+    </TourplanComponent>
+    <TourplanComponent>
+      <Binding>activity</Binding>
+    </TourplanComponent>
+  </Items>
+  <Version>1</Version>
+  <AllowedViews>activity.*:fs_time_off.*:fs_time_off.@My TimeOffs:fs_workorderschedule.*:fs_workorderschedule.@My WorkOrder Schedules</AllowedViews>
+  <IsHub>true</IsHub>
+  <BusinessDaysMask>0</BusinessDaysMask>
+  <ViewsMask>0</ViewsMask>
+</Tourplan>

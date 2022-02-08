@@ -1,0 +1,26 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>fs_jobagreement</EntityName>
+  <CamelCase>fs_jobagreement</CamelCase>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand OnExecuteButton</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="name"/>
+        <DetailItem SchemaName="fs_validfrom"/>
+        <DetailItem SchemaName="fs_validto"/>
+        <DetailItem SchemaName="statuscode"/>
+        <DetailItem SchemaName="fs_advancedaction"/>
+        <DetailItem SchemaName="fs_actionxdaysinadvance"/>
+        <DetailItem SchemaName="fs_assetid"/>
+        <DetailItem SchemaName="fs_jobtemplateid"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0" FlipMode="96">
+      <Name>Job Agreement Dates List</Name>
+      <Binding SchemaName="fs_jobagreementdate.fs_jobagreementid"/>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

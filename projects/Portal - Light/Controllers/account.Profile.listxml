@@ -1,0 +1,108 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>account</EntityName>
+    <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Profile</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <AutoHeader>2</AutoHeader>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>address1_city</string>
+    <string>address1_country</string>
+    <string>emailaddress1</string>
+    <string>id</string>
+    <string>telephone1</string>
+    <string>name</string>
+    <string>address1_postalcode</string>
+    <string>address1_line1</string>
+    <string>address1_line2</string>
+    <string>address1_line3</string>
+    <string>websiteurl</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="account">
+      <link-entity name="contact" alias="L0" from="parentcustomerid" to="id" link-type="inner">
+        <link-entity name="systemuser" alias="L1" from="id" to="resco_portaluserid" link-type="inner">
+          <filter type="and">
+            <condition attribute="id" operator="eq-userid"/>
+          </filter>
+        </link-entity>
+      </link-entity>
+    </entity>
+  </Fetch>
+  <Search>
+    <attribute schema="name" method="BeginsWith"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>400</Width>
+      <Height>800</Height>
+      <Buttons>none</Buttons>
+      <SerializedChildren>
+        <CellTemplate SchemaName="Edit Account Info">
+          <IsConstant>true</IsConstant>
+          <StyleName>Secondary Center Big Button</StyleName>
+          <Bounds>100,365,200,52</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="name">
+          <StyleName>Secondary Center Big</StyleName>
+          <Bounds>48,35,310,43</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="address1_line1">
+          <StyleName>Secondary Center</StyleName>
+          <Bounds>45,118,310,27</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="address1_postalcode">
+          <StyleName>Secondary Center</StyleName>
+          <Bounds>45,170,310,27</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="address1_city">
+          <StyleName>Secondary Center</StyleName>
+          <Bounds>45,144,310,27</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="address1_country">
+          <StyleName>Secondary Center</StyleName>
+          <Bounds>45,197,310,27</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="emailaddress1">
+          <StyleName>Secondary Center</StyleName>
+          <Bounds>45,248,310,27</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="websiteurl">
+          <StyleName>Secondary Center</StyleName>
+          <Bounds>45,273,310,27</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="telephone1">
+          <StyleName>Secondary Center</StyleName>
+          <Bounds>45,300,310,27</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

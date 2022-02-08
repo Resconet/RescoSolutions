@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>task</EntityName>
+    <CamelCase>Task</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <WrapperClass>MobileCrm.Model.ActivityListItem</WrapperClass>
+    <ClassBinding>
+      <SerializedClassBinding name="#DateLabel" label="DateLabel" type="String" />
+      <SerializedClassBinding name="#End" label="End" type="String" />
+      <SerializedClassBinding name="#Icon" label="Icon" type="String" />
+      <SerializedClassBinding name="#IsDirty" label="IsDirty" type="String" />
+      <SerializedClassBinding name="#Start" label="Start" type="String" />
+    </ClassBinding>
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>My Tasks</Name>
+  <Kind>List</Kind>
+  <IsDefault>true</IsDefault>
+  <AutoWideWidth>0</AutoWideWidth>
+  <AutoHeader>0</AutoHeader>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="task">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0" />
+        <condition attribute="ownerid" operator="eq-userid" />
+      </filter>
+    </entity>
+  </Fetch>
+  <OrderBy>!scheduledend</OrderBy>
+  <SerializedBindings>
+    <string>id</string>
+    <string>name</string>
+    <string>scheduledend</string>
+    <string>statuscode</string>
+  </SerializedBindings>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>50</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <IsConstant>false</IsConstant>
+          <StyleName>Primary</StyleName>
+          <Bounds>10,8,220,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="scheduledend">
+          <IsConstant>false</IsConstant>
+          <StyleName>Secondary</StyleName>
+          <Bounds>10,28,120,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <IsConstant>false</IsConstant>
+          <StyleName>Secondary Right</StyleName>
+          <Bounds>130,28,100,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties />
+  <SerializedChildren />
+  <Height>40</Height>
+  <IFrameProvidesDS>false</IFrameProvidesDS>
+</EntityList>

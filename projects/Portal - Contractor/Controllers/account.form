@@ -1,0 +1,75 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>account</EntityName>
+  <CamelCase>account</CamelCase>
+  <PrimaryCommands></PrimaryCommands>
+  <SharedVariableNames/>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="name" Style="Normal"/>
+        <DetailItem SchemaName="emailaddress1" Style="Normal"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="telephone1" Style="Normal"/>
+        <DetailItem SchemaName="fax" Style="Normal"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="websiteurl" Style="Normal"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="transactioncurrencyid" Style="Normal"/>
+        <DetailItem SchemaName="defaultpricelevelid"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="fs_territory"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Address@2x.png" IsIconNameReadOnly="0">
+      <Name>Address</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="address1_line1" Style="Normal"/>
+        <DetailItem SchemaName="address1_line2" Style="Normal"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address1_city" Style="Normal"/>
+        <DetailItem SchemaName="address1_postalcode" Style="Normal"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address1_stateorprovince" Style="Normal"/>
+        <DetailItem SchemaName="address1_country" Style="Normal"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="MapTab" flexiHeight="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
+      <Name>Map</Name>
+      <CoordinatesBinding>address1_latitude;address1_longitude</CoordinatesBinding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="0" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\contact@2x.png" IsIconNameReadOnly="0">
+      <Name>Customer Contacts List</Name>
+      <Binding SchemaName="contact.parentcustomerid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\fs_asset@2x.png" IsIconNameReadOnly="0">
+      <Name>Assets List</Name>
+      <Binding SchemaName="fs_asset.customerid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\fs_workorder@2x.png" IsIconNameReadOnly="0" DocCommands="0">
+      <Name>WorkOrders List</Name>
+      <Binding SchemaName="fs_workorder.customerid"/>
+      <Views>fs_workorder.My Active WorkOrders:fs_workorder.My WorkOrders</Views>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
+      <Name>Notes List</Name>
+      <Binding SchemaName="annotation.objectid"/>
+      <Views>annotation.Default</Views>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

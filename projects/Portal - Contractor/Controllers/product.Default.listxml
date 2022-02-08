@@ -1,0 +1,72 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>product</EntityName>
+    <CamelCase>Product</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Default</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>transactioncurrencyid</string>
+    <string>currentcost</string>
+    <string>id</string>
+    <string>productnumber</string>
+    <string>isservice</string>
+    <string>name</string>
+    <string>producttypecode</string>
+    <string>quantityonhand</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>73</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>66,11,130,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="currentcost">
+          <StyleName>r_currency</StyleName>
+          <Bounds>201,11,101,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="productnumber">
+          <StyleName>gray</StyleName>
+          <Bounds>66,35,129,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>15</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="isservice">
+          <StyleName>r_gray</StyleName>
+          <Bounds>201,35,101,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="quantityonhand">
+          <StyleName>r_gray</StyleName>
+          <Bounds>201,53,101,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>11</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>ProductList</StyleName>
+          <Bounds>17,11,40,40</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>7</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Tourplan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Items>
+    <TourplanComponent>
+      <Binding>task</Binding>
+      <IsEnabled>false</IsEnabled>
+    </TourplanComponent>
+    <TourplanComponent>
+      <Binding>appointment</Binding>
+      <IsEnabled>false</IsEnabled>
+    </TourplanComponent>
+    <TourplanComponent>
+      <Binding>activity</Binding>
+      <IsEnabled>false</IsEnabled>
+    </TourplanComponent>
+    <TourplanComponent>
+      <Binding>fs_time_off</Binding>
+      <IsEnabled>false</IsEnabled>
+    </TourplanComponent>
+    <TourplanComponent>
+      <Binding>fs_workorderschedule</Binding>
+      <IsEnabled>false</IsEnabled>
+    </TourplanComponent>
+  </Items>
+  <Version>1</Version>
+  <AllowedViews>activity.*:appointment.*:task.*:fs_time_off.*:fs_workorderschedule.*</AllowedViews>
+  <IsHub>false</IsHub>
+  <MinDate xsi:nil="true" />
+  <MaxDate xsi:nil="true" />
+  <BusinessDaysMask>127</BusinessDaysMask>
+  <ViewsMask>15</ViewsMask>
+</Tourplan>

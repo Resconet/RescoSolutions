@@ -1,0 +1,9 @@
+﻿incident.name=Title
+Setup=Settings
+Form.WelcomeLabel=Welcome to Resco Inspections
+Note.Tooltip=Completed revisions performed on your account
+Questionnaire.Tooltip=Click to see the list of completed inspections related to your assets.
+Documents.Tooltip=Click to see all the documents related to your account.
+New Ticket.Tooltip=To report a new incident click here.
+Past Inspections.Tooltip=Click here to see the list of completed inspections of your assets.
+My Documents.Tooltip=List of all the documents related to your account.
