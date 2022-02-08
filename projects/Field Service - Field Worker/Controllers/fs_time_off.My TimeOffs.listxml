@@ -28,9 +28,9 @@
   <TemplateSelectorRule>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;&lt;definition e="false"&gt;&lt;var&gt;NameAndType&lt;/var&gt;&lt;arg&gt;var:Entity.(resourceid.fs_resource.name)&lt;/arg&gt;&lt;arg&gt;String: - &lt;/arg&gt;&lt;arg&gt;var:Entity.type&lt;/arg&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;/definition&gt;&lt;definition e="false"&gt;&lt;var&gt;Color&lt;/var&gt;&lt;func&gt;Clear&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;/definition&gt;&lt;branch info="CalendarColor" e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.type&lt;/var&gt;&lt;arg&gt;PicklistArray:2&lt;/arg&gt;&lt;op&gt;In&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Color&lt;/var&gt;&lt;arg&gt;String:ffff0000&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.type&lt;/var&gt;&lt;arg&gt;PicklistArray:1&lt;/arg&gt;&lt;op&gt;In&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Color&lt;/var&gt;&lt;arg&gt;String:ff00ff00&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="false" op="And" /&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Color&lt;/var&gt;&lt;arg&gt;String:ff0000ff&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
   <Fetch version="1.0">
     <entity name="fs_time_off">
-      <link-entity name="systemuser" alias="L0" from="id" to="resourceid" link-type="inner">
+      <link-entity name="fs_resource" alias="L0" from="id" to="resourceid" link-type="inner">
         <filter type="and">
-          <condition attribute="id" operator="eq-userid"/>
+          <condition attribute="targetid" operator="eq-userid"/>
         </filter>
       </link-entity>
     </entity>
