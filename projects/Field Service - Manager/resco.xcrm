@@ -539,8 +539,6 @@
         <property schema="statuscode"/>
         <property schema="transactioncurrencyid"/>
         <property schema="versionnumber"/>
-        <property schema="warrantyenddate"/>
-        <property schema="warrantystartdate"/>
       </properties>
       <indexes>
         <index schema="idx_fs_asset_assetid" issystem="true">
@@ -1750,8 +1748,6 @@
         <property schema="statecode"/>
         <property schema="statuscode"/>
         <property schema="transactioncurrencyid"/>
-        <property schema="warrantyenddate"/>
-        <property schema="warrantystartdate"/>
       </properties>
       <indexes>
         <index schema="idx_product_defaultuomid" issystem="true">
