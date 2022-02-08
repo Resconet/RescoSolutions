@@ -1,0 +1,14 @@
+﻿<Tourplan>
+  <Items>
+    <TourplanComponent>
+      <Binding>task</Binding>
+    </TourplanComponent>
+    <TourplanComponent>
+      <Binding>appointment</Binding>
+    </TourplanComponent>
+  </Items>
+  <Version>1</Version>
+  <AllowedViews>appointment.*:appointment.@All Appointments:task.*</AllowedViews>
+  <BusinessDaysMask>0</BusinessDaysMask>
+  <ViewsMask>0</ViewsMask>
+</Tourplan>

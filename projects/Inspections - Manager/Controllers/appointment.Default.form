@@ -1,0 +1,79 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="1" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>appointment</EntityName>
+  <CamelCase>appointment</CamelCase>
+  <WorkflowLoad>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.QuestionLookup&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:Entity.id&lt;/arg&gt;&lt;/function&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.IsNew&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.appointmenttype&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;definition e="false"&gt;&lt;var&gt;InspectionType&lt;/var&gt;&lt;func&gt;LoadFetch&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;arg&gt;String:appointmenttype&lt;/arg&gt;&lt;arg&gt;Fetch:&amp;lt;fetch version=&amp;quot;1.0&amp;quot;&amp;gt;&amp;lt;entity name=&amp;quot;appointmenttype&amp;quot;&amp;gt;&amp;lt;filter type=&amp;quot;and&amp;quot;&amp;gt;&amp;lt;condition attribute=&amp;quot;name&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;Inspection&amp;quot; /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/arg&gt;&lt;/definition&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;InspectionType.@this&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.appointmenttype&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:InspectionType.@this&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowLoad>
+  <WorkflowItemChanged>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="false" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:regardingobjectid&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.regardingobjectid&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;definition e="false"&gt;&lt;var&gt;account&lt;/var&gt;&lt;func&gt;LoadReference&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;arg&gt;var:Entity.regardingobjectid&lt;/arg&gt;&lt;arg&gt;String:account&lt;/arg&gt;&lt;/definition&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;account.@this&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.accountLatitude&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:account.address1_latitude&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.accountLongitude&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:account.address1_longitude&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Customer.IsLoaded&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="Refresh PlannedbyType if type changeds" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;IsLoaded&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:appointmenttype&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.IsNew&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Planned By Type.IsLoaded&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowItemChanged>
+  <WorkflowCommandExecute>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Command.Name&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:ChangeStatus&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Command.Param&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Integer:3&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;definition e="false"&gt;&lt;var&gt;CountIncomplete&lt;/var&gt;&lt;func&gt;LoadAggregate&lt;/func&gt;&lt;type&gt;Integer&lt;/type&gt;&lt;arg&gt;String:resco_questionnaire&lt;/arg&gt;&lt;arg&gt;Fetch:&amp;lt;fetch version=&amp;quot;1.0&amp;quot;&amp;gt;&amp;lt;entity name=&amp;quot;resco_questionnaire&amp;quot;&amp;gt;&amp;lt;filter type=&amp;quot;and&amp;quot;&amp;gt;&amp;lt;condition attribute=&amp;quot;resco_regardingid&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;{{Entity.id}}&amp;quot;/&amp;gt;&amp;lt;filter type=&amp;quot;or&amp;quot;&amp;gt;&amp;lt;condition attribute=&amp;quot;resco_completionstatus&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;0&amp;quot;/&amp;gt;&amp;lt;condition attribute=&amp;quot;resco_completionstatus&amp;quot; operator=&amp;quot;null&amp;quot;/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/arg&gt;&lt;arg&gt;String:resco_questionnaireid&lt;/arg&gt;&lt;arg&gt;String:count&lt;/arg&gt;&lt;/definition&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;CountIncomplete&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;CountIncomplete&lt;/var&gt;&lt;op&gt;GreaterThan&lt;/op&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;saytext e="false"&gt;&lt;var&gt;&lt;/var&gt;&lt;text&gt;Appointment cannot be completed when a questionnaire is In Progress.&lt;/text&gt;&lt;/saytext&gt;&lt;function e="false"&gt;&lt;var&gt;Command.Handled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowCommandExecute>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;SharedVariable usage="OnLoadEnabled"&gt;&lt;Name&gt;QuestionLookup&lt;/Name&gt;&lt;CrmType&gt;String&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;SharedVariable usage="OnChangeEnabled"&gt;&lt;Name&gt;accountLongitude&lt;/Name&gt;&lt;CrmType&gt;Decimal&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;SharedVariable usage="OnChangeEnabled"&gt;&lt;Name&gt;accountLatitude&lt;/Name&gt;&lt;CrmType&gt;Decimal&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <PrimaryCommands>ConvertOpportunity|||ConvertCase|||PromoteAsResponse|||ChangeState||1;2</PrimaryCommands>
+  <SharedVariableNames>
+    <string>QuestionLookup</string>
+    <string>accountLongitude</string>
+    <string>accountLatitude</string>
+  </SharedVariableNames>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="MapTab" flexi="0" flexiHeight="150px" flexiHeader="2" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+      <Name>Customer</Name>
+      <CoordinatesBinding>accountLatitude;accountLongitude</CoordinatesBinding>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" flexiHeight="1" flexiHeader="0" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="name" Style="Normal"/>
+        <DetailItem SchemaName="regardingobjectid" Style="Normal"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="ownerid"/>
+        <DetailItem SchemaName="appointmenttype"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="scheduledstart"/>
+        <DetailItem SchemaName="scheduledend"/>
+        <DetailItem SchemaName="description" Style="MultiLine"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="0" flexiHeight="1" flexiHeader="2" flexiOrientation="1" NameModified="0" EntityIconName="" IsIconNameReadOnly="0" DocCommands="0">
+      <Name>Contacts List (*)</Name>
+      <Binding SchemaName="contact.@virtual"/>
+      <Views>&lt;extra&gt;&lt;filter entity="contact"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="contact"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="parentcustomerid" operator="eq" value="{{regardingobjectid}}"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0" DocCommands="0" ListCommands="0">
+      <Name>Planned Directly</Name>
+      <CustomName>Planned Directly</CustomName>
+      <Binding SchemaName="resco_questionnaire.appointmentid.resco_appointmentquestionnaire.questionnaireid"/>
+      <Views>resco_questionnaire.Templates</Views>
+      <LookupViews>resco_questionnaire.Templates</LookupViews>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0" DocCommands="0">
+      <Name>Planned By Type</Name>
+      <CustomName>Planned By Type</CustomName>
+      <Binding SchemaName="resco_questionnaire.@virtual"/>
+      <Views>&lt;extra&gt;&lt;views&gt;resco_questionnaire.Templates&lt;/views&gt;&lt;filter entity="resco_questionnaire"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="resco_questionnaire"&amp;gt;&amp;lt;link-entity name="appointmenttypequestionnaire" alias="QuestionLinkAlias" from="questionnairetemplate" to="resco_questionnaireid" link-type="inner"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="appointmenttype" operator="eq" value="{{appointmenttype}}"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+      <LookupViews>&lt;extra&gt;&lt;views&gt;resco_questionnaire.Templates&lt;/views&gt;&lt;filter entity="resco_questionnaire"&gt;&amp;lt;fetch&amp;gt;&amp;lt;entity name='resco_questionnaire'&amp;gt;&amp;lt;filter&amp;gt;&amp;lt;condition attribute='resco_istemplate' operator='eq' value='1' /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="4" NameModified="0" EntityIconName="" IsIconNameReadOnly="0" DocCommands="0" FlipMode="64">
+      <Name>Completed Inspections</Name>
+      <CustomName>Completed Inspections</CustomName>
+      <Binding SchemaName="resco_questionnaire.@virtual"/>
+      <Views>&lt;extra&gt;&lt;views&gt;resco_questionnaire.Answered Questionnaires:resco_questionnaire.In progress or completed&lt;/views&gt;&lt;filter entity="resco_questionnaire"&gt;&amp;lt;fetch&amp;gt;&amp;lt;entity name="resco_questionnaire"&amp;gt;	&amp;lt;filter type="and"&amp;gt;		&amp;lt;condition attribute='resco_istemplate' operator='eq' value='0' /&amp;gt;		&amp;lt;filter type="or"&amp;gt;			&amp;lt;condition attribute="resco_regardingid" operator="eq" value="{{id}}"/&amp;gt;			&amp;lt;condition attribute="resco_rawidvalue" entityname="QuestionLinkAlias" operator="eq" value="{{id}}"/&amp;gt;		&amp;lt;/filter&amp;gt;	&amp;lt;/filter&amp;gt;&amp;lt;link-entity name="resco_question" alias="QuestionLinkAlias" from="resco_questionnaireid" to="resco_questionnaireid" link-type="outer"/&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+      <LookupViews>&lt;extra&gt;&lt;views&gt;resco_questionnaire.Templates&lt;/views&gt;&lt;filter entity="resco_questionnaire"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="resco_questionnaire"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="resco_istemplate" operator="eq" value="1"/&amp;gt;&amp;lt;condition attribute="resco_issnippet" operator="eq" value="0"/&amp;gt;&amp;lt;filter type="or"&amp;gt;&amp;lt;condition attribute="appointmenttype" entityname="L1" operator="eq" value="{{appointmenttype}}"/&amp;gt;&amp;lt;condition attribute="appointmentid" entityname="L0" operator="eq" value="{{id}}"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;link-entity name="appointmenttypequestionnaire" alias="L1" from="questionnairetemplate" to="resco_questionnaireid" link-type="outer"/&amp;gt;&amp;lt;link-entity name="resco_appointmentquestionnaire" alias="L0" from="questionnaireid" to="resco_questionnaireid" link-type="outer"/&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3" NameModified="0" EntityIconName="" IsIconNameReadOnly="0" DocCommands="0" ListCommands="0">
+      <Name>Submitted Reports</Name>
+      <CustomName>Submitted Reports</CustomName>
+      <Binding SchemaName="annotation.@virtual"/>
+      <Views>&lt;extra&gt;&lt;views&gt;annotation.@Reports&lt;/views&gt;&lt;filter entity="annotation"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="annotation"&amp;gt;&amp;lt;link-entity name="resco_questionnaire" alias="L0" from="resco_questionnaireid" to="objectid" link-type="inner"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="resco_regardingid" operator="eq" value="{{id}}"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;link-entity name="resco_question" alias="L1" from="resco_questionnaireid" to="resco_questionnaireid" link-type="outer"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="resco_rawidvalue" operator="eq" value="{{id}}"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3" flexiHeader="2" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+      <Name>Appointment Notes</Name>
+      <CustomName>Appointment Notes</CustomName>
+      <Binding SchemaName="annotation.objectid"/>
+      <Views>annotation.Default</Views>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

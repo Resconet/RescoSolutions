@@ -1,0 +1,13 @@
+﻿<GlobalMap>
+  <Items>
+    <GlobalMapComponent>
+      <EntityName>account</EntityName>
+      <ViewName>Active Accounts</ViewName>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
+      <EntityName>contact</EntityName>
+      <ViewName>Default</ViewName>
+      <IsInitial>true</IsInitial>
+    </GlobalMapComponent>
+  </Items>
+</GlobalMap>

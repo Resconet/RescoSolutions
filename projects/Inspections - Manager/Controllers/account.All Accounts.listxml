@@ -1,0 +1,80 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>account</EntityName>
+    <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>All Accounts</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>500</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;SharedVariable usage="None"&gt;&lt;Name&gt;Description&lt;/Name&gt;&lt;CrmType&gt;String&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SerializedBindings>
+    <string>address1_city</string>
+    <string>id</string>
+    <string>name</string>
+    <string>address1_postalcode</string>
+    <string>address1_line1</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;definition e="false"&gt;&lt;var&gt;Street&lt;/var&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;arg&gt;String:ADDRESS⋮ &lt;/arg&gt;&lt;arg&gt;var:Entity.address1_line1&lt;/arg&gt;&lt;arg&gt;String:,  &lt;/arg&gt;&lt;/definition&gt;&lt;definition e="false"&gt;&lt;var&gt;Zip&lt;/var&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;arg&gt;var:Street&lt;/arg&gt;&lt;arg&gt;var:Entity.address1_postalcode&lt;/arg&gt;&lt;arg&gt;String:,   &lt;/arg&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.Description&lt;/var&gt;&lt;func&gt;Concat&lt;/func&gt;&lt;arg&gt;var:Zip&lt;/arg&gt;&lt;arg&gt;var:Entity.address1_city&lt;/arg&gt;&lt;/function&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <Fetch version="1.0">
+    <entity name="account">
+      <filter type="and"/>
+    </entity>
+  </Fetch>
+  <Search>
+    <attribute schema="name" method="BeginsWith"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>60</Height>
+      <NextTemplateName>Default-Wide</NextTemplateName>
+      <Buttons>none</Buttons>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>12,10,296,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Description">
+          <StyleName>gray</StyleName>
+          <Bounds>12,32,296,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default-Wide</Name>
+      <Width>600</Width>
+      <Height>60</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>12,10,569,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Description">
+          <StyleName>gray</StyleName>
+          <Bounds>12,32,570,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties>
+    <SerializedClassBinding name="Description" label="Shared.Description" type="String"/>
+    <SerializedClassBinding name="Street" label="Street" type="String"/>
+    <SerializedClassBinding name="Zip" label="Zip" type="String"/>
+  </CustomProperties>
+</EntityList>

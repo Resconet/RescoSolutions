@@ -1,0 +1,13 @@
+﻿<Tourplan>
+  <Items>
+    <TourplanComponent>
+      <Binding>appointment</Binding>
+      <Xml>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Color&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:#668CE6E4&lt;/arg&gt;&lt;/function&gt;&lt;/Workflow&gt;</Xml>
+    </TourplanComponent>
+  </Items>
+  <Version>5</Version>
+  <AllowedViews>appointment.*:appointment.@My Appointments</AllowedViews>
+  <ColorRule>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;&lt;branch e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.EntityName&lt;/var&gt;&lt;arg&gt;String:appointment&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Color&lt;/var&gt;&lt;arg&gt;String:0XFF1C6630&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="false" op="And" /&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Color&lt;/var&gt;&lt;arg&gt;String:0XFFE5D902&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</ColorRule>
+  <BusinessDaysMask>0</BusinessDaysMask>
+  <ViewsMask>0</ViewsMask>
+</Tourplan>

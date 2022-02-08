@@ -1,0 +1,70 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>annotation</EntityName>
+    <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Reports</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>!createdon</OrderBy>
+  <SerializedBindings>
+    <string>createdon</string>
+    <string>filename</string>
+    <string>filesize</string>
+    <string>id</string>
+    <string>ownerid</string>
+    <string>objectid</string>
+    <string>subject</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="annotation">
+      <filter type="and">
+        <condition attribute="filename" operator="like" value="%.pdf"/>
+      </filter>
+      <link-entity name="resco_questionnaire" alias="L0" from="resco_questionnaireid" to="objectid" link-type="inner">
+        <filter type="and">
+          <condition attribute="resco_istemplate" operator="eq" value="0"/>
+        </filter>
+      </link-entity>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>100</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="subject">
+          <StyleName>0102 h2</StyleName>
+          <Bounds>75,38,230,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="objectid">
+          <StyleName>0103 p grey</StyleName>
+          <Bounds>75,64,230,19</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>15</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="inspections.pdf">
+          <IsConstant>true</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>15,15,42,42</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="createdon">
+          <StyleName>0110 date</StyleName>
+          <Bounds>75,15,230,19</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

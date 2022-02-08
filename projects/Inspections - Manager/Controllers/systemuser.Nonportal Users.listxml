@@ -1,0 +1,41 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>systemuser</EntityName>
+    <CamelCase>systemuser</CamelCase>
+  </Attributes>
+  <Name>Nonportal Users</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>id</string>
+    <string>name</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="systemuser">
+      <link-entity name="systemuser_role" alias="L0" from="systemuserid" to="id" link-type="inner">
+        <filter type="and">
+          <condition attribute="roleid" operator="ne" value="91397793-5ff2-42e0-841a-10c9564b7b19" uitype="role" uiname="Portal User"/>
+        </filter>
+      </link-entity>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>40</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>12,10,296,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

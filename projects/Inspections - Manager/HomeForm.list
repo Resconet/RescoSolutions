@@ -1,0 +1,72 @@
+﻿<EntityListCollection>
+  <EntityName></EntityName>
+  <CamelCase>HomeItem</CamelCase>
+  <WrapperClass>MobileCrm.Controllers.HomeItem</WrapperClass>
+  <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
+  <ClassBinding>
+    <SerializedClassBinding name="#Title" label="Title" type="String"/>
+    <SerializedClassBinding name="#SubTitle" label="SubTitle" type="String"/>
+    <SerializedClassBinding name="#Icon" label="Icon" type="Boolean"/>
+    <SerializedClassBinding name="#SectionTitle" label="Icon" type="String"/>
+  </ClassBinding>
+  <SerializedChildren>
+    <EntityList>
+      <Attributes>
+        <EntityName></EntityName>
+        <CamelCase>HomeItem</CamelCase>
+        <WrapperClass>MobileCrm.Controllers.HomeItem</WrapperClass>
+        <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
+        <ClassBinding>
+          <SerializedClassBinding name="#Title" label="Title" type="String"/>
+          <SerializedClassBinding name="#SubTitle" label="SubTitle" type="String"/>
+          <SerializedClassBinding name="#Icon" label="Icon" type="Boolean"/>
+          <SerializedClassBinding name="#SectionTitle" label="Icon" type="String"/>
+        </ClassBinding>
+      </Attributes>
+      <Name>Default</Name>
+      <Kind>List</Kind>
+      <AutoWideWidth>0</AutoWideWidth>
+      <OrderBy></OrderBy>
+      <SerializedBindings/>
+      <MaxColumns>0</MaxColumns>
+      <SerializedTemplates>
+        <RowTemplate>
+          <DesignWidth>320</DesignWidth>
+          <DesignHeight>48</DesignHeight>
+          <Name>Default</Name>
+          <Width>320</Width>
+          <Height>36</Height>
+          <SerializedBackground>-1250068</SerializedBackground>
+          <SerializedSelectedBackground>-1</SerializedSelectedBackground>
+          <SerializedChildren>
+            <CellTemplate SchemaName="#Icon">
+              <StyleName>ImageCellStyle</StyleName>
+              <Bounds>12,6,24,24</Bounds>
+              <CellKind>1</CellKind>
+              <Anchor>5</Anchor>
+            </CellTemplate>
+            <CellTemplate SchemaName="#Title">
+              <StyleName>TitleText</StyleName>
+              <Bounds>46,0,270,36</Bounds>
+              <CellKind>0</CellKind>
+              <Anchor>13</Anchor>
+            </CellTemplate>
+            <CellTemplate SchemaName="#SectionTitle">
+              <StyleName>SectionTitleText</StyleName>
+              <Bounds>12,0,270,36</Bounds>
+              <CellKind>0</CellKind>
+              <Anchor>13</Anchor>
+            </CellTemplate>
+            <CellTemplate SchemaName="">
+              <IsConstant>true</IsConstant>
+              <StyleName>TitleBlueBack</StyleName>
+              <Bounds>0,0,5,36</Bounds>
+              <CellKind>0</CellKind>
+              <Anchor>5</Anchor>
+            </CellTemplate>
+          </SerializedChildren>
+        </RowTemplate>
+      </SerializedTemplates>
+    </EntityList>
+  </SerializedChildren>
+</EntityListCollection>

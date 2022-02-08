@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>Empty Offline HTML page</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="initial-scale=1, user-scalable=no" />
+	<script src="JSBridge.js"></script>
+</head>
+<body>
+	<script>
+
+        // load localization
+        MobileCRM.Localization.initialize(function () {
+            initialize();
+        }, displayErrorMesage);    
+
+        function displayErrorMesage(errorText) {
+            var popup = new MobileCRM.UI.MessageBox(errorText);
+            let okButtonText = MobileCRM.Localization.getTextOrDefault("Cmd.Ok", "OK");
+            popup.items = [okButtonText];
+            /// If title is too long set the 'multi-line' to true
+            popup.multiLine = true;
+            popup.show(
+                function (button) {
+                    return;
+                }
+            );
+        }
+
+        /// handle clicking on special home items
+        function handleHomeClick(data) {
+
+            // find open timesheet entry item or create a new one
+            if (data === "tracktimeitem") {
+
+                // open timesheet for current user
+                var filter1 = new MobileCRM.FetchXml.Filter();
+                filter1.where("ownerid", "eq-userid");
+                var filter2 = new MobileCRM.FetchXml.Filter();
+                filter2.where("statuscode", "eq", 1);
+                var finalFilter = new MobileCRM.FetchXml.Filter();
+                finalFilter.filters.push(filter1);
+                finalFilter.filters.push(filter2);
+                finalFilter.type = "and";
+
+                // fetch timesheet entry
+                // if timesheet not found - open new timesheet entry form
+                fetchRecordAndOpenForm("resco_timesheetentry", finalFilter, function () { MobileCRM.UI.FormManager.showNewDialog("resco_timesheetentry", null); });
+
+            }
+
+            // find next open appointment for today or show a message
+            else if (data === "nextjobitem") {
+
+                // open appointment starting today for current user
+                var finalFilter = prepareAppointmentsFilter();
+
+                // fetch appointment
+                // appointment not found - show message box
+                fetchRecordAndOpenForm("appointment", finalFilter, function () {
+                    var popupTitle = MobileCRM.Localization.getTextOrDefault("Routes.Messages.NoJobsToday", "No more jobs found for today!");
+                    var popup = new MobileCRM.UI.MessageBox(popupTitle);
+                    let okButtonText = MobileCRM.Localization.getTextOrDefault("Cmd.Ok", "OK");
+                    popup.items = [okButtonText];
+                    popup.multiLine = true;
+                    popup.show(
+                        function (button) {
+                            return;
+                        }
+                    );
+                }, "scheduledstart", false);
+            }
+        }
+
+        function prepareAppointmentsFilter() {
+            var filter1 = new MobileCRM.FetchXml.Filter();
+            filter1.where("ownerid", "eq-userid");
+            var filter2a = new MobileCRM.FetchXml.Filter();
+            // get the appointments which are not closed (3) or cancelled (4)
+            // don't use only status "open (1)" because scheduler automatically creates "tentative (2)"
+            filter2a.where("statuscode", "ne", 3);  
+            var filter2b = new MobileCRM.FetchXml.Filter();
+            filter2b.where("statuscode", "ne", 4);
+            var filter3 = new MobileCRM.FetchXml.Filter();
+            filter3.where("scheduledstart", "today");
+            var finalFilter = new MobileCRM.FetchXml.Filter();
+            finalFilter.filters.push(filter1);
+            finalFilter.filters.push(filter2a);
+            finalFilter.filters.push(filter2b);
+            finalFilter.filters.push(filter3);
+            finalFilter.type = "and";
+
+            return finalFilter;
+        }
+
+        /// encapsulates the fetch of one record - if found open the form, if not call notFound callback
+        function fetchRecordAndOpenForm(entityName, filter, notFound, orderBy, desc) {
+
+            var entity = new MobileCRM.FetchXml.Entity(entityName);
+            entity.addAttributes();
+            entity.filter = filter;
+
+            if (orderBy)
+                entity.orderBy(orderBy, desc);
+
+            var fetch = new MobileCRM.FetchXml.Fetch(entity);
+            fetch.execute(
+                "DynamicEntities",
+                function (result) {
+
+                    // timesheet found - open form for it
+                    if (result && result.length > 0) {
+                        MobileCRM.UI.FormManager.showEditDialog(result[0].entityName, result[0].id, null);
+                    } else {
+                        notFound();
+                    }
+                }, displayErrorMesage, null
+            );
+        }
+
+        // initializes sync & form close handlers on load of the home form's iframe
+        function initializeHandlers() {            
+            MobileCRM.UI.HomeForm.onSyncFinished(refreshAppointmentCount, null);
+            MobileCRM.UI.HomeForm.onSyncFinished(refreshJobHomeItemTitle, null);
+            MobileCRM.bridge.onGlobalEvent("EntityFormClosed", function (closedEntityForm) {
+                /// <param name='closedEntityForm' type='MobileCRM.UI.EntityForm'>An EntityForm object representing the form that was closed.</param>
+                if (closedEntityForm.entity && closedEntityForm.entity.entityName == "appointment") {
+                    refreshAppointmentCount();
+                    refreshJobHomeItemTitle();
+                }
+            }, true);
+        }        
+
+        // get the count of open appointments for today & refresh the home item badge
+        function refreshAppointmentCount() {
+            var entity = new MobileCRM.FetchXml.Entity("appointment");
+
+            var idFieldName = "id";
+            var appointmentMeta = MobileCRM.Metadata.getEntity("appointment");
+            idFieldName = appointmentMeta.primaryKeyName;
+
+            var id = entity.addAttribute(idFieldName);
+            id.aggregate = "count";
+            id.alias = "idcount";
+
+            // open appointment starting today for current user
+            entity.filter = prepareAppointmentsFilter();
+
+            var fetch = new MobileCRM.FetchXml.Fetch(entity);
+            fetch.aggregate = true;
+            fetch.execute(
+                "DynamicEntities",
+                function (result) {
+
+                    
+                    if (result && result.length > 0) {
+
+                        var count = result[0].properties.idcount;
+                        var items = ["@Tourplan"];
+                        MobileCRM.UI.HomeForm.updateHomeItemAsync(items, null, count + " jobs for today", count, displayErrorMesage);
+
+                    } 
+
+                }, displayErrorMesage, null
+            );
+        }
+
+        // refresh Job home item's Title to reflect current job / next job
+        function refreshJobHomeItemTitle() {
+
+            // find first open appointment
+            var entity = new MobileCRM.FetchXml.Entity("appointment");
+            entity.addAttributes();
+            entity.orderBy("scheduledstart", false);
+            entity.filter = prepareAppointmentsFilter();
+
+            var fetch = new MobileCRM.FetchXml.Fetch(entity);
+            fetch.execute(
+                "DynamicEntities",
+                function (results) {
+
+                    if (results && results.length > 0) {
+
+                        var appointment = results[0];
+                        // now find open timesheet entry for the appointment
+                        // if found show current job title
+                        // if not found shot next job title
+                        getOpenTimesheetEntryForAppointment(appointment,
+                            function () { setJobHomeItemTitle(_homeItemTitles.currentJob); },
+                            function () { setJobHomeItemTitle(_homeItemTitles.nextJob); });
+
+
+                    } else {
+                        // no appointments found -> act as a next job
+                        setJobHomeItemTitle(_homeItemTitles.nextJob);
+                    }
+
+                }, displayErrorMesage, null
+            );
+        }
+
+        // for the appointment passed as parameter, find a timesheet entry for today and check if it is open (doesn't have end date provided)
+        // 
+        function getOpenTimesheetEntryForAppointment(appointment, callbackFound, callbackNotFound) {
+
+            var entity = new MobileCRM.FetchXml.Entity("resco_timesheetentry");
+
+            var filter1 = new MobileCRM.FetchXml.Filter();
+            filter1.where("ownerid", "eq-userid");
+            var filter2 = new MobileCRM.FetchXml.Filter();
+            filter2.where("resco_appointmentid", "eq", appointment.id);
+            var filter3 = new MobileCRM.FetchXml.Filter();
+            filter3.where("resco_endtime", "null");
+            var finalFilter = new MobileCRM.FetchXml.Filter();
+            finalFilter.filters.push(filter1);
+            finalFilter.filters.push(filter2);
+            finalFilter.filters.push(filter3);
+            finalFilter.type = "and";
+
+            entity.addAttributes();
+            entity.filter = finalFilter;
+
+            var fetch = new MobileCRM.FetchXml.Fetch(entity);
+            fetch.execute("DynamicEntities", function (results) {
+
+                if (results && results.length > 0)
+                    callbackFound();
+                else
+                    callbackNotFound();
+
+            }, displayErrorMesage, null);
+        }
+
+        var _homeItemTitles = {
+            currentJob: 1,
+            nextJob: 2
+        }
+
+        // 
+        function setJobHomeItemTitle(titleType) {
+
+            var items = ["@@Next Appointment Today;data:nextjobitem"];
+            var title = MobileCRM.Localization.getTextOrDefault("Routes.HomeItem.CurrentJob", "Current Appointment");
+            if (titleType == _homeItemTitles.nextJob)
+                title = MobileCRM.Localization.getTextOrDefault("Routes.HomeItem.NextJob", "Next Appointment Today");
+
+            MobileCRM.UI.HomeForm.updateHomeItemAsync(items, title, null, null, displayErrorMesage);
+        }
+
+        // initialize necessary functions on start
+        function initialize() {
+
+            // but password needs to be provided first, so we need to check
+            MobileCRM.Configuration.requestObject(
+                function (config) {
+
+                    // Wait for the password to be provided by the user if not saved
+                    var s = config.settings;
+                    if (s.url && !s.canUsePassword) {
+                        setTimeout(initialize, 1000);
+                    } else {
+
+                        // get metadata so we can check if entities are enabled (and which fields to use either Resco Cloud or Dynamics 365)
+                        MobileCRM.Metadata.requestObject(function (metadata) {
+                            // password provided, we can initialize logic
+                            initializeHandlers();
+                            refreshAppointmentCount(); // calculate the number of appointments on the start of the app
+                            refreshJobHomeItemTitle(); // refresh home item's title
+                        }, displayErrorMesage);
+
+
+                    }
+
+                    return false;
+                },
+                displayErrorMesage,
+                this
+            );
+
+        }
+
+	</script>
+</body>
+</html>

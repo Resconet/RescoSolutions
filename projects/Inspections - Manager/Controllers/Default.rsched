@@ -1,0 +1,66 @@
+﻿<Scheduler>
+  <Version>3</Version>
+  <BorderWidth>2</BorderWidth>
+  <BorderRadius>4</BorderRadius>
+  <Name>Default</Name>
+  <ResourceEntity>systemuser</ResourceEntity>
+  <ActivityName>appointment</ActivityName>
+  <StartDateField>scheduledstart</StartDateField>
+  <EndDateField>scheduledend</EndDateField>
+  <LookupField>regardingobjectid</LookupField>
+  <ResourceField>ownerid</ResourceField>
+  <StatusField>statuscode</StatusField>
+  <WorkEntity>account</WorkEntity>
+  <TaskViews>appointment.All Appointments:appointment.My Appointments</TaskViews>
+  <VisitDurationInMinutes>60</VisitDurationInMinutes>
+  <MinDaysBetweenVisits>0</MinDaysBetweenVisits>
+  <TimeOffsColor>rgba(0,0,0,0)</TimeOffsColor>
+  <TimeOffsTextColor>rgba(0,0,0,0)</TimeOffsTextColor>
+  <TimeOffsBorderColor>rgba(0,0,0,0)</TimeOffsBorderColor>
+  <CreateRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Activity Entity.name&lt;/var&gt;&lt;func&gt;AddPrefix&lt;/func&gt;&lt;arg&gt;String:SCH-&lt;/arg&gt;&lt;/function&gt;&lt;/Workflow&gt;</CreateRule>
+  <StatusCodeList>
+    <StatusCode name="Free" value="1" valueType="number" taskStatusType="1" color="rgba(192,244,98,1)" textColor="rgba(64,64,64,1)" borderColor="rgba(25,126,68,1)" isSecondaryValue="false"/>
+    <StatusCode name="Tentative" value="2" valueType="number" taskStatusType="1" color="rgb(39,196,105)" textColor="white" borderColor="rgba(25,126,68,1)" isSecondaryValue="true"/>
+    <StatusCode name="Completed" value="3" valueType="number" taskStatusType="5" color="rgb(255,196,0)" textColor="rgba(64,64,64,1)" borderColor="rgba(154,119,0,1)" isSecondaryValue="false"/>
+    <StatusCode name="Canceled" value="4" valueType="number" taskStatusType="6" color="rgb(209,74,74)" textColor="white" borderColor="rgba(144,53,53,1)" isSecondaryValue="false"/>
+    <StatusCode name="Busy" value="5" valueType="number" taskStatusType="2" color="rgb(72,151,230)" textColor="white" borderColor="rgba(44,96,149,1)" isSecondaryValue="false"/>
+    <StatusCode name="Out of Office" value="6" valueType="number" taskStatusType="7" color="rgba(163,164,165,0.75)" textColor="white" borderColor="rgba(64,64,64,1)" isSecondaryValue="false"/>
+  </StatusCodeList>
+  <Address>
+    <Latitude>address1_latitude</Latitude>
+    <Longitude>address1_longitude</Longitude>
+    <Street1>address1_line1</Street1>
+    <Street2>address1_line2</Street2>
+    <City>address1_city</City>
+    <Postalcode>address1_postalcode</Postalcode>
+    <Country>address1_country</Country>
+    <StateOrProvince>address1_stateorprovince</StateOrProvince>
+  </Address>
+  <FrequentVisits enabled="0" visits="1" frequency="7" minDaysBetweenVisits="1"/>
+  <Inspections>
+    <ActivitiesTemplates>
+      <Entity>resco_appointmentquestionnaire</Entity>
+      <PrimaryKey>resco_questionnaireid</PrimaryKey>
+      <PrimaryName>name</PrimaryName>
+      <LookupEntity>resco_appointmentquestionnaire</LookupEntity>
+      <LookupField1>
+        <Field>questionnaireid</Field>
+        <PrimaryKey>id</PrimaryKey>
+        <PrimaryName>name</PrimaryName>
+      </LookupField1>
+      <LookupField2>
+        <Entity>resco_appointmentquestionnaire</Entity>
+        <Field>appointmentid</Field>
+        <PrimaryKey>id</PrimaryKey>
+        <PrimaryName>name</PrimaryName>
+      </LookupField2>
+    </ActivitiesTemplates>
+    <Templates>
+      <Entity>resco_questionnaire</Entity>
+      <PrimaryKey>resco_questionnaireid</PrimaryKey>
+      <PrimaryName>resco_name</PrimaryName>
+      <AttrStatusReason>statuscode</AttrStatusReason>
+      <AttrIsTemplate>resco_istemplate</AttrIsTemplate>
+    </Templates>
+  </Inspections>
+</Scheduler>

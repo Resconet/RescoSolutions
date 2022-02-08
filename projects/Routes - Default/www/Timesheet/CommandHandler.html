@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>Empty Offline HTML page</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="initial-scale=1, user-scalable=no" />
+	<script src="..\JSBridge.js"></script>
+</head>
+<body>
+	<script>
+
+        // load localization
+        MobileCRM.Localization.initialize(function () {
+            initialize();
+        }, displayErrorMesage);    
+
+        var g_wait = null;
+
+        function displayErrorMesage(errorText) {
+
+            // close please wait dialog if still active
+            if (g_wait) {
+                g_wait.close();
+                g_wait = null;
+            }
+
+            var popup = new MobileCRM.UI.MessageBox(errorText);
+            let okButtonText = MobileCRM.Localization.getTextOrDefault("Cmd.Ok", "OK");
+            popup.items = [okButtonText];
+            /// If title is too long set the 'multi-line' to true
+            popup.multiLine = true;
+            popup.show(
+                function (button) {
+                    return;
+                }
+            );
+        }
+
+        // initializes command handler
+        function initializeHandlers() {            
+            MobileCRM.UI.EntityForm.onCommand(
+                "custom_Submit",
+                function (entityForm) {
+                    var entity = entityForm.entity;
+
+                    g_wait = MobileCRM.UI.EntityForm.showPleaseWait(MobileCRM.Localization.getTextOrDefault("Routes.Messages.SubmitTimesheet", "Submitting..."));
+                    closeAllAssociatedTSE(entity.id);
+                },
+                true
+            );
+        }
+
+        // 
+        var g_TSEs = null;
+
+        // close all time sheet entries associated to this timesheet
+        function closeAllAssociatedTSE(timesheetID) {
+            var entity = new MobileCRM.FetchXml.Entity("resco_timesheetentry");
+            entity.addAttributes();
+
+            var filter = new MobileCRM.FetchXml.Filter();
+            filter.where("resco_timesheetid", "eq", timesheetID);
+            entity.filter = filter;
+
+            g_TSEs = null;
+
+            var fetch = new MobileCRM.FetchXml.Fetch(entity);
+            fetch.execute(
+                "DynamicEntities",
+                function (result) {
+
+                    g_TSEs = result;
+                    processTSE(); // starts the process of closing TSEs
+                    
+                }, displayErrorMesage, null
+            );
+        }
+
+        // pops a TSE from results, closes it & saves it
+        function processTSE() {
+
+            // end processing TSEs if there are no more in the array
+            if (!g_TSEs || g_TSEs.length <= 0) {
+                changeStatus();
+                return;
+            }
+
+            var tse = g_TSEs.pop();
+            tse.properties.statuscode = 2; // 2 = closed
+            tse.save(function (err) {
+                if (err) {
+                    displayErrorMesage(err);
+                    return; // don't continue with execution
+                }
+
+                processTSE();
+            });
+        }
+
+        // change status of Timesheet and close it
+        function changeStatus() {
+            MobileCRM.UI.EntityForm.requestObject(
+                function (entityForm) {
+                    var entity = entityForm.entity;
+                    entity.properties.statuscode = 3; // 3 = submitted
+                    g_wait.close();
+                    MobileCRM.UI.EntityForm.saveAndClose();
+                    return true;
+                },
+                displayErrorMesage,
+                null
+            );
+        }
+
+        // initialize necessary functions on start
+        function initialize() {
+            initializeHandlers();
+        }
+
+	</script>
+</body>
+</html>

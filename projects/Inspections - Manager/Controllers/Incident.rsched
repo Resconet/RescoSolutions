@@ -1,0 +1,43 @@
+﻿<Scheduler>
+  <Version>3</Version>
+  <BorderWidth>2</BorderWidth>
+  <BorderRadius>4</BorderRadius>
+  <Name>Incident</Name>
+  <ResourceEntity>systemuser</ResourceEntity>
+  <ResourceViews>systemuser.Nonportal Users</ResourceViews>
+  <ActivityName>appointment</ActivityName>
+  <StartDateField>scheduledstart</StartDateField>
+  <EndDateField>scheduledend</EndDateField>
+  <LookupField>regardingobjectid</LookupField>
+  <ResourceField>ownerid</ResourceField>
+  <StatusField>statuscode</StatusField>
+  <WorkEntity>incident</WorkEntity>
+  <WorkViews>incident.*:incident.@Submitted</WorkViews>
+  <TaskViews>appointment.All Appointments</TaskViews>
+  <VisitDurationInMinutes>120</VisitDurationInMinutes>
+  <MinDaysBetweenVisits>0</MinDaysBetweenVisits>
+  <ProgressField>completionpercent</ProgressField>
+  <TimeOffsColor>rgba(0,0,0,0)</TimeOffsColor>
+  <TimeOffsTextColor>rgba(0,0,0,0)</TimeOffsTextColor>
+  <TimeOffsBorderColor>rgba(0,0,0,0)</TimeOffsBorderColor>
+  <CreateRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Source Entity.statuscode&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Status:10001&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Activity Entity.name&lt;/var&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;arg&gt;var:Source Entity.name&lt;/arg&gt;&lt;arg&gt;String: at &lt;/arg&gt;&lt;arg&gt;var:Source Entity.customerid&lt;/arg&gt;&lt;/function&gt;&lt;/Workflow&gt;</CreateRule>
+  <StatusCodeList>
+    <StatusCode name="Free" value="1" valueType="number" taskStatusType="1" color="rgb(39,196,105)" textColor="white" borderColor="rgba(25,126,68,1)" isSecondaryValue="false"/>
+    <StatusCode name="Tentative" value="2" valueType="number" taskStatusType="1" color="rgb(39,196,105)" textColor="white" borderColor="rgba(25,126,68,1)" isSecondaryValue="true"/>
+    <StatusCode name="Completed" value="3" valueType="number" taskStatusType="5" color="rgb(255,196,0)" textColor="black" borderColor="rgba(154,119,0,1)" isSecondaryValue="false"/>
+    <StatusCode name="Canceled" value="4" valueType="number" taskStatusType="6" color="rgb(209,74,74)" textColor="white" borderColor="rgba(144,53,53,1)" isSecondaryValue="false"/>
+    <StatusCode name="Busy" value="5" valueType="number" taskStatusType="2" color="rgba(72,151,230,1)" textColor="white" borderColor="rgba(30,94,157,1)" isSecondaryValue="false"/>
+    <StatusCode name="Out of Office" value="6" valueType="number" taskStatusType="7" color="rgba(163,164,165,0.75)" textColor="white" borderColor="rgb(163,164,165)" isSecondaryValue="false"/>
+  </StatusCodeList>
+  <Address>
+    <Latitude>address1_latitude</Latitude>
+    <Longitude>address1_longitude</Longitude>
+    <Street1>address1_line1</Street1>
+    <Street2>address1_line2</Street2>
+    <City>address1_city</City>
+    <Postalcode>address1_postalcode</Postalcode>
+    <Country>address1_country</Country>
+    <StateOrProvince>address1_stateorprovince</StateOrProvince>
+  </Address>
+  <FrequentVisits enabled="0" visits="1" frequency="7" minDaysBetweenVisits="1"/>
+</Scheduler>

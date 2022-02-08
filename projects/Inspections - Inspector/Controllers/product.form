@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<EntityForm xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>product</EntityName>
+  <CamelCase>product</CamelCase>
+  <ClassBinding />
+  <SerializedChildren />
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="name">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="productnumber">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="producttypecode">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="price">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+  </SerializedChildrenV2>
+  <Navigation>
+    <Name>Navigation</Name>
+    <SerializedChildren />
+  </Navigation>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedContactInfo />
+</EntityForm>

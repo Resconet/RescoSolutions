@@ -1,0 +1,19 @@
+﻿<Dashboard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0">
+  <Columns>2</Columns>
+  <Rows>2</Rows>
+  <Items>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="resco_questionnaire;resco_questionnaire.DurationPerUser" Options="3">
+      <Bounds>0,1,1,1</Bounds>
+    </DashboardComponent>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="resco_questionnaire;resco_questionnaire.PassedTemplates" Options="3">
+      <Bounds>1,0,1,1</Bounds>
+    </DashboardComponent>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="resco_questionnaire;resco_questionnaire.FailedTemplates" Options="3">
+      <Bounds>1,1,1,1</Bounds>
+    </DashboardComponent>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="List" Binding="resco_questionnaire;&lt;extra&gt;&lt;views&gt;resco_questionnaire.Answers&lt;/views&gt;&lt;charts&gt;resco_questionnaire.DurationPerTemplate&lt;/charts&gt;&lt;actions&gt;2;0;1&lt;/actions&gt;&lt;/extra&gt;" Options="3">
+      <Bounds>0,0,1,1</Bounds>
+      <LegacyConfig>resco_questionnaire;resco_questionnaire.Answers</LegacyConfig>
+    </DashboardComponent>
+  </Items>
+</Dashboard>

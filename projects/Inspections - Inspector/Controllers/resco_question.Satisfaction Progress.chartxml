@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityChart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>resco_question</EntityName>
+    <CamelCase>resco_question</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>Satisfaction Progress</Name>
+  <IsHidden>false</IsHidden>
+  <Kind>Column</Kind>
+  <IsDefault>false</IsDefault>
+  <LabelStyle>Inside</LabelStyle>
+  <PieDonutRatio>50</PieDonutRatio>
+  <BarStyle>Default</BarStyle>
+  <AreaStyle>Default</AreaStyle>
+  <DrillDownFields>resco_valuelabel</DrillDownFields>
+  <DrillDownEnabled>true</DrillDownEnabled>
+  <Series>
+    <Series>
+      <Attribute>resco_rawnumericvalue</Attribute>
+      <Aggregation>Average</Aggregation>
+      <Color>#ff1f77B4</Color>
+    </Series>
+  </Series>
+  <Axis>resco_answeredon</Axis>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#FF0000FF</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#FF0000FF</Color>
+  </TargetValue>
+  <DateGrouping>Day</DateGrouping>
+  <Fetch version="1.0">
+    <entity name="resco_question">
+      <filter type="and">
+        <condition attribute="resco_index" operator="eq" value="5" />
+      </filter>
+      <link-entity name="resco_questionnaire" alias="L0" from="resco_questionnaireid" to="resco_questionnaireid" link-type="inner">
+        <filter type="and">
+          <condition attribute="resco_templateid" operator="eq" value="559f3da4-0d94-4102-b040-cfd602acc2c0" uitype="resco_questionnaire" uiname="Template Customers Satisfaction Survey" />
+        </filter>
+      </link-entity>
+    </entity>
+  </Fetch>
+  <LimitCount>3</LimitCount>
+</EntityChart>

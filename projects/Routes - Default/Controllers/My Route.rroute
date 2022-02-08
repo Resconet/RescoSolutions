@@ -1,0 +1,15 @@
+﻿<RoutePlan>
+  <ActivityName>appointment</ActivityName>
+  <StartDateField>scheduledstart</StartDateField>
+  <EndDateField>scheduledend</EndDateField>
+  <DefaultAction>3</DefaultAction>
+  <LookupField>regardingobjectid</LookupField>
+  <SourceViews>account.*</SourceViews>
+  <FilterFields>ownerid</FilterFields>
+  <StartAtWork>true</StartAtWork>
+  <DefaultStartHour>08:00</DefaultStartHour>
+  <DefaultDuration>60</DefaultDuration>
+  <WorkLocation>42.362589,-71.087806</WorkLocation>
+  <EnabledWorkflows>OnRouteItemAdded OnRouteItemCompleted</EnabledWorkflows>
+  <CustomCompletionField>statuscode</CustomCompletionField>
+</RoutePlan>

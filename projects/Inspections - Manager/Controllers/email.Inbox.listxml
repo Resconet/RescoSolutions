@@ -1,0 +1,142 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>email</EntityName>
+    <CamelCase>Email</CamelCase>
+    <WrapperClass>MobileCrm.Model.ActivityListItem</WrapperClass>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding>
+      <SerializedClassBinding name="#DateLabel" label="DateLabel" type="String"/>
+      <SerializedClassBinding name="#End" label="End" type="String"/>
+      <SerializedClassBinding name="#Icon" label="Icon" type="String"/>
+      <SerializedClassBinding name="#IsDirty" label="IsDirty" type="String"/>
+      <SerializedClassBinding name="#Start" label="Start" type="String"/>
+      <SerializedClassBinding name="#MailContacts" label="Contacts" type="String"/>
+      <SerializedClassBinding name="#MailText" label="PreviewText" type="String"/>
+      <SerializedClassBinding name="#SubjectRead" label="SubjectRead" type="String"/>
+      <SerializedClassBinding name="#SubjectUnread" label="SubjectUnread" type="String"/>
+      <SerializedClassBinding name="#ImageUnread" label="ImageUnread" type="String"/>
+      <SerializedClassBinding name="#IsRead" label="IsRead" type="Boolean"/>
+      <SerializedClassBinding name="#Summary" label="Summary" type="String"/>
+      <SerializedClassBinding name="#ShortDate" label="ShortDate" type="String"/>
+      <SerializedClassBinding name="#ShortLabel" label="ShortLabel" type="String"/>
+      <SerializedClassBinding name="#EmailFlags" label="EmailFlags" type="Integer"/>
+      <SerializedClassBinding name="#HasAttachments" label="HasAttachments" type="Boolean"/>
+      <SerializedClassBinding name="#IsTracked" label="IsTracked" type="Boolean"/>
+      <SerializedClassBinding name="#AttachmentImage" label="AttachmentImage" type="String"/>
+      <SerializedClassBinding name="#StatusImage" label="StatusImage" type="String"/>
+    </ClassBinding>
+  </Attributes>
+  <Name>Inbox</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>!modifiedon</OrderBy>
+  <SerializedBindings>
+    <string>statecode</string>
+    <string>cc</string>
+    <string>createdon</string>
+    <string>description</string>
+    <string>directioncode</string>
+    <string>scheduledend</string>
+    <string>resco_emailid</string>
+    <string>from</string>
+    <string>resco_contentstatus</string>
+    <string>id</string>
+    <string>resco_islocal</string>
+    <string>mimetype</string>
+    <string>modifiedon</string>
+    <string>ownerid</string>
+    <string>prioritycode</string>
+    <string>regardingobjectid</string>
+    <string>resco_source</string>
+    <string>scheduledstart</string>
+    <string>resco_statuscode</string>
+    <string>statuscode</string>
+    <string>name</string>
+    <string>resco_threadid</string>
+    <string>to</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <TemplateSelectorRule>&lt;Workflow syntaxVersion='7' version='0'&gt;&lt;branch&gt;&lt;if&gt;&lt;conditions op='And'&gt;&lt;condition&gt;&lt;var&gt;Entity.IsRead&lt;/var&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;arg&gt;Integer:1&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <Fetch version="1.0">
+    <entity name="email">
+      <filter type="and">
+        <condition attribute="directioncode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>60</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="#ShortLabel">
+          <StyleName>primary</StyleName>
+          <Bounds>12,2,223,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#ShortDate">
+          <StyleName>r_gray</StyleName>
+          <Bounds>235,2,80,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="name">
+          <StyleName>gray</StyleName>
+          <Bounds>12,26,303,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#Summary">
+          <StyleName>gray</StyleName>
+          <Bounds>12,42,303,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>DefaultUnread</Name>
+      <Width>320</Width>
+      <Height>60</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="#ShortLabel">
+          <StyleName>primary</StyleName>
+          <Bounds>12,2,223,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#ShortDate">
+          <StyleName>r_gray</StyleName>
+          <Bounds>235,2,80,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="name">
+          <StyleName>EmailUnreadStyle</StyleName>
+          <Bounds>12,26,303,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#Summary">
+          <StyleName>gray</StyleName>
+          <Bounds>12,42,303,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#ImageUnread">
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>1,0,10,59</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>
