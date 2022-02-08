@@ -26,10 +26,10 @@ jobs:
   - bash: |
       find projects -mindepth 1 -maxdepth 1 -type d -print0 | while read -d $'\0' dir; do
         name=$(basename "$dir")
-        project=$(grep "$name" config.xml | sed 's/.* url="\(.*\)".*/\1/g')
+        project=$(grep "displayname=\"$name\"" config.xml | sed 's/.* url="\(.*\)".*/\1/g')
         echo $name: $project
         pushd "$dir"
-        zip -r ../data.zip *
+        zip -q -r ../data.zip *
         mkdir -p "$(Build.ArtifactStagingDirectory)/$(dirname $project)"
         echo -e -n '<?xml version="1.0" encoding="utf-8"?>\n<data xmlns="https://schema.resco.net/mobilecrm/woodford/config/data">' > "$(Build.ArtifactStagingDirectory)/$project"
         base64 -w 0 ../data.zip >> "$(Build.ArtifactStagingDirectory)/$project"
