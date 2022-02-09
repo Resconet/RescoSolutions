@@ -1,4 +1,4 @@
-﻿<model version="7" Chat="true" publish="10000">
+﻿<model version="7" publish="10000">
   <entities>
     <entity schema="account">
       <properties>
@@ -1582,111 +1582,6 @@
           </fields>
         </index>
         <index schema="idx_resco_audit_name" issystem="true">
-          <fields>
-            <field schema="name"/>
-          </fields>
-        </index>
-      </indexes>
-    </entity>
-    <entity schema="resco_chatcomment">
-      <properties>
-        <property schema="createdon"/>
-        <property schema="id"/>
-        <property schema="modifiedon"/>
-        <property schema="name"/>
-        <property schema="resco_chatpostid"/>
-        <property schema="resco_chatuserid"/>
-        <property schema="resco_createdon"/>
-        <property schema="resco_text"/>
-      </properties>
-      <indexes>
-        <index schema="idx_resco_chatcomment_resco_chatpostid" issystem="true">
-          <fields>
-            <field schema="resco_chatpostid"/>
-          </fields>
-        </index>
-        <index schema="idx_resco_chatcomment_resco_chatuserid" issystem="true">
-          <fields>
-            <field schema="resco_chatuserid"/>
-          </fields>
-        </index>
-        <index schema="idx_resco_chatcomment_name" issystem="true">
-          <fields>
-            <field schema="name"/>
-          </fields>
-        </index>
-      </indexes>
-    </entity>
-    <entity schema="resco_chatpost">
-      <properties>
-        <property schema="createdon"/>
-        <property schema="id"/>
-        <property schema="modifiedon"/>
-        <property schema="name"/>
-        <property schema="resco_chattopicid"/>
-        <property schema="resco_chatuserid"/>
-        <property schema="resco_createdon"/>
-        <property schema="resco_modifiedon"/>
-        <property schema="resco_text"/>
-      </properties>
-      <indexes>
-        <index schema="idx_resco_chatpost_resco_chattopicid" issystem="true">
-          <fields>
-            <field schema="resco_chattopicid"/>
-          </fields>
-        </index>
-        <index schema="idx_resco_chatpost_resco_chatuserid" issystem="true">
-          <fields>
-            <field schema="resco_chatuserid"/>
-          </fields>
-        </index>
-        <index schema="idx_resco_chatpost_name" issystem="true">
-          <fields>
-            <field schema="name"/>
-          </fields>
-        </index>
-      </indexes>
-    </entity>
-    <entity schema="resco_chatpost_chatuser">
-      <properties>
-        <property schema="resco_chatpostid"/>
-        <property schema="resco_chatuserid"/>
-      </properties>
-    </entity>
-    <entity schema="resco_chattopic">
-      <properties>
-        <property schema="createdon"/>
-        <property schema="id"/>
-        <property schema="modifiedon"/>
-        <property schema="name"/>
-        <property schema="resco_regardingobjectentity"/>
-        <property schema="resco_regardingobjectid"/>
-      </properties>
-      <indexes>
-        <index schema="idx_resco_chattopic_name" issystem="true">
-          <fields>
-            <field schema="name"/>
-          </fields>
-        </index>
-      </indexes>
-    </entity>
-    <entity schema="resco_chattopic_chatuser">
-      <properties>
-        <property schema="resco_chattopicid"/>
-        <property schema="resco_chatuserid"/>
-      </properties>
-    </entity>
-    <entity schema="resco_chatuser">
-      <properties>
-        <property schema="createdon"/>
-        <property schema="id"/>
-        <property schema="modifiedon"/>
-        <property schema="name"/>
-        <property schema="resco_userentity"/>
-        <property schema="resco_userid"/>
-      </properties>
-      <indexes>
-        <index schema="idx_resco_chatuser_name" issystem="true">
           <fields>
             <field schema="name"/>
           </fields>
