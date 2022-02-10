@@ -32,29 +32,23 @@
       <DesignHeight>48</DesignHeight>
       <Name>Default</Name>
       <Width>250</Width>
-      <Height>53</Height>
+      <Height>56</Height>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary</StyleName>
-          <Bounds>0,0,71,37</Bounds>
+          <Bounds>7,4,239,26</Bounds>
           <CellKind>4</CellKind>
-          <Anchor>5</Anchor>
+          <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="internalemailaddress">
           <StyleName>primary</StyleName>
-          <Bounds>71,1,69,37</Bounds>
-          <CellKind>4</CellKind>
-          <Anchor>5</Anchor>
-        </CellTemplate>
-        <CellTemplate SchemaName="allowedforscheduling">
-          <StyleName>primary</StyleName>
-          <Bounds>140,1,54,37</Bounds>
+          <Bounds>8,31,183,23</Bounds>
           <CellKind>4</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="customerid.contact.contacttype">
           <StyleName>primary</StyleName>
-          <Bounds>196,2,53,36</Bounds>
+          <Bounds>192,31,53,23</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
