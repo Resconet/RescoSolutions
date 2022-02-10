@@ -48,9 +48,6 @@
         <Property Name="ForeColor" Type="System.Int32">
           <Value>-10066330</Value>
         </Property>
-        <Property Name="BackColor" Type="System.Int32">
-          <Value>-1</Value>
-        </Property>
       </Properties>
     </Style>
     <Style Name="Primary Green" Style="primary" Type="TextCell">
@@ -483,6 +480,9 @@
         </Property>
         <Property Name="LabelFontWeight" Type="System.Int32">
           <Value>1</Value>
+        </Property>
+        <Property Name="BackgroundColor" Type="System.Int32">
+          <Value>-2130706433</Value>
         </Property>
       </Properties>
     </Style>

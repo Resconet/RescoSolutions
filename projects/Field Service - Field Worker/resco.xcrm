@@ -777,6 +777,7 @@
         <property schema="completionpercent"/>
         <property schema="createdon"/>
         <property schema="customerid"/>
+        <property schema="description"/>
         <property schema="discountamount"/>
         <property schema="discountpercentage"/>
         <property schema="duedate"/>
@@ -2093,6 +2094,7 @@
       <properties>
         <property schema="createdon"/>
         <property schema="id"/>
+        <property schema="isdisabled"/>
         <property schema="modifiedon"/>
         <property schema="name"/>
       </properties>
