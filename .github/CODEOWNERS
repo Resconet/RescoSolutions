@@ -1,11 +1,11 @@
-/projects/Field\ Service\ -\ Contractor/ @field-service
-/projects/Field\ Service\ -\ Dispatcher/ @field-service
-/projects/Field\ Service\ -\ Field\ Worker/ @field-service
-/projects/Field\ Service\ -\ Manager/ @field-service
-/projects/Portal\ -\ Contractor/ @field-service
-/projects/Portal\ -\ Dark/ @field-service
-/projects/Portal\ -\ Light/ @field-service
-/projects/Houston\ -\ Administrator/ @houston
-/projects/Houston\ -\ Expert/ @houston
-/projects/Houston\ -\ Knowledge\ Manager/ @houston
-/projects/Houston\ -\ Mobile\ User/ @houston
+/projects/Field\ Service\ -\ Contractor/ @Resconet/field-service
+/projects/Field\ Service\ -\ Dispatcher/ @Resconet/field-service
+/projects/Field\ Service\ -\ Field\ Worker/ @Resconet/field-service
+/projects/Field\ Service\ -\ Manager/ @Resconet/field-service
+/projects/Portal\ -\ Contractor/ @Resconet/field-service
+/projects/Portal\ -\ Dark/ @Resconet/field-service
+/projects/Portal\ -\ Light/ @Resconet/field-service
+/projects/Houston\ -\ Administrator/ @Resconet/houston
+/projects/Houston\ -\ Expert/ @Resconet/houston
+/projects/Houston\ -\ Knowledge\ Manager/ @Resconet/houston
+/projects/Houston\ -\ Mobile\ User/ @Resconet/houston
