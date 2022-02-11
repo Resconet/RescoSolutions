@@ -6,10 +6,11 @@
   <Name>All-List</Name>
   <Kind>List</Kind>
   <AutoWideWidth>800</AutoWideWidth>
-  <OrderBy>name</OrderBy>
+  <OrderBy>!createdon</OrderBy>
   <SerializedBindings>
     <string>fs_agreementid</string>
     <string>fs_assetid</string>
+    <string>createdon</string>
     <string>id</string>
     <string>fs_jobtemplateid</string>
     <string>name</string>
@@ -29,50 +30,50 @@
       <Height>97</Height>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
-          <StyleName>primary_blue</StyleName>
-          <Bounds>4,4,151,21</Bounds>
+          <StyleName>primary</StyleName>
+          <Bounds>4,4,154,21</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
+          <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="statecode">
           <StyleName>primary</StyleName>
-          <Bounds>157,28,159,20</Bounds>
+          <Bounds>198,27,117,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_assetid.fs_asset.customerid">
           <StyleName>primary_blue</StyleName>
-          <Bounds>157,4,159,21</Bounds>
+          <Bounds>161,4,154,21</Bounds>
           <CellKind>4</CellKind>
-          <Anchor>9</Anchor>
+          <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_assetid.fs_asset.resco_functionallocationid">
           <StyleName>primary_blue</StyleName>
-          <Bounds>158,50,159,21</Bounds>
+          <Bounds>155,49,159,21</Bounds>
           <CellKind>4</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_assetid">
           <StyleName>primary_blue</StyleName>
-          <Bounds>5,27,150,21</Bounds>
+          <Bounds>3,27,192,21</Bounds>
           <CellKind>4</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_validfrom">
           <StyleName>primary</StyleName>
-          <Bounds>6,72,150,21</Bounds>
+          <Bounds>3,71,150,21</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
+          <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_jobtemplateid">
           <StyleName>primary</StyleName>
-          <Bounds>6,50,150,21</Bounds>
+          <Bounds>3,49,150,21</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
+          <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_validto">
           <StyleName>primary</StyleName>
-          <Bounds>158,72,159,21</Bounds>
+          <Bounds>155,71,159,21</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>

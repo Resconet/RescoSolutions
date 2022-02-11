@@ -1,4 +1,5 @@
-﻿fs_workorder.statuscode=Status
+﻿fs_workorder.mindistance=Minimal Distance (m)
+fs_workorder.statuscode=Status
 systemuser.DetailView.emailTemplateIFrame=Email Template
 systemuser.Header=Click Save to add user and send invitation email
 Note.Tooltip=See all generated reports

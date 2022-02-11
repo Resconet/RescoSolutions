@@ -2,14 +2,16 @@
   <Columns>2</Columns>
   <Rows>3</Rows>
   <Items>
-    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="fs_workorderschedule;fs_workorderschedule.WorkOrder Schedules" Options="3">
-      <Bounds>0,1,1,2</Bounds>
-    </DashboardComponent>
     <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="fs_workorder;fs_workorder.Work Orders" Options="3">
       <Bounds>0,0,2,1</Bounds>
     </DashboardComponent>
-    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="incident" Options="3">
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="List" Binding="incident;&lt;extra&gt;&lt;views&gt;incident.All Incidents&lt;/views&gt;&lt;actions&gt;130;0;1&lt;/actions&gt;&lt;/extra&gt;" Options="3">
       <Bounds>1,1,1,2</Bounds>
+      <LegacyConfig>incident;incident.All Incidents</LegacyConfig>
+    </DashboardComponent>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="List" Binding="fs_workorderschedule;&lt;extra&gt;&lt;views&gt;fs_workorderschedule.WorkOrder Schedules&lt;/views&gt;&lt;charts&gt;fs_workorderschedule.WorkOrder Schedules&lt;/charts&gt;&lt;actions&gt;130;0;5&lt;/actions&gt;&lt;/extra&gt;" Options="1">
+      <Bounds>0,1,1,2</Bounds>
+      <LegacyConfig>fs_workorderschedule;fs_workorderschedule.WorkOrder Schedules</LegacyConfig>
     </DashboardComponent>
   </Items>
 </Dashboard>
