@@ -334,9 +334,16 @@
         </Property>
       </Properties>
     </Style>
-    <Style Name="Secondary" Style="gray" Type="TextCell">
-      <Properties/>
-    </Style>
+    <Style Name="Secondary" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>9</Value>
+        </Property>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-6710887</Value>
+        </Property>
+      </Properties>
+    </Style>    
     <Style Name="Secondary Right" Style="Secondary" Type="TextCell">
       <Properties>
         <Property Name="HorizontalAlignment" Type="System.Int32">
@@ -344,6 +351,13 @@
         </Property>
       </Properties>
     </Style>
+    <Style Name="Secondary Right Date" Style="Secondary Right" Type="TextCell">
+      <Properties>
+        <Property Name="Format" Type="System.String">
+          <Value>{0:dd-MM-yyyy}</Value>
+        </Property>
+      </Properties>
+    </Style>    
     <Style Name="Button" Type="DetailItem">
       <Properties>
         <Property Name="BackgroundColor" Type="System.Int32">
@@ -513,6 +527,32 @@
         </Property>
         <Property Name="FontName" Type="System.String">
           <Value>Roboto-Light</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="0103 p score" Style="0103 p" Type="TextCell">
+      <Properties>
+        <Property Name="Format" Type="System.String">
+          <Value>Score: {0:N1}</Value>
+        </Property>
+        <Property Name="HorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-16738413</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="0103 p result" Style="0103 p" Type="TextCell">
+      <Properties>
+        <Property Name="Format" Type="System.String">
+          <Value>Result: {0}</Value>
+        </Property>
+        <Property Name="HorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-16738413</Value>
         </Property>
       </Properties>
     </Style>
