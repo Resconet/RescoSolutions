@@ -1,5 +1,5 @@
 ﻿<EntityChart>
-  <Name>Aging Work Orders - Older than 1 month</Name>
+  <Name>Aging Work Orders - Older than 3 days</Name>
   <Kind>Column</Kind>
   <LimitCount>3</LimitCount>
   <Fetch version="1.0">
@@ -13,7 +13,7 @@
           <value>4</value>
           <value>5</value>
         </condition>
-        <condition attribute="createdon" operator="olderthan-x-months" value="1"/>
+        <condition attribute="createdon" operator="olderthan-x-days" value="3"/>
       </filter>
     </entity>
   </Fetch>
@@ -39,8 +39,10 @@
   </Series>
   <GroupBySeries>
     <GroupBySeries>
-      <Attribute>statuscode</Attribute>
+      <Attribute>createdon</Attribute>
+      <DateGrouping>Year</DateGrouping>
     </GroupBySeries>
   </GroupBySeries>
-  <Axis>statuscode</Axis>
+  <Axis>createdon</Axis>
+  <DateGrouping>Year</DateGrouping>
 </EntityChart>
