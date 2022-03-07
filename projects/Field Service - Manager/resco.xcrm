@@ -1016,7 +1016,7 @@
         <property schema="description"/>
         <property schema="discountamount"/>
         <property schema="discountpercentage"/>
-        <property schema="duedate"/>
+        <property schema="duedate" displayformat="DateOnly"/>
         <property schema="estimatedamount"/>
         <property schema="estimatedduration"/>
         <property schema="fs_assetid"/>
@@ -1881,6 +1881,23 @@
         <property schema="resco_createdon"/>
         <property schema="resco_text"/>
       </properties>
+      <indexes>
+        <index schema="idx_resco_chatcomment_resco_chatpostid" issystem="true">
+          <fields>
+            <field schema="resco_chatpostid"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_chatcomment_resco_chatuserid" issystem="true">
+          <fields>
+            <field schema="resco_chatuserid"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_chatcomment_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
+      </indexes>
     </entity>
     <entity schema="resco_chatpost">
       <properties>
@@ -1894,12 +1911,37 @@
         <property schema="resco_modifiedon"/>
         <property schema="resco_text"/>
       </properties>
+      <indexes>
+        <index schema="idx_resco_chatpost_resco_chattopicid" issystem="true">
+          <fields>
+            <field schema="resco_chattopicid"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_chatpost_resco_chatuserid" issystem="true">
+          <fields>
+            <field schema="resco_chatuserid"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_chatpost_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
+      </indexes>
     </entity>
     <entity schema="resco_chatpost_chatuser">
       <properties>
         <property schema="resco_chatpostid"/>
         <property schema="resco_chatuserid"/>
       </properties>
+      <indexes>
+        <index schema="idx_resco_chatpost_chatuser" issystem="true">
+          <fields>
+            <field schema="resco_chatpostid"/>
+            <field schema="resco_chatuserid"/>
+          </fields>
+        </index>
+      </indexes>
     </entity>
     <entity schema="resco_chattopic">
       <properties>
@@ -1910,12 +1952,27 @@
         <property schema="resco_regardingobjectentity"/>
         <property schema="resco_regardingobjectid"/>
       </properties>
+      <indexes>
+        <index schema="idx_resco_chattopic_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
+      </indexes>
     </entity>
     <entity schema="resco_chattopic_chatuser">
       <properties>
         <property schema="resco_chattopicid"/>
         <property schema="resco_chatuserid"/>
       </properties>
+      <indexes>
+        <index schema="idx_resco_chattopic_chatuser" issystem="true">
+          <fields>
+            <field schema="resco_chattopicid"/>
+            <field schema="resco_chatuserid"/>
+          </fields>
+        </index>
+      </indexes>
     </entity>
     <entity schema="resco_chatuser">
       <properties>
@@ -1926,6 +1983,13 @@
         <property schema="resco_userentity"/>
         <property schema="resco_userid"/>
       </properties>
+      <indexes>
+        <index schema="idx_resco_chatuser_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
+      </indexes>
     </entity>
     <entity schema="resco_devicecontrol">
       <properties>
@@ -2340,6 +2404,7 @@
         <property schema="resco_completionstatus"/>
         <property schema="resco_description"/>
         <property schema="resco_duration"/>
+        <property schema="resco_featureversion"/>
         <property schema="resco_folder"/>
         <property schema="resco_folderid"/>
         <property schema="resco_issnippet"/>
