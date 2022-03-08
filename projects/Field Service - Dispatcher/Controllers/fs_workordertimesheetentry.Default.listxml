@@ -5,7 +5,7 @@
   </Attributes>
   <Name>Default</Name>
   <Kind>List</Kind>
-  <AutoWideWidth>0</AutoWideWidth>
+  <AutoWideWidth>800</AutoWideWidth>
   <OrderBy>name</OrderBy>
   <SerializedBindings>
     <string>fs_duration</string>
@@ -14,6 +14,7 @@
     <string>name</string>
     <string>fs_starttime</string>
     <string>fs_workorderscheduleid.fs_workorderschedule.name</string>
+    <string>fs_workorderscheduleid.fs_workorderschedule.resourceid</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
   <SerializedTemplates>
@@ -22,7 +23,7 @@
       <DesignHeight>48</DesignHeight>
       <Name>Default</Name>
       <Width>320</Width>
-      <Height>59</Height>
+      <Height>81</Height>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary</StyleName>
@@ -53,6 +54,12 @@
           <Bounds>267,2,45,28</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_workorderscheduleid.fs_workorderschedule.resourceid">
+          <StyleName>primary</StyleName>
+          <Bounds>10,56,303,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>

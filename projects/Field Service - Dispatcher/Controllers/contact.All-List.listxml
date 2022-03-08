@@ -19,6 +19,13 @@
     <string>resco_portalaccess</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="contact">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </Fetch>
   <SerializedTemplates>
     <RowTemplate>
       <DesignWidth>320</DesignWidth>
