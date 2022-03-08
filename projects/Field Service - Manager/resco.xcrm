@@ -362,6 +362,7 @@
       <properties>
         <property schema="agreement_number"/>
         <property schema="createdon"/>
+        <property schema="emailnotification_daysinadvance"/>
         <property schema="fs_customerid"/>
         <property schema="fs_validfrom"/>
         <property schema="fs_validto"/>
@@ -1016,7 +1017,7 @@
         <property schema="description"/>
         <property schema="discountamount"/>
         <property schema="discountpercentage"/>
-        <property schema="duedate" displayformat="DateOnly"/>
+        <property schema="duedate"/>
         <property schema="estimatedamount"/>
         <property schema="estimatedduration"/>
         <property schema="fs_assetid"/>
