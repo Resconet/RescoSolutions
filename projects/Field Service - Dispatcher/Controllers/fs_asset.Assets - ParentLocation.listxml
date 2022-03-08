@@ -36,7 +36,7 @@
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="Home. WindMill.png">
+        <CellTemplate SchemaName="Home.WindMill.png">
           <IsConstant>true</IsConstant>
           <StyleName>Icon</StyleName>
           <Bounds>8,14,20,20</Bounds>

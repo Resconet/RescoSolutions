@@ -31,7 +31,7 @@
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="Home.green-Tree.png">
+        <CellTemplate SchemaName="Home.green-fs_territory.png">
           <IsConstant>true</IsConstant>
           <StyleName>Icon</StyleName>
           <Bounds>8,10,24,24</Bounds>

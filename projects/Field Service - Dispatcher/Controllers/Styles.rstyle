@@ -414,7 +414,7 @@
           <Value>-1</Value>
         </Property>
         <Property Name="EditorBackgroundColor" Type="System.Int32">
-          <Value>-2130706433</Value>
+          <Value>-1</Value>
         </Property>
       </Properties>
     </Style>
@@ -1584,6 +1584,19 @@
         </Property>
         <Property Name="FontSize" Type="System.Single">
           <Value>12</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Normal_Blue" Style="Normal" Type="DetailItem">
+      <Properties>
+        <Property Name="EditorCornerRadius" Type="System.Int32">
+          <Value>6</Value>
+        </Property>
+        <Property Name="EditorBackgroundColor" Type="System.Int32">
+          <Value>-15437840</Value>
+        </Property>
+        <Property Name="EditorForegroundColor" Type="System.Int32">
+          <Value>-1</Value>
         </Property>
       </Properties>
     </Style>

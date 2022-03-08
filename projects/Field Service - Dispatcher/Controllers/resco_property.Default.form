@@ -13,11 +13,13 @@
         <DetailItem SchemaName="unit"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\fs_asset@2x.png" IsIconNameReadOnly="0" DocCommands="0">
       <Name>Assets List (Many)</Name>
       <Binding SchemaName="fs_asset.resco_propertyid.fs_assetproperty.fs_assetid"/>
+      <Views>fs_asset.Assets</Views>
+      <LookupViews>fs_asset.Assets</LookupViews>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>Property Sets List (Many)</Name>
       <Binding SchemaName="resco_propertyset.resco_propertyid.resco_propertysetproperty.resco_propertysetid"/>
     </FormTab>

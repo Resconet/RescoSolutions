@@ -12,12 +12,21 @@
     <string>address1_city</string>
     <string>emailaddress1</string>
     <string>id</string>
+    <string>telephone1</string>
     <string>name</string>
     <string>ownerid</string>
     <string>statecode</string>
+    <string>fs_territory</string>
     <string>fs_territory.fs_territory.name</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="account">
+      <filter type="and">
+        <condition attribute="statuscode" operator="eq" value="1"/>
+      </filter>
+    </entity>
+  </Fetch>
   <SerializedTemplates>
     <RowTemplate>
       <DesignWidth>320</DesignWidth>
@@ -44,10 +53,10 @@
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="fs_territory.fs_territory.name">
-          <StyleName>primary</StyleName>
-          <Bounds>3,34,133,28</Bounds>
-          <CellKind>0</CellKind>
+        <CellTemplate SchemaName="fs_territory">
+          <StyleName>primary_blue</StyleName>
+          <Bounds>65,34,71,28</Bounds>
+          <CellKind>4</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="statecode">
@@ -57,9 +66,15 @@
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="emailaddress1">
-          <StyleName>primary</StyleName>
+          <StyleName>primary_blue</StyleName>
           <Bounds>225,4,93,28</Bounds>
-          <CellKind>0</CellKind>
+          <CellKind>4</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="telephone1">
+          <StyleName>primary_blue</StyleName>
+          <Bounds>4,34,62,28</Bounds>
+          <CellKind>4</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
       </SerializedChildren>
