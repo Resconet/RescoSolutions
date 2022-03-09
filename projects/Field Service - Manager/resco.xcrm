@@ -362,7 +362,6 @@
       <properties>
         <property schema="agreement_number"/>
         <property schema="createdon"/>
-        <property schema="emailnotification_daysinadvance"/>
         <property schema="fs_customerid"/>
         <property schema="fs_validfrom"/>
         <property schema="fs_validto"/>
@@ -1040,6 +1039,8 @@
         <property schema="totalamount"/>
         <property schema="totalduration"/>
         <property schema="transactioncurrencyid"/>
+        <property schema="windowend"/>
+        <property schema="windowstart"/>
         <property schema="workorder_number"/>
       </properties>
       <indexes>
@@ -2052,12 +2053,18 @@
       <properties>
         <property schema="createdon"/>
         <property schema="modifiedon"/>
+        <property schema="ownerid"/>
         <property schema="resco_favoriteid"/>
         <property schema="resco_name"/>
         <property schema="resco_recordid"/>
         <property schema="resco_target"/>
       </properties>
       <indexes>
+        <index schema="idx_resco_favorite_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
         <index schema="idx_resco_favorite_resco_name" issystem="true">
           <fields>
             <field schema="resco_name"/>
