@@ -2,7 +2,7 @@
   <Version>3</Version>
   <BorderWidth>2</BorderWidth>
   <BorderRadius>4</BorderRadius>
-  <Name>WorkOrders Scheduler2</Name>
+  <Name>WorkOrders Scheduler</Name>
   <RefreshInterval>30</RefreshInterval>
   <ResourceEntity>fs_resource</ResourceEntity>
   <ResourceViews>fs_resource.Resources - Allowed for Scheduling</ResourceViews>
@@ -85,6 +85,8 @@
   <VisitDurationInMinutesField>estimatedduration</VisitDurationInMinutesField>
   <MinDaysBetweenVisits>0</MinDaysBetweenVisits>
   <ProgressField>completionpercent</ProgressField>
+  <PreferredWindowStartField>windowstart</PreferredWindowStartField>
+  <PreferredWindowEndField>windowend</PreferredWindowEndField>
   <TimeOffsName>fs_time_off</TimeOffsName>
   <TimeOffsColor>rgba(217,40,40,1)</TimeOffsColor>
   <TimeOffsTextColor>rgb(255,255,255)</TimeOffsTextColor>
