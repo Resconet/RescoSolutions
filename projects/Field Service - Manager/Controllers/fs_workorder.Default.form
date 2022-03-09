@@ -51,6 +51,21 @@
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
           <IsConstant>true</IsConstant>
         </DetailItem>
+        <DetailItem SchemaName="$Table1" grid="true">
+          <Columns>*;*</Columns>
+          <Rows>Auto;Auto</Rows>
+          <Items>
+            <DetailItem SchemaName="windowstart">
+              <GridPosition>0;0;1;2</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="windowend">
+              <GridPosition>1;0;1;2</GridPosition>
+            </DetailItem>
+          </Items>
+        </DetailItem>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
         <DetailItem SchemaName="$Table2" grid="true">
           <Columns>*;*</Columns>
           <Rows>Auto;Auto</Rows>
@@ -87,10 +102,12 @@
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
           <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="Confirm" button="true" buttonLabel="Confirm" buttonClickText="Confirm" Style="Button_Blue">
+        <DetailItem SchemaName="Confirm" button="true" buttonLabel="Confirm" buttonClickText="Confirm" buttonCommand="null" Style="Button_Blue">
           <IsConstant>true</IsConstant>
           <GridPosition>0;1;1;1</GridPosition>
         </DetailItem>
+        <DetailItem SchemaName="windowstart"/>
+        <DetailItem SchemaName="windowend"/>
       </SerializedChildren>
     </FormTab>
     <FormTab xsi:type="MapTab" flexiHeight="350px" NameModified="0" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
@@ -141,7 +158,7 @@
       <Views>fs_workorderschedule.WorkOrder Schedules</Views>
     </FormTab>
     <FormTab xsi:type="AssociatedTab" flexiHeight="300px" NameModified="0" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Timeline@2x.png" IsIconNameReadOnly="0" DocCommands="0">
-      <Name>Maintenance Plans List</Name>
+      <Name>Maintenance Dates List</Name>
       <Binding SchemaName="fs_agreementjobdate.fs_workorderid"/>
       <Views>fs_agreementjobdate.Default</Views>
     </FormTab>
