@@ -41,15 +41,15 @@
           <Columns>*;*;*</Columns>
           <Rows>Auto;Auto</Rows>
           <Items>
-            <DetailItem SchemaName="Accept" button="true" buttonLabel="Accept" buttonClickText="Accept" buttonCommand="null" Style="WOSButton_Green">
+            <DetailItem SchemaName="Accept" button="true" buttonLabel="Accept" buttonClickText="Accept" buttonCommand="" Style="WOSButton_Green">
               <IsConstant>true</IsConstant>
               <GridPosition>0;0;1;1</GridPosition>
             </DetailItem>
-            <DetailItem SchemaName="Propose" button="true" buttonLabel="Propose" buttonClickText="Propose" buttonCommand="null" Style="WoSButton_Blue">
+            <DetailItem SchemaName="Propose" button="true" buttonLabel="Propose" buttonClickText="Propose" buttonCommand="" Style="WoSButton_Blue">
               <IsConstant>true</IsConstant>
               <GridPosition>1;0;1;1</GridPosition>
             </DetailItem>
-            <DetailItem SchemaName="Reject" button="true" buttonLabel="Reject" buttonClickText="Reject" buttonCommand="null" Style="WOSButton">
+            <DetailItem SchemaName="Reject" button="true" buttonLabel="Reject" buttonClickText="Reject" buttonCommand="" Style="WOSButton">
               <IsConstant>true</IsConstant>
               <GridPosition>2;0;1;1</GridPosition>
             </DetailItem>
@@ -58,22 +58,22 @@
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
           <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="BtnTravel" button="true" buttonLabel="" buttonClickText="Travel" buttonCommand="null" Style="WOSButton">
+        <DetailItem SchemaName="BtnTravel" button="true" buttonLabel="" buttonClickText="Travel" buttonCommand="" Style="WOSButton">
           <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="BtnArrived" button="true" buttonLabel="" buttonClickText="Arrived" buttonCommand="null" Style="WOSButton">
+        <DetailItem SchemaName="BtnArrived" button="true" buttonLabel="" buttonClickText="Arrived" buttonCommand="" Style="WOSButton">
           <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="BtnWork" button="true" buttonLabel="Start Working" buttonClickText="Start Working" buttonCommand="null" Style="WOSButton">
+        <DetailItem SchemaName="BtnWork" button="true" buttonLabel="Start Working" buttonClickText="Start Working" buttonCommand="" Style="WOSButton">
           <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="BtnPause" button="true" buttonLabel="Pause" buttonClickText="Pause" buttonCommand="null" Style="WOSButton">
+        <DetailItem SchemaName="BtnPause" button="true" buttonLabel="Pause" buttonClickText="Pause" buttonCommand="" Style="WOSButton">
           <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="BtnContinue" button="true" buttonLabel="Continue" buttonClickText="Continue Working" buttonCommand="null" Style="WOSButton">
+        <DetailItem SchemaName="BtnContinue" button="true" buttonLabel="Continue" buttonClickText="Continue Working" buttonCommand="" Style="WOSButton">
           <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="BtnComplete" button="true" buttonLabel="Complete" buttonClickText="Complete" buttonCommand="null" Style="WOSButton">
+        <DetailItem SchemaName="BtnComplete" button="true" buttonLabel="Complete" buttonClickText="Complete" buttonCommand="" Style="WOSButton">
           <IsConstant>true</IsConstant>
         </DetailItem>
       </SerializedChildren>

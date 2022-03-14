@@ -102,12 +102,10 @@
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
           <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="Confirm" button="true" buttonLabel="Confirm" buttonClickText="Confirm" buttonCommand="null" Style="Button_Blue">
+        <DetailItem SchemaName="Confirm" button="true" buttonLabel="Confirm" buttonClickText="Confirm" buttonCommand="" Style="Button_Blue">
           <IsConstant>true</IsConstant>
           <GridPosition>0;1;1;1</GridPosition>
         </DetailItem>
-        <DetailItem SchemaName="windowstart"/>
-        <DetailItem SchemaName="windowend"/>
       </SerializedChildren>
     </FormTab>
     <FormTab xsi:type="MapTab" flexiHeight="350px" NameModified="0" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
