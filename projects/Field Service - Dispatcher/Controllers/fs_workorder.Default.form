@@ -102,7 +102,7 @@
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
           <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="Confirm" button="true" buttonLabel="Confirm" buttonClickText="Confirm" buttonCommand="" Style="Button_Blue">
+        <DetailItem SchemaName="Confirm" button="true" buttonLabel="Confirm" buttonClickText="Confirm" buttonCommand="null" Style="Button_Blue">
           <IsConstant>true</IsConstant>
           <GridPosition>0;1;1;1</GridPosition>
         </DetailItem>
