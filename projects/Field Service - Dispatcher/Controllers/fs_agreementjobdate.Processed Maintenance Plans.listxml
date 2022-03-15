@@ -21,7 +21,7 @@
   </SerializedBindings>
   <CalendarFields>fs_jobdate;fs_jobdate</CalendarFields>
   <MaxColumns>0</MaxColumns>
-  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:1&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:1&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:2&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.(fs_workorderid.fs_workorder.statuscode)&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:1&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Row.(fs_workorderid.fs_workorder.statuscode).Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:primary_bakground_blue&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.Work Order:.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:primary_bakground_blue&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.fs_workorderid.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:primary_bakground_blue&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:2&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.(fs_workorderid.fs_workorder.statuscode)&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:5&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.fs_workorderid.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:primary_bakground_orange&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.Work Order:.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:primary_bakground_orange&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:2&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.(fs_workorderid.fs_workorder.statuscode)&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:4&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.fs_workorderid.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:primary_bakground_pink&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.Work Order:.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:primary_bakground_pink&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:2&lt;/arg&gt;&lt;/condition&gt;&lt;group e="true" op="Or"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.(fs_workorderid.fs_workorder.statuscode)&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:10000&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.(fs_workorderid.fs_workorder.statuscode)&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:10001&lt;/arg&gt;&lt;/condition&gt;&lt;/group&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.fs_workorderid.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:primary_bakground_red&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.Work Order:.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:primary_bakground_red&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.(fs_workorderid.fs_workorder.statuscode)&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:2&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:2&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.fs_workorderid.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:primary_bakground_green&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.Work Order:.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:primary_bakground_green&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:2&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.(fs_workorderid.fs_workorder.statuscode)&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:3&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.fs_workorderid.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:primary_bakground_red&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.Work Order:.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:primary_bakground_red&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="Or"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:10000&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:10001&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:2&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="RowScript change based on Maintenance Plan status" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:1&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:1&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:2&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.(fs_workorderid.fs_workorder.statuscode)&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:1&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Row.Work Order:.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:primary_bakground_blue&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.fs_workorderid.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:primary_bakground_blue&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:2&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.(fs_workorderid.fs_workorder.statuscode)&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:5&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.fs_workorderid.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:primary_bakground_orange&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.Work Order:.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:primary_bakground_orange&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:2&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.(fs_workorderid.fs_workorder.statuscode)&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:4&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.fs_workorderid.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:primary_bakground_pink&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.Work Order:.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:primary_bakground_pink&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:2&lt;/arg&gt;&lt;/condition&gt;&lt;group e="true" op="Or"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.(fs_workorderid.fs_workorder.statuscode)&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:10000&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.(fs_workorderid.fs_workorder.statuscode)&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:10001&lt;/arg&gt;&lt;/condition&gt;&lt;/group&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.fs_workorderid.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:primary_bakground_red&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.Work Order:.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:primary_bakground_red&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.(fs_workorderid.fs_workorder.statuscode)&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:2&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:2&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.fs_workorderid.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:primary_bakground_green&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.Work Order:.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:primary_bakground_green&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:2&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.(fs_workorderid.fs_workorder.statuscode)&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:3&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.fs_workorderid.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:primary_bakground_red&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.Work Order:.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:primary_bakground_red&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="Or"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:10000&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:10001&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:2&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
   <Fetch version="1.0">
     <entity name="fs_agreementjobdate">
       <filter type="and">
@@ -35,82 +35,83 @@
       <DesignHeight>48</DesignHeight>
       <Name>Processed</Name>
       <Width>320</Width>
-      <Height>133</Height>
+      <Height>110</Height>
+      <SerializedBackground>-592652</SerializedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
-          <StyleName>primary</StyleName>
-          <Bounds>40,8,189,20</Bounds>
+          <StyleName>Primary</StyleName>
+          <Bounds>35,8,207,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="statuscode">
           <IsFormatted>false</IsFormatted>
           <StyleName>CheckMarkCompleted</StyleName>
-          <Bounds>8,8,24,24</Bounds>
+          <Bounds>9,6,20,20</Bounds>
           <CellKind>1</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="statuscode">
           <StyleName>Secondary Right</StyleName>
-          <Bounds>245,8,63,18</Bounds>
+          <Bounds>245,8,63,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_agreementjobid">
           <StyleName>Secondary</StyleName>
-          <Bounds>122,34,76,20</Bounds>
+          <Bounds>130,34,77,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_jobdate">
           <StyleName>r_gray</StyleName>
-          <Bounds>199,62,110,21</Bounds>
+          <Bounds>209,54,100,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="Agreement Job:">
           <IsConstant>true</IsConstant>
           <StyleName>gray</StyleName>
-          <Bounds>40,34,78,20</Bounds>
+          <Bounds>36,34,88,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>5</Anchor>
+          <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_agreementjobid.fs_agreementjob.fs_agreementid.fs_agreement.fs_customerid">
           <StyleName>gray</StyleName>
-          <Bounds>122,62,75,21</Bounds>
+          <Bounds>130,54,77,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_workorderid">
           <StyleName>primary</StyleName>
-          <Bounds>122,91,75,19</Bounds>
-          <CellKind>0</CellKind>
+          <Bounds>123,80,105,20</Bounds>
+          <CellKind>4</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_workorderid.fs_workorder.statuscode">
           <StyleName>Primary Right</StyleName>
-          <Bounds>199,92,110,19</Bounds>
+          <Bounds>230,80,77,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="Customer:">
           <IsConstant>true</IsConstant>
           <StyleName>gray</StyleName>
-          <Bounds>40,63,80,20</Bounds>
+          <Bounds>36,54,88,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="Work Order:">
           <IsConstant>true</IsConstant>
-          <StyleName>primary</StyleName>
-          <Bounds>40,90,80,20</Bounds>
+          <StyleName>gray</StyleName>
+          <Bounds>36,80,85,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="Due Date">
           <IsConstant>true</IsConstant>
           <StyleName>r_gray</StyleName>
-          <Bounds>199,34,110,20</Bounds>
+          <Bounds>209,34,100,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
@@ -121,82 +122,83 @@
       <DesignHeight>48</DesignHeight>
       <Name>Pending</Name>
       <Width>320</Width>
-      <Height>134</Height>
+      <Height>110</Height>
+      <SerializedBackground>-592652</SerializedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
-          <StyleName>primary_blue_greyeditor</StyleName>
-          <Bounds>40,8,200,20</Bounds>
+          <StyleName>primary</StyleName>
+          <Bounds>36,8,209,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="statuscode">
           <IsFormatted>false</IsFormatted>
           <StyleName>CheckMarkScheduled</StyleName>
-          <Bounds>8,8,24,24</Bounds>
+          <Bounds>8,8,20,20</Bounds>
           <CellKind>1</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="statuscode">
           <StyleName>Secondary Right</StyleName>
-          <Bounds>245,8,63,18</Bounds>
+          <Bounds>245,8,63,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_agreementjobid">
           <StyleName>Secondary</StyleName>
-          <Bounds>118,35,80,19</Bounds>
+          <Bounds>130,34,80,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="Due Date">
           <IsConstant>true</IsConstant>
           <StyleName>r_gray</StyleName>
-          <Bounds>198,34,110,20</Bounds>
+          <Bounds>212,34,96,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="Agreement Job:">
           <IsConstant>true</IsConstant>
           <StyleName>gray</StyleName>
-          <Bounds>40,34,78,20</Bounds>
+          <Bounds>36,34,91,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_agreementjobid.fs_agreementjob.fs_agreementid.fs_agreement.fs_customerid">
           <StyleName>gray</StyleName>
-          <Bounds>118,62,80,21</Bounds>
+          <Bounds>130,54,80,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_workorderid">
           <StyleName>primary</StyleName>
-          <Bounds>118,92,83,19</Bounds>
-          <CellKind>0</CellKind>
+          <Bounds>118,80,83,20</Bounds>
+          <CellKind>4</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_workorderid.fs_workorder.statuscode">
           <StyleName>Primary Right</StyleName>
-          <Bounds>203,92,108,19</Bounds>
+          <Bounds>203,80,108,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="Customer:">
           <IsConstant>true</IsConstant>
           <StyleName>gray</StyleName>
-          <Bounds>40,63,80,20</Bounds>
+          <Bounds>36,54,91,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="Work Order:">
           <IsConstant>true</IsConstant>
-          <StyleName>primary</StyleName>
-          <Bounds>40,91,80,20</Bounds>
+          <StyleName>gray</StyleName>
+          <Bounds>36,80,80,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_jobdate">
           <StyleName>r_gray</StyleName>
-          <Bounds>198,62,110,20</Bounds>
+          <Bounds>212,54,96,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
@@ -207,82 +209,83 @@
       <DesignHeight>48</DesignHeight>
       <Name>Canceled</Name>
       <Width>320</Width>
-      <Height>134</Height>
+      <Height>112</Height>
+      <SerializedBackground>-592652</SerializedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
-          <StyleName>primary_blue_greyeditor</StyleName>
-          <Bounds>40,8,200,20</Bounds>
+          <StyleName>primary</StyleName>
+          <Bounds>36,8,208,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="statuscode">
           <IsFormatted>false</IsFormatted>
           <StyleName>CheckMarkCanceled</StyleName>
-          <Bounds>8,8,24,24</Bounds>
+          <Bounds>8,8,20,20</Bounds>
           <CellKind>1</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="statuscode">
           <StyleName>Secondary Right</StyleName>
-          <Bounds>245,8,63,18</Bounds>
+          <Bounds>245,8,63,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_agreementjobid">
           <StyleName>Secondary</StyleName>
-          <Bounds>118,34,82,20</Bounds>
+          <Bounds>130,34,82,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="Due Date">
           <IsConstant>true</IsConstant>
           <StyleName>r_gray</StyleName>
-          <Bounds>198,34,110,20</Bounds>
+          <Bounds>214,34,94,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="Agreement Job:">
           <IsConstant>true</IsConstant>
           <StyleName>gray</StyleName>
-          <Bounds>40,34,78,20</Bounds>
+          <Bounds>36,34,91,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_agreementjobid.fs_agreementjob.fs_agreementid.fs_agreement.fs_customerid">
           <StyleName>gray</StyleName>
-          <Bounds>118,62,81,21</Bounds>
+          <Bounds>130,54,81,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_workorderid">
           <StyleName>primary</StyleName>
-          <Bounds>118,92,83,19</Bounds>
-          <CellKind>0</CellKind>
+          <Bounds>118,80,83,20</Bounds>
+          <CellKind>4</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_workorderid.fs_workorder.statuscode">
           <StyleName>Primary Right</StyleName>
-          <Bounds>203,92,108,19</Bounds>
+          <Bounds>203,80,108,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="Customer:">
           <IsConstant>true</IsConstant>
           <StyleName>gray</StyleName>
-          <Bounds>40,63,80,20</Bounds>
+          <Bounds>36,54,91,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="Work Order:">
           <IsConstant>true</IsConstant>
-          <StyleName>primary</StyleName>
-          <Bounds>40,91,80,20</Bounds>
+          <StyleName>gray</StyleName>
+          <Bounds>36,80,80,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_jobdate">
           <StyleName>r_gray</StyleName>
-          <Bounds>198,62,110,20</Bounds>
+          <Bounds>213,54,95,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
@@ -293,18 +296,19 @@
       <DesignHeight>48</DesignHeight>
       <Name>Pending-Upcoming</Name>
       <Width>320</Width>
-      <Height>127</Height>
+      <Height>109</Height>
+      <SerializedBackground>-1247748</SerializedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
-          <StyleName>primary_blue_greyeditor</StyleName>
-          <Bounds>40,8,200,20</Bounds>
+          <StyleName>primary</StyleName>
+          <Bounds>36,8,212,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="statuscode">
           <IsFormatted>false</IsFormatted>
           <StyleName>CheckMarkScheduled</StyleName>
-          <Bounds>8,8,24,24</Bounds>
+          <Bounds>8,8,20,20</Bounds>
           <CellKind>1</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
@@ -316,59 +320,59 @@
         </CellTemplate>
         <CellTemplate SchemaName="fs_agreementjobid">
           <StyleName>Secondary</StyleName>
-          <Bounds>118,34,80,20</Bounds>
+          <Bounds>130,34,80,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="Due Date">
           <IsConstant>true</IsConstant>
           <StyleName>r_gray</StyleName>
-          <Bounds>198,34,110,20</Bounds>
+          <Bounds>211,34,97,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="Agreement Job:">
           <IsConstant>true</IsConstant>
           <StyleName>gray</StyleName>
-          <Bounds>40,34,78,20</Bounds>
+          <Bounds>36,34,91,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_agreementjobid.fs_agreementjob.fs_agreementid.fs_agreement.fs_customerid">
           <StyleName>gray</StyleName>
-          <Bounds>118,62,79,21</Bounds>
+          <Bounds>130,54,79,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_workorderid">
           <StyleName>primary</StyleName>
-          <Bounds>118,92,82,19</Bounds>
-          <CellKind>0</CellKind>
+          <Bounds>118,80,82,20</Bounds>
+          <CellKind>4</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_workorderid.fs_workorder.statuscode">
           <StyleName>Primary Right</StyleName>
-          <Bounds>203,92,108,19</Bounds>
+          <Bounds>203,80,104,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="Customer:">
           <IsConstant>true</IsConstant>
           <StyleName>gray</StyleName>
-          <Bounds>40,62,80,20</Bounds>
+          <Bounds>36,54,90,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="Work Order:">
           <IsConstant>true</IsConstant>
-          <StyleName>primary</StyleName>
-          <Bounds>40,91,80,20</Bounds>
+          <StyleName>gray</StyleName>
+          <Bounds>36,80,80,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_jobdate">
           <StyleName>r_gray</StyleName>
-          <Bounds>198,62,110,20</Bounds>
+          <Bounds>210,54,98,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
