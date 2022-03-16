@@ -31,7 +31,7 @@
           </Items>
         </DetailItem>
         <DetailItem SchemaName="fs_agreementjobid"/>
-        <DetailItem SchemaName="CreateWorkOrder" button="true" buttonLabel="Create WorkOrder" buttonClickText="Create WorkOrder" buttonCommand="null" Style="Button_Blue">
+        <DetailItem SchemaName="CreateWorkOrder" button="true" buttonLabel="Create WorkOrder" buttonClickText="Create WorkOrder" buttonCommand="" Style="Button_Blue">
           <IsConstant>true</IsConstant>
         </DetailItem>
       </SerializedChildren>
