@@ -55,10 +55,10 @@
           <Columns>*;*</Columns>
           <Rows>Auto;Auto</Rows>
           <Items>
-            <DetailItem SchemaName="windowstart">
+            <DetailItem SchemaName="preferredwindowstart">
               <GridPosition>0;0;1;2</GridPosition>
             </DetailItem>
-            <DetailItem SchemaName="windowend">
+            <DetailItem SchemaName="preferredwindowend">
               <GridPosition>1;0;1;2</GridPosition>
             </DetailItem>
           </Items>

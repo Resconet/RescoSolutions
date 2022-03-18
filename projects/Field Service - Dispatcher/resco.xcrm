@@ -1032,6 +1032,8 @@
         <property schema="originatingincidentid"/>
         <property schema="ownerid"/>
         <property schema="owningbusinessunit"/>
+        <property schema="preferredwindowend"/>
+        <property schema="preferredwindowstart"/>
         <property schema="pricelevelid"/>
         <property schema="statecode"/>
         <property schema="statuscode"/>
@@ -1039,8 +1041,6 @@
         <property schema="totalamount"/>
         <property schema="totalduration"/>
         <property schema="transactioncurrencyid"/>
-        <property schema="windowend"/>
-        <property schema="windowstart"/>
         <property schema="workorder_number"/>
       </properties>
       <indexes>
