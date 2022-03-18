@@ -75,13 +75,13 @@
         </CellTemplate>
         <CellTemplate SchemaName="createdon">
           <StyleName>0110 date</StyleName>
-          <Bounds>75,15,108,16</Bounds>
+          <Bounds>75,15,108,19</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="createdon">
           <StyleName>0111 time right</StyleName>
-          <Bounds>186,15,114,16</Bounds>
+          <Bounds>186,15,114,19</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
@@ -115,13 +115,13 @@
         </CellTemplate>
         <CellTemplate SchemaName="createdon">
           <StyleName>0110 date</StyleName>
-          <Bounds>75,15,108,16</Bounds>
+          <Bounds>75,15,108,19</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>5</Anchor>
+          <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="createdon">
           <StyleName>0111 time right</StyleName>
-          <Bounds>224,15,76,16</Bounds>
+          <Bounds>224,15,76,19</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
@@ -162,13 +162,13 @@
         </CellTemplate>
         <CellTemplate SchemaName="createdon">
           <StyleName>0110 date</StyleName>
-          <Bounds>75,15,108,16</Bounds>
+          <Bounds>75,15,108,19</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>5</Anchor>
+          <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="createdon">
           <StyleName>0111 time right</StyleName>
-          <Bounds>224,15,76,16</Bounds>
+          <Bounds>224,15,76,19</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
