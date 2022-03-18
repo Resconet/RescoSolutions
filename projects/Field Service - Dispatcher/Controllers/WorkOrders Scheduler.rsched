@@ -85,8 +85,8 @@
   <VisitDurationInMinutesField>estimatedduration</VisitDurationInMinutesField>
   <MinDaysBetweenVisits>0</MinDaysBetweenVisits>
   <ProgressField>completionpercent</ProgressField>
-  <PreferredWindowStartField>windowstart</PreferredWindowStartField>
-  <PreferredWindowEndField>windowend</PreferredWindowEndField>
+  <PreferredWindowStartField>preferredwindowstart</PreferredWindowStartField>
+  <PreferredWindowEndField>preferredwindowend</PreferredWindowEndField>
   <TimeOffsName>fs_time_off</TimeOffsName>
   <TimeOffsColor>rgba(217,40,40,1)</TimeOffsColor>
   <TimeOffsTextColor>rgb(255,255,255)</TimeOffsTextColor>
