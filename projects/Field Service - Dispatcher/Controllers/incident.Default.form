@@ -21,8 +21,11 @@
         <DetailItem SchemaName="responsiblecontactid">
           <LookupViews>&lt;lookup&gt;&lt;extra&gt;&lt;views&gt;contact.Default&lt;/views&gt;&lt;/extra&gt;&lt;extra&gt;&lt;views&gt;contact.Default&lt;/views&gt;&lt;filter entity="contact"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="contact"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="parentcustomerid" operator="eq" value="{{customerid}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;&lt;/lookup&gt;</LookupViews>
         </DetailItem>
+        <DetailItem SchemaName="originatedfrom" Style="OptionSet_Activity">
+          <GridPosition>2;0;1;2</GridPosition>
+        </DetailItem>
         <DetailItem SchemaName="$Table2" grid="true">
-          <Columns>*;*;*</Columns>
+          <Columns>*;*</Columns>
           <Rows>Auto;Auto</Rows>
           <Items>
             <DetailItem SchemaName="statuscode" Style="Normal_Blue">
@@ -30,9 +33,6 @@
             </DetailItem>
             <DetailItem SchemaName="prioritycode">
               <GridPosition>1;0;1;2</GridPosition>
-            </DetailItem>
-            <DetailItem SchemaName="originatedfrom" Style="OptionSet_Activity">
-              <GridPosition>2;0;1;2</GridPosition>
             </DetailItem>
           </Items>
         </DetailItem>
@@ -61,7 +61,7 @@
             </DetailItem>
           </Items>
         </DetailItem>
-        <DetailItem SchemaName="CreateWorkOrder" button="true" buttonLabel="Create WorkOrder" buttonClickText="Create WorkOrder" Style="Button_Blue">
+        <DetailItem SchemaName="CreateWorkOrder" button="true" buttonLabel="Create WorkOrder" buttonClickText="Create WorkOrder" buttonCommand="" Style="Button_Blue">
           <IsConstant>true</IsConstant>
         </DetailItem>
       </SerializedChildren>
