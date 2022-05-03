@@ -1064,7 +1064,7 @@
           <Value>6</Value>
         </Property>
         <Property Name="Format" Type="System.String">
-          <Value>controls.Done.png</Value>
+          <Value>controls.checkmarkcompleted.png</Value>
         </Property>
         <Property Name="VerticalAlignment" Type="System.Int32">
           <Value>2</Value>
@@ -1560,7 +1560,7 @@
           <Value>-16777216</Value>
         </Property>
         <Property Name="EditorBackgroundColor" Type="System.Int32">
-          <Value>-6956647</Value>
+          <Value>-6102618</Value>
         </Property>
       </Properties>
     </Style>
@@ -1597,6 +1597,36 @@
         </Property>
         <Property Name="EditorForegroundColor" Type="System.Int32">
           <Value>-1</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Alert" Style="ListRawValue" Type="ImageCell">
+      <Properties>
+        <Property Name="EditorCornerRadius" Type="System.Int32">
+          <Value>6</Value>
+        </Property>
+        <Property Name="Format" Type="System.String">
+          <Value>controls.alert.png</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Priority-High" Style="ListRawValue" Type="ImageCell">
+      <Properties>
+        <Property Name="EditorCornerRadius" Type="System.Int32">
+          <Value>6</Value>
+        </Property>
+        <Property Name="Format" Type="System.String">
+          <Value>controls.priority-high.png</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Pending" Style="ListRawValue" Type="ImageCell">
+      <Properties>
+        <Property Name="EditorCornerRadius" Type="System.Int32">
+          <Value>6</Value>
+        </Property>
+        <Property Name="Format" Type="System.String">
+          <Value>controls.pending.png</Value>
         </Property>
       </Properties>
     </Style>
