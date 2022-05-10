@@ -54,8 +54,8 @@
         </CellTemplate>
         <CellTemplate SchemaName="Home.green-contact.png">
           <IsConstant>true</IsConstant>
-          <StyleName>Icon</StyleName>
-          <Bounds>16,10,28,28</Bounds>
+          <StyleName>ListNoteImage</StyleName>
+          <Bounds>12,10,43,38</Bounds>
           <CellKind>1</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
