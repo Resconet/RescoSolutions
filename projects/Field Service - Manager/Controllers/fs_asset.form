@@ -50,6 +50,7 @@
             </DetailItem>
           </Items>
         </DetailItem>
+        <DetailItem SchemaName="fs_schedulestatus"/>
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
           <IsConstant>true</IsConstant>
         </DetailItem>
@@ -115,9 +116,10 @@
       <Name>Readings List</Name>
       <Binding SchemaName="resco_propertylog.resco_objectid"/>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="300px" flexiHeader="2" NameModified="0" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\quote@2x.png" IsIconNameReadOnly="0">
+    <FormTab xsi:type="AssociatedTab" flexiHeight="300px" flexiHeader="2" NameModified="0" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\quote@2x.png" IsIconNameReadOnly="0" DocCommands="0">
       <Name>Maintenance Jobs List</Name>
       <Binding SchemaName="fs_agreementjob.fs_assetid"/>
+      <Views>fs_agreementjob.Default</Views>
     </FormTab>
     <FormTab xsi:type="AssociatedTab" flexiHeight="300px" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\fs_workorder@2x.png" IsIconNameReadOnly="0" DocCommands="0">
       <Name>Maintenance History</Name>
