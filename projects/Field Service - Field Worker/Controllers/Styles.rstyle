@@ -946,7 +946,7 @@
           <Value>6</Value>
         </Property>
         <Property Name="Format" Type="System.String">
-          <Value>controls.checkmarkscheduled.png</Value>
+          <Value>Controls.CheckMarkScheduled.png</Value>
         </Property>
       </Properties>
     </Style>
@@ -956,7 +956,7 @@
           <Value>6</Value>
         </Property>
         <Property Name="Format" Type="System.String">
-          <Value>controls.checkmarkinprogress.png</Value>
+          <Value>Controls.CheckMarkInProgress.png</Value>
         </Property>
       </Properties>
     </Style>
@@ -966,7 +966,7 @@
           <Value>6</Value>
         </Property>
         <Property Name="Format" Type="System.String">
-          <Value>controls.checkmarkcompleted.png</Value>
+          <Value>Controls.CheckMarkCompleted.png</Value>
         </Property>
       </Properties>
     </Style>
@@ -976,7 +976,7 @@
           <Value>6</Value>
         </Property>
         <Property Name="Format" Type="System.String">
-          <Value>controls.checkmarkcanceled.png</Value>
+          <Value>Controls.CheckMarkCanceled.png</Value>
         </Property>
       </Properties>
     </Style>
@@ -1169,7 +1169,7 @@
           <Value>6</Value>
         </Property>
         <Property Name="Format" Type="System.String">
-          <Value>controls.markcompleted.png</Value>
+          <Value>Controls.MarkCompleted.png</Value>
         </Property>
       </Properties>
     </Style>
@@ -1179,7 +1179,7 @@
           <Value>6</Value>
         </Property>
         <Property Name="Format" Type="System.String">
-          <Value>controls.markcanceled.png</Value>
+          <Value>Controls.MarkCanceled.png</Value>
         </Property>
       </Properties>
     </Style>
@@ -1279,6 +1279,71 @@
         </Property>
         <Property Name="FontWeight" Type="System.Int32">
           <Value>1</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Alert" Style="ListRawValue" Type="ImageCell">
+      <Properties>
+        <Property Name="EditorCornerRadius" Type="System.Int32">
+          <Value>6</Value>
+        </Property>
+        <Property Name="Format" Type="System.String">
+          <Value>Controls.Alert.png</Value>
+        </Property>
+        <Property Name="CornerRadius" Type="System.Int32">
+          <Value>15</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Pending" Style="ListRawValue" Type="ImageCell">
+      <Properties>
+        <Property Name="EditorCornerRadius" Type="System.Int32">
+          <Value>6</Value>
+        </Property>
+        <Property Name="Format" Type="System.String">
+          <Value>Controls.Pending.png</Value>
+        </Property>
+        <Property Name="CornerRadius" Type="System.Int32">
+          <Value>15</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Priority-High" Style="ListRawValue" Type="ImageCell">
+      <Properties>
+        <Property Name="EditorCornerRadius" Type="System.Int32">
+          <Value>6</Value>
+        </Property>
+        <Property Name="Format" Type="System.String">
+          <Value>Controls.Priority-High.png</Value>
+        </Property>
+        <Property Name="CornerRadius" Type="System.Int32">
+          <Value>15</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Done" Style="ListRawValue" Type="ImageCell">
+      <Properties>
+        <Property Name="EditorCornerRadius" Type="System.Int32">
+          <Value>6</Value>
+        </Property>
+        <Property Name="Format" Type="System.String">
+          <Value>Controls.Done.png</Value>
+        </Property>
+        <Property Name="CornerRadius" Type="System.Int32">
+          <Value>15</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="CheckMarkEmpty" Style="ListRawValue" Type="ImageCell">
+      <Properties>
+        <Property Name="EditorCornerRadius" Type="System.Int32">
+          <Value>6</Value>
+        </Property>
+        <Property Name="Format" Type="System.String">
+          <Value>Controls.CheckMarkEmpty.png</Value>
+        </Property>
+        <Property Name="CornerRadius" Type="System.Int32">
+          <Value>15</Value>
         </Property>
       </Properties>
     </Style>

@@ -318,15 +318,18 @@
         <property schema="createdon" displayformat="None"/>
         <property schema="customerid"/>
         <property schema="fs_product"/>
+        <property schema="fs_schedulestatus"/>
         <property schema="id"/>
         <property schema="installation"/>
         <property schema="lastservice"/>
         <property schema="modifiedby"/>
         <property schema="modifiedon" displayformat="None"/>
         <property schema="name" displayformat="None"/>
+        <property schema="next_service"/>
         <property schema="price"/>
         <property schema="resco_functionallocationid"/>
         <property schema="serialnumber"/>
+        <property schema="serviceinterval"/>
         <property schema="statecode"/>
         <property schema="statuscode"/>
         <property schema="transactioncurrencyid"/>
@@ -1926,6 +1929,7 @@
         <property schema="resco_completionstatus"/>
         <property schema="resco_description"/>
         <property schema="resco_duration"/>
+        <property schema="resco_featureversion"/>
         <property schema="resco_folder"/>
         <property schema="resco_folderid"/>
         <property schema="resco_issnippet"/>

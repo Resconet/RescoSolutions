@@ -43,14 +43,14 @@
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="createdby">
-          <StyleName>0103 p grey</StyleName>
-          <Bounds>62,28,130,22</Bounds>
+          <StyleName>Secondary</StyleName>
+          <Bounds>62,28,113,22</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="createdon">
-          <StyleName>0103 p grey</StyleName>
-          <Bounds>193,28,119,22</Bounds>
+          <StyleName>Secondary Right</StyleName>
+          <Bounds>175,28,136,22</Bounds>
           <CellKind>0</CellKind>
           <Anchor>11</Anchor>
         </CellTemplate>
