@@ -75,13 +75,13 @@
         </CellTemplate>
         <CellTemplate SchemaName="createdon">
           <StyleName>0110 date</StyleName>
-          <Bounds>75,15,108,19</Bounds>
+          <Bounds>75,15,131,19</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="createdon">
           <StyleName>0111 time right</StyleName>
-          <Bounds>186,15,114,19</Bounds>
+          <Bounds>207,15,92,19</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
@@ -92,17 +92,17 @@
       <DesignHeight>48</DesignHeight>
       <Name>Score</Name>
       <Width>320</Width>
-      <Height>110</Height>
+      <Height>121</Height>
       <SerializedChildren>
         <CellTemplate SchemaName="#Name">
           <StyleName>0102 h2</StyleName>
-          <Bounds>75,38,225,22</Bounds>
+          <Bounds>75,59,225,22</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="#Description">
           <StyleName>0103 p grey</StyleName>
-          <Bounds>75,64,225,36</Bounds>
+          <Bounds>75,83,225,36</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -115,20 +115,20 @@
         </CellTemplate>
         <CellTemplate SchemaName="createdon">
           <StyleName>0110 date</StyleName>
-          <Bounds>75,15,108,19</Bounds>
+          <Bounds>75,15,131,19</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
+          <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="createdon">
           <StyleName>0111 time right</StyleName>
-          <Bounds>224,15,76,19</Bounds>
+          <Bounds>207,15,92,19</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="resco_score">
           <IsFormatted>false</IsFormatted>
           <StyleName>0103 p score</StyleName>
-          <Bounds>186,15,34,19</Bounds>
+          <Bounds>75,38,224,19</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -139,17 +139,17 @@
       <DesignHeight>48</DesignHeight>
       <Name>Result</Name>
       <Width>320</Width>
-      <Height>110</Height>
+      <Height>121</Height>
       <SerializedChildren>
         <CellTemplate SchemaName="#Name">
           <StyleName>0102 h2</StyleName>
-          <Bounds>75,38,225,22</Bounds>
+          <Bounds>75,59,225,22</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="#Description">
           <StyleName>0103 p grey</StyleName>
-          <Bounds>75,64,225,36</Bounds>
+          <Bounds>75,83,225,36</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -162,19 +162,19 @@
         </CellTemplate>
         <CellTemplate SchemaName="createdon">
           <StyleName>0110 date</StyleName>
-          <Bounds>75,15,108,19</Bounds>
+          <Bounds>75,15,131,19</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
+          <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="createdon">
           <StyleName>0111 time right</StyleName>
-          <Bounds>224,15,76,19</Bounds>
+          <Bounds>207,15,92,19</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="#LocalizedResult">
           <StyleName>0103 p result</StyleName>
-          <Bounds>186,15,34,19</Bounds>
+          <Bounds>75,38,225,19</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>

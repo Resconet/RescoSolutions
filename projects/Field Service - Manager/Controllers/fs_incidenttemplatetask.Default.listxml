@@ -51,7 +51,7 @@
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="duration">
-          <StyleName>r_gray</StyleName>
+          <StyleName>Secondary Right</StyleName>
           <Bounds>157,26,74,19</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>

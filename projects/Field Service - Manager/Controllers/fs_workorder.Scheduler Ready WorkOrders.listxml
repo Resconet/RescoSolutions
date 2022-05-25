@@ -61,13 +61,7 @@
         </CellTemplate>
         <CellTemplate SchemaName="customerid">
           <StyleName>gray</StyleName>
-          <Bounds>8,34,133,16</Bounds>
-          <CellKind>0</CellKind>
-          <Anchor>5</Anchor>
-        </CellTemplate>
-        <CellTemplate SchemaName="originatingincidentid.incident.prioritycode">
-          <StyleName>Secondary Right</StyleName>
-          <Bounds>142,34,92,17</Bounds>
+          <Bounds>8,34,224,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
