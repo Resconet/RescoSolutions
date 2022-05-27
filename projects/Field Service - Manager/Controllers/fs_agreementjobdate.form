@@ -36,7 +36,7 @@
         </DetailItem>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="300px" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\fs_workorder@2x.png" IsIconNameReadOnly="0" DocCommands="0">
+    <FormTab xsi:type="AssociatedTab" flexiHeight="" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\fs_workorder@2x.png" IsIconNameReadOnly="0" DocCommands="0">
       <Name>Work Orders</Name>
       <CustomName>Work Orders</CustomName>
       <Binding SchemaName="fs_workorder.@virtual"/>

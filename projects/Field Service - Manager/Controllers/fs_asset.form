@@ -80,7 +80,7 @@
         </DetailItem>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="MapTab" flexiHeight="350px" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
+    <FormTab xsi:type="MapTab" flexiHeight="1" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
       <Name>Map</Name>
       <CoordinatesBinding>assetLat;assetLon</CoordinatesBinding>
     </FormTab>
@@ -108,26 +108,26 @@
         </Entity>
       </Entities>
     </FormTab>
-    <FormTab xsi:type="DetailTab" flexiHeight="300px" flexiHeader="2" NameModified="1" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\AnsweredInspections@2x.png" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="1" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\AnsweredInspections@2x.png" IsIconNameReadOnly="0">
       <Name>resco_property</Name>
       <SerializedChildren/>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="300px" flexiHeader="2" NameModified="0" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\List@2x.png" IsIconNameReadOnly="0" DocCommands="0">
+    <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="0" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\List@2x.png" IsIconNameReadOnly="0" DocCommands="0">
       <Name>Readings List</Name>
       <Binding SchemaName="resco_propertylog.resco_objectid"/>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="300px" flexiHeader="2" NameModified="0" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\quote@2x.png" IsIconNameReadOnly="0" DocCommands="0">
+    <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="0" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\quote@2x.png" IsIconNameReadOnly="0" DocCommands="0">
       <Name>Maintenance Jobs List</Name>
       <Binding SchemaName="fs_agreementjob.fs_assetid"/>
       <Views>fs_agreementjob.Default</Views>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="300px" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\fs_workorder@2x.png" IsIconNameReadOnly="0" DocCommands="0">
+    <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\fs_workorder@2x.png" IsIconNameReadOnly="0" DocCommands="0">
       <Name>Maintenance History</Name>
       <CustomName>Maintenance History</CustomName>
       <Binding SchemaName="fs_workorder.@virtual"/>
-      <Views>&lt;extra&gt;&lt;views&gt;fs_workorder.All WorkOrders:fs_workorder.Closed WorkOrders&lt;/views&gt;&lt;filter entity="fs_workorder"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="fs_workorder"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="fs_assetid" operator="eq" value="{{id}}"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+      <Views>&lt;extra&gt;&lt;views&gt;fs_workorder.@All-List:fs_workorder.Closed WorkOrders&lt;/views&gt;&lt;filter entity="fs_workorder"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="fs_workorder"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="fs_assetid" operator="eq" value="{{id}}"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="300px" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
+    <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
       <Name>Attachments</Name>
       <CustomName>Attachments</CustomName>
       <Binding SchemaName="annotation.objectid"/>

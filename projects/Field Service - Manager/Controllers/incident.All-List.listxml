@@ -5,7 +5,7 @@
     <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
     <ClassBinding/>
   </Attributes>
-  <Name>All Incidents</Name>
+  <Name>All-List</Name>
   <Kind>List</Kind>
   <AutoWideWidth>800</AutoWideWidth>
   <OrderBy>!incident_number</OrderBy>
@@ -31,7 +31,7 @@
       <DesignHeight>40</DesignHeight>
       <Name>Default</Name>
       <Width>240</Width>
-      <Height>76</Height>
+      <Height>56</Height>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary_blue</StyleName>
@@ -62,12 +62,6 @@
           <Bounds>5,7,39,21</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
-        </CellTemplate>
-        <CellTemplate SchemaName="createdon">
-          <StyleName>r_gray</StyleName>
-          <Bounds>45,53,185,21</Bounds>
-          <CellKind>0</CellKind>
-          <Anchor>9</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
@@ -76,7 +70,7 @@
       <DesignHeight>40</DesignHeight>
       <Name>Default-Submitted</Name>
       <Width>240</Width>
-      <Height>76</Height>
+      <Height>56</Height>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary_blue</StyleName>
@@ -97,7 +91,7 @@
           <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="statuscode">
-          <StyleName>Primary Green</StyleName>
+          <StyleName>r_green</StyleName>
           <Bounds>186,7,45,21</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
@@ -107,12 +101,6 @@
           <Bounds>5,7,39,21</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
-        </CellTemplate>
-        <CellTemplate SchemaName="createdon">
-          <StyleName>r_gray</StyleName>
-          <Bounds>45,53,185,21</Bounds>
-          <CellKind>0</CellKind>
-          <Anchor>9</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
@@ -121,7 +109,7 @@
       <DesignHeight>40</DesignHeight>
       <Name>Default-InProgress</Name>
       <Width>240</Width>
-      <Height>76</Height>
+      <Height>56</Height>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary_blue</StyleName>
@@ -142,7 +130,7 @@
           <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="statuscode">
-          <StyleName>primary_blue</StyleName>
+          <StyleName>r_blue</StyleName>
           <Bounds>186,7,45,21</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
@@ -152,12 +140,6 @@
           <Bounds>5,7,39,21</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
-        </CellTemplate>
-        <CellTemplate SchemaName="createdon">
-          <StyleName>r_gray</StyleName>
-          <Bounds>45,53,185,21</Bounds>
-          <CellKind>0</CellKind>
-          <Anchor>9</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
@@ -166,7 +148,7 @@
       <DesignHeight>40</DesignHeight>
       <Name>Default-OnHold</Name>
       <Width>240</Width>
-      <Height>76</Height>
+      <Height>56</Height>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary_blue</StyleName>
@@ -187,7 +169,7 @@
           <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="statuscode">
-          <StyleName>Primary Gray</StyleName>
+          <StyleName>r_orange</StyleName>
           <Bounds>186,7,45,21</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
@@ -197,12 +179,6 @@
           <Bounds>5,7,39,21</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
-        </CellTemplate>
-        <CellTemplate SchemaName="createdon">
-          <StyleName>r_gray</StyleName>
-          <Bounds>45,53,185,21</Bounds>
-          <CellKind>0</CellKind>
-          <Anchor>9</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
