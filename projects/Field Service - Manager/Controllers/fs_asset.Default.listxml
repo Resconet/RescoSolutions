@@ -358,13 +358,13 @@
           <StyleName>Secondary Right</StyleName>
           <Bounds>191,50,113,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>5</Anchor>
+          <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="resco_functionallocationid">
           <StyleName>Secondary Right</StyleName>
           <Bounds>191,69,113,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>5</Anchor>
+          <Anchor>9</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
