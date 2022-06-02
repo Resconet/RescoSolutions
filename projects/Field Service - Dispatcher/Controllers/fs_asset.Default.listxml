@@ -7,7 +7,7 @@
   <Kind>List</Kind>
   <AutoWideWidth>0</AutoWideWidth>
   <OrderBy>customerid</OrderBy>
-  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;SharedVariable usage="None"&gt;&lt;Name&gt;Today&lt;/Name&gt;&lt;CrmType&gt;DateTime&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;SharedVariable usage="None"&gt;&lt;Name&gt;VisitDueOn&lt;/Name&gt;&lt;CrmType&gt;DateTime&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;SharedVariable usage="None"&gt;&lt;Name&gt;2MonthsWarning&lt;/Name&gt;&lt;CrmType&gt;DateTime&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <SerializedBindings>
     <string>customerid</string>
     <string>resco_functionallocationid</string>
@@ -15,11 +15,12 @@
     <string>lastservice</string>
     <string>name</string>
     <string>assetid</string>
+    <string>fs_schedulestatus</string>
     <string>serialnumber</string>
   </SerializedBindings>
   <IsHidden>true</IsHidden>
   <MaxColumns>0</MaxColumns>
-  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.Today&lt;/var&gt;&lt;func&gt;SetToday&lt;/func&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.VisitDueOn&lt;/var&gt;&lt;func&gt;AddDays&lt;/func&gt;&lt;arg&gt;var:Entity.lastservice&lt;/arg&gt;&lt;arg&gt;Integer:365&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.2MonthsWarning&lt;/var&gt;&lt;func&gt;AddDays&lt;/func&gt;&lt;arg&gt;var:Entity.lastservice&lt;/arg&gt;&lt;arg&gt;Integer:300&lt;/arg&gt;&lt;/function&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.lastservice&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Shared.VisitDueOn&lt;/var&gt;&lt;op&gt;LessEqual&lt;/op&gt;&lt;arg&gt;var:Shared.Today&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:1&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Shared.2MonthsWarning&lt;/var&gt;&lt;op&gt;LessEqual&lt;/op&gt;&lt;arg&gt;var:Shared.Today&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:2&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="Change Template per Status" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.fs_schedulestatus&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.fs_schedulestatus&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Picklist:10000&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:4&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.fs_schedulestatus&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Picklist:10001&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:3&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.fs_schedulestatus&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Picklist:10002&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:2&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.fs_schedulestatus&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Picklist:10003&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:1&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
   <Fetch version="1.0">
     <entity name="fs_asset">
       <filter type="and">
@@ -41,9 +42,9 @@
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="Controls.Done">
+        <CellTemplate SchemaName="Controls.CheckMarkEmpty">
           <IsConstant>true</IsConstant>
-          <StyleName>CheckMarkCompleted</StyleName>
+          <StyleName>CheckMarkEmpty</StyleName>
           <Bounds>8,8,20,20</Bounds>
           <CellKind>1</CellKind>
           <Anchor>5</Anchor>
@@ -54,8 +55,7 @@
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="OK">
-          <IsConstant>true</IsConstant>
+        <CellTemplate SchemaName="fs_schedulestatus">
           <StyleName>Secondary</StyleName>
           <Bounds>36,8,268,16</Bounds>
           <CellKind>0</CellKind>
@@ -117,7 +117,7 @@
         </CellTemplate>
         <CellTemplate SchemaName="Controls.Priority-High">
           <IsConstant>true</IsConstant>
-          <StyleName>CheckMarkCanceled</StyleName>
+          <StyleName>Priority-High</StyleName>
           <Bounds>8,8,20,20</Bounds>
           <CellKind>1</CellKind>
           <Anchor>5</Anchor>
@@ -128,8 +128,7 @@
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="Overdue">
-          <IsConstant>true</IsConstant>
+        <CellTemplate SchemaName="fs_schedulestatus">
           <StyleName>Secondary</StyleName>
           <Bounds>36,8,268,16</Bounds>
           <CellKind>0</CellKind>
@@ -185,7 +184,7 @@
         </CellTemplate>
         <CellTemplate SchemaName="Controls.Alert">
           <IsConstant>true</IsConstant>
-          <StyleName>CheckMarkInProgress</StyleName>
+          <StyleName>Alert</StyleName>
           <Bounds>8,8,20,20</Bounds>
           <CellKind>1</CellKind>
           <Anchor>5</Anchor>
@@ -194,10 +193,9 @@
           <StyleName>Secondary</StyleName>
           <Bounds>74,50,113,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>5</Anchor>
+          <Anchor>13</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="2 Months Warning">
-          <IsConstant>true</IsConstant>
+        <CellTemplate SchemaName="fs_schedulestatus">
           <StyleName>Secondary</StyleName>
           <Bounds>36,8,268,16</Bounds>
           <CellKind>0</CellKind>
@@ -221,7 +219,7 @@
           <StyleName>Secondary</StyleName>
           <Bounds>110,68,78,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>4</Anchor>
+          <Anchor>12</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="assetid">
           <StyleName>Secondary Right</StyleName>
@@ -240,7 +238,7 @@
     <RowTemplate>
       <DesignWidth>320</DesignWidth>
       <DesignHeight>48</DesignHeight>
-      <Name>Appointment Scheduled</Name>
+      <Name>Unscheduled</Name>
       <Width>320</Width>
       <Height>92</Height>
       <SerializedBackground>-985363</SerializedBackground>
@@ -251,9 +249,9 @@
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="Controls.CheckMarkScheduled">
+        <CellTemplate SchemaName="Controls.Pending">
           <IsConstant>true</IsConstant>
-          <StyleName>CheckMarkScheduled</StyleName>
+          <StyleName>Pending</StyleName>
           <Bounds>8,8,20,20</Bounds>
           <CellKind>1</CellKind>
           <Anchor>5</Anchor>
@@ -264,8 +262,7 @@
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="Scheduled">
-          <IsConstant>true</IsConstant>
+        <CellTemplate SchemaName="fs_schedulestatus">
           <StyleName>Secondary</StyleName>
           <Bounds>36,8,268,16</Bounds>
           <CellKind>0</CellKind>
@@ -283,32 +280,94 @@
           <StyleName>Secondary</StyleName>
           <Bounds>36,68,70,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>9</Anchor>
+          <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="lastservice">
           <StyleName>Secondary</StyleName>
           <Bounds>110,68,76,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>9</Anchor>
+          <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="assetid">
           <StyleName>Secondary Right</StyleName>
           <Bounds>191,50,113,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>5</Anchor>
+          <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="resco_functionallocationid">
           <StyleName>Secondary Right</StyleName>
           <Bounds>191,69,113,16</Bounds>
           <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Ok</Name>
+      <Width>320</Width>
+      <Height>92</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>36,26,268,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Controls.Done">
+          <IsConstant>true</IsConstant>
+          <StyleName>CheckMarkCompleted</StyleName>
+          <Bounds>8,8,20,20</Bounds>
+          <CellKind>1</CellKind>
           <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="serialnumber">
+          <StyleName>Secondary</StyleName>
+          <Bounds>74,50,114,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_schedulestatus">
+          <StyleName>Secondary</StyleName>
+          <Bounds>36,8,268,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="SN#">
+          <IsConstant>true</IsConstant>
+          <StyleName>Secondary</StyleName>
+          <Bounds>36,50,34,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Last Service">
+          <IsConstant>true</IsConstant>
+          <StyleName>Secondary</StyleName>
+          <Bounds>36,68,70,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="lastservice">
+          <StyleName>Secondary</StyleName>
+          <Bounds>110,68,76,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="assetid">
+          <StyleName>Secondary Right</StyleName>
+          <Bounds>191,50,113,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resco_functionallocationid">
+          <StyleName>Secondary Right</StyleName>
+          <Bounds>191,69,113,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
   </SerializedTemplates>
-  <CustomProperties>
-    <SerializedClassBinding name="Today" label="Shared.Today" type="DateTime"/>
-    <SerializedClassBinding name="VisitDueOn" label="Shared.VisitDueOn" type="DateTime"/>
-    <SerializedClassBinding name="2MonthsWarning" label="Shared.2MonthsWarning" type="DateTime"/>
-  </CustomProperties>
+  <CustomProperties/>
 </EntityList>

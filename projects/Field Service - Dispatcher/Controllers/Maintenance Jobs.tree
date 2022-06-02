@@ -1,3 +1,3 @@
-﻿<tree entity="fs_agreementjob" view="Maintenance Job">
+﻿<tree entity="fs_agreementjob" view="Default - Associated View">
   <child entity="fs_agreementjobdate" view="Default" levelField="fs_agreementjobid"/>
 </tree>

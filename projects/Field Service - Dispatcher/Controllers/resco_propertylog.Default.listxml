@@ -39,15 +39,15 @@
         </CellTemplate>
         <CellTemplate SchemaName="resco_objectid.fs_asset.name">
           <StyleName>gray</StyleName>
-          <Bounds>10,31,146,13</Bounds>
+          <Bounds>10,31,146,15</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>5</Anchor>
+          <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="readingtime">
           <StyleName>r_gray</StyleName>
-          <Bounds>157,31,152,13</Bounds>
+          <Bounds>157,31,152,15</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
+          <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="displayValue">
           <StyleName>Primary Right</StyleName>

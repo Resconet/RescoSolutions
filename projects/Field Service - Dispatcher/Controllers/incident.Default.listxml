@@ -10,13 +10,17 @@
   <IsDefault>true</IsDefault>
   <AutoWideWidth>0</AutoWideWidth>
   <OrderBy>name</OrderBy>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <SerializedBindings>
     <string>customerid</string>
     <string>id</string>
+    <string>incident_number</string>
     <string>name</string>
     <string>prioritycode</string>
+    <string>statuscode</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
+  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="Change Template based on prioritycode" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.prioritycode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Picklist:1&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:1&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.prioritycode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Picklist:3&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:2&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
   <Fetch version="1.0">
     <entity name="incident"/>
   </Fetch>
@@ -26,25 +30,129 @@
       <DesignHeight>40</DesignHeight>
       <Name>Default</Name>
       <Width>240</Width>
-      <Height>60</Height>
+      <Height>46</Height>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary</StyleName>
-          <Bounds>8,10,227,24</Bounds>
+          <Bounds>37,3,133,17</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="customerid">
           <StyleName>gray</StyleName>
-          <Bounds>7,35,196,14</Bounds>
+          <Bounds>37,23,133,17</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>5</Anchor>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <StyleName>r_gray</StyleName>
+          <Bounds>171,23,65,17</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="prioritycode">
           <StyleName>r_gray</StyleName>
-          <Bounds>134,35,100,14</Bounds>
+          <Bounds>171,3,65,17</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="incident_number">
+          <StyleName>primary_blue</StyleName>
+          <Bounds>2,3,32,17</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>High</Name>
+      <Width>240</Width>
+      <Height>46</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>37,3,133,17</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="customerid">
+          <StyleName>gray</StyleName>
+          <Bounds>37,23,133,17</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <StyleName>r_gray</StyleName>
+          <Bounds>171,23,65,17</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="prioritycode">
+          <StyleName>r_gray</StyleName>
+          <Bounds>171,3,65,17</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="incident_number">
+          <StyleName>primary_blue</StyleName>
+          <Bounds>2,3,32,17</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Controls.Priority-High">
+          <IsConstant>true</IsConstant>
+          <StyleName>Icon</StyleName>
+          <Bounds>8,25,16,12</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Low</Name>
+      <Width>240</Width>
+      <Height>46</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>37,3,133,17</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="customerid">
+          <StyleName>gray</StyleName>
+          <Bounds>37,23,133,17</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <StyleName>r_gray</StyleName>
+          <Bounds>171,23,65,17</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="prioritycode">
+          <StyleName>r_gray</StyleName>
+          <Bounds>171,3,65,17</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="incident_number">
+          <StyleName>primary_blue</StyleName>
+          <Bounds>2,3,32,17</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Controls.Alert">
+          <IsConstant>true</IsConstant>
+          <StyleName>Icon</StyleName>
+          <Bounds>8,25,16,12</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
