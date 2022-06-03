@@ -7,7 +7,7 @@
     <sortDateField>scheduledstart</sortDateField>
     <dueDateField>scheduledend</dueDateField>
     <statusField>statuscode</statusField>
-    <closedStatuses></closedStatuses>
+    <closedStatuses>2</closedStatuses>
   </entity>
   <entity name="appointment">
     <regardingField>regardingobjectid</regardingField>
@@ -17,7 +17,7 @@
     <sortDateField>scheduledstart</sortDateField>
     <dueDateField>scheduledend</dueDateField>
     <statusField>statuscode</statusField>
-    <closedStatuses></closedStatuses>
+    <closedStatuses>3</closedStatuses>
   </entity>
   <entity name="task">
     <regardingField>regardingobjectid</regardingField>
@@ -27,7 +27,7 @@
     <sortDateField>scheduledstart</sortDateField>
     <dueDateField>scheduledend</dueDateField>
     <statusField>statuscode</statusField>
-    <closedStatuses></closedStatuses>
+    <closedStatuses>5</closedStatuses>
   </entity>
   <entity name="email">
     <regardingField>regardingobjectid</regardingField>
@@ -37,6 +37,6 @@
     <sortDateField>scheduledstart</sortDateField>
     <dueDateField>scheduledend</dueDateField>
     <statusField>statuscode</statusField>
-    <closedStatuses></closedStatuses>
+    <closedStatuses>2</closedStatuses>
   </entity>
 </timeline>

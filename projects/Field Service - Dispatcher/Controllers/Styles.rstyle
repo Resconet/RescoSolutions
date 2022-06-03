@@ -768,11 +768,11 @@
         <Property Name="Format" Type="System.String">
           <Value>Score: {0:N1}</Value>
         </Property>
-        <Property Name="HorizontalAlignment" Type="System.Int32">
-          <Value>2</Value>
-        </Property>
         <Property Name="ForeColor" Type="System.Int32">
           <Value>-16738413</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
         </Property>
       </Properties>
     </Style>
@@ -781,11 +781,11 @@
         <Property Name="Format" Type="System.String">
           <Value>Result: {0}</Value>
         </Property>
-        <Property Name="HorizontalAlignment" Type="System.Int32">
-          <Value>2</Value>
-        </Property>
         <Property Name="ForeColor" Type="System.Int32">
           <Value>-16738413</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
         </Property>
       </Properties>
     </Style>
@@ -1045,7 +1045,7 @@
           <Value>6</Value>
         </Property>
         <Property Name="Format" Type="System.String">
-          <Value>controls.checkmarkcanceled.png</Value>
+          <Value>Controls.CheckMarkCanceled.png</Value>
         </Property>
         <Property Name="VerticalAlignment" Type="System.Int32">
           <Value>2</Value>
@@ -1064,7 +1064,7 @@
           <Value>6</Value>
         </Property>
         <Property Name="Format" Type="System.String">
-          <Value>controls.Done.png</Value>
+          <Value>Controls.CheckMarkCompleted.png</Value>
         </Property>
         <Property Name="VerticalAlignment" Type="System.Int32">
           <Value>2</Value>
@@ -1083,7 +1083,7 @@
           <Value>6</Value>
         </Property>
         <Property Name="Format" Type="System.String">
-          <Value>controls.checkmarkinprogress.png</Value>
+          <Value>Controls.CheckMarkInProgress.png</Value>
         </Property>
         <Property Name="VerticalAlignment" Type="System.Int32">
           <Value>2</Value>
@@ -1102,7 +1102,7 @@
           <Value>6</Value>
         </Property>
         <Property Name="Format" Type="System.String">
-          <Value>controls.Pending.png</Value>
+          <Value>Controls.Pending.png</Value>
         </Property>
         <Property Name="VerticalAlignment" Type="System.Int32">
           <Value>2</Value>
@@ -1134,7 +1134,7 @@
           <Value>6</Value>
         </Property>
         <Property Name="Format" Type="System.String">
-          <Value>controls.checkmarkempty.png</Value>
+          <Value>Controls.CheckMarkEmpty.png</Value>
         </Property>
         <Property Name="VerticalAlignment" Type="System.Int32">
           <Value>2</Value>
@@ -1560,7 +1560,7 @@
           <Value>-16777216</Value>
         </Property>
         <Property Name="EditorBackgroundColor" Type="System.Int32">
-          <Value>-6956647</Value>
+          <Value>-6102618</Value>
         </Property>
       </Properties>
     </Style>
@@ -1597,6 +1597,80 @@
         </Property>
         <Property Name="EditorForegroundColor" Type="System.Int32">
           <Value>-1</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Alert" Style="ListRawValue" Type="ImageCell">
+      <Properties>
+        <Property Name="EditorCornerRadius" Type="System.Int32">
+          <Value>6</Value>
+        </Property>
+        <Property Name="Format" Type="System.String">
+          <Value>Controls.Alert.png</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="HorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Priority-High" Style="ListRawValue" Type="ImageCell">
+      <Properties>
+        <Property Name="EditorCornerRadius" Type="System.Int32">
+          <Value>6</Value>
+        </Property>
+        <Property Name="Format" Type="System.String">
+          <Value>Controls.Priority-High.png</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="HorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Pending" Style="ListRawValue" Type="ImageCell">
+      <Properties>
+        <Property Name="EditorCornerRadius" Type="System.Int32">
+          <Value>6</Value>
+        </Property>
+        <Property Name="Format" Type="System.String">
+          <Value>Controls.Pending.png</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="HorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="r_blue" Style="r_gray" Type="TextCell">
+      <Properties>
+        <Property Name="EditorCornerRadius" Type="System.Int32">
+          <Value>6</Value>
+        </Property>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-14405953</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Done" Style="ListRawValue" Type="ImageCell">
+      <Properties>
+        <Property Name="EditorCornerRadius" Type="System.Int32">
+          <Value>6</Value>
+        </Property>
+        <Property Name="Format" Type="System.String">
+          <Value>Controls.Done.png</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="HorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
         </Property>
       </Properties>
     </Style>

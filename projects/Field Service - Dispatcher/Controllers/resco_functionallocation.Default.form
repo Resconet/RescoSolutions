@@ -17,19 +17,48 @@
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
           <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="resco_address_line1"/>
-        <DetailItem SchemaName="resco_address_line2"/>
-        <DetailItem SchemaName="resco_address_city"/>
-        <DetailItem SchemaName="resco_address_stateorprovince"/>
-        <DetailItem SchemaName="resco_address_country"/>
+        <DetailItem SchemaName="$Table1" grid="true">
+          <Columns>*;*;*;*</Columns>
+          <Rows>Auto;Auto</Rows>
+          <Items>
+            <DetailItem SchemaName="resco_address_line1">
+              <GridPosition>0;0;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="resco_address_line2">
+              <GridPosition>2;0;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="resco_address_city">
+              <GridPosition>0;1;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="resco_address_postalcode">
+              <GridPosition>1;1;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="resco_address_stateorprovince">
+              <GridPosition>2;1;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="resco_address_country">
+              <GridPosition>3;1;1;1</GridPosition>
+            </DetailItem>
+          </Items>
+        </DetailItem>
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
           <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="resco_latitude"/>
-        <DetailItem SchemaName="resco_longitude"/>
+        <DetailItem SchemaName="$Table2" grid="true">
+          <Columns>*;*</Columns>
+          <Rows>Auto</Rows>
+          <Items>
+            <DetailItem SchemaName="resco_latitude">
+              <GridPosition>0;0;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="resco_longitude">
+              <GridPosition>1;0;1;1</GridPosition>
+            </DetailItem>
+          </Items>
+        </DetailItem>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="MapTab" flexiHeight="350px" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
+    <FormTab xsi:type="MapTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
       <Name>Map</Name>
       <CoordinatesBinding>resco_latitude;resco_longitude</CoordinatesBinding>
     </FormTab>

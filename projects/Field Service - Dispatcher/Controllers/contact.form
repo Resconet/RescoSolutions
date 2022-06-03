@@ -76,7 +76,7 @@
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
           <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="AddTask" button="true" buttonLabel="Ad Task" buttonClickText="Add Task" Style="Button_Blue">
+        <DetailItem SchemaName="AddTask" button="true" buttonLabel="Ad Task" buttonClickText="Add Task" buttonCommand="" Style="Button_Blue">
           <IsConstant>true</IsConstant>
         </DetailItem>
       </SerializedChildren>
@@ -124,13 +124,17 @@
         </DetailItem>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="MapTab" flexiHeight="250px" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
+    <FormTab xsi:type="MapTab" flexiHeight="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
       <Name>Map</Name>
       <CoordinatesBinding>address1_latitude;address1_longitude</CoordinatesBinding>
     </FormTab>
     <FormTab xsi:type="TimelineTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Timeline@2x.png" IsIconNameReadOnly="0">
       <Name>Timeline</Name>
       <Timeline>Timeline</Timeline>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
+      <Name>Notes List</Name>
+      <Binding SchemaName="annotation.objectid"/>
     </FormTab>
   </SerializedChildrenV2>
 </EntityForm>

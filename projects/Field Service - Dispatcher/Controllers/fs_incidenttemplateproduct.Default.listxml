@@ -63,7 +63,7 @@
           <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="duration">
-          <StyleName>r_gray</StyleName>
+          <StyleName>Secondary Right</StyleName>
           <Bounds>170,34,66,15</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
@@ -105,7 +105,7 @@
           <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="quantity">
-          <StyleName>r_gray</StyleName>
+          <StyleName>Secondary Right</StyleName>
           <Bounds>170,34,66,15</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>

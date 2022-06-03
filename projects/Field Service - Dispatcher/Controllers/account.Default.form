@@ -69,7 +69,7 @@
         </DetailItem>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="DetailTab" flexiHeight="3" flexiHeader="2" NameModified="0" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Address@2x.png" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="0" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Address@2x.png" IsIconNameReadOnly="0">
       <Name>Address</Name>
       <SerializedChildren>
         <DetailItem SchemaName="$Table5" grid="true">
@@ -123,24 +123,22 @@
         </DetailItem>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="MapTab" flexiHeight="350px" flexiHeader="0" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
+    <FormTab xsi:type="MapTab" flexiHeight="1" flexiHeader="0" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
       <Name>Map</Name>
       <CoordinatesBinding>address1_latitude;address1_longitude</CoordinatesBinding>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\contact@2x.png" IsIconNameReadOnly="0">
+    <FormTab xsi:type="AssociatedTab" flexiHeight="2" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\contact@2x.png" IsIconNameReadOnly="0">
       <Name>Contacts List</Name>
       <Binding SchemaName="contact.parentcustomerid"/>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\fs_asset@2x.png" IsIconNameReadOnly="0" DocCommands="0">
-      <Name>Assets List</Name>
-      <Binding SchemaName="fs_asset.customerid"/>
-      <Views>fs_asset.Assets</Views>
-      <LookupViews>fs_asset.Assets</LookupViews>
+    <FormTab xsi:type="TreeTab" flexiHeight="4" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>Assets Tree</Name>
+      <Tree>Assets_Accounts Tree</Tree>
     </FormTab>
     <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\fs_workorder@2x.png" IsIconNameReadOnly="0" DocCommands="0">
       <Name>WorkOrders List</Name>
       <Binding SchemaName="fs_workorder.customerid"/>
-      <Views>fs_workorder.All WorkOrders:fs_workorder.Closed WorkOrders</Views>
+      <Views>fs_workorder.@All-List:fs_workorder.Closed WorkOrders</Views>
     </FormTab>
     <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="0" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>Service Agreements List</Name>

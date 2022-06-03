@@ -70,10 +70,13 @@
           <Columns>*;*;*</Columns>
           <Rows>Auto</Rows>
           <Items>
-            <DetailItem SchemaName="condition" Style="Normal No Label">
+            <DetailItem SchemaName="triggertype">
+              <GridPosition>0;0;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="condition">
               <GridPosition>1;0;1;1</GridPosition>
             </DetailItem>
-            <DetailItem SchemaName="floatvalue" Style="Normal No Label">
+            <DetailItem SchemaName="floatvalue">
               <GridPosition>2;0;1;1</GridPosition>
             </DetailItem>
           </Items>

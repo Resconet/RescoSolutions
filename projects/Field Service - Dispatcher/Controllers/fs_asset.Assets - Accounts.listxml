@@ -3,8 +3,8 @@
     <EntityName>fs_asset</EntityName>
     <CamelCase>fs_asset</CamelCase>
   </Attributes>
-  <Name>Assets</Name>
-  <Kind>List</Kind>
+  <Name>Assets - Accounts</Name>
+  <Kind>AssociatedList</Kind>
   <AutoWideWidth>0</AutoWideWidth>
   <OrderBy>customerid</OrderBy>
   <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
@@ -24,6 +24,7 @@
     <entity name="fs_asset">
       <filter type="and">
         <condition attribute="statuscode" operator="eq" value="1"/>
+        <condition attribute="customerid" operator="eq" value="{{id}}"/>
       </filter>
     </entity>
   </Fetch>
@@ -33,11 +34,11 @@
       <DesignHeight>48</DesignHeight>
       <Name>Default</Name>
       <Width>320</Width>
-      <Height>72</Height>
+      <Height>92</Height>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary</StyleName>
-          <Bounds>36,26,193,20</Bounds>
+          <Bounds>36,26,268,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -50,7 +51,7 @@
         </CellTemplate>
         <CellTemplate SchemaName="serialnumber">
           <StyleName>Secondary</StyleName>
-          <Bounds>74,50,154,16</Bounds>
+          <Bounds>74,50,230,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -69,16 +70,16 @@
         </CellTemplate>
         <CellTemplate SchemaName="Last Service">
           <IsConstant>true</IsConstant>
-          <StyleName>Secondary Right</StyleName>
-          <Bounds>231,26,73,20</Bounds>
+          <StyleName>Secondary</StyleName>
+          <Bounds>36,68,70,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>9</Anchor>
+          <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="lastservice">
-          <StyleName>Secondary Right</StyleName>
-          <Bounds>231,50,73,16</Bounds>
+          <StyleName>Secondary</StyleName>
+          <Bounds>110,68,194,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>9</Anchor>
+          <Anchor>13</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
@@ -87,12 +88,12 @@
       <DesignHeight>48</DesignHeight>
       <Name>Overdue</Name>
       <Width>320</Width>
-      <Height>72</Height>
+      <Height>92</Height>
       <SerializedBackground>-203548</SerializedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary</StyleName>
-          <Bounds>36,26,193,20</Bounds>
+          <Bounds>36,26,268,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -105,7 +106,7 @@
         </CellTemplate>
         <CellTemplate SchemaName="serialnumber">
           <StyleName>Secondary</StyleName>
-          <Bounds>74,50,154,16</Bounds>
+          <Bounds>74,50,230,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -124,16 +125,16 @@
         </CellTemplate>
         <CellTemplate SchemaName="Last Service">
           <IsConstant>true</IsConstant>
-          <StyleName>Secondary Right</StyleName>
-          <Bounds>231,26,72,20</Bounds>
+          <StyleName>Secondary</StyleName>
+          <Bounds>36,68,70,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>9</Anchor>
+          <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="lastservice">
-          <StyleName>Secondary Right</StyleName>
-          <Bounds>231,50,73,16</Bounds>
+          <StyleName>Secondary</StyleName>
+          <Bounds>110,68,194,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>9</Anchor>
+          <Anchor>13</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
@@ -142,12 +143,12 @@
       <DesignHeight>48</DesignHeight>
       <Name>Attention</Name>
       <Width>320</Width>
-      <Height>72</Height>
+      <Height>92</Height>
       <SerializedBackground>-526406</SerializedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary</StyleName>
-          <Bounds>36,26,193,20</Bounds>
+          <Bounds>36,26,268,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -160,9 +161,9 @@
         </CellTemplate>
         <CellTemplate SchemaName="serialnumber">
           <StyleName>Secondary</StyleName>
-          <Bounds>74,50,154,16</Bounds>
+          <Bounds>74,50,230,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
+          <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_schedulestatus">
           <StyleName>Secondary</StyleName>
@@ -179,30 +180,30 @@
         </CellTemplate>
         <CellTemplate SchemaName="Last Service">
           <IsConstant>true</IsConstant>
-          <StyleName>Secondary Right</StyleName>
-          <Bounds>231,26,73,20</Bounds>
+          <StyleName>Secondary</StyleName>
+          <Bounds>36,68,70,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>8</Anchor>
+          <Anchor>4</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="lastservice">
-          <StyleName>Secondary Right</StyleName>
-          <Bounds>232,50,73,16</Bounds>
+          <StyleName>Secondary</StyleName>
+          <Bounds>110,68,194,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>8</Anchor>
+          <Anchor>12</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
     <RowTemplate>
       <DesignWidth>320</DesignWidth>
       <DesignHeight>48</DesignHeight>
-      <Name>Unscheduled</Name>
+      <Name>Unschedulled</Name>
       <Width>320</Width>
-      <Height>72</Height>
+      <Height>92</Height>
       <SerializedBackground>-985363</SerializedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary</StyleName>
-          <Bounds>36,26,193,20</Bounds>
+          <Bounds>36,26,268,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -215,7 +216,7 @@
         </CellTemplate>
         <CellTemplate SchemaName="serialnumber">
           <StyleName>Secondary</StyleName>
-          <Bounds>74,50,154,16</Bounds>
+          <Bounds>74,50,230,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -234,16 +235,16 @@
         </CellTemplate>
         <CellTemplate SchemaName="Last Service">
           <IsConstant>true</IsConstant>
-          <StyleName>Secondary Right</StyleName>
-          <Bounds>233,26,70,20</Bounds>
+          <StyleName>Secondary</StyleName>
+          <Bounds>36,68,70,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>9</Anchor>
+          <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="lastservice">
-          <StyleName>Secondary Right</StyleName>
-          <Bounds>232,50,73,16</Bounds>
+          <StyleName>Secondary</StyleName>
+          <Bounds>110,68,194,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>9</Anchor>
+          <Anchor>13</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
@@ -252,11 +253,11 @@
       <DesignHeight>48</DesignHeight>
       <Name>Ok</Name>
       <Width>320</Width>
-      <Height>72</Height>
+      <Height>92</Height>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary</StyleName>
-          <Bounds>36,26,193,20</Bounds>
+          <Bounds>36,26,268,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -269,15 +270,15 @@
         </CellTemplate>
         <CellTemplate SchemaName="serialnumber">
           <StyleName>Secondary</StyleName>
-          <Bounds>74,50,154,16</Bounds>
+          <Bounds>74,50,230,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="fs_schedulestatus">
           <StyleName>Secondary</StyleName>
-          <Bounds>36,8,267,16</Bounds>
+          <Bounds>36,8,268,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
+          <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="SN#">
           <IsConstant>true</IsConstant>
@@ -288,16 +289,16 @@
         </CellTemplate>
         <CellTemplate SchemaName="Last Service">
           <IsConstant>true</IsConstant>
-          <StyleName>Secondary Right</StyleName>
-          <Bounds>231,26,73,20</Bounds>
+          <StyleName>Secondary</StyleName>
+          <Bounds>36,68,70,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>9</Anchor>
+          <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="lastservice">
-          <StyleName>Secondary Right</StyleName>
-          <Bounds>231,50,73,16</Bounds>
+          <StyleName>Secondary</StyleName>
+          <Bounds>110,68,194,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>9</Anchor>
+          <Anchor>13</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>

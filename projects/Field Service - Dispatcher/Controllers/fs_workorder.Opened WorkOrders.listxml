@@ -63,7 +63,7 @@
         </CellTemplate>
         <CellTemplate SchemaName="statuscode">
           <StyleName>r_gray</StyleName>
-          <Bounds>177,29,137,19</Bounds>
+          <Bounds>226,29,88,19</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
@@ -75,7 +75,7 @@
         </CellTemplate>
         <CellTemplate SchemaName="customerid">
           <StyleName>primary_blue</StyleName>
-          <Bounds>62,29,227,19</Bounds>
+          <Bounds>62,29,163,19</Bounds>
           <CellKind>4</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -83,7 +83,7 @@
           <StyleName>r_gray</StyleName>
           <Bounds>62,50,252,19</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>5</Anchor>
+          <Anchor>9</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>

@@ -6,20 +6,19 @@
       <Bounds>0,0,1,1</Bounds>
       <LegacyConfig>fs_workorder;fs_workorder.Opened WorkOrders</LegacyConfig>
     </DashboardComponent>
-    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="List" Binding="incident;&lt;extra&gt;&lt;views&gt;incident.Opened Incidents&lt;/views&gt;&lt;charts&gt;incident.Opened Incidents&lt;/charts&gt;&lt;actions&gt;162;0;1&lt;/actions&gt;&lt;/extra&gt;" Options="3">
-      <Bounds>1,0,1,1</Bounds>
-      <LegacyConfig>incident;incident.Opened Incidents</LegacyConfig>
-    </DashboardComponent>
     <DashboardComponent xsi:type="DashboardEntityComponent" Kind="List" Binding="fs_workorderschedule;&lt;extra&gt;&lt;views&gt;fs_workorderschedule.This Week Active Work Order Schedules&lt;/views&gt;&lt;charts&gt;fs_workorderschedule.This Week Active Work Order Schedules&lt;/charts&gt;&lt;actions&gt;192;0;1&lt;/actions&gt;&lt;map&gt;&lt;Latitude&gt;40.430611&lt;/Latitude&gt;&lt;Longitude&gt;-86.888231&lt;/Longitude&gt;&lt;Zoom&gt;4&lt;/Zoom&gt;&lt;/map&gt;&lt;/extra&gt;" Options="3">
       <Bounds>2,0,1,2</Bounds>
       <LegacyConfig>fs_workorderschedule;fs_workorderschedule.This Week Active Work Order Schedules</LegacyConfig>
     </DashboardComponent>
-    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="List" Binding="fs_agreement;&lt;extra&gt;&lt;views&gt;fs_agreement.All Agreements&lt;/views&gt;&lt;actions&gt;162;0;0&lt;/actions&gt;&lt;/extra&gt;" Options="2">
-      <Bounds>0,1,1,1</Bounds>
-      <LegacyConfig>fs_agreement;fs_agreement.All Agreements</LegacyConfig>
-    </DashboardComponent>
     <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="fs_workorderschedule;fs_workorderschedule.Resource analysis for This Week Active Work Order Schedules" Options="3">
       <Bounds>1,1,1,1</Bounds>
+    </DashboardComponent>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="List" Binding="incident;&lt;extra&gt;&lt;views&gt;incident.Opened Incidents&lt;/views&gt;&lt;charts&gt;incident.Opened Incidents&lt;/charts&gt;&lt;actions&gt;162;0;1&lt;/actions&gt;&lt;/extra&gt;" Options="3">
+      <Bounds>0,1,1,1</Bounds>
+      <LegacyConfig>incident;incident.Opened Incidents</LegacyConfig>
+    </DashboardComponent>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="fs_workorder;fs_workorder.Over Due Work Orders" Options="3">
+      <Bounds>1,0,1,1</Bounds>
     </DashboardComponent>
   </Items>
 </Dashboard>

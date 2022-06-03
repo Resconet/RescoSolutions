@@ -393,6 +393,7 @@
         <property schema="fs_agreementid"/>
         <property schema="fs_assetid"/>
         <property schema="fs_jobtemplateid"/>
+        <property schema="fs_schedulestatus"/>
         <property schema="fs_validfrom" displayformat="DateOnly"/>
         <property schema="fs_validto" displayformat="DateOnly"/>
         <property schema="id"/>
@@ -524,6 +525,7 @@
         <property schema="createdon"/>
         <property schema="customerid" parentlookup="account"/>
         <property schema="fs_product"/>
+        <property schema="fs_schedulestatus"/>
         <property schema="id"/>
         <property schema="installation" displayformat="DateOnly"/>
         <property schema="lastservice" displayformat="DateOnly"/>
@@ -2074,7 +2076,6 @@
     </entity>
     <entity schema="resco_functionallocation">
       <properties>
-        <property schema="address1_postalcode"/>
         <property schema="createdon"/>
         <property schema="id"/>
         <property schema="modifiedon"/>
@@ -2084,6 +2085,7 @@
         <property schema="resco_address_line1"/>
         <property schema="resco_address_line2"/>
         <property schema="resco_address_line3"/>
+        <property schema="resco_address_postalcode"/>
         <property schema="resco_address_stateorprovince"/>
         <property schema="resco_kind"/>
         <property schema="resco_latitude"/>

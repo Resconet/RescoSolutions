@@ -7,6 +7,7 @@
   <Kind>List</Kind>
   <AutoWideWidth>800</AutoWideWidth>
   <OrderBy>!createdon</OrderBy>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <SerializedBindings>
     <string>fs_agreementid</string>
     <string>fs_assetid</string>
@@ -14,6 +15,7 @@
     <string>id</string>
     <string>fs_jobtemplateid</string>
     <string>name</string>
+    <string>fs_schedulestatus</string>
     <string>statecode</string>
     <string>fs_validfrom</string>
     <string>fs_validto</string>
@@ -21,6 +23,7 @@
     <string>fs_assetid.fs_asset.resco_functionallocationid</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
+  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.fs_schedulestatus&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Picklist:10002&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:1&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.fs_schedulestatus&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Picklist:10001&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:3&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.fs_schedulestatus&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Picklist:10003&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:2&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
   <SerializedTemplates>
     <RowTemplate>
       <DesignWidth>320</DesignWidth>
@@ -35,9 +38,9 @@
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="statecode">
+        <CellTemplate SchemaName="fs_schedulestatus">
           <StyleName>primary</StyleName>
-          <Bounds>198,27,117,20</Bounds>
+          <Bounds>162,27,153,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
@@ -55,7 +58,178 @@
         </CellTemplate>
         <CellTemplate SchemaName="fs_assetid">
           <StyleName>primary_blue</StyleName>
-          <Bounds>3,27,192,21</Bounds>
+          <Bounds>3,27,156,21</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_validfrom">
+          <StyleName>primary</StyleName>
+          <Bounds>3,71,150,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_jobtemplateid">
+          <StyleName>primary</StyleName>
+          <Bounds>3,49,150,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_validto">
+          <StyleName>primary</StyleName>
+          <Bounds>155,71,159,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Needs Attention</Name>
+      <Width>320</Width>
+      <Height>97</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>4,4,154,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_schedulestatus">
+          <StyleName>primary_bakground_orange</StyleName>
+          <Bounds>162,27,153,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_assetid.fs_asset.customerid">
+          <StyleName>primary_blue</StyleName>
+          <Bounds>161,4,154,21</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_assetid.fs_asset.resco_functionallocationid">
+          <StyleName>primary_blue</StyleName>
+          <Bounds>155,49,159,21</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_assetid">
+          <StyleName>primary_blue</StyleName>
+          <Bounds>3,27,156,21</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_validfrom">
+          <StyleName>primary</StyleName>
+          <Bounds>3,71,150,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_jobtemplateid">
+          <StyleName>primary</StyleName>
+          <Bounds>3,49,150,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_validto">
+          <StyleName>primary</StyleName>
+          <Bounds>155,71,159,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Overdue</Name>
+      <Width>320</Width>
+      <Height>97</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>4,4,154,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_schedulestatus">
+          <StyleName>primary_bakground_red</StyleName>
+          <Bounds>162,27,153,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_assetid.fs_asset.customerid">
+          <StyleName>primary_blue</StyleName>
+          <Bounds>161,4,154,21</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_assetid.fs_asset.resco_functionallocationid">
+          <StyleName>primary_blue</StyleName>
+          <Bounds>155,49,159,21</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_assetid">
+          <StyleName>primary_blue</StyleName>
+          <Bounds>3,27,156,21</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_validfrom">
+          <StyleName>primary</StyleName>
+          <Bounds>3,71,150,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_jobtemplateid">
+          <StyleName>primary</StyleName>
+          <Bounds>3,49,150,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_validto">
+          <StyleName>primary</StyleName>
+          <Bounds>155,71,159,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Unscheduled</Name>
+      <Width>320</Width>
+      <Height>97</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>4,4,154,21</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_schedulestatus">
+          <StyleName>primary_bakground_blue</StyleName>
+          <Bounds>162,27,153,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_assetid.fs_asset.customerid">
+          <StyleName>primary_blue</StyleName>
+          <Bounds>161,4,154,21</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_assetid.fs_asset.resco_functionallocationid">
+          <StyleName>primary_blue</StyleName>
+          <Bounds>155,49,159,21</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="fs_assetid">
+          <StyleName>primary_blue</StyleName>
+          <Bounds>3,27,156,21</Bounds>
           <CellKind>4</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -80,4 +254,5 @@
       </SerializedChildren>
     </RowTemplate>
   </SerializedTemplates>
+  <CustomProperties/>
 </EntityList>
