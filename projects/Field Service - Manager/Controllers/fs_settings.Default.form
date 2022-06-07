@@ -2,6 +2,7 @@
   <IsContactForm>false</IsContactForm>
   <EntityName>fs_settings</EntityName>
   <CamelCase>fs_settings</CamelCase>
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
   <PrimaryCommands>!defcmd</PrimaryCommands>
   <ClassBinding/>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
@@ -11,6 +12,11 @@
       <SerializedChildren>
         <DetailItem SchemaName="name"/>
         <DetailItem SchemaName="location_address"/>
+        <DetailItem SchemaName="latitude"/>
+        <DetailItem SchemaName="longitude"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
         <DetailItem SchemaName="start_of_day"/>
         <DetailItem SchemaName="working_day_duration"/>
         <DetailItem SchemaName="first_day_of_week"/>

@@ -797,6 +797,8 @@
     </entity>
     <entity schema="fs_resource">
       <properties>
+        <property schema="address1_latitude"/>
+        <property schema="address1_longitude"/>
         <property schema="createdon"/>
         <property schema="hourlyrate"/>
         <property schema="hourlyrate_base"/>
@@ -886,7 +888,9 @@
         <property schema="createdon"/>
         <property schema="first_day_of_week"/>
         <property schema="id"/>
+        <property schema="latitude"/>
         <property schema="location_address"/>
+        <property schema="longitude"/>
         <property schema="modifiedon"/>
         <property schema="name"/>
         <property schema="start_of_day"/>
