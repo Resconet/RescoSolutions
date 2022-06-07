@@ -58,7 +58,7 @@
       <Binding SchemaName="fs_territory.resourceid.fs_resourceterritory.territoryid"/>
     </FormTab>
     <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
-      <Name>Time-Off List</Name>
+      <Name></Name>
       <Binding SchemaName="fs_time_off.resourceid"/>
     </FormTab>
     <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">

@@ -1,4 +1,4 @@
-﻿<model version="7" Chat="true" publish="10000">
+﻿<model version="7" publish="10000">
   <entities>
     <entity schema="account">
       <properties>
@@ -797,6 +797,8 @@
     </entity>
     <entity schema="fs_resource">
       <properties>
+        <property schema="address1_latitude"/>
+        <property schema="address1_longitude"/>
         <property schema="createdon"/>
         <property schema="hourlyrate"/>
         <property schema="hourlyrate_base"/>
@@ -886,7 +888,9 @@
         <property schema="createdon"/>
         <property schema="first_day_of_week"/>
         <property schema="id"/>
+        <property schema="latitude"/>
         <property schema="location_address"/>
+        <property schema="longitude"/>
         <property schema="modifiedon"/>
         <property schema="name"/>
         <property schema="start_of_day"/>
@@ -2053,18 +2057,39 @@
     </entity>
     <entity schema="resco_favorite">
       <properties>
+        <property schema="createdby"/>
         <property schema="createdon"/>
+        <property schema="modifiedby"/>
         <property schema="modifiedon"/>
         <property schema="ownerid"/>
+        <property schema="owningbusinessunit"/>
         <property schema="resco_favoriteid"/>
         <property schema="resco_name"/>
         <property schema="resco_recordid"/>
         <property schema="resco_target"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="versionnumber"/>
       </properties>
       <indexes>
+        <index schema="idx_resco_favorite_createdby" issystem="true">
+          <fields>
+            <field schema="createdby"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_favorite_modifiedby" issystem="true">
+          <fields>
+            <field schema="modifiedby"/>
+          </fields>
+        </index>
         <index schema="idx_resco_favorite_ownerid" issystem="true">
           <fields>
             <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_favorite_owningbusinessunit" issystem="true">
+          <fields>
+            <field schema="owningbusinessunit"/>
           </fields>
         </index>
         <index schema="idx_resco_favorite_resco_name" issystem="true">
