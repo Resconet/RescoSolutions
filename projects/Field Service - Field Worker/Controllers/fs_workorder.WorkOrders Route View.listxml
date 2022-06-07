@@ -32,6 +32,8 @@
     <string>territoryid</string>
     <string>totalamount</string>
     <string>totalduration</string>
+    <string>customerid.account.address1_latitude</string>
+    <string>customerid.account.address1_longitude</string>
     <string>fs_assetid.fs_asset.assetid.fs_asset.resco_functionallocationid.resco_functionallocation.resco_latitude</string>
     <string>fs_assetid.fs_asset.assetid.fs_asset.resco_functionallocationid.resco_functionallocation.resco_longitude</string>
     <string>fs_assetid.fs_asset.resco_functionallocationid.resco_functionallocation.resco_latitude</string>
@@ -57,13 +59,13 @@
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="fs_assetid.fs_asset.resco_functionallocationid.resco_functionallocation.resco_latitude">
+        <CellTemplate SchemaName="customerid.account.address1_latitude">
           <StyleName>primary</StyleName>
           <Bounds>111,5,193,24</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="fs_assetid.fs_asset.resco_functionallocationid.resco_functionallocation.resco_longitude">
+        <CellTemplate SchemaName="customerid.account.address1_longitude">
           <StyleName>primary</StyleName>
           <Bounds>111,32,191,26</Bounds>
           <CellKind>0</CellKind>
