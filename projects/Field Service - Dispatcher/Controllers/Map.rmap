@@ -18,8 +18,16 @@
       <IsInitial>true</IsInitial>
     </GlobalMapComponent>
     <GlobalMapComponent>
+      <EntityName>fs_resource</EntityName>
+      <ViewName>Resources</ViewName>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
+      <EntityName>fs_resource</EntityName>
+      <ViewName>Resources - Allowed for Scheduling</ViewName>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
       <EntityName>fs_workorder</EntityName>
-      <ViewName>Work Orders Route Schedule</ViewName>
+      <ViewName>WorkOrders Route Schedule</ViewName>
     </GlobalMapComponent>
   </Items>
 </GlobalMap>
