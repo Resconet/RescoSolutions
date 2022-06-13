@@ -4,4 +4,4 @@ ProductSubTitle=for Salesforce.com (v12.2)
 PoweredBy=Powered by Resco.Net
 Icon=Logo.Logo.png
 Website=www.resco.net
-SupportEmail=mobilecrm@resco.net
+SupportEmail=

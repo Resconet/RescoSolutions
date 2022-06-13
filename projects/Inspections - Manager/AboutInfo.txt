@@ -4,4 +4,4 @@ ProductSubTitle=
 PoweredBy=Powered by Resco.Net
 Icon=Logo.logo.png
 Website=www.resco.net
-SupportEmail=mobilecrm@resco.net
+SupportEmail=

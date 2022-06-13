@@ -1,4 +1,4 @@
-﻿<model version="7" Chat="true" publish="10000">
+﻿<model version="8" Chat="true" publish="10000">
   <entities>
     <entity schema="account">
       <properties>
