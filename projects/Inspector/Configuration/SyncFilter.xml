@@ -100,4 +100,12 @@
       </filter>
     </entity>
   </fetch>
+  <fetch version="1.0">
+    <entity name="resco_usersettings">
+      <filter type="or">
+        <condition attribute="resco_kind" operator="like" value="App.%"/>
+        <condition attribute="resco_kind" operator="like" value="Global.%"/>
+      </filter>
+    </entity>
+  </fetch>
 </fetchcollection>

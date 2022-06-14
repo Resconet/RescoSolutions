@@ -25,14 +25,14 @@
         <property schema="websiteurl"/>
       </properties>
       <indexes>
-        <index schema="idx_account_ownerid" issystem="true">
-          <fields>
-            <field schema="ownerid"/>
-          </fields>
-        </index>
         <index schema="idx_account_transactioncurrencyid" issystem="true">
           <fields>
             <field schema="transactioncurrencyid"/>
+          </fields>
+        </index>
+        <index schema="idx_account_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
           </fields>
         </index>
         <index schema="idx_account_name" issystem="true">
@@ -83,14 +83,14 @@
         <property schema="partyid"/>
       </properties>
       <indexes>
-        <index schema="idx_activityparty_activityid" issystem="true">
-          <fields>
-            <field schema="activityid"/>
-          </fields>
-        </index>
         <index schema="idx_activityparty_partyid" issystem="true">
           <fields>
             <field schema="partyid"/>
+          </fields>
+        </index>
+        <index schema="idx_activityparty_activityid" issystem="true">
+          <fields>
+            <field schema="activityid"/>
           </fields>
         </index>
       </indexes>
@@ -112,14 +112,14 @@
         <property schema="subject"/>
       </properties>
       <indexes>
-        <index schema="idx_annotation_ownerid" issystem="true">
-          <fields>
-            <field schema="ownerid"/>
-          </fields>
-        </index>
         <index schema="idx_annotation_objectid" issystem="true">
           <fields>
             <field schema="objectid"/>
+          </fields>
+        </index>
+        <index schema="idx_annotation_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
           </fields>
         </index>
         <index schema="idx_annotation_subject" issystem="true">
@@ -292,14 +292,19 @@
             <field schema="modifiedonbehalfby"/>
           </fields>
         </index>
-        <index schema="idx_resco_devicecontrol_owninguser" issystem="true">
+        <index schema="idx_resco_devicecontrol_owningteam" issystem="true">
           <fields>
-            <field schema="owninguser"/>
+            <field schema="owningteam"/>
           </fields>
         </index>
         <index schema="idx_resco_devicecontrol_createdonbehalfby" issystem="true">
           <fields>
             <field schema="createdonbehalfby"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_devicecontrol_owninguser" issystem="true">
+          <fields>
+            <field schema="owninguser"/>
           </fields>
         </index>
         <index schema="idx_resco_devicecontrol_resco_mobiledeviceid" issystem="true">
@@ -312,24 +317,19 @@
             <field schema="owningbusinessunit"/>
           </fields>
         </index>
-        <index schema="idx_resco_devicecontrol_owningteam" issystem="true">
-          <fields>
-            <field schema="owningteam"/>
-          </fields>
-        </index>
         <index schema="idx_resco_devicecontrol_modifiedby" issystem="true">
           <fields>
             <field schema="modifiedby"/>
           </fields>
         </index>
-        <index schema="idx_resco_devicecontrol_createdby" issystem="true">
-          <fields>
-            <field schema="createdby"/>
-          </fields>
-        </index>
         <index schema="idx_resco_devicecontrol_ownerid" issystem="true">
           <fields>
             <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_devicecontrol_createdby" issystem="true">
+          <fields>
+            <field schema="createdby"/>
           </fields>
         </index>
         <index schema="idx_resco_devicecontrol_resco_deviceid" issystem="true">
@@ -370,9 +370,9 @@
         <property schema="versionnumber"/>
       </properties>
       <indexes>
-        <index schema="idx_resco_mobileaudit_owningteam" issystem="true">
+        <index schema="idx_resco_mobileaudit_ownerid" issystem="true">
           <fields>
-            <field schema="owningteam"/>
+            <field schema="ownerid"/>
           </fields>
         </index>
         <index schema="idx_resco_mobileaudit_owninguser" issystem="true">
@@ -380,14 +380,9 @@
             <field schema="owninguser"/>
           </fields>
         </index>
-        <index schema="idx_resco_mobileaudit_modifiedby" issystem="true">
+        <index schema="idx_resco_mobileaudit_owningbusinessunit" issystem="true">
           <fields>
-            <field schema="modifiedby"/>
-          </fields>
-        </index>
-        <index schema="idx_resco_mobileaudit_ownerid" issystem="true">
-          <fields>
-            <field schema="ownerid"/>
+            <field schema="owningbusinessunit"/>
           </fields>
         </index>
         <index schema="idx_resco_mobileaudit_createdonbehalfby" issystem="true">
@@ -395,19 +390,24 @@
             <field schema="createdonbehalfby"/>
           </fields>
         </index>
-        <index schema="idx_resco_mobileaudit_createdby" issystem="true">
+        <index schema="idx_resco_mobileaudit_modifiedby" issystem="true">
           <fields>
-            <field schema="createdby"/>
-          </fields>
-        </index>
-        <index schema="idx_resco_mobileaudit_owningbusinessunit" issystem="true">
-          <fields>
-            <field schema="owningbusinessunit"/>
+            <field schema="modifiedby"/>
           </fields>
         </index>
         <index schema="idx_resco_mobileaudit_modifiedonbehalfby" issystem="true">
           <fields>
             <field schema="modifiedonbehalfby"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_mobileaudit_createdby" issystem="true">
+          <fields>
+            <field schema="createdby"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_mobileaudit_owningteam" issystem="true">
+          <fields>
+            <field schema="owningteam"/>
           </fields>
         </index>
         <index schema="idx_resco_mobileaudit_resco_entityname" issystem="true">
@@ -454,11 +454,14 @@
         <property schema="resco_defaultvalue"/>
         <property schema="resco_description"/>
         <property schema="resco_displayformat"/>
+        <property schema="resco_enabled"/>
         <property schema="resco_icon"/>
         <property schema="resco_index"/>
         <property schema="resco_isseparator"/>
         <property schema="resco_kind"/>
         <property schema="resco_label"/>
+        <property schema="resco_layout"/>
+        <property schema="resco_localization"/>
         <property schema="resco_max"/>
         <property schema="resco_min"/>
         <property schema="resco_name"/>
@@ -470,9 +473,11 @@
         <property schema="resco_rawdatevalue"/>
         <property schema="resco_rawidvalue"/>
         <property schema="resco_rawnumericvalue"/>
+        <property schema="resco_reportingproperties"/>
         <property schema="resco_required"/>
         <property schema="resco_reusefromprevious"/>
         <property schema="resco_rules"/>
+        <property schema="resco_score"/>
         <property schema="resco_showonreport"/>
         <property schema="resco_style"/>
         <property schema="resco_value"/>
@@ -481,14 +486,14 @@
         <property schema="statuscode"/>
       </properties>
       <indexes>
+        <index schema="idx_resco_question_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
         <index schema="idx_resco_question_createdby" issystem="true">
           <fields>
             <field schema="createdby"/>
-          </fields>
-        </index>
-        <index schema="idx_resco_question_resco_questiongroupid" issystem="true">
-          <fields>
-            <field schema="resco_questiongroupid"/>
           </fields>
         </index>
         <index schema="idx_resco_question_resco_questionnaireid" issystem="true">
@@ -496,9 +501,9 @@
             <field schema="resco_questionnaireid"/>
           </fields>
         </index>
-        <index schema="idx_resco_question_ownerid" issystem="true">
+        <index schema="idx_resco_question_resco_questiongroupid" issystem="true">
           <fields>
-            <field schema="ownerid"/>
+            <field schema="resco_questiongroupid"/>
           </fields>
         </index>
         <index schema="idx_resco_question_resco_name" issystem="true">
@@ -515,24 +520,28 @@
         <property schema="modifiedon"/>
         <property schema="ownerid"/>
         <property schema="owningbusinessunit"/>
+        <property schema="resco_complete"/>
         <property schema="resco_description"/>
         <property schema="resco_expanded"/>
         <property schema="resco_index"/>
         <property schema="resco_label"/>
+        <property schema="resco_layout"/>
+        <property schema="resco_localization"/>
         <property schema="resco_name"/>
         <property schema="resco_questiongroupid"/>
         <property schema="resco_questionnaireid"/>
         <property schema="resco_repeatconfig"/>
         <property schema="resco_repeatindex"/>
+        <property schema="resco_reportingproperties"/>
         <property schema="resco_rules"/>
         <property schema="resco_templategroupid"/>
         <property schema="resco_visible"/>
         <property schema="statuscode"/>
       </properties>
       <indexes>
-        <index schema="idx_resco_questiongroup_ownerid" issystem="true">
+        <index schema="idx_resco_questiongroup_resco_templategroupid" issystem="true">
           <fields>
-            <field schema="ownerid"/>
+            <field schema="resco_templategroupid"/>
           </fields>
         </index>
         <index schema="idx_resco_questiongroup_createdby" issystem="true">
@@ -540,19 +549,19 @@
             <field schema="createdby"/>
           </fields>
         </index>
-        <index schema="idx_resco_questiongroup_owningbusinessunit" issystem="true">
-          <fields>
-            <field schema="owningbusinessunit"/>
-          </fields>
-        </index>
         <index schema="idx_resco_questiongroup_resco_questionnaireid" issystem="true">
           <fields>
             <field schema="resco_questionnaireid"/>
           </fields>
         </index>
-        <index schema="idx_resco_questiongroup_resco_templategroupid" issystem="true">
+        <index schema="idx_resco_questiongroup_owningbusinessunit" issystem="true">
           <fields>
-            <field schema="resco_templategroupid"/>
+            <field schema="owningbusinessunit"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_questiongroup_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
           </fields>
         </index>
         <index schema="idx_resco_questiongroup_resco_name" issystem="true">
@@ -569,13 +578,18 @@
         <property schema="modifiedon"/>
         <property schema="ownerid"/>
         <property schema="resco_archivedon"/>
+        <property schema="resco_autoreport"/>
         <property schema="resco_completionstatus"/>
         <property schema="resco_description"/>
+        <property schema="resco_duration"/>
+        <property schema="resco_featureversion"/>
         <property schema="resco_folder"/>
         <property schema="resco_folderid"/>
         <property schema="resco_issnippet"/>
         <property schema="resco_istemplate"/>
         <property schema="resco_languagecode"/>
+        <property schema="resco_layout"/>
+        <property schema="resco_localization"/>
         <property schema="resco_name"/>
         <property schema="resco_options"/>
         <property schema="resco_publishedon"/>
@@ -584,26 +598,30 @@
         <property schema="resco_regardingid"/>
         <property schema="resco_regardingidlabel"/>
         <property schema="resco_regardingidname"/>
+        <property schema="resco_reportingproperties"/>
+        <property schema="resco_result"/>
         <property schema="resco_reusefetch"/>
         <property schema="resco_reusefromprevious"/>
         <property schema="resco_rules"/>
+        <property schema="resco_score"/>
         <property schema="resco_script"/>
         <property schema="resco_serializedanswers"/>
         <property schema="resco_styles"/>
+        <property schema="resco_templatedependent"/>
         <property schema="resco_templateid"/>
         <property schema="resco_version"/>
         <property schema="resco_versionname"/>
         <property schema="statuscode"/>
       </properties>
       <indexes>
+        <index schema="idx_resco_questionnaire_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
         <index schema="idx_resco_questionnaire_resco_templateid" issystem="true">
           <fields>
             <field schema="resco_templateid"/>
-          </fields>
-        </index>
-        <index schema="idx_resco_questionnaire_resco_folderid" issystem="true">
-          <fields>
-            <field schema="resco_folderid"/>
           </fields>
         </index>
         <index schema="idx_resco_questionnaire_createdby" issystem="true">
@@ -611,12 +629,35 @@
             <field schema="createdby"/>
           </fields>
         </index>
-        <index schema="idx_resco_questionnaire_ownerid" issystem="true">
+        <index schema="idx_resco_questionnaire_resco_folderid" issystem="true">
+          <fields>
+            <field schema="resco_folderid"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_questionnaire_resco_name" issystem="true">
+          <fields>
+            <field schema="resco_name"/>
+          </fields>
+        </index>
+      </indexes>
+    </entity>
+    <entity schema="resco_usersettings">
+      <properties>
+        <property schema="createdon"/>
+        <property schema="modifiedon"/>
+        <property schema="ownerid"/>
+        <property schema="resco_kind"/>
+        <property schema="resco_name"/>
+        <property schema="resco_usersettingsid"/>
+        <property schema="resco_value"/>
+      </properties>
+      <indexes>
+        <index schema="idx_resco_usersettings_ownerid" issystem="true">
           <fields>
             <field schema="ownerid"/>
           </fields>
         </index>
-        <index schema="idx_resco_questionnaire_resco_name" issystem="true">
+        <index schema="idx_resco_usersettings_resco_name" issystem="true">
           <fields>
             <field schema="resco_name"/>
           </fields>
