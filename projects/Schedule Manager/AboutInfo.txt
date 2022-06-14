@@ -4,4 +4,4 @@ ProductSubTitle=For Microsoft Dynamics CRM
 PoweredBy=Powered by Resco.Net
 Icon=Logo.Logo.png
 Website=www.resco.net
-SupportEmail=mobilecrm@resco.net
+SupportEmail=
