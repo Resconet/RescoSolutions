@@ -50,67 +50,60 @@
       <DesignWidth>320</DesignWidth>
       <DesignHeight>48</DesignHeight>
       <Name>Default</Name>
-      <Width>400</Width>
-      <Height>67</Height>
+      <Width>320</Width>
+      <Height>90</Height>
       <SerializedChildren>
         <CellTemplate SchemaName="#PrimaryName">
           <StyleName>primary</StyleName>
-          <Bounds>2,2,398,25</Bounds>
+          <Bounds>8,2,308,25</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>5</Anchor>
+          <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="extendedamount">
           <StyleName>gray</StyleName>
-          <Bounds>319,47,81,20</Bounds>
+          <Bounds>8,67,90,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="quantity">
+          <StyleName>input</StyleName>
+          <Bounds>198,57,70,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="quantity">
-          <StyleName>gray</StyleName>
-          <Bounds>160,47,53,20</Bounds>
-          <CellKind>0</CellKind>
-          <Anchor>5</Anchor>
-        </CellTemplate>
         <CellTemplate SchemaName="Qty:">
           <IsConstant>true</IsConstant>
-          <StyleName>gray</StyleName>
-          <Bounds>160,27,54,20</Bounds>
+          <StyleName>gray_center</StyleName>
+          <Bounds>198,27,70,20</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>5</Anchor>
+          <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="#PricePerUnitLabel">
           <StyleName>gray</StyleName>
-          <Bounds>2,47,81,20</Bounds>
-          <CellKind>0</CellKind>
-          <Anchor>5</Anchor>
-        </CellTemplate>
-        <CellTemplate SchemaName="Price Per Unit:">
-          <IsConstant>true</IsConstant>
-          <StyleName>gray</StyleName>
-          <Bounds>2,27,81,20</Bounds>
+          <Bounds>8,27,90,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="Minus">
           <IsConstant>true</IsConstant>
           <StyleName>Minus</StyleName>
-          <Bounds>112,27,42,40</Bounds>
+          <Bounds>156,47,42,40</Bounds>
           <CellKind>7</CellKind>
-          <Anchor>5</Anchor>
+          <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="Plus">
           <IsConstant>true</IsConstant>
           <StyleName>Plus</StyleName>
-          <Bounds>216,27,45,39</Bounds>
+          <Bounds>268,47,42,40</Bounds>
           <CellKind>7</CellKind>
-          <Anchor>5</Anchor>
+          <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="Total Amount:">
           <IsConstant>true</IsConstant>
           <StyleName>gray</StyleName>
-          <Bounds>318,27,81,20</Bounds>
+          <Bounds>8,47,90,20</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>9</Anchor>
+          <Anchor>5</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
