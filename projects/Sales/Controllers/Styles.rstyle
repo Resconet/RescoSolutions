@@ -855,5 +855,34 @@
         </Property>
       </Properties>
     </Style>
+    <Style Name="input" Style="gray" Type="TextCell">
+      <Properties>
+        <Property Name="EditorCornerRadius" Type="System.Int32">
+          <Value>6</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="HorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-13948117</Value>
+        </Property>
+        <Property Name="BackColor" Type="System.Int32">
+          <Value>-1</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="gray_center" Style="gray" Type="TextCell">
+      <Properties>
+        <Property Name="EditorCornerRadius" Type="System.Int32">
+          <Value>6</Value>
+        </Property>
+        <Property Name="HorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+      </Properties>
+    </Style>
   </Styles>
 </GlobalStyles>
