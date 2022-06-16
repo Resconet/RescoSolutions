@@ -123,6 +123,25 @@
     <Country>address1_country</Country>
     <StateOrProvince>address1_stateorprovince</StateOrProvince>
   </Address>
+  <ResourceAddressGPS>
+    <Latitude>address1_latitude</Latitude>
+    <Longitude>address1_longitude</Longitude>
+  </ResourceAddressGPS>
+  <ResourceCustomFilters>
+    <filterBySkills>
+      <enabled>1</enabled>
+      <applied>1</applied>
+    </filterBySkills>
+    <filterByTerritories>
+      <enabled>1</enabled>
+      <applied>1</applied>
+    </filterByTerritories>
+    <filterByMaxDistance>
+      <enabled>1</enabled>
+      <maxDistanceValue>5</maxDistanceValue>
+    </filterByMaxDistance>
+    <useMiles>1</useMiles>
+  </ResourceCustomFilters>
   <FrequentVisits enabled="0" visits="1" frequency="7" minDaysBetweenVisits="1"/>
   <Territory>
     <Entity>fs_territory</Entity>
