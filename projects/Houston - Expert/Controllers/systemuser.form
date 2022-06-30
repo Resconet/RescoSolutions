@@ -10,7 +10,7 @@
     <FormTab xsi:type="DetailTab" flexiHeader="0" FlexiExpandVisibility="1" NameModified="0" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\systemuser@2x.png" IsIconNameReadOnly="0">
       <Name>General</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="image1" image="true" imageActions="12430" Style="HoustonUserImage">
+        <DetailItem SchemaName="image1" image="true" imageActions="6" Style="HoustonUserImage">
           <IsConstant>true</IsConstant>
         </DetailItem>
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
