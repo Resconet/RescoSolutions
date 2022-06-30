@@ -8,7 +8,7 @@
     <FormTab xsi:type="DetailTab" flexiHeader="0" FlexiExpandVisibility="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>General</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="image1" image="true" imageActions="14" Style="HoustonEquipmentImage">
+        <DetailItem SchemaName="image1" image="true" imageActions="6" Style="HoustonEquipmentImage">
           <IsConstant>true</IsConstant>
         </DetailItem>
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
