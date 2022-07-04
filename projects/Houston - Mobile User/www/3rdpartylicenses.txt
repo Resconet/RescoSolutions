@@ -479,7 +479,7 @@ SOFTWARE.
 
 @resconet/crm-data
 
-@resconet/crm-service
+@resconet/crm-service-legacy
 
 @resconet/houston-service
 
