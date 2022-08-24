@@ -487,6 +487,8 @@ SOFTWARE.
 
 @resconet/houston-ui
 
+@resconet/houston-ui-pdf
+
 @resconet/jsbridge
 MIT
 
