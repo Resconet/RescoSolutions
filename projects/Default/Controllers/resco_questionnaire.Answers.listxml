@@ -2,7 +2,7 @@
 <EntityList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Attributes>
     <EntityName>resco_questionnaire</EntityName>
-    <CamelCase>resco_Questionnaire</CamelCase>
+    <CamelCase>resco_questionnaire</CamelCase>
     <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
   </Attributes>
   <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
@@ -22,16 +22,16 @@
   <SerializedBindings>
     <string>createdon</string>
     <string>resco_description</string>
+    <string>resco_folder</string>
+    <string>resco_questionnaireid</string>
     <string>resco_istemplate</string>
     <string>resco_languagecode</string>
     <string>modifiedon</string>
     <string>resco_name</string>
-    <string>ownerid</string>
-    <string>resco_questionnaireid</string>
     <string>resco_rules</string>
     <string>resco_script</string>
-    <string>statuscode</string>
     <string>resco_styles</string>
+    <string>statuscode</string>
     <string>resco_templateid</string>
   </SerializedBindings>
   <SerializedTemplates>
@@ -54,6 +54,8 @@
       </SerializedChildren>
     </RowTemplate>
   </SerializedTemplates>
+  <CustomProperties />
+  <SerializedChildren />
   <Height>0</Height>
   <IFrameProvidesDS>false</IFrameProvidesDS>
 </EntityList>

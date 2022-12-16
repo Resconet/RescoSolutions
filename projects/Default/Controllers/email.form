@@ -3,16 +3,17 @@
   <EntityName>email</EntityName>
   <CamelCase>Email</CamelCase>
   <PrimaryCommands>!defcmd</PrimaryCommands>
+  <SharedVariableNames/>
   <ClassBinding/>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
   <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab" flexiHeader="2">
+    <FormTab xsi:type="DetailTab">
       <Name>General</Name>
       <SerializedChildren>
         <DetailItem SchemaName="from"/>
         <DetailItem SchemaName="to"/>
         <DetailItem SchemaName="cc"/>
-        <DetailItem SchemaName="subject"/>
+        <DetailItem SchemaName="name"/>
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
           <IsConstant>true</IsConstant>
         </DetailItem>
@@ -20,17 +21,9 @@
         <DetailItem SchemaName="description"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="DetailTab" flexiHeader="2">
-      <Name>Details</Name>
-      <SerializedChildren>
-        <DetailItem SchemaName="prioritycode"/>
-        <DetailItem SchemaName="directioncode"/>
-        <DetailItem SchemaName="scheduledend"/>
-      </SerializedChildren>
-    </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="4" flexiHeader="2">
-      <Name>Notes List</Name>
-      <Binding SchemaName="annotation.objectid"/>
+    <FormTab xsi:type="AssociatedTab">
+      <Name>E-Mail Attachments List</Name>
+      <Binding SchemaName="activitymimeattachment.objectid"/>
     </FormTab>
   </SerializedChildrenV2>
 </EntityForm>
