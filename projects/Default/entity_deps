@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<string>salesorder,salesorderdetail
+salesorderdetail,productpricelevel
+quote,quotedetail
+quotedetail,productpricelevel
+invoice,invoicedetail
+invoicedetail,productpricelevel
+opportunityproduct,productpricelevel
+productpricelevel,pricelevel,product,uom
+</string>

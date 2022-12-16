@@ -1,64 +1,115 @@
-﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="3" fullscreen="0" resize="0" version="2">
+<?xml version="1.0"?>
+<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
   <IsContactForm>false</IsContactForm>
   <EntityName>lead</EntityName>
-  <CamelCase>Lead</CamelCase>
-  <PrimaryCommands>!defcmd</PrimaryCommands>
-  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <CamelCase>lead</CamelCase>
+  <ClassBinding />
+  <SerializedChildren />
   <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab" flexiHeader="2">
+    <FormTab xsi:type="DetailTab">
       <Name>General</Name>
+      <CanRename>true</CanRename>
       <SerializedChildren>
-        <DetailItem SchemaName="subject"/>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
+        <DetailItem SchemaName="subject">
+          <IsConstant>false</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="companyname"/>
-        <DetailItem SchemaName="lastname"/>
-        <DetailItem SchemaName="firstname"/>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
+        <DetailItem xsi:type="SeparatorDetailItem">
+          <IsConstant>false</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="emailaddress1"/>
-        <DetailItem SchemaName="mobilephone"/>
-        <DetailItem SchemaName="telephone1"/>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
+        <DetailItem SchemaName="companyname">
+          <IsConstant>false</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="estimatedamount"/>
-        <DetailItem SchemaName="estimatedclosedate"/>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
+        <DetailItem SchemaName="lastname">
+          <IsConstant>false</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="leadqualitycode"/>
+        <DetailItem SchemaName="firstname">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="emailaddress1">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="mobilephone">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="telephone1">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="estimatedamount">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="estimatedclosedate">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="leadqualitycode">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="DetailTab" flexiHeader="2">
+    <FormTab xsi:type="DetailTab">
       <Name>Address</Name>
+      <CanRename>true</CanRename>
       <SerializedChildren>
-        <DetailItem SchemaName="address1_line1"/>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
+        <DetailItem SchemaName="address1_line1">
+          <IsConstant>false</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="address1_city"/>
-        <DetailItem SchemaName="address1_postalcode"/>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
+        <DetailItem SchemaName="address1_line2">
+          <IsConstant>false</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="address1_stateorprovince"/>
-        <DetailItem SchemaName="address1_country"/>
+        <DetailItem SchemaName="address1_line3">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address1_city">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address1_postalcode">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address1_stateorprovince">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address1_country">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="MapTab" flexi="0" flexiHeader="0">
-      <Name>Map</Name>
-      <CoordinatesBinding>address1_latitude;address1_longitude</CoordinatesBinding>
+    <FormTab xsi:type="AssociatedTab">
+      <Name>Invalid</Name>
+      <CanRename>false</CanRename>
+      <LogicalName>activity.regardingobjectid</LogicalName>
+      <Binding SchemaName="activity.regardingobjectid">
+        <IsConstant>false</IsConstant>
+      </Binding>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="4" flexiHeader="2">
-      <Name>Activity List</Name>
-      <Binding SchemaName="activity.regardingobjectid"/>
-    </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="4" flexiHeader="2">
-      <Name>Notes List</Name>
-      <Binding SchemaName="annotation.objectid"/>
+    <FormTab xsi:type="AssociatedTab">
+      <Name>Invalid</Name>
+      <CanRename>false</CanRename>
+      <LogicalName>annotation.objectid</LogicalName>
+      <Binding SchemaName="annotation.objectid">
+        <IsConstant>false</IsConstant>
+      </Binding>
     </FormTab>
   </SerializedChildrenV2>
+  <Navigation>
+    <Name>Navigation</Name>
+    <CanRename>true</CanRename>
+    <SerializedChildren />
+  </Navigation>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedContactInfo />
 </EntityForm>

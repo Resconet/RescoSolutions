@@ -1,31 +1,52 @@
-﻿<EntityForm xsi:dummy="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+<?xml version="1.0" encoding="utf-8"?>
+<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
   <IsContactForm>false</IsContactForm>
   <EntityName>opportunityproduct</EntityName>
   <CamelCase>OpportunityProduct</CamelCase>
-  <PrimaryCommands>!defcmd</PrimaryCommands>
-  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedChildren />
   <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab" flexiHeader="2">
+    <FormTab xsi:type="DetailTab">
       <Name>General</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="productid"/>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
+        <DetailItem SchemaName="productid">
+          <IsConstant>false</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="ispriceoverridden"/>
-        <DetailItem SchemaName="priceperunit"/>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
+        <DetailItem xsi:type="SeparatorDetailItem">
+          <IsConstant>false</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="volumediscountamount"/>
-        <DetailItem SchemaName="quantity"/>
-        <DetailItem SchemaName="manualdiscountamount"/>
-        <DetailItem SchemaName="tax"/>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
+        <DetailItem SchemaName="ispriceoverridden">
+          <IsConstant>false</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="extendedamount"/>
+        <DetailItem SchemaName="priceperunit">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="volumediscountamount">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="quantity">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="manualdiscountamount">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="tax">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="extendedamount">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
       </SerializedChildren>
     </FormTab>
   </SerializedChildrenV2>
+  <Navigation>
+    <Name>Navigation</Name>
+    <SerializedChildren />
+  </Navigation>
+  <SerializedContactInfo />
 </EntityForm>

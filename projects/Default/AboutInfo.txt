@@ -1,6 +1,6 @@
 ﻿Manufacturer=Resco
 ProductTitle=Sales
-ProductSubTitle=For Microsoft Dynamics CRM
+ProductSubTitle=for Resco Cloud
 PoweredBy=Powered by Resco.Net
 Icon=Logo.Logo.png
 Website=www.resco.net
