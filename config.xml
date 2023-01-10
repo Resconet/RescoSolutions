@@ -18,10 +18,6 @@
 			<mobileprojecttemplate id="resco:XrmCityCitizen" displayname="City - Citizen" target="Xrm" url="config/mobileprojects/xrm/citycitizen.zip.xml" />
 			<mobileprojecttemplate id="resco:XrmInspector" displayname="Inspections - Inspector" target="Xrm" url="config/mobileprojects/xrm/inspector.zip.xml" />
 			<mobileprojecttemplate id="resco:XrmInspection" displayname="Inspections - Manager" target="Xrm" url="config/mobileprojects/xrm/defaultinspection.zip.xml" />
-			<mobileprojecttemplate id="resco:XrmHoustonAdmin" displayname="Houston - Administrator" target="Xrm" url="config/mobileprojects/xrm/houstonadmin.zip.xml" />
-			<mobileprojecttemplate id="resco:XrmHoustonExpert" displayname="Houston - Expert" target="Xrm" url="config/mobileprojects/xrm/houstonexpert.zip.xml" />
-			<mobileprojecttemplate id="resco:XrmHoustonKnowledgeManager" displayname="Houston - Knowledge Manager" target="Xrm" url="config/mobileprojects/xrm/houstonknowledgemanager.zip.xml" />
-			<mobileprojecttemplate id="resco:XrmHoustonMobileUser" displayname="Houston - Mobile User" target="Xrm" url="config/mobileprojects/xrm/houstonmobileuser.zip.xml" />
 			<mobileprojecttemplate id="resco:XrmRoutes" displayname="Routes - Default" target="Xrm" url="config/mobileprojects/xrm/routesdefault.zip.xml" />
 			<mobileprojecttemplate id="resco:XrmPortal:Dark" displayname="Portal - Dark" target="Xrm" type="Portal" url="config/mobileprojects/xrm/portal-dark.zip.xml" />
 			<mobileprojecttemplate id="resco:XrmPortal:Light" displayname="Portal - Light" target="Xrm" type="Portal" url="config/mobileprojects/xrm/portal-light.zip.xml" />
