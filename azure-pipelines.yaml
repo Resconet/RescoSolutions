@@ -43,13 +43,19 @@ jobs:
 
   - publish: $(Build.ArtifactStagingDirectory)
     displayName: Publish Artifact
-    condition: and(succeeded(), not(startsWith(variables['Build.SourceBranch'], 'refs/pull/')))
+    enabled: ${{ ne(variables['Build.Reason'], 'PullRequest') }}
     artifact: mobile-projects
 
   - bash: |
-      version=$(echo $(Build.SourceBranch) | cut -d / -f 3)
+      if [[ $(Build.SourceBranch) == refs/tags/* ]]; then
+        version=$(echo $(Build.SourceBranch) | cut -d / -f 3)
+        owner="Release $version"
+      else
+        branch=$(echo $(Build.SourceBranch) | cut -d / -f 3-)
+        owner="Branch $branch"
+      fi
       PAT=$(echo -n :$(System.AccessToken) | base64 -w 0)
       URL=$(System.CollectionUri)$(System.TeamProject)/_apis/build/retention/leases?api-version=6.0-preview.1
-      curl -H "Content-Type: application/json" -H "Authorization: Basic $PAT" $URL --data "[{'daysValid': 90, 'definitionId': $(System.DefinitionId), 'ownerId': 'RM: Release $version', 'protectPipeline': false, 'runId': $(Build.BuildId)}]"
+      curl -H "Content-Type: application/json" -H "Authorization: Basic $PAT" $URL --data "[{'daysValid': 90, 'definitionId': $(System.DefinitionId), 'ownerId': 'RM: $owner', 'protectPipeline': false, 'runId': $(Build.BuildId)}]"
     displayName: Lease Build
-    condition: and(succeeded(), startsWith(variables['Build.SourceBranch'], 'refs/tags/'))
+    enabled: ${{ eq(variables['Build.Reason'], 'BatchedCI') }}
