@@ -56,14 +56,14 @@
             <field schema="modifiedby"/>
           </fields>
         </index>
-        <index schema="idx_resco_audit_resco_regardingobjectid" issystem="true">
-          <fields>
-            <field schema="resco_regardingobjectid"/>
-          </fields>
-        </index>
         <index schema="idx_resco_audit_name" issystem="true">
           <fields>
             <field schema="name"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_audit_resco_regardingobjectid" issystem="true">
+          <fields>
+            <field schema="resco_regardingobjectid"/>
           </fields>
         </index>
       </indexes>
@@ -112,14 +112,14 @@
             <field schema="owningbusinessunit"/>
           </fields>
         </index>
-        <index schema="idx_resco_devicecontrol_resco_mobiledeviceid" issystem="true">
-          <fields>
-            <field schema="resco_mobiledeviceid"/>
-          </fields>
-        </index>
         <index schema="idx_resco_devicecontrol_resco_deviceid" issystem="true">
           <fields>
             <field schema="resco_deviceid"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_devicecontrol_resco_mobiledeviceid" issystem="true">
+          <fields>
+            <field schema="resco_mobiledeviceid"/>
           </fields>
         </index>
       </indexes>
@@ -336,6 +336,11 @@
             <field schema="lastmodifiedbyid"/>
           </fields>
         </index>
+        <index schema="idx_sf_account_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
         <index schema="idx_sf_account_ownerid2" issystem="true">
           <fields>
             <field schema="ownerid2"/>
@@ -349,11 +354,6 @@
         <index schema="idx_sf_account_transactioncurrencyid" issystem="true">
           <fields>
             <field schema="transactioncurrencyid"/>
-          </fields>
-        </index>
-        <index schema="idx_sf_account_name" issystem="true">
-          <fields>
-            <field schema="name"/>
           </fields>
         </index>
       </indexes>
@@ -392,6 +392,11 @@
             <field schema="contactid"/>
           </fields>
         </index>
+        <index schema="idx_sf_asset_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
         <index schema="idx_sf_asset_parentid" issystem="true">
           <fields>
             <field schema="parentid"/>
@@ -412,11 +417,6 @@
             <field schema="transactioncurrencyid"/>
           </fields>
         </index>
-        <index schema="idx_sf_asset_name" issystem="true">
-          <fields>
-            <field schema="name"/>
-          </fields>
-        </index>
       </indexes>
     </entity>
     <entity schema="sf_assignedresource">
@@ -435,6 +435,11 @@
         <property schema="serviceresourceid"/>
       </properties>
       <indexes>
+        <index schema="idx_sf_assignedresource_assignedresourcenumber" issystem="true">
+          <fields>
+            <field schema="assignedresourcenumber"/>
+          </fields>
+        </index>
         <index schema="idx_sf_assignedresource_createdbyid" issystem="true">
           <fields>
             <field schema="createdbyid"/>
@@ -455,11 +460,6 @@
             <field schema="serviceresourceid"/>
           </fields>
         </index>
-        <index schema="idx_sf_assignedresource_assignedresourcenumber" issystem="true">
-          <fields>
-            <field schema="assignedresourcenumber"/>
-          </fields>
-        </index>
       </indexes>
     </entity>
     <entity schema="sf_attachment">
@@ -478,6 +478,11 @@
         <property schema="parentid"/>
       </properties>
       <indexes>
+        <index schema="idx_sf_attachment_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
         <index schema="idx_sf_attachment_ownerid2" issystem="true">
           <fields>
             <field schema="ownerid2"/>
@@ -486,11 +491,6 @@
         <index schema="idx_sf_attachment_parentid" issystem="true">
           <fields>
             <field schema="parentid"/>
-          </fields>
-        </index>
-        <index schema="idx_sf_attachment_name" issystem="true">
-          <fields>
-            <field schema="name"/>
           </fields>
         </index>
       </indexes>
@@ -531,6 +531,11 @@
             <field schema="assetid"/>
           </fields>
         </index>
+        <index schema="idx_sf_case_casenumber" issystem="true">
+          <fields>
+            <field schema="casenumber"/>
+          </fields>
+        </index>
         <index schema="idx_sf_case_contactid" issystem="true">
           <fields>
             <field schema="contactid"/>
@@ -544,11 +549,6 @@
         <index schema="idx_sf_case_parentid" issystem="true">
           <fields>
             <field schema="parentid"/>
-          </fields>
-        </index>
-        <index schema="idx_sf_case_casenumber" issystem="true">
-          <fields>
-            <field schema="casenumber"/>
           </fields>
         </index>
       </indexes>
@@ -622,6 +622,11 @@
             <field schema="masterrecordid"/>
           </fields>
         </index>
+        <index schema="idx_sf_contact_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
         <index schema="idx_sf_contact_ownerid2" issystem="true">
           <fields>
             <field schema="ownerid2"/>
@@ -630,11 +635,6 @@
         <index schema="idx_sf_contact_reportstoid" issystem="true">
           <fields>
             <field schema="reportstoid"/>
-          </fields>
-        </index>
-        <index schema="idx_sf_contact_name" issystem="true">
-          <fields>
-            <field schema="name"/>
           </fields>
         </index>
       </indexes>
@@ -831,6 +831,11 @@
             <field schema="lastmodifiedbyid"/>
           </fields>
         </index>
+        <index schema="idx_sf_location_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
         <index schema="idx_sf_location_ownerid2" issystem="true">
           <fields>
             <field schema="ownerid2"/>
@@ -849,11 +854,6 @@
         <index schema="idx_sf_location_visitoraddressid" issystem="true">
           <fields>
             <field schema="visitoraddressid"/>
-          </fields>
-        </index>
-        <index schema="idx_sf_location_name" issystem="true">
-          <fields>
-            <field schema="name"/>
           </fields>
         </index>
       </indexes>
@@ -929,6 +929,11 @@
         <property schema="usestandardprice"/>
       </properties>
       <indexes>
+        <index schema="idx_sf_pricebookentry_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
         <index schema="idx_sf_pricebookentry_pricebook2id" issystem="true">
           <fields>
             <field schema="pricebook2id"/>
@@ -942,11 +947,6 @@
         <index schema="idx_sf_pricebookentry_transactioncurrencyid" issystem="true">
           <fields>
             <field schema="transactioncurrencyid"/>
-          </fields>
-        </index>
-        <index schema="idx_sf_pricebookentry_name" issystem="true">
-          <fields>
-            <field schema="name"/>
           </fields>
         </index>
       </indexes>
@@ -1016,6 +1016,11 @@
             <field schema="product2id"/>
           </fields>
         </index>
+        <index schema="idx_sf_productconsumed_productconsumednumber" issystem="true">
+          <fields>
+            <field schema="productconsumednumber"/>
+          </fields>
+        </index>
         <index schema="idx_sf_productconsumed_productitemid" issystem="true">
           <fields>
             <field schema="productitemid"/>
@@ -1029,11 +1034,6 @@
         <index schema="idx_sf_productconsumed_workorderlineitemid" issystem="true">
           <fields>
             <field schema="workorderlineitemid"/>
-          </fields>
-        </index>
-        <index schema="idx_sf_productconsumed_productconsumednumber" issystem="true">
-          <fields>
-            <field schema="productconsumednumber"/>
           </fields>
         </index>
       </indexes>
@@ -1156,6 +1156,11 @@
             <field schema="ownerid2"/>
           </fields>
         </index>
+        <index schema="idx_sf_productrequest_productrequestnumber" issystem="true">
+          <fields>
+            <field schema="productrequestnumber"/>
+          </fields>
+        </index>
         <index schema="idx_sf_productrequest_sourcelocationid" issystem="true">
           <fields>
             <field schema="sourcelocationid"/>
@@ -1169,11 +1174,6 @@
         <index schema="idx_sf_productrequest_workorderlineitemid" issystem="true">
           <fields>
             <field schema="workorderlineitemid"/>
-          </fields>
-        </index>
-        <index schema="idx_sf_productrequest_productrequestnumber" issystem="true">
-          <fields>
-            <field schema="productrequestnumber"/>
           </fields>
         </index>
       </indexes>
@@ -1250,6 +1250,11 @@
             <field schema="product2id"/>
           </fields>
         </index>
+        <index schema="idx_sf_productrequestlineitem_productrequestlineitemnumber" issystem="true">
+          <fields>
+            <field schema="productrequestlineitemnumber"/>
+          </fields>
+        </index>
         <index schema="idx_sf_productrequestlineitem_sourcelocationid" issystem="true">
           <fields>
             <field schema="sourcelocationid"/>
@@ -1263,11 +1268,6 @@
         <index schema="idx_sf_productrequestlineitem_workorderlineitemid" issystem="true">
           <fields>
             <field schema="workorderlineitemid"/>
-          </fields>
-        </index>
-        <index schema="idx_sf_productrequestlineitem_productrequestlineitemnumber" issystem="true">
-          <fields>
-            <field schema="productrequestlineitemnumber"/>
           </fields>
         </index>
       </indexes>
@@ -1388,6 +1388,11 @@
         <property schema="type"/>
       </properties>
       <indexes>
+        <index schema="idx_sf_resourceabsence_absencenumber" issystem="true">
+          <fields>
+            <field schema="absencenumber"/>
+          </fields>
+        </index>
         <index schema="idx_sf_resourceabsence_createdbyid" issystem="true">
           <fields>
             <field schema="createdbyid"/>
@@ -1401,11 +1406,6 @@
         <index schema="idx_sf_resourceabsence_resourceid" issystem="true">
           <fields>
             <field schema="resourceid"/>
-          </fields>
-        </index>
-        <index schema="idx_sf_resourceabsence_absencenumber" issystem="true">
-          <fields>
-            <field schema="absencenumber"/>
           </fields>
         </index>
       </indexes>
@@ -1452,6 +1452,11 @@
             <field schema="accountid"/>
           </fields>
         </index>
+        <index schema="idx_sf_serviceappointment_appointmentnumber" issystem="true">
+          <fields>
+            <field schema="appointmentnumber"/>
+          </fields>
+        </index>
         <index schema="idx_sf_serviceappointment_contactid" issystem="true">
           <fields>
             <field schema="contactid"/>
@@ -1470,11 +1475,6 @@
         <index schema="idx_sf_serviceappointment_serviceterritoryid" issystem="true">
           <fields>
             <field schema="serviceterritoryid"/>
-          </fields>
-        </index>
-        <index schema="idx_sf_serviceappointment_appointmentnumber" issystem="true">
-          <fields>
-            <field schema="appointmentnumber"/>
           </fields>
         </index>
       </indexes>
@@ -1504,6 +1504,11 @@
             <field schema="locationid"/>
           </fields>
         </index>
+        <index schema="idx_sf_serviceresource_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
         <index schema="idx_sf_serviceresource_ownerid2" issystem="true">
           <fields>
             <field schema="ownerid2"/>
@@ -1512,11 +1517,6 @@
         <index schema="idx_sf_serviceresource_relatedrecordid" issystem="true">
           <fields>
             <field schema="relatedrecordid"/>
-          </fields>
-        </index>
-        <index schema="idx_sf_serviceresource_name" issystem="true">
-          <fields>
-            <field schema="name"/>
           </fields>
         </index>
       </indexes>
@@ -1596,6 +1596,11 @@
             <field schema="createdbyid"/>
           </fields>
         </index>
+        <index schema="idx_sf_serviceterritory_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
         <index schema="idx_sf_serviceterritory_operatinghoursid" issystem="true">
           <fields>
             <field schema="operatinghoursid"/>
@@ -1614,11 +1619,6 @@
         <index schema="idx_sf_serviceterritory_toplevelterritoryid" issystem="true">
           <fields>
             <field schema="toplevelterritoryid"/>
-          </fields>
-        </index>
-        <index schema="idx_sf_serviceterritory_name" issystem="true">
-          <fields>
-            <field schema="name"/>
           </fields>
         </index>
       </indexes>
@@ -1651,6 +1651,11 @@
             <field schema="createdbyid"/>
           </fields>
         </index>
+        <index schema="idx_sf_serviceterritorymember_membernumber" issystem="true">
+          <fields>
+            <field schema="membernumber"/>
+          </fields>
+        </index>
         <index schema="idx_sf_serviceterritorymember_operatinghoursid" issystem="true">
           <fields>
             <field schema="operatinghoursid"/>
@@ -1664,11 +1669,6 @@
         <index schema="idx_sf_serviceterritorymember_serviceterritoryid" issystem="true">
           <fields>
             <field schema="serviceterritoryid"/>
-          </fields>
-        </index>
-        <index schema="idx_sf_serviceterritorymember_membernumber" issystem="true">
-          <fields>
-            <field schema="membernumber"/>
           </fields>
         </index>
       </indexes>
@@ -1794,6 +1794,11 @@
             <field schema="ownerid2"/>
           </fields>
         </index>
+        <index schema="idx_sf_task_subject" issystem="true">
+          <fields>
+            <field schema="subject"/>
+          </fields>
+        </index>
         <index schema="idx_sf_task_whatid" issystem="true">
           <fields>
             <field schema="whatid"/>
@@ -1802,11 +1807,6 @@
         <index schema="idx_sf_task_whoid" issystem="true">
           <fields>
             <field schema="whoid"/>
-          </fields>
-        </index>
-        <index schema="idx_sf_task_subject" issystem="true">
-          <fields>
-            <field schema="subject"/>
           </fields>
         </index>
       </indexes>
@@ -1894,6 +1894,11 @@
             <field schema="lastmodifiedbyid"/>
           </fields>
         </index>
+        <index schema="idx_sf_timesheetentry_timesheetentrynumber" issystem="true">
+          <fields>
+            <field schema="timesheetentrynumber"/>
+          </fields>
+        </index>
         <index schema="idx_sf_timesheetentry_timesheetid" issystem="true">
           <fields>
             <field schema="timesheetid"/>
@@ -1907,11 +1912,6 @@
         <index schema="idx_sf_timesheetentry_workorderlineitemid" issystem="true">
           <fields>
             <field schema="workorderlineitemid"/>
-          </fields>
-        </index>
-        <index schema="idx_sf_timesheetentry_timesheetentrynumber" issystem="true">
-          <fields>
-            <field schema="timesheetentrynumber"/>
           </fields>
         </index>
       </indexes>
@@ -2053,14 +2053,14 @@
             <field schema="transactioncurrencyid"/>
           </fields>
         </index>
-        <index schema="idx_sf_workorder_worktypeid" issystem="true">
-          <fields>
-            <field schema="worktypeid"/>
-          </fields>
-        </index>
         <index schema="idx_sf_workorder_workordernumber" issystem="true">
           <fields>
             <field schema="workordernumber"/>
+          </fields>
+        </index>
+        <index schema="idx_sf_workorder_worktypeid" issystem="true">
+          <fields>
+            <field schema="worktypeid"/>
           </fields>
         </index>
       </indexes>
@@ -2115,6 +2115,11 @@
             <field schema="lastmodifiedbyid"/>
           </fields>
         </index>
+        <index schema="idx_sf_workorderlineitem_lineitemnumber" issystem="true">
+          <fields>
+            <field schema="lineitemnumber"/>
+          </fields>
+        </index>
         <index schema="idx_sf_workorderlineitem_orderid" issystem="true">
           <fields>
             <field schema="orderid"/>
@@ -2148,11 +2153,6 @@
         <index schema="idx_sf_workorderlineitem_workorderid" issystem="true">
           <fields>
             <field schema="workorderid"/>
-          </fields>
-        </index>
-        <index schema="idx_sf_workorderlineitem_lineitemnumber" issystem="true">
-          <fields>
-            <field schema="lineitemnumber"/>
           </fields>
         </index>
       </indexes>

@@ -1,1900 +1,1899 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="7" publish="10000" Chat="true">
+﻿<model version="7" Chat="true" publish="10000">
   <entities>
-    <entity schema="account" permissions="0">
+    <entity schema="account">
       <properties>
-        <property schema="address1_city" />
-        <property schema="address1_country" />
-        <property schema="address1_latitude" />
-        <property schema="address1_line1" />
-        <property schema="address1_line2" />
-        <property schema="address1_line3" />
-        <property schema="address1_longitude" />
-        <property schema="address1_postalcode" />
-        <property schema="address1_stateorprovince" />
-        <property schema="createdon" />
-        <property schema="defaultpricelevelid" />
-        <property schema="emailaddress1" />
-        <property schema="fax" />
-        <property schema="id" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="originatingleadid" />
-        <property schema="ownerid" />
-        <property schema="primarycontactid" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
-        <property schema="telephone1" displayformat="PhoneNumber" />
-        <property schema="transactioncurrencyid" />
-        <property schema="websiteurl" />
+        <property schema="address1_city"/>
+        <property schema="address1_country"/>
+        <property schema="address1_latitude"/>
+        <property schema="address1_line1"/>
+        <property schema="address1_line2"/>
+        <property schema="address1_line3"/>
+        <property schema="address1_longitude"/>
+        <property schema="address1_postalcode"/>
+        <property schema="address1_stateorprovince"/>
+        <property schema="createdon"/>
+        <property schema="defaultpricelevelid"/>
+        <property schema="emailaddress1"/>
+        <property schema="fax"/>
+        <property schema="id"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="originatingleadid"/>
+        <property schema="ownerid"/>
+        <property schema="primarycontactid"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="telephone1" displayformat="PhoneNumber"/>
+        <property schema="transactioncurrencyid"/>
+        <property schema="websiteurl"/>
       </properties>
       <indexes>
         <index schema="idx_account_defaultpricelevelid" issystem="true">
           <fields>
-            <field schema="defaultpricelevelid" />
-          </fields>
-        </index>
-        <index schema="idx_account_originatingleadid" issystem="true">
-          <fields>
-            <field schema="originatingleadid" />
-          </fields>
-        </index>
-        <index schema="idx_account_ownerid" issystem="true">
-          <fields>
-            <field schema="ownerid" />
-          </fields>
-        </index>
-        <index schema="idx_account_primarycontactid" issystem="true">
-          <fields>
-            <field schema="primarycontactid" />
-          </fields>
-        </index>
-        <index schema="idx_account_transactioncurrencyid" issystem="true">
-          <fields>
-            <field schema="transactioncurrencyid" />
+            <field schema="defaultpricelevelid"/>
           </fields>
         </index>
         <index schema="idx_account_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
+          </fields>
+        </index>
+        <index schema="idx_account_originatingleadid" issystem="true">
+          <fields>
+            <field schema="originatingleadid"/>
+          </fields>
+        </index>
+        <index schema="idx_account_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_account_primarycontactid" issystem="true">
+          <fields>
+            <field schema="primarycontactid"/>
+          </fields>
+        </index>
+        <index schema="idx_account_transactioncurrencyid" issystem="true">
+          <fields>
+            <field schema="transactioncurrencyid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="activity" permissions="0">
+    <entity schema="activity">
       <properties>
-        <property schema="createdon" />
-        <property schema="id" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="ownerid" />
-        <property schema="regardingobjectid" />
-        <property schema="scheduledend" />
-        <property schema="scheduledstart" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
+        <property schema="createdon"/>
+        <property schema="id"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="ownerid"/>
+        <property schema="regardingobjectid"/>
+        <property schema="scheduledend"/>
+        <property schema="scheduledstart"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
       </properties>
       <indexes>
+        <index schema="idx_activity_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
         <index schema="idx_activity_ownerid" issystem="true">
           <fields>
-            <field schema="ownerid" />
+            <field schema="ownerid"/>
           </fields>
         </index>
         <index schema="idx_activity_regardingobjectid" issystem="true">
           <fields>
-            <field schema="regardingobjectid" />
-          </fields>
-        </index>
-        <index schema="idx_activity_name" issystem="true">
-          <fields>
-            <field schema="name" />
+            <field schema="regardingobjectid"/>
           </fields>
         </index>
         <index schema="idx_activity_scheduledend" issystem="true">
           <fields>
-            <field schema="scheduledend" />
+            <field schema="scheduledend"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="activityparty" permissions="0">
+    <entity schema="activityparty">
       <properties>
-        <property schema="activityid" />
-        <property schema="addressused" />
-        <property schema="id" />
-        <property schema="participationtypemask" />
-        <property schema="partyid" />
+        <property schema="activityid"/>
+        <property schema="addressused"/>
+        <property schema="id"/>
+        <property schema="participationtypemask"/>
+        <property schema="partyid"/>
       </properties>
       <indexes>
         <index schema="idx_activityparty_activityid" issystem="true">
           <fields>
-            <field schema="activityid" />
+            <field schema="activityid"/>
           </fields>
         </index>
         <index schema="idx_activityparty_partyid" issystem="true">
           <fields>
-            <field schema="partyid" />
+            <field schema="partyid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="annotation" permissions="0">
+    <entity schema="annotation">
       <properties>
-        <property schema="createdon" />
-        <property schema="documentbody" />
-        <property schema="filename" />
-        <property schema="filesize" />
-        <property schema="id" />
-        <property schema="isdocument" />
-        <property schema="mimetype" />
-        <property schema="modifiedon" />
-        <property schema="notetext" />
-        <property schema="objectid" />
-        <property schema="ownerid" />
-        <property schema="subject" />
+        <property schema="createdon"/>
+        <property schema="documentbody"/>
+        <property schema="filename"/>
+        <property schema="filesize"/>
+        <property schema="id"/>
+        <property schema="isdocument"/>
+        <property schema="mimetype"/>
+        <property schema="modifiedon"/>
+        <property schema="notetext"/>
+        <property schema="objectid"/>
+        <property schema="ownerid"/>
+        <property schema="subject"/>
       </properties>
       <indexes>
         <index schema="idx_annotation_objectid" issystem="true">
           <fields>
-            <field schema="objectid" />
+            <field schema="objectid"/>
           </fields>
         </index>
         <index schema="idx_annotation_ownerid" issystem="true">
           <fields>
-            <field schema="ownerid" />
+            <field schema="ownerid"/>
           </fields>
         </index>
         <index schema="idx_annotation_subject" issystem="true">
           <fields>
-            <field schema="subject" />
+            <field schema="subject"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="appointment" permissions="0">
+    <entity schema="appointment">
       <properties>
-        <property schema="createdon" />
-        <property schema="description" />
-        <property schema="id" />
-        <property schema="location" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="organizer" />
-        <property schema="ownerid" />
-        <property schema="prioritycode" />
-        <property schema="regardingobjectid" />
-        <property schema="requiredattendees" />
-        <property schema="scheduledend" />
-        <property schema="scheduledstart" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
+        <property schema="createdon"/>
+        <property schema="description"/>
+        <property schema="id"/>
+        <property schema="location"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="organizer"/>
+        <property schema="ownerid"/>
+        <property schema="prioritycode"/>
+        <property schema="regardingobjectid"/>
+        <property schema="requiredattendees"/>
+        <property schema="scheduledend"/>
+        <property schema="scheduledstart"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
       </properties>
       <indexes>
+        <index schema="idx_appointment_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
         <index schema="idx_appointment_ownerid" issystem="true">
           <fields>
-            <field schema="ownerid" />
+            <field schema="ownerid"/>
           </fields>
         </index>
         <index schema="idx_appointment_regardingobjectid" issystem="true">
           <fields>
-            <field schema="regardingobjectid" />
-          </fields>
-        </index>
-        <index schema="idx_appointment_name" issystem="true">
-          <fields>
-            <field schema="name" />
+            <field schema="regardingobjectid"/>
           </fields>
         </index>
         <index schema="idx_appointment_scheduledend" issystem="true">
           <fields>
-            <field schema="scheduledend" />
+            <field schema="scheduledend"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="contact" permissions="0">
+    <entity schema="contact">
       <properties>
-        <property schema="address1_city" />
-        <property schema="address1_country" />
-        <property schema="address1_latitude" />
-        <property schema="address1_line1" />
-        <property schema="address1_line2" />
-        <property schema="address1_line3" />
-        <property schema="address1_longitude" />
-        <property schema="address1_postalcode" />
-        <property schema="address1_stateorprovince" />
-        <property schema="createdon" />
-        <property schema="emailaddress1" />
-        <property schema="fax" />
-        <property schema="firstname" />
-        <property schema="id" />
-        <property schema="jobtitle" />
-        <property schema="lastname" />
-        <property schema="mobilephone" displayformat="PhoneNumber" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="originatingleadid" />
-        <property schema="ownerid" />
-        <property schema="parentcustomerid" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
-        <property schema="telephone1" displayformat="PhoneNumber" />
+        <property schema="address1_city"/>
+        <property schema="address1_country"/>
+        <property schema="address1_latitude"/>
+        <property schema="address1_line1"/>
+        <property schema="address1_line2"/>
+        <property schema="address1_line3"/>
+        <property schema="address1_longitude"/>
+        <property schema="address1_postalcode"/>
+        <property schema="address1_stateorprovince"/>
+        <property schema="createdon"/>
+        <property schema="emailaddress1"/>
+        <property schema="fax"/>
+        <property schema="firstname"/>
+        <property schema="id"/>
+        <property schema="jobtitle"/>
+        <property schema="lastname"/>
+        <property schema="mobilephone" displayformat="PhoneNumber"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="originatingleadid"/>
+        <property schema="ownerid"/>
+        <property schema="parentcustomerid"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="telephone1" displayformat="PhoneNumber"/>
       </properties>
       <indexes>
+        <index schema="idx_contact_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
         <index schema="idx_contact_originatingleadid" issystem="true">
           <fields>
-            <field schema="originatingleadid" />
+            <field schema="originatingleadid"/>
           </fields>
         </index>
         <index schema="idx_contact_ownerid" issystem="true">
           <fields>
-            <field schema="ownerid" />
+            <field schema="ownerid"/>
           </fields>
         </index>
         <index schema="idx_contact_parentcustomerid" issystem="true">
           <fields>
-            <field schema="parentcustomerid" />
-          </fields>
-        </index>
-        <index schema="idx_contact_name" issystem="true">
-          <fields>
-            <field schema="name" />
+            <field schema="parentcustomerid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="fs_asset" permissions="0">
+    <entity schema="fs_asset">
       <properties>
-        <property schema="createdby" />
-        <property schema="createdon" displayformat="None" />
-        <property schema="customerid" />
-        <property schema="id" />
-        <property schema="lastservice" />
-        <property schema="modifiedby" />
-        <property schema="modifiedon" displayformat="None" />
-        <property schema="name" displayformat="None" />
-        <property schema="price" />
-        <property schema="serialnumber" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
-        <property schema="transactioncurrencyid" />
-        <property schema="versionnumber" />
+        <property schema="createdby"/>
+        <property schema="createdon" displayformat="None"/>
+        <property schema="customerid"/>
+        <property schema="id"/>
+        <property schema="lastservice"/>
+        <property schema="modifiedby"/>
+        <property schema="modifiedon" displayformat="None"/>
+        <property schema="name" displayformat="None"/>
+        <property schema="price"/>
+        <property schema="serialnumber"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="transactioncurrencyid"/>
+        <property schema="versionnumber"/>
       </properties>
       <indexes>
         <index schema="idx_fs_asset_createdby" issystem="true">
           <fields>
-            <field schema="createdby" />
+            <field schema="createdby"/>
           </fields>
         </index>
         <index schema="idx_fs_asset_customerid" issystem="true">
           <fields>
-            <field schema="customerid" />
+            <field schema="customerid"/>
           </fields>
         </index>
         <index schema="idx_fs_asset_modifiedby" issystem="true">
           <fields>
-            <field schema="modifiedby" />
-          </fields>
-        </index>
-        <index schema="idx_fs_asset_transactioncurrencyid" issystem="true">
-          <fields>
-            <field schema="transactioncurrencyid" />
+            <field schema="modifiedby"/>
           </fields>
         </index>
         <index schema="idx_fs_asset_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_asset_transactioncurrencyid" issystem="true">
+          <fields>
+            <field schema="transactioncurrencyid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="fs_incidenttemplate" permissions="0">
+    <entity schema="fs_incidenttemplate">
       <properties>
-        <property schema="createdon" />
-        <property schema="estimatedamount" />
-        <property schema="estimatedduration" displayformat="Duration" />
-        <property schema="id" />
-        <property schema="isdurationoverridden" />
-        <property schema="ispriceoverridden" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="pricelevelid" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
-        <property schema="transactioncurrencyid" fieldpermissions="Read Create" />
+        <property schema="createdon"/>
+        <property schema="estimatedamount"/>
+        <property schema="estimatedduration" displayformat="Duration"/>
+        <property schema="id"/>
+        <property schema="isdurationoverridden"/>
+        <property schema="ispriceoverridden"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="pricelevelid"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="transactioncurrencyid" fieldpermissions="Read Create"/>
       </properties>
       <indexes>
+        <index schema="idx_fs_incidenttemplate_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
         <index schema="idx_fs_incidenttemplate_pricelevelid" issystem="true">
           <fields>
-            <field schema="pricelevelid" />
+            <field schema="pricelevelid"/>
           </fields>
         </index>
         <index schema="idx_fs_incidenttemplate_transactioncurrencyid" issystem="true">
           <fields>
-            <field schema="transactioncurrencyid" />
-          </fields>
-        </index>
-        <index schema="idx_fs_incidenttemplate_name" issystem="true">
-          <fields>
-            <field schema="name" />
+            <field schema="transactioncurrencyid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="fs_incidenttemplateproduct" permissions="0">
+    <entity schema="fs_incidenttemplateproduct">
       <properties>
-        <property schema="createdon" />
-        <property schema="duration" displayformat="Duration" />
-        <property schema="extendedamount" />
-        <property schema="id" />
-        <property schema="incidenttemplateid" />
-        <property schema="ispriceoverridden" />
-        <property schema="isproductoverridden" />
-        <property schema="isservice" />
-        <property schema="manualdiscountamount" />
-        <property schema="modifiedon" />
-        <property schema="priceperunit" />
-        <property schema="productdescription" />
-        <property schema="productid" />
-        <property schema="quantity" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
-        <property schema="tax" />
-        <property schema="uomid" />
-        <property schema="volumediscountamount" />
+        <property schema="createdon"/>
+        <property schema="duration" displayformat="Duration"/>
+        <property schema="extendedamount"/>
+        <property schema="id"/>
+        <property schema="incidenttemplateid"/>
+        <property schema="ispriceoverridden"/>
+        <property schema="isproductoverridden"/>
+        <property schema="isservice"/>
+        <property schema="manualdiscountamount"/>
+        <property schema="modifiedon"/>
+        <property schema="priceperunit"/>
+        <property schema="productdescription"/>
+        <property schema="productid"/>
+        <property schema="quantity"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="tax"/>
+        <property schema="uomid"/>
+        <property schema="volumediscountamount"/>
       </properties>
       <indexes>
         <index schema="idx_fs_incidenttemplateproduct_incidenttemplateid" issystem="true">
           <fields>
-            <field schema="incidenttemplateid" />
-          </fields>
-        </index>
-        <index schema="idx_fs_incidenttemplateproduct_productid" issystem="true">
-          <fields>
-            <field schema="productid" />
-          </fields>
-        </index>
-        <index schema="idx_fs_incidenttemplateproduct_uomid" issystem="true">
-          <fields>
-            <field schema="uomid" />
+            <field schema="incidenttemplateid"/>
           </fields>
         </index>
         <index schema="idx_fs_incidenttemplateproduct_productdescription" issystem="true">
           <fields>
-            <field schema="productdescription" />
+            <field schema="productdescription"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_incidenttemplateproduct_productid" issystem="true">
+          <fields>
+            <field schema="productid"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_incidenttemplateproduct_uomid" issystem="true">
+          <fields>
+            <field schema="uomid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="fs_incidenttemplateskill" permissions="0">
+    <entity schema="fs_incidenttemplateskill">
       <properties>
-        <property schema="createdby" />
-        <property schema="createdon" displayformat="None" />
-        <property schema="id" />
-        <property schema="incidenttemplateid" />
-        <property schema="modifiedby" />
-        <property schema="modifiedon" displayformat="None" />
-        <property schema="name" displayformat="None" />
-        <property schema="skillid" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
-        <property schema="versionnumber" />
+        <property schema="createdby"/>
+        <property schema="createdon" displayformat="None"/>
+        <property schema="id"/>
+        <property schema="incidenttemplateid"/>
+        <property schema="modifiedby"/>
+        <property schema="modifiedon" displayformat="None"/>
+        <property schema="name" displayformat="None"/>
+        <property schema="skillid"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="versionnumber"/>
       </properties>
       <indexes>
         <index schema="idx_fs_incidenttemplateskill_createdby" issystem="true">
           <fields>
-            <field schema="createdby" />
+            <field schema="createdby"/>
           </fields>
         </index>
         <index schema="idx_fs_incidenttemplateskill_incidenttemplateid" issystem="true">
           <fields>
-            <field schema="incidenttemplateid" />
+            <field schema="incidenttemplateid"/>
           </fields>
         </index>
         <index schema="idx_fs_incidenttemplateskill_modifiedby" issystem="true">
           <fields>
-            <field schema="modifiedby" />
-          </fields>
-        </index>
-        <index schema="idx_fs_incidenttemplateskill_skillid" issystem="true">
-          <fields>
-            <field schema="skillid" />
+            <field schema="modifiedby"/>
           </fields>
         </index>
         <index schema="idx_fs_incidenttemplateskill_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_incidenttemplateskill_skillid" issystem="true">
+          <fields>
+            <field schema="skillid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="fs_incidenttemplatetask" permissions="0">
+    <entity schema="fs_incidenttemplatetask">
       <properties>
-        <property schema="createdon" />
-        <property schema="description" />
-        <property schema="duration" />
-        <property schema="id" />
-        <property schema="incidenttemplateid" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
+        <property schema="createdon"/>
+        <property schema="description"/>
+        <property schema="duration"/>
+        <property schema="id"/>
+        <property schema="incidenttemplateid"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
       </properties>
       <indexes>
         <index schema="idx_fs_incidenttemplatetask_incidenttemplateid" issystem="true">
           <fields>
-            <field schema="incidenttemplateid" />
+            <field schema="incidenttemplateid"/>
           </fields>
         </index>
         <index schema="idx_fs_incidenttemplatetask_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="fs_resource" permissions="0">
+    <entity schema="fs_resource">
       <properties>
-        <property schema="createdon" />
-        <property schema="hourlyrate" />
-        <property schema="id" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="ownerid" />
-        <property schema="owningbusinessunit" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
-        <property schema="targetid" />
+        <property schema="createdon"/>
+        <property schema="hourlyrate"/>
+        <property schema="id"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="ownerid"/>
+        <property schema="owningbusinessunit"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="targetid"/>
       </properties>
       <indexes>
+        <index schema="idx_fs_resource_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
         <index schema="idx_fs_resource_ownerid" issystem="true">
           <fields>
-            <field schema="ownerid" />
+            <field schema="ownerid"/>
           </fields>
         </index>
         <index schema="idx_fs_resource_owningbusinessunit" issystem="true">
           <fields>
-            <field schema="owningbusinessunit" />
+            <field schema="owningbusinessunit"/>
           </fields>
         </index>
         <index schema="idx_fs_resource_targetid" issystem="true">
           <fields>
-            <field schema="targetid" />
-          </fields>
-        </index>
-        <index schema="idx_fs_resource_name" issystem="true">
-          <fields>
-            <field schema="name" />
+            <field schema="targetid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="fs_resource_settings" permissions="0">
+    <entity schema="fs_resource_settings">
       <properties>
-        <property schema="resourceid" />
-        <property schema="settingsid" />
+        <property schema="resourceid"/>
+        <property schema="settingsid"/>
       </properties>
       <indexes>
         <index schema="idx_fs_resource_settings" issystem="true">
           <fields>
-            <field schema="resourceid" />
-            <field schema="settingsid" />
+            <field schema="resourceid"/>
+            <field schema="settingsid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="fs_resourceskill" permissions="0">
+    <entity schema="fs_resourceskill">
       <properties>
-        <property schema="resourceid" />
-        <property schema="skillid" />
+        <property schema="resourceid"/>
+        <property schema="skillid"/>
       </properties>
       <indexes>
         <index schema="idx_fs_resourceskill" issystem="true">
           <fields>
-            <field schema="resourceid" />
-            <field schema="skillid" />
+            <field schema="resourceid"/>
+            <field schema="skillid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="fs_resourceterritory" permissions="0">
+    <entity schema="fs_resourceterritory">
       <properties>
-        <property schema="resourceid" />
-        <property schema="territoryid" />
+        <property schema="resourceid"/>
+        <property schema="territoryid"/>
       </properties>
       <indexes>
         <index schema="idx_fs_resourceterritory" issystem="true">
           <fields>
-            <field schema="resourceid" />
-            <field schema="territoryid" />
+            <field schema="resourceid"/>
+            <field schema="territoryid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="fs_settings" permissions="0">
+    <entity schema="fs_settings">
       <properties>
-        <property schema="break_per_day" />
-        <property schema="createdby" />
-        <property schema="createdon" />
-        <property schema="first_day_of_week" />
-        <property schema="id" />
-        <property schema="location_address" />
-        <property schema="modifiedby" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="start_of_day" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
-        <property schema="versionnumber" />
-        <property schema="working_day_duration" />
+        <property schema="break_per_day"/>
+        <property schema="createdby"/>
+        <property schema="createdon"/>
+        <property schema="first_day_of_week"/>
+        <property schema="id"/>
+        <property schema="location_address"/>
+        <property schema="modifiedby"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="start_of_day"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="versionnumber"/>
+        <property schema="working_day_duration"/>
       </properties>
       <indexes>
         <index schema="idx_fs_settings_createdby" issystem="true">
           <fields>
-            <field schema="createdby" />
+            <field schema="createdby"/>
           </fields>
         </index>
         <index schema="idx_fs_settings_modifiedby" issystem="true">
           <fields>
-            <field schema="modifiedby" />
+            <field schema="modifiedby"/>
           </fields>
         </index>
         <index schema="idx_fs_settings_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="fs_skill" permissions="0">
+    <entity schema="fs_skill">
       <properties>
-        <property schema="createdon" />
-        <property schema="description" />
-        <property schema="id" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
+        <property schema="createdon"/>
+        <property schema="description"/>
+        <property schema="id"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
       </properties>
       <indexes>
         <index schema="idx_fs_skill_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="fs_territory" permissions="0">
+    <entity schema="fs_territory">
       <properties>
-        <property schema="address1_city" />
-        <property schema="address1_country" />
-        <property schema="address1_latitude" />
-        <property schema="address1_line1" />
-        <property schema="address1_line2" />
-        <property schema="address1_line3" />
-        <property schema="address1_longitude" />
-        <property schema="address1_postalcode" />
-        <property schema="address1_stateorprovince" />
-        <property schema="createdon" />
-        <property schema="id" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="ownerid" />
-        <property schema="owningbusinessunit" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
+        <property schema="address1_city"/>
+        <property schema="address1_country"/>
+        <property schema="address1_latitude"/>
+        <property schema="address1_line1"/>
+        <property schema="address1_line2"/>
+        <property schema="address1_line3"/>
+        <property schema="address1_longitude"/>
+        <property schema="address1_postalcode"/>
+        <property schema="address1_stateorprovince"/>
+        <property schema="createdon"/>
+        <property schema="id"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="ownerid"/>
+        <property schema="owningbusinessunit"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
       </properties>
       <indexes>
+        <index schema="idx_fs_territory_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
         <index schema="idx_fs_territory_ownerid" issystem="true">
           <fields>
-            <field schema="ownerid" />
+            <field schema="ownerid"/>
           </fields>
         </index>
         <index schema="idx_fs_territory_owningbusinessunit" issystem="true">
           <fields>
-            <field schema="owningbusinessunit" />
-          </fields>
-        </index>
-        <index schema="idx_fs_territory_name" issystem="true">
-          <fields>
-            <field schema="name" />
+            <field schema="owningbusinessunit"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="fs_time_off" permissions="0">
+    <entity schema="fs_time_off">
       <properties>
-        <property schema="approved_by" />
-        <property schema="approved_on" />
-        <property schema="createdby" />
-        <property schema="createdon" />
-        <property schema="from" />
-        <property schema="id" />
-        <property schema="modifiedby" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="resourceid" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
-        <property schema="to" />
-        <property schema="type" />
+        <property schema="approved_by"/>
+        <property schema="approved_on"/>
+        <property schema="createdby"/>
+        <property schema="createdon"/>
+        <property schema="from"/>
+        <property schema="id"/>
+        <property schema="modifiedby"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="resourceid"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="to"/>
+        <property schema="type"/>
       </properties>
       <indexes>
         <index schema="idx_fs_time_off_approved_by" issystem="true">
           <fields>
-            <field schema="approved_by" />
+            <field schema="approved_by"/>
           </fields>
         </index>
         <index schema="idx_fs_time_off_createdby" issystem="true">
           <fields>
-            <field schema="createdby" />
+            <field schema="createdby"/>
           </fields>
         </index>
         <index schema="idx_fs_time_off_modifiedby" issystem="true">
           <fields>
-            <field schema="modifiedby" />
-          </fields>
-        </index>
-        <index schema="idx_fs_time_off_resourceid" issystem="true">
-          <fields>
-            <field schema="resourceid" />
+            <field schema="modifiedby"/>
           </fields>
         </index>
         <index schema="idx_fs_time_off_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_time_off_resourceid" issystem="true">
+          <fields>
+            <field schema="resourceid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="fs_upvotedincident" permissions="0">
+    <entity schema="fs_upvotedincident">
       <properties>
-        <property schema="contactid" />
-        <property schema="createdon" />
-        <property schema="id" />
-        <property schema="incidentid" />
-        <property schema="modifiedon" />
-        <property schema="name" />
+        <property schema="contactid"/>
+        <property schema="createdon"/>
+        <property schema="id"/>
+        <property schema="incidentid"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
       </properties>
       <indexes>
         <index schema="idx_fs_upvotedincident_contactid" issystem="true">
           <fields>
-            <field schema="contactid" />
+            <field schema="contactid"/>
           </fields>
         </index>
         <index schema="idx_fs_upvotedincident_incidentid" issystem="true">
           <fields>
-            <field schema="incidentid" />
+            <field schema="incidentid"/>
           </fields>
         </index>
         <index schema="idx_fs_upvotedincident_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="fs_workorder" permissions="0">
+    <entity schema="fs_workorder">
       <properties>
-        <property schema="completionpercent" />
-        <property schema="createdon" />
-        <property schema="customerid" />
-        <property schema="discountamount" />
-        <property schema="discountpercentage" />
-        <property schema="estimatedamount" />
-        <property schema="estimatedduration" displayformat="Duration" />
-        <property schema="id" />
-        <property schema="isamountsystemcalculated" />
-        <property schema="isestimatesystemcalculated" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="originatingincidentid" />
-        <property schema="ownerid" />
-        <property schema="owningbusinessunit" />
-        <property schema="pricelevelid" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
-        <property schema="territoryid" />
-        <property schema="totalamount" />
-        <property schema="totalduration" displayformat="Duration" />
-        <property schema="transactioncurrencyid" />
+        <property schema="completionpercent"/>
+        <property schema="createdon"/>
+        <property schema="customerid"/>
+        <property schema="discountamount"/>
+        <property schema="discountpercentage"/>
+        <property schema="estimatedamount"/>
+        <property schema="estimatedduration" displayformat="Duration"/>
+        <property schema="id"/>
+        <property schema="isamountsystemcalculated"/>
+        <property schema="isestimatesystemcalculated"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="originatingincidentid"/>
+        <property schema="ownerid"/>
+        <property schema="owningbusinessunit"/>
+        <property schema="pricelevelid"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="territoryid"/>
+        <property schema="totalamount"/>
+        <property schema="totalduration" displayformat="Duration"/>
+        <property schema="transactioncurrencyid"/>
       </properties>
       <indexes>
         <index schema="idx_fs_workorder_customerid" issystem="true">
           <fields>
-            <field schema="customerid" />
-          </fields>
-        </index>
-        <index schema="idx_fs_workorder_originatingincidentid" issystem="true">
-          <fields>
-            <field schema="originatingincidentid" />
-          </fields>
-        </index>
-        <index schema="idx_fs_workorder_ownerid" issystem="true">
-          <fields>
-            <field schema="ownerid" />
-          </fields>
-        </index>
-        <index schema="idx_fs_workorder_owningbusinessunit" issystem="true">
-          <fields>
-            <field schema="owningbusinessunit" />
-          </fields>
-        </index>
-        <index schema="idx_fs_workorder_pricelevelid" issystem="true">
-          <fields>
-            <field schema="pricelevelid" />
-          </fields>
-        </index>
-        <index schema="idx_fs_workorder_territoryid" issystem="true">
-          <fields>
-            <field schema="territoryid" />
-          </fields>
-        </index>
-        <index schema="idx_fs_workorder_transactioncurrencyid" issystem="true">
-          <fields>
-            <field schema="transactioncurrencyid" />
+            <field schema="customerid"/>
           </fields>
         </index>
         <index schema="idx_fs_workorder_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_workorder_originatingincidentid" issystem="true">
+          <fields>
+            <field schema="originatingincidentid"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_workorder_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_workorder_owningbusinessunit" issystem="true">
+          <fields>
+            <field schema="owningbusinessunit"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_workorder_pricelevelid" issystem="true">
+          <fields>
+            <field schema="pricelevelid"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_workorder_territoryid" issystem="true">
+          <fields>
+            <field schema="territoryid"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_workorder_transactioncurrencyid" issystem="true">
+          <fields>
+            <field schema="transactioncurrencyid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="fs_workorderincident" permissions="0">
+    <entity schema="fs_workorderincident">
       <properties>
-        <property schema="completionpercent" />
-        <property schema="createdon" />
-        <property schema="id" />
-        <property schema="incidenttemplateid" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="ownerid" />
-        <property schema="owningbusinessunit" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
-        <property schema="workorderid" />
+        <property schema="completionpercent"/>
+        <property schema="createdon"/>
+        <property schema="id"/>
+        <property schema="incidenttemplateid"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="ownerid"/>
+        <property schema="owningbusinessunit"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="workorderid"/>
       </properties>
       <indexes>
         <index schema="idx_fs_workorderincident_incidenttemplateid" issystem="true">
           <fields>
-            <field schema="incidenttemplateid" />
-          </fields>
-        </index>
-        <index schema="idx_fs_workorderincident_ownerid" issystem="true">
-          <fields>
-            <field schema="ownerid" />
-          </fields>
-        </index>
-        <index schema="idx_fs_workorderincident_owningbusinessunit" issystem="true">
-          <fields>
-            <field schema="owningbusinessunit" />
-          </fields>
-        </index>
-        <index schema="idx_fs_workorderincident_workorderid" issystem="true">
-          <fields>
-            <field schema="workorderid" />
+            <field schema="incidenttemplateid"/>
           </fields>
         </index>
         <index schema="idx_fs_workorderincident_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_workorderincident_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_workorderincident_owningbusinessunit" issystem="true">
+          <fields>
+            <field schema="owningbusinessunit"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_workorderincident_workorderid" issystem="true">
+          <fields>
+            <field schema="workorderid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="fs_workorderproduct" permissions="0">
+    <entity schema="fs_workorderproduct">
       <properties>
-        <property schema="assetid" />
-        <property schema="createdon" />
-        <property schema="duration" displayformat="Duration" />
-        <property schema="estimatedamount" />
-        <property schema="estimatedduration" displayformat="Duration" />
-        <property schema="estimatedispriceoverridden" />
-        <property schema="estimatedmanualdiscountamount" />
-        <property schema="estimatedpriceperunit" />
-        <property schema="estimatedquantity" />
-        <property schema="estimatedtax" />
-        <property schema="estimatedvolumediscountamount" />
-        <property schema="extendedamount" />
-        <property schema="id" />
-        <property schema="ispriceoverridden" />
-        <property schema="isproductoverridden" />
-        <property schema="isservice" />
-        <property schema="isused" />
-        <property schema="manualdiscountamount" />
-        <property schema="modifiedon" />
-        <property schema="ownerid" />
-        <property schema="owningbusinessunit" />
-        <property schema="priceperunit" />
-        <property schema="productdescription" />
-        <property schema="productid" />
-        <property schema="quantity" />
-        <property schema="resourceid" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
-        <property schema="tax" />
-        <property schema="transactioncurrencyid" />
-        <property schema="uomid" />
-        <property schema="volumediscountamount" />
-        <property schema="workorderid" />
-        <property schema="workorderincidentid" />
+        <property schema="assetid"/>
+        <property schema="createdon"/>
+        <property schema="duration" displayformat="Duration"/>
+        <property schema="estimatedamount"/>
+        <property schema="estimatedduration" displayformat="Duration"/>
+        <property schema="estimatedispriceoverridden"/>
+        <property schema="estimatedmanualdiscountamount"/>
+        <property schema="estimatedpriceperunit"/>
+        <property schema="estimatedquantity"/>
+        <property schema="estimatedtax"/>
+        <property schema="estimatedvolumediscountamount"/>
+        <property schema="extendedamount"/>
+        <property schema="id"/>
+        <property schema="ispriceoverridden"/>
+        <property schema="isproductoverridden"/>
+        <property schema="isservice"/>
+        <property schema="isused"/>
+        <property schema="manualdiscountamount"/>
+        <property schema="modifiedon"/>
+        <property schema="ownerid"/>
+        <property schema="owningbusinessunit"/>
+        <property schema="priceperunit"/>
+        <property schema="productdescription"/>
+        <property schema="productid"/>
+        <property schema="quantity"/>
+        <property schema="resourceid"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="tax"/>
+        <property schema="transactioncurrencyid"/>
+        <property schema="uomid"/>
+        <property schema="volumediscountamount"/>
+        <property schema="workorderid"/>
+        <property schema="workorderincidentid"/>
       </properties>
       <indexes>
         <index schema="idx_fs_workorderproduct_assetid" issystem="true">
           <fields>
-            <field schema="assetid" />
+            <field schema="assetid"/>
           </fields>
         </index>
         <index schema="idx_fs_workorderproduct_ownerid" issystem="true">
           <fields>
-            <field schema="ownerid" />
+            <field schema="ownerid"/>
           </fields>
         </index>
         <index schema="idx_fs_workorderproduct_owningbusinessunit" issystem="true">
           <fields>
-            <field schema="owningbusinessunit" />
-          </fields>
-        </index>
-        <index schema="idx_fs_workorderproduct_productid" issystem="true">
-          <fields>
-            <field schema="productid" />
-          </fields>
-        </index>
-        <index schema="idx_fs_workorderproduct_resourceid" issystem="true">
-          <fields>
-            <field schema="resourceid" />
-          </fields>
-        </index>
-        <index schema="idx_fs_workorderproduct_transactioncurrencyid" issystem="true">
-          <fields>
-            <field schema="transactioncurrencyid" />
-          </fields>
-        </index>
-        <index schema="idx_fs_workorderproduct_uomid" issystem="true">
-          <fields>
-            <field schema="uomid" />
-          </fields>
-        </index>
-        <index schema="idx_fs_workorderproduct_workorderid" issystem="true">
-          <fields>
-            <field schema="workorderid" />
-          </fields>
-        </index>
-        <index schema="idx_fs_workorderproduct_workorderincidentid" issystem="true">
-          <fields>
-            <field schema="workorderincidentid" />
+            <field schema="owningbusinessunit"/>
           </fields>
         </index>
         <index schema="idx_fs_workorderproduct_productdescription" issystem="true">
           <fields>
-            <field schema="productdescription" />
+            <field schema="productdescription"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_workorderproduct_productid" issystem="true">
+          <fields>
+            <field schema="productid"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_workorderproduct_resourceid" issystem="true">
+          <fields>
+            <field schema="resourceid"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_workorderproduct_transactioncurrencyid" issystem="true">
+          <fields>
+            <field schema="transactioncurrencyid"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_workorderproduct_uomid" issystem="true">
+          <fields>
+            <field schema="uomid"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_workorderproduct_workorderid" issystem="true">
+          <fields>
+            <field schema="workorderid"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_workorderproduct_workorderincidentid" issystem="true">
+          <fields>
+            <field schema="workorderincidentid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="fs_workorderschedule" permissions="0">
+    <entity schema="fs_workorderschedule">
       <properties>
-        <property schema="arrivedon" />
-        <property schema="createdon" />
-        <property schema="endedon" />
-        <property schema="id" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="ownerid" />
-        <property schema="owningbusinessunit" />
-        <property schema="resourceid" />
-        <property schema="scheduledbreak" />
-        <property schema="scheduledend" />
-        <property schema="scheduledon" />
-        <property schema="scheduledstart" />
-        <property schema="scheduledtravelfrom" />
-        <property schema="scheduledtravelto" />
-        <property schema="startedon" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
-        <property schema="targetid" fieldpermissions="Read" />
-        <property schema="windowend" />
-        <property schema="windowstart" />
-        <property schema="workorderid" />
+        <property schema="arrivedon"/>
+        <property schema="createdon"/>
+        <property schema="endedon"/>
+        <property schema="id"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="ownerid"/>
+        <property schema="owningbusinessunit"/>
+        <property schema="resourceid"/>
+        <property schema="scheduledbreak"/>
+        <property schema="scheduledend"/>
+        <property schema="scheduledon"/>
+        <property schema="scheduledstart"/>
+        <property schema="scheduledtravelfrom"/>
+        <property schema="scheduledtravelto"/>
+        <property schema="startedon"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="targetid" fieldpermissions="Read"/>
+        <property schema="windowend"/>
+        <property schema="windowstart"/>
+        <property schema="workorderid"/>
       </properties>
       <indexes>
+        <index schema="idx_fs_workorderschedule_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
         <index schema="idx_fs_workorderschedule_ownerid" issystem="true">
           <fields>
-            <field schema="ownerid" />
+            <field schema="ownerid"/>
           </fields>
         </index>
         <index schema="idx_fs_workorderschedule_owningbusinessunit" issystem="true">
           <fields>
-            <field schema="owningbusinessunit" />
+            <field schema="owningbusinessunit"/>
           </fields>
         </index>
         <index schema="idx_fs_workorderschedule_resourceid" issystem="true">
           <fields>
-            <field schema="resourceid" />
+            <field schema="resourceid"/>
           </fields>
         </index>
         <index schema="idx_fs_workorderschedule_targetid" issystem="true">
           <fields>
-            <field schema="targetid" />
+            <field schema="targetid"/>
           </fields>
         </index>
         <index schema="idx_fs_workorderschedule_workorderid" issystem="true">
           <fields>
-            <field schema="workorderid" />
-          </fields>
-        </index>
-        <index schema="idx_fs_workorderschedule_name" issystem="true">
-          <fields>
-            <field schema="name" />
+            <field schema="workorderid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="fs_workorderskill" permissions="0">
+    <entity schema="fs_workorderskill">
       <properties>
-        <property schema="createdby" />
-        <property schema="createdon" displayformat="None" />
-        <property schema="id" />
-        <property schema="incidenttemplateid" />
-        <property schema="modifiedby" />
-        <property schema="modifiedon" displayformat="None" />
-        <property schema="name" displayformat="None" />
-        <property schema="skillid" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
-        <property schema="versionnumber" />
-        <property schema="workorderid" />
+        <property schema="createdby"/>
+        <property schema="createdon" displayformat="None"/>
+        <property schema="id"/>
+        <property schema="incidenttemplateid"/>
+        <property schema="modifiedby"/>
+        <property schema="modifiedon" displayformat="None"/>
+        <property schema="name" displayformat="None"/>
+        <property schema="skillid"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="versionnumber"/>
+        <property schema="workorderid"/>
       </properties>
       <indexes>
         <index schema="idx_fs_workorderskill_createdby" issystem="true">
           <fields>
-            <field schema="createdby" />
+            <field schema="createdby"/>
           </fields>
         </index>
         <index schema="idx_fs_workorderskill_incidenttemplateid" issystem="true">
           <fields>
-            <field schema="incidenttemplateid" />
+            <field schema="incidenttemplateid"/>
           </fields>
         </index>
         <index schema="idx_fs_workorderskill_modifiedby" issystem="true">
           <fields>
-            <field schema="modifiedby" />
-          </fields>
-        </index>
-        <index schema="idx_fs_workorderskill_skillid" issystem="true">
-          <fields>
-            <field schema="skillid" />
-          </fields>
-        </index>
-        <index schema="idx_fs_workorderskill_workorderid" issystem="true">
-          <fields>
-            <field schema="workorderid" />
+            <field schema="modifiedby"/>
           </fields>
         </index>
         <index schema="idx_fs_workorderskill_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_workorderskill_skillid" issystem="true">
+          <fields>
+            <field schema="skillid"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_workorderskill_workorderid" issystem="true">
+          <fields>
+            <field schema="workorderid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="fs_workordertask" permissions="0">
+    <entity schema="fs_workordertask">
       <properties>
-        <property schema="assetid" />
-        <property schema="completionpercent" />
-        <property schema="createdon" />
-        <property schema="description" />
-        <property schema="estimatedduration" />
-        <property schema="id" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="ownerid" />
-        <property schema="owningbusinessunit" />
-        <property schema="resourceid" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
-        <property schema="totalduration" />
-        <property schema="workorderid" />
-        <property schema="workorderincidentid" />
+        <property schema="assetid"/>
+        <property schema="completionpercent"/>
+        <property schema="createdon"/>
+        <property schema="description"/>
+        <property schema="estimatedduration"/>
+        <property schema="id"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="ownerid"/>
+        <property schema="owningbusinessunit"/>
+        <property schema="resourceid"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="totalduration"/>
+        <property schema="workorderid"/>
+        <property schema="workorderincidentid"/>
       </properties>
       <indexes>
         <index schema="idx_fs_workordertask_assetid" issystem="true">
           <fields>
-            <field schema="assetid" />
-          </fields>
-        </index>
-        <index schema="idx_fs_workordertask_ownerid" issystem="true">
-          <fields>
-            <field schema="ownerid" />
-          </fields>
-        </index>
-        <index schema="idx_fs_workordertask_owningbusinessunit" issystem="true">
-          <fields>
-            <field schema="owningbusinessunit" />
-          </fields>
-        </index>
-        <index schema="idx_fs_workordertask_resourceid" issystem="true">
-          <fields>
-            <field schema="resourceid" />
-          </fields>
-        </index>
-        <index schema="idx_fs_workordertask_workorderid" issystem="true">
-          <fields>
-            <field schema="workorderid" />
-          </fields>
-        </index>
-        <index schema="idx_fs_workordertask_workorderincidentid" issystem="true">
-          <fields>
-            <field schema="workorderincidentid" />
+            <field schema="assetid"/>
           </fields>
         </index>
         <index schema="idx_fs_workordertask_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_workordertask_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_workordertask_owningbusinessunit" issystem="true">
+          <fields>
+            <field schema="owningbusinessunit"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_workordertask_resourceid" issystem="true">
+          <fields>
+            <field schema="resourceid"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_workordertask_workorderid" issystem="true">
+          <fields>
+            <field schema="workorderid"/>
+          </fields>
+        </index>
+        <index schema="idx_fs_workordertask_workorderincidentid" issystem="true">
+          <fields>
+            <field schema="workorderincidentid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="incident" permissions="0">
+    <entity schema="incident">
       <properties>
-        <property schema="address1_city" />
-        <property schema="address1_country" />
-        <property schema="address1_latitude" />
-        <property schema="address1_line1" />
-        <property schema="address1_line2" />
-        <property schema="address1_line3" />
-        <property schema="address1_longitude" />
-        <property schema="address1_postalcode" />
-        <property schema="address1_stateorprovince" />
-        <property schema="assetid" />
-        <property schema="casetypecode" />
-        <property schema="completionpercent" />
-        <property schema="createdby" />
-        <property schema="createdon" displayformat="None" />
-        <property schema="customerid" />
-        <property schema="description" displayformat="None" />
-        <property schema="fs_upvotecount" />
-        <property schema="id" />
-        <property schema="incidenttemplateid" />
-        <property schema="modifiedby" />
-        <property schema="modifiedon" displayformat="None" />
-        <property schema="name" displayformat="None" />
-        <property schema="prioritycode" />
-        <property schema="productid" />
-        <property schema="responsiblecontactid" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
-        <property schema="versionnumber" />
+        <property schema="address1_city"/>
+        <property schema="address1_country"/>
+        <property schema="address1_latitude"/>
+        <property schema="address1_line1"/>
+        <property schema="address1_line2"/>
+        <property schema="address1_line3"/>
+        <property schema="address1_longitude"/>
+        <property schema="address1_postalcode"/>
+        <property schema="address1_stateorprovince"/>
+        <property schema="assetid"/>
+        <property schema="casetypecode"/>
+        <property schema="completionpercent"/>
+        <property schema="createdby"/>
+        <property schema="createdon" displayformat="None"/>
+        <property schema="customerid"/>
+        <property schema="description" displayformat="None"/>
+        <property schema="fs_upvotecount"/>
+        <property schema="id"/>
+        <property schema="incidenttemplateid"/>
+        <property schema="modifiedby"/>
+        <property schema="modifiedon" displayformat="None"/>
+        <property schema="name" displayformat="None"/>
+        <property schema="prioritycode"/>
+        <property schema="productid"/>
+        <property schema="responsiblecontactid"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="versionnumber"/>
       </properties>
       <indexes>
         <index schema="idx_incident_assetid" issystem="true">
           <fields>
-            <field schema="assetid" />
+            <field schema="assetid"/>
           </fields>
         </index>
         <index schema="idx_incident_createdby" issystem="true">
           <fields>
-            <field schema="createdby" />
+            <field schema="createdby"/>
           </fields>
         </index>
         <index schema="idx_incident_customerid" issystem="true">
           <fields>
-            <field schema="customerid" />
+            <field schema="customerid"/>
           </fields>
         </index>
         <index schema="idx_incident_incidenttemplateid" issystem="true">
           <fields>
-            <field schema="incidenttemplateid" />
+            <field schema="incidenttemplateid"/>
           </fields>
         </index>
         <index schema="idx_incident_modifiedby" issystem="true">
           <fields>
-            <field schema="modifiedby" />
-          </fields>
-        </index>
-        <index schema="idx_incident_productid" issystem="true">
-          <fields>
-            <field schema="productid" />
-          </fields>
-        </index>
-        <index schema="idx_incident_responsiblecontactid" issystem="true">
-          <fields>
-            <field schema="responsiblecontactid" />
+            <field schema="modifiedby"/>
           </fields>
         </index>
         <index schema="idx_incident_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
+          </fields>
+        </index>
+        <index schema="idx_incident_productid" issystem="true">
+          <fields>
+            <field schema="productid"/>
+          </fields>
+        </index>
+        <index schema="idx_incident_responsiblecontactid" issystem="true">
+          <fields>
+            <field schema="responsiblecontactid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="invoice" permissions="0">
+    <entity schema="invoice">
       <properties>
-        <property schema="createdon" />
-        <property schema="customerid" />
-        <property schema="discountamount" />
-        <property schema="discountpercentage" />
-        <property schema="freightamount" />
-        <property schema="id" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="opportunityid" />
-        <property schema="pricelevelid" />
-        <property schema="salesorderid" />
-        <property schema="shipto_city" />
-        <property schema="shipto_country" />
-        <property schema="shipto_line1" />
-        <property schema="shipto_line2" />
-        <property schema="shipto_line3" />
-        <property schema="shipto_postalcode" />
-        <property schema="shipto_stateorprovince" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
-        <property schema="totalamount" fieldpermissions="Read" />
-        <property schema="transactioncurrencyid" />
+        <property schema="createdon"/>
+        <property schema="customerid"/>
+        <property schema="discountamount"/>
+        <property schema="discountpercentage"/>
+        <property schema="freightamount"/>
+        <property schema="id"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="opportunityid"/>
+        <property schema="pricelevelid"/>
+        <property schema="salesorderid"/>
+        <property schema="shipto_city"/>
+        <property schema="shipto_country"/>
+        <property schema="shipto_line1"/>
+        <property schema="shipto_line2"/>
+        <property schema="shipto_line3"/>
+        <property schema="shipto_postalcode"/>
+        <property schema="shipto_stateorprovince"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="totalamount" fieldpermissions="Read"/>
+        <property schema="transactioncurrencyid"/>
       </properties>
       <indexes>
         <index schema="idx_invoice_customerid" issystem="true">
           <fields>
-            <field schema="customerid" />
-          </fields>
-        </index>
-        <index schema="idx_invoice_opportunityid" issystem="true">
-          <fields>
-            <field schema="opportunityid" />
-          </fields>
-        </index>
-        <index schema="idx_invoice_pricelevelid" issystem="true">
-          <fields>
-            <field schema="pricelevelid" />
-          </fields>
-        </index>
-        <index schema="idx_invoice_salesorderid" issystem="true">
-          <fields>
-            <field schema="salesorderid" />
-          </fields>
-        </index>
-        <index schema="idx_invoice_transactioncurrencyid" issystem="true">
-          <fields>
-            <field schema="transactioncurrencyid" />
+            <field schema="customerid"/>
           </fields>
         </index>
         <index schema="idx_invoice_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
+          </fields>
+        </index>
+        <index schema="idx_invoice_opportunityid" issystem="true">
+          <fields>
+            <field schema="opportunityid"/>
+          </fields>
+        </index>
+        <index schema="idx_invoice_pricelevelid" issystem="true">
+          <fields>
+            <field schema="pricelevelid"/>
+          </fields>
+        </index>
+        <index schema="idx_invoice_salesorderid" issystem="true">
+          <fields>
+            <field schema="salesorderid"/>
+          </fields>
+        </index>
+        <index schema="idx_invoice_transactioncurrencyid" issystem="true">
+          <fields>
+            <field schema="transactioncurrencyid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="invoicedetail" permissions="0">
+    <entity schema="invoicedetail">
       <properties>
-        <property schema="createdon" />
-        <property schema="extendedamount" />
-        <property schema="id" />
-        <property schema="invoiceid" />
-        <property schema="ispriceoverridden" />
-        <property schema="isproductoverridden" />
-        <property schema="manualdiscountamount" />
-        <property schema="modifiedon" />
-        <property schema="priceperunit" />
-        <property schema="productdescription" />
-        <property schema="productid" />
-        <property schema="quantity" />
-        <property schema="tax" />
-        <property schema="transactioncurrencyid" />
-        <property schema="uomid" />
-        <property schema="volumediscountamount" />
+        <property schema="createdon"/>
+        <property schema="extendedamount"/>
+        <property schema="id"/>
+        <property schema="invoiceid"/>
+        <property schema="ispriceoverridden"/>
+        <property schema="isproductoverridden"/>
+        <property schema="manualdiscountamount"/>
+        <property schema="modifiedon"/>
+        <property schema="priceperunit"/>
+        <property schema="productdescription"/>
+        <property schema="productid"/>
+        <property schema="quantity"/>
+        <property schema="tax"/>
+        <property schema="transactioncurrencyid"/>
+        <property schema="uomid"/>
+        <property schema="volumediscountamount"/>
       </properties>
       <indexes>
         <index schema="idx_invoicedetail_invoiceid" issystem="true">
           <fields>
-            <field schema="invoiceid" />
-          </fields>
-        </index>
-        <index schema="idx_invoicedetail_productid" issystem="true">
-          <fields>
-            <field schema="productid" />
-          </fields>
-        </index>
-        <index schema="idx_invoicedetail_transactioncurrencyid" issystem="true">
-          <fields>
-            <field schema="transactioncurrencyid" />
-          </fields>
-        </index>
-        <index schema="idx_invoicedetail_uomid" issystem="true">
-          <fields>
-            <field schema="uomid" />
+            <field schema="invoiceid"/>
           </fields>
         </index>
         <index schema="idx_invoicedetail_productdescription" issystem="true">
           <fields>
-            <field schema="productdescription" />
+            <field schema="productdescription"/>
+          </fields>
+        </index>
+        <index schema="idx_invoicedetail_productid" issystem="true">
+          <fields>
+            <field schema="productid"/>
+          </fields>
+        </index>
+        <index schema="idx_invoicedetail_transactioncurrencyid" issystem="true">
+          <fields>
+            <field schema="transactioncurrencyid"/>
+          </fields>
+        </index>
+        <index schema="idx_invoicedetail_uomid" issystem="true">
+          <fields>
+            <field schema="uomid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="phonecall" permissions="0">
+    <entity schema="phonecall">
       <properties>
-        <property schema="actualdurationminutes" />
-        <property schema="createdon" />
-        <property schema="description" displayformat="TextArea" />
-        <property schema="directioncode" />
-        <property schema="from" />
-        <property schema="id" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="ownerid" />
-        <property schema="prioritycode" />
-        <property schema="regardingobjectid" />
-        <property schema="scheduledend" />
-        <property schema="scheduledstart" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
-        <property schema="to" />
+        <property schema="actualdurationminutes"/>
+        <property schema="createdon"/>
+        <property schema="description" displayformat="TextArea"/>
+        <property schema="directioncode"/>
+        <property schema="from"/>
+        <property schema="id"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="ownerid"/>
+        <property schema="prioritycode"/>
+        <property schema="regardingobjectid"/>
+        <property schema="scheduledend"/>
+        <property schema="scheduledstart"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="to"/>
       </properties>
       <indexes>
+        <index schema="idx_phonecall_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
         <index schema="idx_phonecall_ownerid" issystem="true">
           <fields>
-            <field schema="ownerid" />
+            <field schema="ownerid"/>
           </fields>
         </index>
         <index schema="idx_phonecall_regardingobjectid" issystem="true">
           <fields>
-            <field schema="regardingobjectid" />
-          </fields>
-        </index>
-        <index schema="idx_phonecall_name" issystem="true">
-          <fields>
-            <field schema="name" />
+            <field schema="regardingobjectid"/>
           </fields>
         </index>
         <index schema="idx_phonecall_scheduledend" issystem="true">
           <fields>
-            <field schema="scheduledend" />
+            <field schema="scheduledend"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="pricelevel" permissions="0">
+    <entity schema="pricelevel">
       <properties>
-        <property schema="begindate" />
-        <property schema="createdon" />
-        <property schema="enddate" />
-        <property schema="id" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="transactioncurrencyid" />
+        <property schema="begindate"/>
+        <property schema="createdon"/>
+        <property schema="enddate"/>
+        <property schema="id"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="transactioncurrencyid"/>
       </properties>
       <indexes>
-        <index schema="idx_pricelevel_transactioncurrencyid" issystem="true">
-          <fields>
-            <field schema="transactioncurrencyid" />
-          </fields>
-        </index>
         <index schema="idx_pricelevel_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
+          </fields>
+        </index>
+        <index schema="idx_pricelevel_transactioncurrencyid" issystem="true">
+          <fields>
+            <field schema="transactioncurrencyid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="product" permissions="0">
+    <entity schema="product">
       <properties>
-        <property schema="createdon" />
-        <property schema="currentcost" />
-        <property schema="defaultuomid" />
-        <property schema="defaultuomscheduleid" />
-        <property schema="id" />
-        <property schema="iskit" />
-        <property schema="isservice" />
-        <property schema="isstockitem" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="price" />
-        <property schema="pricelevelid" />
-        <property schema="productnumber" displayformat="Barcode" />
-        <property schema="producttypecode" />
-        <property schema="quantitydecimal" />
-        <property schema="quantityonhand" />
-        <property schema="standardcost" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
-        <property schema="transactioncurrencyid" />
+        <property schema="createdon"/>
+        <property schema="currentcost"/>
+        <property schema="defaultuomid"/>
+        <property schema="defaultuomscheduleid"/>
+        <property schema="id"/>
+        <property schema="iskit"/>
+        <property schema="isservice"/>
+        <property schema="isstockitem"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="price"/>
+        <property schema="pricelevelid"/>
+        <property schema="productnumber" displayformat="Barcode"/>
+        <property schema="producttypecode"/>
+        <property schema="quantitydecimal"/>
+        <property schema="quantityonhand"/>
+        <property schema="standardcost"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="transactioncurrencyid"/>
       </properties>
       <indexes>
         <index schema="idx_product_defaultuomid" issystem="true">
           <fields>
-            <field schema="defaultuomid" />
+            <field schema="defaultuomid"/>
           </fields>
         </index>
         <index schema="idx_product_defaultuomscheduleid" issystem="true">
           <fields>
-            <field schema="defaultuomscheduleid" />
-          </fields>
-        </index>
-        <index schema="idx_product_pricelevelid" issystem="true">
-          <fields>
-            <field schema="pricelevelid" />
-          </fields>
-        </index>
-        <index schema="idx_product_transactioncurrencyid" issystem="true">
-          <fields>
-            <field schema="transactioncurrencyid" />
+            <field schema="defaultuomscheduleid"/>
           </fields>
         </index>
         <index schema="idx_product_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
+          </fields>
+        </index>
+        <index schema="idx_product_pricelevelid" issystem="true">
+          <fields>
+            <field schema="pricelevelid"/>
+          </fields>
+        </index>
+        <index schema="idx_product_transactioncurrencyid" issystem="true">
+          <fields>
+            <field schema="transactioncurrencyid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="productpricelevel" permissions="0">
+    <entity schema="productpricelevel">
       <properties>
-        <property schema="amount" />
-        <property schema="createdon" />
-        <property schema="id" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="percentage" />
-        <property schema="pricelevelid" />
-        <property schema="pricingmethodcode" />
-        <property schema="productid" />
-        <property schema="quantitysellingcode" />
-        <property schema="roundingoptionamount" />
-        <property schema="roundingoptioncode" />
-        <property schema="roundingpolicycode" />
-        <property schema="transactioncurrencyid" />
-        <property schema="uomid" />
+        <property schema="amount"/>
+        <property schema="createdon"/>
+        <property schema="id"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="percentage"/>
+        <property schema="pricelevelid"/>
+        <property schema="pricingmethodcode"/>
+        <property schema="productid"/>
+        <property schema="quantitysellingcode"/>
+        <property schema="roundingoptionamount"/>
+        <property schema="roundingoptioncode"/>
+        <property schema="roundingpolicycode"/>
+        <property schema="transactioncurrencyid"/>
+        <property schema="uomid"/>
       </properties>
       <indexes>
+        <index schema="idx_productpricelevel_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
         <index schema="idx_productpricelevel_pricelevelid" issystem="true">
           <fields>
-            <field schema="pricelevelid" />
+            <field schema="pricelevelid"/>
           </fields>
         </index>
         <index schema="idx_productpricelevel_productid" issystem="true">
           <fields>
-            <field schema="productid" />
+            <field schema="productid"/>
           </fields>
         </index>
         <index schema="idx_productpricelevel_transactioncurrencyid" issystem="true">
           <fields>
-            <field schema="transactioncurrencyid" />
+            <field schema="transactioncurrencyid"/>
           </fields>
         </index>
         <index schema="idx_productpricelevel_uomid" issystem="true">
           <fields>
-            <field schema="uomid" />
-          </fields>
-        </index>
-        <index schema="idx_productpricelevel_name" issystem="true">
-          <fields>
-            <field schema="name" />
+            <field schema="uomid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="quote" permissions="0">
+    <entity schema="quote">
       <properties>
-        <property schema="createdon" />
-        <property schema="customerid" />
-        <property schema="discountamount" />
-        <property schema="discountpercentage" />
-        <property schema="freightamount" />
-        <property schema="freighttermscode" />
-        <property schema="id" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="opportunityid" />
-        <property schema="pricelevelid" />
-        <property schema="shipto_city" />
-        <property schema="shipto_country" />
-        <property schema="shipto_line1" />
-        <property schema="shipto_line2" />
-        <property schema="shipto_line3" />
-        <property schema="shipto_postalcode" />
-        <property schema="shipto_stateorprovince" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
-        <property schema="totalamount" fieldpermissions="Read" />
-        <property schema="transactioncurrencyid" />
+        <property schema="createdon"/>
+        <property schema="customerid"/>
+        <property schema="discountamount"/>
+        <property schema="discountpercentage"/>
+        <property schema="freightamount"/>
+        <property schema="freighttermscode"/>
+        <property schema="id"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="opportunityid"/>
+        <property schema="pricelevelid"/>
+        <property schema="shipto_city"/>
+        <property schema="shipto_country"/>
+        <property schema="shipto_line1"/>
+        <property schema="shipto_line2"/>
+        <property schema="shipto_line3"/>
+        <property schema="shipto_postalcode"/>
+        <property schema="shipto_stateorprovince"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="totalamount" fieldpermissions="Read"/>
+        <property schema="transactioncurrencyid"/>
       </properties>
       <indexes>
         <index schema="idx_quote_customerid" issystem="true">
           <fields>
-            <field schema="customerid" />
-          </fields>
-        </index>
-        <index schema="idx_quote_opportunityid" issystem="true">
-          <fields>
-            <field schema="opportunityid" />
-          </fields>
-        </index>
-        <index schema="idx_quote_pricelevelid" issystem="true">
-          <fields>
-            <field schema="pricelevelid" />
-          </fields>
-        </index>
-        <index schema="idx_quote_transactioncurrencyid" issystem="true">
-          <fields>
-            <field schema="transactioncurrencyid" />
+            <field schema="customerid"/>
           </fields>
         </index>
         <index schema="idx_quote_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
+          </fields>
+        </index>
+        <index schema="idx_quote_opportunityid" issystem="true">
+          <fields>
+            <field schema="opportunityid"/>
+          </fields>
+        </index>
+        <index schema="idx_quote_pricelevelid" issystem="true">
+          <fields>
+            <field schema="pricelevelid"/>
+          </fields>
+        </index>
+        <index schema="idx_quote_transactioncurrencyid" issystem="true">
+          <fields>
+            <field schema="transactioncurrencyid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="quotedetail" permissions="0">
+    <entity schema="quotedetail">
       <properties>
-        <property schema="createdon" />
-        <property schema="extendedamount" />
-        <property schema="id" />
-        <property schema="ispriceoverridden" />
-        <property schema="isproductoverridden" />
-        <property schema="manualdiscountamount" />
-        <property schema="modifiedon" />
-        <property schema="priceperunit" />
-        <property schema="productdescription" />
-        <property schema="productid" />
-        <property schema="quantity" />
-        <property schema="quoteid" />
-        <property schema="tax" />
-        <property schema="transactioncurrencyid" />
-        <property schema="uomid" />
-        <property schema="volumediscountamount" />
+        <property schema="createdon"/>
+        <property schema="extendedamount"/>
+        <property schema="id"/>
+        <property schema="ispriceoverridden"/>
+        <property schema="isproductoverridden"/>
+        <property schema="manualdiscountamount"/>
+        <property schema="modifiedon"/>
+        <property schema="priceperunit"/>
+        <property schema="productdescription"/>
+        <property schema="productid"/>
+        <property schema="quantity"/>
+        <property schema="quoteid"/>
+        <property schema="tax"/>
+        <property schema="transactioncurrencyid"/>
+        <property schema="uomid"/>
+        <property schema="volumediscountamount"/>
       </properties>
       <indexes>
+        <index schema="idx_quotedetail_productdescription" issystem="true">
+          <fields>
+            <field schema="productdescription"/>
+          </fields>
+        </index>
         <index schema="idx_quotedetail_productid" issystem="true">
           <fields>
-            <field schema="productid" />
+            <field schema="productid"/>
           </fields>
         </index>
         <index schema="idx_quotedetail_quoteid" issystem="true">
           <fields>
-            <field schema="quoteid" />
+            <field schema="quoteid"/>
           </fields>
         </index>
         <index schema="idx_quotedetail_transactioncurrencyid" issystem="true">
           <fields>
-            <field schema="transactioncurrencyid" />
+            <field schema="transactioncurrencyid"/>
           </fields>
         </index>
         <index schema="idx_quotedetail_uomid" issystem="true">
           <fields>
-            <field schema="uomid" />
-          </fields>
-        </index>
-        <index schema="idx_quotedetail_productdescription" issystem="true">
-          <fields>
-            <field schema="productdescription" />
+            <field schema="uomid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="resco_audit" isonlineonly="true" permissions="0">
+    <entity schema="resco_audit" isonlineonly="true">
       <properties>
-        <property schema="createdby" />
-        <property schema="createdon" />
-        <property schema="id" />
-        <property schema="modifiedby" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="resco_changedon" />
-        <property schema="resco_displayvaluenew" />
-        <property schema="resco_displayvalueold" />
-        <property schema="resco_fieldtype" />
-        <property schema="resco_latitude" />
-        <property schema="resco_longitude" />
-        <property schema="resco_operationid" />
-        <property schema="resco_regardingobjectid" />
-        <property schema="resco_source" />
-        <property schema="resco_transactionid" />
-        <property schema="resco_valuenew" />
-        <property schema="resco_valueold" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
-        <property schema="versionnumber" />
+        <property schema="createdby"/>
+        <property schema="createdon"/>
+        <property schema="id"/>
+        <property schema="modifiedby"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="resco_changedon"/>
+        <property schema="resco_displayvaluenew"/>
+        <property schema="resco_displayvalueold"/>
+        <property schema="resco_fieldtype"/>
+        <property schema="resco_latitude"/>
+        <property schema="resco_longitude"/>
+        <property schema="resco_operationid"/>
+        <property schema="resco_regardingobjectid"/>
+        <property schema="resco_source"/>
+        <property schema="resco_transactionid"/>
+        <property schema="resco_valuenew"/>
+        <property schema="resco_valueold"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="versionnumber"/>
       </properties>
       <indexes>
         <index schema="idx_resco_audit_createdby" issystem="true">
           <fields>
-            <field schema="createdby" />
+            <field schema="createdby"/>
           </fields>
         </index>
         <index schema="idx_resco_audit_modifiedby" issystem="true">
           <fields>
-            <field schema="modifiedby" />
-          </fields>
-        </index>
-        <index schema="idx_resco_audit_resco_regardingobjectid" issystem="true">
-          <fields>
-            <field schema="resco_regardingobjectid" />
+            <field schema="modifiedby"/>
           </fields>
         </index>
         <index schema="idx_resco_audit_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_audit_resco_regardingobjectid" issystem="true">
+          <fields>
+            <field schema="resco_regardingobjectid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="resco_chatcomment" permissions="0">
+    <entity schema="resco_chatcomment">
       <properties>
-        <property schema="createdon" />
-        <property schema="id" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="resco_chatpostid" />
-        <property schema="resco_chatuserid" />
-        <property schema="resco_createdon" />
-        <property schema="resco_text" />
+        <property schema="createdon"/>
+        <property schema="id"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="resco_chatpostid"/>
+        <property schema="resco_chatuserid"/>
+        <property schema="resco_createdon"/>
+        <property schema="resco_text"/>
       </properties>
       <indexes>
+        <index schema="idx_resco_chatcomment_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
         <index schema="idx_resco_chatcomment_resco_chatpostid" issystem="true">
           <fields>
-            <field schema="resco_chatpostid" />
+            <field schema="resco_chatpostid"/>
           </fields>
         </index>
         <index schema="idx_resco_chatcomment_resco_chatuserid" issystem="true">
           <fields>
-            <field schema="resco_chatuserid" />
-          </fields>
-        </index>
-        <index schema="idx_resco_chatcomment_name" issystem="true">
-          <fields>
-            <field schema="name" />
+            <field schema="resco_chatuserid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="resco_chatpost" permissions="0">
+    <entity schema="resco_chatpost">
       <properties>
-        <property schema="createdon" />
-        <property schema="id" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="resco_chattopicid" />
-        <property schema="resco_chatuserid" />
-        <property schema="resco_createdon" />
-        <property schema="resco_modifiedon" />
-        <property schema="resco_text" />
+        <property schema="createdon"/>
+        <property schema="id"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="resco_chattopicid"/>
+        <property schema="resco_chatuserid"/>
+        <property schema="resco_createdon"/>
+        <property schema="resco_modifiedon"/>
+        <property schema="resco_text"/>
       </properties>
       <indexes>
+        <index schema="idx_resco_chatpost_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
         <index schema="idx_resco_chatpost_resco_chattopicid" issystem="true">
           <fields>
-            <field schema="resco_chattopicid" />
+            <field schema="resco_chattopicid"/>
           </fields>
         </index>
         <index schema="idx_resco_chatpost_resco_chatuserid" issystem="true">
           <fields>
-            <field schema="resco_chatuserid" />
-          </fields>
-        </index>
-        <index schema="idx_resco_chatpost_name" issystem="true">
-          <fields>
-            <field schema="name" />
+            <field schema="resco_chatuserid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="resco_chatpost_chatuser" permissions="0">
+    <entity schema="resco_chatpost_chatuser">
       <properties>
-        <property schema="resco_chatpostid" />
-        <property schema="resco_chatuserid" />
+        <property schema="resco_chatpostid"/>
+        <property schema="resco_chatuserid"/>
       </properties>
       <indexes>
         <index schema="idx_resco_chatpost_chatuser" issystem="true">
           <fields>
-            <field schema="resco_chatpostid" />
-            <field schema="resco_chatuserid" />
+            <field schema="resco_chatpostid"/>
+            <field schema="resco_chatuserid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="resco_chattopic" permissions="0">
+    <entity schema="resco_chattopic">
       <properties>
-        <property schema="createdon" />
-        <property schema="id" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="resco_regardingobjectentity" />
-        <property schema="resco_regardingobjectid" />
+        <property schema="createdon"/>
+        <property schema="id"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="resco_regardingobjectentity"/>
+        <property schema="resco_regardingobjectid"/>
       </properties>
       <indexes>
         <index schema="idx_resco_chattopic_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="resco_chattopic_chatuser" permissions="0">
+    <entity schema="resco_chattopic_chatuser">
       <properties>
-        <property schema="resco_chattopicid" />
-        <property schema="resco_chatuserid" />
+        <property schema="resco_chattopicid"/>
+        <property schema="resco_chatuserid"/>
       </properties>
       <indexes>
         <index schema="idx_resco_chattopic_chatuser" issystem="true">
           <fields>
-            <field schema="resco_chattopicid" />
-            <field schema="resco_chatuserid" />
+            <field schema="resco_chattopicid"/>
+            <field schema="resco_chatuserid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="resco_chatuser" permissions="0">
+    <entity schema="resco_chatuser">
       <properties>
-        <property schema="createdon" />
-        <property schema="id" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="resco_userentity" />
-        <property schema="resco_userid" />
+        <property schema="createdon"/>
+        <property schema="id"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="resco_userentity"/>
+        <property schema="resco_userid"/>
       </properties>
       <indexes>
         <index schema="idx_resco_chatuser_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="resco_mobilereport" permissions="0">
+    <entity schema="resco_mobilereport">
       <properties>
-        <property schema="createdon" />
-        <property schema="id" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="resco_data" />
-        <property schema="resco_entityname" />
-        <property schema="resco_languagecode" />
-        <property schema="resco_sourcetype" />
-        <property schema="statuscode" />
+        <property schema="createdon"/>
+        <property schema="id"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="resco_data"/>
+        <property schema="resco_entityname"/>
+        <property schema="resco_languagecode"/>
+        <property schema="resco_sourcetype"/>
+        <property schema="statuscode"/>
       </properties>
       <indexes>
         <index schema="idx_resco_mobilereport_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="salesorder" permissions="0">
+    <entity schema="salesorder">
       <properties>
-        <property schema="createdon" />
-        <property schema="customerid" />
-        <property schema="discountamount" />
-        <property schema="discountpercentage" />
-        <property schema="freightamount" />
-        <property schema="freighttermscode" />
-        <property schema="id" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="opportunityid" />
-        <property schema="ownerid" />
-        <property schema="pricelevelid" />
-        <property schema="quoteid" />
-        <property schema="shipto_city" />
-        <property schema="shipto_country" />
-        <property schema="shipto_line1" />
-        <property schema="shipto_line2" />
-        <property schema="shipto_line3" />
-        <property schema="shipto_postalcode" />
-        <property schema="shipto_stateorprovince" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
-        <property schema="totalamount" />
-        <property schema="transactioncurrencyid" />
+        <property schema="createdon"/>
+        <property schema="customerid"/>
+        <property schema="discountamount"/>
+        <property schema="discountpercentage"/>
+        <property schema="freightamount"/>
+        <property schema="freighttermscode"/>
+        <property schema="id"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="opportunityid"/>
+        <property schema="ownerid"/>
+        <property schema="pricelevelid"/>
+        <property schema="quoteid"/>
+        <property schema="shipto_city"/>
+        <property schema="shipto_country"/>
+        <property schema="shipto_line1"/>
+        <property schema="shipto_line2"/>
+        <property schema="shipto_line3"/>
+        <property schema="shipto_postalcode"/>
+        <property schema="shipto_stateorprovince"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="totalamount"/>
+        <property schema="transactioncurrencyid"/>
       </properties>
       <indexes>
         <index schema="idx_salesorder_customerid" issystem="true">
           <fields>
-            <field schema="customerid" />
-          </fields>
-        </index>
-        <index schema="idx_salesorder_opportunityid" issystem="true">
-          <fields>
-            <field schema="opportunityid" />
-          </fields>
-        </index>
-        <index schema="idx_salesorder_ownerid" issystem="true">
-          <fields>
-            <field schema="ownerid" />
-          </fields>
-        </index>
-        <index schema="idx_salesorder_pricelevelid" issystem="true">
-          <fields>
-            <field schema="pricelevelid" />
-          </fields>
-        </index>
-        <index schema="idx_salesorder_quoteid" issystem="true">
-          <fields>
-            <field schema="quoteid" />
-          </fields>
-        </index>
-        <index schema="idx_salesorder_transactioncurrencyid" issystem="true">
-          <fields>
-            <field schema="transactioncurrencyid" />
+            <field schema="customerid"/>
           </fields>
         </index>
         <index schema="idx_salesorder_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
+          </fields>
+        </index>
+        <index schema="idx_salesorder_opportunityid" issystem="true">
+          <fields>
+            <field schema="opportunityid"/>
+          </fields>
+        </index>
+        <index schema="idx_salesorder_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_salesorder_pricelevelid" issystem="true">
+          <fields>
+            <field schema="pricelevelid"/>
+          </fields>
+        </index>
+        <index schema="idx_salesorder_quoteid" issystem="true">
+          <fields>
+            <field schema="quoteid"/>
+          </fields>
+        </index>
+        <index schema="idx_salesorder_transactioncurrencyid" issystem="true">
+          <fields>
+            <field schema="transactioncurrencyid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="salesorderdetail" permissions="0">
+    <entity schema="salesorderdetail">
       <properties>
-        <property schema="createdon" />
-        <property schema="extendedamount" />
-        <property schema="id" />
-        <property schema="ispriceoverridden" />
-        <property schema="isproductoverridden" />
-        <property schema="manualdiscountamount" />
-        <property schema="modifiedon" />
-        <property schema="priceperunit" />
-        <property schema="productdescription" />
-        <property schema="productid" />
-        <property schema="quantity" />
-        <property schema="salesorderid" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
-        <property schema="tax" />
-        <property schema="transactioncurrencyid" />
-        <property schema="uomid" />
-        <property schema="volumediscountamount" />
+        <property schema="createdon"/>
+        <property schema="extendedamount"/>
+        <property schema="id"/>
+        <property schema="ispriceoverridden"/>
+        <property schema="isproductoverridden"/>
+        <property schema="manualdiscountamount"/>
+        <property schema="modifiedon"/>
+        <property schema="priceperunit"/>
+        <property schema="productdescription"/>
+        <property schema="productid"/>
+        <property schema="quantity"/>
+        <property schema="salesorderid"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="tax"/>
+        <property schema="transactioncurrencyid"/>
+        <property schema="uomid"/>
+        <property schema="volumediscountamount"/>
       </properties>
       <indexes>
+        <index schema="idx_salesorderdetail_productdescription" issystem="true">
+          <fields>
+            <field schema="productdescription"/>
+          </fields>
+        </index>
         <index schema="idx_salesorderdetail_productid" issystem="true">
           <fields>
-            <field schema="productid" />
+            <field schema="productid"/>
           </fields>
         </index>
         <index schema="idx_salesorderdetail_salesorderid" issystem="true">
           <fields>
-            <field schema="salesorderid" />
+            <field schema="salesorderid"/>
           </fields>
         </index>
         <index schema="idx_salesorderdetail_transactioncurrencyid" issystem="true">
           <fields>
-            <field schema="transactioncurrencyid" />
+            <field schema="transactioncurrencyid"/>
           </fields>
         </index>
         <index schema="idx_salesorderdetail_uomid" issystem="true">
           <fields>
-            <field schema="uomid" />
-          </fields>
-        </index>
-        <index schema="idx_salesorderdetail_productdescription" issystem="true">
-          <fields>
-            <field schema="productdescription" />
+            <field schema="uomid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="systemuser" permissions="0">
+    <entity schema="systemuser">
       <properties>
-        <property schema="createdon" />
-        <property schema="id" />
-        <property schema="isdisabled" />
-        <property schema="modifiedon" />
-        <property schema="name" />
+        <property schema="createdon"/>
+        <property schema="id"/>
+        <property schema="isdisabled"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
       </properties>
       <indexes>
         <index schema="idx_systemuser_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="task" permissions="0">
+    <entity schema="task">
       <properties>
-        <property schema="actualdurationminutes" />
-        <property schema="createdon" />
-        <property schema="description" />
-        <property schema="id" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="ownerid" />
-        <property schema="prioritycode" />
-        <property schema="regardingobjectid" />
-        <property schema="scheduledend" />
-        <property schema="scheduledstart" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
+        <property schema="actualdurationminutes"/>
+        <property schema="createdon"/>
+        <property schema="description"/>
+        <property schema="id"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="ownerid"/>
+        <property schema="prioritycode"/>
+        <property schema="regardingobjectid"/>
+        <property schema="scheduledend"/>
+        <property schema="scheduledstart"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
       </properties>
       <indexes>
+        <index schema="idx_task_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
         <index schema="idx_task_ownerid" issystem="true">
           <fields>
-            <field schema="ownerid" />
+            <field schema="ownerid"/>
           </fields>
         </index>
         <index schema="idx_task_regardingobjectid" issystem="true">
           <fields>
-            <field schema="regardingobjectid" />
-          </fields>
-        </index>
-        <index schema="idx_task_name" issystem="true">
-          <fields>
-            <field schema="name" />
+            <field schema="regardingobjectid"/>
           </fields>
         </index>
         <index schema="idx_task_scheduledend" issystem="true">
           <fields>
-            <field schema="scheduledend" />
+            <field schema="scheduledend"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="transactioncurrency" class="false" permissions="0">
+    <entity schema="transactioncurrency" class="false">
       <properties>
-        <property schema="createdon" />
-        <property schema="currencyprecision" />
-        <property schema="currencysymbol" />
-        <property schema="id" />
-        <property schema="isocurrencycode" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
+        <property schema="createdon"/>
+        <property schema="currencyprecision"/>
+        <property schema="currencysymbol"/>
+        <property schema="id"/>
+        <property schema="isocurrencycode"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
       </properties>
       <indexes>
         <index schema="idx_transactioncurrency_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="uom" permissions="0">
+    <entity schema="uom">
       <properties>
-        <property schema="baseuom" />
-        <property schema="createdon" />
-        <property schema="id" />
-        <property schema="isschedulebaseuom" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="quantity" />
-        <property schema="uomscheduleid" />
+        <property schema="baseuom"/>
+        <property schema="createdon"/>
+        <property schema="id"/>
+        <property schema="isschedulebaseuom"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="quantity"/>
+        <property schema="uomscheduleid"/>
       </properties>
       <indexes>
         <index schema="idx_uom_baseuom" issystem="true">
           <fields>
-            <field schema="baseuom" />
-          </fields>
-        </index>
-        <index schema="idx_uom_uomscheduleid" issystem="true">
-          <fields>
-            <field schema="uomscheduleid" />
+            <field schema="baseuom"/>
           </fields>
         </index>
         <index schema="idx_uom_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
+          </fields>
+        </index>
+        <index schema="idx_uom_uomscheduleid" issystem="true">
+          <fields>
+            <field schema="uomscheduleid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="uomschedule" class="false" permissions="0">
+    <entity schema="uomschedule" class="false">
       <properties>
-        <property schema="createdon" />
-        <property schema="id" />
-        <property schema="modifiedon" />
-        <property schema="name" />
+        <property schema="createdon"/>
+        <property schema="id"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
       </properties>
       <indexes>
         <index schema="idx_uomschedule_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
           </fields>
         </index>
       </indexes>
