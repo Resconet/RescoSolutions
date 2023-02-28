@@ -1,200 +1,199 @@
-<?xml version="1.0"?>
-<model xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="7" publish="10000">
+﻿<model version="7" publish="10000">
   <entities>
     <entity schema="account" permissions="384">
       <properties>
-        <property schema="address1_city" />
-        <property schema="address1_country" />
-        <property schema="address1_latitude" />
-        <property schema="address1_line1" />
-        <property schema="address1_line2" />
-        <property schema="address1_line3" />
-        <property schema="address1_longitude" />
-        <property schema="address1_postalcode" />
-        <property schema="address1_stateorprovince" />
-        <property schema="createdon" />
-        <property schema="emailaddress1" />
-        <property schema="fax" />
-        <property schema="id" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="ownerid" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
-        <property schema="telephone1" displayformat="PhoneNumber" />
-        <property schema="transactioncurrencyid" />
-        <property schema="websiteurl" />
+        <property schema="address1_city"/>
+        <property schema="address1_country"/>
+        <property schema="address1_latitude"/>
+        <property schema="address1_line1"/>
+        <property schema="address1_line2"/>
+        <property schema="address1_line3"/>
+        <property schema="address1_longitude"/>
+        <property schema="address1_postalcode"/>
+        <property schema="address1_stateorprovince"/>
+        <property schema="createdon"/>
+        <property schema="emailaddress1"/>
+        <property schema="fax"/>
+        <property schema="id"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="ownerid"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="telephone1" displayformat="PhoneNumber"/>
+        <property schema="transactioncurrencyid"/>
+        <property schema="websiteurl"/>
       </properties>
       <indexes>
+        <index schema="idx_account_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
         <index schema="idx_account_ownerid" issystem="true">
           <fields>
-            <field schema="ownerid" />
+            <field schema="ownerid"/>
           </fields>
         </index>
         <index schema="idx_account_transactioncurrencyid" issystem="true">
           <fields>
-            <field schema="transactioncurrencyid" />
-          </fields>
-        </index>
-        <index schema="idx_account_name" issystem="true">
-          <fields>
-            <field schema="name" />
+            <field schema="transactioncurrencyid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="activity" permissions="0">
+    <entity schema="activity">
       <properties>
-        <property schema="createdon" />
-        <property schema="id" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="ownerid" />
-        <property schema="regardingobjectid" />
-        <property schema="scheduledend" />
-        <property schema="scheduledstart" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
+        <property schema="createdon"/>
+        <property schema="id"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="ownerid"/>
+        <property schema="regardingobjectid"/>
+        <property schema="scheduledend"/>
+        <property schema="scheduledstart"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
       </properties>
       <indexes>
+        <index schema="idx_activity_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
         <index schema="idx_activity_ownerid" issystem="true">
           <fields>
-            <field schema="ownerid" />
+            <field schema="ownerid"/>
           </fields>
         </index>
         <index schema="idx_activity_regardingobjectid" issystem="true">
           <fields>
-            <field schema="regardingobjectid" />
-          </fields>
-        </index>
-        <index schema="idx_activity_name" issystem="true">
-          <fields>
-            <field schema="name" />
+            <field schema="regardingobjectid"/>
           </fields>
         </index>
         <index schema="idx_activity_scheduledend" issystem="true">
           <fields>
-            <field schema="scheduledend" />
+            <field schema="scheduledend"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="activityparty" permissions="0">
+    <entity schema="activityparty">
       <properties>
-        <property schema="activityid" />
-        <property schema="id" />
-        <property schema="participationtypemask" />
-        <property schema="partyid" />
+        <property schema="activityid"/>
+        <property schema="id"/>
+        <property schema="participationtypemask"/>
+        <property schema="partyid"/>
       </properties>
       <indexes>
         <index schema="idx_activityparty_activityid" issystem="true">
           <fields>
-            <field schema="activityid" />
+            <field schema="activityid"/>
           </fields>
         </index>
         <index schema="idx_activityparty_partyid" issystem="true">
           <fields>
-            <field schema="partyid" />
+            <field schema="partyid"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="annotation" permissions="0">
+    <entity schema="annotation">
       <properties>
-        <property schema="createdon" />
-        <property schema="documentbody" />
-        <property schema="filename" />
-        <property schema="filesize" />
-        <property schema="id" />
-        <property schema="isdocument" />
-        <property schema="mimetype" />
-        <property schema="modifiedon" />
-        <property schema="notetext" />
-        <property schema="objectid" />
-        <property schema="ownerid" />
-        <property schema="subject" />
+        <property schema="createdon"/>
+        <property schema="documentbody"/>
+        <property schema="filename"/>
+        <property schema="filesize"/>
+        <property schema="id"/>
+        <property schema="isdocument"/>
+        <property schema="mimetype"/>
+        <property schema="modifiedon"/>
+        <property schema="notetext"/>
+        <property schema="objectid"/>
+        <property schema="ownerid"/>
+        <property schema="subject"/>
       </properties>
       <indexes>
         <index schema="idx_annotation_objectid" issystem="true">
           <fields>
-            <field schema="objectid" />
+            <field schema="objectid"/>
           </fields>
         </index>
         <index schema="idx_annotation_ownerid" issystem="true">
           <fields>
-            <field schema="ownerid" />
+            <field schema="ownerid"/>
           </fields>
         </index>
         <index schema="idx_annotation_subject" issystem="true">
           <fields>
-            <field schema="subject" />
+            <field schema="subject"/>
           </fields>
         </index>
       </indexes>
     </entity>
     <entity schema="product" permissions="384">
       <properties>
-        <property schema="category" />
-        <property schema="createdon" />
-        <property schema="description" />
-        <property schema="iconfilename" />
-        <property schema="id" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="price" />
-        <property schema="productnumber" displayformat="Barcode" />
-        <property schema="shortdescription" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
-        <property schema="transactioncurrencyid" />
+        <property schema="category"/>
+        <property schema="createdon"/>
+        <property schema="description"/>
+        <property schema="iconfilename"/>
+        <property schema="id"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="price"/>
+        <property schema="productnumber" displayformat="Barcode"/>
+        <property schema="shortdescription"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="transactioncurrencyid"/>
       </properties>
       <indexes>
-        <index schema="idx_product_transactioncurrencyid" issystem="true">
-          <fields>
-            <field schema="transactioncurrencyid" />
-          </fields>
-        </index>
         <index schema="idx_product_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
+          </fields>
+        </index>
+        <index schema="idx_product_transactioncurrencyid" issystem="true">
+          <fields>
+            <field schema="transactioncurrencyid"/>
           </fields>
         </index>
       </indexes>
     </entity>
     <entity schema="promotion" permissions="384">
       <properties>
-        <property schema="createdon" />
-        <property schema="description" />
-        <property schema="id" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="validfrom" displayformat="DateOnly" />
-        <property schema="validto" displayformat="DateOnly" />
+        <property schema="createdon"/>
+        <property schema="description"/>
+        <property schema="id"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="validfrom" displayformat="DateOnly"/>
+        <property schema="validto" displayformat="DateOnly"/>
       </properties>
       <indexes>
         <index schema="idx_promotion_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
           </fields>
         </index>
       </indexes>
     </entity>
-    <entity schema="transactioncurrency" class="false" permissions="0">
+    <entity schema="transactioncurrency" class="false">
       <properties>
-        <property schema="createdon" />
-        <property schema="currencyprecision" />
-        <property schema="currencysymbol" />
-        <property schema="id" />
-        <property schema="isocurrencycode" />
-        <property schema="modifiedon" />
-        <property schema="name" />
-        <property schema="statecode" />
-        <property schema="statuscode" />
+        <property schema="createdon"/>
+        <property schema="currencyprecision"/>
+        <property schema="currencysymbol"/>
+        <property schema="id"/>
+        <property schema="isocurrencycode"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
       </properties>
       <indexes>
         <index schema="idx_transactioncurrency_name" issystem="true">
           <fields>
-            <field schema="name" />
+            <field schema="name"/>
           </fields>
         </index>
       </indexes>
@@ -210,6 +209,6 @@
   <home>##</home>
   <home>promotion</home>
   <home>@About</home>
-  <map>account;</map>
   <tourplan>appointment</tourplan>
+  <map>account;</map>
 </model>
