@@ -3,12 +3,14 @@
   <EntityName>account</EntityName>
   <CamelCase>account</CamelCase>
   <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
-  <PrimaryCommands/>
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
+  <CacheMode>-1</CacheMode>
+  <PrimaryCommands></PrimaryCommands>
   <SharedVariableNames/>
   <ClassBinding/>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled</EnabledWorkflows>
   <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab" flexiHeader="2">
+    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>General</Name>
       <SerializedChildren>
         <DetailItem SchemaName="name" Style="Normal"/>
@@ -29,7 +31,7 @@
         <DetailItem SchemaName="transactioncurrencyid" Style="Normal"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="DetailTab">
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Address@2x.png" IsIconNameReadOnly="0">
       <Name>Address</Name>
       <SerializedChildren>
         <DetailItem SchemaName="address1_line1" Style="Normal"/>
@@ -47,22 +49,22 @@
         <DetailItem SchemaName="address1_country" Style="Normal"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="MapTab" flexiHeight="1" flexiWidth="1">
+    <FormTab xsi:type="MapTab" flexiHeight="1" flexiWidth="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
       <Name>Map</Name>
       <CoordinatesBinding>address1_latitude;address1_longitude</CoordinatesBinding>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="1" flexiWidth="1" flexiOrientation="2">
+    <FormTab xsi:type="AssociatedTab" flexiHeight="1" flexiWidth="1" flexiOrientation="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\contact@2x.png" IsIconNameReadOnly="0">
       <Name>Contacts List</Name>
       <Binding SchemaName="contact.parentcustomerid"/>
       <Views>contact.Associated</Views>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="3" flexiOrientation="1" flexiMaxLines="8" DocCommands="0">
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3" flexiOrientation="1" flexiMaxLines="8" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\activity@2x.png" IsIconNameReadOnly="0" DocCommands="0">
       <Name>Appointments</Name>
       <CustomName>Appointments</CustomName>
       <Binding SchemaName="activity.regardingobjectid"/>
       <Views>appointment.*</Views>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiOrientation="1" flexiMaxLines="2">
+    <FormTab xsi:type="AssociatedTab" flexiOrientation="1" flexiMaxLines="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
       <Name>Notes List</Name>
       <Binding SchemaName="annotation.objectid"/>
     </FormTab>
