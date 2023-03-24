@@ -1,58 +1,76 @@
-﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="0" fullscreen="0" resize="0" version="2">
   <IsContactForm>false</IsContactForm>
   <EntityName>opportunity</EntityName>
   <CamelCase>Opportunity</CamelCase>
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
+  <CacheMode>-1</CacheMode>
   <PrimaryCommands>!defcmd</PrimaryCommands>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
   <SerializedChildrenV2>
-    <FormTab xsi:type="ProcessControlTab" flexiHeight="215px" flexiWidth="1" flexiHeader="0" NameModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+    <FormTab xsi:type="ProcessControlTab" flexiHeight="215px" flexiWidth="1" flexiHeader="0" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>Process</Name>
-      <Url>file://ProcessControl/ProcessControl.html?name=Process</Url>
-      <DelayLoad>false</DelayLoad>
       <SelectedProcessControl>Process</SelectedProcessControl>
     </FormTab>
-    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>General</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="name"/>
-        <DetailItem SchemaName="customerid"/>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
+        <DetailItem SchemaName="$Table1" grid="true">
+          <Columns>*;*</Columns>
+          <Rows>Auto;Auto;Auto;Auto;Auto;Auto;Auto;Auto;Auto;Auto;Auto</Rows>
+          <Items>
+            <DetailItem SchemaName="name">
+              <GridPosition>0;0;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="customerid">
+              <GridPosition>0;1;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="transactioncurrencyid">
+              <GridPosition>0;2;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="pricelevelid">
+              <GridPosition>0;3;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="isrevenuesystemcalculated">
+              <GridPosition>0;4;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="estimatedvalue">
+              <GridPosition>0;5;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="estimatedclosedate">
+              <GridPosition>0;6;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="actualclosedate">
+              <GridPosition>0;7;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="stepname">
+              <GridPosition>0;8;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="opportunityratingcode">
+              <GridPosition>0;9;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="closeprobability">
+              <GridPosition>1;9;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="statuscode">
+              <GridPosition>0;10;2;1</GridPosition>
+            </DetailItem>
+          </Items>
         </DetailItem>
-        <DetailItem SchemaName="transactioncurrencyid"/>
-        <DetailItem SchemaName="pricelevelid"/>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="isrevenuesystemcalculated"/>
-        <DetailItem SchemaName="estimatedvalue"/>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="estimatedclosedate"/>
-        <DetailItem SchemaName="actualclosedate"/>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="stepname"/>
-        <DetailItem SchemaName="opportunityratingcode"/>
-        <DetailItem SchemaName="closeprobability"/>
-        <DetailItem SchemaName="statuscode"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="4" flexiHeader="2" NameModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0">
+    <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0">
       <Name>Opportunity Lines List</Name>
       <Binding SchemaName="opportunityproduct.opportunityid"/>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="4" flexiHeader="2" NameModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\activity@2x.png" IsIconNameReadOnly="0">
+    <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\activity@2x.png" IsIconNameReadOnly="0">
       <Name>Activity List</Name>
       <Binding SchemaName="activity.regardingobjectid"/>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="4" flexiHeader="2" NameModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\quote@2x.png" IsIconNameReadOnly="0">
+    <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\quote@2x.png" IsIconNameReadOnly="0">
       <Name>Quotes List</Name>
       <Binding SchemaName="quote.opportunityid"/>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="4" flexiHeader="2" NameModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
+    <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
       <Name>Notes List</Name>
       <Binding SchemaName="annotation.objectid"/>
     </FormTab>
