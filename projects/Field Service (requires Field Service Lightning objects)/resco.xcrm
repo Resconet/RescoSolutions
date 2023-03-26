@@ -1,4 +1,4 @@
-﻿<model version="7" publish="10000">
+﻿<model version="8" publish="10000">
   <entities>
     <entity schema="activityparty">
       <properties>
@@ -278,6 +278,29 @@
         <index schema="idx_resco_mobilereport_name" issystem="true">
           <fields>
             <field schema="name"/>
+          </fields>
+        </index>
+      </indexes>
+    </entity>
+    <entity schema="resco_usersettings">
+      <properties>
+        <property schema="createdon"/>
+        <property schema="modifiedon"/>
+        <property schema="ownerid"/>
+        <property schema="resco_kind"/>
+        <property schema="resco_name"/>
+        <property schema="resco_usersettingsid"/>
+        <property schema="resco_value"/>
+      </properties>
+      <indexes>
+        <index schema="idx_resco_usersettings_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_usersettings_resco_name" issystem="true">
+          <fields>
+            <field schema="resco_name"/>
           </fields>
         </index>
       </indexes>
@@ -1936,6 +1959,7 @@
         <property schema="phone"/>
         <property schema="title" fieldpermissions="Read Static"/>
         <property schema="username" fieldpermissions="Read Static"/>
+        <property schema="userroleid"/>
         <property schema="usertype"/>
       </properties>
       <indexes>
@@ -1952,6 +1976,11 @@
         <index schema="idx_sf_user_name" issystem="true">
           <fields>
             <field schema="name"/>
+          </fields>
+        </index>
+        <index schema="idx_sf_user_userroleid" issystem="true">
+          <fields>
+            <field schema="userroleid"/>
           </fields>
         </index>
       </indexes>
