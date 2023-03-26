@@ -24,7 +24,9 @@
   </SerializedBindings>
   <MaxColumns>10</MaxColumns>
   <Fetch version="1.0">
-    <entity name="sf_contentdocumentlink"/>
+    <entity name="sf_contentdocumentlink">
+      <filter type="and"/>
+    </entity>
   </Fetch>
   <Search>
     <attribute schema="contentdocumentid" method="Contains" reference="true"/>
@@ -40,7 +42,6 @@
       <Width>120</Width>
       <Height>140</Height>
       <Buttons>none</Buttons>
-      <SerializedBackground>-789517</SerializedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="img">
           <IsConstant>true</IsConstant>

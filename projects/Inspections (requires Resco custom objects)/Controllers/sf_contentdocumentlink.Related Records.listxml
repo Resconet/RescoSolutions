@@ -36,7 +36,6 @@
       <Width>240</Width>
       <Height>40</Height>
       <Buttons>Delete;Open.sf_contentdocumentlink.linkedentityid</Buttons>
-      <SerializedBackground>-789517</SerializedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="linkedentityid">
           <StyleName>primary</StyleName>
