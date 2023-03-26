@@ -1,10 +1,12 @@
-﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+﻿<EntityForm xsi:dummy="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" flexi="0" fleximode="0" fullscreen="0" resize="0" version="2">
   <IsContactForm>false</IsContactForm>
   <EntityName>sf_account</EntityName>
   <CamelCase>sf_account</CamelCase>
   <WorkflowLoad>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.ownerid2&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.createdon&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.ownerid2&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:Configuration.systemuserid&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.ShippingAddress.IsExpanded&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.IsNew&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^New event.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^New task.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^New order .IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^New event.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^New task.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^New order .IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowLoad>
   <WorkflowButtonCommand>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="2020Q2 - Create a new order button" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:New order &lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;definition e="false"&gt;&lt;var&gt;NewOrder&lt;/var&gt;&lt;func&gt;NewInstance&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;arg&gt;String:sf_order&lt;/arg&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;NewOrder.accountid&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:Entity.@this&lt;/arg&gt;&lt;/function&gt;&lt;definition e="false"&gt;&lt;var&gt;OpenOrder&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;type&gt;Lookup&lt;/type&gt;&lt;arg&gt;var:NewOrder.@this&lt;/arg&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;OpenOrder&lt;/var&gt;&lt;func&gt;OpenForm&lt;/func&gt;&lt;arg&gt;String:&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="2020Q2 - Create a new event button" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:New event&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;definition e="false"&gt;&lt;var&gt;NewEvent&lt;/var&gt;&lt;func&gt;NewInstance&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;arg&gt;String:sf_event&lt;/arg&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;NewEvent.whatid&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:Entity.@this&lt;/arg&gt;&lt;/function&gt;&lt;definition e="false"&gt;&lt;var&gt;OpenEvent&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;type&gt;Lookup&lt;/type&gt;&lt;arg&gt;var:NewEvent.@this&lt;/arg&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;OpenEvent&lt;/var&gt;&lt;func&gt;OpenForm&lt;/func&gt;&lt;arg&gt;String:&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="2020Q3 - Create a new task button" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:New task&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;definition e="false"&gt;&lt;var&gt;NewTask&lt;/var&gt;&lt;func&gt;NewInstance&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;arg&gt;String:sf_task&lt;/arg&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;NewTask.whatid&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:Entity.@this&lt;/arg&gt;&lt;/function&gt;&lt;definition e="false"&gt;&lt;var&gt;OpenTask&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;type&gt;Lookup&lt;/type&gt;&lt;arg&gt;var:NewTask.@this&lt;/arg&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;OpenTask&lt;/var&gt;&lt;func&gt;OpenForm&lt;/func&gt;&lt;arg&gt;String:&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowButtonCommand>
   <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
+  <CacheMode>-1</CacheMode>
   <PrimaryCommands>Delete|||Favorite||</PrimaryCommands>
   <SharedVariableNames/>
   <ClassBinding/>
@@ -13,49 +15,29 @@
     <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_account@2x.png" IsIconNameReadOnly="0">
       <Name>sf_account</Name>
       <SerializedChildren>
+        <DetailItem SchemaName="name"/>
+        <DetailItem SchemaName="website"/>
+        <DetailItem SchemaName="phone"/>
+        <DetailItem SchemaName="industry"/>
+        <DetailItem SchemaName="type"/>
+        <DetailItem SchemaName="ownerid2"/>
+        <DetailItem SchemaName="parentid"/>
+        <DetailItem SchemaName="description"/>
         <DetailItem SchemaName="$Table1" grid="true">
           <Columns>*;*</Columns>
-          <Rows>Auto;Auto;Auto;Auto;Auto;Auto;Auto;Auto;Auto;Auto</Rows>
+          <Rows>Auto;Auto</Rows>
           <Items>
-            <DetailItem SchemaName="name" Style="Table">
-              <GridPosition>0;0;2;1</GridPosition>
-            </DetailItem>
-            <DetailItem SchemaName="website" Style="Table">
-              <GridPosition>0;1;1;1</GridPosition>
-            </DetailItem>
-            <DetailItem SchemaName="phone" Style="Table">
-              <GridPosition>1;1;1;1</GridPosition>
-            </DetailItem>
-            <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+            <DetailItem SchemaName="New task" button="true" buttonLabel="New task" buttonClickText="New task" buttonCommand="">
               <IsConstant>true</IsConstant>
-              <GridPosition>0;2;2;1</GridPosition>
+              <GridPosition>0;0;1;1</GridPosition>
             </DetailItem>
-            <DetailItem SchemaName="industry" Style="Table">
-              <GridPosition>0;3;2;1</GridPosition>
-            </DetailItem>
-            <DetailItem SchemaName="type" Style="Table">
-              <GridPosition>0;4;2;1</GridPosition>
-            </DetailItem>
-            <DetailItem SchemaName="ownerid2" Style="Table">
-              <GridPosition>0;5;2;1</GridPosition>
-            </DetailItem>
-            <DetailItem SchemaName="parentid" Style="Table">
-              <GridPosition>0;6;2;1</GridPosition>
-            </DetailItem>
-            <DetailItem SchemaName="description" Style="Table">
-              <GridPosition>0;7;2;1</GridPosition>
-            </DetailItem>
-            <DetailItem SchemaName="New event" button="true" buttonLabel="New event" buttonClickText="New event">
+            <DetailItem SchemaName="New event" button="true" buttonLabel="New event" buttonClickText="New event" buttonCommand="">
               <IsConstant>true</IsConstant>
-              <GridPosition>1;8;1;1</GridPosition>
+              <GridPosition>1;0;1;1</GridPosition>
             </DetailItem>
-            <DetailItem SchemaName="New task" button="true" buttonLabel="New task" buttonClickText="New task">
+            <DetailItem SchemaName="New order " button="true" buttonLabel="New order " buttonClickText="New order " buttonCommand="">
               <IsConstant>true</IsConstant>
-              <GridPosition>0;8;1;1</GridPosition>
-            </DetailItem>
-            <DetailItem SchemaName="New order " button="true" buttonLabel="New order " buttonClickText="New order ">
-              <IsConstant>true</IsConstant>
-              <GridPosition>0;9;2;1</GridPosition>
+              <GridPosition>0;1;2;1</GridPosition>
             </DetailItem>
           </Items>
         </DetailItem>
@@ -74,7 +56,7 @@
       <SerializedChildren>
         <DetailItem SchemaName="$Table2" grid="true">
           <Columns>*;*</Columns>
-          <Rows>Auto;Auto;Auto;Auto;Auto</Rows>
+          <Rows>Auto;Auto;Auto;Auto</Rows>
           <Items>
             <DetailItem SchemaName="billingstreet" Style="Table">
               <GridPosition>0;0;2;1</GridPosition>

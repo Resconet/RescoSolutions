@@ -1,4 +1,4 @@
-﻿<model version="7" publish="10000">
+﻿<model version="8" publish="10000">
   <entities>
     <entity schema="activityparty">
       <properties>
