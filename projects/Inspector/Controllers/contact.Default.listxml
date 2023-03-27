@@ -2,7 +2,7 @@
   <Attributes>
     <EntityName>contact</EntityName>
     <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
-    <ClassBinding />
+    <ClassBinding/>
   </Attributes>
   <Name>Default</Name>
   <Kind>List</Kind>
@@ -17,7 +17,7 @@
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
   <Search>
-    <attribute schema="fullname" method="BeginsWith" />
+    <attribute schema="fullname" method="BeginsWith"/>
   </Search>
   <SerializedTemplates>
     <RowTemplate>
@@ -55,5 +55,5 @@
       </SerializedChildren>
     </RowTemplate>
   </SerializedTemplates>
-  <CustomProperties />
+  <CustomProperties/>
 </EntityList>

@@ -13,25 +13,25 @@
   <colors name="SearchBackground" color="PAL:6"/>
   <colors name="SearchForeground" color="PAL:8"/>
   <colors name="SearchSelForeground" color="PAL:3"/>
-  <colors name="TabBackground" color="PAL:6"/>
-  <colors name="TabForeground" color="PAL:9"/>
+  <colors name="TabBackground" color="PAL:0"/>
+  <colors name="TabForeground" color="PAL:0"/>
   <colors name="TabSelForeground" color="PAL:3"/>
-  <colors name="FormBackground" color="PAL:10"/>
-  <colors name="FormItemBackground" color="PAL:6"/>
+  <colors name="FormBackground" color="PAL:0"/>
+  <colors name="FormItemBackground" color="PAL:0"/>
   <colors name="FormItemForeground" color="PAL:7"/>
   <colors name="FormItemLabelForeground" color="PAL:2"/>
   <colors name="FormItemDisabled" color="PAL:8"/>
   <colors name="FormItemLink" color="PAL:3"/>
-  <colors name="FormItemSeparator" color="PAL:11"/>
+  <colors name="FormItemSeparator" color="PAL:9"/>
   <colors name="FormItemButton" color="PAL:3"/>
   <colors name="GridBackground" color="PAL:6"/>
-  <colors name="GridBorder" color="PAL:12"/>
-  <colors name="HomeListBackground" color="PAL:10"/>
-  <colors name="HomeListSelBackground" color="PAL:13"/>
+  <colors name="GridBorder" color="PAL:10"/>
+  <colors name="HomeListBackground" color="PAL:0"/>
+  <colors name="HomeListSelBackground" color="PAL:11"/>
   <colors name="HomeListForeground" color="PAL:2"/>
   <colors name="HomeListSelForeground" color="PAL:3"/>
-  <colors name="HomeListSeparator" color="PAL:14"/>
-  <palette>4293323759</palette>
+  <colors name="HomeListSeparator" color="PAL:12"/>
+  <palette>4293520623</palette>
   <palette>4292670463</palette>
   <palette>4278190080</palette>
   <palette>4278220782</palette>
@@ -40,8 +40,6 @@
   <palette>4294967295</palette>
   <palette>4278216396</palette>
   <palette>4290032820</palette>
-  <palette>4287795858</palette>
-  <palette>4293520623</palette>
   <palette>4292797158</palette>
   <palette>4292730333</palette>
   <palette>4292143615</palette>

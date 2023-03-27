@@ -163,13 +163,37 @@
     <Style Name="Normal" Type="DetailItem">
       <Properties>
         <Property Name="RelativeLabelFontSize" Type="System.Int32">
-          <Value>-1</Value>
+          <Value>-2</Value>
         </Property>
         <Property Name="LabelFontWeight" Type="System.Int32">
           <Value>1</Value>
         </Property>
         <Property Name="LinkColor" Type="System.Int32">
           <Value>-16738413</Value>
+        </Property>
+        <Property Name="LabelPosition" Type="System.Int32">
+          <Value>5</Value>
+        </Property>
+        <Property Name="LabelHorizontalAlignment" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="EditorCornerRadius" Type="System.Int32">
+          <Value>8</Value>
+        </Property>
+        <Property Name="EditorBorderWidth" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="EditorBorderColor" Type="System.Int32">
+          <Value>1493172224</Value>
+        </Property>
+        <Property Name="EditorBackgroundColor" Type="System.Int32">
+          <Value>-3</Value>
+        </Property>
+        <Property Name="LabelAutoHeight" Type="System.Boolean">
+          <Value>True</Value>
+        </Property>
+        <Property Name="WrapText" Type="System.Boolean">
+          <Value>True</Value>
         </Property>
       </Properties>
     </Style>
@@ -207,16 +231,37 @@
           <Value>True</Value>
         </Property>
         <Property Name="LabelPosition" Type="System.Int32">
-          <Value>2</Value>
+          <Value>5</Value>
         </Property>
         <Property Name="LabelHorizontalAlignment" Type="System.Int32">
-          <Value>3</Value>
+          <Value>1</Value>
         </Property>
         <Property Name="LabelFontWeight" Type="System.Int32">
           <Value>1</Value>
         </Property>
         <Property Name="LabelForegroundColor" Type="System.Int32">
           <Value>-16738413</Value>
+        </Property>
+        <Property Name="EditorCornerRadius" Type="System.Int32">
+          <Value>8</Value>
+        </Property>
+        <Property Name="EditorBorderWidth" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="EditorBorderColor" Type="System.Int32">
+          <Value>1493172224</Value>
+        </Property>
+        <Property Name="LabelAutoHeight" Type="System.Boolean">
+          <Value>True</Value>
+        </Property>
+        <Property Name="RelativeLabelFontSize" Type="System.Int32">
+          <Value>-2</Value>
+        </Property>
+        <Property Name="WrapText" Type="System.Boolean">
+          <Value>True</Value>
+        </Property>
+        <Property Name="EditorBackgroundColor" Type="System.Int32">
+          <Value>-3</Value>
         </Property>
       </Properties>
     </Style>

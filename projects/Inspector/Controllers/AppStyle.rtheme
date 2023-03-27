@@ -13,11 +13,11 @@
   <colors name="SearchBackground" color="PAL:7"/>
   <colors name="SearchForeground" color="PAL:8"/>
   <colors name="SearchSelForeground" color="PAL:9"/>
-  <colors name="TabBackground" color="PAL:7"/>
+  <colors name="TabBackground" color="PAL:0"/>
   <colors name="TabForeground" color="PAL:10"/>
   <colors name="TabSelForeground" color="PAL:6"/>
   <colors name="FormBackground" color="PAL:0"/>
-  <colors name="FormItemBackground" color="PAL:5"/>
+  <colors name="FormItemBackground" color="PAL:0"/>
   <colors name="FormItemForeground" color="PAL:9"/>
   <colors name="FormItemLabelForeground" color="PAL:11"/>
   <colors name="FormItemDisabled" color="PAL:12"/>
