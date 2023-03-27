@@ -1,4 +1,4 @@
-﻿<model version="7" publish="10000">
+﻿<model version="8" publish="10000">
   <entities>
     <entity schema="activityparty">
       <properties>
@@ -323,11 +323,15 @@
         <property schema="resco_defaultvalue"/>
         <property schema="resco_description"/>
         <property schema="resco_displayformat"/>
+        <property schema="resco_enabled"/>
         <property schema="resco_icon"/>
         <property schema="resco_index"/>
         <property schema="resco_isseparator"/>
         <property schema="resco_kind"/>
         <property schema="resco_label"/>
+        <property schema="resco_layout"/>
+        <property schema="resco_localization"/>
+        <property schema="resco_mapping"/>
         <property schema="resco_max"/>
         <property schema="resco_min"/>
         <property schema="resco_name"/>
@@ -339,9 +343,11 @@
         <property schema="resco_rawdatevalue"/>
         <property schema="resco_rawidvalue"/>
         <property schema="resco_rawnumericvalue"/>
+        <property schema="resco_reportingproperties"/>
         <property schema="resco_required"/>
         <property schema="resco_reusefromprevious"/>
         <property schema="resco_rules"/>
+        <property schema="resco_score"/>
         <property schema="resco_showonreport"/>
         <property schema="resco_style"/>
         <property schema="resco_value"/>
@@ -391,15 +397,20 @@
         <property schema="modifiedby"/>
         <property schema="modifiedon"/>
         <property schema="ownerid"/>
+        <property schema="resco__resco_expanded__c"/>
+        <property schema="resco_complete"/>
         <property schema="resco_description"/>
         <property schema="resco_expanded"/>
         <property schema="resco_index"/>
         <property schema="resco_label"/>
+        <property schema="resco_layout"/>
+        <property schema="resco_localization"/>
         <property schema="resco_name"/>
         <property schema="resco_questiongroupid"/>
         <property schema="resco_questionnaireid"/>
         <property schema="resco_repeatconfig"/>
         <property schema="resco_repeatindex"/>
+        <property schema="resco_reportingproperties"/>
         <property schema="resco_rules"/>
         <property schema="resco_templategroupid"/>
         <property schema="resco_visible"/>
@@ -448,13 +459,18 @@
         <property schema="modifiedon"/>
         <property schema="ownerid"/>
         <property schema="resco_archivedon"/>
+        <property schema="resco_autoreport"/>
         <property schema="resco_completionstatus"/>
         <property schema="resco_description"/>
+        <property schema="resco_duration"/>
+        <property schema="resco_featureversion"/>
         <property schema="resco_folder"/>
         <property schema="resco_folderid"/>
         <property schema="resco_issnippet"/>
         <property schema="resco_istemplate"/>
         <property schema="resco_languagecode"/>
+        <property schema="resco_layout"/>
+        <property schema="resco_localization"/>
         <property schema="resco_name"/>
         <property schema="resco_options"/>
         <property schema="resco_publishedon"/>
@@ -463,12 +479,16 @@
         <property schema="resco_regardingid"/>
         <property schema="resco_regardingidlabel"/>
         <property schema="resco_regardingidname"/>
+        <property schema="resco_reportingproperties"/>
+        <property schema="resco_result"/>
         <property schema="resco_reusefetch"/>
         <property schema="resco_reusefromprevious"/>
         <property schema="resco_rules"/>
+        <property schema="resco_score"/>
         <property schema="resco_script"/>
         <property schema="resco_serializedanswers"/>
         <property schema="resco_styles"/>
+        <property schema="resco_templatedependent"/>
         <property schema="resco_templateid"/>
         <property schema="resco_version"/>
         <property schema="resco_versionname"/>
@@ -508,6 +528,29 @@
         </index>
       </indexes>
     </entity>
+    <entity schema="resco_usersettings">
+      <properties>
+        <property schema="createdon"/>
+        <property schema="modifiedon"/>
+        <property schema="ownerid"/>
+        <property schema="resco_kind"/>
+        <property schema="resco_name"/>
+        <property schema="resco_usersettingsid"/>
+        <property schema="resco_value"/>
+      </properties>
+      <indexes>
+        <index schema="idx_resco_usersettings_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_usersettings_resco_name" issystem="true">
+          <fields>
+            <field schema="resco_name"/>
+          </fields>
+        </index>
+      </indexes>
+    </entity>
     <entity schema="sf_account">
       <properties>
         <property schema="billingcity"/>
@@ -531,7 +574,7 @@
         <property schema="numberofemployees"/>
         <property schema="ownerid2"/>
         <property schema="parentid"/>
-        <property schema="phone" displayformat="PhoneNumber"/>
+        <property schema="phone"/>
         <property schema="photourl"/>
         <property schema="shippingcity"/>
         <property schema="shippingcountry"/>
@@ -543,7 +586,7 @@
         <property schema="shippingstreet"/>
         <property schema="transactioncurrencyid"/>
         <property schema="type"/>
-        <property schema="website" displayformat="Url"/>
+        <property schema="website"/>
       </properties>
       <indexes>
         <index schema="idx_sf_account_createdbyid" issystem="true">
@@ -617,7 +660,7 @@
         <property schema="createdbyid"/>
         <property schema="createdon"/>
         <property schema="department"/>
-        <property schema="email" displayformat="Email"/>
+        <property schema="email"/>
         <property schema="fax"/>
         <property schema="firstname"/>
         <property schema="id"/>
@@ -634,11 +677,11 @@
         <property schema="mailingstate"/>
         <property schema="mailingstreet"/>
         <property schema="masterrecordid"/>
-        <property schema="mobilephone" displayformat="PhoneNumber"/>
+        <property schema="mobilephone"/>
         <property schema="modifiedon"/>
         <property schema="name"/>
         <property schema="ownerid2"/>
-        <property schema="phone" displayformat="PhoneNumber"/>
+        <property schema="phone"/>
         <property schema="photourl"/>
         <property schema="reportstoid"/>
         <property schema="salutation"/>
@@ -963,19 +1006,20 @@
         <property schema="createdon"/>
         <property schema="department" fieldpermissions="Read Static"/>
         <property schema="division"/>
-        <property schema="email" displayformat="Email" fieldpermissions="Read Static"/>
+        <property schema="email" fieldpermissions="Read Static"/>
         <property schema="employeenumber" fieldpermissions="Read Static"/>
         <property schema="id"/>
         <property schema="id2"/>
         <property schema="languagelocalekey" fieldpermissions="Read Static"/>
         <property schema="lastname" fieldpermissions="Read Static"/>
         <property schema="managerid" fieldpermissions="Read Static"/>
-        <property schema="mobilephone" displayformat="PhoneNumber"/>
+        <property schema="mobilephone"/>
         <property schema="modifiedon"/>
         <property schema="name"/>
-        <property schema="phone" displayformat="PhoneNumber"/>
+        <property schema="phone"/>
         <property schema="title" fieldpermissions="Read Static"/>
         <property schema="username" fieldpermissions="Read Static"/>
+        <property schema="userroleid"/>
         <property schema="usertype"/>
       </properties>
       <indexes>
@@ -992,6 +1036,11 @@
         <index schema="idx_sf_user_name" issystem="true">
           <fields>
             <field schema="name"/>
+          </fields>
+        </index>
+        <index schema="idx_sf_user_userroleid" issystem="true">
+          <fields>
+            <field schema="userroleid"/>
           </fields>
         </index>
       </indexes>

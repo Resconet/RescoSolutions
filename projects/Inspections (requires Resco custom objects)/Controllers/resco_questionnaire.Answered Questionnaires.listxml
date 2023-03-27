@@ -51,7 +51,6 @@
       <Name>Default</Name>
       <Width>320</Width>
       <Height>95</Height>
-      <SerializedBackground>-789517</SerializedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="#Name">
           <StyleName>0102 h2</StyleName>
