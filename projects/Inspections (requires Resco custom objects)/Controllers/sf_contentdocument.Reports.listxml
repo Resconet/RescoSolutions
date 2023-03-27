@@ -18,7 +18,8 @@
   <MaxColumns>0</MaxColumns>
   <Fetch version="1.0">
     <entity name="sf_contentdocument">
-      <link-entity name="sf_contentversion" alias="L0" from="id" to="latestpublishedversionid" link-type="inner">
+      <filter type="and"/>
+      <link-entity name="sf_contentversion" from="id" to="latestpublishedversionid" link-type="inner" alias="L0">
         <filter type="and">
           <condition attribute="pathonclient" operator="like" value="%.pdf"/>
         </filter>
@@ -32,7 +33,6 @@
       <Name>Default</Name>
       <Width>320</Width>
       <Height>100</Height>
-      <SerializedBackground>-789517</SerializedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="latestpublishedversionid.sf_contentversion.contentsize">
           <StyleName>0102 h2</StyleName>

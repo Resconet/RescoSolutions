@@ -1,4 +1,4 @@
-﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="1" resize="0" version="2">
+﻿<EntityForm xsi:dummy="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" flexi="0" fleximode="0" fullscreen="1" resize="0" version="2">
   <IsContactForm>false</IsContactForm>
   <EntityName>sf_serviceappointment</EntityName>
   <CamelCase>sf_serviceappointment</CamelCase>
@@ -6,6 +6,8 @@
   <WorkflowItemChanged>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="Hide map if empty" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.latitude&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.longitude&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Map.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Map.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowItemChanged>
   <WorkflowButtonCommand>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="Open Workorder Details when clicked on detail button" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:Button1&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.parentrecordid&lt;/var&gt;&lt;func&gt;OpenForm&lt;/func&gt;&lt;arg&gt;String:&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowButtonCommand>
   <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;SharedVariable usage="OnLoadEnabled"&gt;&lt;Name&gt;WorkOrder&lt;/Name&gt;&lt;CrmType&gt;Entity&lt;/CrmType&gt;&lt;InnerType&gt;sf_workorder&lt;/InnerType&gt;&lt;/SharedVariable&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
+  <CacheMode>-1</CacheMode>
   <PrimaryCommands>CheckIn||sf_serviceappointment#actualstarttime#actualendtime#actualduration###status##sf_serviceappointment.status.In Progress##sf_serviceappointment.status.Completed|RunMobileReport|||Delete||</PrimaryCommands>
   <SharedVariableNames>
     <string>WorkOrder.accountid</string>
@@ -50,7 +52,7 @@
   <ClassBinding/>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand OnExecuteButton</EnabledWorkflows>
   <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab" flexiWidth="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_serviceappointment@2x.png" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_serviceappointment@2x.png" IsIconNameReadOnly="0">
       <Name>sf_serviceappointment</Name>
       <SerializedChildren>
         <DetailItem SchemaName="appointmentnumber"/>
@@ -58,23 +60,24 @@
         <DetailItem SchemaName="parentrecordid"/>
         <DetailItem SchemaName="WorkOrder.assetid"/>
         <DetailItem SchemaName="WorkOrder.caseid"/>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
-        </DetailItem>
         <DetailItem SchemaName="schedstarttime"/>
         <DetailItem SchemaName="schedendtime"/>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="Button1" button="true" buttonLabel="" buttonClickText="Work Order Details">
+        <DetailItem SchemaName="Button1" button="true" buttonLabel="" buttonClickText="Work Order Details" buttonCommand="">
           <IsConstant>true</IsConstant>
         </DetailItem>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="ProcessControlTab" flexiHeight="215px" flexiWidth="1" flexiHeader="0" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab" NameModified="1" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\TaskDetail@2x.png" IsIconNameReadOnly="0">
+      <Name>Actual</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="status"/>
+        <DetailItem SchemaName="actualstarttime"/>
+        <DetailItem SchemaName="actualendtime"/>
+        <DetailItem SchemaName="duration"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="ProcessControlTab" flexi="0" flexiHeight="215px" flexiWidth="1" flexiHeader="0" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>Process</Name>
-      <Url>file://ProcessControl/ProcessControl.html?name=Process</Url>
-      <DelayLoad>false</DelayLoad>
       <SelectedProcessControl>Process</SelectedProcessControl>
     </FormTab>
     <FormTab xsi:type="AssociatedTab" flexi="0" flexiHeight="1" flexiWidth="1" flexiHeader="0" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_contact@2x.png" IsIconNameReadOnly="0" FlipMode="224" ListCommands="4">
@@ -82,19 +85,6 @@
       <Binding SchemaName="sf_contact.@virtual"/>
       <Views>&lt;extra&gt;&lt;views&gt;sf_contact.Contact Cards - From SA&lt;/views&gt;&lt;filter entity="sf_contact"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="sf_contact"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="id" operator="eq" value="{{contactid}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
       <LookupViews>sf_contact.Contact Cards</LookupViews>
-    </FormTab>
-    <FormTab xsi:type="DetailTab" flexi="1" flexiHeight="200px" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Actual@2x.png" IsIconNameReadOnly="0">
-      <Name>Actual</Name>
-      <SerializedChildren>
-        <DetailItem SchemaName="status"/>
-        <DetailItem SchemaName="actualstarttime"/>
-        <DetailItem SchemaName="actualendtime"/>
-        <DetailItem SchemaName="actualduration"/>
-      </SerializedChildren>
-    </FormTab>
-    <FormTab xsi:type="MapTab" flexiHeight="200px" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
-      <Name>Map</Name>
-      <CoordinatesBinding>latitude;longitude</CoordinatesBinding>
     </FormTab>
     <FormTab xsi:type="AssociatedTab" flexiHeight="200px" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_productrequired@2x.png" IsIconNameReadOnly="0" FlipMode="224">
       <Name>Products Required List (*)</Name>
@@ -117,6 +107,25 @@
       <Binding SchemaName="sf_workorderlineitem.@virtual"/>
       <Views>&lt;extra&gt;&lt;views&gt;sf_workorderlineitem.Completed Items&lt;/views&gt;&lt;filter entity="sf_workorderlineitem"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="sf_workorderlineitem"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="workorderid" operator="eq" value="{{parentrecordid}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
       <LookupViews>sf_workorderlineitem.Completed Items</LookupViews>
+    </FormTab>
+    <FormTab xsi:type="MapTab" flexiHeight="200px" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
+      <Name>Map</Name>
+      <CoordinatesBinding>latitude;longitude</CoordinatesBinding>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" flexi="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Address@2x.png" IsIconNameReadOnly="0">
+      <Name>Address</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="street"/>
+        <DetailItem SchemaName="city"/>
+        <DetailItem SchemaName="state"/>
+        <DetailItem SchemaName="country"/>
+        <DetailItem SchemaName="postalcode"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="latitude"/>
+        <DetailItem SchemaName="longitude"/>
+      </SerializedChildren>
     </FormTab>
     <FormTab xsi:type="AssociatedTab" flexiHeight="1" flexiWidth="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Files@2x.png" IsIconNameReadOnly="0" DocCommands="6">
       <Name>Files</Name>
@@ -148,21 +157,6 @@
       <Name>Time Sheet Entries List (*)</Name>
       <Binding SchemaName="sf_timesheetentry.@virtual"/>
       <Views>&lt;extra&gt;&lt;filter entity="sf_timesheetentry"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="sf_timesheetentry"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="workorderid" operator="eq" value="{{parentrecordid}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
-    </FormTab>
-    <FormTab xsi:type="DetailTab" flexiWidth="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Address@2x.png" IsIconNameReadOnly="0">
-      <Name>Address</Name>
-      <SerializedChildren>
-        <DetailItem SchemaName="street"/>
-        <DetailItem SchemaName="city"/>
-        <DetailItem SchemaName="state"/>
-        <DetailItem SchemaName="country"/>
-        <DetailItem SchemaName="postalcode"/>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="latitude"/>
-        <DetailItem SchemaName="longitude"/>
-      </SerializedChildren>
     </FormTab>
     <FormTab xsi:type="AssociatedTab" flexi="0" flexiHeight="1" flexiWidth="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_assignedresource@2x.png" IsIconNameReadOnly="0">
       <Name>Assigned Resources List</Name>

@@ -1,4 +1,4 @@
-﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+﻿<EntityForm xsi:dummy="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" flexi="0" fleximode="0" fullscreen="0" resize="0" version="2">
   <IsContactForm>false</IsContactForm>
   <EntityName>sf_account</EntityName>
   <CamelCase>sf_account</CamelCase>
@@ -6,6 +6,8 @@
   <WorkflowItemChanged>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;&lt;branch e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="true"&gt;&lt;var&gt;Entity.billinglatitude&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="true"&gt;&lt;var&gt;Entity.billinglongitude&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Map.IsVisible&lt;/var&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And" /&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Map.IsVisible&lt;/var&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowItemChanged>
   <WorkflowCommandExecute>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;group e="false" op="Or"&gt;&lt;condition e="false"&gt;&lt;var&gt;Command.Name&lt;/var&gt;&lt;arg&gt;String:UpdateAddress&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Command.Name&lt;/var&gt;&lt;arg&gt;String:UpdateGPS&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;/group&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Command.Param&lt;/var&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowCommandExecute>
   <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
+  <CacheMode>-1</CacheMode>
   <PrimaryCommands>Delete|||Favorite||</PrimaryCommands>
   <SharedVariableNames/>
   <ClassBinding/>
@@ -60,7 +62,7 @@
       <Binding SchemaName="sf_contact.accountid"/>
       <Views>sf_contact.@All Contacts:sf_contact.My Contacts</Views>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="4" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_contentdocumentlink@2x.png" IsIconNameReadOnly="0" DocCommands="262334" FlipMode="224" AllowAddExisting="true">
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_contentdocumentlink@2x.png" IsIconNameReadOnly="0" DocCommands="262334" FlipMode="224" AllowAddExisting="true">
       <Name>Files</Name>
       <CustomName>Files</CustomName>
       <Binding SchemaName="sf_contentdocumentlink.linkedentityid"/>

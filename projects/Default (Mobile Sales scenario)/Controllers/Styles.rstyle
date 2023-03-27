@@ -492,6 +492,27 @@
         <Property Name="WrapText" Type="System.Boolean">
           <Value>True</Value>
         </Property>
+        <Property Name="LabelPosition" Type="System.Int32">
+          <Value>5</Value>
+        </Property>
+        <Property Name="LabelHorizontalAlignment" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="EditorCornerRadius" Type="System.Int32">
+          <Value>8</Value>
+        </Property>
+        <Property Name="EditorBorderWidth" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="EditorBorderColor" Type="System.Int32">
+          <Value>1493172224</Value>
+        </Property>
+        <Property Name="EditorBackgroundColor" Type="System.Int32">
+          <Value>-2</Value>
+        </Property>
+        <Property Name="RelativeLabelFontSize" Type="System.Int32">
+          <Value>-2</Value>
+        </Property>
       </Properties>
     </Style>
     <Style Name="Top Label" Style="Normal" Type="DetailItem">
@@ -523,13 +544,28 @@
           <Value>True</Value>
         </Property>
         <Property Name="LabelPosition" Type="System.Int32">
-          <Value>2</Value>
+          <Value>5</Value>
         </Property>
         <Property Name="LabelHorizontalAlignment" Type="System.Int32">
-          <Value>3</Value>
+          <Value>1</Value>
         </Property>
         <Property Name="LabelFontWeight" Type="System.Int32">
           <Value>1</Value>
+        </Property>
+        <Property Name="EditorCornerRadius" Type="System.Int32">
+          <Value>8</Value>
+        </Property>
+        <Property Name="EditorBorderWidth" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="EditorBorderColor" Type="System.Int32">
+          <Value>1493172224</Value>
+        </Property>
+        <Property Name="EditorBackgroundColor" Type="System.Int32">
+          <Value>-2</Value>
+        </Property>
+        <Property Name="RelativeLabelFontSize" Type="System.Int32">
+          <Value>-2</Value>
         </Property>
       </Properties>
     </Style>
@@ -577,20 +613,11 @@
     </Style>
     <Style Name="Button" Type="DetailItem">
       <Properties>
-        <Property Name="BackgroundColor" Type="System.Int32">
-          <Value>-1</Value>
-        </Property>
-        <Property Name="RelativeTextFontSize" Type="System.Single">
-          <Value>3</Value>
-        </Property>
         <Property Name="EditorHorizontalAlignment" Type="System.Int32">
           <Value>2</Value>
         </Property>
         <Property Name="EditorFontWeight" Type="System.Int32">
           <Value>1</Value>
-        </Property>
-        <Property Name="EditorForegroundColor" Type="System.Int32">
-          <Value>-1</Value>
         </Property>
         <Property Name="LabelHorizontalAlignment" Type="System.Int32">
           <Value>2</Value>
@@ -600,6 +627,21 @@
         </Property>
         <Property Name="LabelPosition" Type="System.Int32">
           <Value>4</Value>
+        </Property>
+        <Property Name="EditorCornerRadius" Type="System.Int32">
+          <Value>8</Value>
+        </Property>
+        <Property Name="EditorBorderWidth" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="EditorBorderColor" Type="System.Int32">
+          <Value>1493172224</Value>
+        </Property>
+        <Property Name="EditorBackgroundColor" Type="System.Int32">
+          <Value>-16748334</Value>
+        </Property>
+        <Property Name="EditorForegroundColor" Type="System.Int32">
+          <Value>-2</Value>
         </Property>
       </Properties>
     </Style>
@@ -634,9 +676,6 @@
         </Property>
         <Property Name="LabelHorizontalAlignment" Type="System.Int32">
           <Value>1</Value>
-        </Property>
-        <Property Name="LabelPosition" Type="System.Int32">
-          <Value>2</Value>
         </Property>
       </Properties>
     </Style>
@@ -931,6 +970,25 @@
       <Properties>
         <Property Name="ImageQuery" Type="System.String">
           <Value>sf_contentversion;versiondata;linkedentityid;{resco_templateid};islatest;1;title;-resco_icon|inspections.survey</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="SectionTitleText" Type="TextCell">
+      <Properties>
+        <Property Name="AutoHeight" Type="System.Boolean">
+          <Value>True</Value>
+        </Property>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>10</Value>
+        </Property>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-16777216</Value>
+        </Property>
+        <Property Name="FontWeight" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
         </Property>
       </Properties>
     </Style>

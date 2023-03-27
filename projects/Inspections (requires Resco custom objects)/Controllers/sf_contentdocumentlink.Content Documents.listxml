@@ -37,7 +37,6 @@
       <Width>240</Width>
       <Height>40</Height>
       <Buttons>Delete</Buttons>
-      <SerializedBackground>-789517</SerializedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="contentdocumentid.sf_contentdocument.latestpublishedversionid">
           <StyleName>primary</StyleName>
