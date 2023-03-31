@@ -78,7 +78,9 @@
   </fetch>
   <fetch version="1.0">
     <entity name="sf_account">
-      <filter type="and"/>
+      <filter type="and">
+        <condition attribute="id" operator="not-null" value=""/>
+      </filter>
     </entity>
   </fetch>
   <fetch version="1.0">
