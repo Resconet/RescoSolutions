@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GlobalMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Items>
+    <GlobalMapComponent>
+      <EntityName>sf_account</EntityName>
+      <ViewName>My Accounts</ViewName>
+      <IsInitial>false</IsInitial>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
+      <EntityName>sf_contact</EntityName>
+      <ViewName>My Contacts</ViewName>
+      <IsInitial>false</IsInitial>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
+      <EntityName>sf_workorder</EntityName>
+      <ViewName>My Work Orders</ViewName>
+      <IsInitial>false</IsInitial>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
+      <EntityName>sf_account</EntityName>
+      <ViewName>All Accounts</ViewName>
+      <IsInitial>false</IsInitial>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
+      <EntityName>sf_workorder</EntityName>
+      <ViewName>All Work Orders</ViewName>
+      <IsInitial>false</IsInitial>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
+      <EntityName>sf_serviceappointment</EntityName>
+      <ViewName>All Appointments</ViewName>
+      <IsInitial>true</IsInitial>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
+      <EntityName>sf_serviceappointment</EntityName>
+      <ViewName>All Appointments</ViewName>
+      <IsInitial>false</IsInitial>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
+      <EntityName>sf_serviceresource</EntityName>
+      <ViewName>My Active Resources</ViewName>
+      <IsInitial>true</IsInitial>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
+      <EntityName>sf_serviceresource</EntityName>
+      <ViewName>All Resources</ViewName>
+      <IsInitial>false</IsInitial>
+    </GlobalMapComponent>
+  </Items>
+  <Setup>
+    <Latitude xsi:nil="true" />
+    <Longitude xsi:nil="true" />
+    <Zoom xsi:nil="true" />
+    <LatitudeField />
+    <LongitudeField />
+    <AggregatePins>true</AggregatePins>
+    <ExpandPins>false</ExpandPins>
+  </Setup>
+</GlobalMap>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" VisibilityMode="16384">
+  <Attributes>
+    <EntityName>sf_contentdocumentlink</EntityName>
+    <CamelCase>sf_contentdocumentlink</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>Signature</Name>
+  <Kind>AssociatedList</Kind>
+  <IsDefault>false</IsDefault>
+  <IsHidden>true</IsHidden>
+  <AutoWideWidth>0</AutoWideWidth>
+  <AutoHeader>0</AutoHeader>
+  <MaxColumns>10</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="sf_contentdocumentlink" />
+  </Fetch>
+  <Search>
+    <attribute schema="contentdocumentid" method="Contains" reference="true" />
+    <attribute schema="linkedentityid" method="Contains" reference="true" />
+    <attribute schema="sharetype" method="BeginsWith" />
+    <attribute schema="visibility" method="BeginsWith" />
+  </Search>
+  <OrderBy>name</OrderBy>
+  <MultiSelectCommands />
+  <SerializedBindings>
+    <string>contentdocumentid</string>
+    <string>id2</string>
+    <string>id</string>
+    <string>linkedentityid</string>
+    <string>modifiedon</string>
+    <string>name</string>
+    <string>sharetype</string>
+    <string>visibility</string>
+    <string>contentdocumentid.sf_contentdocument.filetype</string>
+    <string>contentdocumentid.sf_contentdocument.latestpublishedversionid</string>
+  </SerializedBindings>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>1024</Width>
+      <Height>200</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>-1</SerializedSelectedBackground>
+      <Buttons>none</Buttons>
+      <SerializedChildren>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>GridDocumentLinkImage</StyleName>
+          <Bounds>5,5,1016,192</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>15</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties />
+  <SerializedChildren />
+  <Height>0</Height>
+  <IFrameProvidesDS>false</IFrameProvidesDS>
+</EntityList>

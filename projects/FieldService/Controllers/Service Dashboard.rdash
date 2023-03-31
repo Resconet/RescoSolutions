@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Columns>2</Columns>
+  <Rows>2</Rows>
+  <Items>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="List" Binding="sf_serviceappointment;&lt;extra&gt;&lt;views&gt;sf_serviceappointment.@My Appointments - Today:sf_serviceappointment.My Appointments&lt;/views&gt;&lt;actions&gt;193;;4&lt;/actions&gt;&lt;/extra&gt;" Options="0">
+      <LegacyConfig>sf_serviceappointment;sf_serviceappointment.@My Appointments - Today:sf_serviceappointment.My Appointments</LegacyConfig>
+      <Bounds>0,0,1,1</Bounds>
+    </DashboardComponent>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="List" Binding="sf_serviceappointment;&lt;extra&gt;&lt;views&gt;sf_serviceappointment.*:sf_serviceappointment.@My Appointments - Today&lt;/views&gt;&lt;actions&gt;96;;0&lt;/actions&gt;&lt;calendar&gt;&lt;MinDate p3:nil=&quot;true&quot; xmlns:p3=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; /&gt;&lt;MaxDate p3:nil=&quot;true&quot; xmlns:p3=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; /&gt;&lt;BusinessDaysMask&gt;62&lt;/BusinessDaysMask&gt;&lt;ViewsMask&gt;15&lt;/ViewsMask&gt;&lt;/calendar&gt;&lt;/extra&gt;" Options="2">
+      <LegacyConfig>sf_serviceappointment;sf_serviceappointment.*:sf_serviceappointment.@My Appointments - Today</LegacyConfig>
+      <Bounds>0,1,1,1</Bounds>
+    </DashboardComponent>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="List" Binding="sf_productitem;&lt;extra&gt;&lt;views&gt;sf_productitem.My Van Current&lt;/views&gt;&lt;charts&gt;sf_productitem.*:sf_productitem.@Stock&lt;/charts&gt;&lt;actions&gt;162;;0&lt;/actions&gt;&lt;/extra&gt;" Options="2">
+      <LegacyConfig>sf_productitem;sf_productitem.My Van Current</LegacyConfig>
+      <Bounds>1,0,1,2</Bounds>
+    </DashboardComponent>
+  </Items>
+</Dashboard>

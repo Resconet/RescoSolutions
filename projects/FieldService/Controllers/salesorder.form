@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>salesorder</EntityName>
+  <CamelCase>salesorder</CamelCase>
+  <ClassBinding />
+  <SerializedChildren />
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="customerid" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="name" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="transactioncurrencyid" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="pricelevelid" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="totalamount" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="discountamount" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="discountpercentage" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="freightamount" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="freighttermscode" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab">
+      <Name>Ship</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="shipto_line1" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="shipto_line2" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="shipto_line3" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="shipto_city" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="shipto_postalcode" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="shipto_stateorprovince" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="shipto_country" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+  </SerializedChildrenV2>
+  <Navigation>
+    <Name>Navigation</Name>
+    <SerializedChildren>
+      <DetailItem SchemaName="salesorderdetail.salesorderid" Style="Normal">
+        <IsConstant>false</IsConstant>
+      </DetailItem>
+      <DetailItem SchemaName="annotation.objectid" Style="Normal">
+        <IsConstant>false</IsConstant>
+      </DetailItem>
+    </SerializedChildren>
+  </Navigation>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled</EnabledWorkflows>
+  <SerializedContactInfo />
+</EntityForm>

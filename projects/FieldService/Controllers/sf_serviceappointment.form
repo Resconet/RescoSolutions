@@ -1,0 +1,168 @@
+﻿<EntityForm xsi:dummy="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" flexi="0" fleximode="0" fullscreen="1" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>sf_serviceappointment</EntityName>
+  <CamelCase>sf_serviceappointment</CamelCase>
+  <WorkflowLoad>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.(sf_workorderlineitem.@virtual.sf_serviceappointment).IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.(sf_contact.@virtual.sf_serviceappointment).AllowCreateNew&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;branch e="false" info="If Contact is missing, try assign Contact from WorkOrder..." &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.contactid&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;definition e="false"&gt;&lt;var&gt;workOrder&lt;/var&gt;&lt;func&gt;LoadReference&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;arg&gt;var:Entity.parentrecordid&lt;/arg&gt;&lt;arg&gt;String:sf_workorder&lt;/arg&gt;&lt;/definition&gt;&lt;branch e="true" info="If Contact is found on WO, assign it and refresh list with detail" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;workOrder.@this&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;workOrder.contactid&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.contactid&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:workOrder.contactid&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.(sf_contact.@virtual.sf_serviceappointment).IsLoaded&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.(sf_contact.@virtual.sf_serviceappointment).IsLoaded&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="false" info="Show WorkOrderButton instead of Field if not new" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.IsNew&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.parentrecordid&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.parentrecordid&lt;/var&gt;&lt;op&gt;TypeOf&lt;/op&gt;&lt;arg&gt;String:sf_workorder&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Button1.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.parentrecordid.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Button1.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.parentrecordid.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;definition e="false"&gt;&lt;var&gt;varWO&lt;/var&gt;&lt;func&gt;LoadReference&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;arg&gt;var:Entity.parentrecordid&lt;/arg&gt;&lt;arg&gt;String:sf_workorder&lt;/arg&gt;&lt;/definition&gt;&lt;branch e="false" info="Set visibilities of UI elements based on WO" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;varWO.@this&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;branch e="true" info="Show/Hide Asset related" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;varWO.assetid&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.WorkOrder.@this&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:varWO.@this&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.AssetServiceHistory.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.AssetServiceHistory.IsLoaded&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.AssetServiceHistory.IsLoaded&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.(WorkOrder.assetid).IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.AssetServiceHistory.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.(WorkOrder.assetid).IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.(WorkOrder.caseid).IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="Show/Hide Case related" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;varWO.caseid&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.(WorkOrder.caseid).IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.(WorkOrder.caseid).IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;function e="false"&gt;&lt;var&gt;Form.(WorkOrder.assetid).IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.(WorkOrder.caseid).IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;branch e="false" info="Set form editability and visibility based on State" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;group e="true" op="Or"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.status&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:Completed&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.status&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:Canceled&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.status&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:Cannot Complete&lt;/arg&gt;&lt;/condition&gt;&lt;/group&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;IsFormEditable&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.(sf_productrequired.@virtual.sf_serviceappointment).IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.(sf_productconsumed.@virtual.sf_serviceappointment).AllowCreateNew&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Files.AllowCreateNew&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Signature.IsEditable&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.(sf_productrequired.@virtual.sf_serviceappointment).AllowCreateNew&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Button1.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;IsFormEditable&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.(sf_productrequired.@virtual.sf_serviceappointment).IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.(sf_productconsumed.@virtual.sf_serviceappointment).AllowCreateNew&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Files.AllowCreateNew&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Signature.IsEditable&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.(sf_productrequired.@virtual.sf_serviceappointment).AllowCreateNew&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowLoad>
+  <WorkflowItemChanged>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="Hide map if empty" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.latitude&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.longitude&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Map.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Map.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowItemChanged>
+  <WorkflowButtonCommand>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="Open Workorder Details when clicked on detail button" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:Button1&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.parentrecordid&lt;/var&gt;&lt;func&gt;OpenForm&lt;/func&gt;&lt;arg&gt;String:&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowButtonCommand>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;SharedVariable usage="OnLoadEnabled"&gt;&lt;Name&gt;WorkOrder&lt;/Name&gt;&lt;CrmType&gt;Entity&lt;/CrmType&gt;&lt;InnerType&gt;sf_workorder&lt;/InnerType&gt;&lt;/SharedVariable&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
+  <CacheMode>-1</CacheMode>
+  <PrimaryCommands>CheckIn||sf_serviceappointment#actualstarttime#actualendtime#actualduration###status##sf_serviceappointment.status.In Progress##sf_serviceappointment.status.Completed|RunMobileReport|||Delete||</PrimaryCommands>
+  <SharedVariableNames>
+    <string>WorkOrder.accountid</string>
+    <string>WorkOrder.assetid</string>
+    <string>WorkOrder.caseid</string>
+    <string>WorkOrder.city</string>
+    <string>WorkOrder.contactid</string>
+    <string>WorkOrder.country</string>
+    <string>WorkOrder.createdbyid</string>
+    <string>WorkOrder.createdon</string>
+    <string>WorkOrder.description</string>
+    <string>WorkOrder.discount</string>
+    <string>WorkOrder.enddate</string>
+    <string>WorkOrder.grandtotal</string>
+    <string>WorkOrder.id</string>
+    <string>WorkOrder.id2</string>
+    <string>WorkOrder.isclosed</string>
+    <string>WorkOrder.isdeleted</string>
+    <string>WorkOrder.lastmodifiedbyid</string>
+    <string>WorkOrder.latitude</string>
+    <string>WorkOrder.lineitemcount</string>
+    <string>WorkOrder.longitude</string>
+    <string>WorkOrder.modifiedon</string>
+    <string>WorkOrder.ownerid2</string>
+    <string>WorkOrder.parentworkorderid</string>
+    <string>WorkOrder.postalcode</string>
+    <string>WorkOrder.pricebook2id</string>
+    <string>WorkOrder.priority</string>
+    <string>WorkOrder.rootworkorderid</string>
+    <string>WorkOrder.startdate</string>
+    <string>WorkOrder.state</string>
+    <string>WorkOrder.status</string>
+    <string>WorkOrder.street</string>
+    <string>WorkOrder.subject</string>
+    <string>WorkOrder.subtotal</string>
+    <string>WorkOrder.tax</string>
+    <string>WorkOrder.totalprice</string>
+    <string>WorkOrder.transactioncurrencyid</string>
+    <string>WorkOrder.workordernumber</string>
+    <string>WorkOrder.worktypeid</string>
+  </SharedVariableNames>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand OnExecuteButton</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_serviceappointment@2x.png" IsIconNameReadOnly="0">
+      <Name>sf_serviceappointment</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="appointmentnumber"/>
+        <DetailItem SchemaName="subject"/>
+        <DetailItem SchemaName="parentrecordid"/>
+        <DetailItem SchemaName="WorkOrder.assetid"/>
+        <DetailItem SchemaName="WorkOrder.caseid"/>
+        <DetailItem SchemaName="schedstarttime"/>
+        <DetailItem SchemaName="schedendtime"/>
+        <DetailItem SchemaName="Button1" button="true" buttonLabel="" buttonClickText="Work Order Details" buttonCommand="">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" NameModified="1" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\TaskDetail@2x.png" IsIconNameReadOnly="0">
+      <Name>Actual</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="status"/>
+        <DetailItem SchemaName="actualstarttime"/>
+        <DetailItem SchemaName="actualendtime"/>
+        <DetailItem SchemaName="duration"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="ProcessControlTab" flexi="0" flexiHeight="215px" flexiWidth="1" flexiHeader="0" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>Process</Name>
+      <SelectedProcessControl>Process</SelectedProcessControl>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="0" flexiHeight="1" flexiWidth="1" flexiHeader="0" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_contact@2x.png" IsIconNameReadOnly="0" FlipMode="224" ListCommands="4">
+      <Name>Contacts List (*)</Name>
+      <Binding SchemaName="sf_contact.@virtual"/>
+      <Views>&lt;extra&gt;&lt;views&gt;sf_contact.Contact Cards - From SA&lt;/views&gt;&lt;filter entity="sf_contact"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="sf_contact"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="id" operator="eq" value="{{contactid}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+      <LookupViews>sf_contact.Contact Cards</LookupViews>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="200px" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_productrequired@2x.png" IsIconNameReadOnly="0" FlipMode="224">
+      <Name>Products Required List (*)</Name>
+      <Binding SchemaName="sf_productrequired.@virtual"/>
+      <Views>&lt;extra&gt;&lt;filter entity="sf_productrequired"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="sf_productrequired"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="parentrecordid" operator="eq" value="{{parentrecordid}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="200px" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_productconsumed@2x.png" IsIconNameReadOnly="0" FlipMode="224">
+      <Name>Products Consumed List (*)</Name>
+      <Binding SchemaName="sf_productconsumed.@virtual"/>
+      <Views>&lt;extra&gt;&lt;filter entity="sf_productconsumed"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="sf_productconsumed"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="workorderid" operator="eq" value="{{parentrecordid}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="200px" flexiOrientation="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_workorderlineitem@2x.png" IsIconNameReadOnly="0" FlipMode="224" ListCommands="4">
+      <Name>Work Order Line Items List (*)</Name>
+      <Binding SchemaName="sf_workorderlineitem.@virtual"/>
+      <Views>&lt;extra&gt;&lt;views&gt;sf_workorderlineitem.@All&lt;/views&gt;&lt;filter entity="sf_workorderlineitem"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="sf_workorderlineitem"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="workorderid" operator="eq" value="{{parentrecordid}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+      <LookupViews>sf_workorderlineitem.All</LookupViews>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="242px" flexiHeader="0" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_workorderlineitem@2x.png" IsIconNameReadOnly="0" FlipMode="176" ListCommands="4">
+      <Name>Work Order Line Items List (*)</Name>
+      <Binding SchemaName="sf_workorderlineitem.@virtual"/>
+      <Views>&lt;extra&gt;&lt;views&gt;sf_workorderlineitem.Completed Items&lt;/views&gt;&lt;filter entity="sf_workorderlineitem"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="sf_workorderlineitem"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="workorderid" operator="eq" value="{{parentrecordid}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+      <LookupViews>sf_workorderlineitem.Completed Items</LookupViews>
+    </FormTab>
+    <FormTab xsi:type="MapTab" flexiHeight="200px" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
+      <Name>Map</Name>
+      <CoordinatesBinding>latitude;longitude</CoordinatesBinding>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" flexi="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Address@2x.png" IsIconNameReadOnly="0">
+      <Name>Address</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="street"/>
+        <DetailItem SchemaName="city"/>
+        <DetailItem SchemaName="state"/>
+        <DetailItem SchemaName="country"/>
+        <DetailItem SchemaName="postalcode"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="latitude"/>
+        <DetailItem SchemaName="longitude"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="1" flexiWidth="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Files@2x.png" IsIconNameReadOnly="0" DocCommands="6">
+      <Name>Files</Name>
+      <CustomName>Files</CustomName>
+      <Binding SchemaName="sf_contentdocumentlink.linkedentityid"/>
+      <Views>&lt;extra&gt;&lt;filter entity="sf_contentdocumentlink"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="sf_contentdocumentlink"&amp;gt;&amp;lt;link-entity name="sf_contentdocument" alias="L0" from="id" to="contentdocumentid" link-type="inner"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="title" operator="not-like" value="%Resco Signature%"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+    </FormTab>
+    <FormTab xsi:type="SignatureTab" flexiHeight="200px" flexiWidth="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Signature@2x.png" IsIconNameReadOnly="0">
+      <Name>Signature</Name>
+      <NoteSubject>Resco Signature</NoteSubject>
+      <EntityName>sf_contentversion</EntityName>
+      <Commands>4097</Commands>
+      <Flags>0</Flags>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="200px" flexiWidth="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\AssetServiceHistory@2x.png" IsIconNameReadOnly="0" FlipMode="96" ListCommands="4">
+      <Name>AssetServiceHistory</Name>
+      <CustomName>AssetServiceHistory</CustomName>
+      <Binding SchemaName="sf_workorder.@virtual"/>
+      <Views>&lt;extra&gt;&lt;views&gt;sf_workorder.@All Work Orders:sf_workorder.My Work Orders&lt;/views&gt;&lt;filter entity="sf_workorder"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="sf_workorder"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="assetid" operator="eq" value="{{WorkOrder.assetid}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="150px" flexiWidth="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\ServiceReports@2x.png" IsIconNameReadOnly="0" DocCommands="0" ListCommands="0">
+      <Name>ServiceReports</Name>
+      <CustomName>ServiceReports</CustomName>
+      <Binding SchemaName="sf_attachment.@virtual"/>
+      <Views>&lt;extra&gt;&lt;views&gt;sf_attachment.Reports&lt;/views&gt;&lt;filter entity="sf_attachment"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="sf_attachment"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="parentid" operator="eq" value="{{parentrecordid}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+      <LookupViews>&lt;extra&gt;&lt;views&gt;sf_attachment.Reports&lt;/views&gt;&lt;filter entity="sf_attachment"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="sf_attachment"&amp;gt;&amp;lt;link-entity name="resco_questionnaire" alias="L0" from="resco_questionnaireid" to="parentid" link-type="inner"&amp;gt;&amp;lt;link-entity name="sf_associatedquestionnaire__c" alias="L1" from="questionnaire__c" to="resco_questionnaireid" link-type="inner"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="serviceappointment__c" operator="eq" value="{{id}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="200px" flexiWidth="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_timesheetentry@2x.png" IsIconNameReadOnly="0">
+      <Name>Time Sheet Entries List (*)</Name>
+      <Binding SchemaName="sf_timesheetentry.@virtual"/>
+      <Views>&lt;extra&gt;&lt;filter entity="sf_timesheetentry"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="sf_timesheetentry"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="workorderid" operator="eq" value="{{parentrecordid}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="0" flexiHeight="1" flexiWidth="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_assignedresource@2x.png" IsIconNameReadOnly="0">
+      <Name>Assigned Resources List</Name>
+      <Binding SchemaName="sf_assignedresource.serviceappointmentid"/>
+      <Views>sf_assignedresource.@Assigned Resources</Views>
+      <LookupViews>sf_assignedresource.Assigned Resources</LookupViews>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

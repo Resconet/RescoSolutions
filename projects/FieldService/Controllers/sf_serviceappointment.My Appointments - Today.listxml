@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>sf_serviceappointment</EntityName>
+    <CamelCase>sf_serviceappointment</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>My Appointments - Today</Name>
+  <Kind>List</Kind>
+  <IsDefault>false</IsDefault>
+  <HasGpsFields>true</HasGpsFields>
+  <CalendarFields>schedstarttime;schedendtime</CalendarFields>
+  <AutoWideWidth>0</AutoWideWidth>
+  <AutoHeader>0</AutoHeader>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="sf_serviceappointment">
+      <filter type="and">
+        <condition attribute="schedstarttime" operator="today" />
+      </filter>
+      <link-entity name="sf_assignedresource" alias="L0" from="serviceappointmentid" to="id" link-type="inner">
+        <link-entity name="sf_serviceresource" alias="L1" from="id" to="serviceresourceid" link-type="inner">
+          <filter type="and">
+            <condition attribute="relatedrecordid" operator="eq-userid" />
+          </filter>
+        </link-entity>
+      </link-entity>
+    </entity>
+  </Fetch>
+  <Search>
+    <attribute schema="appointmentnumber" method="Contains" />
+    <attribute schema="parentrecordid" method="BeginsWith" reference="true" />
+    <attribute schema="subject" method="BeginsWith" />
+  </Search>
+  <OrderBy>!modifiedon</OrderBy>
+  <MultiSelectCommands>Favorite|||Export|||Delete||</MultiSelectCommands>
+  <SerializedBindings>
+    <string>appointmentnumber</string>
+    <string>city</string>
+    <string>country</string>
+    <string>id</string>
+    <string>latitude</string>
+    <string>longitude</string>
+    <string>modifiedon</string>
+    <string>ownerid2</string>
+    <string>schedendtime</string>
+    <string>schedstarttime</string>
+    <string>id2</string>
+    <string>status</string>
+    <string>street</string>
+    <string>subject</string>
+    <string>postalcode</string>
+    <string>accountid.sf_account.name</string>
+    <string>contactid.sf_contact.phone</string>
+    <string>contactid.sf_contact.email</string>
+    <string>contactid.sf_contact.homephone</string>
+    <string>contactid.sf_contact.mobilephone</string>
+  </SerializedBindings>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>64</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <Buttons>Call;SMS;Email;EmailLink;Favorite</Buttons>
+      <SerializedChildren>
+        <CellTemplate SchemaName="varTitle">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>40,2,195,22</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Controls.pinServiceAppointment.png">
+          <IsConstant>true</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>4,4,100,20</Bounds>
+          <CellKind>2</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="varIconName">
+          <IsConstant>false</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>2,2,38,36</Bounds>
+          <CellKind>1</CellKind>
+          <IsFormatted>false</IsFormatted>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="varScheduledTimes">
+          <IsConstant>false</IsConstant>
+          <StyleName>black</StyleName>
+          <Bounds>40,24,195,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="accountid.sf_account.name">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>40,37,195,14</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="status">
+          <IsConstant>false</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>2,2,38,36</Bounds>
+          <CellKind>8</CellKind>
+          <IsFormatted>false</IsFormatted>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="varAddress">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>40,51,195,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <TemplateSelectorRule>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;&lt;definition e="false"&gt;&lt;var&gt;varTitle&lt;/var&gt;&lt;func&gt;Clear&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;/definition&gt;&lt;definition e="false"&gt;&lt;var&gt;varScheduledTimes&lt;/var&gt;&lt;arg&gt;var:Entity.schedstarttime&lt;/arg&gt;&lt;arg&gt;String: - &lt;/arg&gt;&lt;arg&gt;var:Entity.schedendtime&lt;/arg&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;/definition&gt;&lt;definition e="false"&gt;&lt;var&gt;Color&lt;/var&gt;&lt;arg&gt;String:#FF9370DB&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;/definition&gt;&lt;definition e="false"&gt;&lt;var&gt;varIconName&lt;/var&gt;&lt;arg&gt;String:Controls.CheckMarkEmpty.png&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;/definition&gt;&lt;definition e="false"&gt;&lt;var&gt;varAddress&lt;/var&gt;&lt;arg&gt;var:Entity.street&lt;/arg&gt;&lt;arg&gt;String:, &lt;/arg&gt;&lt;arg&gt;var:Entity.city&lt;/arg&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;varAddress&lt;/var&gt;&lt;arg&gt;var:varAddress&lt;/arg&gt;&lt;arg&gt;String:, &lt;/arg&gt;&lt;arg&gt;var:Entity.postalcode&lt;/arg&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;varAddress&lt;/var&gt;&lt;arg&gt;var:varAddress&lt;/arg&gt;&lt;arg&gt;String:, &lt;/arg&gt;&lt;arg&gt;var:Entity.country&lt;/arg&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;/function&gt;&lt;branch info="Set Title: Use Subject or AccountName if subject is empty" e="false"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.subject&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;varTitle&lt;/var&gt;&lt;arg&gt;var:Entity.subject&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.(accountid.sf_account.name)&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;varTitle&lt;/var&gt;&lt;arg&gt;var:Entity.(accountid.sf_account.name)&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;function e="false"&gt;&lt;var&gt;varTitle&lt;/var&gt;&lt;arg&gt;var:varTitle&lt;/arg&gt;&lt;arg&gt;String: (&lt;/arg&gt;&lt;arg&gt;var:Entity.appointmentnumber&lt;/arg&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;varTitle&lt;/var&gt;&lt;arg&gt;var:varTitle&lt;/arg&gt;&lt;arg&gt;String:)&lt;/arg&gt;&lt;func&gt;Concat&lt;/func&gt;&lt;/function&gt;&lt;branch info="Icons and colors based on Status" e="false"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.status&lt;/var&gt;&lt;arg&gt;String:In Progress&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;varIconName&lt;/var&gt;&lt;arg&gt;String:Controls.CheckMarkInProgress.png&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;group e="true" op="Or"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.status&lt;/var&gt;&lt;arg&gt;String:Canceled&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.status&lt;/var&gt;&lt;arg&gt;String:Cannot Complete&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.status&lt;/var&gt;&lt;arg&gt;String:Canceled&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;/group&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;varIconName&lt;/var&gt;&lt;arg&gt;String:Controls.CheckMarkCancel.png&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.varTitle.Style&lt;/var&gt;&lt;arg&gt;String:Primary Grey&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.status&lt;/var&gt;&lt;arg&gt;String:Completed&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;varIconName&lt;/var&gt;&lt;arg&gt;String:Controls.CheckMark.png&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.varTitle.Style&lt;/var&gt;&lt;arg&gt;String:Primary Grey&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row.varTitle.Style&lt;/var&gt;&lt;arg&gt;String:Primary Green&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;group e="false" op="Or"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.status&lt;/var&gt;&lt;arg&gt;String:Scheduled&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.status&lt;/var&gt;&lt;arg&gt;String:Dispatched&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;/group&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;varIconName&lt;/var&gt;&lt;arg&gt;String:Controls.CheckMarkScheduled.png&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <CustomProperties>
+    <SerializedClassBinding name="varTitle" label="varTitle" type="String" />
+    <SerializedClassBinding name="varScheduledTimes" label="varScheduledTimes" type="String" />
+    <SerializedClassBinding name="Color" label="Color" type="String" />
+    <SerializedClassBinding name="varIconName" label="varIconName" type="String" />
+    <SerializedClassBinding name="varAddress" label="varAddress" type="String" />
+  </CustomProperties>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables /&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SerializedChildren />
+  <Height>0</Height>
+  <IFrameProvidesDS>false</IFrameProvidesDS>
+</EntityList>

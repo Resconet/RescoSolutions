@@ -1,0 +1,80 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>sf_productitem</EntityName>
+    <CamelCase>sf_productitem</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>All Product Items</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy></OrderBy>
+  <SerializedBindings>
+    <string>createdon</string>
+    <string>id</string>
+    <string>lastmodifieddate</string>
+    <string>locationid</string>
+    <string>modifiedon</string>
+    <string>product2id</string>
+    <string>productitemnumber</string>
+    <string>quantityonhand</string>
+    <string>quantityunitofmeasure</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="sf_productitem">
+      <attribute name="productitemnumber"/>
+      <attribute name="product2id"/>
+      <attribute name="locationid"/>
+      <attribute name="quantityonhand"/>
+      <attribute name="id"/>
+      <attribute name="createdon"/>
+      <attribute name="lastmodifieddate"/>
+      <attribute name="modifiedon"/>
+    </entity>
+  </Fetch>
+  <Search>
+    <attribute schema="id2" method="BeginsWith"/>
+    <attribute schema="locationid" method="Contains" reference="true"/>
+    <attribute schema="product2id" method="BeginsWith" reference="true"/>
+    <attribute schema="productitemnumber" method="BeginsWith"/>
+    <attribute schema="productname" method="Contains"/>
+    <attribute schema="serialnumber" method="Contains"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>40</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="product2id">
+          <StyleName>primary</StyleName>
+          <Bounds>8,2,169,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="quantityonhand">
+          <StyleName>Primary Right</StyleName>
+          <Bounds>177,2,53,24</Bounds>
+          <CellKind>3</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="locationid">
+          <StyleName>gray</StyleName>
+          <Bounds>8,26,169,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="quantityunitofmeasure">
+          <StyleName>r_gray</StyleName>
+          <Bounds>177,26,54,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

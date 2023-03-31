@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>account</EntityName>
+  <CamelCase>account</CamelCase>
+  <ClassBinding />
+  <SerializedChildren />
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="name" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="emailaddress1" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="telephone1" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="fax" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="websiteurl" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="transactioncurrencyid" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab">
+      <Name>Address</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="address1_line1" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address1_line2" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address1_line3" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address1_city" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address1_postalcode" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address1_stateorprovince" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address1_country" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="MapTab">
+      <Name>Map</Name>
+      <CoordinatesBinding>address1_latitude;address1_longitude</CoordinatesBinding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab">
+      <Name>Contacts List</Name>
+      <LogicalName>contact.parentcustomerid</LogicalName>
+      <Binding SchemaName="contact.parentcustomerid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab">
+      <Name>Opportunities List</Name>
+      <LogicalName>opportunity.customerid</LogicalName>
+      <Binding SchemaName="opportunity.customerid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab">
+      <Name>Activity List</Name>
+      <LogicalName>activity.regardingobjectid</LogicalName>
+      <Binding SchemaName="activity.regardingobjectid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab">
+      <Name>Annotations List</Name>
+      <LogicalName>annotation.objectid</LogicalName>
+      <Binding SchemaName="annotation.objectid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+  </SerializedChildrenV2>
+  <Navigation>
+    <Name>Navigation</Name>
+    <SerializedChildren />
+  </Navigation>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled</EnabledWorkflows>
+  <SerializedContactInfo />
+</EntityForm>
