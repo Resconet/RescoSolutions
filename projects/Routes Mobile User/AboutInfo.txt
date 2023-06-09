@@ -1,7 +1,0 @@
-﻿Manufacturer=Resco
-ProductTitle=Routes
-ProductSubTitle=
-PoweredBy=Powered by Resco.Net
-Icon=Logo.Logo.png
-Website=www.resco.net
-SupportEmail=

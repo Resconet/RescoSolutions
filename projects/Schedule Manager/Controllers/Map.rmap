@@ -1,8 +1,0 @@
-﻿<GlobalMap>
-  <Items>
-    <GlobalMapComponent>
-      <EntityName>account</EntityName>
-      <ViewName>Default</ViewName>
-    </GlobalMapComponent>
-  </Items>
-</GlobalMap>
