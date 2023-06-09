@@ -9,6 +9,7 @@ trigger:
   paths:
     include:
       - projects
+      - config.*
   tags:
     include:
       - "*"
