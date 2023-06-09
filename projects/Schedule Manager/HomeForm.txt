@@ -1,1 +1,0 @@
-﻿@Section;Schedule work,@Scheduler;Schedule board;Default,@RoutePlan;My route;RoutePlan,appointment|Appointment,@Section;Overview/directory,@Map;;Map,account,systemuser,@Dashboard;;Dashboard,@Section;Settings,@Setup,@About
