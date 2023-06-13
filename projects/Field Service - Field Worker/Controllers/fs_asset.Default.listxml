@@ -28,34 +28,28 @@
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary</StyleName>
-          <Bounds>108,8,73,20</Bounds>
+          <Bounds>46,8,129,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="Home.violet-fs_asset.png">
           <IsConstant>true</IsConstant>
           <StyleName>image</StyleName>
-          <Bounds>7,13,31,23</Bounds>
+          <Bounds>7,7,31,23</Bounds>
           <CellKind>1</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="assetid">
-          <StyleName>Secondary</StyleName>
-          <Bounds>107,31,205,20</Bounds>
-          <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
-        </CellTemplate>
         <CellTemplate SchemaName="serialnumber">
           <StyleName>Secondary</StyleName>
-          <Bounds>51,7,55,20</Bounds>
+          <Bounds>47,31,129,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="customerid">
           <StyleName>r_gray</StyleName>
-          <Bounds>183,8,131,20</Bounds>
+          <Bounds>177,8,137,20</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>9</Anchor>
+          <Anchor>13</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>

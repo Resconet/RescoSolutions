@@ -29,19 +29,10 @@
         <DetailItem SchemaName="fs_assetid">
           <LookupViews>&lt;lookup&gt;&lt;extra&gt;&lt;views&gt;fs_asset.All Assets - Parent View&lt;/views&gt;&lt;/extra&gt;&lt;extra&gt;&lt;views&gt;fs_asset.All Assets - Parent View&lt;/views&gt;&lt;filter entity="fs_asset"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="fs_asset"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="customerid" operator="eq" value="{{customerid}}"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;&lt;/lookup&gt;</LookupViews>
         </DetailItem>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
-        </DetailItem>
         <DetailItem SchemaName="statuscode"/>
         <DetailItem SchemaName="duedate"/>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
-        </DetailItem>
         <DetailItem SchemaName="estimatedduration"/>
         <DetailItem SchemaName="totalduration"/>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
-        </DetailItem>
         <DetailItem SchemaName="territoryid"/>
         <DetailItem SchemaName="ownerid"/>
         <DetailItem SchemaName="description"/>
@@ -60,6 +51,13 @@
       <CustomName>Tasks</CustomName>
       <Binding SchemaName="fs_workordertask.workorderid"/>
       <Views>fs_workordertask.Default</Views>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0">
+      <Name>Inspections</Name>
+      <CustomName>Inspections</CustomName>
+      <Binding SchemaName="resco_questionnaire.@virtual"/>
+      <Views>&lt;extra&gt;&lt;views&gt;resco_questionnaire.In progress or completed&lt;/views&gt;&lt;filter entity="resco_questionnaire"&gt;&amp;lt;fetch&amp;gt;&amp;lt;entity name="resco_questionnaire"&amp;gt;	&amp;lt;filter type="and"&amp;gt;		&amp;lt;condition attribute='resco_istemplate' operator='eq' value='0' /&amp;gt;		&amp;lt;filter type="or"&amp;gt;			&amp;lt;condition attribute="resco_regardingid" operator="eq" value="{{id}}"/&amp;gt;			&amp;lt;condition attribute="resco_rawidvalue" entityname="QuestionLinkAlias" operator="eq" value="{{id}}"/&amp;gt;		&amp;lt;/filter&amp;gt;	&amp;lt;/filter&amp;gt;&amp;lt;link-entity name="resco_question" alias="QuestionLinkAlias" from="resco_questionnaireid" to="resco_questionnaireid" link-type="outer"/&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+      <LookupViews>&lt;extra&gt;&lt;views&gt;resco_questionnaire.Questionnaire Templates Lookup:resco_questionnaire.Reuse:resco_questionnaire.Templates&lt;/views&gt;&lt;filter entity="resco_questionnaire"&gt;&amp;lt;fetch&amp;gt;&amp;lt;entity name='resco_questionnaire'&amp;gt;&amp;lt;filter&amp;gt;&amp;lt;condition attribute='resco_istemplate' operator='eq' value='1' /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
     </FormTab>
     <FormTab xsi:type="AssociatedTab" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>Time</Name>
