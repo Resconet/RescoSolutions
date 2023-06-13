@@ -76,14 +76,14 @@
     <entity name="resco_questionnaire">
       <filter type="and">
         <filter type="or">
-          <condition attribute="resco_istemplate" operator="eq" value="0"/>
           <filter type="and">
-            <condition attribute="resco_istemplate" operator="eq" value="1"/>
             <filter type="or">
               <condition attribute="statuscode" operator="eq" value="1"/>
               <condition attribute="statuscode" operator="eq" value="473220002"/>
             </filter>
+            <condition attribute="resco_istemplate" operator="eq" value="1"/>
           </filter>
+          <condition attribute="resco_istemplate" operator="eq" value="0"/>
         </filter>
         <filter type="or">
           <condition attribute="resco_issnippet" operator="eq" value="0"/>
