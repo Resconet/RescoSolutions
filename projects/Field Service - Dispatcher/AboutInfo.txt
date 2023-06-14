@@ -1,7 +1,0 @@
-﻿Manufacturer=Resco
-ProductTitle=Dispatcher
-ProductSubTitle=
-PoweredBy=Powered by Resco.Net
-Icon=Logo.logo.png
-Website=www.resco.net
-SupportEmail=

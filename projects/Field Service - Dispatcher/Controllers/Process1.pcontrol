@@ -1,6 +1,0 @@
-﻿<ProcessControl>
-  <ProcessName>Process1</ProcessName>
-  <Entity>fs_workorder</Entity>
-  <Field>statuscode</Field>
-  <ProcessSteps>1;undefined;undefined;undefined;false;false|4;undefined;undefined;undefined;false;false|5;undefined;undefined;undefined;false;false|10000;undefined;undefined;undefined;false;false|10001;undefined;undefined;undefined;false;false|2;undefined;undefined;undefined;false;false|3;undefined;undefined;undefined;false;false|</ProcessSteps>
-</ProcessControl>
