@@ -1,9 +1,9 @@
 /projects/Default/ @Resconet/dynamics
 /projects/Inspector/ @Resconet/dynamics
-/projects/Field\ Service\ -\ Contractor/ @Resconet/field-service
-/projects/Field\ Service\ -\ Dispatcher/ @Resconet/field-service
 /projects/Field\ Service\ -\ Field\ Worker/ @Resconet/field-service
 /projects/Field\ Service\ -\ Manager/ @Resconet/field-service
+/projects/Inspections\ -\ Inspector/ @Resconet/field-service
+/projects/Inspections\ -\ Manager/ @Resconet/field-service
 /projects/Portal\ -\ Contractor/ @Resconet/field-service
 /projects/Portal\ -\ Dark/ @Resconet/field-service
 /projects/Portal\ -\ Light/ @Resconet/field-service

@@ -1,4 +1,0 @@
-﻿<tree entity="fs_asset" view="Assets - ParentLocation" recursiveField="assetid">
-  <parent entity="resco_functionallocation" view="Default" levelField="resco_functionallocationid"/>
-  <child entity="fs_asset" view="Assets" levelField="assetid"/>
-</tree>
