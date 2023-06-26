@@ -2,7 +2,7 @@
 <configuration xmlns="http://schema.resco.net/mobilecrm/woodford/configuration">
 	<woodford>
 		<mobileprojecttemplates>
-			<mobileprojecttemplate id="resco:CrmDefault" displayname="Default" target="Crm" url="config/mobileprojects/crm/default.zip.xml" />
+			<mobileprojecttemplate id="resco:CrmDefault" displayname="Mobile Sales" target="Crm" url="config/mobileprojects/crm/default.zip.xml" />
 			<mobileprojecttemplate id="resco:CrmInspector" displayname="Inspector" target="Crm" url="config/mobileprojects/crm/inspector.zip.xml" />
 			<mobileprojecttemplate id="resco:XrmDefault" displayname="Sales" target="Xrm" url="config/mobileprojects/xrm/default.zip.xml" />
 			<mobileprojecttemplate id="resco:XrmService" displayname="Field Service - Manager" target="Xrm" url="config/mobileprojects/xrm/defaultservice.zip.xml" />
