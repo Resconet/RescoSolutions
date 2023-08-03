@@ -37,9 +37,6 @@
         </DetailItem>
         <DetailItem SchemaName="name"/>
         <DetailItem SchemaName="serialnumber"/>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
-        </DetailItem>
         <DetailItem SchemaName="$Table1" grid="true">
           <Columns>*;*</Columns>
           <Rows>Auto;Auto</Rows>
@@ -53,9 +50,6 @@
           </Items>
         </DetailItem>
         <DetailItem SchemaName="fs_schedulestatus"/>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
-        </DetailItem>
         <DetailItem SchemaName="customerid">
           <LookupViews>&lt;lookup&gt;&lt;extra/&gt;&lt;extra&gt;&lt;views&gt;account.Active Accounts:contact.Default&lt;/views&gt;&lt;/extra&gt;&lt;/lookup&gt;</LookupViews>
         </DetailItem>
@@ -86,7 +80,7 @@
       <Name>Map</Name>
       <CoordinatesBinding>assetLat;assetLon</CoordinatesBinding>
     </FormTab>
-    <FormTab xsi:type="TaggedImageTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" ContentMode="0">
+    <FormTab xsi:type="TaggedImageTab" flexiHeight="1" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" ContentMode="0">
       <Name>Tagged Image</Name>
       <ImageName>Image</ImageName>
       <ImageEntity>annotation</ImageEntity>
@@ -118,11 +112,6 @@
       <Name>Readings List</Name>
       <Binding SchemaName="resco_propertylog.resco_objectid"/>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="0" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\quote@2x.png" IsIconNameReadOnly="0" DocCommands="0">
-      <Name>Maintenance Jobs List</Name>
-      <Binding SchemaName="fs_agreementjob.fs_assetid"/>
-      <Views>fs_agreementjob.Default</Views>
-    </FormTab>
     <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\fs_workorder@2x.png" IsIconNameReadOnly="0" DocCommands="0">
       <Name>Maintenance History</Name>
       <CustomName>Maintenance History</CustomName>
@@ -134,11 +123,6 @@
       <CustomName>Attachments</CustomName>
       <Binding SchemaName="annotation.objectid"/>
       <Views>annotation.Default</Views>
-    </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0" FlipMode="32">
-      <Name>Auditing List (*)</Name>
-      <Binding SchemaName="resco_audit.@virtual"/>
-      <Views>&lt;extra&gt;&lt;filter entity="resco_audit"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="resco_audit"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="resco_regardingobjectid" operator="eq" value="{{id}}"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
     </FormTab>
   </SerializedChildrenV2>
 </EntityForm>

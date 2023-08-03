@@ -1,3 +1,0 @@
-﻿<tree entity="resco_functionallocation" view="Default" recursiveField="resco_parentlocaltionid">
-  <parent entity="resco_functionallocation" view="Default" levelField="resco_parentlocaltionid"/>
-</tree>

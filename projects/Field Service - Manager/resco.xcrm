@@ -1,4 +1,4 @@
-﻿<model version="8" Chat="true" publish="10000">
+﻿<model version="8" publish="10000">
   <entities>
     <entity schema="account">
       <properties>
@@ -394,8 +394,8 @@
         <property schema="fs_assetid"/>
         <property schema="fs_jobtemplateid"/>
         <property schema="fs_schedulestatus"/>
-        <property schema="fs_validfrom" displayformat="DateOnly"/>
-        <property schema="fs_validto" displayformat="DateOnly"/>
+        <property schema="fs_validfrom"/>
+        <property schema="fs_validto"/>
         <property schema="id"/>
         <property schema="modifiedon"/>
         <property schema="name"/>
@@ -485,6 +485,7 @@
       <properties>
         <property schema="boolvalue"/>
         <property schema="condition"/>
+        <property schema="createdby"/>
         <property schema="createdon"/>
         <property schema="datevalue"/>
         <property schema="floatvalue"/>
@@ -501,6 +502,11 @@
         <property schema="triggertype"/>
       </properties>
       <indexes>
+        <index schema="idx_fs_agreementjobtrigger_createdby" issystem="true">
+          <fields>
+            <field schema="createdby"/>
+          </fields>
+        </index>
         <index schema="idx_fs_agreementjobtrigger_fs_agreementjobid" issystem="true">
           <fields>
             <field schema="fs_agreementjobid"/>
@@ -2057,18 +2063,39 @@
     </entity>
     <entity schema="resco_favorite">
       <properties>
+        <property schema="createdby"/>
         <property schema="createdon"/>
+        <property schema="modifiedby"/>
         <property schema="modifiedon"/>
         <property schema="ownerid"/>
+        <property schema="owningbusinessunit"/>
         <property schema="resco_favoriteid"/>
         <property schema="resco_name"/>
         <property schema="resco_recordid"/>
         <property schema="resco_target"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="versionnumber"/>
       </properties>
       <indexes>
+        <index schema="idx_resco_favorite_createdby" issystem="true">
+          <fields>
+            <field schema="createdby"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_favorite_modifiedby" issystem="true">
+          <fields>
+            <field schema="modifiedby"/>
+          </fields>
+        </index>
         <index schema="idx_resco_favorite_ownerid" issystem="true">
           <fields>
             <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_favorite_owningbusinessunit" issystem="true">
+          <fields>
+            <field schema="owningbusinessunit"/>
           </fields>
         </index>
         <index schema="idx_resco_favorite_resco_name" issystem="true">
@@ -2302,6 +2329,7 @@
         <property schema="resco_label"/>
         <property schema="resco_layout"/>
         <property schema="resco_localization"/>
+        <property schema="resco_mapping"/>
         <property schema="resco_max"/>
         <property schema="resco_min"/>
         <property schema="resco_name"/>

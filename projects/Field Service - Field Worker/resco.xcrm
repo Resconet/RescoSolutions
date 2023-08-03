@@ -202,115 +202,6 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="fs_agreement" permissions="768" xattr="768">
-      <properties>
-        <property schema="agreement_number"/>
-        <property schema="createdon"/>
-        <property schema="fs_customerid"/>
-        <property schema="fs_validfrom"/>
-        <property schema="fs_validto"/>
-        <property schema="id"/>
-        <property schema="modifiedon"/>
-        <property schema="name"/>
-        <property schema="statecode"/>
-        <property schema="statuscode"/>
-      </properties>
-      <indexes>
-        <index schema="idx_fs_agreement_fs_customerid" issystem="true">
-          <fields>
-            <field schema="fs_customerid"/>
-          </fields>
-        </index>
-        <index schema="idx_fs_agreement_name" issystem="true">
-          <fields>
-            <field schema="name"/>
-          </fields>
-        </index>
-      </indexes>
-    </entity>
-    <entity schema="fs_agreementjob" permissions="768" xattr="768">
-      <properties>
-        <property schema="createdon"/>
-        <property schema="fs_actionxdaysinadvance"/>
-        <property schema="fs_advancedaction"/>
-        <property schema="fs_agreementid"/>
-        <property schema="fs_assetid"/>
-        <property schema="fs_jobtemplateid"/>
-        <property schema="fs_validfrom"/>
-        <property schema="fs_validto"/>
-        <property schema="id"/>
-        <property schema="modifiedon"/>
-        <property schema="name"/>
-        <property schema="resco_recurrenceid"/>
-        <property schema="statecode"/>
-        <property schema="statuscode"/>
-      </properties>
-      <indexes>
-        <index schema="idx_fs_agreementjob_fs_agreementid" issystem="true">
-          <fields>
-            <field schema="fs_agreementid"/>
-          </fields>
-        </index>
-        <index schema="idx_fs_agreementjob_fs_assetid" issystem="true">
-          <fields>
-            <field schema="fs_assetid"/>
-          </fields>
-        </index>
-        <index schema="idx_fs_agreementjob_fs_jobtemplateid" issystem="true">
-          <fields>
-            <field schema="fs_jobtemplateid"/>
-          </fields>
-        </index>
-        <index schema="idx_fs_agreementjob_name" issystem="true">
-          <fields>
-            <field schema="name"/>
-          </fields>
-        </index>
-        <index schema="idx_fs_agreementjob_resco_recurrenceid" issystem="true">
-          <fields>
-            <field schema="resco_recurrenceid"/>
-          </fields>
-        </index>
-      </indexes>
-    </entity>
-    <entity schema="fs_agreementjobdate" permissions="768" xattr="768">
-      <properties>
-        <property schema="createdon"/>
-        <property schema="fs_agreementjobid"/>
-        <property schema="fs_jobdate"/>
-        <property schema="fs_prefferedstarttimefrom"/>
-        <property schema="fs_prefferedstarttimeto"/>
-        <property schema="fs_workorderid"/>
-        <property schema="id"/>
-        <property schema="modifiedon"/>
-        <property schema="name"/>
-        <property schema="resco_recurrenceid"/>
-        <property schema="statecode"/>
-        <property schema="statuscode"/>
-      </properties>
-      <indexes>
-        <index schema="idx_fs_agreementjobdate_fs_agreementjobid" issystem="true">
-          <fields>
-            <field schema="fs_agreementjobid"/>
-          </fields>
-        </index>
-        <index schema="idx_fs_agreementjobdate_fs_workorderid" issystem="true">
-          <fields>
-            <field schema="fs_workorderid"/>
-          </fields>
-        </index>
-        <index schema="idx_fs_agreementjobdate_name" issystem="true">
-          <fields>
-            <field schema="name"/>
-          </fields>
-        </index>
-        <index schema="idx_fs_agreementjobdate_resco_recurrenceid" issystem="true">
-          <fields>
-            <field schema="resco_recurrenceid"/>
-          </fields>
-        </index>
-      </indexes>
-    </entity>
     <entity schema="fs_asset" permissions="768" xattr="768">
       <properties>
         <property schema="assetid"/>
@@ -1813,6 +1704,7 @@
         <property schema="resco_label"/>
         <property schema="resco_layout"/>
         <property schema="resco_localization"/>
+        <property schema="resco_mapping"/>
         <property schema="resco_max"/>
         <property schema="resco_min"/>
         <property schema="resco_name"/>

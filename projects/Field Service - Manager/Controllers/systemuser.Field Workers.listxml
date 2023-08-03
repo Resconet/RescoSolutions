@@ -42,14 +42,8 @@
         </CellTemplate>
         <CellTemplate SchemaName="internalemailaddress">
           <StyleName>primary</StyleName>
-          <Bounds>8,31,183,23</Bounds>
+          <Bounds>8,31,238,23</Bounds>
           <CellKind>4</CellKind>
-          <Anchor>5</Anchor>
-        </CellTemplate>
-        <CellTemplate SchemaName="customerid.contact.contacttype">
-          <StyleName>primary</StyleName>
-          <Bounds>191,31,53,23</Bounds>
-          <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
       </SerializedChildren>

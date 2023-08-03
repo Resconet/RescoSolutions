@@ -9,7 +9,6 @@ trigger:
   paths:
     include:
       - projects
-      - config.*
   tags:
     include:
       - "*"
@@ -25,7 +24,7 @@ jobs:
     fetchDepth: 1
 
   - bash: |
-      find projects -mindepth 1 -maxdepth 1 -type d -print0 | while read -d $'\0' dir; do
+      find . -mindepth 1 -maxdepth 1 -type d -print0 | while read -d $'\0' dir; do
         name=$(basename "$dir")
         project=$(grep "displayname=\"$name\"" config.xml | sed 's/.* url="\(.*\)".*/\1/g')
         [[ ! $project ]] && echo Unknown project: $name && exit 1
@@ -41,6 +40,7 @@ jobs:
       done
       cp -v config.* $(Build.ArtifactStagingDirectory)
     displayName: Prepare Mobile Projects
+    workingDirectory: projects
 
   - publish: $(Build.ArtifactStagingDirectory)
     displayName: Publish Artifact

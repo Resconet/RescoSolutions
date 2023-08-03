@@ -2,6 +2,8 @@
   <IsContactForm>false</IsContactForm>
   <EntityName>fs_asset</EntityName>
   <CamelCase>fs_asset</CamelCase>
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
+  <CacheMode>-1</CacheMode>
   <PrimaryCommands>!defcmd</PrimaryCommands>
   <ClassBinding/>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
@@ -11,14 +13,8 @@
       <SerializedChildren>
         <DetailItem SchemaName="name"/>
         <DetailItem SchemaName="serialnumber"/>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
-        </DetailItem>
         <DetailItem SchemaName="customerid"/>
         <DetailItem SchemaName="resco_functionallocationid"/>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
-        </DetailItem>
         <DetailItem SchemaName="assetid">
           <GridPosition>0;0;1;2</GridPosition>
         </DetailItem>
@@ -31,23 +27,14 @@
         <DetailItem SchemaName="transactioncurrencyid">
           <GridPosition>1;0;1;2</GridPosition>
         </DetailItem>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
+        <DetailItem SchemaName="installation">
+          <GridPosition>0;0;1;1</GridPosition>
         </DetailItem>
-        <DetailItem SchemaName="$Table1" grid="true">
-          <Columns>*;*</Columns>
-          <Rows>Auto;Auto</Rows>
-          <Items>
-            <DetailItem SchemaName="installation">
-              <GridPosition>0;0;1;1</GridPosition>
-            </DetailItem>
-            <DetailItem SchemaName="lastservice">
-              <GridPosition>1;0;1;1</GridPosition>
-            </DetailItem>
-            <DetailItem SchemaName="fs_schedulestatus">
-              <GridPosition>0;1;1;1</GridPosition>
-            </DetailItem>
-          </Items>
+        <DetailItem SchemaName="lastservice">
+          <GridPosition>1;0;1;1</GridPosition>
+        </DetailItem>
+        <DetailItem SchemaName="fs_schedulestatus">
+          <GridPosition>0;1;1;1</GridPosition>
         </DetailItem>
       </SerializedChildren>
     </FormTab>
@@ -56,10 +43,6 @@
       <CustomName>Maintenance History</CustomName>
       <Binding SchemaName="fs_workorder.fs_assetid"/>
       <Views>fs_workorder.My WorkOrders:fs_workorder.WorkOrders</Views>
-    </FormTab>
-    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
-      <Name>Maintenance Jobs List</Name>
-      <Binding SchemaName="fs_agreementjob.fs_assetid"/>
     </FormTab>
     <FormTab xsi:type="AssociatedTab" flexiOrientation="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
       <Name>Notes List</Name>

@@ -1,5 +1,5 @@
 ﻿<Scheduler>
-  <Version>3</Version>
+  <Version>4</Version>
   <BorderWidth>2</BorderWidth>
   <BorderRadius>4</BorderRadius>
   <Name>WorkOrders Scheduler</Name>
@@ -42,6 +42,7 @@
       <PrimaryName>name</PrimaryName>
     </LookupField2>
   </ResourceSkill>
+  <ResourceTargetUserField>targetid</ResourceTargetUserField>
   <ActivityName>fs_workorderschedule</ActivityName>
   <StartDateField>scheduledstart</StartDateField>
   <EndDateField>scheduledend</EndDateField>
@@ -128,6 +129,7 @@
     <Longitude>address1_longitude</Longitude>
   </ResourceAddressGPS>
   <ResourceCustomFilters>
+    <enabled>1</enabled>
     <filterBySkills>
       <enabled>1</enabled>
       <applied>1</applied>
@@ -141,7 +143,9 @@
       <maxDistanceValue>5</maxDistanceValue>
     </filterByMaxDistance>
     <useMiles>1</useMiles>
+    <useLiveLocations>1</useLiveLocations>
   </ResourceCustomFilters>
+  <ResourceCustomSorts/>
   <FrequentVisits enabled="0" visits="1" frequency="7" minDaysBetweenVisits="1"/>
   <Territory>
     <Entity>fs_territory</Entity>

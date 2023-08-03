@@ -16,7 +16,6 @@
     <string>name</string>
     <string>id</string>
     <string>mobilephone</string>
-    <string>resco_portalaccess</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
   <Fetch version="1.0">
@@ -60,14 +59,8 @@
         </CellTemplate>
         <CellTemplate SchemaName="contacttype">
           <StyleName>Primary Right Blue</StyleName>
-          <Bounds>216,35,54,28</Bounds>
+          <Bounds>216,35,100,28</Bounds>
           <CellKind>4</CellKind>
-          <Anchor>5</Anchor>
-        </CellTemplate>
-        <CellTemplate SchemaName="resco_portalaccess">
-          <StyleName>primary</StyleName>
-          <Bounds>272,35,42,28</Bounds>
-          <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="emailaddress1">
