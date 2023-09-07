@@ -2,6 +2,8 @@
   <IsContactForm>false</IsContactForm>
   <EntityName>email</EntityName>
   <CamelCase>Email</CamelCase>
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
+  <CacheMode>-1</CacheMode>
   <PrimaryCommands>!defcmd</PrimaryCommands>
   <SharedVariableNames/>
   <ClassBinding/>
@@ -22,7 +24,7 @@
       </SerializedChildren>
     </FormTab>
     <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
-      <Name>Invalid!</Name>
+      <Name>E-Mail Attachments List</Name>
       <Binding SchemaName="activitymimeattachment.objectid"/>
     </FormTab>
   </SerializedChildrenV2>
