@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" UseSyncFilter="true">
+  <Attributes>
+    <EntityName>sf_account</EntityName>
+    <CamelCase>sf_account</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>Lookup - All Accounts</Name>
+  <Kind>LookupList</Kind>
+  <IsDefault>false</IsDefault>
+  <IsHidden>true</IsHidden>
+  <HasGpsFields>true</HasGpsFields>
+  <AutoWideWidth>0</AutoWideWidth>
+  <MaxColumns>0</MaxColumns>
+  <Search>
+    <attribute schema="accountnumber" method="BeginsWith" />
+    <attribute schema="billingcity" method="Contains" />
+    <attribute schema="billingcountry" method="Contains" />
+    <attribute schema="industry" method="Contains" />
+    <attribute schema="name" method="Contains" />
+    <attribute schema="ownerid2" method="Contains" reference="true" />
+    <attribute schema="rating" method="BeginsWith" />
+  </Search>
+  <OrderBy>name</OrderBy>
+  <MultiSelectCommands>Delete|||Favorite||</MultiSelectCommands>
+  <SerializedBindings>
+    <string>name</string>
+    <string>phone</string>
+    <string>type</string>
+    <string>billinglatitude</string>
+    <string>billinglongitude</string>
+    <string>billingstate</string>
+    <string>isdeleted</string>
+    <string>id</string>
+  </SerializedBindings>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>40</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <Buttons>Delete;Favorite</Buttons>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>8,2,227,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="type">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>8,26,227,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties />
+  <SerializedChildren />
+  <Height>0</Height>
+  <IFrameProvidesDS>false</IFrameProvidesDS>
+</EntityList>

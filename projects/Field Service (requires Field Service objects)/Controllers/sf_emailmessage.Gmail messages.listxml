@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>sf_emailmessage</EntityName>
+    <CamelCase>sf_emailmessage</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding>
+      <SerializedClassBinding name="#SubjectRead" label="SubjectRead" type="String" />
+      <SerializedClassBinding name="#SubjectUnread" label="SubjectUnread" type="String" />
+      <SerializedClassBinding name="#ImageUnread" label="ImageUnread" type="String" />
+      <SerializedClassBinding name="#IsRead" label="IsRead" type="Boolean" />
+      <SerializedClassBinding name="#Summary" label="Summary" type="String" />
+      <SerializedClassBinding name="#ShortDate" label="ShortDate" type="String" />
+      <SerializedClassBinding name="#ShortLabel" label="ShortLabel" type="String" />
+      <SerializedClassBinding name="#EmailFlags" label="EmailFlags" type="Integer" />
+      <SerializedClassBinding name="#HasAttachments" label="HasAttachments" type="Boolean" />
+      <SerializedClassBinding name="#IsTracked" label="IsTracked" type="Boolean" />
+      <SerializedClassBinding name="#AttachmentImage" label="AttachmentImage" type="String" />
+      <SerializedClassBinding name="#StatusImage" label="StatusImage" type="String" />
+    </ClassBinding>
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>Gmail messages</Name>
+  <Kind>List</Kind>
+  <IsDefault>false</IsDefault>
+  <AutoWideWidth>0</AutoWideWidth>
+  <Fetch version="1.0">
+    <entity name="sf_emailmessage">
+      <filter type="and">
+        <condition attribute="resco_source__c" operator="eq" value="473220001" />
+      </filter>
+    </entity>
+  </Fetch>
+  <OrderBy>!messagedate</OrderBy>
+  <MultiSelectCommands />
+  <SerializedBindings>
+    <string>activityid</string>
+    <string>resco_createdas__c</string>
+    <string>createdon</string>
+    <string>resco_description__c</string>
+    <string>resco_emailid__c</string>
+    <string>id2</string>
+    <string>replytoemailmessageid</string>
+    <string>fromaddress</string>
+    <string>id</string>
+    <string>resco_islocal__c</string>
+    <string>messagedate</string>
+    <string>modifiedon</string>
+    <string>status</string>
+    <string>subject</string>
+    <string>toaddress</string>
+  </SerializedBindings>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>DefaultRead</Name>
+      <Width>320</Width>
+      <Height>72</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <Buttons>none</Buttons>
+      <SerializedChildren>
+        <CellTemplate SchemaName="#ShortLabel">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>12,2,263,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#ShortDate">
+          <IsConstant>false</IsConstant>
+          <StyleName>r_gray</StyleName>
+          <Bounds>235,26,80,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="subject">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>12,26,223,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#Summary">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray_top</StyleName>
+          <Bounds>12,42,303,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#StatusImage">
+          <IsConstant>false</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>295,2,20,20</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#AttachmentImage">
+          <IsConstant>false</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>275,2,20,20</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>DefaultUnread</Name>
+      <Width>320</Width>
+      <Height>72</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="#ShortLabel">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>12,2,263,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#ShortDate">
+          <IsConstant>false</IsConstant>
+          <StyleName>r_gray</StyleName>
+          <Bounds>235,26,80,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#ImageUnread">
+          <IsConstant>false</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>1,2,10,68</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="subject">
+          <IsConstant>false</IsConstant>
+          <StyleName>EmailUnreadStyle</StyleName>
+          <Bounds>12,26,223,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#Summary">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray_top</StyleName>
+          <Bounds>12,42,303,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#StatusImage">
+          <IsConstant>false</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>295,2,20,20</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#AttachmentImage">
+          <IsConstant>false</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>275,2,20,20</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <TemplateSelectorRule>&lt;?xml version='1.0' encoding='utf-16'?&gt;&lt;Workflow e='true' isvalid='true' syntaxVersion='7' version='0'&gt;&lt;branch e='true'&gt;&lt;if e='true'&gt;&lt;conditions e='true' op='And'&gt;&lt;condition e='true'&gt;&lt;var&gt;Entity.IsRead&lt;/var&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e='true'&gt;&lt;function e='false'&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;arg&gt;Integer:1&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <CustomProperties />
+  <SerializedChildren />
+  <Height>40</Height>
+  <IFrameProvidesDS>false</IFrameProvidesDS>
+</EntityList>

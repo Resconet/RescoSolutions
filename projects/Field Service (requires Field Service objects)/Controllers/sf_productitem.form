@@ -1,0 +1,45 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>sf_productitem</EntityName>
+  <CamelCase>sf_productitem</CamelCase>
+  <WorkflowLoad>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;&lt;branch info="Open Product selection if new" e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.IsNew&lt;/var&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.product2id&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;branch info="Set default Quantity On Hand" e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.quantityonhand&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.quantityonhand&lt;/var&gt;&lt;arg&gt;Integer:1&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;function e="false"&gt;&lt;var&gt;Form.product2id.Focus&lt;/var&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowLoad>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables /&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <PrimaryCommands>Delete||</PrimaryCommands>
+  <SharedVariableNames/>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab">
+      <Name>sf_productitem</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="image" image="true" Style="FormPricebookEntryFileImage">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="product2id">
+          <LookupViews>&lt;lookup&gt;&lt;extra&gt;&lt;actions&gt;0;;0&lt;/actions&gt;&lt;/extra&gt;&lt;extra&gt;&lt;actions&gt;0;;0&lt;/actions&gt;&lt;/extra&gt;&lt;dialog&gt;1&lt;/dialog&gt;&lt;/lookup&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="locationid">
+          <LookupViews>&lt;lookup&gt;&lt;extra&gt;&lt;actions&gt;0;;0&lt;/actions&gt;&lt;/extra&gt;&lt;extra&gt;&lt;actions&gt;0;;0&lt;/actions&gt;&lt;/extra&gt;&lt;dialog&gt;1&lt;/dialog&gt;&lt;/lookup&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="quantityonhand"/>
+        <DetailItem SchemaName="quantityunitofmeasure"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="serialnumber"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" FlipMode="2" ListCommands="0">
+      <Name>Products Consumed List (*)</Name>
+      <Binding SchemaName="sf_productconsumed.@virtual"/>
+      <Views>&lt;extra&gt;&lt;filter entity="sf_productconsumed"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="sf_productconsumed"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="product2id" operator="eq" value="{{product2id}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;link-entity name="sf_workorder" alias="L0" from="id" to="workorderid" link-type="inner"&amp;gt;&amp;lt;link-entity name="sf_serviceappointment" alias="L1" from="parentrecordid" to="id" link-type="inner"&amp;gt;&amp;lt;link-entity name="sf_assignedresource" alias="L2" from="serviceappointmentid" to="id" link-type="inner"&amp;gt;&amp;lt;link-entity name="sf_serviceresource" alias="L3" from="id" to="serviceresourceid" link-type="inner"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="relatedrecordid" operator="eq-userid" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+      <CalendarSetup>
+        <BusinessDaysMask>127</BusinessDaysMask>
+        <ViewsMask>12</ViewsMask>
+      </CalendarSetup>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

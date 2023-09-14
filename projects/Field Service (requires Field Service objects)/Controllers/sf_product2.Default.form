@@ -1,0 +1,38 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="3" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>sf_product2</EntityName>
+  <CamelCase>sf_product2</CamelCase>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab">
+      <Name>sf_product2</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="image1" image="true" imageActions="68157446" Style="Table Image Content">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="name"/>
+        <DetailItem SchemaName="productcode"/>
+        <DetailItem SchemaName="isactive"/>
+        <DetailItem SchemaName="family"/>
+        <DetailItem SchemaName="description"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3" flexiWidth="1">
+      <Name>Price Book Entries List</Name>
+      <Binding SchemaName="sf_pricebookentry.product2id"/>
+      <Views>sf_pricebookentry.Lookup - Product - All</Views>
+      <LookupViews>sf_pricebookentry.Lookup - Product - All</LookupViews>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="200px" flexiWidth="1" AllowAddExisting="true">
+      <Name>Files</Name>
+      <CustomName>Files</CustomName>
+      <Binding SchemaName="sf_contentdocumentlink.linkedentityid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="200px" flexiWidth="1" flexiCollapsed="1" DocCommands="262334" FlipMode="224">
+      <Name>Attachments List</Name>
+      <Binding SchemaName="sf_attachment.parentid"/>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

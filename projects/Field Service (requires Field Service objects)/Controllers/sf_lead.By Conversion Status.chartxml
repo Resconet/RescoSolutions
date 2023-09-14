@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityChart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>sf_lead</EntityName>
+    <CamelCase>sf_lead</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>By Conversion Status</Name>
+  <IsHidden>false</IsHidden>
+  <Kind>Funnel</Kind>
+  <IsDefault>false</IsDefault>
+  <LabelStyle>Inside</LabelStyle>
+  <PieDonutRatio>50</PieDonutRatio>
+  <BarStyle>Default</BarStyle>
+  <AreaStyle>Default</AreaStyle>
+  <DrillDownFields>annualrevenue;city;company;isconverted;converteddate;country;createdon;description;email;numberofemployees;fax;firstname;name;industry;lastname;leadsource;masterrecordid;mobilephone;modifiedon;numberoflocations__c;ownerid2;primary__c;productinterest__c;rating;salutation;siccode__c;state;status;street;title;isunreadbyowner;postalcode</DrillDownFields>
+  <DrillDownEnabled>true</DrillDownEnabled>
+  <Series>
+    <Series>
+      <Attribute>status</Attribute>
+      <Color>#FF0000FF</Color>
+    </Series>
+  </Series>
+  <Axis>status</Axis>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#FF0000FF</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#FF0000FF</Color>
+  </TargetValue>
+  <DateGrouping>None</DateGrouping>
+  <Fetch version="1.0">
+    <entity name="sf_lead" />
+  </Fetch>
+  <LimitCount>3</LimitCount>
+</EntityChart>

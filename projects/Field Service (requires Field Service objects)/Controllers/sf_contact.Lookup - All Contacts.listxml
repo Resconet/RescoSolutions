@@ -1,0 +1,70 @@
+﻿<EntityList UseSyncFilter="true">
+  <Attributes>
+    <EntityName>sf_contact</EntityName>
+    <CamelCase>sf_contact</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Lookup - All Contacts</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>firstname;lastname</OrderBy>
+  <SerializedBindings>
+    <string>accountid</string>
+    <string>phone</string>
+    <string>id2</string>
+    <string>email</string>
+    <string>firstname</string>
+    <string>name</string>
+    <string>id</string>
+    <string>lastname</string>
+    <string>mailinglatitude</string>
+    <string>mailinglongitude</string>
+    <string>mailingstate</string>
+  </SerializedBindings>
+  <IsHidden>true</IsHidden>
+  <HasGpsFields>true</HasGpsFields>
+  <MaxColumns>0</MaxColumns>
+  <TemplateSelectorRule>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.name&lt;/var&gt;&lt;arg&gt;var:Entity.firstname&lt;/arg&gt;&lt;arg&gt;String: &lt;/arg&gt;&lt;arg&gt;var:Entity.lastname&lt;/arg&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;/function&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <Search>
+    <attribute schema="accountid" method="Contains" reference="true"/>
+    <attribute schema="department" method="Contains"/>
+    <attribute schema="email" method="Contains"/>
+    <attribute schema="mailingcity" method="Contains"/>
+    <attribute schema="mailingcountry" method="Contains"/>
+    <attribute schema="name" method="Contains"/>
+    <attribute schema="title" method="Contains"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>40</Height>
+      <Buttons>Call;Email;SMS</Buttons>
+      <SerializedChildren>
+        <CellTemplate SchemaName="accountid">
+          <StyleName>gray</StyleName>
+          <Bounds>43,25,192,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>43,1,192,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>1</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>ListFileImage</StyleName>
+          <Bounds>1,1,41,39</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>7</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

@@ -1,0 +1,89 @@
+﻿<EntityForm xsi:dummy="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" flexi="0" fleximode="0" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>sf_workorder</EntityName>
+  <CamelCase>sf_workorder</CamelCase>
+  <WorkflowLoad>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.IsNew&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.startdate&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;definition e="false"&gt;&lt;var&gt;WorkType&lt;/var&gt;&lt;func&gt;LoadReference&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;arg&gt;var:Entity.worktypeid&lt;/arg&gt;&lt;arg&gt;String:sf_worktype&lt;/arg&gt;&lt;/definition&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;WorkType.@this&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.startdate&lt;/var&gt;&lt;func&gt;SetNow&lt;/func&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.enddate&lt;/var&gt;&lt;func&gt;AddMinutes&lt;/func&gt;&lt;arg&gt;var:Entity.startdate&lt;/arg&gt;&lt;arg&gt;var:WorkType.durationinminutes&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.startdate&lt;/var&gt;&lt;func&gt;SetNow&lt;/func&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.enddate&lt;/var&gt;&lt;func&gt;AddMinutes&lt;/func&gt;&lt;arg&gt;var:Entity.startdate&lt;/arg&gt;&lt;arg&gt;Integer:60&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowLoad>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
+  <CacheMode>-1</CacheMode>
+  <PrimaryCommands>Favorite|||Delete||</PrimaryCommands>
+  <SharedVariableNames/>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_workorder@2x.png" IsIconNameReadOnly="0">
+      <Name>sf_workorder</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="workordernumber"/>
+        <DetailItem SchemaName="subject"/>
+        <DetailItem SchemaName="accountid">
+          <LookupViews>&lt;lookup&gt;&lt;extra&gt;&lt;views&gt;sf_account.@All Accounts:sf_account.My Accounts&lt;/views&gt;&lt;/extra&gt;&lt;dialog&gt;1&lt;/dialog&gt;&lt;/lookup&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="startdate"/>
+        <DetailItem SchemaName="enddate"/>
+        <DetailItem SchemaName="description"/>
+        <DetailItem SchemaName="ownerid2"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Detail@2x.png" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="status"/>
+        <DetailItem SchemaName="contactid"/>
+        <DetailItem SchemaName="caseid"/>
+        <DetailItem SchemaName="assetid"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="200px" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_workorderlineitem@2x.png" IsIconNameReadOnly="0" FlipMode="224">
+      <Name>Work Order Line Items List</Name>
+      <Binding SchemaName="sf_workorderlineitem.workorderid"/>
+      <Views>sf_workorderlineitem.All Line Items</Views>
+      <LookupViews>sf_workorderlineitem.All Line Items</LookupViews>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="200px" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_productrequired@2x.png" IsIconNameReadOnly="0">
+      <Name>Products Required List</Name>
+      <Binding SchemaName="sf_productrequired.parentrecordid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="200px" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_productconsumed@2x.png" IsIconNameReadOnly="0" FlipMode="64">
+      <Name>Products Consumed List</Name>
+      <Binding SchemaName="sf_productconsumed.workorderid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="200px" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_skillrequirement@2x.png" IsIconNameReadOnly="0">
+      <Name>Skill Requirements List</Name>
+      <Binding SchemaName="sf_skillrequirement.relatedrecordid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="100px" flexiWidth="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_productrequest@2x.png" IsIconNameReadOnly="0">
+      <Name>Product Requests List</Name>
+      <Binding SchemaName="sf_productrequest.workorderid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="200px" flexiWidth="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_serviceappointment@2x.png" IsIconNameReadOnly="0">
+      <Name>Service Appointments List</Name>
+      <Binding SchemaName="sf_serviceappointment.parentrecordid"/>
+      <Views>sf_serviceappointment.*:sf_serviceappointment.@All Appointments</Views>
+      <LookupViews>sf_serviceappointment.*:sf_serviceappointment.@All Appointments</LookupViews>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="1" flexiWidth="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Files@2x.png" IsIconNameReadOnly="0" AllowAddExisting="true">
+      <Name>Files</Name>
+      <CustomName>Files</CustomName>
+      <Binding SchemaName="sf_contentdocumentlink.linkedentityid"/>
+    </FormTab>
+    <FormTab xsi:type="MapTab" flexiHeight="200px" flexiWidth="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
+      <Name>Map</Name>
+      <CoordinatesBinding>latitude;longitude</CoordinatesBinding>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Address@2x.png" IsIconNameReadOnly="0">
+      <Name>Address</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="street"/>
+        <DetailItem SchemaName="city"/>
+        <DetailItem SchemaName="country"/>
+        <DetailItem SchemaName="postalcode"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="latitude"/>
+        <DetailItem SchemaName="longitude"/>
+      </SerializedChildren>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>
