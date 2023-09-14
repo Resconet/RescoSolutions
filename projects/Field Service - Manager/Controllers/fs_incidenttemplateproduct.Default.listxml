@@ -41,6 +41,8 @@
       <Width>240</Width>
       <Height>56</Height>
       <Buttons>none</Buttons>
+      <SerializedBackground>surface</SerializedBackground>
+      <SerializedSelectedBackground>primaryContainer</SerializedSelectedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="productdescription">
           <StyleName>primary</StyleName>

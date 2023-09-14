@@ -21,7 +21,7 @@
   <MaxColumns>0</MaxColumns>
   <Fetch version="1.0">
     <entity name="fs_locationtag">
-      <link-entity name="resco_functionallocation" alias="L0" from="id" to="tagid" link-type="inner"/>
+      <link-entity name="resco_functionallocation" from="id" to="tagid" link-type="inner" alias="L0"/>
     </entity>
   </Fetch>
   <SerializedTemplates>
@@ -31,6 +31,8 @@
       <Name>Default</Name>
       <Width>320</Width>
       <Height>48</Height>
+      <SerializedBackground>surface</SerializedBackground>
+      <SerializedSelectedBackground>primaryContainer</SerializedSelectedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="tagid.resco_functionallocation.name">
           <StyleName>primary</StyleName>

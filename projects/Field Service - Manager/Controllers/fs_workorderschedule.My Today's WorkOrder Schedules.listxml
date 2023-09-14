@@ -43,7 +43,7 @@
       <filter type="and">
         <condition attribute="scheduledstart" operator="today"/>
       </filter>
-      <link-entity name="fs_resource" alias="L0" from="id" to="resourceid" link-type="inner">
+      <link-entity name="fs_resource" from="id" to="resourceid" link-type="inner" alias="L0">
         <filter type="and">
           <condition attribute="targetid" operator="eq-userid"/>
         </filter>
@@ -57,6 +57,8 @@
       <Name>Default</Name>
       <Width>240</Width>
       <Height>72</Height>
+      <SerializedBackground>surface</SerializedBackground>
+      <SerializedSelectedBackground>primaryContainer</SerializedSelectedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="varTitle">
           <StyleName>primary</StyleName>

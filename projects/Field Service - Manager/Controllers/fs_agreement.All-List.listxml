@@ -29,6 +29,8 @@
       <Name>Default</Name>
       <Width>320</Width>
       <Height>86</Height>
+      <SerializedBackground>surface</SerializedBackground>
+      <SerializedSelectedBackground>primaryContainer</SerializedSelectedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="agreement_number">
           <StyleName>primary_blue</StyleName>

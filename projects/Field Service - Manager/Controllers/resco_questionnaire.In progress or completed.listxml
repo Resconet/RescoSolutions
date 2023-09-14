@@ -53,6 +53,8 @@
       <Name>Default</Name>
       <Width>320</Width>
       <Height>110</Height>
+      <SerializedBackground>surface</SerializedBackground>
+      <SerializedSelectedBackground>primaryContainer</SerializedSelectedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="#Name">
           <StyleName>0102 h2</StyleName>
