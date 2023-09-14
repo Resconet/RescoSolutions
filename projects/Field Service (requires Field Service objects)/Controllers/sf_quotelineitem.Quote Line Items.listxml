@@ -1,0 +1,80 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>sf_quotelineitem</EntityName>
+    <CamelCase>sf_quotelineitem</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Quote Line Items</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>pricebookentryid</OrderBy>
+  <SerializedBindings>
+    <string>discount</string>
+    <string>id</string>
+    <string>pricebookentryid</string>
+    <string>quantity</string>
+    <string>unitprice</string>
+    <string>totalprice</string>
+    <string>pricebookentryid.sf_pricebookentry.productcode</string>
+    <string>pricebookentryid.sf_pricebookentry.name</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <TemplateSelectorRule>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;&lt;branch e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="true"&gt;&lt;var&gt;Entity.discount&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.discount&lt;/var&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>40</Height>
+      <Buttons>Delete</Buttons>
+      <SerializedChildren>
+        <CellTemplate SchemaName="quantity">
+          <StyleName>gray</StyleName>
+          <Bounds>38,25,35,13</Bounds>
+          <CellKind>3</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="discount">
+          <StyleName>r_gray_percentage</StyleName>
+          <Bounds>125,25,50,13</Bounds>
+          <CellKind>3</CellKind>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="totalprice">
+          <StyleName>r_gray_currency</StyleName>
+          <Bounds>176,25,59,13</Bounds>
+          <CellKind>3</CellKind>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="unitprice">
+          <StyleName>r_gray_currency</StyleName>
+          <Bounds>74,25,51,13</Bounds>
+          <CellKind>3</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="pricebookentryid">
+          <StyleName>primary</StyleName>
+          <Bounds>38,2,137,22</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>PricebookEntryFileImage</StyleName>
+          <Bounds>0,2,36,36</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="pricebookentryid.sf_pricebookentry.productcode">
+          <StyleName>r_gray_currency</StyleName>
+          <Bounds>177,7,59,13</Bounds>
+          <CellKind>3</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

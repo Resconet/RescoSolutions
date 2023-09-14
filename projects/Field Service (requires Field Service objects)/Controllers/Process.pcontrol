@@ -1,0 +1,8 @@
+﻿<ProcessControl>
+  <ProcessName>Process</ProcessName>
+  <Entity>sf_serviceappointment</Entity>
+  <Field>status</Field>
+  <ProcessSteps>None;undefined;undefined;undefined;false;false|Scheduled;undefined;undefined;undefined;false;false|Dispatched;undefined;undefined;undefined;false;false|In Progress;undefined;undefined;undefined;false;false|Completed;undefined;undefined;undefined;true;false|Canceled;undefined;undefined;undefined;true;false|Cannot Complete;undefined;undefined;undefined;true;false|</ProcessSteps>
+  <FinalStepLabel>Complete</FinalStepLabel>
+  <FinalStepDescription>Complete</FinalStepDescription>
+</ProcessControl>

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>sf_lead</EntityName>
+    <CamelCase>sf_lead</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>My Open Leads</Name>
+  <Kind>List</Kind>
+  <IsDefault>true</IsDefault>
+  <AutoWideWidth>0</AutoWideWidth>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="sf_lead">
+      <filter type="and">
+        <condition attribute="ownerid2" operator="eq-userid" />
+        <condition attribute="status" operator="not-like" value="Closed%" />
+      </filter>
+    </entity>
+  </Fetch>
+  <Search>
+    <attribute schema="city" method="Contains" />
+    <attribute schema="company" method="Contains" />
+    <attribute schema="country" method="Contains" />
+    <attribute schema="industry" method="Contains" />
+    <attribute schema="name" method="Contains" />
+    <attribute schema="rating" method="Contains" />
+    <attribute schema="status" method="Contains" />
+    <attribute schema="title" method="Contains" />
+  </Search>
+  <OrderBy>firstname;lastname</OrderBy>
+  <MultiSelectCommands>Favorite|||Delete|||Export|||EmailLink||</MultiSelectCommands>
+  <SerializedBindings>
+    <string>company</string>
+    <string>email</string>
+    <string>firstname</string>
+    <string>name</string>
+    <string>id</string>
+    <string>industry</string>
+    <string>lastname</string>
+    <string>id2</string>
+    <string>mobilephone</string>
+    <string>phone</string>
+    <string>rating</string>
+    <string>status</string>
+  </SerializedBindings>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>40</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <Buttons>Call;Email;Favorite;Delete;EmailLink;SMS</Buttons>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>37,2,193,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="status">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray</StyleName>
+          <Bounds>37,26,99,11</Bounds>
+          <CellKind>3</CellKind>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="industry">
+          <IsConstant>false</IsConstant>
+          <StyleName>r_gray</StyleName>
+          <Bounds>136,26,94,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="company">
+          <IsConstant>false</IsConstant>
+          <StyleName>r_gray</StyleName>
+          <Bounds>135,12,95,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>10</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="rating">
+          <IsConstant>false</IsConstant>
+          <StyleName>Lead Icon Style</StyleName>
+          <Bounds>1,2,34,35</Bounds>
+          <CellKind>6</CellKind>
+          <IsFormatted>false</IsFormatted>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <TemplateSelectorRule>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.name&lt;/var&gt;&lt;arg&gt;var:Entity.firstname&lt;/arg&gt;&lt;arg&gt;String: &lt;/arg&gt;&lt;arg&gt;var:Entity.lastname&lt;/arg&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;/function&gt;&lt;branch e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.rating&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.rating&lt;/var&gt;&lt;arg&gt;var:Entity.rating&lt;/arg&gt;&lt;arg&gt;var:Entity.rating&lt;/arg&gt;&lt;func&gt;Concat&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <CustomProperties />
+  <SerializedChildren />
+  <Height>0</Height>
+  <IFrameProvidesDS>false</IFrameProvidesDS>
+</EntityList>

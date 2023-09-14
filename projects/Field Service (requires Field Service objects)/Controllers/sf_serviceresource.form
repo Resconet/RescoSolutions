@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>sf_serviceresource</EntityName>
+  <CamelCase>sf_serviceresource</CamelCase>
+  <ClassBinding />
+  <SerializedChildren />
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" flexi="0" flexiHeader="1" flexiMaxLines="0">
+      <Name>sf_serviceresource</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="name" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="relatedrecordid" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="locationid" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="resourcetype" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="iscapacitybased" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="description" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="isactive" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="isoptimizationcapable" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" flexi="0" flexiHeader="1" flexiMaxLines="0">
+      <Name>Address</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="lastknownlatitude" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="lastknownlongitude" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="lastknownlocationdate" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeight="200px" flexiHeader="1" flexiMaxLines="0" FlipMode="0">
+      <Name>ResourceAssignments</Name>
+      <CustomName>ResourceAssignments</CustomName>
+      <LogicalName>sf_assignedresource.serviceresourceid</LogicalName>
+      <Views>sf_assignedresource.Assigned Resources</Views>
+      <Binding SchemaName="sf_assignedresource.serviceresourceid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeight="468px" flexiHeader="1" flexiMaxLines="0" FlipMode="99">
+      <Name>Resource Absences List</Name>
+      <LogicalName>sf_resourceabsence.resourceid</LogicalName>
+      <Views>sf_resourceabsence.*:sf_resourceabsence.@My Absences</Views>
+      <LookupViews>sf_resourceabsence.*:sf_resourceabsence.@My Absences</LookupViews>
+      <Binding SchemaName="sf_resourceabsence.resourceid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeight="200px" flexiHeader="1" flexiMaxLines="0" FlipMode="0">
+      <Name>Service Resource Skills List</Name>
+      <LogicalName>sf_serviceresourceskill.serviceresourceid</LogicalName>
+      <Binding SchemaName="sf_serviceresourceskill.serviceresourceid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeight="200px" flexiHeader="1" flexiMaxLines="0" FlipMode="0">
+      <Name>Service Territory Members List</Name>
+      <LogicalName>sf_serviceterritorymember.serviceresourceid</LogicalName>
+      <Binding SchemaName="sf_serviceterritorymember.serviceresourceid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="MapTab" flexi="1" flexiHeight="200px" flexiHeader="1" flexiMaxLines="0">
+      <Name>Map</Name>
+      <CoordinatesBinding>lastknownlatitude;lastknownlongitude</CoordinatesBinding>
+    </FormTab>
+  </SerializedChildrenV2>
+  <Navigation flexi="0" flexiHeader="1" flexiMaxLines="0">
+    <Name>Navigation</Name>
+    <SerializedChildren />
+  </Navigation>
+  <WorkflowLoad>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;definition e="false"&gt;&lt;var&gt;varNow&lt;/var&gt;&lt;func&gt;SetNow&lt;/func&gt;&lt;type&gt;DateTime&lt;/type&gt;&lt;/definition&gt;&lt;definition e="false"&gt;&lt;var&gt;varNowMinus5mins&lt;/var&gt;&lt;arg&gt;var:varNow&lt;/arg&gt;&lt;arg&gt;Integer:-5&lt;/arg&gt;&lt;func&gt;AddMinutes&lt;/func&gt;&lt;type&gt;DateTime&lt;/type&gt;&lt;/definition&gt;&lt;branch info="set current GPS if this is resource of current user and at least 5 mins old" e="true"&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="true"&gt;&lt;var&gt;Entity.lastknownlocationdate&lt;/var&gt;&lt;arg&gt;var:varNowMinus5mins&lt;/arg&gt;&lt;op&gt;LessThan&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.relatedrecordid&lt;/var&gt;&lt;arg&gt;var:Configuration.systemuserid&lt;/arg&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action e="true"&gt;&lt;position e="true"&gt;&lt;var&gt;Entity.lastknownlatitude;Entity.lastknownlongitude&lt;/var&gt;&lt;arg /&gt;&lt;arg /&gt;&lt;func&gt;SetGpsPosition&lt;/func&gt;&lt;/position&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.lastknownlocationdate&lt;/var&gt;&lt;arg&gt;var:varNow&lt;/arg&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowLoad>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables /&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SharedVariableNames />
+  <PrimaryCommands>Favorite|||Delete|||EmailLink||</PrimaryCommands>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedContactInfo />
+</EntityForm>

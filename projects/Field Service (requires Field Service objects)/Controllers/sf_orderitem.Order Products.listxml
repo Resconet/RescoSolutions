@@ -1,0 +1,75 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>sf_orderitem</EntityName>
+    <CamelCase>sf_orderitem</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding>
+      <SerializedClassBinding name="#TotalPriceLabel" label="TotalPriceLabel" type="String"/>
+    </ClassBinding>
+  </Attributes>
+  <Name>Order Products</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>pricebookentryid</OrderBy>
+  <SerializedBindings>
+    <string>id</string>
+    <string>pricebookentryid</string>
+    <string>quantity</string>
+    <string>unitprice</string>
+    <string>pricebookentryid.sf_pricebookentry.productcode</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <TemplateSelectorRule>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;&lt;definition e="false"&gt;&lt;var&gt;TotalAmount&lt;/var&gt;&lt;arg&gt;var:Entity.quantity&lt;/arg&gt;&lt;arg&gt;var:Entity.unitprice&lt;/arg&gt;&lt;func&gt;Multiplication&lt;/func&gt;&lt;type&gt;Decimal&lt;/type&gt;&lt;/definition&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>40</Height>
+      <Buttons>Delete</Buttons>
+      <SerializedChildren>
+        <CellTemplate SchemaName="pricebookentryid">
+          <StyleName>primary</StyleName>
+          <Bounds>40,2,139,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="quantity">
+          <StyleName>gray</StyleName>
+          <Bounds>40,27,52,11</Bounds>
+          <CellKind>3</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="pricebookentryid.sf_pricebookentry.productcode">
+          <StyleName>r_gray</StyleName>
+          <Bounds>180,6,57,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="unitprice">
+          <StyleName>r_gray_currency</StyleName>
+          <Bounds>93,27,84,11</Bounds>
+          <CellKind>3</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#TotalPriceLabel">
+          <StyleName>r_gray</StyleName>
+          <Bounds>177,27,59,11</Bounds>
+          <CellKind>3</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>PricebookEntryFileImage</StyleName>
+          <Bounds>2,2,36,36</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties>
+    <SerializedClassBinding name="TotalAmount" label="TotalAmount" type="Decimal"/>
+  </CustomProperties>
+</EntityList>

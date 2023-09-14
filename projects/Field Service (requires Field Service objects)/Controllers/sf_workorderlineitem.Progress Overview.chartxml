@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityChart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>sf_workorderlineitem</EntityName>
+    <CamelCase>sf_workorderlineitem</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>Progress Overview</Name>
+  <IsHidden>false</IsHidden>
+  <Kind>Gauge</Kind>
+  <IsDefault>false</IsDefault>
+  <LabelStyle>Outside</LabelStyle>
+  <PieDonutRatio>50</PieDonutRatio>
+  <BarStyle>Default</BarStyle>
+  <AreaStyle>Default</AreaStyle>
+  <DrillDownEnabled>true</DrillDownEnabled>
+  <Series>
+    <Series>
+      <Attribute>status</Attribute>
+      <Color>#FF1F77B4</Color>
+    </Series>
+  </Series>
+  <Axis>status</Axis>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+    <ValueType>Constant</ValueType>
+  </MinValue>
+  <MaxValue>
+    <Attribute>workorderid.sf_workorder.lineitemcount</Attribute>
+    <Aggregation>Maximum</Aggregation>
+    <Color>#FF0000FF</Color>
+    <NumericValue>4</NumericValue>
+  </MaxValue>
+  <TargetValue>
+    <Attribute>workorderid.sf_workorder.lineitemcount</Attribute>
+    <Aggregation>Maximum</Aggregation>
+    <Color>#FF0000FF</Color>
+    <NumericValue>2</NumericValue>
+  </TargetValue>
+  <DateGrouping>None</DateGrouping>
+  <Fetch version="1.0">
+    <entity name="sf_workorderlineitem">
+      <filter type="and">
+        <condition attribute="status" operator="eq" value="Completed" />
+        <condition attribute="status" operator="eq" value="Closed" />
+      </filter>
+    </entity>
+  </Fetch>
+  <LimitCount />
+</EntityChart>

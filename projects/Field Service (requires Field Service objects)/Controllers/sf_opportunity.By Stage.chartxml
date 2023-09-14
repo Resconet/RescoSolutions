@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityChart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>sf_opportunity</EntityName>
+    <CamelCase>sf_opportunity</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>By Stage</Name>
+  <IsHidden>false</IsHidden>
+  <Kind>Pie</Kind>
+  <IsDefault>false</IsDefault>
+  <LabelStyle>Inside</LabelStyle>
+  <PieDonutRatio>50</PieDonutRatio>
+  <BarStyle>Default</BarStyle>
+  <AreaStyle>Default</AreaStyle>
+  <DrillDownFields>accountid;amount;amount_base;campaignid;closedate;isclosed;createdon;currentgenerators__c;isdeleted;deliveryinstallationstatus__c;description;expectedrevenue;expectedrevenue_base;fiscal;fiscalquarter;fiscalyear;forecastcategory;forecastcategoryname;hasopportunitylineitem;hasopenactivity;hasoverduetask;leadsource;maincompetitors__c;modifiedon;name;nextstep;id2;type;ordernumber__c;ownerid2;isprivate;probability;totalopportunityquantity;stagename;trackingnumber__c;iswon</DrillDownFields>
+  <DrillDownEnabled>true</DrillDownEnabled>
+  <Series>
+    <Series>
+      <Attribute>stagename</Attribute>
+      <Color>#FF0000FF</Color>
+    </Series>
+  </Series>
+  <Axis>stagename</Axis>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#FF0000FF</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#FF0000FF</Color>
+  </TargetValue>
+  <DateGrouping>None</DateGrouping>
+  <Fetch version="1.0">
+    <entity name="sf_opportunity">
+      <filter type="and">
+        <condition attribute="ownerid2" operator="eq-userid" />
+      </filter>
+    </entity>
+  </Fetch>
+  <LimitCount>3</LimitCount>
+</EntityChart>
