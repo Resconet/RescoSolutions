@@ -481,8 +481,11 @@
         </Property>
       </Properties>
     </Style>
-    <Style Name="Normal" Type="DetailItem" ComponentType="0">
+    <Style Name="Normal" Type="DetailItem">
       <Properties>
+        <Property Name="LabelFontWeight" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
         <Property Name="LabelAutoHeight" Type="System.Boolean">
           <Value>True</Value>
         </Property>
@@ -501,26 +504,32 @@
         <Property Name="EditorBorderWidth" Type="System.Int32">
           <Value>1</Value>
         </Property>
+        <Property Name="EditorBorderColor" Type="System.Int32">
+          <Value>1493172224</Value>
+        </Property>
+        <Property Name="EditorBackgroundColor" Type="System.Int32">
+          <Value>-2</Value>
+        </Property>
         <Property Name="RelativeLabelFontSize" Type="System.Int32">
           <Value>-2</Value>
         </Property>
-        <Property Name="LabelFontWeight" Type="System.Int32">
-          <Value>0</Value>
-        </Property>
-        <Property Name="EditorDisabledColor" Type="Color">
-          <Value>onSurfaceVariant</Value>
-        </Property>
       </Properties>
     </Style>
-    <Style Name="Top Label" Style="Normal" Type="DetailItem" ComponentType="0">
+    <Style Name="Top Label" Style="Normal" Type="DetailItem">
       <Properties>
         <Property Name="LabelPosition" Type="System.Int32">
           <Value>2</Value>
         </Property>
       </Properties>
     </Style>
-    <Style Name="Normal Long" Style="Normal" Type="DetailItem" ComponentType="0">
+    <Style Name="Normal Long" Style="Normal" Type="DetailItem">
       <Properties>
+        <Property Name="WrapText" Type="System.Boolean">
+          <Value>True</Value>
+        </Property>
+        <Property Name="LabelAutoHeight" Type="System.Boolean">
+          <Value>True</Value>
+        </Property>
         <Property Name="LabelHorizontalAlignment" Type="System.Int32">
           <Value>2</Value>
         </Property>
@@ -529,7 +538,7 @@
         </Property>
       </Properties>
     </Style>
-    <Style Name="MultiLine" Type="DetailItem" ComponentType="0">
+    <Style Name="MultiLine" Type="DetailItem">
       <Properties>
         <Property Name="IsMultiLine" Type="System.Boolean">
           <Value>True</Value>
@@ -540,21 +549,27 @@
         <Property Name="LabelHorizontalAlignment" Type="System.Int32">
           <Value>1</Value>
         </Property>
+        <Property Name="LabelFontWeight" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
         <Property Name="EditorCornerRadius" Type="System.Int32">
           <Value>8</Value>
         </Property>
         <Property Name="EditorBorderWidth" Type="System.Int32">
           <Value>1</Value>
         </Property>
+        <Property Name="EditorBorderColor" Type="System.Int32">
+          <Value>1493172224</Value>
+        </Property>
+        <Property Name="EditorBackgroundColor" Type="System.Int32">
+          <Value>-2</Value>
+        </Property>
         <Property Name="RelativeLabelFontSize" Type="System.Int32">
           <Value>-2</Value>
         </Property>
-        <Property Name="LabelFontWeight" Type="System.Int32">
-          <Value>0</Value>
-        </Property>
       </Properties>
     </Style>
-    <Style Name="FormEntityImage" Type="DetailItem" ComponentType="0">
+    <Style Name="FormEntityImage" Type="DetailItem">
       <Properties>
         <Property Name="ImageQuery" Type="System.String">
           <Value>entityimage</Value>
@@ -565,12 +580,9 @@
         <Property Name="FontSize" Type="System.Single">
           <Value>10</Value>
         </Property>
-        <Property Name="EditorSelectedForegroundColor" Type="Color">
-          <Value>primary</Value>
-        </Property>
       </Properties>
     </Style>
-    <Style Name="FormNoteImage" Type="DetailItem" ComponentType="0">
+    <Style Name="FormNoteImage" Type="DetailItem">
       <Properties>
         <Property Name="ImageQuery" Type="System.String">
           <Value>sf_attachment;body;parentid;{id};name;photo.jpg</Value>
@@ -592,14 +604,14 @@
         </Property>
       </Properties>
     </Style>
-    <Style Name="FormPricebookEntryImage" Style="FormNoteImage" Type="DetailItem" ComponentType="0">
+    <Style Name="FormPricebookEntryImage" Style="FormNoteImage" Type="DetailItem">
       <Properties>
         <Property Name="ImageQuery" Type="System.String">
           <Value>sf_attachment;body;parentid;{product2id};name;photo.jpg</Value>
         </Property>
       </Properties>
     </Style>
-    <Style Name="Button" Type="DetailItem" ComponentType="0">
+    <Style Name="Button" Type="DetailItem">
       <Properties>
         <Property Name="EditorHorizontalAlignment" Type="System.Int32">
           <Value>2</Value>
@@ -610,6 +622,9 @@
         <Property Name="LabelHorizontalAlignment" Type="System.Int32">
           <Value>2</Value>
         </Property>
+        <Property Name="EditorDisabledColor" Type="System.Int32">
+          <Value>-1</Value>
+        </Property>
         <Property Name="LabelPosition" Type="System.Int32">
           <Value>4</Value>
         </Property>
@@ -619,11 +634,14 @@
         <Property Name="EditorBorderWidth" Type="System.Int32">
           <Value>1</Value>
         </Property>
-        <Property Name="EditorForegroundColor" Type="Color">
-          <Value>onPrimary</Value>
+        <Property Name="EditorBorderColor" Type="System.Int32">
+          <Value>1493172224</Value>
         </Property>
-        <Property Name="EditorBackgroundColor" Type="Color">
-          <Value>primary</Value>
+        <Property Name="EditorBackgroundColor" Type="System.Int32">
+          <Value>-16748334</Value>
+        </Property>
+        <Property Name="EditorForegroundColor" Type="System.Int32">
+          <Value>-2</Value>
         </Property>
       </Properties>
     </Style>
@@ -634,7 +652,7 @@
         </Property>
       </Properties>
     </Style>
-    <Style Name="FormPricebookEntryFileImage" Style="FormNoteImage" Type="DetailItem" ComponentType="0">
+    <Style Name="FormPricebookEntryFileImage" Style="FormNoteImage" Type="DetailItem">
       <Properties>
         <Property Name="ImageQuery" Type="System.String">
           <Value>sf_contentversion;versiondata;linkedentityid;{product2id};islatest;1;title;photo.jpg</Value>
@@ -648,7 +666,7 @@
         </Property>
       </Properties>
     </Style>
-    <Style Name="Table" Style="Normal" Type="DetailItem" ComponentType="0">
+    <Style Name="Table" Style="Normal" Type="DetailItem">
       <Properties>
         <Property Name="ComboBoxImageAlignment" Type="System.Int32">
           <Value>4</Value>
@@ -661,7 +679,7 @@
         </Property>
       </Properties>
     </Style>
-    <Style Name="Table Image Content" Style="FormNoteImage" Type="DetailItem" ComponentType="0">
+    <Style Name="Table Image Content" Style="FormNoteImage" Type="DetailItem">
       <Properties>
         <Property Name="ImageQuery" Type="System.String">
           <Value>sf_contentversion;versiondata;linkedentityid;{id};islatest;1</Value>
@@ -971,52 +989,6 @@
         </Property>
         <Property Name="VerticalAlignment" Type="System.Int32">
           <Value>2</Value>
-        </Property>
-      </Properties>
-    </Style>
-    <Style Name="Button" Style="Normal" Type="DetailItem" ComponentType="7">
-      <Properties>
-        <Property Name="IsMultiLine" Type="System.Boolean">
-          <Value>False</Value>
-        </Property>
-        <Property Name="ImageQuery" Type="System.String">
-          <Value></Value>
-        </Property>
-        <Property Name="ImageBasePath" Type="System.String">
-          <Value></Value>
-        </Property>
-        <Property Name="ComboBoxImageAlignment" Type="System.Int32">
-          <Value>0</Value>
-        </Property>
-        <Property Name="SegmentedButtonsLayout" Type="System.Int32">
-          <Value>0</Value>
-        </Property>
-        <Property Name="RadioButtonMaxCount" Type="System.Int32">
-          <Value>0</Value>
-        </Property>
-        <Property Name="WrapText" Type="System.Boolean">
-          <Value>False</Value>
-        </Property>
-        <Property Name="MinuteIncrement" Type="System.Int32">
-          <Value>0</Value>
-        </Property>
-        <Property Name="LinkColor" Type="Color">
-          <Value>0</Value>
-        </Property>
-        <Property Name="ButtonColor" Type="Color">
-          <Value>0</Value>
-        </Property>
-        <Property Name="BindingTrigger" Type="System.Int32">
-          <Value>0</Value>
-        </Property>
-        <Property Name="EditorSelectedBackgroundColor" Type="Color">
-          <Value>0</Value>
-        </Property>
-        <Property Name="EditorSelectedForegroundColor" Type="Color">
-          <Value>0</Value>
-        </Property>
-        <Property Name="EditorForegroundColor" Type="Color">
-          <Value>onPrimary</Value>
         </Property>
       </Properties>
     </Style>
