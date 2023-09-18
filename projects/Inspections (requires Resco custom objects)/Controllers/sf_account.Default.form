@@ -1,4 +1,4 @@
-﻿<EntityForm xsi:dummy="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" flexi="0" fleximode="0" fullscreen="1" resize="0" version="2">
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="0" fullscreen="1" resize="0" version="2">
   <IsContactForm>false</IsContactForm>
   <EntityName>sf_account</EntityName>
   <CamelCase>sf_account</CamelCase>
