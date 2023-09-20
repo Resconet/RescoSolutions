@@ -3,6 +3,8 @@
   <EntityName>account</EntityName>
   <CamelCase>account</CamelCase>
   <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
+  <CacheMode>-1</CacheMode>
   <PrimaryCommands></PrimaryCommands>
   <SharedVariableNames/>
   <ClassBinding/>
