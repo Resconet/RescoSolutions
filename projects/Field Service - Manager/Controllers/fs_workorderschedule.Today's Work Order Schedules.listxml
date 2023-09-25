@@ -3,7 +3,7 @@
     <EntityName>fs_workorderschedule</EntityName>
     <CamelCase>fs_workorderschedule</CamelCase>
     <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
-    <ClassBinding />
+    <ClassBinding/>
   </Attributes>
   <Name>Today's Work Order Schedules</Name>
   <Kind>DashboardList</Kind>
@@ -36,11 +36,11 @@
   <Fetch version="1.0">
     <entity name="fs_workorderschedule">
       <filter type="and">
-        <condition operator="today" attribute="scheduledstart" />
+        <condition attribute="scheduledstart" operator="today"/>
       </filter>
-      <link-entity name="fs_resource" link-type="inner" to="resourceid" from="id" alias="L0">
+      <link-entity name="fs_resource" from="id" to="resourceid" link-type="inner" alias="L0">
         <filter type="and">
-          <condition operator="eq-userid" attribute="targetid" />
+          <condition attribute="targetid" operator="eq-userid"/>
         </filter>
       </link-entity>
     </entity>
@@ -52,6 +52,8 @@
       <Name>Default</Name>
       <Width>240</Width>
       <Height>40</Height>
+      <SerializedBackground>surface</SerializedBackground>
+      <SerializedSelectedBackground>primaryContainer</SerializedSelectedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="workorderid.fs_workorder.customerid">
           <StyleName>primary</StyleName>
@@ -80,5 +82,5 @@
       </SerializedChildren>
     </RowTemplate>
   </SerializedTemplates>
-  <CustomProperties />
+  <CustomProperties/>
 </EntityList>

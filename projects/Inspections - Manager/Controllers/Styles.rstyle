@@ -223,14 +223,17 @@
         </Property>
       </Properties>
     </Style>
-    <Style Name="Normal" Type="DetailItem">
+    <Style Name="Normal" Type="DetailItem" ComponentType="0">
       <Properties>
         <Property Name="LabelFontWeight" Type="System.Int32">
-          <Value>1</Value>
+          <Value>0</Value>
+        </Property>
+        <Property Name="LinkColor" Type="Color">
+          <Value>primary</Value>
         </Property>
       </Properties>
     </Style>
-    <Style Name="CrmDetailItem" Type="DetailItem">
+    <Style Name="CrmDetailItem" Type="DetailItem" ComponentType="0">
       <Properties>
         <Property Name="LabelBackColor" Type="System.Int32">
           <Value>-1</Value>
@@ -267,10 +270,10 @@
         </Property>
       </Properties>
     </Style>
-    <Style Name="CrmDetailCaptionItem" Type="DetailItem">
+    <Style Name="CrmDetailCaptionItem" Type="DetailItem" ComponentType="0">
       <Properties/>
     </Style>
-    <Style Name="CrmListItem" Type="DetailItem">
+    <Style Name="CrmListItem" Type="DetailItem" ComponentType="0">
       <Properties>
         <Property Name="LabelBackColor" Type="System.Int32">
           <Value>-1</Value>
@@ -343,7 +346,7 @@
           <Value>-6710887</Value>
         </Property>
       </Properties>
-    </Style>    
+    </Style>
     <Style Name="Secondary Right" Style="Secondary" Type="TextCell">
       <Properties>
         <Property Name="HorizontalAlignment" Type="System.Int32">
@@ -357,12 +360,9 @@
           <Value>{0:dd-MM-yyyy}</Value>
         </Property>
       </Properties>
-    </Style>    
-    <Style Name="Button" Type="DetailItem">
+    </Style>
+    <Style Name="Button" Type="DetailItem" ComponentType="0">
       <Properties>
-        <Property Name="BackgroundColor" Type="System.Int32">
-          <Value>-1</Value>
-        </Property>
         <Property Name="RelativeTextFontSize" Type="System.Single">
           <Value>3</Value>
         </Property>
@@ -372,21 +372,21 @@
         <Property Name="EditorFontWeight" Type="System.Int32">
           <Value>1</Value>
         </Property>
-        <Property Name="EditorForegroundColor" Type="System.Int32">
-          <Value>-1</Value>
-        </Property>
         <Property Name="LabelHorizontalAlignment" Type="System.Int32">
           <Value>2</Value>
-        </Property>
-        <Property Name="EditorDisabledColor" Type="System.Int32">
-          <Value>-1</Value>
         </Property>
         <Property Name="LabelPosition" Type="System.Int32">
           <Value>4</Value>
         </Property>
+        <Property Name="EditorForegroundColor" Type="Color">
+          <Value>onPrimary</Value>
+        </Property>
+        <Property Name="EditorBackgroundColor" Type="Color">
+          <Value>primary</Value>
+        </Property>
       </Properties>
     </Style>
-    <Style Name="MultiLine" Type="DetailItem">
+    <Style Name="MultiLine" Type="DetailItem" ComponentType="0">
       <Properties>
         <Property Name="IsMultiLine" Type="System.Boolean">
           <Value>True</Value>
@@ -398,7 +398,7 @@
           <Value>3</Value>
         </Property>
         <Property Name="LabelFontWeight" Type="System.Int32">
-          <Value>1</Value>
+          <Value>0</Value>
         </Property>
       </Properties>
     </Style>
@@ -428,7 +428,7 @@
         </Property>
       </Properties>
     </Style>
-    <Style Name="FormEntityImage" Type="DetailItem">
+    <Style Name="FormEntityImage" Type="DetailItem" ComponentType="0">
       <Properties>
         <Property Name="ImageQuery" Type="System.String">
           <Value>entityimage</Value>
@@ -441,7 +441,7 @@
         </Property>
       </Properties>
     </Style>
-    <Style Name="FormNoteImage" Type="DetailItem">
+    <Style Name="FormNoteImage" Type="DetailItem" ComponentType="0">
       <Properties>
         <Property Name="ImageQuery" Type="System.String">
           <Value>annotation;documentbody;subject;FormImage;objectid;{id}</Value>
@@ -738,11 +738,8 @@
         </Property>
       </Properties>
     </Style>
-    <Style Name="SectionHeader" Type="DetailItem">
+    <Style Name="SectionHeader" Type="DetailItem" ComponentType="0">
       <Properties>
-        <Property Name="LabelForegroundColor" Type="System.Int32">
-          <Value>-16671081</Value>
-        </Property>
         <Property Name="LabelAutoHeight" Type="System.Boolean">
           <Value>True</Value>
         </Property>

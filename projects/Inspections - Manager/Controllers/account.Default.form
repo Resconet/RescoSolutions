@@ -2,6 +2,8 @@
   <IsContactForm>false</IsContactForm>
   <EntityName>account</EntityName>
   <CamelCase>account</CamelCase>
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
+  <CacheMode>-1</CacheMode>
   <PrimaryCommands>!defcmd</PrimaryCommands>
   <ClassBinding/>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>

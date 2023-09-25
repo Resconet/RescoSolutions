@@ -18,9 +18,7 @@
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
   <Fetch version="1.0">
-    <entity name="invoice">
-      <filter type="and"/>
-    </entity>
+    <entity name="invoice"/>
   </Fetch>
   <SerializedTemplates>
     <RowTemplate>
@@ -29,6 +27,8 @@
       <Name>Default</Name>
       <Width>320</Width>
       <Height>60</Height>
+      <SerializedBackground>surface</SerializedBackground>
+      <SerializedSelectedBackground>primaryContainer</SerializedSelectedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary_blue</StyleName>

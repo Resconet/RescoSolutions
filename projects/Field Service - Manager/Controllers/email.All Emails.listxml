@@ -1,34 +1,34 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<EntityList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" UseSyncFilter="true">
+﻿<EntityList UseSyncFilter="true">
   <Attributes>
     <EntityName>email</EntityName>
     <CamelCase>Email</CamelCase>
-    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
     <WrapperClass>MobileCrm.Model.ActivityListItem</WrapperClass>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
     <ClassBinding>
-      <SerializedClassBinding name="#DateLabel" label="DateLabel" type="String" />
-      <SerializedClassBinding name="#End" label="End" type="String" />
-      <SerializedClassBinding name="#Icon" label="Icon" type="String" />
-      <SerializedClassBinding name="#IsDirty" label="IsDirty" type="String" />
-      <SerializedClassBinding name="#Start" label="Start" type="String" />
-      <SerializedClassBinding name="#MailContacts" label="Contacts" type="String" />
-      <SerializedClassBinding name="#MailText" label="PreviewText" type="String" />
-      <SerializedClassBinding name="#SubjectRead" label="SubjectRead" type="String" />
-      <SerializedClassBinding name="#SubjectUnread" label="SubjectUnread" type="String" />
-      <SerializedClassBinding name="#ImageUnread" label="ImageUnread" type="String" />
-      <SerializedClassBinding name="#IsRead" label="IsRead" type="Boolean" />
-      <SerializedClassBinding name="#Summary" label="Summary" type="String" />
-      <SerializedClassBinding name="#ShortDate" label="ShortDate" type="String" />
-      <SerializedClassBinding name="#ShortLabel" label="ShortLabel" type="String" />
+      <SerializedClassBinding name="#DateLabel" label="DateLabel" type="String"/>
+      <SerializedClassBinding name="#End" label="End" type="String"/>
+      <SerializedClassBinding name="#Icon" label="Icon" type="String"/>
+      <SerializedClassBinding name="#IsDirty" label="IsDirty" type="String"/>
+      <SerializedClassBinding name="#Start" label="Start" type="String"/>
+      <SerializedClassBinding name="#MailContacts" label="Contacts" type="String"/>
+      <SerializedClassBinding name="#MailText" label="PreviewText" type="String"/>
+      <SerializedClassBinding name="#SubjectRead" label="SubjectRead" type="String"/>
+      <SerializedClassBinding name="#SubjectUnread" label="SubjectUnread" type="String"/>
+      <SerializedClassBinding name="#ImageUnread" label="ImageUnread" type="String"/>
+      <SerializedClassBinding name="#IsRead" label="IsRead" type="Boolean"/>
+      <SerializedClassBinding name="#Summary" label="Summary" type="String"/>
+      <SerializedClassBinding name="#ShortDate" label="ShortDate" type="String"/>
+      <SerializedClassBinding name="#ShortLabel" label="ShortLabel" type="String"/>
+      <SerializedClassBinding name="#EmailFlags" label="EmailFlags" type="Integer"/>
+      <SerializedClassBinding name="#HasAttachments" label="HasAttachments" type="Boolean"/>
+      <SerializedClassBinding name="#IsTracked" label="IsTracked" type="Boolean"/>
+      <SerializedClassBinding name="#AttachmentImage" label="AttachmentImage" type="String"/>
+      <SerializedClassBinding name="#StatusImage" label="StatusImage" type="String"/>
     </ClassBinding>
   </Attributes>
-  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
   <Name>All Emails</Name>
   <Kind>List</Kind>
-  <IsDefault>false</IsDefault>
-  <Fetch version="1.0">
-    <entity name="email" />
-  </Fetch>
+  <AutoWideWidth>0</AutoWideWidth>
   <OrderBy>!createdon</OrderBy>
   <SerializedBindings>
     <string>statecode</string>
@@ -42,6 +42,10 @@
     <string>statuscode</string>
     <string>name</string>
   </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="email"/>
+  </Fetch>
   <SerializedTemplates>
     <RowTemplate>
       <DesignWidth>240</DesignWidth>
@@ -49,25 +53,22 @@
       <Name>Default</Name>
       <Width>240</Width>
       <Height>40</Height>
-      <SerializedBackground>0</SerializedBackground>
-      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <SerializedBackground>surface</SerializedBackground>
+      <SerializedSelectedBackground>primaryContainer</SerializedSelectedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
-          <IsConstant>false</IsConstant>
           <StyleName>primary</StyleName>
           <Bounds>8,2,227,24</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="from">
-          <IsConstant>false</IsConstant>
           <StyleName>gray</StyleName>
           <Bounds>8,26,159,11</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="createdon">
-          <IsConstant>false</IsConstant>
           <StyleName>r_gray</StyleName>
           <Bounds>167,26,68,11</Bounds>
           <CellKind>0</CellKind>
@@ -76,7 +77,5 @@
       </SerializedChildren>
     </RowTemplate>
   </SerializedTemplates>
-  <CustomProperties />
-  <SerializedChildren />
-  <Height>40</Height>
+  <CustomProperties/>
 </EntityList>
