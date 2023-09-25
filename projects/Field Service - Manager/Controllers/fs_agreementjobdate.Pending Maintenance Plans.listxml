@@ -36,7 +36,8 @@
       <Name>Processed</Name>
       <Width>320</Width>
       <Height>110</Height>
-      <SerializedBackground>-592652</SerializedBackground>
+      <SerializedBackground>surface</SerializedBackground>
+      <SerializedSelectedBackground>primaryContainer</SerializedSelectedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>Primary</StyleName>

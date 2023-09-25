@@ -32,6 +32,8 @@
       <Width>320</Width>
       <Height>36</Height>
       <Buttons>none</Buttons>
+      <SerializedBackground>surface</SerializedBackground>
+      <SerializedSelectedBackground>primaryContainer</SerializedSelectedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary</StyleName>

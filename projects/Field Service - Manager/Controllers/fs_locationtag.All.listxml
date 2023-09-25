@@ -27,6 +27,8 @@
       <Name>Asset</Name>
       <Width>320</Width>
       <Height>48</Height>
+      <SerializedBackground>surface</SerializedBackground>
+      <SerializedSelectedBackground>primaryContainer</SerializedSelectedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="tagid.fs_asset.name">
           <StyleName>primary</StyleName>

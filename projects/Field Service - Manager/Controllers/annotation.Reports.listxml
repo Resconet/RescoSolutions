@@ -23,7 +23,7 @@
       <filter type="and">
         <condition attribute="filename" operator="like" value="%.pdf"/>
       </filter>
-      <link-entity name="resco_questionnaire" alias="L0" from="resco_questionnaireid" to="objectid" link-type="inner">
+      <link-entity name="resco_questionnaire" from="resco_questionnaireid" to="objectid" link-type="inner" alias="L0">
         <filter type="and">
           <condition attribute="resco_istemplate" operator="eq" value="0"/>
         </filter>
@@ -37,6 +37,8 @@
       <Name>Default</Name>
       <Width>320</Width>
       <Height>100</Height>
+      <SerializedBackground>surface</SerializedBackground>
+      <SerializedSelectedBackground>primaryContainer</SerializedSelectedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="subject">
           <StyleName>0102 h2</StyleName>

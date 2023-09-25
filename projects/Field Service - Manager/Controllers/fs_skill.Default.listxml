@@ -20,6 +20,8 @@
       <Width>320</Width>
       <Height>48</Height>
       <Buttons>Delete</Buttons>
+      <SerializedBackground>surface</SerializedBackground>
+      <SerializedSelectedBackground>primaryContainer</SerializedSelectedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary</StyleName>
