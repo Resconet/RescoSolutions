@@ -33,7 +33,7 @@
       <Name>Overdue</Name>
       <Width>320</Width>
       <Height>81</Height>
-      <SerializedBackground>-203548</SerializedBackground>
+      <SerializedBackground>surface</SerializedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="fs_schedulestatus">
           <StyleName>Secondatry Center</StyleName>
@@ -142,7 +142,7 @@
       <Name>Attention</Name>
       <Width>320</Width>
       <Height>81</Height>
-      <SerializedBackground>-526406</SerializedBackground>
+      <SerializedBackground>surface</SerializedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="fs_schedulestatus">
           <StyleName>Secondatry Center</StyleName>
@@ -197,7 +197,7 @@
       <Name>Unscheduled</Name>
       <Width>320</Width>
       <Height>81</Height>
-      <SerializedBackground>-985363</SerializedBackground>
+      <SerializedBackground>surface</SerializedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="fs_schedulestatus">
           <StyleName>Secondatry Center</StyleName>

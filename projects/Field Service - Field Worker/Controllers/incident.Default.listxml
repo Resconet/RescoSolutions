@@ -87,7 +87,7 @@
       <Name>Submitted</Name>
       <Width>240</Width>
       <Height>76</Height>
-      <SerializedBackground>-1247748</SerializedBackground>
+      <SerializedBackground>surface</SerializedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary_blue</StyleName>
@@ -190,7 +190,7 @@
       <Name>Submitted-High</Name>
       <Width>240</Width>
       <Height>76</Height>
-      <SerializedBackground>-1247748</SerializedBackground>
+      <SerializedBackground>surface</SerializedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary_blue</StyleName>
