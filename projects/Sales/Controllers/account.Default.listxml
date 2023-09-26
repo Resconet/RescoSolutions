@@ -19,9 +19,7 @@
   <MaxColumns>0</MaxColumns>
   <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.address&lt;/var&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;arg&gt;var:Entity.address1_line1&lt;/arg&gt;&lt;arg&gt;String:,  &lt;/arg&gt;&lt;arg&gt;var:Entity.address1_postalcode&lt;/arg&gt;&lt;/function&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
   <Fetch version="1.0">
-    <entity name="account">
-      <filter type="and"/>
-    </entity>
+    <entity name="account"/>
   </Fetch>
   <Search>
     <attribute schema="name" method="BeginsWith"/>
