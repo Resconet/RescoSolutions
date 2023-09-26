@@ -5,9 +5,6 @@
         <Property Name="FontSize" Type="System.Single">
           <Value>10.5</Value>
         </Property>
-        <Property Name="ForeColor" Type="System.Int32">
-          <Value>-13224394</Value>
-        </Property>
         <Property Name="ShowBorder" Type="System.Boolean">
           <Value>False</Value>
         </Property>
@@ -66,9 +63,6 @@
       <Properties>
         <Property Name="FontSize" Type="System.Single">
           <Value>9</Value>
-        </Property>
-        <Property Name="ForeColor" Type="System.Int32">
-          <Value>-10066330</Value>
         </Property>
         <Property Name="VerticalAlignment" Type="System.Int32">
           <Value>1</Value>
@@ -388,6 +382,9 @@
         <Property Name="EditorBackgroundColor" Type="Color">
           <Value>primary</Value>
         </Property>
+        <Property Name="EditorDisabledColor" Type="Color">
+          <Value>surfaceVariant</Value>
+        </Property>
       </Properties>
     </Style>
     <Style Name="MultiLine" Type="DetailItem" ComponentType="0">
@@ -448,7 +445,7 @@
     <Style Name="FormNoteImage" Type="DetailItem" ComponentType="0">
       <Properties>
         <Property Name="ImageQuery" Type="System.String">
-          <Value>annotation;documentbody;subject;FormImage;objectid;{id}</Value>
+          <Value>annotation;documentbody;subject;ListImage;objectid;{id}</Value>
         </Property>
         <Property Name="ForeColor" Type="System.Int32">
           <Value>-16777216</Value>
@@ -853,12 +850,6 @@
         </Property>
         <Property Name="HorizontalAlignment" Type="System.Int32">
           <Value>2</Value>
-        </Property>
-        <Property Name="ForeColor" Type="System.Int32">
-          <Value>-13948117</Value>
-        </Property>
-        <Property Name="BackColor" Type="System.Int32">
-          <Value>-1</Value>
         </Property>
       </Properties>
     </Style>
