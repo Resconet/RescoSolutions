@@ -25,7 +25,7 @@
       <Width>320</Width>
       <Height>90</Height>
       <Buttons>Call;Email;SMS</Buttons>
-      <SerializedBackground>-789517</SerializedBackground>
+      <SerializedBackground>surface</SerializedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>0101 title</StyleName>
