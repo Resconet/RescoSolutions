@@ -509,9 +509,6 @@
     </Style>
     <Style Name="0103 p grey" Style="0103 p" Type="TextCell">
       <Properties>
-        <Property Name="ForeColor" Type="System.Int32">
-          <Value>-11513776</Value>
-        </Property>
         <Property Name="FontName" Type="System.String">
           <Value>Roboto-Light</Value>
         </Property>
