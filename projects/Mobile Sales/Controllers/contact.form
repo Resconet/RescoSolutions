@@ -20,7 +20,11 @@
           <Items>
             <DetailItem SchemaName="image1" image="true" imageActions="68165646" Style="Table Image">
               <IsConstant>true</IsConstant>
-              <GridPosition>0;0;2;3</GridPosition>
+              <GridPosition>0;0;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="image2" image="true" imageActions="2" Style="FormNoteImage">
+              <IsConstant>true</IsConstant>
+              <GridPosition>0;1;2;1</GridPosition>
             </DetailItem>
             <DetailItem SchemaName="firstname" Style="Table">
               <GridPosition>0;3;1;1</GridPosition>
