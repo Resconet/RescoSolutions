@@ -1038,6 +1038,136 @@
         </index>
       </indexes>
     </entity>
+    <entity schema="resco_question">
+      <properties>
+        <property schema="createdby"/>
+        <property schema="createdon"/>
+        <property schema="modifiedon"/>
+        <property schema="ownerid"/>
+        <property schema="resco_answeredon"/>
+        <property schema="resco_answerstorage"/>
+        <property schema="resco_defaultvalue"/>
+        <property schema="resco_description"/>
+        <property schema="resco_displayformat"/>
+        <property schema="resco_enabled"/>
+        <property schema="resco_icon"/>
+        <property schema="resco_index"/>
+        <property schema="resco_isseparator"/>
+        <property schema="resco_kind"/>
+        <property schema="resco_label"/>
+        <property schema="resco_layout"/>
+        <property schema="resco_localization"/>
+        <property schema="resco_mapping"/>
+        <property schema="resco_max"/>
+        <property schema="resco_min"/>
+        <property schema="resco_name"/>
+        <property schema="resco_options"/>
+        <property schema="resco_precision"/>
+        <property schema="resco_questiongroupid"/>
+        <property schema="resco_questionid"/>
+        <property schema="resco_questionnaireid"/>
+        <property schema="resco_rawdatevalue"/>
+        <property schema="resco_rawidvalue"/>
+        <property schema="resco_rawnumericvalue"/>
+        <property schema="resco_reportingproperties"/>
+        <property schema="resco_required"/>
+        <property schema="resco_reusefromprevious"/>
+        <property schema="resco_rules"/>
+        <property schema="resco_score"/>
+        <property schema="resco_showonreport"/>
+        <property schema="resco_style"/>
+        <property schema="resco_value"/>
+        <property schema="resco_valuelabel"/>
+        <property schema="resco_visible"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+      </properties>
+    </entity>
+    <entity schema="resco_questiongroup">
+      <properties>
+        <property schema="createdby"/>
+        <property schema="createdon"/>
+        <property schema="modifiedon"/>
+        <property schema="ownerid"/>
+        <property schema="resco_complete"/>
+        <property schema="resco_description"/>
+        <property schema="resco_expanded"/>
+        <property schema="resco_index"/>
+        <property schema="resco_label"/>
+        <property schema="resco_layout"/>
+        <property schema="resco_localization"/>
+        <property schema="resco_name"/>
+        <property schema="resco_questiongroupid"/>
+        <property schema="resco_questionnaireid"/>
+        <property schema="resco_repeatconfig"/>
+        <property schema="resco_repeatindex"/>
+        <property schema="resco_reportingproperties"/>
+        <property schema="resco_rules"/>
+        <property schema="resco_templategroupid"/>
+        <property schema="resco_visible"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+      </properties>
+    </entity>
+    <entity schema="resco_questionnaire">
+      <properties>
+        <property schema="createdby"/>
+        <property schema="createdon"/>
+        <property schema="modifiedon"/>
+        <property schema="ownerid"/>
+        <property schema="resco_account"/>
+        <property schema="resco_archivedon"/>
+        <property schema="resco_autoreport"/>
+        <property schema="resco_completionstatus"/>
+        <property schema="resco_completionstatuscalculated"/>
+        <property schema="resco_description"/>
+        <property schema="resco_duration"/>
+        <property schema="resco_featureversion"/>
+        <property schema="resco_folder"/>
+        <property schema="resco_folderid"/>
+        <property schema="resco_issnippet"/>
+        <property schema="resco_istemplate"/>
+        <property schema="resco_languagecode"/>
+        <property schema="resco_layout"/>
+        <property schema="resco_localization"/>
+        <property schema="resco_name"/>
+        <property schema="resco_options"/>
+        <property schema="resco_publishedon"/>
+        <property schema="resco_publishnotes"/>
+        <property schema="resco_questionnaireid"/>
+        <property schema="resco_regardingid"/>
+        <property schema="resco_regardingidlabel"/>
+        <property schema="resco_regardingidname"/>
+        <property schema="resco_reportingproperties"/>
+        <property schema="resco_result"/>
+        <property schema="resco_reusefetch"/>
+        <property schema="resco_reusefromprevious"/>
+        <property schema="resco_rules"/>
+        <property schema="resco_score"/>
+        <property schema="resco_script"/>
+        <property schema="resco_serializedanswers"/>
+        <property schema="resco_styles"/>
+        <property schema="resco_templatedependent"/>
+        <property schema="resco_templateid"/>
+        <property schema="resco_version"/>
+        <property schema="resco_versionname"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+      </properties>
+    </entity>
+    <entity schema="resco_questionnairefolder">
+      <properties>
+        <property schema="createdby"/>
+        <property schema="createdon"/>
+        <property schema="modifiedon"/>
+        <property schema="ownerid"/>
+        <property schema="resco_name"/>
+        <property schema="resco_parentid"/>
+        <property schema="resco_questionnairefolderid"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+      </properties>
+    </entity>
     <entity schema="resco_usersettings">
       <properties>
         <property schema="createdon"/>
