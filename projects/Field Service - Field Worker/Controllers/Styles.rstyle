@@ -105,6 +105,9 @@
         <Property Name="VerticalAlignment" Type="System.Int32">
           <Value>1</Value>
         </Property>
+        <Property Name="ForeColor" Type="Color">
+          <Value>outline</Value>
+        </Property>
       </Properties>
     </Style>
     <Style Name="r_gray" Style="gray" Type="TextCell">
@@ -174,7 +177,11 @@
       <Properties/>
     </Style>
     <Style Name="Secondary" Style="gray" Type="TextCell">
-      <Properties/>
+      <Properties>
+        <Property Name="ForeColor" Type="Color">
+          <Value>outline</Value>
+        </Property>
+      </Properties>
     </Style>
     <Style Name="Secondary Right" Style="Secondary" Type="TextCell">
       <Properties>
