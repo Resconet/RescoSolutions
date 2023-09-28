@@ -289,8 +289,8 @@
         <Property Name="FontSize" Type="System.Single">
           <Value>9</Value>
         </Property>
-        <Property Name="ForeColor" Type="System.Int32">
-          <Value>-6710887</Value>
+        <Property Name="ForeColor" Type="Color">
+          <Value>outline</Value>
         </Property>
       </Properties>
     </Style>
@@ -384,14 +384,11 @@
         <Property Name="FontSize" Type="System.Single">
           <Value>8</Value>
         </Property>
-        <Property Name="ForeColor" Type="System.Int32">
-          <Value>-10066330</Value>
-        </Property>
-        <Property Name="HorizontalAlignment" Type="System.Int32">
-          <Value>0</Value>
-        </Property>
         <Property Name="VerticalAlignment" Type="System.Int32">
           <Value>1</Value>
+        </Property>
+        <Property Name="ForeColor" Type="Color">
+          <Value>outline</Value>
         </Property>
       </Properties>
     </Style>
@@ -509,9 +506,6 @@
     </Style>
     <Style Name="0103 p grey" Style="0103 p" Type="TextCell">
       <Properties>
-        <Property Name="ForeColor" Type="System.Int32">
-          <Value>-11513776</Value>
-        </Property>
         <Property Name="FontName" Type="System.String">
           <Value>Roboto-Light</Value>
         </Property>

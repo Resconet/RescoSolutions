@@ -4,9 +4,9 @@
     <CamelCase>resco_questionnaire</CamelCase>
     <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
     <ClassBinding>
-      <SerializedClassBinding type="String" name="#Name" label="Localized Name"/>
-      <SerializedClassBinding type="String" name="#Description" label="Localized Description"/>
-      <SerializedClassBinding type="String" name="#LocalizedResult" label="Localized Result"/>
+      <SerializedClassBinding name="#Name" label="Localized Name" type="String"/>
+      <SerializedClassBinding name="#Description" label="Localized Description" type="String"/>
+      <SerializedClassBinding name="#LocalizedResult" label="Localized Result" type="String"/>
     </ClassBinding>
   </Attributes>
   <Name>Templates</Name>
@@ -29,14 +29,15 @@
     <string>resco_options</string>
     <string>statuscode</string>
     <string>resco_templateid</string>
+    <string>resco_templateid.resco_questionnaire.resco_localization</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
   <Fetch version="1.0">
     <entity name="resco_questionnaire">
       <filter type="and">
-        <condition value="1" operator="eq" attribute="resco_istemplate"/>
-        <condition value="0" operator="eq" attribute="resco_issnippet"/>
-        <condition value="473220003" operator="ne" attribute="statuscode"/>
+        <condition attribute="resco_istemplate" operator="eq" value="1"/>
+        <condition attribute="resco_issnippet" operator="eq" value="0"/>
+        <condition attribute="statuscode" operator="ne" value="473220003"/>
       </filter>
     </entity>
   </Fetch>

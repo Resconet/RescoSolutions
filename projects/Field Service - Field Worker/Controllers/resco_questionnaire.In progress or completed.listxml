@@ -130,7 +130,7 @@
           <StyleName>0103 p score</StyleName>
           <Bounds>186,15,34,19</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
+          <Anchor>9</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
@@ -176,7 +176,7 @@
           <StyleName>0103 p result</StyleName>
           <Bounds>186,15,34,19</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
+          <Anchor>9</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>

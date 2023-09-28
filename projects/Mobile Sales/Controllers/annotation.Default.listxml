@@ -24,13 +24,13 @@
       <Height>77</Height>
       <SerializedChildren>
         <CellTemplate SchemaName="subject">
-          <StyleName>black_bold</StyleName>
+          <StyleName>primary</StyleName>
           <Bounds>20,12,280,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="notetext">
-          <StyleName>black_auto</StyleName>
+          <StyleName>gray</StyleName>
           <Bounds>20,30,280,36</Bounds>
           <CellKind>0</CellKind>
           <Anchor>15</Anchor>
