@@ -17,9 +17,7 @@
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
   <Fetch version="1.0">
-    <entity name="account">
-      <filter type="and"/>
-    </entity>
+    <entity name="account"/>
   </Fetch>
   <Search>
     <attribute schema="name" method="BeginsWith"/>

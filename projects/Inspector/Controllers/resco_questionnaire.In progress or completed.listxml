@@ -76,7 +76,7 @@
           <StyleName>0110 date</StyleName>
           <Bounds>75,15,128,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>5</Anchor>
+          <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="createdon">
           <StyleName>0111 time right</StyleName>
