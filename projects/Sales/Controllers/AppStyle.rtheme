@@ -35,7 +35,7 @@
   <colors name="FormItemBorder" token="outline" color="PAL:11"/>
   <colors name="FormItemSupportingTextForeground" token="onSurface" color="PAL:2"/>
   <colors name="FormError" token="error" color="PAL:12"/>
-  <colors name="GridBackground" token="surface" color="PAL:0"/>
+  <colors name="GridBackground" token="surfaceVariant" color="PAL:4"/>
   <colors name="GridBorder" token="onPrimary" color="PAL:5"/>
   <colors name="HomeListBackground" token="surface" color="PAL:0"/>
   <colors name="HomeListSelBackground" token="primaryContainer" color="PAL:1"/>
