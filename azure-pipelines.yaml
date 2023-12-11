@@ -22,6 +22,7 @@ jobs:
   steps:
   - checkout: self
     fetchDepth: 1
+    fetchTags: false
 
   - bash: |
       find . -mindepth 1 -maxdepth 1 -type d -print0 | while read -d $'\0' dir; do
@@ -38,7 +39,7 @@ jobs:
         rm ../data.zip
         popd
       done
-      cp -v config.* $(Build.ArtifactStagingDirectory)
+      [[ $? -eq 0 ]] && cp -v config.* $(Build.ArtifactStagingDirectory) || exit 1
     displayName: Prepare Mobile Projects
     workingDirectory: projects
 
