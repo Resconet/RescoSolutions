@@ -3,6 +3,7 @@
 	<woodford>
 		<mobileprojecttemplates>
 			<mobileprojecttemplate id="resco:CrmDefault" displayname="Mobile Sales" target="Crm" url="config/mobileprojects/crm/default.zip.xml" />
+			<mobileprojecttemplate id="resco:CrmSales" displayname="Mobile Sales - Disable Inspections" target="Crm" url="config/mobileprojects/crm/sales.zip.xml" />
 			<mobileprojecttemplate id="resco:CrmInspector" displayname="Inspector" target="Crm" url="config/mobileprojects/crm/inspector.zip.xml" />
 			<mobileprojecttemplate id="resco:XrmDefault" displayname="Sales" target="Xrm" url="config/mobileprojects/xrm/default.zip.xml" />
 			<mobileprojecttemplate id="resco:XrmService" displayname="Field Service - Manager" target="Xrm" url="config/mobileprojects/xrm/defaultservice.zip.xml" />
