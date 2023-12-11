@@ -1,0 +1,34 @@
+﻿<EntityChart>
+  <Name>Default</Name>
+  <Kind>Pie</Kind>
+  <LimitCount>5</LimitCount>
+  <Axis>customerid</Axis>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#FF0000FF</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#FF0000FF</Color>
+  </TargetValue>
+  <SerializedBindings>
+    <string>transactioncurrencyid</string>
+    <string>customerid</string>
+    <string>salesorderid</string>
+    <string>totalamount</string>
+  </SerializedBindings>
+  <Attributes>
+    <EntityName>salesorder</EntityName>
+    <CamelCase>SalesOrder</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+  </Attributes>
+  <Series>
+    <Series>
+      <Attribute>totalamount</Attribute>
+      <Color>#FF0000FF</Color>
+      <Aggregation>Sum</Aggregation>
+      <Limit>Top</Limit>
+    </Series>
+  </Series>
+</EntityChart>

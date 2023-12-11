@@ -1,0 +1,61 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>resco_sharepointdoc</EntityName>
+    <CamelCase>resco_sharepointdoc</CamelCase>
+    <ClassBinding>
+      <SerializedClassBinding name="#FileSize" label="FileSize" type="String"/>
+      <SerializedClassBinding name="#SourceName" label="SourceName" type="String"/>
+    </ClassBinding>
+  </Attributes>
+  <Name>Default</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>resco_name</OrderBy>
+  <SerializedBindings>
+    <string>modifiedon</string>
+    <string>resco_filename</string>
+    <string>resco_filesize</string>
+    <string>resco_name</string>
+    <string>resco_regardingid</string>
+    <string>resco_relativepath</string>
+    <string>resco_sharepointdocid</string>
+    <string>resco_siteid</string>
+    <string>resco_source</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>60</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="resco_filename">
+          <StyleName>primary</StyleName>
+          <Bounds>10,5,302,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#SourceName">
+          <StyleName>gray</StyleName>
+          <Bounds>10,35,122,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#FileSize">
+          <StyleName>r_gray</StyleName>
+          <Bounds>246,35,66,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="modifiedon">
+          <StyleName>gray</StyleName>
+          <Bounds>132,35,114,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

@@ -1,0 +1,96 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>email</EntityName>
+    <CamelCase>Email</CamelCase>
+    <WrapperClass>MobileCrm.Model.ActivityListItem</WrapperClass>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding>
+      <SerializedClassBinding name="#DateLabel" label="DateLabel" type="String"/>
+      <SerializedClassBinding name="#End" label="End" type="String"/>
+      <SerializedClassBinding name="#Icon" label="Icon" type="String"/>
+      <SerializedClassBinding name="#IsDirty" label="IsDirty" type="String"/>
+      <SerializedClassBinding name="#Start" label="Start" type="String"/>
+      <SerializedClassBinding name="#SubjectRead" label="SubjectRead" type="String"/>
+      <SerializedClassBinding name="#SubjectUnread" label="SubjectUnread" type="String"/>
+      <SerializedClassBinding name="#ImageUnread" label="ImageUnread" type="String"/>
+      <SerializedClassBinding name="#IsRead" label="IsRead" type="Boolean"/>
+      <SerializedClassBinding name="#Summary" label="Summary" type="String"/>
+      <SerializedClassBinding name="#ShortDate" label="ShortDate" type="String"/>
+      <SerializedClassBinding name="#ShortLabel" label="ShortLabel" type="String"/>
+      <SerializedClassBinding name="#EmailFlags" label="EmailFlags" type="Integer"/>
+      <SerializedClassBinding name="#HasAttachments" label="HasAttachments" type="Boolean"/>
+      <SerializedClassBinding name="#IsTracked" label="IsTracked" type="Boolean"/>
+      <SerializedClassBinding name="#AttachmentImage" label="AttachmentImage" type="String"/>
+      <SerializedClassBinding name="#StatusImage" label="StatusImage" type="String"/>
+    </ClassBinding>
+  </Attributes>
+  <Name>My Sent Emails</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>!createdon</OrderBy>
+  <SerializedBindings>
+    <string>statecode</string>
+    <string>createdon</string>
+    <string>scheduledend</string>
+    <string>activityid</string>
+    <string>from</string>
+    <string>ownerid</string>
+    <string>regardingobjectid</string>
+    <string>scheduledstart</string>
+    <string>statuscode</string>
+    <string>subject</string>
+    <string>to</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="email">
+      <filter type="and">
+        <condition attribute="statuscode" operator="eq" value="3"/>
+        <condition attribute="directioncode" operator="eq" value="1"/>
+      </filter>
+      <link-entity name="activityparty" from="activityid" to="activityid">
+        <filter type="and">
+          <condition attribute="participationtypemask" operator="eq" value="1"/>
+          <condition attribute="partyid" operator="eq-userid"/>
+        </filter>
+      </link-entity>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>67</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="subject">
+          <StyleName>primary</StyleName>
+          <Bounds>20,12,280,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="to">
+          <StyleName>gray</StyleName>
+          <Bounds>20,36,180,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="createdon">
+          <StyleName>r_gray</StyleName>
+          <Bounds>200,36,100,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="">
+          <IsConstant>true</IsConstant>
+          <StyleName>line</StyleName>
+          <Bounds>20,66,300,1</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>14</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

@@ -1,0 +1,16 @@
+﻿<Dashboard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0">
+  <Columns>2</Columns>
+  <Rows>2</Rows>
+  <Items>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="salesorder">
+      <Bounds>0,0,2,1</Bounds>
+    </DashboardComponent>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="opportunity">
+      <Bounds>0,1,1,1</Bounds>
+    </DashboardComponent>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="List" Binding="appointment;&lt;extra&gt;&lt;views&gt;appointment.*:appointment.@My Upcoming Appointments Today&lt;/views&gt;&lt;actions&gt;0;0;1&lt;/actions&gt;&lt;/extra&gt;" Options="3">
+      <Bounds>1,1,1,1</Bounds>
+      <LegacyConfig>appointment;appointment.*:appointment.@My Upcoming Appointments Today</LegacyConfig>
+    </DashboardComponent>
+  </Items>
+</Dashboard>
