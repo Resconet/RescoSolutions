@@ -1,13 +1,27 @@
 /projects/Inspector/ @Resconet/dynamics
 /projects/Mobile\ Sales/ @Resconet/dynamics
+/projects/Mobile\ Sales/www/JSBridge.js
 /projects/Field\ Service\ -\ Field\ Worker/ @Resconet/field-service
+/projects/Field\ Service\ -\ Field\ Worker/www/JSBridge.js
 /projects/Field\ Service\ -\ Manager/ @Resconet/field-service
+/projects/Field\ Service\ -\ Manager/www/JSBridge.js
+/projects/Field\ Service\ -\ Manager/www/ManagerHome/scripts/JSBridge.js
 /projects/Inspections\ -\ Inspector/ @Resconet/field-service
 /projects/Inspections\ -\ Manager/ @Resconet/field-service
+/projects/Inspections\ -\ Manager/www/JSBridge.js
 /projects/Portal\ -\ Contractor/ @Resconet/field-service
+/projects/Portal\ -\ Contractor/www/JSBridge.js
+/projects/Portal\ -\ Contractor/www/overview/JSBridge.js
 /projects/Portal\ -\ Dark/ @Resconet/field-service
+/projects/Portal\ -\ Dark/www/JSBridge.js
+/projects/Portal\ -\ Dark/www/overview/JSBridge.js
 /projects/Portal\ -\ Light/ @Resconet/field-service
+/projects/Portal\ -\ Light/www/JSBridge.js
+/projects/Portal\ -\ Light/www/overview/JSBridge.js
 /projects/Sales/ @Resconet/sales
+/projects/Sales/www/JSBridge.js
 /projects/Default\ (Mobile\ Sales\ scenario)/ @Resconet/salesforce
+/projects/Default\ (Mobile\ Sales\ scenario)/www/JSBridge.js
 /projects/Inspections\ (requires\ Resco\ custom\ objects)/ @Resconet/salesforce
 /projects/Field\ Service\ (requires\ Field\ Service\ Lightning\ objects)/ @Resconet/salesforce
+/projects/Field\ Service\ (requires\ Field\ Service\ Lightning\ objects)/www/JSBridge.js
