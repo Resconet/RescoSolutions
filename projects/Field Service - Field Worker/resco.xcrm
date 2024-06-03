@@ -1693,6 +1693,7 @@
         <property schema="ownerid"/>
         <property schema="resco_answeredon"/>
         <property schema="resco_answerstorage"/>
+        <property schema="resco_copyvalues"/>
         <property schema="resco_defaultvalue"/>
         <property schema="resco_description"/>
         <property schema="resco_displayformat"/>
@@ -1771,12 +1772,15 @@
         <property schema="resco_layout"/>
         <property schema="resco_localization"/>
         <property schema="resco_name"/>
+        <property schema="resco_options"/>
         <property schema="resco_questiongroupid"/>
         <property schema="resco_questionnaireid"/>
         <property schema="resco_repeatconfig"/>
         <property schema="resco_repeatindex"/>
         <property schema="resco_reportingproperties"/>
+        <property schema="resco_result"/>
         <property schema="resco_rules"/>
+        <property schema="resco_score"/>
         <property schema="resco_templategroupid"/>
         <property schema="resco_visible"/>
         <property schema="statecode"/>
@@ -1824,6 +1828,7 @@
         <property schema="resco_featureversion"/>
         <property schema="resco_folder"/>
         <property schema="resco_folderid"/>
+        <property schema="resco_header"/>
         <property schema="resco_issnippet"/>
         <property schema="resco_istemplate"/>
         <property schema="resco_languagecode"/>
@@ -1887,6 +1892,44 @@
           </fields>
         </index>
         <index schema="idx_resco_questionnaire_resco_templateid" issystem="true">
+          <fields>
+            <field schema="resco_templateid"/>
+          </fields>
+        </index>
+      </indexes>
+    </entity>
+    <entity schema="resco_questionnaireanswer">
+      <properties>
+        <property schema="createdby"/>
+        <property schema="createdon"/>
+        <property schema="modifiedon"/>
+        <property schema="resco_completionstatus"/>
+        <property schema="resco_duration"/>
+        <property schema="resco_featureversion"/>
+        <property schema="resco_languagecode"/>
+        <property schema="resco_name"/>
+        <property schema="resco_questionnaireanswerid"/>
+        <property schema="resco_regardingid"/>
+        <property schema="resco_regardingidlabel"/>
+        <property schema="resco_regardingidname"/>
+        <property schema="resco_result"/>
+        <property schema="resco_score"/>
+        <property schema="resco_serializedanswers"/>
+        <property schema="resco_templateid"/>
+        <property schema="statuscode"/>
+      </properties>
+      <indexes>
+        <index schema="idx_resco_questionnaireanswer_createdby" issystem="true">
+          <fields>
+            <field schema="createdby"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_questionnaireanswer_resco_name" issystem="true">
+          <fields>
+            <field schema="resco_name"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_questionnaireanswer_resco_templateid" issystem="true">
           <fields>
             <field schema="resco_templateid"/>
           </fields>

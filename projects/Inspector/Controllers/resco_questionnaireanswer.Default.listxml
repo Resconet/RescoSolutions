@@ -1,0 +1,32 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>resco_questionnaireanswer</EntityName>
+    <CamelCase>resco_questionnaireanswer</CamelCase>
+  </Attributes>
+  <Name>Default</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>resco_name</OrderBy>
+  <SerializedBindings>
+    <string>resco_questionnaireanswerid</string>
+    <string>resco_name</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="resco_name">
+          <StyleName>primary</StyleName>
+          <Bounds>10,2,302,43</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>
