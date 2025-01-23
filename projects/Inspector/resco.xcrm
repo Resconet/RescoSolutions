@@ -2,6 +2,7 @@
   <entities>
     <entity schema="account">
       <properties>
+        <property schema="accountid"/>
         <property schema="address1_city"/>
         <property schema="address1_country"/>
         <property schema="address1_latitude"/>
@@ -14,7 +15,6 @@
         <property schema="createdon"/>
         <property schema="emailaddress1"/>
         <property schema="fax"/>
-        <property schema="id"/>
         <property schema="modifiedon"/>
         <property schema="name"/>
         <property schema="ownerid"/>
@@ -44,24 +44,19 @@
     </entity>
     <entity schema="activity">
       <properties>
+        <property schema="activityid"/>
         <property schema="activitytypecode"/>
         <property schema="createdon"/>
-        <property schema="id"/>
         <property schema="modifiedon"/>
-        <property schema="name"/>
         <property schema="ownerid"/>
         <property schema="regardingobjectid"/>
         <property schema="scheduledend"/>
         <property schema="scheduledstart"/>
         <property schema="statecode"/>
         <property schema="statuscode"/>
+        <property schema="subject"/>
       </properties>
       <indexes>
-        <index schema="idx_activity_name" issystem="true">
-          <fields>
-            <field schema="name"/>
-          </fields>
-        </index>
         <index schema="idx_activity_ownerid" issystem="true">
           <fields>
             <field schema="ownerid"/>
@@ -72,13 +67,18 @@
             <field schema="regardingobjectid"/>
           </fields>
         </index>
+        <index schema="idx_activity_subject" issystem="true">
+          <fields>
+            <field schema="subject"/>
+          </fields>
+        </index>
       </indexes>
     </entity>
     <entity schema="activityparty">
       <properties>
         <property schema="activityid"/>
+        <property schema="activitypartyid"/>
         <property schema="addressused"/>
-        <property schema="id"/>
         <property schema="participationtypemask"/>
         <property schema="partyid"/>
       </properties>
@@ -97,11 +97,11 @@
     </entity>
     <entity schema="annotation">
       <properties>
+        <property schema="annotationid"/>
         <property schema="createdon"/>
         <property schema="documentbody"/>
         <property schema="filename"/>
         <property schema="filesize"/>
-        <property schema="id"/>
         <property schema="isdocument"/>
         <property schema="mimetype"/>
         <property schema="modifiedon"/>
@@ -130,12 +130,12 @@
     </entity>
     <entity schema="appointment">
       <properties>
+        <property schema="activityid"/>
+        <property schema="activitytypecode"/>
         <property schema="createdon"/>
         <property schema="description"/>
-        <property schema="id"/>
         <property schema="location"/>
         <property schema="modifiedon"/>
-        <property schema="name"/>
         <property schema="organizer"/>
         <property schema="ownerid"/>
         <property schema="prioritycode"/>
@@ -145,13 +145,9 @@
         <property schema="scheduledstart"/>
         <property schema="statecode"/>
         <property schema="statuscode"/>
+        <property schema="subject"/>
       </properties>
       <indexes>
-        <index schema="idx_appointment_name" issystem="true">
-          <fields>
-            <field schema="name"/>
-          </fields>
-        </index>
         <index schema="idx_appointment_ownerid" issystem="true">
           <fields>
             <field schema="ownerid"/>
@@ -167,6 +163,11 @@
             <field schema="scheduledend"/>
           </fields>
         </index>
+        <index schema="idx_appointment_subject" issystem="true">
+          <fields>
+            <field schema="subject"/>
+          </fields>
+        </index>
       </indexes>
     </entity>
     <entity schema="contact">
@@ -180,16 +181,20 @@
         <property schema="address1_longitude"/>
         <property schema="address1_postalcode"/>
         <property schema="address1_stateorprovince"/>
+        <property schema="contactid"/>
         <property schema="createdon"/>
         <property schema="emailaddress1"/>
+        <property schema="entityimage"/>
+        <property schema="entityimage_timestamp"/>
+        <property schema="entityimage_url"/>
+        <property schema="entityimageid"/>
         <property schema="fax"/>
         <property schema="firstname"/>
-        <property schema="id"/>
+        <property schema="fullname"/>
         <property schema="jobtitle"/>
         <property schema="lastname"/>
         <property schema="mobilephone"/>
         <property schema="modifiedon"/>
-        <property schema="name"/>
         <property schema="ownerid"/>
         <property schema="parentcustomerid"/>
         <property schema="statecode"/>
@@ -197,9 +202,9 @@
         <property schema="telephone1"/>
       </properties>
       <indexes>
-        <index schema="idx_contact_name" issystem="true">
+        <index schema="idx_contact_fullname" issystem="true">
           <fields>
-            <field schema="name"/>
+            <field schema="fullname"/>
           </fields>
         </index>
         <index schema="idx_contact_ownerid" issystem="true">
@@ -214,90 +219,20 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="product">
-      <properties>
-        <property schema="createdon"/>
-        <property schema="currentcost"/>
-        <property schema="id"/>
-        <property schema="modifiedon"/>
-        <property schema="name"/>
-        <property schema="price"/>
-        <property schema="productnumber" displayformat="Barcode"/>
-        <property schema="producttypecode"/>
-        <property schema="quantitydecimal"/>
-        <property schema="standardcost"/>
-        <property schema="statecode"/>
-        <property schema="statuscode"/>
-        <property schema="transactioncurrencyid"/>
-      </properties>
-      <indexes>
-        <index schema="idx_product_name" issystem="true">
-          <fields>
-            <field schema="name"/>
-          </fields>
-        </index>
-        <index schema="idx_product_transactioncurrencyid" issystem="true">
-          <fields>
-            <field schema="transactioncurrencyid"/>
-          </fields>
-        </index>
-      </indexes>
-    </entity>
-    <entity schema="resco_audit" isonlineonly="true">
-      <properties>
-        <property schema="createdby"/>
-        <property schema="createdon"/>
-        <property schema="id"/>
-        <property schema="modifiedby"/>
-        <property schema="modifiedon"/>
-        <property schema="name"/>
-        <property schema="resco_changedon"/>
-        <property schema="resco_displayvaluenew"/>
-        <property schema="resco_displayvalueold"/>
-        <property schema="resco_fieldtype"/>
-        <property schema="resco_latitude"/>
-        <property schema="resco_longitude"/>
-        <property schema="resco_operationid"/>
-        <property schema="resco_regardingobjectid"/>
-        <property schema="resco_source"/>
-        <property schema="resco_transactionid"/>
-        <property schema="resco_valuenew"/>
-        <property schema="resco_valueold"/>
-        <property schema="statecode"/>
-        <property schema="statuscode"/>
-        <property schema="versionnumber"/>
-      </properties>
-      <indexes>
-        <index schema="idx_resco_audit_createdby" issystem="true">
-          <fields>
-            <field schema="createdby"/>
-          </fields>
-        </index>
-        <index schema="idx_resco_audit_modifiedby" issystem="true">
-          <fields>
-            <field schema="modifiedby"/>
-          </fields>
-        </index>
-        <index schema="idx_resco_audit_name" issystem="true">
-          <fields>
-            <field schema="name"/>
-          </fields>
-        </index>
-        <index schema="idx_resco_audit_resco_regardingobjectid" issystem="true">
-          <fields>
-            <field schema="resco_regardingobjectid"/>
-          </fields>
-        </index>
-      </indexes>
-    </entity>
     <entity schema="resco_devicecontrol">
       <properties>
         <property schema="createdby"/>
         <property schema="createdon"/>
+        <property schema="createdonbehalfby"/>
+        <property schema="importsequencenumber"/>
         <property schema="modifiedby"/>
         <property schema="modifiedon"/>
+        <property schema="modifiedonbehalfby"/>
+        <property schema="overriddencreatedon"/>
         <property schema="ownerid"/>
         <property schema="owningbusinessunit"/>
+        <property schema="owningteam"/>
+        <property schema="owninguser"/>
         <property schema="resco_devicecontrolid"/>
         <property schema="resco_deviceid"/>
         <property schema="resco_entityname"/>
@@ -307,10 +242,21 @@
         <property schema="resco_requesttype"/>
         <property schema="resco_responsecode"/>
         <property schema="resco_responsedata"/>
+        <property schema="resco_responsedata1"/>
+        <property schema="resco_responsedata2"/>
+        <property schema="resco_responsedata3"/>
+        <property schema="resco_responsedata4"/>
+        <property schema="resco_responsedata5"/>
+        <property schema="resco_responsedata6"/>
+        <property schema="resco_responsedata7"/>
+        <property schema="resco_responsedata8"/>
+        <property schema="resco_responsedata9"/>
         <property schema="resco_responsedatalength"/>
         <property schema="resco_responsestatus"/>
         <property schema="statecode"/>
         <property schema="statuscode"/>
+        <property schema="timezoneruleversionnumber"/>
+        <property schema="utcconversiontimezonecode"/>
         <property schema="versionnumber"/>
       </properties>
       <indexes>
@@ -319,9 +265,19 @@
             <field schema="createdby"/>
           </fields>
         </index>
+        <index schema="idx_resco_devicecontrol_createdonbehalfby" issystem="true">
+          <fields>
+            <field schema="createdonbehalfby"/>
+          </fields>
+        </index>
         <index schema="idx_resco_devicecontrol_modifiedby" issystem="true">
           <fields>
             <field schema="modifiedby"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_devicecontrol_modifiedonbehalfby" issystem="true">
+          <fields>
+            <field schema="modifiedonbehalfby"/>
           </fields>
         </index>
         <index schema="idx_resco_devicecontrol_ownerid" issystem="true">
@@ -332,6 +288,16 @@
         <index schema="idx_resco_devicecontrol_owningbusinessunit" issystem="true">
           <fields>
             <field schema="owningbusinessunit"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_devicecontrol_owningteam" issystem="true">
+          <fields>
+            <field schema="owningteam"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_devicecontrol_owninguser" issystem="true">
+          <fields>
+            <field schema="owninguser"/>
           </fields>
         </index>
         <index schema="idx_resco_devicecontrol_resco_deviceid" issystem="true">
@@ -350,11 +316,16 @@
       <properties>
         <property schema="createdby"/>
         <property schema="createdon"/>
-        <property schema="id"/>
+        <property schema="createdonbehalfby"/>
+        <property schema="importsequencenumber"/>
         <property schema="modifiedby"/>
         <property schema="modifiedon"/>
+        <property schema="modifiedonbehalfby"/>
+        <property schema="overriddencreatedon"/>
         <property schema="ownerid"/>
         <property schema="owningbusinessunit"/>
+        <property schema="owningteam"/>
+        <property schema="owninguser"/>
         <property schema="resco_description"/>
         <property schema="resco_deviceid"/>
         <property schema="resco_entityid"/>
@@ -363,9 +334,12 @@
         <property schema="resco_latitude"/>
         <property schema="resco_loggedon"/>
         <property schema="resco_longitude"/>
+        <property schema="resco_mobileauditid"/>
         <property schema="resco_operation"/>
         <property schema="statecode"/>
         <property schema="statuscode"/>
+        <property schema="timezoneruleversionnumber"/>
+        <property schema="utcconversiontimezonecode"/>
         <property schema="versionnumber"/>
       </properties>
       <indexes>
@@ -374,9 +348,19 @@
             <field schema="createdby"/>
           </fields>
         </index>
+        <index schema="idx_resco_mobileaudit_createdonbehalfby" issystem="true">
+          <fields>
+            <field schema="createdonbehalfby"/>
+          </fields>
+        </index>
         <index schema="idx_resco_mobileaudit_modifiedby" issystem="true">
           <fields>
             <field schema="modifiedby"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_mobileaudit_modifiedonbehalfby" issystem="true">
+          <fields>
+            <field schema="modifiedonbehalfby"/>
           </fields>
         </index>
         <index schema="idx_resco_mobileaudit_ownerid" issystem="true">
@@ -389,6 +373,16 @@
             <field schema="owningbusinessunit"/>
           </fields>
         </index>
+        <index schema="idx_resco_mobileaudit_owningteam" issystem="true">
+          <fields>
+            <field schema="owningteam"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_mobileaudit_owninguser" issystem="true">
+          <fields>
+            <field schema="owninguser"/>
+          </fields>
+        </index>
         <index schema="idx_resco_mobileaudit_resco_entityname" issystem="true">
           <fields>
             <field schema="resco_entityname"/>
@@ -399,25 +393,25 @@
     <entity schema="resco_mobilereport">
       <properties>
         <property schema="createdon"/>
-        <property schema="id"/>
         <property schema="modifiedon"/>
-        <property schema="name"/>
         <property schema="ownerid"/>
         <property schema="resco_data"/>
         <property schema="resco_entityname"/>
         <property schema="resco_languagecode"/>
+        <property schema="resco_mobilereportid"/>
+        <property schema="resco_name"/>
         <property schema="resco_sourcetype"/>
         <property schema="statuscode"/>
       </properties>
       <indexes>
-        <index schema="idx_resco_mobilereport_name" issystem="true">
-          <fields>
-            <field schema="name"/>
-          </fields>
-        </index>
         <index schema="idx_resco_mobilereport_ownerid" issystem="true">
           <fields>
             <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_mobilereport_resco_name" issystem="true">
+          <fields>
+            <field schema="resco_name"/>
           </fields>
         </index>
       </indexes>
@@ -561,17 +555,21 @@
         <property schema="createdon"/>
         <property schema="modifiedon"/>
         <property schema="ownerid"/>
+        <property schema="resco_account"/>
+        <property schema="resco_appointment"/>
         <property schema="resco_archivedon"/>
+        <property schema="resco_asset"/>
         <property schema="resco_autoreport"/>
         <property schema="resco_completionstatus"/>
+        <property schema="resco_completionstatuscalculated"/>
         <property schema="resco_description"/>
         <property schema="resco_duration"/>
         <property schema="resco_featureversion"/>
         <property schema="resco_folder"/>
         <property schema="resco_folderid"/>
-        <property schema="resco_header"/>
         <property schema="resco_issnippet"/>
         <property schema="resco_istemplate"/>
+        <property schema="resco_job"/>
         <property schema="resco_languagecode"/>
         <property schema="resco_layout"/>
         <property schema="resco_localization"/>
@@ -580,11 +578,9 @@
         <property schema="resco_publishedon"/>
         <property schema="resco_publishnotes"/>
         <property schema="resco_questionnaireid"/>
-        <property schema="resco_regarding"/>
         <property schema="resco_regardingid"/>
         <property schema="resco_regardingidlabel"/>
         <property schema="resco_regardingidname"/>
-        <property schema="resco_regardingobjectid"/>
         <property schema="resco_reportingproperties"/>
         <property schema="resco_result"/>
         <property schema="resco_reusefetch"/>
@@ -611,24 +607,34 @@
             <field schema="ownerid"/>
           </fields>
         </index>
+        <index schema="idx_resco_questionnaire_resco_account" issystem="true">
+          <fields>
+            <field schema="resco_account"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_questionnaire_resco_appointment" issystem="true">
+          <fields>
+            <field schema="resco_appointment"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_questionnaire_resco_asset" issystem="true">
+          <fields>
+            <field schema="resco_asset"/>
+          </fields>
+        </index>
         <index schema="idx_resco_questionnaire_resco_folderid" issystem="true">
           <fields>
             <field schema="resco_folderid"/>
           </fields>
         </index>
+        <index schema="idx_resco_questionnaire_resco_job" issystem="true">
+          <fields>
+            <field schema="resco_job"/>
+          </fields>
+        </index>
         <index schema="idx_resco_questionnaire_resco_name" issystem="true">
           <fields>
             <field schema="resco_name"/>
-          </fields>
-        </index>
-        <index schema="idx_resco_questionnaire_resco_regarding" issystem="true">
-          <fields>
-            <field schema="resco_regarding"/>
-          </fields>
-        </index>
-        <index schema="idx_resco_questionnaire_resco_regardingobjectid" issystem="true">
-          <fields>
-            <field schema="resco_regardingobjectid"/>
           </fields>
         </index>
         <index schema="idx_resco_questionnaire_resco_templateid" issystem="true">
@@ -643,9 +649,9 @@
         <property schema="createdby"/>
         <property schema="createdon"/>
         <property schema="modifiedon"/>
+        <property schema="ownerid"/>
         <property schema="resco_completionstatus"/>
         <property schema="resco_duration"/>
-        <property schema="resco_featureversion"/>
         <property schema="resco_languagecode"/>
         <property schema="resco_name"/>
         <property schema="resco_questionnaireanswerid"/>
@@ -662,6 +668,11 @@
         <index schema="idx_resco_questionnaireanswer_createdby" issystem="true">
           <fields>
             <field schema="createdby"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_questionnaireanswer_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
           </fields>
         </index>
         <index schema="idx_resco_questionnaireanswer_resco_name" issystem="true">
@@ -702,26 +713,26 @@
     <entity schema="systemuser">
       <properties>
         <property schema="createdon"/>
-        <property schema="id"/>
+        <property schema="fullname"/>
         <property schema="modifiedon"/>
-        <property schema="name"/>
+        <property schema="systemuserid"/>
       </properties>
       <indexes>
-        <index schema="idx_systemuser_name" issystem="true">
+        <index schema="idx_systemuser_fullname" issystem="true">
           <fields>
-            <field schema="name"/>
+            <field schema="fullname"/>
           </fields>
         </index>
       </indexes>
     </entity>
     <entity schema="task">
       <properties>
+        <property schema="activityid"/>
+        <property schema="activitytypecode"/>
         <property schema="actualdurationminutes"/>
         <property schema="createdon"/>
         <property schema="description"/>
-        <property schema="id"/>
         <property schema="modifiedon"/>
-        <property schema="name"/>
         <property schema="ownerid"/>
         <property schema="prioritycode"/>
         <property schema="regardingobjectid"/>
@@ -729,13 +740,9 @@
         <property schema="scheduledstart"/>
         <property schema="statecode"/>
         <property schema="statuscode"/>
+        <property schema="subject"/>
       </properties>
       <indexes>
-        <index schema="idx_task_name" issystem="true">
-          <fields>
-            <field schema="name"/>
-          </fields>
-        </index>
         <index schema="idx_task_ownerid" issystem="true">
           <fields>
             <field schema="ownerid"/>
@@ -751,14 +758,19 @@
             <field schema="scheduledend"/>
           </fields>
         </index>
+        <index schema="idx_task_subject" issystem="true">
+          <fields>
+            <field schema="subject"/>
+          </fields>
+        </index>
       </indexes>
     </entity>
     <entity schema="team">
       <properties>
         <property schema="createdon"/>
-        <property schema="id"/>
         <property schema="modifiedon"/>
         <property schema="name"/>
+        <property schema="teamid"/>
       </properties>
       <indexes>
         <index schema="idx_team_name" issystem="true">
@@ -771,19 +783,19 @@
     <entity schema="transactioncurrency" class="false">
       <properties>
         <property schema="createdon"/>
+        <property schema="currencyname"/>
         <property schema="currencyprecision"/>
         <property schema="currencysymbol"/>
-        <property schema="id"/>
         <property schema="isocurrencycode"/>
         <property schema="modifiedon"/>
-        <property schema="name"/>
         <property schema="statecode"/>
         <property schema="statuscode"/>
+        <property schema="transactioncurrencyid"/>
       </properties>
       <indexes>
-        <index schema="idx_transactioncurrency_name" issystem="true">
+        <index schema="idx_transactioncurrency_currencyname" issystem="true">
           <fields>
-            <field schema="name"/>
+            <field schema="currencyname"/>
           </fields>
         </index>
       </indexes>
