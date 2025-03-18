@@ -724,6 +724,7 @@
 					/// <summary>[v8.0] Represents the Javascript equivalent of the form object.</summary>
 					/// <field name="canMaximize" type="Boolean">Gets or sets whether form can be maximized to fullscreen (full application frame).</field>
 					/// <field name="isMaximized" type="Boolean">Gets or sets whether form is currently maximized to fullscreen (full application frame).</field>
+					/// <field name="isModal" type="Boolean">Indicates whether this form is presented as modal window.</field>
 					/// <field name="caption" type="String">Gets or sets the form caption.</field>
 					/// <field name="selectedViewIndex" type="Number">Gets or sets the selected view (tab) index.</field>
 					/// <field name="showTitle" type="Boolean">[v8.1] Determines whether the form caption bar should be visible.</field>
@@ -4987,6 +4988,24 @@
 			_bindHandler(handler, handlers, bind, scope);
 			if (register) {
 				MobileCRM.bridge.command("registerEvents", "onClick");
+			}
+		};
+		MobileCRM.UI.EntityList.onCellClick = function (propertyName, handler, bind, scope) {
+			/// <summary>[v18.1] Binds or unbinds the handler for onCellClick event on EntityList.</summary>
+			/// <remarks>Bound handler is called with the EntityList object as an argument. The EntityList context property contains <see cref="MobileCRM.UI.EntityListClickContext">EntityListClickContext</see> object.</remarks>
+			/// <param name="propertyName" type="String">The name of desired cell within the list item.</param>
+			/// <param name="handler" type="function(entityList)">The handler function that has to be bound or unbound.</param>
+			/// <param name="bind" type="Boolean">Determines whether to bind or unbind the handler.</param>
+			/// <param name="scope" type="Object">The scope for handler calls.</param>
+			var handlerName = "onCellClick:" + propertyName;
+			var handlers = MobileCRM.UI.EntityList._handlers[handlerName];
+			if (!handlers) {
+				MobileCRM.UI.EntityList._handlers[handlerName] = handlers = [];
+			}
+			var register = handlers.length == 0;
+			_bindHandler(handler, handlers, bind, scope);
+			if (register) {
+				MobileCRM.bridge.command("registerEvents", handlerName);
 			}
 		};
 		MobileCRM.UI.EntityListClickContext = function () {
