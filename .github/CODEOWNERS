@@ -9,15 +9,6 @@
 /projects/Inspections\ -\ Inspector/ @Resconet/field-service
 /projects/Inspections\ -\ Manager/ @Resconet/field-service
 /projects/Inspections\ -\ Manager/www/JSBridge.js
-/projects/Portal\ -\ Contractor/ @Resconet/field-service
-/projects/Portal\ -\ Contractor/www/JSBridge.js
-/projects/Portal\ -\ Contractor/www/overview/JSBridge.js
-/projects/Portal\ -\ Dark/ @Resconet/field-service
-/projects/Portal\ -\ Dark/www/JSBridge.js
-/projects/Portal\ -\ Dark/www/overview/JSBridge.js
-/projects/Portal\ -\ Light/ @Resconet/field-service
-/projects/Portal\ -\ Light/www/JSBridge.js
-/projects/Portal\ -\ Light/www/overview/JSBridge.js
 /projects/Sales/ @Resconet/sales
 /projects/Sales/www/JSBridge.js
 /projects/Default\ (Mobile\ Sales\ scenario)/ @Resconet/salesforce
