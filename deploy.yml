@@ -1,0 +1,63 @@
+name: $(Date:yyMMdd)$(rev:-r)
+
+trigger: none
+
+lockBehavior: sequential
+
+resources:
+  pipelines:
+  - pipeline: mobileprojects
+    source: Resco Solutions CI
+    trigger:
+      branches:
+        include:
+          - master
+          - release/*
+
+  - pipeline: rescocloud
+    source: Resco Cloud CI
+
+  - pipeline: webprojects
+    source: Web Projects CI
+
+  repositories:
+  - repository: devops
+    type: git
+    name: devops
+    ref: ${{ variables['Build.SourceBranch'] }}
+
+parameters:
+- name: Slot
+  type: string
+  default: feature
+  displayName: Deployment slot
+  values:
+  - production
+  - rc
+  - feature
+  - unhcr
+
+- name: LatestService
+  type: boolean
+  default: true
+  displayName: Use the latest service artifacts
+
+- name: LatestMobileProjects
+  type: boolean
+  default: true
+  displayName: Use the latest mobile projects artifacts
+
+- name: LatestWebProjects
+  type: boolean
+  default: true
+  displayName: Use the latest web projects artifacts
+
+extends:
+  template: deploy-resco-cloud.yml@devops
+  parameters:
+    Slot: ${{ parameters.Slot }}
+    RunBranch: ${{ variables['Build.SourceBranch'] }}
+    ServiceRunVersion: ${{ iif(parameters.LatestService, 'latestFromBranch', 'specific') }}
+    MobileProjectsRunVersion: ${{ iif(parameters.LatestMobileProjects, 'latestFromBranch', 'specific') }}
+    WebProjectsRunVersion: ${{ iif(parameters.LatestWebProjects, 'latestFromBranch', 'specific') }}
+    TriggerName: ${{ replace(variables['Build.Reason'], 'ResourceTrigger', 'mobileprojects') }}
