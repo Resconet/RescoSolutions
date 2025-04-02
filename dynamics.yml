@@ -1,0 +1,47 @@
+name: $(Date:yyMMdd)$(rev:-r)
+
+trigger: none
+
+lockBehavior: sequential
+
+resources:
+  pipelines:
+  - pipeline: mobileprojects
+    source: Resco Solutions CI
+    trigger:
+      branches:
+        include:
+          - master
+          - release/*
+
+  - pipeline: webprojects
+    source: Web Projects Dynamics
+
+  repositories:
+  - repository: devops
+    type: git
+    name: devops
+    ref: ${{ variables['Build.SourceBranch'] }}
+
+  - repository: dynamics
+    type: git
+    name: woodford-dynamics
+    ref: ${{ variables['Build.SourceBranch'] }}
+
+parameters:
+- name: LatestMobileProjects
+  type: boolean
+  default: true
+  displayName: Use the latest mobile projects artifact
+
+- name: LatestWebProjects
+  type: boolean
+  default: true
+  displayName: Use the latest web projects artifacts
+
+extends:
+  template: build-dynamics-solutions.yml@devops
+  parameters:
+    RepoName: dynamics
+    MobileProjectsRunVersion: ${{ iif(parameters.LatestMobileProjects, 'latestFromBranch', 'specific') }}
+    WebProjectsRunVersion: ${{ iif(parameters.LatestWebProjects, 'latestFromBranch', 'specific') }}
