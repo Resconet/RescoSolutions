@@ -2,6 +2,8 @@ name: $(Date:yyMMdd)$(rev:-r)
 
 trigger: none
 
+pr: none
+
 lockBehavior: sequential
 
 resources:
