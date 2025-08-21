@@ -19,9 +19,6 @@ resources:
   - pipeline: webprojects
     source: Web Projects Dynamics
 
-  - pipeline: pcfs
-    source: Web Projects CI
-
   repositories:
   - repository: devops
     type: git
@@ -44,15 +41,9 @@ parameters:
   default: true
   displayName: Use the latest web projects artifacts
 
-- name: LatestQuestionnaire
-  type: boolean
-  default: true
-  displayName: Use the latest questionnaire artifact
-
 extends:
   template: build-dynamics-solutions.yml@devops
   parameters:
     RepoName: dynamics
     MobileProjectsRunVersion: ${{ iif(parameters.LatestMobileProjects, 'latestFromBranch', 'specific') }}
     WebProjectsRunVersion: ${{ iif(parameters.LatestWebProjects, 'latestFromBranch', 'specific') }}
-    QuestionnaireRunVersion: ${{ iif(parameters.LatestQuestionnaire, 'latestFromBranch', 'specific') }}
