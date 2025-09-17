@@ -1,9 +1,10 @@
-﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="0" fullscreen="0" resize="0" version="2">
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="0" fullscreen="0" resize="0" version="2" layoutstrict="0" singlecardexpand="0">
   <IsContactForm>false</IsContactForm>
   <EntityName>lead</EntityName>
   <CamelCase>Lead</CamelCase>
   <IsBulkUpdateForm>false</IsBulkUpdateForm>
   <CacheMode>-1</CacheMode>
+  <UiSyncGuardMode>-1</UiSyncGuardMode>
   <PrimaryCommands>!defcmd</PrimaryCommands>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
   <SerializedChildrenV2>
@@ -41,7 +42,7 @@
             <DetailItem SchemaName="estimatedclosedate">
               <GridPosition>0;6;2;1</GridPosition>
             </DetailItem>
-            <DetailItem SchemaName="leadqualitycode">
+            <DetailItem SchemaName="leadqualitycode" Style="Rating Horizontal RadioButton">
               <GridPosition>0;7;2;1</GridPosition>
             </DetailItem>
           </Items>
@@ -74,15 +75,15 @@
         </DetailItem>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="MapTab" flexi="0" flexiHeader="0" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
+    <FormTab xsi:type="MapTab" flexi="0" flexiHeight="1" flexiHeader="0" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
       <Name>Map</Name>
       <CoordinatesBinding>address1_latitude;address1_longitude</CoordinatesBinding>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\activity@2x.png" IsIconNameReadOnly="0">
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\activity@2x.png" IsIconNameReadOnly="0">
       <Name>Activity List</Name>
       <Binding SchemaName="activity.regardingobjectid"/>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
       <Name>Notes List</Name>
       <Binding SchemaName="annotation.objectid"/>
     </FormTab>

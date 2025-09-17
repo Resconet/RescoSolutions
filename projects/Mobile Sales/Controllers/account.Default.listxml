@@ -8,6 +8,7 @@
   <Kind>List</Kind>
   <AutoWideWidth>0</AutoWideWidth>
   <OrderBy>name</OrderBy>
+  <MultiSelectCommands>RunMobileReport|Account Overview pdf|e6f4bc3f-416d-f011-b4cb-6045bd92fd6a</MultiSelectCommands>
   <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;SharedVariable usage="None"&gt;&lt;Name&gt;address&lt;/Name&gt;&lt;CrmType&gt;String&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <SerializedBindings>
     <string>accountid</string>
@@ -23,7 +24,7 @@
     <string>primarycontactid</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
-  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.address&lt;/var&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;arg&gt;var:Entity.address1_line1&lt;/arg&gt;&lt;arg&gt;String: / &lt;/arg&gt;&lt;arg&gt;var:Entity.address1_postalcode&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.address&lt;/var&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;arg&gt;var:Shared.address&lt;/arg&gt;&lt;arg&gt;String: / &lt;/arg&gt;&lt;arg&gt;var:Entity.address1_city&lt;/arg&gt;&lt;/function&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.address&lt;/var&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;arg&gt;var:Entity.address1_line1&lt;/arg&gt;&lt;arg&gt;String: / &lt;/arg&gt;&lt;arg&gt;var:Entity.address1_postalcode&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.address&lt;/var&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;arg&gt;var:Shared.address&lt;/arg&gt;&lt;arg&gt;String: / &lt;/arg&gt;&lt;arg&gt;var:Entity.address1_city&lt;/arg&gt;&lt;/function&gt;&lt;definition e="false"&gt;&lt;var&gt;Today&lt;/var&gt;&lt;func&gt;SetToday&lt;/func&gt;&lt;type&gt;DateTime&lt;/type&gt;&lt;/definition&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
   <SerializedTemplates>
     <RowTemplate>
       <DesignWidth>320</DesignWidth>
@@ -40,14 +41,14 @@
         </CellTemplate>
         <CellTemplate SchemaName="address">
           <StyleName>gray</StyleName>
-          <Bounds>70,38,230,16</Bounds>
+          <Bounds>70,35,230,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="View.building">
           <IsConstant>true</IsConstant>
           <StyleName>ImageCellStyle</StyleName>
-          <Bounds>18,12,39,39</Bounds>
+          <Bounds>16,12,39,39</Bounds>
           <CellKind>1</CellKind>
           <Anchor>7</Anchor>
         </CellTemplate>
@@ -64,10 +65,18 @@
           <CellKind>1</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
+        <CellTemplate SchemaName="Controls.pinBlue.png">
+          <IsConstant>true</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>0,0,100,20</Bounds>
+          <CellKind>2</CellKind>
+          <Anchor>4</Anchor>
+        </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
   </SerializedTemplates>
   <CustomProperties>
     <SerializedClassBinding name="address" label="Shared.address" type="String"/>
+    <SerializedClassBinding name="Today" label="Today" type="DateTime"/>
   </CustomProperties>
 </EntityList>

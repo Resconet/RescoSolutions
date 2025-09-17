@@ -53,13 +53,6 @@
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="">
-          <IsConstant>true</IsConstant>
-          <StyleName>line</StyleName>
-          <Bounds>20,66,300,1</Bounds>
-          <CellKind>0</CellKind>
-          <Anchor>14</Anchor>
-        </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
   </SerializedTemplates>

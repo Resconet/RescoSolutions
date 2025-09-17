@@ -1,0 +1,73 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>resco_questionnaire</EntityName>
+    <CamelCase>resco_questionnaire</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding>
+      <SerializedClassBinding name="#Name" label="Localized Name" type="String"/>
+      <SerializedClassBinding name="#Description" label="Localized Description" type="String"/>
+      <SerializedClassBinding name="#LocalizedResult" label="Localized Result" type="String"/>
+    </ClassBinding>
+  </Attributes>
+  <Name>Answered Questionnaires</Name>
+  <Kind>AssociatedList</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>!modifiedon</OrderBy>
+  <FilterAllowedFields>createdby;createdon;modifiedon;resco_completionstatus;resco_name;resco_publishedon;resco_regardingidname;resco_serializedanswers;resco_templateid;resco_versionname</FilterAllowedFields>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SerializedBindings>
+    <string>resco_completionstatus</string>
+    <string>createdon</string>
+    <string>resco_description</string>
+    <string>resco_folder</string>
+    <string>resco_istemplate</string>
+    <string>resco_languagecode</string>
+    <string>resco_localization</string>
+    <string>modifiedby</string>
+    <string>modifiedon</string>
+    <string>resco_name</string>
+    <string>resco_options</string>
+    <string>resco_questionnaireid</string>
+    <string>resco_result</string>
+    <string>resco_score</string>
+    <string>statuscode</string>
+    <string>resco_templateid</string>
+    <string>resco_templatedependent</string>
+    <string>resco_templateid.resco_questionnaire.resco_localization</string>
+    <string>resco_templateid.resco_questionnaire.resco_options</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;definition e="false"&gt;&lt;var&gt;Status&lt;/var&gt;&lt;func&gt;Clear&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;/definition&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>70</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="#Name">
+          <StyleName>large14</StyleName>
+          <Bounds>10,10,300,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="modifiedby">
+          <StyleName>large10</StyleName>
+          <Bounds>10,40,130,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Status">
+          <StyleName>r_gray</StyleName>
+          <Bounds>150,40,130,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties>
+    <SerializedClassBinding name="Status" label="Status" type="String"/>
+  </CustomProperties>
+</EntityList>

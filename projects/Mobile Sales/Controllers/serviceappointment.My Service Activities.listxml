@@ -36,7 +36,7 @@
           <value>3</value>
         </condition>
       </filter>
-      <link-entity name="activityparty" from="activityid" to="activityid">
+      <link-entity name="activityparty" from="activityid" to="activityid" link-type="inner">
         <filter type="and">
           <condition attribute="partyid" operator="eq-userid"/>
           <condition attribute="participationtypemask" operator="in">
@@ -72,13 +72,6 @@
           <Bounds>210,36,90,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
-        </CellTemplate>
-        <CellTemplate SchemaName="">
-          <IsConstant>true</IsConstant>
-          <StyleName>line</StyleName>
-          <Bounds>20,66,300,1</Bounds>
-          <CellKind>0</CellKind>
-          <Anchor>14</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>

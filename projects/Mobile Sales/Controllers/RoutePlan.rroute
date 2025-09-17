@@ -4,6 +4,10 @@
   <EndDateField>scheduledend</EndDateField>
   <DefaultAction>3</DefaultAction>
   <LookupField>regardingobjectid</LookupField>
+  <StartAtWork>true</StartAtWork>
+  <WorkLocation>42.34261089436768,-71.12249768648563</WorkLocation>
   <EnabledWorkflows>OnRouteItemAdded OnRouteItemCompleted</EnabledWorkflows>
   <CustomCompletionField>statuscode</CustomCompletionField>
+  <EnhancedOptimizationEnabled>true</EnhancedOptimizationEnabled>
+  <DisplayNameField>subject</DisplayNameField>
 </RoutePlan>

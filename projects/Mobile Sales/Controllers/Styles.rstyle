@@ -32,10 +32,10 @@
     <Style Name="gray" Type="TextCell">
       <Properties>
         <Property Name="FontSize" Type="System.Single">
-          <Value>10</Value>
+          <Value>8.666666666666666</Value>
         </Property>
         <Property Name="VerticalAlignment" Type="System.Int32">
-          <Value>1</Value>
+          <Value>2</Value>
         </Property>
         <Property Name="FontName" Type="System.String">
           <Value>Roboto-Regular</Value>
@@ -135,14 +135,14 @@
         <Property Name="FontSize" Type="System.Single">
           <Value>10</Value>
         </Property>
-        <Property Name="VerticalAlignment" Type="System.Int32">
-          <Value>2</Value>
+        <Property Name="CornerRadius" Type="System.Int32">
+          <Value>8</Value>
         </Property>
         <Property Name="HorizontalAlignment" Type="System.Int32">
           <Value>2</Value>
         </Property>
-        <Property Name="CornerRadius" Type="System.Int32">
-          <Value>8</Value>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
         </Property>
       </Properties>
     </Style>
@@ -235,19 +235,19 @@
           <Value>1</Value>
         </Property>
         <Property Name="EditorCornerRadius" Type="System.Int32">
-          <Value>8</Value>
+          <Value>3</Value>
         </Property>
         <Property Name="LabelHorizontalAlignment" Type="System.Int32">
           <Value>1</Value>
-        </Property>
-        <Property Name="RelativeLabelFontSize" Type="System.Int32">
-          <Value>-2</Value>
         </Property>
         <Property Name="WrapText" Type="System.Boolean">
           <Value>True</Value>
         </Property>
         <Property Name="LabelFontWeight" Type="System.Int32">
           <Value>0</Value>
+        </Property>
+        <Property Name="EditorBorderColor" Type="Color">
+          <Value>outlineVariant</Value>
         </Property>
       </Properties>
     </Style>
@@ -293,6 +293,15 @@
         <Property Name="ForeColor" Type="System.Int32">
           <Value>-16777216</Value>
         </Property>
+        <Property Name="CornerRadius" Type="System.Int32">
+          <Value>8</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="HorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
       </Properties>
     </Style>
     <Style Name="ListNoteImage" Type="ImageCell">
@@ -325,6 +334,15 @@
         <Property Name="FontSize" Type="System.Single">
           <Value>10</Value>
         </Property>
+        <Property Name="LabelFontWeight" Type="System.Int32">
+          <Value>0</Value>
+        </Property>
+        <Property Name="LabelPosition" Type="System.Int32">
+          <Value>4</Value>
+        </Property>
+        <Property Name="EditorHorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
       </Properties>
     </Style>
     <Style Name="FormNoteImage" Type="DetailItem" ComponentType="0">
@@ -337,6 +355,18 @@
         </Property>
         <Property Name="FontSize" Type="System.Single">
           <Value>10</Value>
+        </Property>
+        <Property Name="LabelFontWeight" Type="System.Int32">
+          <Value>0</Value>
+        </Property>
+        <Property Name="EditorCornerRadius" Type="System.Int32">
+          <Value>8</Value>
+        </Property>
+        <Property Name="LabelPosition" Type="System.Int32">
+          <Value>4</Value>
+        </Property>
+        <Property Name="EditorHorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
         </Property>
       </Properties>
     </Style>
@@ -380,7 +410,20 @@
       </Properties>
     </Style>
     <Style Name="Lead" Type="ImageCell">
-      <Properties/>
+      <Properties>
+        <Property Name="CornerRadius" Type="System.Int32">
+          <Value>8</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="HorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="ImageFit" Type="System.Int32">
+          <Value>3</Value>
+        </Property>
+      </Properties>
     </Style>
     <Style Name="caption" Type="TextCell">
       <Properties>
@@ -489,9 +532,6 @@
         <Property Name="ForeColor" Type="System.Int32">
           <Value>-16742657</Value>
         </Property>
-        <Property Name="FontWeight" Type="System.Int32">
-          <Value>1</Value>
-        </Property>
         <Property Name="FontName" Type="System.String">
           <Value>Roboto-Bold</Value>
         </Property>
@@ -501,9 +541,6 @@
       <Properties>
         <Property Name="ForeColor" Type="Color">
           <Value>error</Value>
-        </Property>
-        <Property Name="FontWeight" Type="System.Int32">
-          <Value>1</Value>
         </Property>
         <Property Name="FontName" Type="System.String">
           <Value>Roboto-Bold</Value>
@@ -517,9 +554,6 @@
         </Property>
         <Property Name="FontName" Type="System.String">
           <Value>Roboto-Bold</Value>
-        </Property>
-        <Property Name="FontWeight" Type="System.Int32">
-          <Value>1</Value>
         </Property>
       </Properties>
     </Style>
@@ -538,6 +572,9 @@
         <Property Name="BackColor" Type="System.Int32">
           <Value>-5789526</Value>
         </Property>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>1</Value>
+        </Property>
       </Properties>
     </Style>
     <Style Name="color / secondary" Style="color" Type="TextCell">
@@ -547,6 +584,9 @@
         </Property>
         <Property Name="BackColor" Type="System.Int32">
           <Value>-7958891</Value>
+        </Property>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>1</Value>
         </Property>
       </Properties>
     </Style>
@@ -558,6 +598,9 @@
         <Property Name="BackColor" Type="System.Int32">
           <Value>-14178491</Value>
         </Property>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>1</Value>
+        </Property>
       </Properties>
     </Style>
     <Style Name="color / danger" Style="color" Type="TextCell">
@@ -568,6 +611,9 @@
         <Property Name="BackColor" Type="Color">
           <Value>error</Value>
         </Property>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>1</Value>
+        </Property>
       </Properties>
     </Style>
     <Style Name="color / warning" Style="color" Type="TextCell">
@@ -577,6 +623,9 @@
         </Property>
         <Property Name="BackColor" Type="System.Int32">
           <Value>-16122</Value>
+        </Property>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>1</Value>
         </Property>
       </Properties>
     </Style>
@@ -610,9 +659,6 @@
         <Property Name="WrapText" Type="System.Boolean">
           <Value>True</Value>
         </Property>
-        <Property Name="EditorBorderWidth" Type="System.Int32">
-          <Value>1</Value>
-        </Property>
         <Property Name="EditorFontWeight" Type="System.Int32">
           <Value>1</Value>
         </Property>
@@ -621,6 +667,9 @@
         </Property>
         <Property Name="EditorBackgroundColor" Type="Color">
           <Value>primary</Value>
+        </Property>
+        <Property Name="LabelFontWeight" Type="System.Int32">
+          <Value>0</Value>
         </Property>
       </Properties>
     </Style>
@@ -659,19 +708,25 @@
         <Property Name="ImageQuery" Type="System.String">
           <Value>annotation;documentbody;subject;FormImage;objectid;{id}|View.contact.png</Value>
         </Property>
+        <Property Name="CornerRadius" Type="System.Int32">
+          <Value>25</Value>
+        </Property>
+        <Property Name="ImageFit" Type="System.Int32">
+          <Value>3</Value>
+        </Property>
       </Properties>
     </Style>
     <Style Name="Minus" Style="ImageCellStyle" Type="ImageCell">
       <Properties>
-        <Property Name="ImageQuery" Type="System.String">
-          <Value>salesorder;ordernumber;discountpercentage;900000000234|Controls.Remove.png</Value>
+        <Property Name="Format" Type="System.String">
+          <Value>Controls.Remove</Value>
         </Property>
       </Properties>
     </Style>
     <Style Name="Plus" Style="ImageCellStyle" Type="ImageCell">
       <Properties>
-        <Property Name="ImageQuery" Type="System.String">
-          <Value>salesorder;ordernumber;discountpercentage;9999999000870023|Controls.PlusMark.png</Value>
+        <Property Name="Format" Type="System.String">
+          <Value>Controls.PlusMark</Value>
         </Property>
       </Properties>
     </Style>
@@ -698,6 +753,9 @@
         </Property>
         <Property Name="HorizontalAlignment" Type="System.Int32">
           <Value>2</Value>
+        </Property>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>10</Value>
         </Property>
       </Properties>
     </Style>
@@ -729,6 +787,444 @@
       <Properties>
         <Property Name="AutoHeight" Type="System.Boolean">
           <Value>True</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="productImage" Style="ListNoteImage" Type="ImageCell">
+      <Properties>
+        <Property Name="ImageQuery" Type="System.String">
+          <Value>product;entityimage;productid;{productid}|View.filter.png</Value>
+        </Property>
+        <Property Name="CornerRadius" Type="System.Int32">
+          <Value>8</Value>
+        </Property>
+        <Property Name="BackColor" Type="Color">
+          <Value>16710655</Value>
+        </Property>
+        <Property Name="ImageFit" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="priamry1" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>10.5</Value>
+        </Property>
+        <Property Name="ShowBorder" Type="System.Boolean">
+          <Value>False</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="FontName" Type="System.String">
+          <Value>Roboto-Regular</Value>
+        </Property>
+        <Property Name="AutoHeight" Type="System.Boolean">
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="large10Bold" Style="large" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>10</Value>
+        </Property>
+        <Property Name="FontWeight" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="HorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="backround" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>10.5</Value>
+        </Property>
+        <Property Name="ShowBorder" Type="System.Boolean">
+          <Value>False</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="FontName" Type="System.String">
+          <Value>Roboto-Regular</Value>
+        </Property>
+        <Property Name="FontWeight" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="BackColor" Type="Color">
+          <Value>secondaryContainer</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="large10BoldCenter" Style="large" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>10</Value>
+        </Property>
+        <Property Name="FontWeight" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="HorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="AutoHeight" Type="System.Boolean">
+          <Value>True</Value>
+        </Property>
+        <Property Name="EllipsisPosition" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="lange10 Center" Style="large" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>10</Value>
+        </Property>
+        <Property Name="HorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="AutoHeight" Type="System.Boolean">
+          <Value>True</Value>
+        </Property>
+        <Property Name="EllipsisPosition" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="LArge 14 bold Center" Style="large" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>14</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="FontWeight" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="HorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="AutoHeight" Type="System.Boolean">
+          <Value>True</Value>
+        </Property>
+        <Property Name="EllipsisPosition" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="qIcon" Style="ListNoteImage" Type="ImageCell">
+      <Properties>
+        <Property Name="ImageQuery" Type="System.String">
+          <Value>annotation;documentbody;objectid;{id};subject;-resco_icon|inspections.survey</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Priority" Style="Normal" Type="DetailItem" ComponentType="0">
+      <Properties>
+        <Property Name="LabelFontWeight" Type="System.Int32">
+          <Value>0</Value>
+        </Property>
+        <Property Name="ComboBoxImageAlignment" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="ImageBasePath" Type="System.String">
+          <Value>Priority</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Photo" Style="FormNoteImage" Type="DetailItem" ComponentType="0">
+      <Properties>
+        <Property Name="LabelPosition" Type="System.Int32">
+          <Value>4</Value>
+        </Property>
+        <Property Name="EditorHorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="EditorCornerRadius" Type="System.Int32">
+          <Value>8</Value>
+        </Property>
+        <Property Name="LabelFontWeight" Type="System.Int32">
+          <Value>0</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="large10BoldColor" Style="large" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>10</Value>
+        </Property>
+        <Property Name="FontWeight" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="HorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="AutoHeight" Type="System.Boolean">
+          <Value>True</Value>
+        </Property>
+        <Property Name="EllipsisPosition" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="ForeColor" Type="Color">
+          <Value>primary</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="InspectionImage" Type="ImageCell">
+      <Properties>
+        <Property Name="EditorCornerRadius" Type="System.Int32">
+          <Value>6</Value>
+        </Property>
+        <Property Name="ImageQuery" Type="System.String">
+          <Value>annotation;documentbody</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="QuestionnaireIcon" Style="InspectionImage" Type="ImageCell">
+      <Properties>
+        <Property Name="HorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="CornerRadius" Type="System.Int32">
+          <Value>8</Value>
+        </Property>
+        <Property Name="ImageFit" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="ImageQuery" Type="System.String">
+          <Value>annotation;documentbody;objectid;{id};subject;-resco_icon|inspections.survey@2x.png</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="QuetionnaireTemplate" Style="QuestionnaireIcon" Type="ImageCell">
+      <Properties>
+        <Property Name="ImageQuery" Type="System.String">
+          <Value>annotation;documentbody;objectid;{resco_templateid};subject;-resco_icon|inspections.survey</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="gray_l" Style="gray" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>8</Value>
+        </Property>
+        <Property Name="EllipsisPosition" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="AutoHeight" Type="System.Boolean">
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="ButtonGreen" Type="DetailItem" ComponentType="0">
+      <Properties>
+        <Property Name="EditorHorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="LabelHorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="LabelPosition" Type="System.Int32">
+          <Value>4</Value>
+        </Property>
+        <Property Name="EditorCornerRadius" Type="System.Int32">
+          <Value>8</Value>
+        </Property>
+        <Property Name="WrapText" Type="System.Boolean">
+          <Value>True</Value>
+        </Property>
+        <Property Name="EditorFontWeight" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="EditorForegroundColor" Type="Color">
+          <Value>onPrimary</Value>
+        </Property>
+        <Property Name="EditorBackgroundColor" Type="Color">
+          <Value>-12800673</Value>
+        </Property>
+        <Property Name="LabelFontWeight" Type="System.Int32">
+          <Value>0</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="homeicon" Style="ImageCellStyle" Type="ImageCell">
+      <Properties>
+        <Property Name="ForeColor" Type="Color">
+          <Value>primary</Value>
+        </Property>
+        <Property Name="BackColor" Type="Color">
+          <Value>16777215</Value>
+        </Property>
+        <Property Name="ImageFit" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="CornerRadius" Type="System.Int32">
+          <Value>0</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="primary_blue" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>8.666666666666666</Value>
+        </Property>
+        <Property Name="ShowBorder" Type="System.Boolean">
+          <Value>False</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="FontName" Type="System.String">
+          <Value>Roboto-Regular</Value>
+        </Property>
+        <Property Name="FontWeight" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="ForeColor" Type="Color">
+          <Value>primary</Value>
+        </Property>
+        <Property Name="BackColor" Type="Color">
+          <Value>secondaryContainer</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="ListNoteImage-PDF" Style="ListNoteImage" Type="ImageCell">
+      <Properties>
+        <Property Name="CornerRadius" Type="System.Int32">
+          <Value>100</Value>
+        </Property>
+        <Property Name="ImageFit" Type="System.Int32">
+          <Value>3</Value>
+        </Property>
+        <Property Name="ImageQuery" Type="System.String">
+          <Value>annotation;documentbody;subject;ListImage;objectid;{id}|inspections.pdf@2x.png</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="gray_primary" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>10</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="FontName" Type="System.String">
+          <Value>Roboto-Regular</Value>
+        </Property>
+        <Property Name="ForeColor" Type="Color">
+          <Value>outline</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="gray_bold" Type="TextCell">
+      <Properties>
+        <Property Name="FontSize" Type="System.Single">
+          <Value>10</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="FontName" Type="System.String">
+          <Value>Roboto-Regular</Value>
+        </Property>
+        <Property Name="ForeColor" Type="Color">
+          <Value>outline</Value>
+        </Property>
+        <Property Name="FontWeight" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Normal RadioButton Horizontal" Type="DetailItem" ComponentType="0">
+      <Properties>
+        <Property Name="LabelAutoHeight" Type="System.Boolean">
+          <Value>True</Value>
+        </Property>
+        <Property Name="LabelPosition" Type="System.Int32">
+          <Value>5</Value>
+        </Property>
+        <Property Name="EditorBorderWidth" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="EditorCornerRadius" Type="System.Int32">
+          <Value>3</Value>
+        </Property>
+        <Property Name="LabelHorizontalAlignment" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="WrapText" Type="System.Boolean">
+          <Value>True</Value>
+        </Property>
+        <Property Name="LabelFontWeight" Type="System.Int32">
+          <Value>0</Value>
+        </Property>
+        <Property Name="EditorBorderColor" Type="Color">
+          <Value>outlineVariant</Value>
+        </Property>
+        <Property Name="RadioButtonMaxCount" Type="System.Int32">
+          <Value>5</Value>
+        </Property>
+        <Property Name="EditorHorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="SegmentedButtonsLayout" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Priority Horizontal RadioButton" Style="Normal" Type="DetailItem" ComponentType="0">
+      <Properties>
+        <Property Name="LabelFontWeight" Type="System.Int32">
+          <Value>0</Value>
+        </Property>
+        <Property Name="ComboBoxImageAlignment" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="ImageBasePath" Type="System.String">
+          <Value>Priority</Value>
+        </Property>
+        <Property Name="RadioButtonMaxCount" Type="System.Int32">
+          <Value>4</Value>
+        </Property>
+        <Property Name="EditorHorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Rating Horizontal RadioButton" Style="Normal" Type="DetailItem" ComponentType="0">
+      <Properties>
+        <Property Name="LabelFontWeight" Type="System.Int32">
+          <Value>0</Value>
+        </Property>
+        <Property Name="ComboBoxImageAlignment" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="ImageBasePath" Type="System.String">
+          <Value>Rating</Value>
+        </Property>
+        <Property Name="RadioButtonMaxCount" Type="System.Int32">
+          <Value>4</Value>
+        </Property>
+        <Property Name="EditorHorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
         </Property>
       </Properties>
     </Style>

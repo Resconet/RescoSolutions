@@ -35,7 +35,7 @@
       <filter type="and">
         <condition attribute="statecode" operator="eq" value="0"/>
       </filter>
-      <link-entity name="activityparty" from="activityid" to="activityid">
+      <link-entity name="activityparty" from="activityid" to="activityid" link-type="inner">
         <filter type="and">
           <condition attribute="participationtypemask" operator="in">
             <value>9</value>
@@ -72,13 +72,6 @@
           <Bounds>200,36,100,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
-        </CellTemplate>
-        <CellTemplate SchemaName="">
-          <IsConstant>true</IsConstant>
-          <StyleName>line</StyleName>
-          <Bounds>20,66,300,1</Bounds>
-          <CellKind>0</CellKind>
-          <Anchor>14</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>

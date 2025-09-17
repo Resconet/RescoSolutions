@@ -58,15 +58,15 @@
           <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="#ExtendedAmountLabel">
-          <StyleName>gray</StyleName>
-          <Bounds>8,67,90,20</Bounds>
+          <StyleName>gray_bold</StyleName>
+          <Bounds>43,67,90,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="Total Price:">
           <IsConstant>true</IsConstant>
-          <StyleName>gray</StyleName>
-          <Bounds>8,47,90,20</Bounds>
+          <StyleName>gray_primary</StyleName>
+          <Bounds>43,47,90,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
@@ -78,8 +78,8 @@
           <Anchor>9</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="#PricePerUnitLabel">
-          <StyleName>gray</StyleName>
-          <Bounds>8,27,90,20</Bounds>
+          <StyleName>gray_primary</StyleName>
+          <Bounds>43,27,90,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
@@ -99,9 +99,16 @@
         </CellTemplate>
         <CellTemplate SchemaName="#PrimaryName">
           <StyleName>primary</StyleName>
-          <Bounds>8,2,308,25</Bounds>
+          <Bounds>43,2,273,25</Bounds>
           <CellKind>3</CellKind>
           <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>productImage</StyleName>
+          <Bounds>7,8,25,25</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>4</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>

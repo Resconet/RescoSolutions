@@ -31,7 +31,7 @@
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary</StyleName>
-          <Bounds>27,12,273,20</Bounds>
+          <Bounds>40,12,259,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -43,7 +43,7 @@
         </CellTemplate>
         <CellTemplate SchemaName="quotenumber">
           <StyleName>gray</StyleName>
-          <Bounds>27,38,162,16</Bounds>
+          <Bounds>40,38,149,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -55,9 +55,16 @@
         </CellTemplate>
         <CellTemplate SchemaName="customerid">
           <StyleName>gray</StyleName>
-          <Bounds>27,59,156,16</Bounds>
+          <Bounds>40,59,143,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="">
+          <IsConstant>true</IsConstant>
+          <StyleName>color / primary</StyleName>
+          <Bounds>14,22,8,8</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>4</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
@@ -70,7 +77,7 @@
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary</StyleName>
-          <Bounds>27,12,273,20</Bounds>
+          <Bounds>40,12,261,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -82,7 +89,7 @@
         </CellTemplate>
         <CellTemplate SchemaName="quotenumber">
           <StyleName>gray</StyleName>
-          <Bounds>27,38,164,16</Bounds>
+          <Bounds>40,38,151,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -95,13 +102,13 @@
         <CellTemplate SchemaName="">
           <IsConstant>true</IsConstant>
           <StyleName>color / info</StyleName>
-          <Bounds>10,20,8,8</Bounds>
+          <Bounds>14,20,8,8</Bounds>
           <CellKind>0</CellKind>
           <Anchor>7</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="customerid">
           <StyleName>gray</StyleName>
-          <Bounds>27,59,164,16</Bounds>
+          <Bounds>40,59,151,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -116,7 +123,7 @@
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary</StyleName>
-          <Bounds>27,12,273,20</Bounds>
+          <Bounds>40,12,259,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -128,7 +135,7 @@
         </CellTemplate>
         <CellTemplate SchemaName="quotenumber">
           <StyleName>gray</StyleName>
-          <Bounds>27,38,164,16</Bounds>
+          <Bounds>40,38,151,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -141,13 +148,13 @@
         <CellTemplate SchemaName="">
           <IsConstant>true</IsConstant>
           <StyleName>color / danger</StyleName>
-          <Bounds>10,20,8,8</Bounds>
+          <Bounds>14,20,8,8</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="customerid">
           <StyleName>gray</StyleName>
-          <Bounds>27,59,164,16</Bounds>
+          <Bounds>40,59,151,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -163,7 +170,7 @@
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary</StyleName>
-          <Bounds>27,12,273,20</Bounds>
+          <Bounds>40,12,260,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -175,7 +182,7 @@
         </CellTemplate>
         <CellTemplate SchemaName="quotenumber">
           <StyleName>gray</StyleName>
-          <Bounds>27,38,164,16</Bounds>
+          <Bounds>40,38,151,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -188,13 +195,13 @@
         <CellTemplate SchemaName="">
           <IsConstant>true</IsConstant>
           <StyleName>color / success</StyleName>
-          <Bounds>10,20,8,8</Bounds>
+          <Bounds>14,20,8,8</Bounds>
           <CellKind>0</CellKind>
           <Anchor>7</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="customerid">
           <StyleName>gray</StyleName>
-          <Bounds>27,59,164,16</Bounds>
+          <Bounds>40,59,151,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>

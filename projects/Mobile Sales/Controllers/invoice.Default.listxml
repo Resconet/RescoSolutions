@@ -32,7 +32,7 @@
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary</StyleName>
-          <Bounds>27,12,273,20</Bounds>
+          <Bounds>40,12,260,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -44,7 +44,7 @@
         </CellTemplate>
         <CellTemplate SchemaName="customerid">
           <StyleName>gray</StyleName>
-          <Bounds>27,80,273,16</Bounds>
+          <Bounds>40,80,260,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -56,29 +56,29 @@
         </CellTemplate>
         <CellTemplate SchemaName="invoicenumber">
           <StyleName>gray</StyleName>
-          <Bounds>27,38,143,16</Bounds>
+          <Bounds>40,38,130,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="DueDate">
           <StyleName>link</StyleName>
-          <Bounds>92,59,80,16</Bounds>
+          <Bounds>99,59,72,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="rule">
           <IsConstant>true</IsConstant>
           <StyleName>color / primary</StyleName>
-          <Bounds>10,20,8,8</Bounds>
+          <Bounds>14,20,8,8</Bounds>
           <CellKind>0</CellKind>
           <Anchor>7</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="Due date:">
           <IsConstant>true</IsConstant>
           <StyleName>gray</StyleName>
-          <Bounds>27,59,57,16</Bounds>
+          <Bounds>40,59,58,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
+          <Anchor>4</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>

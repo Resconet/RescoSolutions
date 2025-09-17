@@ -1,0 +1,37 @@
+﻿<EntityChart>
+  <Name>Guage</Name>
+  <Kind>Gauge</Kind>
+  <LimitCount>3</LimitCount>
+  <MinValue>
+    <Color>#0000ff</Color>
+    <ValueType>Constant</ValueType>
+  </MinValue>
+  <MaxValue>
+    <Color>#0000ff</Color>
+    <ValueType>Constant</ValueType>
+    <NumericValue>17</NumericValue>
+  </MaxValue>
+  <TargetValue>
+    <Color>#0000ff</Color>
+    <ValueType>Constant</ValueType>
+    <NumericValue>10</NumericValue>
+  </TargetValue>
+  <SerializedBindings/>
+  <Attributes>
+    <EntityName>salesorderdetail</EntityName>
+    <CamelCase>salesorderdetail</CamelCase>
+  </Attributes>
+  <Series>
+    <Series>
+      <Attribute>quantity</Attribute>
+      <Color>#0000ff</Color>
+      <Aggregation>Sum</Aggregation>
+    </Series>
+  </Series>
+  <GroupBySeries>
+    <GroupBySeries>
+      <Attribute>productid</Attribute>
+    </GroupBySeries>
+  </GroupBySeries>
+  <Axis>productid</Axis>
+</EntityChart>
