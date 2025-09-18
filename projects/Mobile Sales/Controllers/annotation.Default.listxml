@@ -22,6 +22,7 @@
       <Name>Default</Name>
       <Width>320</Width>
       <Height>77</Height>
+      <Buttons>Delete</Buttons>
       <SerializedChildren>
         <CellTemplate SchemaName="subject">
           <StyleName>primary</StyleName>

@@ -4,6 +4,7 @@
       <properties>
         <property schema="accountcategorycode"/>
         <property schema="accountid"/>
+        <property schema="accountnumber"/>
         <property schema="address1_city"/>
         <property schema="address1_country"/>
         <property schema="address1_latitude"/>
@@ -25,7 +26,7 @@
         <property schema="primarycontactid"/>
         <property schema="statecode"/>
         <property schema="statuscode"/>
-        <property schema="telephone1"/>
+        <property schema="telephone1" displayformat="PhoneNumber"/>
         <property schema="transactioncurrencyid"/>
         <property schema="websiteurl"/>
       </properties>
@@ -112,6 +113,7 @@
     <entity schema="annotation">
       <properties>
         <property schema="annotationid"/>
+        <property schema="createdby"/>
         <property schema="createdon"/>
         <property schema="documentbody"/>
         <property schema="filename"/>
@@ -126,6 +128,11 @@
         <property schema="subject"/>
       </properties>
       <indexes>
+        <index schema="idx_annotation_createdby" issystem="true">
+          <fields>
+            <field schema="createdby"/>
+          </fields>
+        </index>
         <index schema="idx_annotation_objectid" issystem="true">
           <fields>
             <field schema="objectid"/>
@@ -146,6 +153,9 @@
     <entity schema="appointment">
       <properties>
         <property schema="activityid"/>
+        <property schema="actualdurationminutes"/>
+        <property schema="actualend"/>
+        <property schema="actualstart"/>
         <property schema="createdon"/>
         <property schema="description"/>
         <property schema="location"/>
@@ -186,6 +196,7 @@
     </entity>
     <entity schema="contact">
       <properties>
+        <property schema="accountid"/>
         <property schema="address1_city"/>
         <property schema="address1_country"/>
         <property schema="address1_latitude"/>
@@ -203,16 +214,21 @@
         <property schema="fullname"/>
         <property schema="jobtitle"/>
         <property schema="lastname"/>
-        <property schema="mobilephone"/>
+        <property schema="mobilephone" displayformat="PhoneNumber"/>
         <property schema="modifiedon"/>
         <property schema="ownerid"/>
         <property schema="parentcustomerid"/>
         <property schema="preferredcontactmethodcode"/>
         <property schema="statecode"/>
         <property schema="statuscode"/>
-        <property schema="telephone1"/>
+        <property schema="telephone1" displayformat="PhoneNumber"/>
       </properties>
       <indexes>
+        <index schema="idx_contact_accountid" issystem="true">
+          <fields>
+            <field schema="accountid"/>
+          </fields>
+        </index>
         <index schema="idx_contact_fullname" issystem="true">
           <fields>
             <field schema="fullname"/>
@@ -709,6 +725,7 @@
         <property schema="currentcost"/>
         <property schema="defaultuomid"/>
         <property schema="defaultuomscheduleid"/>
+        <property schema="entityimage"/>
         <property schema="iskit"/>
         <property schema="isstockitem"/>
         <property schema="modifiedon"/>
@@ -811,6 +828,7 @@
         <property schema="customerid"/>
         <property schema="discountamount"/>
         <property schema="discountpercentage"/>
+        <property schema="effectiveto"/>
         <property schema="freightamount"/>
         <property schema="freighttermscode"/>
         <property schema="modifiedon"/>
@@ -1038,6 +1056,48 @@
         </index>
       </indexes>
     </entity>
+    <entity schema="resco_tag">
+      <properties>
+        <property schema="createdon"/>
+        <property schema="modifiedon"/>
+        <property schema="ownerid"/>
+        <property schema="resco_accountid"/>
+        <property schema="resco_appointment"/>
+        <property schema="resco_assetid"/>
+        <property schema="resco_imagename"/>
+        <property schema="resco_name"/>
+        <property schema="resco_positionx"/>
+        <property schema="resco_positiony"/>
+        <property schema="resco_tagid"/>
+      </properties>
+      <indexes>
+        <index schema="idx_resco_tag_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_tag_resco_accountid" issystem="true">
+          <fields>
+            <field schema="resco_accountid"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_tag_resco_appointment" issystem="true">
+          <fields>
+            <field schema="resco_appointment"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_tag_resco_assetid" issystem="true">
+          <fields>
+            <field schema="resco_assetid"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_tag_resco_name" issystem="true">
+          <fields>
+            <field schema="resco_name"/>
+          </fields>
+        </index>
+      </indexes>
+    </entity>
     <entity schema="resco_usersettings">
       <properties>
         <property schema="createdon"/>
@@ -1065,6 +1125,8 @@
       <properties>
         <property schema="createdon"/>
         <property schema="customerid"/>
+        <property schema="datefulfilled"/>
+        <property schema="description"/>
         <property schema="discountamount"/>
         <property schema="discountpercentage"/>
         <property schema="freightamount"/>
@@ -1085,7 +1147,11 @@
         <property schema="shipto_stateorprovince"/>
         <property schema="statecode"/>
         <property schema="statuscode"/>
+        <property schema="submitdate"/>
         <property schema="totalamount"/>
+        <property schema="totalamountlessfreight"/>
+        <property schema="totallineitemamount"/>
+        <property schema="totaltax"/>
         <property schema="transactioncurrencyid"/>
       </properties>
       <indexes>

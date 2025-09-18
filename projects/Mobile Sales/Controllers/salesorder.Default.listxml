@@ -31,7 +31,7 @@
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary</StyleName>
-          <Bounds>27,12,273,20</Bounds>
+          <Bounds>40,12,260,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -43,7 +43,7 @@
         </CellTemplate>
         <CellTemplate SchemaName="ordernumber">
           <StyleName>gray</StyleName>
-          <Bounds>27,38,159,16</Bounds>
+          <Bounds>40,38,146,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -55,14 +55,14 @@
         </CellTemplate>
         <CellTemplate SchemaName="customerid">
           <StyleName>gray</StyleName>
-          <Bounds>27,59,159,16</Bounds>
+          <Bounds>40,59,146,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="rule">
           <IsConstant>true</IsConstant>
           <StyleName>color / info</StyleName>
-          <Bounds>10,20,8,8</Bounds>
+          <Bounds>14,20,8,8</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>

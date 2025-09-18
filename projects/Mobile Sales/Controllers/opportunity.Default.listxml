@@ -17,6 +17,7 @@
     <string>opportunityid</string>
     <string>customerid</string>
     <string>opportunityratingcode</string>
+    <string>statuscode</string>
     <string>name</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
@@ -31,7 +32,7 @@
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary</StyleName>
-          <Bounds>60,12,240,20</Bounds>
+          <Bounds>60,12,148,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -62,16 +63,22 @@
         </CellTemplate>
         <CellTemplate SchemaName="EstCloseDate">
           <StyleName>link</StyleName>
-          <Bounds>140,59,99,16</Bounds>
+          <Bounds>124,59,114,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="Est. close:">
           <IsConstant>true</IsConstant>
           <StyleName>gray</StyleName>
-          <Bounds>60,59,78,16</Bounds>
+          <Bounds>60,59,64,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <StyleName>r_gray</StyleName>
+          <Bounds>208,12,92,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>8</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
@@ -84,7 +91,7 @@
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary</StyleName>
-          <Bounds>60,12,240,20</Bounds>
+          <Bounds>60,12,148,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -100,11 +107,11 @@
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="integer">
+        <CellTemplate SchemaName="estimatedvalue">
           <StyleName>r_currency</StyleName>
-          <Bounds>206,55,94,20</Bounds>
+          <Bounds>240,55,60,20</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>9</Anchor>
+          <Anchor>12</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="View.rating cold.png">
           <IsConstant>true</IsConstant>
@@ -115,16 +122,22 @@
         </CellTemplate>
         <CellTemplate SchemaName="EstCloseDate">
           <StyleName>link</StyleName>
-          <Bounds>135,59,70,16</Bounds>
+          <Bounds>124,59,114,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
+          <Anchor>4</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="Est. close:">
           <IsConstant>true</IsConstant>
           <StyleName>gray</StyleName>
-          <Bounds>60,59,51,16</Bounds>
+          <Bounds>60,59,64,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <StyleName>r_gray</StyleName>
+          <Bounds>208,12,92,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>8</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
@@ -137,7 +150,7 @@
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary</StyleName>
-          <Bounds>60,12,240,20</Bounds>
+          <Bounds>60,12,148,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -153,11 +166,11 @@
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="integer">
+        <CellTemplate SchemaName="estimatedvalue">
           <StyleName>r_currency</StyleName>
-          <Bounds>207,56,93,20</Bounds>
+          <Bounds>240,55,60,20</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>9</Anchor>
+          <Anchor>12</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="View.rating warm.png">
           <IsConstant>true</IsConstant>
@@ -168,16 +181,22 @@
         </CellTemplate>
         <CellTemplate SchemaName="EstCloseDate">
           <StyleName>link</StyleName>
-          <Bounds>135,59,70,16</Bounds>
+          <Bounds>124,59,114,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
+          <Anchor>4</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="Est. close:">
           <IsConstant>true</IsConstant>
           <StyleName>gray</StyleName>
-          <Bounds>60,59,66,16</Bounds>
+          <Bounds>60,59,64,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statuscode">
+          <StyleName>r_gray</StyleName>
+          <Bounds>208,12,92,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>8</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>

@@ -69,13 +69,6 @@
           <CellKind>0</CellKind>
           <Anchor>6</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="">
-          <IsConstant>true</IsConstant>
-          <StyleName>line</StyleName>
-          <Bounds>60,66,260,1</Bounds>
-          <CellKind>0</CellKind>
-          <Anchor>5</Anchor>
-        </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
   </SerializedTemplates>

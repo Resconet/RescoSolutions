@@ -37,7 +37,7 @@
         </CellTemplate>
         <CellTemplate SchemaName="View.rating cold.png">
           <IsConstant>true</IsConstant>
-          <StyleName>Lead</StyleName>
+          <StyleName>ImageCellStyle</StyleName>
           <Bounds>14,12,32,32</Bounds>
           <CellKind>1</CellKind>
           <Anchor>7</Anchor>
@@ -96,7 +96,7 @@
         </CellTemplate>
         <CellTemplate SchemaName="View.rating warm.png">
           <IsConstant>true</IsConstant>
-          <StyleName>Lead</StyleName>
+          <StyleName>ImageCellStyle</StyleName>
           <Bounds>14,12,32,32</Bounds>
           <CellKind>1</CellKind>
           <Anchor>7</Anchor>
@@ -155,7 +155,7 @@
         </CellTemplate>
         <CellTemplate SchemaName="View.rating hot.png">
           <IsConstant>true</IsConstant>
-          <StyleName>Lead</StyleName>
+          <StyleName>ImageCellStyle</StyleName>
           <Bounds>14,12,32,32</Bounds>
           <CellKind>1</CellKind>
           <Anchor>7</Anchor>

@@ -32,39 +32,39 @@
       <SerializedChildren>
         <CellTemplate SchemaName="fullname">
           <StyleName>primary</StyleName>
-          <Bounds>70,12,230,20</Bounds>
+          <Bounds>76,12,230,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="telephone1">
           <StyleName>link</StyleName>
-          <Bounds>88,59,142,16</Bounds>
+          <Bounds>93,59,85,16</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>5</Anchor>
+          <Anchor>12</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="emailaddress1">
           <StyleName>r_gray</StyleName>
-          <Bounds>185,59,115,16</Bounds>
+          <Bounds>184,59,122,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="View.phone.png">
           <IsConstant>true</IsConstant>
           <StyleName>ImageCellStyle</StyleName>
-          <Bounds>70,60,12,12</Bounds>
+          <Bounds>76,60,13,14</Bounds>
           <CellKind>1</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="subtitle">
           <StyleName>gray</StyleName>
-          <Bounds>70,38,230,16</Bounds>
+          <Bounds>76,32,230,22</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="img">
           <IsConstant>true</IsConstant>
           <StyleName>FormImage</StyleName>
-          <Bounds>4,13,63,67</Bounds>
+          <Bounds>16,12,50,50</Bounds>
           <CellKind>1</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>

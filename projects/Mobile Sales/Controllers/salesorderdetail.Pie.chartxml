@@ -1,0 +1,32 @@
+﻿<EntityChart>
+  <Name>Pie</Name>
+  <Kind>Pie</Kind>
+  <LimitCount>3</LimitCount>
+  <MinValue>
+    <Color>#0000ff</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#0000ff</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#0000ff</Color>
+  </TargetValue>
+  <SerializedBindings/>
+  <Attributes>
+    <EntityName>salesorderdetail</EntityName>
+    <CamelCase>salesorderdetail</CamelCase>
+  </Attributes>
+  <Series>
+    <Series>
+      <Attribute>quantity</Attribute>
+      <Color>#0000ff</Color>
+      <Aggregation>Sum</Aggregation>
+    </Series>
+  </Series>
+  <GroupBySeries>
+    <GroupBySeries>
+      <Attribute>salesorderdetailname</Attribute>
+    </GroupBySeries>
+  </GroupBySeries>
+  <Axis>salesorderdetailname</Axis>
+</EntityChart>

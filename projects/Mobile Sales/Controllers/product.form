@@ -1,22 +1,70 @@
-﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="0" fullscreen="0" resize="0" version="2">
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="0" fullscreen="0" resize="0" version="2" layoutstrict="0" singlecardexpand="0">
   <IsContactForm>false</IsContactForm>
   <EntityName>product</EntityName>
   <CamelCase>Product</CamelCase>
   <IsBulkUpdateForm>false</IsBulkUpdateForm>
   <CacheMode>-1</CacheMode>
+  <UiSyncGuardMode>-1</UiSyncGuardMode>
   <PrimaryCommands>!defcmd</PrimaryCommands>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
   <SerializedChildrenV2>
     <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>General</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="name"/>
-        <DetailItem SchemaName="productnumber"/>
-        <DetailItem SchemaName="producttypecode"/>
-        <DetailItem SchemaName="standardcost"/>
-        <DetailItem SchemaName="price"/>
-        <DetailItem SchemaName="quantityonhand"/>
+        <DetailItem SchemaName="entityimage1" image="true" imageActions="0" Style="FormEntityImage">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="statecode">
+          <GridPosition>0;0;1;1</GridPosition>
+        </DetailItem>
+        <DetailItem SchemaName="$Table1" grid="true">
+          <Columns>*;*</Columns>
+          <Rows>Auto;Auto;Auto;Auto;Auto;Auto;Auto;Auto;Auto</Rows>
+          <Items>
+            <DetailItem SchemaName="name">
+              <GridPosition>0;0;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="productnumber">
+              <GridPosition>0;1;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="producttypecode">
+              <GridPosition>0;2;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="defaultuomid">
+              <GridPosition>0;3;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="defaultuomscheduleid">
+              <GridPosition>0;4;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="standardcost">
+              <GridPosition>0;5;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="price">
+              <GridPosition>1;5;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="quantityonhand">
+              <GridPosition>0;6;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="currentcost">
+              <GridPosition>1;6;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="pricelevelid">
+              <GridPosition>0;7;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="transactioncurrencyid">
+              <GridPosition>0;8;2;1</GridPosition>
+            </DetailItem>
+          </Items>
+        </DetailItem>
       </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="0" flexiHeight="2" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>Price List Items List</Name>
+      <Binding SchemaName="productpricelevel.productid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="0" flexiHeight="2" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
+      <Name>Notes List</Name>
+      <Binding SchemaName="annotation.objectid"/>
     </FormTab>
   </SerializedChildrenV2>
 </EntityForm>

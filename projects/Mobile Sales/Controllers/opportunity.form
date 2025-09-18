@@ -1,16 +1,13 @@
-﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="0" fullscreen="0" resize="0" version="2">
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="0" fullscreen="0" resize="0" version="2" layoutstrict="0" singlecardexpand="0">
   <IsContactForm>false</IsContactForm>
   <EntityName>opportunity</EntityName>
   <CamelCase>Opportunity</CamelCase>
   <IsBulkUpdateForm>false</IsBulkUpdateForm>
   <CacheMode>-1</CacheMode>
+  <UiSyncGuardMode>-1</UiSyncGuardMode>
   <PrimaryCommands>!defcmd</PrimaryCommands>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
   <SerializedChildrenV2>
-    <FormTab xsi:type="ProcessControlTab" flexiHeight="215px" flexiWidth="1" flexiHeader="0" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
-      <Name>Process</Name>
-      <SelectedProcessControl>Process</SelectedProcessControl>
-    </FormTab>
     <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>General</Name>
       <SerializedChildren>
@@ -25,7 +22,7 @@
               <GridPosition>0;1;2;1</GridPosition>
             </DetailItem>
             <DetailItem SchemaName="transactioncurrencyid">
-              <GridPosition>0;2;2;1</GridPosition>
+              <GridPosition>0;9;2;1</GridPosition>
             </DetailItem>
             <DetailItem SchemaName="pricelevelid">
               <GridPosition>0;3;2;1</GridPosition>
@@ -45,32 +42,32 @@
             <DetailItem SchemaName="stepname">
               <GridPosition>0;8;2;1</GridPosition>
             </DetailItem>
-            <DetailItem SchemaName="opportunityratingcode">
-              <GridPosition>0;9;1;1</GridPosition>
-            </DetailItem>
-            <DetailItem SchemaName="closeprobability">
-              <GridPosition>1;9;1;1</GridPosition>
+            <DetailItem SchemaName="opportunityratingcode" Style="Rating Horizontal RadioButton">
+              <GridPosition>0;2;2;1</GridPosition>
             </DetailItem>
             <DetailItem SchemaName="statuscode">
-              <GridPosition>0;10;2;1</GridPosition>
+              <GridPosition>0;10;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="closeprobability">
+              <GridPosition>1;10;1;1</GridPosition>
             </DetailItem>
           </Items>
         </DetailItem>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0">
-      <Name>Opportunity Lines List</Name>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0">
+      <Name>Opportunity Products List</Name>
       <Binding SchemaName="opportunityproduct.opportunityid"/>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\activity@2x.png" IsIconNameReadOnly="0">
-      <Name>Activity List</Name>
-      <Binding SchemaName="activity.regardingobjectid"/>
-    </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\quote@2x.png" IsIconNameReadOnly="0">
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\quote@2x.png" IsIconNameReadOnly="0" DocCommands="0" FlipMode="224">
       <Name>Quotes List</Name>
       <Binding SchemaName="quote.opportunityid"/>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
+    <FormTab xsi:type="AssociatedTab" flexi="0" flexiHeight="3" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\activity@2x.png" IsIconNameReadOnly="0">
+      <Name>Activity List</Name>
+      <Binding SchemaName="activity.regardingobjectid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
       <Name>Notes List</Name>
       <Binding SchemaName="annotation.objectid"/>
     </FormTab>

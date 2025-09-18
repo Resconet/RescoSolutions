@@ -21,18 +21,10 @@
     </entity>
   </fetch>
   <fetch version="1.0">
-    <entity name="salesorder">
-      <filter type="and">
-        <condition attribute="modifiedon" operator="last-x-days" value="30"/>
-      </filter>
-    </entity>
+    <entity name="salesorder"/>
   </fetch>
   <fetch version="1.0">
-    <entity name="invoice">
-      <filter type="and">
-        <condition attribute="modifiedon" operator="last-x-days" value="30"/>
-      </filter>
-    </entity>
+    <entity name="invoice"/>
   </fetch>
   <fetch version="1.0">
     <entity name="opportunity">
@@ -63,11 +55,7 @@
     </entity>
   </fetch>
   <fetch version="1.0">
-    <entity name="appointment">
-      <filter type="and">
-        <condition attribute="modifiedon" operator="last-x-days" value="60"/>
-      </filter>
-    </entity>
+    <entity name="appointment"/>
   </fetch>
   <fetch version="1.0">
     <entity name="serviceappointment">
@@ -88,6 +76,13 @@
       <filter type="or">
         <condition attribute="resco_kind" operator="like" value="App.%"/>
         <condition attribute="resco_kind" operator="like" value="Global.%"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="product">
+      <filter type="and">
+        <condition attribute="name" operator="like" value="%Filter%"/>
       </filter>
     </entity>
   </fetch>

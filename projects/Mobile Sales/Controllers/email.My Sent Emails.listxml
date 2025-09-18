@@ -48,7 +48,7 @@
         <condition attribute="statuscode" operator="eq" value="3"/>
         <condition attribute="directioncode" operator="eq" value="1"/>
       </filter>
-      <link-entity name="activityparty" from="activityid" to="activityid">
+      <link-entity name="activityparty" from="activityid" to="activityid" link-type="inner">
         <filter type="and">
           <condition attribute="participationtypemask" operator="eq" value="1"/>
           <condition attribute="partyid" operator="eq-userid"/>
@@ -81,13 +81,6 @@
           <Bounds>200,36,100,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
-        </CellTemplate>
-        <CellTemplate SchemaName="">
-          <IsConstant>true</IsConstant>
-          <StyleName>line</StyleName>
-          <Bounds>20,66,300,1</Bounds>
-          <CellKind>0</CellKind>
-          <Anchor>14</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>

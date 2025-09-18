@@ -1,0 +1,89 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>annotation</EntityName>
+    <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Reports</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <AutoHeader>2</AutoHeader>
+  <OrderBy>!createdon</OrderBy>
+  <SerializedBindings>
+    <string>createdby</string>
+    <string>createdon</string>
+    <string>filename</string>
+    <string>filesize</string>
+    <string>annotationid</string>
+    <string>objectid</string>
+    <string>subject</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="annotation">
+      <filter type="and">
+        <condition attribute="filename" operator="like" value="%.pdf"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>320px</Name>
+      <Width>320</Width>
+      <Height>70</Height>
+      <NextTemplateName>800px</NextTemplateName>
+      <SerializedChildren>
+        <CellTemplate SchemaName="subject">
+          <StyleName>primary</StyleName>
+          <Bounds>72,5,234,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="inspections.pdf.png">
+          <IsConstant>true</IsConstant>
+          <StyleName>ListNoteImage-PDF</StyleName>
+          <Bounds>12,5,50,50</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="createdby">
+          <StyleName>gray</StyleName>
+          <Bounds>72,42,234,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>800px</Name>
+      <Width>800</Width>
+      <Height>50</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="subject">
+          <StyleName>primary</StyleName>
+          <Bounds>63,10,462,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="createdby">
+          <StyleName>r_gray</StyleName>
+          <Bounds>543,10,229,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="inspections.pdf.png">
+          <IsConstant>true</IsConstant>
+          <StyleName>ListNoteImage-PDF</StyleName>
+          <Bounds>10,5,40,40</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>
