@@ -16,13 +16,16 @@
   <Kind>List</Kind>
   <IsDefault>true</IsDefault>
   <AutoWideWidth>0</AutoWideWidth>
-  <OrderBy>!scheduledend;scheduledstart</OrderBy>
+  <OrderBy>!scheduledend</OrderBy>
   <SerializedBindings>
-    <string>id</string>
-    <string>name</string>
+    <string>activityid</string>
     <string>statecode</string>
     <string>scheduledend</string>
+    <string>ownerid</string>
+    <string>regardingobjectid</string>
     <string>scheduledstart</string>
+    <string>statuscode</string>
+    <string>subject</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
   <Fetch version="1.0">
@@ -37,7 +40,7 @@
     </entity>
   </Fetch>
   <Search>
-    <attribute schema="name" method="BeginsWith"/>
+    <attribute schema="subject" method="BeginsWith"/>
   </Search>
   <SerializedTemplates>
     <RowTemplate>
@@ -45,31 +48,31 @@
       <DesignHeight>48</DesignHeight>
       <Name>Default</Name>
       <Width>320</Width>
-      <Height>60</Height>
+      <Height>67</Height>
       <SerializedChildren>
-        <CellTemplate SchemaName="name">
+        <CellTemplate SchemaName="subject">
           <StyleName>primary</StyleName>
-          <Bounds>60,10,245,22</Bounds>
+          <Bounds>60,12,240,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="#Icon">
           <StyleName>ImageCellStyle</StyleName>
-          <Bounds>15,10,30,30</Bounds>
+          <Bounds>17,14,30,30</Bounds>
           <CellKind>1</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="#DateLabel">
           <StyleName>gray</StyleName>
-          <Bounds>60,35,150,15</Bounds>
+          <Bounds>60,38,240,16</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="statecode">
-          <StyleName>r_gray</StyleName>
-          <Bounds>215,35,90,15</Bounds>
+          <StyleName>caption</StyleName>
+          <Bounds>0,46,60,12</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>9</Anchor>
+          <Anchor>6</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>

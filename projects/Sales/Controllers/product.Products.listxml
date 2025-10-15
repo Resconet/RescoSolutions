@@ -1,0 +1,67 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>product</EntityName>
+    <CamelCase>Product</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Products</Name>
+  <Kind>List</Kind>
+  <IsDefault>true</IsDefault>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>transactioncurrencyid</string>
+    <string>currentcost</string>
+    <string>name</string>
+    <string>productid</string>
+    <string>productnumber</string>
+    <string>producttypecode</string>
+    <string>quantityonhand</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="product">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>80</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>60,12,240,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="producttypecode">
+          <StyleName>gray</StyleName>
+          <Bounds>60,57,240,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>productImage</StyleName>
+          <Bounds>14,12,44,44</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="productnumber">
+          <StyleName>gray</StyleName>
+          <Bounds>60,36,240,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

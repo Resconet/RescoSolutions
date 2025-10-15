@@ -1,115 +1,91 @@
-<?xml version="1.0"?>
-<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="0" fullscreen="0" resize="0" version="2" layoutstrict="0" singlecardexpand="0">
   <IsContactForm>false</IsContactForm>
   <EntityName>lead</EntityName>
-  <CamelCase>lead</CamelCase>
-  <ClassBinding />
-  <SerializedChildren />
-  <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab">
-      <Name>General</Name>
-      <CanRename>true</CanRename>
-      <SerializedChildren>
-        <DetailItem SchemaName="subject">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem xsi:type="SeparatorDetailItem">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="companyname">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="lastname">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="firstname">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem xsi:type="SeparatorDetailItem">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="emailaddress1">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="mobilephone">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="telephone1">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem xsi:type="SeparatorDetailItem">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="estimatedamount">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="estimatedclosedate">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem xsi:type="SeparatorDetailItem">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="leadqualitycode">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-      </SerializedChildren>
-    </FormTab>
-    <FormTab xsi:type="DetailTab">
-      <Name>Address</Name>
-      <CanRename>true</CanRename>
-      <SerializedChildren>
-        <DetailItem SchemaName="address1_line1">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_line2">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_line3">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem xsi:type="SeparatorDetailItem">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_city">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_postalcode">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem xsi:type="SeparatorDetailItem">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_stateorprovince">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_country">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-      </SerializedChildren>
-    </FormTab>
-    <FormTab xsi:type="AssociatedTab">
-      <Name>Invalid</Name>
-      <CanRename>false</CanRename>
-      <LogicalName>activity.regardingobjectid</LogicalName>
-      <Binding SchemaName="activity.regardingobjectid">
-        <IsConstant>false</IsConstant>
-      </Binding>
-    </FormTab>
-    <FormTab xsi:type="AssociatedTab">
-      <Name>Invalid</Name>
-      <CanRename>false</CanRename>
-      <LogicalName>annotation.objectid</LogicalName>
-      <Binding SchemaName="annotation.objectid">
-        <IsConstant>false</IsConstant>
-      </Binding>
-    </FormTab>
-  </SerializedChildrenV2>
-  <Navigation>
-    <Name>Navigation</Name>
-    <CanRename>true</CanRename>
-    <SerializedChildren />
-  </Navigation>
+  <CamelCase>Lead</CamelCase>
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
+  <CacheMode>-1</CacheMode>
+  <UiSyncGuardMode>-1</UiSyncGuardMode>
   <PrimaryCommands>!defcmd</PrimaryCommands>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
-  <SerializedContactInfo />
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="$Table1" grid="true">
+          <Columns>*;*</Columns>
+          <Rows>Auto;Auto;Auto;Auto;Auto;Auto;Auto;Auto</Rows>
+          <Items>
+            <DetailItem SchemaName="subject">
+              <GridPosition>0;0;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="companyname">
+              <GridPosition>0;1;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="firstname">
+              <GridPosition>0;2;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="lastname">
+              <GridPosition>1;2;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="emailaddress1">
+              <GridPosition>0;3;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="mobilephone">
+              <GridPosition>0;4;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="telephone1">
+              <GridPosition>1;4;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="estimatedamount">
+              <GridPosition>0;5;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="estimatedclosedate">
+              <GridPosition>0;6;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="leadqualitycode" Style="Rating Horizontal RadioButton">
+              <GridPosition>0;7;2;1</GridPosition>
+            </DetailItem>
+          </Items>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Address@2x.png" IsIconNameReadOnly="0">
+      <Name>Address</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="$Table2" grid="true">
+          <Columns>*;*</Columns>
+          <Rows>Auto;Auto;Auto</Rows>
+          <Items>
+            <DetailItem SchemaName="address1_line1">
+              <GridPosition>0;0;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="address1_city">
+              <GridPosition>0;1;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="address1_postalcode">
+              <GridPosition>1;1;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="address1_stateorprovince">
+              <GridPosition>0;2;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="address1_country">
+              <GridPosition>1;2;1;1</GridPosition>
+            </DetailItem>
+          </Items>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="MapTab" flexi="0" flexiHeight="1" flexiHeader="0" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
+      <Name>Map</Name>
+      <CoordinatesBinding>address1_latitude;address1_longitude</CoordinatesBinding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\activity@2x.png" IsIconNameReadOnly="0">
+      <Name>Activity List</Name>
+      <Binding SchemaName="activity.regardingobjectid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
+      <Name>Notes List</Name>
+      <Binding SchemaName="annotation.objectid"/>
+    </FormTab>
+  </SerializedChildrenV2>
 </EntityForm>

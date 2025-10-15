@@ -18,20 +18,34 @@
   <AutoWideWidth>0</AutoWideWidth>
   <OrderBy>scheduledstart</OrderBy>
   <SerializedBindings>
-    <string>id</string>
-    <string>name</string>
+    <string>activityid</string>
+    <string>scheduledend</string>
     <string>ownerid</string>
     <string>regardingobjectid</string>
-    <string>scheduledend</string>
     <string>scheduledstart</string>
+    <string>statecode</string>
     <string>statuscode</string>
+    <string>subject</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
   <Fetch version="1.0">
     <entity name="appointment">
-      <link-entity name="activityparty" from="activityid" to="id">
+      <filter type="and">
+        <condition attribute="statecode" operator="in">
+          <value>1</value>
+          <value>0</value>
+          <value>3</value>
+        </condition>
+      </filter>
+      <link-entity name="activityparty" from="activityid" to="activityid" link-type="inner" alias="L0">
         <filter type="and">
           <condition attribute="partyid" operator="eq-userid"/>
+          <condition attribute="participationtypemask" operator="in">
+            <value>7</value>
+            <value>9</value>
+            <value>5</value>
+            <value>6</value>
+          </condition>
         </filter>
       </link-entity>
     </entity>
@@ -42,25 +56,39 @@
       <DesignHeight>48</DesignHeight>
       <Name>Default</Name>
       <Width>320</Width>
-      <Height>60</Height>
+      <Height>86</Height>
+      <Buttons>ChangeStatus.appointment.4,3</Buttons>
       <SerializedChildren>
-        <CellTemplate SchemaName="name">
+        <CellTemplate SchemaName="subject">
           <StyleName>primary</StyleName>
-          <Bounds>15,10,290,22</Bounds>
+          <Bounds>59,12,241,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="#DateLabel">
           <StyleName>gray</StyleName>
-          <Bounds>15,35,200,15</Bounds>
+          <Bounds>59,62,165,18</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="statuscode">
+        <CellTemplate SchemaName="statecode">
           <StyleName>r_gray</StyleName>
-          <Bounds>215,35,90,15</Bounds>
+          <Bounds>226,62,74,18</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Activity.resco_appointment">
+          <IsConstant>true</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>13,13,39,39</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="regardingobjectid">
+          <StyleName>gray</StyleName>
+          <Bounds>59,37,241,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
