@@ -1,0 +1,35 @@
+﻿<Reminder>
+  <Items>
+    <ReminderComponent>
+      <Id>cf6eb546-8620-4ff9-b6b3-20d160e754cb</Id>
+      <Binding>task</Binding>
+      <StartDateField>scheduledstart</StartDateField>
+      <EndDateField>scheduledend</EndDateField>
+      <DescriptionField>description</DescriptionField>
+      <Fetch version="1.0">
+        <entity name="task">
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0"/>
+            <condition attribute="ownerid" operator="eq-userid"/>
+          </filter>
+        </entity>
+      </Fetch>
+    </ReminderComponent>
+    <ReminderComponent>
+      <Id>219d8481-51ce-45be-81dc-574d070c1723</Id>
+      <Binding>appointment</Binding>
+      <StartDateField>scheduledstart</StartDateField>
+      <EndDateField>scheduledend</EndDateField>
+      <DescriptionField>description</DescriptionField>
+      <Fetch version="1.0">
+        <entity name="appointment">
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="3"/>
+            <condition attribute="ownerid" operator="eq-userid"/>
+          </filter>
+        </entity>
+      </Fetch>
+      <CalendarIntegration>2</CalendarIntegration>
+    </ReminderComponent>
+  </Items>
+</Reminder>

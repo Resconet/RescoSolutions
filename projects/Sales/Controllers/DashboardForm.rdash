@@ -2,15 +2,19 @@
   <Columns>2</Columns>
   <Rows>2</Rows>
   <Items>
-    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="salesorder">
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="salesorder;salesorder.Default" Options="3">
       <Bounds>0,0,1,1</Bounds>
     </DashboardComponent>
-    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="opportunity">
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="List" Binding="appointment;&lt;extra&gt;&lt;views&gt;appointment.*:appointment.@My Appointments&lt;/views&gt;&lt;actions&gt;0;0;1&lt;/actions&gt;&lt;/extra&gt;" Options="3">
+      <Bounds>1,1,1,1</Bounds>
+      <LegacyConfig>appointment;appointment.*:appointment.@My Appointments</LegacyConfig>
+    </DashboardComponent>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="salesorderdetail;salesorderdetail.@Products by Quantity" Options="3">
       <Bounds>1,0,1,1</Bounds>
     </DashboardComponent>
-    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="List" Binding="activity;&lt;extra&gt;&lt;views&gt;activity.*:appointment.*:appointment.@My Upcoming Appointments Today:phonecall.*:task.*&lt;/views&gt;&lt;actions&gt;0;0;1&lt;/actions&gt;&lt;/extra&gt;" Options="3">
-      <Bounds>0,1,2,1</Bounds>
-      <LegacyConfig>activity;activity.*:appointment.*:appointment.@My Upcoming Appointments Today:phonecall.*:task.*</LegacyConfig>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="List" Binding="account;&lt;extra&gt;&lt;actions&gt;208;0;1&lt;/actions&gt;&lt;map&gt;&lt;Latitude&gt;42.34035163182547&lt;/Latitude&gt;&lt;Longitude&gt;-71.095285812921&lt;/Longitude&gt;&lt;Zoom&gt;10&lt;/Zoom&gt;&lt;/map&gt;&lt;/extra&gt;" Options="3">
+      <Bounds>0,1,1,1</Bounds>
+      <LegacyConfig>account</LegacyConfig>
     </DashboardComponent>
   </Items>
 </Dashboard>

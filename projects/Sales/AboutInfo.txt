@@ -1,7 +1,8 @@
 ﻿Manufacturer=Resco
-ProductTitle=Sales
-ProductSubTitle=for Resco Cloud
+ProductTitle=Field Sales
+ProductSubTitle=For Microsoft Dynamics CRM
 PoweredBy=Powered by Resco.Net
 Icon=Logo.Logo.png
 Website=www.resco.net
-SupportEmail=
+SupportEmail=email@resco.net
+SupportEmailSignature=
