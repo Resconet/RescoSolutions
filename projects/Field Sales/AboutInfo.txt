@@ -1,5 +1,5 @@
 ﻿Manufacturer=Resco
-ProductTitle=Mobile Sales
+ProductTitle=Field Sales
 ProductSubTitle=For Microsoft Dynamics CRM
 PoweredBy=Powered by Resco.Net
 Icon=Logo.Logo.png
