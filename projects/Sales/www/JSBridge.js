@@ -1,4 +1,4 @@
-﻿/* eslint-disable @typescript-eslint/no-this-alias */
+/* eslint-disable @typescript-eslint/no-this-alias */
 /* globals MobileCRM:writable, MobileCrmException:writable, CrmBridge, webkit, chrome */
 (function () {
 	var _scriptVersion = 18.0;

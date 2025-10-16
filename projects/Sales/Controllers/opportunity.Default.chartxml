@@ -10,19 +10,33 @@
   <IsHidden>false</IsHidden>
   <Kind>Column</Kind>
   <IsDefault>false</IsDefault>
+  <LabelStyle>Inside</LabelStyle>
+  <PieDonutRatio>50</PieDonutRatio>
+  <BarStyle>Default</BarStyle>
+  <AreaStyle>Default</AreaStyle>
+  <DrillDownEnabled>true</DrillDownEnabled>
   <Series>
     <Series>
       <Attribute>estimatedvalue</Attribute>
       <Aggregation>Sum</Aggregation>
+      <Color>#00000000</Color>
     </Series>
   </Series>
   <Axis>actualclosedate</Axis>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#FF0000FF</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#FF0000FF</Color>
+  </TargetValue>
   <DateGrouping>Month</DateGrouping>
-  <SerializedBindings>
-    <string>actualclosedate</string>
-    <string>transactioncurrencyid</string>
-    <string>estimatedvalue</string>
-    <string>opportunityid</string>
-  </SerializedBindings>
+  <Fetch version="1.0">
+    <entity name="opportunity">
+      <filter type="and" />
+    </entity>
+  </Fetch>
   <LimitCount>3</LimitCount>
 </EntityChart>

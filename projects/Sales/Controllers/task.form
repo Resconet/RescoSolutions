@@ -1,28 +1,49 @@
-﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="0" fullscreen="0" resize="0" version="2" layoutstrict="0" singlecardexpand="0">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
   <IsContactForm>false</IsContactForm>
   <EntityName>task</EntityName>
-  <CamelCase>Task</CamelCase>
-  <IsBulkUpdateForm>false</IsBulkUpdateForm>
-  <CacheMode>-1</CacheMode>
-  <UiSyncGuardMode>-1</UiSyncGuardMode>
-  <PrimaryCommands>!defcmd</PrimaryCommands>
-  <ClassBinding/>
-  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <CamelCase>task</CamelCase>
+  <ClassBinding />
+  <SerializedChildren />
   <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab">
       <Name>General</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="regardingobjectid"/>
-        <DetailItem SchemaName="subject"/>
-        <DetailItem SchemaName="prioritycode" Style="Priority"/>
-        <DetailItem SchemaName="scheduledend"/>
-        <DetailItem SchemaName="actualdurationminutes"/>
-        <DetailItem SchemaName="description" hasOCREnabled="true" OCRReferenceImage="Do not save"/>
+        <DetailItem SchemaName="regardingobjectid" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="name" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="prioritycode" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="scheduledend" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="actualdurationminutes" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="description" Style="Normal">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="3" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
-      <Name>Notes List</Name>
-      <Binding SchemaName="annotation.objectid"/>
-    </FormTab>
   </SerializedChildrenV2>
+  <Navigation>
+    <Name>Navigation</Name>
+    <SerializedChildren>
+      <DetailItem SchemaName="annotation.objectid" Style="Normal">
+        <IsConstant>false</IsConstant>
+      </DetailItem>
+    </SerializedChildren>
+  </Navigation>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedContactInfo />
 </EntityForm>

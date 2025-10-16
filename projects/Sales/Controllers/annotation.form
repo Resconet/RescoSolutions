@@ -1,24 +1,25 @@
-﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2" layoutstrict="0" singlecardexpand="0">
+<?xml version="1.0" encoding="utf-8"?>
+<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
   <IsContactForm>false</IsContactForm>
   <EntityName>annotation</EntityName>
   <CamelCase>Annotation</CamelCase>
-  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
-  <IsBulkUpdateForm>false</IsBulkUpdateForm>
-  <CacheMode>-1</CacheMode>
-  <UiSyncGuardMode>-1</UiSyncGuardMode>
-  <PrimaryCommands>!defcmd</PrimaryCommands>
-  <SharedVariableNames/>
-  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedChildren />
   <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab">
       <Name>General</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="subject"/>
-        <DetailItem SchemaName="notetext"/>
-        <DetailItem SchemaName="filesize"/>
-        <DetailItem SchemaName="mimetype"/>
-        <DetailItem SchemaName="objecttypecode"/>
+        <DetailItem SchemaName="subject">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="notetext">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
       </SerializedChildren>
     </FormTab>
   </SerializedChildrenV2>
+  <Navigation>
+    <Name>Navigation</Name>
+    <SerializedChildren />
+  </Navigation>
+  <SerializedContactInfo />
 </EntityForm>

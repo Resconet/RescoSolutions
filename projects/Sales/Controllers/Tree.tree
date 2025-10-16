@@ -1,4 +1,1 @@
-﻿<tree entity="account" view="Default">
-  <parent entity="contact" view="Default" levelField="primarycontactid"/>
-  <child entity="contact" view="Default" levelField="parentcustomerid"/>
-</tree>
+﻿<tree entity="account" view="Default"/>

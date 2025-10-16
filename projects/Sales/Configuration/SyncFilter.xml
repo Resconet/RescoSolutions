@@ -21,10 +21,18 @@
     </entity>
   </fetch>
   <fetch version="1.0">
-    <entity name="salesorder"/>
+    <entity name="salesorder">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="30"/>
+      </filter>
+    </entity>
   </fetch>
   <fetch version="1.0">
-    <entity name="invoice"/>
+    <entity name="invoice">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="30"/>
+      </filter>
+    </entity>
   </fetch>
   <fetch version="1.0">
     <entity name="opportunity">
@@ -55,10 +63,7 @@
     </entity>
   </fetch>
   <fetch version="1.0">
-    <entity name="appointment"/>
-  </fetch>
-  <fetch version="1.0">
-    <entity name="serviceappointment">
+    <entity name="appointment">
       <filter type="and">
         <condition attribute="modifiedon" operator="last-x-days" value="60"/>
       </filter>
@@ -80,9 +85,26 @@
     </entity>
   </fetch>
   <fetch version="1.0">
-    <entity name="product">
+    <entity name="resco_questionnaire">
       <filter type="and">
-        <condition attribute="name" operator="like" value="%Filter%"/>
+        <filter type="or">
+          <condition attribute="resco_istemplate" operator="eq" value="0"/>
+          <filter type="and">
+            <condition attribute="resco_istemplate" operator="eq" value="1"/>
+            <filter type="or">
+              <condition attribute="statuscode" operator="eq" value="1"/>
+              <condition attribute="statuscode" operator="eq" value="473220002"/>
+              <filter type="and">
+                <condition attribute="statuscode" operator="eq" value="473220003"/>
+                <condition attribute="resco_version" operator="ge" value="1"/>
+              </filter>
+            </filter>
+          </filter>
+        </filter>
+        <filter type="or">
+          <condition attribute="resco_issnippet" operator="eq" value="0"/>
+          <condition attribute="resco_issnippet" operator="null"/>
+        </filter>
       </filter>
     </entity>
   </fetch>
