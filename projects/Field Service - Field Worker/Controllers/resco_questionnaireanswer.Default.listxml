@@ -17,12 +17,14 @@
     <string>resco_completionstatus</string>
     <string>createdby</string>
     <string>createdon</string>
-    <string>resco_languagecode</string>
     <string>resco_questionnaireanswerid</string>
+    <string>resco_languagecode</string>
     <string>resco_name</string>
+    <string>resco_featureversion</string>
     <string>resco_result</string>
     <string>resco_score</string>
     <string>resco_templateid</string>
+    <string>resco_templateid.resco_questionnaire.resco_featureversion</string>
     <string>resco_templateid.resco_questionnaire.resco_localization</string>
     <string>resco_templateid.resco_questionnaire.resco_options</string>
   </SerializedBindings>

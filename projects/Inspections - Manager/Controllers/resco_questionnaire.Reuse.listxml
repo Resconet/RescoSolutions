@@ -2,6 +2,11 @@
   <Attributes>
     <EntityName>resco_questionnaire</EntityName>
     <CamelCase>resco_questionnaire</CamelCase>
+    <ClassBinding>
+      <SerializedClassBinding name="#Name" label="Localized Name" type="String"/>
+      <SerializedClassBinding name="#Description" label="Localized Description" type="String"/>
+      <SerializedClassBinding name="#LocalizedResult" label="Localized Result" type="String"/>
+    </ClassBinding>
   </Attributes>
   <Name>Reuse</Name>
   <Kind>LookupList</Kind>
@@ -10,6 +15,7 @@
   <SerializedBindings>
     <string>createdby</string>
     <string>createdon</string>
+    <string>resco_featureversion</string>
     <string>resco_questionnaireid</string>
     <string>resco_name</string>
   </SerializedBindings>
