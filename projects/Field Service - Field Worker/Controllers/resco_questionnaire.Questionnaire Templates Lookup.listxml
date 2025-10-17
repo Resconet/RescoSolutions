@@ -16,6 +16,7 @@
   <SerializedBindings>
     <string>createdon</string>
     <string>resco_description</string>
+    <string>resco_featureversion</string>
     <string>resco_folder</string>
     <string>resco_questionnaireid</string>
     <string>resco_istemplate</string>
@@ -26,6 +27,7 @@
     <string>ownerid</string>
     <string>statuscode</string>
     <string>resco_templateid</string>
+    <string>resco_templateid.resco_questionnaire.resco_localization</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
   <Fetch version="1.0">
