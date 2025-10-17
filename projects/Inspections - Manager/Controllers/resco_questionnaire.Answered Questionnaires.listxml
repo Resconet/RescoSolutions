@@ -3,7 +3,11 @@
     <EntityName>resco_questionnaire</EntityName>
     <CamelCase>resco_questionnaire</CamelCase>
     <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
-    <ClassBinding/>
+    <ClassBinding>
+      <SerializedClassBinding name="#Name" label="Localized Name" type="String"/>
+      <SerializedClassBinding name="#Description" label="Localized Description" type="String"/>
+      <SerializedClassBinding name="#LocalizedResult" label="Localized Result" type="String"/>
+    </ClassBinding>
   </Attributes>
   <Name>Answered Questionnaires</Name>
   <Kind>AssociatedList</Kind>
@@ -15,6 +19,7 @@
     <string>resco_completionstatus</string>
     <string>createdon</string>
     <string>resco_description</string>
+    <string>resco_featureversion</string>
     <string>resco_folder</string>
     <string>resco_questionnaireid</string>
     <string>resco_istemplate</string>
