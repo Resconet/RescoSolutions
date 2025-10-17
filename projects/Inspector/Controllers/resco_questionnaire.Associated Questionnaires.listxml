@@ -17,6 +17,7 @@
   <SerializedBindings>
     <string>createdon</string>
     <string>resco_description</string>
+    <string>resco_featureversion</string>
     <string>resco_folder</string>
     <string>resco_istemplate</string>
     <string>resco_languagecode</string>
