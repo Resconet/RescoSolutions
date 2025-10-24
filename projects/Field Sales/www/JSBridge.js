@@ -1,4 +1,4 @@
-﻿/* eslint-disable @typescript-eslint/no-this-alias */
+/* eslint-disable @typescript-eslint/no-this-alias */
 /* globals MobileCRM:writable, MobileCrmException:writable, CrmBridge, webkit, chrome */
 (function () {
 	var _scriptVersion = 18.0;
@@ -193,7 +193,7 @@
 			/// <field name="bridge" type="MobileCRM.Bridge">Singleton instance of <see cref="MobileCRM.Bridge">MobileCRM.Bridge</see> providing the management of the Javascript/native code cross-calls.</field>
 			bridge: null,
 			Bridge: function (platform) {
-				/// <summary>Provides the management of the Javascript/native code cross-calls. Its only instance <see cref="MobileCRMbridge">MobileCRM.bridge</see> is created immediately after the &quot;JSBridge.js&quot; script is loaded.</summary>
+				/// <summary>Provides the management of the Javascript/native code cross-calls. Its only instance <see cref="MobileCRM.bridge">MobileCRM.bridge</see> is created immediately after the &quot;JSBridge.js&quot; script is loaded.</summary>
 				/// <param name="platform" type="String">A platform name</param>
 				/// <field name="platform" type="String">A string identifying the device platform (e.g. Android, iOS, Windows, WindowsRT, Windows10 or WindowsPhone).</field>
 				/// <field name="version" type="Number">A number identifying the version of the JSBridge. This is the version of the script which might not match the version of the application part of the bridge implementation. Application version must be equal or higher than the script version.</field>
@@ -821,7 +821,7 @@
 				},
 				DetailViewItems: {
 					Item: function (name, label) {
-						/// <summary>[8.0] Represents the <see cref="MobileCRM.UI._DetailView"></see> item.</summary>
+						/// <summary>[8.0] Represents the <see cref="MobileCRM.UI._DetailView">MobileCRM.UI._DetailView</see> item.</summary>
 						/// <param name="name" type="String">Defines the item name.</param>
 						/// <param name="label" type="String">Defines the item label.</param>
 						/// <field name="name" type="String">Gets or sets the item name.</field>
@@ -840,14 +840,14 @@
 						this.label = label;
 					},
 					SeparatorItem: function (name, label) {
-						/// <summary>[8.0] Represents the <see cref="MobileCRM.UI._DetailView"></see> separator item.</summary>
+						/// <summary>[8.0] Represents the <see cref="MobileCRM.UI._DetailView">MobileCRM.UI._DetailView</see> separator item.</summary>
 						/// <param name="name" type="String">Defines the item name.</param>
 						/// <param name="label" type="String">Defines the item label.</param>
 						MobileCRM.UI.DetailViewItems.SeparatorItem.superproto.constructor.apply(this, arguments);
 						this._type = "Separator";
 					},
 					TextBoxItem: function (name, label) {
-						/// <summary>[8.0] Represents the <see cref="MobileCRM.UI._DetailView"></see> text item.</summary>
+						/// <summary>[8.0] Represents the <see cref="MobileCRM.UI._DetailView">MobileCRM.UI._DetailView</see> text item.</summary>
 						/// <param name="name" type="String">Defines the item name.</param>
 						/// <param name="label" type="String">Defines the item label.</param>
 						/// <field name="numberOfLines" type="Number">Gets or sets the number of lines to display. Default is one.</field>
@@ -859,7 +859,7 @@
 						this._type = "TextBox";
 					},
 					NumericItem: function (name, label) {
-						/// <summary>[8.0] Represents the <see cref="MobileCRM.UI._DetailView"></see> numeric item.</summary>
+						/// <summary>[8.0] Represents the <see cref="MobileCRM.UI._DetailView">MobileCRM.UI._DetailView</see> numeric item.</summary>
 						/// <param name="name" type="String">Defines the item name.</param>
 						/// <param name="label" type="String">Defines the item label.</param>
 						/// <field name="minimum" type="Number">Gets or sets the minimum allowed value.</field>
@@ -878,7 +878,7 @@
 						//this.displayFormat = "";
 					},
 					CheckBoxItem: function (name, label) {
-						/// <summary>[8.0] Represents the <see cref="MobileCRM.UI._DetailView"></see> checkbox item.</summary>
+						/// <summary>[8.0] Represents the <see cref="MobileCRM.UI._DetailView">MobileCRM.UI._DetailView</see> checkbox item.</summary>
 						/// <param name="name" type="String">Defines the item name.</param>
 						/// <param name="label" type="String">Defines the item label.</param>
 						/// <field name="textChecked" type="String">Gets or sets the text for checked state.</field>
@@ -888,7 +888,7 @@
 						this.isNullable = false;
 					},
 					DateTimeItem: function (name, label) {
-						/// <summary>[8.0] Represents the <see cref="MobileCRM.UI._DetailView"></see> date/time item.</summary>
+						/// <summary>[8.0] Represents the <see cref="MobileCRM.UI._DetailView">MobileCRM.UI._DetailView</see> date/time item.</summary>
 						/// <param name="name" type="String">Defines the item name.</param>
 						/// <param name="label" type="String">Defines the item label.</param>
 						/// <field name="minimum" type="Date">Gets or sets the minimum allowed value.</field>
@@ -898,14 +898,14 @@
 						this._type = "DateTime";
 					},
 					DurationItem: function (name, label) {
-						/// <summary>[8.0] Represents the <see cref="MobileCRM.UI._DetailView"></see> duration item.</summary>
+						/// <summary>[8.0] Represents the <see cref="MobileCRM.UI._DetailView">MobileCRM.UI._DetailView</see> duration item.</summary>
 						/// <param name="name" type="String">Defines the item name.</param>
 						/// <param name="label" type="String">Defines the item label.</param>
 						MobileCRM.UI.DetailViewItems.DurationItem.superproto.constructor.apply(this, arguments);
 						this._type = "Duration";
 					},
 					ComboBoxItem: function (name, label) {
-						/// <summary>[8.0] Represents the <see cref="MobileCRM.UI._DetailView"></see> combobox item.</summary>
+						/// <summary>[8.0] Represents the <see cref="MobileCRM.UI._DetailView">MobileCRM.UI._DetailView</see> combobox item.</summary>
 						/// <param name="name" type="String">Defines the item name.</param>
 						/// <param name="label" type="String">Defines the item label.</param>
 						/// <field name="listDataSource" type="Object">Gets or sets the object with props and values to be displayed in the combo list (e.g. {&quot;label1&quot;:1, &quot;label2&quot;:2}).</field>
@@ -914,7 +914,7 @@
 						this._type = "ComboBox";
 					},
 					LinkItem: function (name, label, listDropDownFormat) {
-						/// <summary>[8.0] Represents the <see cref="MobileCRM.UI._DetailView"></see> link item.</summary>
+						/// <summary>[8.0] Represents the <see cref="MobileCRM.UI._DetailView">MobileCRM.UI._DetailView</see> link item.</summary>
 						/// <param name="name" type="String">Defines the item name.</param>
 						/// <param name="label" type="String">Defines the item label.</param>
 						/// <param name="listDropDownFormat" type="MobileCRM.UI.DetailViewItems.DropDownFormat">Defines item&apos;s drop down format.</param>
@@ -926,7 +926,7 @@
 						}
 					},
 					ButtonItem: function (name, clickText) {
-						/// <summary>[8.0] Represents the <see cref="MobileCRM.UI._DetailView"></see> duration item.</summary>
+						/// <summary>[8.0] Represents the <see cref="MobileCRM.UI._DetailView">MobileCRM.UI._DetailView</see> duration item.</summary>
 						/// <param name="name" type="String">Defines the item name.</param>
 						/// <param name="clickText" type="String">Gets or sets the text content of click button.</param>
 						/// <param name="label" type="String">Defines the item label.</param>
@@ -944,7 +944,7 @@
 						MultiStringListInput: 20,
 					},
 					GridItem: function (name, label, gridStyleDefintion) {
-						/// <summary>[13.0] Represents the <see cref="MobileCRM.UI._DetailView"></see> grid item.</summary>
+						/// <summary>[13.0] Represents the <see cref="MobileCRM.UI._DetailView">MobileCRM.UI._DetailView</see> grid item.</summary>
 						/// <param name="name" type="String">Defines the item name.</param>
 						/// <param name="label" type="String">Defines the item label.</param>
 						/// <param name="gridStyleDefintion" type="MobileCRM.UI.DetailViewItems.GridStyleDefintion">Gets or sets the style definition for grid item.</param>
@@ -965,7 +965,7 @@
 					DetailGridLength: function (value, gridUnitType) {
 						/// <summary>[13.0] Represents the grid length in grid unit type.</summary>
 						/// <param name="value" type="String">Grid length value.</param>
-						/// <param name="gridUnitType" type="MobileCRM.UI.DetailViewItems.DetailGridUnitType">Defines the grid <see cref="MobileCRM.UI.DetailViewItems.DetailGridUnitType"></see> unit type.</param>
+						/// <param name="gridUnitType" type="MobileCRM.UI.DetailViewItems.DetailGridUnitType">Defines the grid <see cref="MobileCRM.UI.DetailViewItems.DetailGridUnitType">MobileCRM.UI.DetailViewItems.DetailGridUnitType</see> unit type.</param>
 						this._value = value;
 						this._gridUnitType = gridUnitType;
 					},
@@ -1136,7 +1136,7 @@
 					/// <field name="realtimeFlushing" type="Boolean">Indicates whether the events should be delivered realtime using Resco forwarding service.</field>
 					/// <field name="logLevel" type="number">Defines logging verbosity (0=Normal, 1=Diagnostic, -1=None)</field>
 					/// <field name="notificationMask" type="number">Defines event mask for showing notifications (0=None, 1=WhenArrived, 2=WhenExited, 3=Always)</field>
-					/// <field name="businessHours" type="String">Business hours interval (e.g. '9:00-17:00')</field>
+					/// <field name="businessHours" type="String">Business hours interval (e.g. &apos;9:00-17:00&apos;)</field>
 					/// <field name="businessDaysMask" type="number">Business days mask (the lowest bit is Sunday, the next Monday, ...)</field>
 					this.isEnabled = false;
 					this.realtimeFlushing = true;
@@ -2426,6 +2426,22 @@
 			/// <param name="scope" type="">A scope for calling the callbacks; set &quot;null&quot; to call the callbacks in global scope.</param>
 			MobileCRM.bridge.command("documentBodyUnzip", targetDir + ";" + JSON.stringify({ entity: entityName, id: id }), success, failed, scope);
 		};
+		MobileCRM.DynamicEntity.loadFileFieldContent = function (entityName, id, fileFieldName, online) {
+			/// <summary>[18.2] Asynchronously loads the content of a file field.
+			/// <param name="entityName" type="String">Logical name of entity containing the file field.</param>
+			/// <param name="id" type="String">An ID of record containing the file field.</param>
+			/// <param name="fileFieldName" type="String">Logical name of the file field.</param>
+			// <param name="online" type="boolean|undefined">Optional flag forcing the online or offline mode.</param>
+			return MobileCRM.bridge.invokeCommandPromise(
+				"loadFileFieldContent",
+				JSON.stringify({
+					entityName: entityName,
+					id: id,
+					fileField: fileFieldName,
+					online: online,
+				})
+			);
+		};
 		MobileCRM.DynamicEntity.downloadAttachment = function (entityName, id, success, failed, scope) {
 			/// <summary>[v9.1] Initiates the attachment download for specified entity.</summary>
 			/// <remarks>Function sends an asynchronous request to application, which downloads the document body (e.g. the annotation) from server and sends it back to the Javascript callback.</remarks>
@@ -3198,6 +3214,26 @@
 			}
 			return MobileCRM.bridge.invokeCommandPromise("getLocation", JSON.stringify(params));
 		};
+		MobileCRM.Platform._watchLocationHandlers = [];
+		MobileCRM.Platform.watchLocationUpdates = function (handler, bind, scope) {
+			/// <summary>[v18.2] Registers or unregisters a handler for location updates.</summary>
+			/// <remarks>When the location is updated, the handler is called with a <see cref="MobileCRM.Location">MobileCRM.Location</see> object having <b>latitude</b>, <b>longitude</b> and <b>timestamp</b> properties.</remarks>
+			/// <param name="handler" type="function(location)">Handler function which will be called each time when the location is updated. The <b>location</b> argument will carry an object with <b>latitude</b>, <b>longitude</b> and <b>timestamp</b> properties.</param>
+			/// <param name="bind" type="Boolean">Indicates whether to bind or unbind handler.</param>
+			/// <param name="scope" type="">Optional scope for calling the handler; set &quot;null&quot; to call the handler in global scope.</param>
+			/// <returns type="Promise&lt;void&gt;">A Promise object which will be resolved when the handler is successfully bound/unbound.</returns>
+			var register = bind && MobileCRM.Platform._watchLocationHandlers.length == 0;
+			_bindHandler(handler, MobileCRM.Platform._watchLocationHandlers, bind, scope);
+			if (register) {
+				return MobileCRM.bridge.invokeCommandPromise("watchLocation", JSON.stringify({ active: true }));
+			} else if (!bind && MobileCRM.Platform._watchLocationHandlers.length == 0) {
+				return MobileCRM.bridge.invokeCommandPromise("watchLocation", JSON.stringify({ active: false }));
+			}
+			return Promise.resolve();
+		};
+		MobileCRM.Platform._callLocationHandlers = function (location) {
+			_callHandlers(MobileCRM.Platform._watchLocationHandlers, location);
+		};
 		MobileCRM.Platform.preventBackButton = function (handler, scope) {
 			/// <summary>Prevents application to close when HW back button is pressed and installs handler which is called instead.</summary>
 			/// <remarks><p>Pass &quot;null&quot; handler to allow the HW back button.</p><p>Works only under OS having HW back button (Android, Windows 10).</p></remarks>
@@ -3915,7 +3951,7 @@
 			/// <param name="index" type="Number">Item index on the view.</param>
 			/// <param name="listDataSource" type="Object">The data source object (e.g. {&quot;label1&quot;:1, &quot;label2&quot;:2}).</param>
 			/// <param name="valueType" type="String">Type of list data source element value. Default is string, allowed int, string.</param>
-			/// <param name="defaultValue" type="String">New data source default value. If not defined, the first item from listDataSource will be used.</param>
+			/// <param name="defaultValue" type="String|Number">New data source default value. If not defined, the first item from listDataSource will be used.</param>
 			var data = {
 				action: "updateDataSource",
 				viewName: this.name,
@@ -3926,6 +3962,20 @@
 			};
 			// Code used in version < 11.2
 			//this.items[index].value = defaultValue !== undefined ? defaultValue : listDataSource[Object.keys(listDataSource)[0]];
+			MobileCRM.bridge.command("detailViewAction", JSON.stringify(data));
+		};
+		MobileCRM.UI._DetailView.prototype.filterStringListOptions = function (index, allowedOptions, defaultValue) {
+			/// <summary>[v18.1] Filters allowed StringList options in <see cref="MobileCRM.UI.DetailViewItems.Item">MobileCRM.UI.DetailViewItems.LinkItem</see>.</summary>
+			/// <param name="index" type="Number">Item index on the view.</param>
+			/// <param name="allowedOptions" type="string[]">An array with options to be allowed (e.g. [&quot;New&quot;, &quot;Completed&quot;]).</param>
+			/// <param name="defaultValue" type="String">New data source default value. If not defined, the first item from allowedOptions will be used. Ignored, if value isn&apos;t in allowedOptions.</param>
+			var data = {
+				action: "filterStringList",
+				viewName: this.name,
+				index: index,
+				filterOptions: allowedOptions,
+				value: defaultValue || allowedOptions[0],
+			};
 			MobileCRM.bridge.command("detailViewAction", JSON.stringify(data));
 		};
 		MobileCRM.UI._DetailView.prototype.updateLinkItemViews = function (index, dialogSetup, inlinePickSetup, dialogOnly, allowCreateNew) {
@@ -4570,13 +4620,15 @@
 			MobileCRM.bridge.command("showMobileReportForm", JSON.stringify(params), null, failed, scope);
 		};
 		// MobileCRM.UI.Questionnaire
-		MobileCRM.Questionnaire.showForm = function (id, failed, scope, relationship) {
+		MobileCRM.Questionnaire.showForm = function (id, failed, scope, relationship, modal, version) {
 			/// <summary>[v10.2] Shows the questionnaire form.</summary>
 			/// <param name="id" type="String">Id (guid) of the questionnaire.</param>
 			/// <param name="failed" type="function(errorMsg)">A callback which is called in case of error.</param>
 			/// <param name="scope" type="Object">The scope for callbacks.</param>
 			/// <param name="relationship" type="MobileCRM.Relationship">Optional relationship with the parent record.</param>
-			var params = { id: id, relationship: relationship };
+			/// <param name="modal" type="Boolean">Optional parameter determines if the form will be opened in modal dialog. Defaults to false.</param>
+			/// <param name="version" type="Integer">Optional parameter for setting the Questionnaire player version to execute the questionnaire. Default is 1</param>
+			var params = { id: id, relationship: relationship, modal: modal, version: version };
 			MobileCRM.bridge.command("showQuestionnaire", JSON.stringify(params), null, failed, scope);
 		};
 		MobileCRM.Questionnaire._padTo3digits = function (num) {
@@ -5763,6 +5815,18 @@
 			/// <param name="changes" type="{ [fieldName: string]: any }">An object defining field changes that has to be done on form entity record.</param>
 			/// <returns type="Promise&lt;boolean&gt;">A promise resolved with boolean result of native field setter.</returns>
 			return MobileCRM.bridge.invokeCommandPromise("setFormEntityFields", JSON.stringify(changes));
+		};
+		MobileCRM.UI.EntityForm.setFileFieldContent = function (fileFieldName, documentFileName, documentContent) {
+			/// <summary>[v18.2] Sets the file field content and file name on entity record shown on this EntityForm.</summary>
+			/// <remarks>Setting file field content is possible only in offline mode. This method fails in online mode.</remarks>
+			/// <param name="fieldName" type="String">Logical name of the file field that has to be changed.</param>
+			/// <param name="documentFileName" type="String">A file name that should be used when presenting the binary content.</param>
+			/// <param name="documentContent" type="String">Base64-encoded binary file content.</param>
+			/// <returns type="Promise&lt;boolean&gt;">A promise resolved with boolean result of native field setter.</returns>
+			var obj = {};
+			obj[fileFieldName + "_name"] = documentFileName;
+			obj[fileFieldName] = documentContent;
+			return MobileCRM.UI.EntityForm.setFieldValues(obj);
 		};
 		MobileCRM.UI.EntityForm.requestObject = function (callback, errorCallback, scope) {
 			/// <summary>Requests the managed EntityForm object.</summary>
