@@ -5,13 +5,13 @@
     <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
     <ClassBinding/>
   </Attributes>
-  <Name>All</Name>
+  <Name>WO line items</Name>
   <Kind>List</Kind>
-  <IsDefault>true</IsDefault>
   <AutoWideWidth>0</AutoWideWidth>
   <OrderBy>lineitemnumber</OrderBy>
   <SharedVariables>&lt;SharedVariables&gt;&lt;Variables /&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <SerializedBindings>
+    <string>description</string>
     <string>id</string>
     <string>quantity</string>
     <string>status</string>
@@ -32,7 +32,7 @@
       <SerializedChildren>
         <CellTemplate SchemaName="varTitle">
           <StyleName>primary</StyleName>
-          <Bounds>41,2,194,22</Bounds>
+          <Bounds>41,2,97,22</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -44,7 +44,7 @@
         </CellTemplate>
         <CellTemplate SchemaName="status">
           <StyleName>black</StyleName>
-          <Bounds>41,25,194,13</Bounds>
+          <Bounds>41,25,97,12</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -54,6 +54,12 @@
           <Bounds>2,2,38,36</Bounds>
           <CellKind>8</CellKind>
           <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="description">
+          <StyleName>primary</StyleName>
+          <Bounds>138,2,98,35</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
