@@ -1,7 +1,8 @@
 ﻿Manufacturer=Resco
 ProductTitle=Field Service
-ProductSubTitle=for Salesforce (v13.3)
+ProductSubTitle=for Salesforce 
 PoweredBy=Powered by Resco.Net
 Icon=Logo.Logo.png
 Website=www.resco.net
 SupportEmail=
+SupportEmailSignature=

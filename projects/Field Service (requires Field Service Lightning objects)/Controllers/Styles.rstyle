@@ -734,6 +734,9 @@
         <Property Name="LabelFontWeight" Type="System.Int32">
           <Value>0</Value>
         </Property>
+        <Property Name="LinkColor" Type="Color">
+          <Value>primary</Value>
+        </Property>
       </Properties>
     </Style>
     <Style Name="Top Label" Style="Normal" Type="DetailItem" ComponentType="0">
@@ -761,9 +764,6 @@
     </Style>
     <Style Name="TopLabelMultiline" Style="Normal Long" Type="DetailItem" ComponentType="0">
       <Properties>
-        <Property Name="LabelAutoWidth" Type="System.Boolean">
-          <Value>False</Value>
-        </Property>
         <Property Name="LabelHorizontalAlignment" Type="System.Int32">
           <Value>1</Value>
         </Property>
@@ -773,6 +773,9 @@
         <Property Name="ComboBoxImageAlignment" Type="System.Int32">
           <Value>1</Value>
         </Property>
+        <Property Name="LabelAutoWidth" Type="System.Boolean">
+          <Value>True</Value>
+        </Property>
       </Properties>
     </Style>
     <Style Name="Table" Style="TopLabelMultiline" Type="DetailItem" ComponentType="0">
@@ -781,7 +784,10 @@
           <Value>True</Value>
         </Property>
         <Property Name="LabelPosition" Type="System.Int32">
-          <Value>2</Value>
+          <Value>5</Value>
+        </Property>
+        <Property Name="LabelFontWeight" Type="System.Int32">
+          <Value>0</Value>
         </Property>
       </Properties>
     </Style>
@@ -931,6 +937,19 @@
         </Property>
         <Property Name="FontWeight" Type="System.Int32">
           <Value>1</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Vertical Picklist" Style="Normal" Type="DetailItem" ComponentType="0">
+      <Properties>
+        <Property Name="SegmentedButtonsLayout" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="RelativeTextFontSize" Type="System.Int32">
+          <Value>-1</Value>
+        </Property>
+        <Property Name="RadioButtonMaxCount" Type="System.Int32">
+          <Value>9</Value>
         </Property>
       </Properties>
     </Style>

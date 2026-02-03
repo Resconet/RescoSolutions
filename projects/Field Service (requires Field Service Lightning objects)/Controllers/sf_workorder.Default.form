@@ -1,4 +1,4 @@
-﻿<EntityForm xsi:dummy="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" flexi="0" fleximode="0" fullscreen="0" resize="0" version="2">
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="0" fullscreen="0" resize="0" version="2" layoutstrict="0" singlecardexpand="0">
   <IsContactForm>false</IsContactForm>
   <EntityName>sf_workorder</EntityName>
   <CamelCase>sf_workorder</CamelCase>
@@ -6,6 +6,7 @@
   <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <IsBulkUpdateForm>false</IsBulkUpdateForm>
   <CacheMode>-1</CacheMode>
+  <UiSyncGuardMode>-1</UiSyncGuardMode>
   <PrimaryCommands>Favorite|||Delete||</PrimaryCommands>
   <SharedVariableNames/>
   <ClassBinding/>
@@ -19,6 +20,7 @@
         <DetailItem SchemaName="accountid">
           <LookupViews>&lt;lookup&gt;&lt;extra&gt;&lt;views&gt;sf_account.@All Accounts:sf_account.My Accounts&lt;/views&gt;&lt;/extra&gt;&lt;dialog&gt;1&lt;/dialog&gt;&lt;/lookup&gt;</LookupViews>
         </DetailItem>
+        <DetailItem SchemaName="worktypeid"/>
         <DetailItem SchemaName="startdate"/>
         <DetailItem SchemaName="enddate"/>
         <DetailItem SchemaName="description"/>
@@ -52,22 +54,22 @@
       <Name>Skill Requirements List</Name>
       <Binding SchemaName="sf_skillrequirement.relatedrecordid"/>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="100px" flexiWidth="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_productrequest@2x.png" IsIconNameReadOnly="0">
+    <FormTab xsi:type="AssociatedTab" flexiHeight="100px" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_productrequest@2x.png" IsIconNameReadOnly="0">
       <Name>Product Requests List</Name>
       <Binding SchemaName="sf_productrequest.workorderid"/>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="200px" flexiWidth="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_serviceappointment@2x.png" IsIconNameReadOnly="0">
+    <FormTab xsi:type="AssociatedTab" flexiHeight="200px" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_serviceappointment@2x.png" IsIconNameReadOnly="0">
       <Name>Service Appointments List</Name>
       <Binding SchemaName="sf_serviceappointment.parentrecordid"/>
       <Views>sf_serviceappointment.*:sf_serviceappointment.@All Appointments</Views>
       <LookupViews>sf_serviceappointment.*:sf_serviceappointment.@All Appointments</LookupViews>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="1" flexiWidth="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Files@2x.png" IsIconNameReadOnly="0" AllowAddExisting="true">
+    <FormTab xsi:type="AssociatedTab" flexiHeight="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Files@2x.png" IsIconNameReadOnly="0" AllowAddExisting="true">
       <Name>Files</Name>
       <CustomName>Files</CustomName>
       <Binding SchemaName="sf_contentdocumentlink.linkedentityid"/>
     </FormTab>
-    <FormTab xsi:type="MapTab" flexiHeight="200px" flexiWidth="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
+    <FormTab xsi:type="MapTab" flexiHeight="200px" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
       <Name>Map</Name>
       <CoordinatesBinding>latitude;longitude</CoordinatesBinding>
     </FormTab>

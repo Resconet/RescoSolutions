@@ -77,14 +77,10 @@
     </entity>
   </fetch>
   <fetch version="1.0">
-    <entity name="sf_account">
-      <filter type="and"/>
-    </entity>
+    <entity name="sf_account"/>
   </fetch>
   <fetch version="1.0">
-    <entity name="sf_contact">
-      <filter type="and"/>
-    </entity>
+    <entity name="sf_contact"/>
   </fetch>
   <fetch version="1.0">
     <entity name="sf_lead">
@@ -97,8 +93,8 @@
     <entity name="sf_event">
       <filter type="and">
         <filter type="or">
-          <condition attribute="ownerid2" operator="eq-userid" value=""/>
-          <condition attribute="createdbyid" operator="eq-userid" value=""/>
+          <condition attribute="ownerid2" operator="eq-userid"/>
+          <condition attribute="createdbyid" operator="eq-userid"/>
         </filter>
       </filter>
     </entity>
@@ -107,36 +103,28 @@
     <entity name="sf_task">
       <filter type="and">
         <filter type="or">
-          <condition attribute="ownerid2" operator="eq-userid" value=""/>
-          <condition attribute="createdbyid" operator="eq-userid" value=""/>
+          <condition attribute="ownerid2" operator="eq-userid"/>
+          <condition attribute="createdbyid" operator="eq-userid"/>
         </filter>
       </filter>
     </entity>
   </fetch>
   <fetch version="1.0">
-    <entity name="sf_case">
-      <filter type="and"/>
-    </entity>
+    <entity name="sf_case"/>
   </fetch>
   <fetch version="1.0">
-    <entity name="sf_pricebookentry">
-      <filter type="and"/>
-    </entity>
+    <entity name="sf_pricebookentry"/>
   </fetch>
   <fetch version="1.0">
-    <entity name="sf_pricebook2">
-      <filter type="and"/>
-    </entity>
+    <entity name="sf_pricebook2"/>
   </fetch>
   <fetch version="1.0">
-    <entity name="sf_order">
-      <filter type="and"/>
-    </entity>
+    <entity name="sf_order"/>
   </fetch>
   <fetch version="1.0">
     <entity name="sf_note">
       <filter type="and">
-        <condition attribute="ownerid2" operator="eq-userid" value=""/>
+        <condition attribute="ownerid2" operator="eq-userid"/>
         <condition attribute="modifiedon" operator="last-x-days" value="365"/>
       </filter>
     </entity>
@@ -149,9 +137,7 @@
     </entity>
   </fetch>
   <fetch version="1.0">
-    <entity name="sf_contentdocumentlink">
-      <filter type="and"/>
-    </entity>
+    <entity name="sf_contentdocumentlink"/>
   </fetch>
   <fetch version="1.0">
     <entity name="sf_contentversion">
@@ -166,9 +152,7 @@
     </entity>
   </fetch>
   <fetch version="1.0">
-    <entity name="sf_quote">
-      <filter type="and"/>
-    </entity>
+    <entity name="sf_quote"/>
   </fetch>
   <fetch version="1.0">
     <entity name="sf_location">
@@ -185,7 +169,10 @@
             <filter type="or">
               <condition attribute="statuscode" operator="eq" value="1"/>
               <condition attribute="statuscode" operator="eq" value="473220002"/>
-              <condition attribute="statuscode" operator="eq" value="473220003"/>
+              <condition attribute="statuscode" operator="in">
+                <value>473220003</value>
+                <value>473220000</value>
+              </condition>
             </filter>
             <condition attribute="resco_istemplate" operator="eq" value="1"/>
           </filter>
@@ -193,7 +180,7 @@
         </filter>
         <filter type="or">
           <condition attribute="resco_issnippet" operator="eq" value="0"/>
-          <condition attribute="resco_issnippet" operator="null" value=""/>
+          <condition attribute="resco_issnippet" operator="null"/>
         </filter>
       </filter>
     </entity>
@@ -203,6 +190,13 @@
       <filter type="or">
         <condition attribute="resco_kind" operator="like" value="App.%"/>
         <condition attribute="resco_kind" operator="like" value="Global.%"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="sf_workorder">
+      <filter type="and">
+        <condition attribute="priority" operator="not-null"/>
       </filter>
     </entity>
   </fetch>

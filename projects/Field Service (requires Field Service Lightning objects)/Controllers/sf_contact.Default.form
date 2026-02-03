@@ -1,107 +1,101 @@
-﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="2" fullscreen="0" resize="0" version="2">
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="0" fullscreen="0" resize="0" version="2" layoutstrict="0" singlecardexpand="0">
   <IsContactForm>false</IsContactForm>
   <EntityName>sf_contact</EntityName>
   <CamelCase>sf_contact</CamelCase>
   <WorkflowLoad>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="2020Q2" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.ownerid2&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.createdon&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.ownerid2&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:Configuration.systemuserid&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowLoad>
-  <WorkflowItemChanged>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="2020Q2" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.mailinglatitude&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.mailinglongitude&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Map.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Map.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowItemChanged>
+  <WorkflowItemChanged>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="map visibility" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.mailinglatitude&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.mailinglongitude&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Map.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Map.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowItemChanged>
   <WorkflowSave>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.name&lt;/var&gt;&lt;arg&gt;var:Entity.firstname&lt;/arg&gt;&lt;arg&gt;String: &lt;/arg&gt;&lt;arg&gt;var:Entity.lastname&lt;/arg&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;/function&gt;&lt;/Workflow&gt;</WorkflowSave>
   <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
+  <CacheMode>-1</CacheMode>
+  <UiSyncGuardMode>-1</UiSyncGuardMode>
   <PrimaryCommands>Delete|||Favorite||</PrimaryCommands>
   <SharedVariableNames/>
   <ClassBinding/>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand OnExecuteButton</EnabledWorkflows>
   <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab">
+    <FormTab xsi:type="DetailTab" flexiHeight="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_contact@2x.png" IsIconNameReadOnly="0">
       <Name>sf_contact</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="$Table1" grid="true">
-          <Columns>*;*</Columns>
-          <Rows>Auto;Auto;Auto;Auto;Auto;Auto;Auto</Rows>
-          <Items>
-            <DetailItem SchemaName="image1" image="true" imageActions="68169734" Style="Table Image Content">
-              <IsConstant>true</IsConstant>
-              <GridPosition>0;0;1;4</GridPosition>
-            </DetailItem>
-            <DetailItem SchemaName="name" Style="Table">
-              <GridPosition>1;0;1;1</GridPosition>
-            </DetailItem>
-            <DetailItem SchemaName="title" Style="Table">
-              <GridPosition>1;1;1;1</GridPosition>
-            </DetailItem>
-            <DetailItem SchemaName="department" Style="Table">
-              <GridPosition>1;2;1;1</GridPosition>
-            </DetailItem>
-            <DetailItem SchemaName="email" Style="Table">
-              <GridPosition>1;3;1;1</GridPosition>
-            </DetailItem>
-            <DetailItem SchemaName="accountid" Style="Table">
-              <GridPosition>0;4;2;1</GridPosition>
-            </DetailItem>
-            <DetailItem SchemaName="mobilephone" Style="Table">
-              <GridPosition>0;5;1;1</GridPosition>
-            </DetailItem>
-            <DetailItem SchemaName="phone" Style="Table">
-              <GridPosition>1;5;1;1</GridPosition>
-            </DetailItem>
-            <DetailItem SchemaName="reportstoid" Style="Table">
-              <GridPosition>0;6;2;1</GridPosition>
-            </DetailItem>
-          </Items>
+        <DetailItem SchemaName="name">
+          <GridPosition>0;0;2;1</GridPosition>
+        </DetailItem>
+        <DetailItem SchemaName="title">
+          <GridPosition>0;1;2;1</GridPosition>
+        </DetailItem>
+        <DetailItem SchemaName="email">
+          <GridPosition>0;3;2;1</GridPosition>
+        </DetailItem>
+        <DetailItem SchemaName="department">
+          <GridPosition>0;2;2;1</GridPosition>
+        </DetailItem>
+        <DetailItem SchemaName="accountid">
+          <GridPosition>0;4;2;1</GridPosition>
+        </DetailItem>
+        <DetailItem SchemaName="mobilephone" Style="Top Label">
+          <GridPosition>0;5;1;1</GridPosition>
+        </DetailItem>
+        <DetailItem SchemaName="phone" Style="Top Label">
+          <GridPosition>1;5;1;1</GridPosition>
+        </DetailItem>
+        <DetailItem SchemaName="reportstoid" Style="Top Label">
+          <GridPosition>0;6;2;1</GridPosition>
         </DetailItem>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="SignatureTab" flexi="0" flexiHeight="1">
+    <FormTab xsi:type="AssociatedTab" flexi="0" flexiHeight="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_task@2x.png" IsIconNameReadOnly="0">
+      <Name>Tasks List</Name>
+      <Binding SchemaName="sf_task.whoid"/>
+    </FormTab>
+    <FormTab xsi:type="SignatureTab" flexi="0" flexiHeight="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Photo@2x.png" IsIconNameReadOnly="0">
       <Name>Photo</Name>
       <NoteSubject>photo.jpg</NoteSubject>
       <EntityName>sf_contentversion</EntityName>
       <Commands>68161542</Commands>
+      <Flags>0</Flags>
     </FormTab>
-    <FormTab xsi:type="MapTab" flexiHeight="1">
+    <FormTab xsi:type="MapTab" flexiHeight="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
       <Name>Map</Name>
       <CoordinatesBinding>mailinglatitude;mailinglongitude</CoordinatesBinding>
     </FormTab>
-    <FormTab xsi:type="DetailTab">
+    <FormTab xsi:type="DetailTab" flexiHeight="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Address@2x.png" IsIconNameReadOnly="0">
       <Name>Address</Name>
       <SerializedChildren>
         <DetailItem SchemaName="$Table2" grid="true">
           <Columns>*;*</Columns>
           <Rows>Auto;Auto;Auto;Auto;Auto</Rows>
           <Items>
-            <DetailItem SchemaName="mailingstreet" Style="Table">
+            <DetailItem SchemaName="mailingstreet" Style="Normal">
               <GridPosition>0;0;2;1</GridPosition>
             </DetailItem>
-            <DetailItem SchemaName="mailingcity" Style="Table">
+            <DetailItem SchemaName="mailingcity">
               <GridPosition>0;1;1;1</GridPosition>
             </DetailItem>
-            <DetailItem SchemaName="mailingstate" Style="Table">
+            <DetailItem SchemaName="mailingstate">
               <GridPosition>1;1;1;1</GridPosition>
             </DetailItem>
-            <DetailItem SchemaName="mailingpostalcode" Style="Table">
+            <DetailItem SchemaName="mailingpostalcode">
               <GridPosition>0;2;1;1</GridPosition>
             </DetailItem>
-            <DetailItem SchemaName="mailingcountry" Style="Table">
+            <DetailItem SchemaName="mailingcountry">
               <GridPosition>1;2;1;1</GridPosition>
             </DetailItem>
-            <DetailItem SchemaName="mailinglatitude" Style="Table">
+            <DetailItem SchemaName="mailinglatitude">
               <GridPosition>0;3;1;1</GridPosition>
             </DetailItem>
-            <DetailItem SchemaName="mailinglongitude" Style="Table">
+            <DetailItem SchemaName="mailinglongitude">
               <GridPosition>1;3;1;1</GridPosition>
             </DetailItem>
           </Items>
         </DetailItem>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab">
-      <Name>Tasks List</Name>
-      <Binding SchemaName="sf_task.whoid"/>
-    </FormTab>
-    <FormTab xsi:type="AssociatedTab" AllowAddExisting="true">
+    <FormTab xsi:type="AssociatedTab" flexiHeight="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Files@2x.png" IsIconNameReadOnly="0" AllowAddExisting="true">
       <Name>Files</Name>
       <CustomName>Files</CustomName>
       <Binding SchemaName="sf_contentdocumentlink.linkedentityid"/>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab">
+    <FormTab xsi:type="AssociatedTab" flexiHeight="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\sf_attachment@2x.png" IsIconNameReadOnly="0">
       <Name>Attachments List</Name>
       <Binding SchemaName="sf_attachment.parentid"/>
     </FormTab>

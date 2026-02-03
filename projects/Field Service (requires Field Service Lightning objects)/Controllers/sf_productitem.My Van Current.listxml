@@ -23,8 +23,8 @@
   <MaxColumns>0</MaxColumns>
   <Fetch version="1.0">
     <entity name="sf_productitem">
-      <link-entity name="sf_location" alias="L0" from="id" to="locationid" link-type="inner">
-        <link-entity name="sf_serviceresource" alias="L1" from="locationid" to="id" link-type="inner">
+      <link-entity name="sf_location" from="id" to="locationid" link-type="inner" alias="L0">
+        <link-entity name="sf_serviceresource" from="locationid" to="id" link-type="inner" alias="L1">
           <filter type="and">
             <condition attribute="relatedrecordid" operator="eq-userid"/>
           </filter>
