@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-this-alias */
 /* globals MobileCRM:writable, MobileCrmException:writable, CrmBridge, webkit, chrome */
 (function () {
-	var _scriptVersion = 18.0;
+	var _scriptVersion = 19.0;
 	// Private objects & functions
 	var _inherit = (function () {
 		function _() {
@@ -1805,6 +1805,7 @@
 			/// <field name="showPersonalContacts" type="Boolean">Gets or sets whether to show contacts from the user's personal address book.</field>
 			/// <field name="showSystemCalendars" type="Boolean">Gets or sets whether to show private calendars in calendars.</field>
 			/// <field name="systemUserId" type="String">Gets or sets the current user id (given by the server).</field>
+			/// <field name="systemUserName" type="String">Gets or sets the current user name (given by the server).</field>
 			/// <field name="teams" type="Array<String>">Gets the array of ids of teams the current user is member of.</field>
 			/// <field name="useCrmEmail" type="Boolean">Gets or sets whether to create a CRM email entity or use the platform email service.</field>
 			/// <field name="useDatabaseBlobStore" type="Boolean">Gets or sets whether to store attachment blobs in database or in files. If you change this setting you must perform a full sync!</field>
@@ -5384,9 +5385,18 @@
 			///<summary>Duplicates repeatable group with all its questions. The name of the group will contain the lowest available repeatIndex and suffix in form #00X.</summary>
 			/// <param name="id" type="String">Id of the source group.</param>
 			/// <param name="copyValues" type="Boolean">Optional paramater determining whether the group values should be copied to the new instance of this group.</param>
+			/// <returns type="Promise">A promise that resolves when the group is duplicated.</returns>
+			MobileCRM.bridge.invokeMethodAsync("QuestionnaireForm", "RepeatGroup", [groupId, copyValues], null, errorCallback, scope);
+		};
+		MobileCRM.UI.QuestionnaireForm.repeatGroupAsync = function (groupId, copyValues) {
+			///<summary>Duplicates repeatable group with all its questions. The name of the group will contain the lowest available repeatIndex and suffix in form #00X.</summary>
+			/// <param name="id" type="String">Id of the source group.</param>
+			/// <param name="copyValues" type="Boolean">Optional paramater determining whether the group values should be copied to the new instance of this group.</param>
 			/// <param name="errorCallback" type="function(errorMsg)">The errorCallback which is called in case of error.</param>
 			/// <param name="scope" type="Object">The scope for callbacks.</param>
-			MobileCRM.bridge.invokeMethodAsync("QuestionnaireForm", "RepeatGroup", [groupId, copyValues], null, errorCallback, scope);
+			return new Promise(function (resolve, reject) {
+				MobileCRM.bridge.invokeMethodAsync("QuestionnaireForm", "RepeatGroup", [groupId, copyValues], resolve, reject);
+			});
 		};
 		MobileCRM.UI.QuestionnaireForm.deleteGroup = function (groupId, errorCallback, scope) {
 			///<summary>Deletes an instance of repeatable group with all its questions and adjusts the repeatIndex for all instances of the same template group with higher index.</summary>
@@ -5416,6 +5426,12 @@
 			/// <param name="errorCallback" type="function(errorMsg)">The errorCallback which is called in case of error.</param>
 			/// <param name="scope" type="Object">The scope for callbacks.</param>
 			MobileCRM.UI.QuestionnaireForm.repeatGroup(this.id, copyValues, errorCallback, scope);
+		};
+		MobileCRM.UI.QuestionnaireForm.Group.prototype.repeatGroupAsync = function (copyValues) {
+			///<summary>Duplicates repeatable group with all its questions. The name of the group will contain the lowest available repeatIndex and suffix in form #00X.</summary>
+			/// <param name="copyValues" type="Boolean">Optional parameter determining whether the group values should be copied to the new instance of this group.</param>
+			// <returns type="Promise">A promise that resolves when the group is duplicated.</returns>
+			return MobileCRM.UI.QuestionnaireForm.repeatGroupAsync(this.id, copyValues);
 		};
 		MobileCRM.UI.QuestionnaireForm.Group.prototype.deleteGroup = function (errorCallback, scope) {
 			///<summary>Deletes this instance of repeatable group with all its questions and adjusts the repeatIndex for all instances of the same template group with higher index.</summary>
@@ -6821,9 +6837,10 @@
 			} else {
 				if ("chrome" in window && "webview" in window["chrome"]) {
 					// Windows UWP with WebView2 (Edge)
+					var msgWindow = parent && "HiddenIframeContainer" in parent ? parent : chrome.webview;
 					MobileCRM.Bridge.prototype.command = function (command, params, success, failed, scope) {
 						var cmdId = this._createCmdObject(success, failed, scope);
-						chrome.webview.postMessage(cmdId + ";" + command + ":" + params);
+						msgWindow.postMessage(cmdId + ";" + command + ":" + params);
 					};
 					MobileCRM.Bridge.prototype.alert = function (text, callback, scope) {
 						MobileCRM.bridge.command("alert", text, callback, callback, scope);
