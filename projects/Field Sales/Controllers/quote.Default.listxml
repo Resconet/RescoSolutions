@@ -166,7 +166,7 @@
       <Name>won</Name>
       <Width>320</Width>
       <Height>86</Height>
-      <SerializedBackground>-2165533</SerializedBackground>
+      <SerializedBackground>surface</SerializedBackground>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary</StyleName>

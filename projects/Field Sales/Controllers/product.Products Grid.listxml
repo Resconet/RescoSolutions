@@ -44,7 +44,7 @@
         <CellTemplate SchemaName="img">
           <IsConstant>true</IsConstant>
           <StyleName>productImage</StyleName>
-          <Bounds>4,5,96,87</Bounds>
+          <Bounds>4,4,96,87</Bounds>
           <CellKind>1</CellKind>
           <Anchor>12</Anchor>
         </CellTemplate>
