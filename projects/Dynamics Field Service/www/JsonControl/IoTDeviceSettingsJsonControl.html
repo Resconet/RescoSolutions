@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Activate IE9 document mode, if available -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Defined iOS viewport -->
+    <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="ms-https-connections-only" content="true">
+    <link rel="stylesheet" href="styles/json-control.css" />
+    <script type="text/javascript" src="../JSBridge.js"></script>
+    <script type="text/javascript" src="../JSBridgeExtension.js"></script>
+    <script type="text/javascript" src="../Common.js"></script>
+    <script type="text/javascript" src="../Schema.js"></script>
+    <script type="text/javascript" src="../Enums.js"></script>
+    <script type="text/javascript" src="../IoTUtils/Utils.js"></script>
+    <script type="text/javascript" src="JsonControlInitializer.js"></script>
+    <script type="text/javascript" src="moment-2.19.3.js"></script>
+    <script type="text/javascript" src="mscommonlib-1.0.0.js"></script>
+    <script type="text/javascript" src="MetadataControl.js"></script>
+    <script type="text/javascript" src="JsonControlRenderer.js"></script>
+    <script type="text/javascript" src="JsonControlHub.js"></script>
+</head>
+<body onload="FS.JsonControlHub.bootPool[FS.Schema.IoTDevice.properties.msdyn_devicesettings].onLoad()">
+</body>
+</html>

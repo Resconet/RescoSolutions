@@ -1,0 +1,78 @@
+﻿<EntityList UseSyncFilter="true">
+	<Attributes>
+	  <EntityName>rh_guide</EntityName>
+	  <CamelCase>rh_guide</CamelCase>
+	</Attributes>
+	<Name>Default</Name>
+	<Kind>List</Kind>
+	<AutoWideWidth>0</AutoWideWidth>
+	<OrderBy>rh_name</OrderBy>
+	<SerializedBindings>
+	  <string>rh_guidecategoryid</string>
+	  <string>rh_guideid</string>
+	  <string>rh_annotationsubject</string>
+	  <string>rh_name</string>
+	  <string>statuscode</string>
+	</SerializedBindings>
+	<MaxColumns>0</MaxColumns>
+	<TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:473220005&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:1&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+	<SerializedTemplates>
+	  <RowTemplate>
+		<DesignWidth>320</DesignWidth>
+		<DesignHeight>48</DesignHeight>
+		<Name>Default</Name>
+		<Width>320</Width>
+		<Height>48</Height>
+		<SerializedChildren>
+		  <CellTemplate SchemaName="rh_name">
+			<StyleName>primary</StyleName>
+			<Bounds>54,2,258,26</Bounds>
+			<CellKind>0</CellKind>
+			<Anchor>13</Anchor>
+		  </CellTemplate>
+		  <CellTemplate SchemaName="rh_guidecategoryid">
+			<StyleName>gray</StyleName>
+			<Bounds>54,29,258,15</Bounds>
+			<CellKind>0</CellKind>
+			<Anchor>13</Anchor>
+		  </CellTemplate>
+		  <CellTemplate SchemaName="img">
+			<IsConstant>true</IsConstant>
+			<StyleName>ListGuideImage</StyleName>
+			<Bounds>2,2,44,44</Bounds>
+			<CellKind>1</CellKind>
+			<Anchor>5</Anchor>
+		  </CellTemplate>
+		</SerializedChildren>
+	  </RowTemplate>
+	  <RowTemplate>
+        <DesignWidth>320</DesignWidth>
+        <DesignHeight>48</DesignHeight>
+        <Name>Collected</Name>
+        <Width>320</Width>
+        <Height>48</Height>
+        <SerializedChildren>
+          <CellTemplate SchemaName="rh_name">
+            <StyleName>primary</StyleName>
+            <Bounds>54,2,258,26</Bounds>
+            <CellKind>0</CellKind>
+            <Anchor>13</Anchor>
+          </CellTemplate>
+          <CellTemplate SchemaName="@Guides.SyncToUpload">
+            <IsConstant>true</IsConstant>
+            <StyleName>red</StyleName>
+            <Bounds>54,29,258,15</Bounds>
+            <CellKind>0</CellKind>
+            <Anchor>13</Anchor>
+          </CellTemplate>
+          <CellTemplate SchemaName="img">
+            <IsConstant>true</IsConstant>
+            <StyleName>ListGuideImage</StyleName>
+            <Bounds>2,2,44,44</Bounds>
+            <CellKind>1</CellKind>
+            <Anchor>5</Anchor>
+          </CellTemplate>
+        </SerializedChildren>
+      </RowTemplate>
+	</SerializedTemplates>
+  </EntityList>

@@ -1,0 +1,54 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>msdyn_bookingjournal</EntityName>
+    <CamelCase>msdyn_bookingjournal</CamelCase>
+  </Attributes>
+  <Name>Default</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>msdyn_starttime</OrderBy>
+  <SerializedBindings>
+    <string>msdyn_billable</string>
+    <string>msdyn_booking</string>
+    <string>msdyn_bookingjournalid</string>
+    <string>msdyn_duration</string>
+    <string>msdyn_endtime</string>
+    <string>msdyn_journaltype</string>
+    <string>msdyn_name</string>
+    <string>ownerid</string>
+    <string>msdyn_paytype</string>
+    <string>msdyn_starttime</string>
+    <string>statecode</string>
+    <string>statuscode</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="msdyn_journaltype">
+          <StyleName>primary</StyleName>
+          <Bounds>10,2,153,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="msdyn_duration">
+          <StyleName>r_primary</StyleName>
+          <Bounds>164,2,149,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="ownerid">
+          <StyleName>gray</StyleName>
+          <Bounds>10,32,303,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

@@ -1,0 +1,29 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>msdyn_bookingjournal</EntityName>
+  <CamelCase>msdyn_bookingjournal</CamelCase>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand OnExecuteButton</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="msdyn_journaltype"/>
+        <DetailItem SchemaName="msdyn_starttime"/>
+        <DetailItem SchemaName="msdyn_endtime"/>
+        <DetailItem SchemaName="msdyn_duration"/>
+        <DetailItem SchemaName="msdyn_booking"/>
+        <DetailItem SchemaName="msdyn_billable"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="1" EntityIconName="" IsIconNameReadOnly="0">
+      <Name>Costs</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="msdyn_paytype"/>
+        <DetailItem SchemaName="msdyn_unitcost"/>
+        <DetailItem SchemaName="msdyn_totalcost"/>
+        <DetailItem SchemaName="msdyn_additionalcost"/>
+      </SerializedChildren>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

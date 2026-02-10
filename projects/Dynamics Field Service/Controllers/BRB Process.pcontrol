@@ -1,0 +1,6 @@
+﻿<ProcessControl>
+  <ProcessName>BRB Process</ProcessName>
+  <Entity>bookableresourcebooking</Entity>
+  <Field>resco_bookingstatusoptionset</Field>
+  <ProcessSteps>690970000;undefined;undefined;undefined|690970001;undefined;undefined;undefined|690970003;undefined;undefined;undefined|690970002;undefined;undefined;undefined|690970004;undefined;undefined;undefined|690970005;undefined;undefined;undefined|</ProcessSteps>
+</ProcessControl>

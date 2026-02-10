@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityChart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>msdyn_workorder</EntityName>
+    <CamelCase>msdyn_workorder</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>Active Work Orders by Type</Name>
+  <IsHidden>false</IsHidden>
+  <Kind>Pie</Kind>
+  <IsDefault>false</IsDefault>
+  <Series>
+    <Series>
+      <Attribute>msdyn_workordertype</Attribute>
+      <Aggregation>Count</Aggregation>
+      <Limit>Top</Limit>
+      <Color>#FF0000FF</Color>
+    </Series>
+  </Series>
+  <Axis>msdyn_workordertype</Axis>
+  <DateGrouping>None</DateGrouping>
+  <SerializedBindings>
+    <string>msdyn_workorderid</string>
+    <string>msdyn_workordertype</string>
+  </SerializedBindings>
+  <LimitCount>3</LimitCount>
+  <Fetch version="1.0">
+    <entity name="msdyn_workorder">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0" />
+        <condition attribute="msdyn_systemstatus" operator="in">
+          <value>690970002</value>
+          <value>690970001</value>
+        </condition>
+      </filter>
+      <link-entity name="bookableresourcebooking" from="msdyn_workorder" to="msdyn_workorderid">
+        <filter type="and">
+          <filter type="or">
+            <condition attribute="endtime" operator="this-month" />
+            <condition attribute="starttime" operator="this-month" />
+          </filter>
+        </filter>
+        <link-entity name="bookableresource" from="bookableresourceid" to="resource">
+          <filter type="and">
+            <condition attribute="userid" operator="eq-userid" />
+          </filter>
+        </link-entity>
+      </link-entity>
+    </entity>
+  </Fetch>
+</EntityChart>

@@ -1,0 +1,43 @@
+﻿<EntityChart>
+  <Name>My Completed Questionnaires This Week</Name>
+  <Kind>Column</Kind>
+  <LimitCount>3</LimitCount>
+  <Fetch version="1.0">
+    <entity name="resco_questionnaire">
+      <filter type="and">
+        <condition attribute="createdby" operator="eq-userid"/>
+        <condition attribute="createdon" operator="this-week"/>
+        <condition attribute="resco_completionstatus" operator="eq" value="1"/>
+        <condition attribute="resco_istemplate" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#FF0000FF</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#FF0000FF</Color>
+  </TargetValue>
+  <SerializedBindings/>
+  <Attributes>
+    <EntityName>resco_questionnaire</EntityName>
+    <CamelCase>resco_questionnaire</CamelCase>
+  </Attributes>
+  <Series>
+    <Series>
+      <Attribute>resco_questionnaireid</Attribute>
+      <Color>#FF0000FF</Color>
+    </Series>
+  </Series>
+  <GroupBySeries>
+    <GroupBySeries>
+      <Attribute>createdon</Attribute>
+      <DateGrouping>Day</DateGrouping>
+    </GroupBySeries>
+  </GroupBySeries>
+  <Axis>createdon</Axis>
+  <DateGrouping>Day</DateGrouping>
+</EntityChart>

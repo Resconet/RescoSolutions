@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
+  <IsContactForm>true</IsContactForm>
+  <EntityName>contact</EntityName>
+  <CamelCase>Contact</CamelCase>
+  <SerializedChildren />
+  <SerializedChildrenV2>
+    <FormTab xsi:type="MapTab">
+      <Name>Map</Name>
+      <CoordinatesBinding>address1_latitude;address1_longitude</CoordinatesBinding>
+    </FormTab>
+  </SerializedChildrenV2>
+  <Navigation>
+    <Name>Navigation</Name>
+    <SerializedChildren>
+      <DetailItem SchemaName="contact.parentcustomerid">
+        <IsConstant>false</IsConstant>
+      </DetailItem>
+      <DetailItem SchemaName="quote.customerid">
+        <IsConstant>false</IsConstant>
+      </DetailItem>
+      <DetailItem SchemaName="salesorder.customerid">
+        <IsConstant>false</IsConstant>
+      </DetailItem>
+      <DetailItem SchemaName="invoice.customerid">
+        <IsConstant>false</IsConstant>
+      </DetailItem>
+      <DetailItem SchemaName="activity.regardingobjectid">
+        <IsConstant>false</IsConstant>
+      </DetailItem>
+      <DetailItem SchemaName="annotation.objectid">
+        <IsConstant>false</IsConstant>
+      </DetailItem>
+    </SerializedChildren>
+  </Navigation>
+  <SerializedContactInfo>
+    <FormTab xsi:type="DetailTab">
+      <Name>Address</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="address1_line1">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address1_line2">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address1_line3">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address1_city">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address1_postalcode">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address1_stateorprovince">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="address1_country">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab">
+      <Name>Call</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="mobilephone">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="telephone1">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab">
+      <Name>E-mail</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="emailaddress1">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab">
+      <Name>SMS</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="mobilephone">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab">
+      <Name>Web</Name>
+      <SerializedChildren />
+    </FormTab>
+  </SerializedContactInfo>
+</EntityForm>

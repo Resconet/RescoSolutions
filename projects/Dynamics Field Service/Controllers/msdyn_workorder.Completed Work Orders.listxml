@@ -1,0 +1,65 @@
+﻿<EntityList UseSyncFilter="true">
+  <Attributes>
+    <EntityName>msdyn_workorder</EntityName>
+    <CamelCase>msdyn_workorder</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Completed Work Orders</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>!modifiedon</OrderBy>
+  <SerializedBindings>
+    <string>msdyn_timeclosed</string>
+    <string>createdon</string>
+    <string>modifiedon</string>
+    <string>msdyn_parentworkorder</string>
+    <string>msdyn_serviceaccount</string>
+    <string>msdyn_substatus</string>
+    <string>msdyn_systemstatus</string>
+    <string>msdyn_workorderid</string>
+    <string>msdyn_name</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="msdyn_workorder">
+      <filter type="and">
+        <condition attribute="msdyn_systemstatus" operator="in">
+          <value>690970005</value>
+          <value>690970004</value>
+          <value>690970003</value>
+        </condition>
+      </filter>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>64</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="msdyn_name">
+          <StyleName>gray</StyleName>
+          <Bounds>17,12,166,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="msdyn_serviceaccount">
+          <StyleName>primary</StyleName>
+          <Bounds>17,29,155,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="msdyn_systemstatus">
+          <StyleName>r_primary9</StyleName>
+          <Bounds>173,17,136,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

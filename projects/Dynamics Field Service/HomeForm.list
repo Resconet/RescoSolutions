@@ -1,0 +1,58 @@
+﻿<EntityListCollection>
+  <EntityName></EntityName>
+  <TypeName>MobileCrm.Controllers.HomeItem</TypeName>
+  <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
+  <SerializedChildren>
+    <EntityList>
+      <Attributes>
+        <EntityName></EntityName>
+        <TypeName>MobileCrm.Controllers.HomeItem</TypeName>
+        <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
+      </Attributes>
+      <Name>Default</Name>
+      <Kind>List</Kind>
+      <AutoWideWidth>0</AutoWideWidth>
+      <OrderBy></OrderBy>
+      <SerializedBindings>
+        <string>Form</string>
+        <string>Icon</string>
+        <string>IsSpecial</string>
+        <string>Name</string>
+        <string>SubTitle</string>
+        <string>Title</string>
+        <string>SectionTitle</string>
+      </SerializedBindings>
+      <MaxColumns>0</MaxColumns>
+      <SerializedTemplates>
+        <RowTemplate>
+          <DesignWidth>320</DesignWidth>
+          <DesignHeight>48</DesignHeight>
+          <Name>Default</Name>
+          <Width>320</Width>
+          <Height>50</Height>
+          <SerializedChildren>
+            <CellTemplate SchemaName="Icon">
+              <StyleName>ImageCellStyle</StyleName>
+              <Bounds>20,10,30,30</Bounds>
+              <CellKind>1</CellKind>
+              <Anchor>5</Anchor>
+            </CellTemplate>
+            <CellTemplate SchemaName="Title">
+              <StyleName>primary</StyleName>
+              <Bounds>80,10,226,30</Bounds>
+              <CellKind>0</CellKind>
+              <Anchor>4</Anchor>
+            </CellTemplate>
+            <CellTemplate SchemaName="SectionTitle">
+              <StyleName>SectionTitleText</StyleName>
+              <Bounds>20,10,262,30</Bounds>
+              <CellKind>0</CellKind>
+              <Anchor>4</Anchor>
+            </CellTemplate>
+          </SerializedChildren>
+        </RowTemplate>
+      </SerializedTemplates>
+      <CustomProperties/>
+    </EntityList>
+  </SerializedChildren>
+</EntityListCollection>

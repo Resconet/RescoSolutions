@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityChart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>opportunity</EntityName>
+    <CamelCase>Opportunity</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>Default</Name>
+  <IsHidden>false</IsHidden>
+  <Kind>Column</Kind>
+  <IsDefault>false</IsDefault>
+  <Series>
+    <Series>
+      <Attribute>estimatedvalue</Attribute>
+      <Aggregation>Sum</Aggregation>
+      <Limit>None</Limit>
+    </Series>
+  </Series>
+  <Axis>actualclosedate</Axis>
+  <DateGrouping>Month</DateGrouping>
+  <SerializedBindings>
+    <string>actualclosedate</string>
+    <string>transactioncurrencyid</string>
+    <string>estimatedvalue</string>
+    <string>opportunityid</string>
+  </SerializedBindings>
+  <LimitCount>3</LimitCount>
+</EntityChart>

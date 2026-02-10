@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>msdyn_3dmodel</EntityName>
+  <CamelCase>msdyn_3dmodel</CamelCase>
+  <ClassBinding />
+  <SerializedChildren />
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" flexi="0" flexiHeader="1" flexiMaxLines="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="msdyn_name" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_storagetype" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_fileurl" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_filetype" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeader="1" flexiMaxLines="0" FlipMode="0">
+      <Name>Notes List</Name>
+      <LogicalName>annotation.objectid</LogicalName>
+      <Binding SchemaName="annotation.objectid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="IFrameTab" flexi="1" flexiHeader="1" flexiMaxLines="0">
+      <Name>3D_Viewer</Name>
+      <Url>file://Viewer3D/viewer.html</Url>
+      <DelayLoad>true</DelayLoad>
+      <ProvidesDataSource>false</ProvidesDataSource>
+    </FormTab>
+  </SerializedChildrenV2>
+  <Navigation flexi="0" flexiHeader="1" flexiMaxLines="0">
+    <Name>Navigation</Name>
+    <SerializedChildren />
+  </Navigation>
+  <WorkflowItemChanged>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;
+  &lt;branch e="true"&gt;
+    &lt;if e="true"&gt;
+      &lt;conditions e="true" op="And"&gt;
+        &lt;condition e="false"&gt;
+          &lt;var&gt;ChangedItem&lt;/var&gt;
+          &lt;arg&gt;String:msdyn_storagetype&lt;/arg&gt;
+          &lt;op&gt;Equal&lt;/op&gt;
+        &lt;/condition&gt;
+        &lt;condition e="false"&gt;
+          &lt;var&gt;Entity.msdyn_storagetype&lt;/var&gt;
+          &lt;arg&gt;Picklist:100000000&lt;/arg&gt;
+          &lt;op&gt;Equal&lt;/op&gt;
+        &lt;/condition&gt;
+      &lt;/conditions&gt;
+      &lt;action e="true"&gt;
+        &lt;function e="false"&gt;
+          &lt;var&gt;Form.msdyn_filetype.IsVisible&lt;/var&gt;
+          &lt;arg&gt;Boolean:False&lt;/arg&gt;
+          &lt;func&gt;Assign&lt;/func&gt;
+        &lt;/function&gt;
+        &lt;function e="false"&gt;
+          &lt;var&gt;Form.msdyn_filetype.Validate&lt;/var&gt;
+          &lt;arg&gt;Boolean:False&lt;/arg&gt;
+          &lt;func&gt;Assign&lt;/func&gt;
+        &lt;/function&gt;
+        &lt;function e="false"&gt;
+          &lt;var&gt;Form.msdyn_fileurl.IsVisible&lt;/var&gt;
+          &lt;arg&gt;Boolean:False&lt;/arg&gt;
+          &lt;func&gt;Assign&lt;/func&gt;
+        &lt;/function&gt;
+        &lt;function e="false"&gt;
+          &lt;var&gt;Form.msdyn_fileurl.Validate&lt;/var&gt;
+          &lt;arg&gt;Boolean:False&lt;/arg&gt;
+          &lt;func&gt;Assign&lt;/func&gt;
+        &lt;/function&gt;
+        &lt;function e="false"&gt;
+          &lt;var&gt;Tabs.(annotation.objectid.msdyn_3dmodel).IsVisible&lt;/var&gt;
+          &lt;arg&gt;Boolean:True&lt;/arg&gt;
+          &lt;func&gt;Assign&lt;/func&gt;
+        &lt;/function&gt;
+        &lt;definition e="false"&gt;
+          &lt;var&gt;fetchedNote&lt;/var&gt;
+          &lt;arg&gt;String:annotation&lt;/arg&gt;
+          &lt;arg&gt;Fetch:&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="annotation"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="objectid" operator="eq" value="{{Entity.@this}}" /&amp;gt;&amp;lt;condition attribute="isdocument" operator="eq" value="1" /&amp;gt;&amp;lt;filter type="or"&amp;gt;&amp;lt;condition attribute="filename" operator="like" value="%.gltf" /&amp;gt;&amp;lt;condition attribute="filename" operator="like" value="%.glb" /&amp;gt;&amp;lt;condition attribute="filename" operator="like" value="%.obj" /&amp;gt;&amp;lt;condition attribute="filename" operator="like" value="%.fbx" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/arg&gt;
+          &lt;func&gt;LoadFetch&lt;/func&gt;
+          &lt;type&gt;Entity&lt;/type&gt;
+        &lt;/definition&gt;
+        &lt;branch e="true"&gt;
+          &lt;if e="true"&gt;
+            &lt;conditions e="true" op="And"&gt;
+              &lt;condition e="false"&gt;
+                &lt;var&gt;fetchedNote.@this&lt;/var&gt;
+                &lt;op&gt;ContainsData&lt;/op&gt;
+              &lt;/condition&gt;
+            &lt;/conditions&gt;
+            &lt;action e="true"&gt;
+              &lt;function e="false"&gt;
+                &lt;var&gt;Tabs.3D_Viewer.IsVisible&lt;/var&gt;
+                &lt;arg&gt;Boolean:True&lt;/arg&gt;
+                &lt;func&gt;Assign&lt;/func&gt;
+              &lt;/function&gt;
+            &lt;/action&gt;
+          &lt;/if&gt;
+          &lt;if e="true"&gt;
+            &lt;conditions e="true" op="And" /&gt;
+            &lt;action e="true"&gt;
+              &lt;function e="false"&gt;
+                &lt;var&gt;Tabs.3D_Viewer.IsVisible&lt;/var&gt;
+                &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                &lt;func&gt;Assign&lt;/func&gt;
+              &lt;/function&gt;
+            &lt;/action&gt;
+          &lt;/if&gt;
+        &lt;/branch&gt;
+      &lt;/action&gt;
+    &lt;/if&gt;
+    &lt;if e="true"&gt;
+      &lt;conditions e="true" op="And"&gt;
+        &lt;condition e="false"&gt;
+          &lt;var&gt;ChangedItem&lt;/var&gt;
+          &lt;arg&gt;String:msdyn_storagetype&lt;/arg&gt;
+          &lt;op&gt;Equal&lt;/op&gt;
+        &lt;/condition&gt;
+        &lt;condition e="false"&gt;
+          &lt;var&gt;Entity.msdyn_storagetype&lt;/var&gt;
+          &lt;arg&gt;Picklist:100000001&lt;/arg&gt;
+          &lt;op&gt;Equal&lt;/op&gt;
+        &lt;/condition&gt;
+      &lt;/conditions&gt;
+      &lt;action e="true"&gt;
+        &lt;function e="false"&gt;
+          &lt;var&gt;Form.msdyn_filetype.IsVisible&lt;/var&gt;
+          &lt;arg&gt;Boolean:True&lt;/arg&gt;
+          &lt;func&gt;Assign&lt;/func&gt;
+        &lt;/function&gt;
+        &lt;function e="false"&gt;
+          &lt;var&gt;Form.msdyn_filetype.Validate&lt;/var&gt;
+          &lt;arg&gt;Boolean:True&lt;/arg&gt;
+          &lt;func&gt;Assign&lt;/func&gt;
+        &lt;/function&gt;
+        &lt;function e="false"&gt;
+          &lt;var&gt;Form.msdyn_fileurl.IsVisible&lt;/var&gt;
+          &lt;arg&gt;Boolean:True&lt;/arg&gt;
+          &lt;func&gt;Assign&lt;/func&gt;
+        &lt;/function&gt;
+        &lt;function e="false"&gt;
+          &lt;var&gt;Form.msdyn_fileurl.Validate&lt;/var&gt;
+          &lt;arg&gt;Boolean:True&lt;/arg&gt;
+          &lt;func&gt;Assign&lt;/func&gt;
+        &lt;/function&gt;
+        &lt;function e="false"&gt;
+          &lt;var&gt;Tabs.(annotation.objectid.msdyn_3dmodel).IsVisible&lt;/var&gt;
+          &lt;arg&gt;Boolean:False&lt;/arg&gt;
+          &lt;func&gt;Assign&lt;/func&gt;
+        &lt;/function&gt;
+        &lt;branch e="true"&gt;
+          &lt;if e="true"&gt;
+            &lt;conditions e="true" op="And"&gt;
+              &lt;group e="false" op="Or"&gt;
+                &lt;condition e="false"&gt;
+                  &lt;var&gt;Entity.msdyn_filetype&lt;/var&gt;
+                  &lt;op&gt;DoesNotContainData&lt;/op&gt;
+                &lt;/condition&gt;
+                &lt;condition e="false"&gt;
+                  &lt;var&gt;Entity.msdyn_fileurl&lt;/var&gt;
+                  &lt;op&gt;DoesNotContainData&lt;/op&gt;
+                &lt;/condition&gt;
+              &lt;/group&gt;
+            &lt;/conditions&gt;
+            &lt;action e="true"&gt;
+              &lt;function e="false"&gt;
+                &lt;var&gt;Tabs.3D_Viewer.IsVisible&lt;/var&gt;
+                &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                &lt;func&gt;Assign&lt;/func&gt;
+              &lt;/function&gt;
+            &lt;/action&gt;
+          &lt;/if&gt;
+          &lt;if e="true"&gt;
+            &lt;conditions e="false" op="And" /&gt;
+            &lt;action e="true"&gt;
+              &lt;function e="false"&gt;
+                &lt;var&gt;Tabs.3D_Viewer.IsVisible&lt;/var&gt;
+                &lt;arg&gt;Boolean:True&lt;/arg&gt;
+                &lt;func&gt;Assign&lt;/func&gt;
+              &lt;/function&gt;
+            &lt;/action&gt;
+          &lt;/if&gt;
+        &lt;/branch&gt;
+      &lt;/action&gt;
+    &lt;/if&gt;
+    &lt;if e="true"&gt;
+      &lt;conditions e="true" op="And"&gt;
+        &lt;group e="false" op="Or"&gt;
+          &lt;condition e="false"&gt;
+            &lt;var&gt;ChangedItem&lt;/var&gt;
+            &lt;arg&gt;String:msdyn_fileurl&lt;/arg&gt;
+            &lt;op&gt;Equal&lt;/op&gt;
+          &lt;/condition&gt;
+          &lt;condition e="false"&gt;
+            &lt;var&gt;ChangedItem&lt;/var&gt;
+            &lt;arg&gt;String:msdyn_filetype&lt;/arg&gt;
+            &lt;op&gt;Equal&lt;/op&gt;
+          &lt;/condition&gt;
+        &lt;/group&gt;
+        &lt;condition e="false"&gt;
+          &lt;var&gt;Entity.msdyn_filetype&lt;/var&gt;
+          &lt;op&gt;ContainsData&lt;/op&gt;
+        &lt;/condition&gt;
+        &lt;condition e="false"&gt;
+          &lt;var&gt;Entity.msdyn_fileurl&lt;/var&gt;
+          &lt;op&gt;ContainsData&lt;/op&gt;
+        &lt;/condition&gt;
+      &lt;/conditions&gt;
+      &lt;action e="true"&gt;
+        &lt;function e="false"&gt;
+          &lt;var&gt;Tabs.3D_Viewer.IsVisible&lt;/var&gt;
+          &lt;arg&gt;Boolean:True&lt;/arg&gt;
+          &lt;func&gt;Assign&lt;/func&gt;
+        &lt;/function&gt;
+      &lt;/action&gt;
+    &lt;/if&gt;
+    &lt;if e="true"&gt;
+      &lt;conditions e="true" op="And"&gt;
+        &lt;group e="false" op="Or"&gt;
+          &lt;condition e="false"&gt;
+            &lt;var&gt;ChangedItem&lt;/var&gt;
+            &lt;arg&gt;String:msdyn_fileurl&lt;/arg&gt;
+            &lt;op&gt;Equal&lt;/op&gt;
+          &lt;/condition&gt;
+          &lt;condition e="false"&gt;
+            &lt;var&gt;ChangedItem&lt;/var&gt;
+            &lt;arg&gt;String:msdyn_filetype&lt;/arg&gt;
+            &lt;op&gt;Equal&lt;/op&gt;
+          &lt;/condition&gt;
+        &lt;/group&gt;
+        &lt;group e="false" op="Or"&gt;
+          &lt;condition e="false"&gt;
+            &lt;var&gt;Entity.msdyn_filetype&lt;/var&gt;
+            &lt;op&gt;DoesNotContainData&lt;/op&gt;
+          &lt;/condition&gt;
+          &lt;condition e="false"&gt;
+            &lt;var&gt;Entity.msdyn_fileurl&lt;/var&gt;
+            &lt;op&gt;DoesNotContainData&lt;/op&gt;
+          &lt;/condition&gt;
+        &lt;/group&gt;
+      &lt;/conditions&gt;
+      &lt;action e="true"&gt;
+        &lt;function e="false"&gt;
+          &lt;var&gt;Tabs.3D_Viewer.IsVisible&lt;/var&gt;
+          &lt;arg&gt;Boolean:False&lt;/arg&gt;
+          &lt;func&gt;Assign&lt;/func&gt;
+        &lt;/function&gt;
+      &lt;/action&gt;
+    &lt;/if&gt;
+  &lt;/branch&gt;
+&lt;/Workflow&gt;</WorkflowItemChanged>
+  <SharedVariables>&lt;SharedVariables&gt;
+&lt;Variables /&gt;
+&lt;/SharedVariables&gt;</SharedVariables>
+  <SharedVariableNames />
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedContactInfo />
+</EntityForm>

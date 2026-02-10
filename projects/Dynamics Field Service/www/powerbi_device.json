@@ -1,0 +1,5 @@
+﻿{
+	"webresource" : "msdyn_/IoT/PowerBI/Scripts/ConfigData.js",
+	"url" : "",
+	"filter": "crmioteventsview/deviceid eq '{msdyn_deviceid}'"
+}

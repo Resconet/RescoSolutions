@@ -1,0 +1,405 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>msdyn_iotdevicecommand</EntityName>
+  <CamelCase>msdyn_iotdevicecommand</CamelCase>
+  <WorkflowLoad>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+    &lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;
+       &lt;branch e="true" info="Lock Command Status to In Progress when the entity is new"&gt;
+          &lt;if e="true"&gt;
+             &lt;conditions e="true" op="And"&gt;
+                &lt;condition e="false"&gt;
+                   &lt;var&gt;Entity.IsNew&lt;/var&gt;
+                   &lt;op&gt;Equal&lt;/op&gt;
+                   &lt;arg&gt;Boolean:True&lt;/arg&gt;
+                &lt;/condition&gt;
+             &lt;/conditions&gt;
+             &lt;action&gt;
+                &lt;function e="false"&gt;
+                   &lt;var&gt;Form.msdyn_commandstatus.IsEnabled&lt;/var&gt;
+                   &lt;func&gt;Assign&lt;/func&gt;
+                   &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                &lt;/function&gt;
+             &lt;/action&gt;
+          &lt;/if&gt;
+       &lt;/branch&gt;
+       &lt;branch e="true" info="Mark the form as ReadOnly when the entity is not new"&gt;
+          &lt;if e="true"&gt;
+             &lt;conditions e="true" op="And"&gt;
+                &lt;condition e="false"&gt;
+                   &lt;var&gt;Entity.IsNew&lt;/var&gt;
+                   &lt;op&gt;Equal&lt;/op&gt;
+                   &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                &lt;/condition&gt;
+             &lt;/conditions&gt;
+             &lt;action&gt;
+                &lt;function e="false"&gt;
+                   &lt;var&gt;IsFormEditable&lt;/var&gt;
+                   &lt;func&gt;Assign&lt;/func&gt;
+                   &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                &lt;/function&gt;
+             &lt;/action&gt;
+          &lt;/if&gt;
+       &lt;/branch&gt;
+       &lt;branch e="true" info="Hide advanced fields when the entity is new"&gt;
+          &lt;if e="true"&gt;
+             &lt;conditions e="true" op="And"&gt;
+                &lt;condition e="false"&gt;
+                   &lt;var&gt;Entity.IsNew&lt;/var&gt;
+                   &lt;op&gt;Equal&lt;/op&gt;
+                   &lt;arg&gt;Boolean:True&lt;/arg&gt;
+                &lt;/condition&gt;
+             &lt;/conditions&gt;
+             &lt;action&gt;
+                &lt;function e="false"&gt;
+                   &lt;var&gt;Tabs.Advanced.IsVisible&lt;/var&gt;
+                   &lt;func&gt;Assign&lt;/func&gt;
+                   &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                &lt;/function&gt;
+             &lt;/action&gt;
+          &lt;/if&gt;
+          &lt;if e="true"&gt;
+             &lt;conditions e="true" op="And" /&gt;
+             &lt;action&gt;
+                &lt;function e="false"&gt;
+                   &lt;var&gt;Tabs.Advanced.IsVisible&lt;/var&gt;
+                   &lt;func&gt;Assign&lt;/func&gt;
+                   &lt;arg&gt;Boolean:True&lt;/arg&gt;
+                &lt;/function&gt;
+             &lt;/action&gt;
+          &lt;/if&gt;
+       &lt;/branch&gt;
+       &lt;function e="false"&gt;
+          &lt;var&gt;Form.msdyn_message.IsVisible&lt;/var&gt;
+          &lt;func&gt;Assign&lt;/func&gt;
+          &lt;arg&gt;Boolean:False&lt;/arg&gt;
+       &lt;/function&gt;
+    &lt;/Workflow&gt;
+  </WorkflowLoad>
+  <WorkflowItemChanged>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+    &lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;
+      &lt;branch info="Check what changed" e="false"&gt;
+        &lt;if e="true"&gt;
+          &lt;conditions e="true" op="And"&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;ChangedItem&lt;/var&gt;
+              &lt;arg&gt;String:msdyn_sendtoallconnecteddevices&lt;/arg&gt;
+              &lt;op&gt;Equal&lt;/op&gt;
+            &lt;/condition&gt;
+          &lt;/conditions&gt;
+          &lt;action e="true"&gt;
+            &lt;branch info="When Send to All Devices equals Yes, set Customer Asset as required and hide Device and Device ID" e="false"&gt;
+              &lt;if e="true"&gt;
+                &lt;conditions e="true" op="And"&gt;
+                  &lt;condition e="false"&gt;
+                    &lt;var&gt;Entity.msdyn_sendtoallconnecteddevices&lt;/var&gt;
+                    &lt;arg&gt;Boolean:1&lt;/arg&gt;
+                    &lt;op&gt;Equal&lt;/op&gt;
+                  &lt;/condition&gt;
+                &lt;/conditions&gt;
+                &lt;action e="true"&gt;
+                  &lt;function e="false"&gt;
+                    &lt;var&gt;Form.msdyn_customerasset.Validate&lt;/var&gt;
+                    &lt;arg&gt;Boolean:True&lt;/arg&gt;
+                    &lt;func&gt;Assign&lt;/func&gt;
+                  &lt;/function&gt;
+                  &lt;function e="false"&gt;
+                    &lt;var&gt;Form.msdyn_device.IsVisible&lt;/var&gt;
+                    &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                    &lt;func&gt;Assign&lt;/func&gt;
+                  &lt;/function&gt;
+                  &lt;function e="false"&gt;
+                    &lt;var&gt;Form.msdyn_deviceid.IsVisible&lt;/var&gt;
+                    &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                    &lt;func&gt;Assign&lt;/func&gt;
+                  &lt;/function&gt;
+                &lt;/action&gt;
+              &lt;/if&gt;
+              &lt;if e="true"&gt;
+                &lt;conditions e="false" op="And" /&gt;
+                &lt;action e="true"&gt;
+                  &lt;function e="false"&gt;
+                    &lt;var&gt;Form.msdyn_customerasset.Validate&lt;/var&gt;
+                    &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                    &lt;func&gt;Assign&lt;/func&gt;
+                  &lt;/function&gt;
+                  &lt;function e="false"&gt;
+                    &lt;var&gt;Form.msdyn_device.IsVisible&lt;/var&gt;
+                    &lt;arg&gt;Boolean:True&lt;/arg&gt;
+                    &lt;func&gt;Assign&lt;/func&gt;
+                  &lt;/function&gt;
+                  &lt;function e="false"&gt;
+                    &lt;var&gt;Form.msdyn_deviceid.IsVisible&lt;/var&gt;
+                    &lt;arg&gt;Boolean:True&lt;/arg&gt;
+                    &lt;func&gt;Assign&lt;/func&gt;
+                  &lt;/function&gt;
+                &lt;/action&gt;
+              &lt;/if&gt;
+            &lt;/branch&gt;
+          &lt;/action&gt;
+        &lt;/if&gt;
+        &lt;if e="false"&gt;
+          &lt;conditions e="true" op="And"&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;ChangedItem&lt;/var&gt;
+              &lt;arg&gt;String:msdyn_commandstatus&lt;/arg&gt;
+              &lt;op&gt;Equal&lt;/op&gt;
+            &lt;/condition&gt;
+          &lt;/conditions&gt;
+          &lt;action e="true"&gt;
+            &lt;branch info="Show Command Status Reason field when Command Status equals Error" e="false"&gt;
+              &lt;if e="true"&gt;
+                &lt;conditions e="true" op="And"&gt;
+                  &lt;condition e="false"&gt;
+                    &lt;var&gt;Entity.msdyn_commandstatus&lt;/var&gt;
+                    &lt;arg&gt;Picklist:192350002&lt;/arg&gt;
+                    &lt;op&gt;Equal&lt;/op&gt;
+                  &lt;/condition&gt;
+                &lt;/conditions&gt;
+                &lt;action e="true"&gt;
+                  &lt;function e="false"&gt;
+                    &lt;var&gt;Form.msdyn_commandstatusreason.IsVisible&lt;/var&gt;
+                    &lt;arg&gt;Boolean:True&lt;/arg&gt;
+                    &lt;func&gt;Assign&lt;/func&gt;
+                  &lt;/function&gt;
+                &lt;/action&gt;
+              &lt;/if&gt;
+              &lt;if e="true"&gt;
+                &lt;conditions e="false" op="And" /&gt;
+                &lt;action e="true"&gt;
+                  &lt;function e="false"&gt;
+                    &lt;var&gt;Form.msdyn_commandstatusreason.IsVisible&lt;/var&gt;
+                    &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                    &lt;func&gt;Assign&lt;/func&gt;
+                  &lt;/function&gt;
+                &lt;/action&gt;
+              &lt;/if&gt;
+            &lt;/branch&gt;
+          &lt;/action&gt;
+        &lt;/if&gt;
+      &lt;/branch&gt;
+      &lt;branch info="Business Rule - Lock device fields" e="false"&gt;
+        &lt;if e="true"&gt;
+          &lt;conditions e="true" op="And"&gt;
+            &lt;group e="false" op="Or"&gt;
+              &lt;condition e="false"&gt;
+                &lt;var&gt;ChangedItem&lt;/var&gt;
+                &lt;arg&gt;String:msdyn_device&lt;/arg&gt;
+                &lt;op&gt;Equal&lt;/op&gt;
+              &lt;/condition&gt;
+              &lt;condition e="false"&gt;
+                &lt;var&gt;ChangedItem&lt;/var&gt;
+                &lt;arg&gt;String:msdyn_deviceid&lt;/arg&gt;
+                &lt;op&gt;Equal&lt;/op&gt;
+              &lt;/condition&gt;
+            &lt;/group&gt;
+          &lt;/conditions&gt;
+          &lt;action e="true"&gt;
+            &lt;branch info="Lock device fields" e="true"&gt;
+              &lt;if e="true"&gt;
+                &lt;conditions e="true" op="And"&gt;
+                  &lt;condition e="false"&gt;
+                    &lt;var&gt;Entity.msdyn_device&lt;/var&gt;
+                    &lt;op&gt;ContainsData&lt;/op&gt;
+                  &lt;/condition&gt;
+                &lt;/conditions&gt;
+                &lt;action e="true"&gt;
+                  &lt;function e="false"&gt;
+                    &lt;var&gt;Form.msdyn_deviceid.IsEnabled&lt;/var&gt;
+                    &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                    &lt;func&gt;Assign&lt;/func&gt;
+                  &lt;/function&gt;
+                &lt;/action&gt;
+              &lt;/if&gt;
+              &lt;if e="true"&gt;
+                &lt;conditions e="true" op="And"&gt;
+                  &lt;condition e="false"&gt;
+                    &lt;var&gt;Entity.msdyn_deviceid&lt;/var&gt;
+                    &lt;op&gt;ContainsData&lt;/op&gt;
+                  &lt;/condition&gt;
+                &lt;/conditions&gt;
+                &lt;action e="true"&gt;
+                  &lt;function e="false"&gt;
+                    &lt;var&gt;Form.msdyn_device.IsEnabled&lt;/var&gt;
+                    &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                    &lt;func&gt;Assign&lt;/func&gt;
+                  &lt;/function&gt;
+                &lt;/action&gt;
+              &lt;/if&gt;
+              &lt;if e="true"&gt;
+                &lt;conditions e="false" op="And" /&gt;
+                &lt;action e="true"&gt;
+                  &lt;function e="false"&gt;
+                    &lt;var&gt;Form.msdyn_device.IsEnabled&lt;/var&gt;
+                    &lt;arg&gt;Boolean:True&lt;/arg&gt;
+                    &lt;func&gt;Assign&lt;/func&gt;
+                  &lt;/function&gt;
+                  &lt;function e="false"&gt;
+                    &lt;var&gt;Form.msdyn_deviceid.IsEnabled&lt;/var&gt;
+                    &lt;arg&gt;Boolean:True&lt;/arg&gt;
+                    &lt;func&gt;Assign&lt;/func&gt;
+                  &lt;/function&gt;
+                &lt;/action&gt;
+              &lt;/if&gt;
+            &lt;/branch&gt;
+          &lt;/action&gt;
+        &lt;/if&gt;
+      &lt;/branch&gt;
+    &lt;/Workflow&gt;
+  </WorkflowItemChanged>
+  <WorkflowSave>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+    &lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;
+      &lt;branch e="true" info="Throw error when none of Parent Alert, Device and Device ID is set and Send to All Devices equals No"&gt;
+        &lt;if e="true"&gt;
+          &lt;conditions e="true" op="And"&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;Entity.msdyn_deviceid&lt;/var&gt;
+              &lt;op&gt;DoesNotContainData&lt;/op&gt;
+            &lt;/condition&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;Entity.msdyn_device&lt;/var&gt;
+              &lt;op&gt;DoesNotContainData&lt;/op&gt;
+            &lt;/condition&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;Entity.msdyn_parentalert&lt;/var&gt;
+              &lt;op&gt;DoesNotContainData&lt;/op&gt;
+            &lt;/condition&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;Entity.msdyn_sendtoallconnecteddevices&lt;/var&gt;
+              &lt;op&gt;Equal&lt;/op&gt;
+              &lt;arg&gt;Boolean:0&lt;/arg&gt;
+            &lt;/condition&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;Entity.msdyn_customerasset&lt;/var&gt;
+              &lt;op&gt;DoesNotContainData&lt;/op&gt;
+            &lt;/condition&gt;
+          &lt;/conditions&gt;
+          &lt;action&gt;
+            &lt;function e="false"&gt;
+              &lt;var&gt;ErrorMessage&lt;/var&gt;
+              &lt;func&gt;Assign&lt;/func&gt;
+              &lt;arg&gt;String:@Alert.SetParentAlertOrDeviceOrDeviceId&lt;/arg&gt;
+            &lt;/function&gt;
+          &lt;/action&gt;
+        &lt;/if&gt;
+      &lt;/branch&gt;
+    &lt;/Workflow&gt;
+  </WorkflowSave>
+  <WorkflowCommandExecute>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+    &lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;
+       &lt;branch e="true" info="Execute custom_Advanced command"&gt;
+          &lt;if e="true"&gt;
+             &lt;conditions e="true" op="And"&gt;
+                &lt;condition e="false"&gt;
+                   &lt;var&gt;Command.Name&lt;/var&gt;
+                   &lt;op&gt;Equal&lt;/op&gt;
+                   &lt;arg&gt;String:custom_Advanced&lt;/arg&gt;
+                &lt;/condition&gt;
+             &lt;/conditions&gt;
+             &lt;action&gt;
+                &lt;function e="false"&gt;
+                   &lt;var&gt;Tabs.Advanced.IsVisible&lt;/var&gt;
+                   &lt;func&gt;Assign&lt;/func&gt;
+                   &lt;arg&gt;Boolean:True&lt;/arg&gt;
+                &lt;/function&gt;
+             &lt;/action&gt;
+          &lt;/if&gt;
+       &lt;/branch&gt;
+    &lt;/Workflow&gt;
+  </WorkflowCommandExecute>
+  <WorkflowCommandCanExecute>&lt;?xml version="1.0"?&gt;
+    &lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;
+      &lt;branch e="true" info="Enable Advanced command when entity is new"&gt;
+        &lt;if e="true"&gt;
+          &lt;conditions e="true" op="And"&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;Command.Name&lt;/var&gt;
+              &lt;op&gt;Equal&lt;/op&gt;
+              &lt;arg&gt;String:custom_Advanced&lt;/arg&gt;
+            &lt;/condition&gt;
+          &lt;/conditions&gt;
+          &lt;action&gt;
+            &lt;branch e="true" info="Hide Advanced command if the Advanced tab is already visible"&gt;
+              &lt;if e="true"&gt;
+                &lt;conditions e="true" op="And"&gt;
+                  &lt;condition e="false"&gt;
+                    &lt;var&gt;Tabs.Advanced.IsVisible&lt;/var&gt;
+                    &lt;op&gt;Equal&lt;/op&gt;
+                    &lt;arg&gt;Boolean:True&lt;/arg&gt;
+                  &lt;/condition&gt;
+                &lt;/conditions&gt;
+                &lt;action&gt;
+                  &lt;function e="false"&gt;
+                    &lt;var&gt;Command.IsEnabled&lt;/var&gt;
+                    &lt;func&gt;Assign&lt;/func&gt;
+                    &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                  &lt;/function&gt;
+                &lt;/action&gt;
+              &lt;/if&gt;
+              &lt;if e="true"&gt;
+                &lt;conditions e="true" op="And"&gt;
+                &lt;/conditions&gt;
+                &lt;action&gt;
+                  &lt;function e="false"&gt;
+                    &lt;var&gt;Command.IsEnabled&lt;/var&gt;
+                    &lt;func&gt;Assign&lt;/func&gt;
+                    &lt;arg&gt;var:Entity.IsNew&lt;/arg&gt;
+                  &lt;/function&gt;
+                &lt;/action&gt;
+              &lt;/if&gt;
+            &lt;/branch&gt;
+          &lt;/action&gt;
+        &lt;/if&gt;
+      &lt;/branch&gt;
+    &lt;/Workflow&gt;
+  </WorkflowCommandCanExecute>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <PrimaryCommands>custom_Advanced|Cmd.Advanced|</PrimaryCommands>
+  <SharedVariableNames/>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" flexiHeader="0">
+      <Name>Advanced</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="msdyn_name"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_commandstatus"/>
+        <DetailItem SchemaName="msdyn_commandstatusreason"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_customerasset"/>
+        <DetailItem SchemaName="msdyn_sendtoallconnecteddevices"/>
+        <DetailItem SchemaName="msdyn_deviceid"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_parentalert"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" flexiHeader="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="msdyn_device"/>
+        <DetailItem SchemaName="msdyn_command"/>
+        <DetailItem SchemaName="msdyn_message"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="IFrameTab">
+      <Name>IoT Command</Name>
+      <Url>file://IoTCommand/IoTCommand.html</Url>
+      <IsVisible>false</IsVisible>
+      <DelayLoad>false</DelayLoad>
+    </FormTab>
+    <FormTab xsi:type="IFrameTab" flexiHeader="0">
+      <Name>IoT Command Message</Name>
+      <Url>file://JsonControl/IoTCommandMessageJsonControl.html</Url>
+      <DelayLoad>false</DelayLoad>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

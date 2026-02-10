@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>msdyn_productinventory</EntityName>
+  <CamelCase>msdyn_productinventory</CamelCase>
+  <ClassBinding />
+  <SerializedChildren />
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="msdyn_name">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_product">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_qtyallocated">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_qtyavailable">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_qtyonhand">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_qtyonorder">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_bin">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_row">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_unit">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_warehouse">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_reorderpoint">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+  </SerializedChildrenV2>
+  <Navigation>
+    <Name>Navigation</Name>
+    <SerializedChildren />
+  </Navigation>
+  <!--Setting Qty Allocated, Qty Available, Qty On Hand, and Qty On Order fields to read-only if this form is not creating a new Product Inventory-->
+  <WorkflowLoad>&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;
+      &lt;function e="false"&gt;
+        &lt;var&gt;Form.msdyn_qtyallocated.IsEnabled&lt;/var&gt;
+        &lt;arg&gt;var:Entity.IsNew&lt;/arg&gt;
+        &lt;func&gt;Assign&lt;/func&gt;
+      &lt;/function&gt;
+      &lt;function e="false"&gt;
+        &lt;var&gt;Form.msdyn_qtyavailable.IsEnabled&lt;/var&gt;
+        &lt;arg&gt;var:Entity.IsNew&lt;/arg&gt;
+        &lt;func&gt;Assign&lt;/func&gt;
+      &lt;/function&gt;
+      &lt;function e="false"&gt;
+        &lt;var&gt;Form.msdyn_qtyonhand.IsEnabled&lt;/var&gt;
+        &lt;arg&gt;var:Entity.IsNew&lt;/arg&gt;
+        &lt;func&gt;Assign&lt;/func&gt;
+      &lt;/function&gt;
+      &lt;function e="false"&gt;
+        &lt;var&gt;Form.msdyn_qtyonorder.IsEnabled&lt;/var&gt;
+        &lt;arg&gt;var:Entity.IsNew&lt;/arg&gt;
+        &lt;func&gt;Assign&lt;/func&gt;
+      &lt;/function&gt;
+    &lt;/Workflow&gt;</WorkflowLoad>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedContactInfo />
+</EntityForm>
