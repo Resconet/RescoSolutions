@@ -1,0 +1,163 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2" layoutstrict="0" singlecardexpand="0">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>bookableresourcebooking</EntityName>
+  <CamelCase>BookableResourceBooking</CamelCase>
+  <WorkflowLoad>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="Hide map tab if work order tied or if no location information" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;group e="true" op="Or"&gt;&lt;group e="true" op="Or"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.msdyn_workorder&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.msdyn_latitude&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;/group&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.msdyn_longitude&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;/group&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Map.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.msdyn_workorder&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Map.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="Hide work order field if this is an existing non-work order booking" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.IsNew&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.msdyn_workorder&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.msdyn_workorder.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.msdyn_workorder.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;function e="false"&gt;&lt;var&gt;Form.duration.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.duration.Validate&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Address.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Canceled.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Completed.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^In Progress.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^On Break.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Traveling.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;branch e="true" info="visibility of booking status buttons" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.bookingstatus&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Lookup:bookingstatus,c33410b9-1abe-4631-b4e9-6e4a1113af34,Completed&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Canceled.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^In Progress.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^On Break.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Traveling.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Completed.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.bookingstatus&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Lookup:bookingstatus,53f39908-d08a-4d9c-90e8-907fd7bec07d,In Progress&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^In Progress.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.bookingstatus&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Lookup:bookingstatus,ef3164b9-0893-4032-9bb2-0f2e58f982af,On Break&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^On Break.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.bookingstatus&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Lookup:bookingstatus,976869c4-f187-4680-9a5a-a9dade8e9636,Traveling&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Traveling.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.bookingstatus&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Lookup:bookingstatus,0adbf4e6-86cc-4db0-9dbb-51b7d1ed4020,Canceled&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Canceled.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowLoad>
+  <WorkflowItemChanged>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="visibility of booking status buttons" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:bookingstatus&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;IsLoaded&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Canceled.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Completed.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^In Progress.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^On Break.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Traveling.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.bookingstatus&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Lookup:bookingstatus,c33410b9-1abe-4631-b4e9-6e4a1113af34,Completed&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Canceled.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^In Progress.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^On Break.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Traveling.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Completed.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.bookingstatus&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Lookup:bookingstatus,53f39908-d08a-4d9c-90e8-907fd7bec07d,In Progress&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^In Progress.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.bookingstatus&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Lookup:bookingstatus,ef3164b9-0893-4032-9bb2-0f2e58f982af,On Break&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^On Break.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.bookingstatus&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Lookup:bookingstatus,976869c4-f187-4680-9a5a-a9dade8e9636,Traveling&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Traveling.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.bookingstatus&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Lookup:bookingstatus,0adbf4e6-86cc-4db0-9dbb-51b7d1ed4020,Canceled&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Canceled.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowItemChanged>
+  <WorkflowSave>&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;
+  &lt;branch info="Set name to work order number" e="true"&gt;
+    &lt;if e="true"&gt;
+      &lt;conditions e="true" op="And"&gt;
+        &lt;condition e="false"&gt;
+          &lt;var&gt;Entity.msdyn_workorder&lt;/var&gt;
+          &lt;op&gt;ContainsData&lt;/op&gt;
+        &lt;/condition&gt;
+        &lt;condition e="false"&gt;
+          &lt;var&gt;Entity.name&lt;/var&gt;
+          &lt;op&gt;DoesNotContainData&lt;/op&gt;
+        &lt;/condition&gt;
+      &lt;/conditions&gt;
+      &lt;action e="true"&gt;
+        &lt;definition e="false"&gt;
+          &lt;var&gt;workOrder&lt;/var&gt;
+          &lt;arg&gt;var:Entity.msdyn_workorder&lt;/arg&gt;
+          &lt;arg&gt;String:msdyn_workorder&lt;/arg&gt;
+          &lt;func&gt;LoadReference&lt;/func&gt;
+          &lt;type&gt;Entity&lt;/type&gt;
+        &lt;/definition&gt;
+        &lt;branch info="If the Work Order has a name, set the Booking name to the name of the Work Order" e="true"&gt;
+          &lt;if e="true"&gt;
+            &lt;conditions e="true" op="And"&gt;
+              &lt;condition e="true"&gt;
+                &lt;var&gt;workOrder.@this&lt;/var&gt;
+                &lt;op&gt;ContainsData&lt;/op&gt;
+              &lt;/condition&gt;
+              &lt;condition e="false"&gt;
+                &lt;var&gt;workOrder.msdyn_name&lt;/var&gt;
+                &lt;op&gt;ContainsData&lt;/op&gt;
+              &lt;/condition&gt;
+            &lt;/conditions&gt;
+            &lt;action e="true"&gt;
+              &lt;function e="false"&gt;
+                &lt;var&gt;Entity.name&lt;/var&gt;
+                &lt;arg&gt;var:Entity.msdyn_workorder&lt;/arg&gt;
+                &lt;func&gt;Assign&lt;/func&gt;
+              &lt;/function&gt;
+            &lt;/action&gt;
+          &lt;/if&gt;
+        &lt;/branch&gt;
+      &lt;/action&gt;
+    &lt;/if&gt;
+  &lt;/branch&gt;
+&lt;/Workflow&gt;</WorkflowSave>
+  <WorkflowCommandCanExecute>&lt;Workflow e="false" isvalid="true" syntaxVersion="11" version="0"&gt;
+      &lt;branch info="Command Can Execute" e="true"&gt;
+          &lt;if e="true"&gt;
+              &lt;conditions e="true" op="And"&gt;
+                  &lt;group e="false" op="And"&gt;
+                      &lt;condition e="false"&gt;
+                          &lt;var&gt;Command.Name&lt;/var&gt;
+                          &lt;arg&gt;String:custom_FollowUp&lt;/arg&gt;
+                          &lt;op&gt;Equal&lt;/op&gt;
+                      &lt;/condition&gt;
+                      &lt;condition e="false"&gt;
+                          &lt;var&gt;Entity.msdyn_workorder&lt;/var&gt;
+                          &lt;op&gt;DoesNotContainData&lt;/op&gt;
+                      &lt;/condition&gt;
+                  &lt;/group&gt;
+              &lt;/conditions&gt;
+              &lt;action e="true"&gt;
+                  &lt;function e="false"&gt;
+                      &lt;var&gt;Command.IsEnabled&lt;/var&gt;
+                      &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                      &lt;func&gt;Assign&lt;/func&gt;
+                  &lt;/function&gt;
+              &lt;/action&gt;
+          &lt;/if&gt;
+      &lt;/branch&gt;
+  &lt;/Workflow&gt;</WorkflowCommandCanExecute>
+  <WorkflowButtonCommand>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:Traveling&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;definition e="false"&gt;&lt;var&gt;Traveling&lt;/var&gt;&lt;func&gt;LoadFetch&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;arg&gt;String:bookingstatus&lt;/arg&gt;&lt;arg&gt;Fetch:&amp;lt;fetch version=&amp;quot;1.0&amp;quot;&amp;gt;&amp;lt;entity name=&amp;quot;bookingstatus&amp;quot;&amp;gt;&amp;lt;filter type=&amp;quot;and&amp;quot;&amp;gt;&amp;lt;condition attribute=&amp;quot;msdyn_fieldservicestatus&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;690970001&amp;quot; /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/arg&gt;&lt;/definition&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Traveling.@this&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.bookingstatus&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:Traveling.@this&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:In Progress&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;definition e="false"&gt;&lt;var&gt;InProgress&lt;/var&gt;&lt;func&gt;LoadFetch&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;arg&gt;String:bookingstatus&lt;/arg&gt;&lt;arg&gt;Fetch:&amp;lt;fetch version=&amp;quot;1.0&amp;quot;&amp;gt;&amp;lt;entity name=&amp;quot;bookingstatus&amp;quot;&amp;gt;&amp;lt;filter type=&amp;quot;and&amp;quot;&amp;gt;&amp;lt;condition attribute=&amp;quot;msdyn_fieldservicestatus&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;690970003&amp;quot; /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/arg&gt;&lt;/definition&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;InProgress.@this&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.bookingstatus&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:InProgress.@this&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:On Break&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;definition e="false"&gt;&lt;var&gt;OnBreak&lt;/var&gt;&lt;func&gt;LoadFetch&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;arg&gt;String:bookingstatus&lt;/arg&gt;&lt;arg&gt;Fetch:&amp;lt;fetch version=&amp;quot;1.0&amp;quot;&amp;gt;&amp;lt;entity name=&amp;quot;bookingstatus&amp;quot;&amp;gt;&amp;lt;filter type=&amp;quot;and&amp;quot;&amp;gt;&amp;lt;condition attribute=&amp;quot;msdyn_fieldservicestatus&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;690970002&amp;quot; /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/arg&gt;&lt;/definition&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;OnBreak.@this&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.bookingstatus&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:OnBreak.@this&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:Canceled&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;definition e="false"&gt;&lt;var&gt;Canceled&lt;/var&gt;&lt;func&gt;LoadFetch&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;arg&gt;String:bookingstatus&lt;/arg&gt;&lt;arg&gt;Fetch:&amp;lt;fetch version=&amp;quot;1.0&amp;quot;&amp;gt;&amp;lt;entity name=&amp;quot;bookingstatus&amp;quot;&amp;gt;&amp;lt;filter type=&amp;quot;and&amp;quot;&amp;gt;&amp;lt;condition attribute=&amp;quot;msdyn_fieldservicestatus&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;690970005&amp;quot; /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/arg&gt;&lt;/definition&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Canceled.@this&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.bookingstatus&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:Canceled.@this&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:Completed&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;definition e="false"&gt;&lt;var&gt;Completed&lt;/var&gt;&lt;func&gt;LoadFetch&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;arg&gt;String:bookingstatus&lt;/arg&gt;&lt;arg&gt;Fetch:&amp;lt;fetch version=&amp;quot;1.0&amp;quot;&amp;gt;&amp;lt;entity name=&amp;quot;bookingstatus&amp;quot;&amp;gt;&amp;lt;filter type=&amp;quot;and&amp;quot;&amp;gt;&amp;lt;condition attribute=&amp;quot;msdyn_fieldservicestatus&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;690970004&amp;quot; /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/arg&gt;&lt;/definition&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Completed.@this&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.bookingstatus&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:Completed.@this&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowButtonCommand>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
+  <CacheMode>-1</CacheMode>
+  <UiSyncGuardMode>-1</UiSyncGuardMode>
+  <PrimaryCommands>CheckIn||bookableresourcebooking#msdyn_actualarrivaltime#endtime#duration#msdyn_latitude#msdyn_longitude#####|custom_FollowUp|Cmd.RunFollowUp||custom_RemoteAssist|Cmd.RemoteAssist|</PrimaryCommands>
+  <SharedVariableNames/>
+  <ClassBinding>
+    <SerializedClassBinding name="#WorkOrder" label="WorkOrder" type="String"/>
+  </ClassBinding>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnCanExecuteCommand OnExecuteButton</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>Booking</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="Completed" button="true" buttonLabel="Completed" buttonClickText="Completed" buttonCommand="" Style="Button Green">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="Canceled" button="true" buttonLabel="Canceled" buttonClickText="Canceled" buttonCommand="" Style="Button Red">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="Traveling" button="true" buttonLabel="Traveling" buttonClickText="Traveling" buttonCommand="" Style="Button 2">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="In Progress" button="true" buttonLabel="In Progress" buttonClickText="In Progress" buttonCommand="" Style="Button 2">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="On Break" button="true" buttonLabel="On Break" buttonClickText="On Break" buttonCommand="" Style="Button 2">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_workorder">
+          <LookupViews>msdyn_workorder.WorkOrderList</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="bookingstatus">
+          <LookupViews>bookingstatus.*:bookingstatus.@Booking Statuses</LookupViews>
+        </DetailItem>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="starttime"/>
+        <DetailItem SchemaName="endtime"/>
+        <DetailItem SchemaName="duration"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_actualarrivaltime"/>
+        <DetailItem SchemaName="msdyn_actualtravelduration"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_milestraveled"/>
+        <DetailItem SchemaName="msdyn_totalcost"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="resource"/>
+        <DetailItem SchemaName="transactioncurrencyid"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Address@2x.png" IsIconNameReadOnly="0">
+      <Name>Address</Name>
+      <SerializedChildren/>
+    </FormTab>
+    <FormTab xsi:type="IFrameTab" flexiHeight="0" flexiHeader="0" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>BRB</Name>
+      <Url>file://BookableResourceBooking/BRB.html</Url>
+      <IsVisible>false</IsVisible>
+      <DelayLoad>false</DelayLoad>
+    </FormTab>
+    <FormTab xsi:type="MapTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
+      <Name>Map</Name>
+      <CoordinatesBinding>msdyn_latitude;msdyn_longitude</CoordinatesBinding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="0" flexiHeader="2" flexiOrientation="1" flexiCollapsed="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0" ListCommands="0">
+      <Name>Booking Timestamps List</Name>
+      <Binding SchemaName="msdyn_bookingtimestamp.msdyn_booking"/>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

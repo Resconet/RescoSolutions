@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityChart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>incident</EntityName>
+    <CamelCase>Incident</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>Default</Name>
+  <IsHidden>false</IsHidden>
+  <Kind>Bar</Kind>
+  <IsDefault>false</IsDefault>
+  <Series>
+    <Series>
+      <Attribute>incidentid</Attribute>
+      <Aggregation>Count</Aggregation>
+      <Limit>Top</Limit>
+    </Series>
+  </Series>
+  <Axis>customerid</Axis>
+  <DateGrouping>None</DateGrouping>
+  <SerializedBindings>
+    <string>incidentid</string>
+    <string>customerid</string>
+  </SerializedBindings>
+  <LimitCount>10</LimitCount>
+</EntityChart>

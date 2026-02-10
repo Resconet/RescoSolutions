@@ -1,0 +1,463 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2" layoutstrict="0" singlecardexpand="0">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>msdyn_workorderservice</EntityName>
+  <CamelCase>msdyn_workorderservice</CamelCase>
+  <WorkflowLoad>&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;
+    &lt;function e="false"&gt;
+      &lt;var&gt;Shared.currentDuration&lt;/var&gt;
+      &lt;arg&gt;var:Entity.msdyn_duration&lt;/arg&gt;
+      &lt;func&gt;Assign&lt;/func&gt;
+    &lt;/function&gt;
+    &lt;function e="false"&gt;
+      &lt;var&gt;Form.msdyn_subtotal.IsEnabled&lt;/var&gt;
+      &lt;arg&gt;Boolean:False&lt;/arg&gt;
+      &lt;func&gt;Assign&lt;/func&gt;
+    &lt;/function&gt;
+    &lt;function e="false"&gt;
+      &lt;var&gt;Form.msdyn_totalcost.IsEnabled&lt;/var&gt;
+      &lt;arg&gt;Boolean:False&lt;/arg&gt;
+      &lt;func&gt;Assign&lt;/func&gt;
+    &lt;/function&gt;
+      &lt;function e="false"&gt;
+      &lt;var&gt;Form.msdyn_totalamount.IsEnabled&lt;/var&gt;
+      &lt;arg&gt;Boolean:False&lt;/arg&gt;
+      &lt;func&gt;Assign&lt;/func&gt;
+    &lt;/function&gt;
+    &lt;function e="false"&gt;
+      &lt;var&gt;Form.msdyn_estimatesubtotal.IsEnabled&lt;/var&gt;
+      &lt;arg&gt;Boolean:False&lt;/arg&gt;
+      &lt;func&gt;Assign&lt;/func&gt;
+    &lt;/function&gt;
+    &lt;function e="false"&gt;
+      &lt;var&gt;Form.msdyn_estimatetotalcost.IsEnabled&lt;/var&gt;
+      &lt;arg&gt;Boolean:False&lt;/arg&gt;
+      &lt;func&gt;Assign&lt;/func&gt;
+    &lt;/function&gt;
+    &lt;function e="false"&gt;
+      &lt;var&gt;Form.msdyn_estimatetotalamount.IsEnabled&lt;/var&gt;
+      &lt;arg&gt;Boolean:False&lt;/arg&gt;
+      &lt;func&gt;Assign&lt;/func&gt;
+    &lt;/function&gt;
+    &lt;function e="false"&gt;
+      &lt;var&gt;Form.msdyn_totalcost.Validate&lt;/var&gt;
+      &lt;arg&gt;Boolean:False&lt;/arg&gt;
+      &lt;func&gt;Assign&lt;/func&gt;
+    &lt;/function&gt;
+    &lt;function e="false"&gt;
+      &lt;var&gt;Form.msdyn_totalamount.Validate&lt;/var&gt;
+      &lt;arg&gt;Boolean:False&lt;/arg&gt;
+    &lt;func&gt;Assign&lt;/func&gt;
+    &lt;/function&gt;
+  &lt;/Workflow&gt;</WorkflowLoad>
+  <WorkflowItemChanged>&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;
+    &lt;branch info="Duration and Duration To Bill change logic" e="true"&gt;
+      &lt;if e="true"&gt;
+        &lt;conditions e="true" op="And"&gt;
+          &lt;condition e="false"&gt;
+            &lt;var&gt;ChangedItem&lt;/var&gt;
+            &lt;arg&gt;String:msdyn_duration&lt;/arg&gt;
+            &lt;op&gt;Equal&lt;/op&gt;
+          &lt;/condition&gt;
+        &lt;/conditions&gt;
+        &lt;action e="true"&gt;
+          &lt;branch info="When msdyn_duration is 0, it will be set to null" e="true"&gt;
+            &lt;if e="true"&gt;
+            &lt;conditions e="true" op="And"&gt;
+              &lt;condition e="false"&gt;
+                &lt;var&gt;Entity.msdyn_duration&lt;/var&gt;
+                &lt;arg&gt;Integer:0&lt;/arg&gt;
+                &lt;op&gt;Equal&lt;/op&gt;
+              &lt;/condition&gt;
+            &lt;/conditions&gt;
+            &lt;action e="true"&gt;
+              &lt;function e="false"&gt;
+                &lt;var&gt;Entity.msdyn_duration&lt;/var&gt;
+                &lt;func&gt;Clear&lt;/func&gt;
+              &lt;/function&gt;
+            &lt;/action&gt;
+            &lt;/if&gt;
+          &lt;/branch&gt;
+          &lt;branch info="Keeping Duration to Bill equal to Duration in the appropriate cases" e="true"&gt;
+            &lt;if e="true"&gt;
+            &lt;conditions e="true" op="And"&gt;
+              &lt;group e="false" op="Or"&gt;
+                &lt;condition e="false"&gt;
+                  &lt;var&gt;Entity.msdyn_duration&lt;/var&gt;
+                  &lt;op&gt;DoesNotContainData&lt;/op&gt;
+                &lt;/condition&gt;
+                &lt;condition e="false"&gt;
+                  &lt;var&gt;Entity.msdyn_durationtobill&lt;/var&gt;
+                  &lt;op&gt;DoesNotContainData&lt;/op&gt;
+                &lt;/condition&gt;
+                &lt;condition e="false"&gt;
+                  &lt;var&gt;Entity.msdyn_durationtobill&lt;/var&gt;
+                  &lt;arg&gt;var:Shared.currentDuration&lt;/arg&gt;
+                  &lt;op&gt;Equal&lt;/op&gt;
+                &lt;/condition&gt;
+                &lt;condition e="false"&gt;
+                  &lt;var&gt;Entity.msdyn_durationtobill&lt;/var&gt;
+                  &lt;arg&gt;var:Entity.msdyn_duration&lt;/arg&gt;
+                  &lt;op&gt;GreaterThan&lt;/op&gt;
+                &lt;/condition&gt;
+              &lt;/group&gt;
+            &lt;/conditions&gt;
+            &lt;action e="true"&gt;
+              &lt;function e="false"&gt;
+                &lt;var&gt;Entity.msdyn_durationtobill&lt;/var&gt;
+                &lt;arg&gt;var:Entity.msdyn_duration&lt;/arg&gt;
+                &lt;func&gt;Assign&lt;/func&gt;
+              &lt;/function&gt;
+            &lt;/action&gt;
+            &lt;/if&gt;
+          &lt;/branch&gt;
+          &lt;function e="false"&gt;
+            &lt;var&gt;Shared.currentDuration&lt;/var&gt;
+            &lt;arg&gt;var:Entity.msdyn_duration&lt;/arg&gt;
+            &lt;func&gt;Assign&lt;/func&gt;
+          &lt;/function&gt;
+        &lt;/action&gt;
+      &lt;/if&gt;
+      &lt;if e="true"&gt;
+        &lt;conditions e="true" op="And"&gt;
+          &lt;condition e="false"&gt;
+            &lt;var&gt;ChangedItem&lt;/var&gt;
+            &lt;arg&gt;String:msdyn_durationtobill&lt;/arg&gt;
+            &lt;op&gt;Equal&lt;/op&gt;
+          &lt;/condition&gt;
+        &lt;/conditions&gt;
+        &lt;action e="true"&gt;
+          &lt;branch info="When msdyn_durationtobill is 0, it will be set to null" e="true"&gt;
+            &lt;if e="true"&gt;
+              &lt;conditions e="true" op="And"&gt;
+                &lt;condition e="false"&gt;
+                  &lt;var&gt;Entity.msdyn_durationtobill&lt;/var&gt;
+                  &lt;arg&gt;Integer:0&lt;/arg&gt;
+                  &lt;op&gt;Equal&lt;/op&gt;
+                &lt;/condition&gt;
+              &lt;/conditions&gt;
+              &lt;action e="true"&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;Entity.msdyn_durationtobill&lt;/var&gt;
+                  &lt;func&gt;Clear&lt;/func&gt;
+                &lt;/function&gt;
+              &lt;/action&gt;
+            &lt;/if&gt;
+          &lt;/branch&gt;
+          &lt;branch info="Checks if Duration To Bill should equal Duration" e="true"&gt;
+            &lt;if e="true"&gt;
+              &lt;conditions e="true" op="And"&gt;
+                &lt;group e="true" op="Or"&gt;
+                  &lt;condition e="false"&gt;
+                    &lt;var&gt;Entity.msdyn_duration&lt;/var&gt;
+                    &lt;op&gt;DoesNotContainData&lt;/op&gt;
+                  &lt;/condition&gt;
+                  &lt;condition e="false"&gt;
+                    &lt;var&gt;Entity.msdyn_durationtobill&lt;/var&gt;
+                    &lt;op&gt;DoesNotContainData&lt;/op&gt;
+                  &lt;/condition&gt;
+                  &lt;condition e="false"&gt;
+                    &lt;var&gt;Entity.msdyn_durationtobill&lt;/var&gt;
+                    &lt;arg&gt;var:Entity.msdyn_duration&lt;/arg&gt;
+                    &lt;op&gt;GreaterThan&lt;/op&gt;
+                  &lt;/condition&gt;
+                &lt;/group&gt;
+              &lt;/conditions&gt;
+              &lt;action e="true"&gt;
+                &lt;function e="true"&gt;
+                  &lt;var&gt;Entity.msdyn_durationtobill&lt;/var&gt;
+                  &lt;arg&gt;var:Entity.msdyn_duration&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+              &lt;/action&gt;
+            &lt;/if&gt;
+          &lt;/branch&gt;
+        &lt;/action&gt;
+      &lt;/if&gt;
+    &lt;/branch&gt;
+  &lt;/Workflow&gt;</WorkflowItemChanged>
+  <WorkflowSave>&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;
+    &lt;definition e="false"&gt;
+      &lt;var&gt;customerAsset&lt;/var&gt;
+      &lt;arg&gt;var:Entity.msdyn_customerasset&lt;/arg&gt;
+      &lt;arg&gt;String:msdyn_customerasset&lt;/arg&gt;
+      &lt;func&gt;LoadReference&lt;/func&gt;
+      &lt;type&gt;Entity&lt;/type&gt;
+    &lt;/definition&gt;
+    &lt;definition e="false"&gt;
+      &lt;var&gt;workOrder&lt;/var&gt;
+      &lt;arg&gt;var:Entity.msdyn_workorder&lt;/arg&gt;
+      &lt;arg&gt;String:msdyn_workorder&lt;/arg&gt;
+      &lt;func&gt;LoadReference&lt;/func&gt;
+      &lt;type&gt;Entity&lt;/type&gt;
+    &lt;/definition&gt;
+    &lt;definition e="false"&gt;
+      &lt;var&gt;workOrderIncident&lt;/var&gt;
+      &lt;arg&gt;var:Entity.msdyn_workorderincident&lt;/arg&gt;
+      &lt;arg&gt;String:msdyn_workorderincident&lt;/arg&gt;
+      &lt;func&gt;LoadReference&lt;/func&gt;
+      &lt;type&gt;Entity&lt;/type&gt;
+    &lt;/definition&gt;
+    &lt;definition e="false"&gt;
+      &lt;var&gt;booking&lt;/var&gt;
+      &lt;arg&gt;var:Entity.msdyn_booking&lt;/arg&gt;
+      &lt;arg&gt;String:bookableresourcebooking&lt;/arg&gt;
+      &lt;func&gt;LoadReference&lt;/func&gt;
+      &lt;type&gt;Entity&lt;/type&gt;
+    &lt;/definition&gt;
+    &lt;branch info="If Booking and WorkOrder contain data" e="true"&gt;
+      &lt;if e="true"&gt;
+        &lt;conditions e="true" op="And"&gt;
+          &lt;group e="false" op="And"&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;booking.@this&lt;/var&gt;
+              &lt;op&gt;ContainsData&lt;/op&gt;
+            &lt;/condition&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;Entity.msdyn_workorder&lt;/var&gt;
+              &lt;op&gt;ContainsData&lt;/op&gt;
+            &lt;/condition&gt;
+          &lt;/group&gt;
+        &lt;/conditions&gt;
+        &lt;action e="true"&gt;
+          &lt;branch info="If Booking's WorkOrder does not equal to WorkOrder" e="true"&gt;
+            &lt;if e="true"&gt;
+              &lt;conditions e="true" op="And"&gt;
+                &lt;condition e="false"&gt;
+                  &lt;var&gt;booking.msdyn_workorder&lt;/var&gt;
+                  &lt;arg&gt;var:Entity.msdyn_workorder&lt;/arg&gt;
+                  &lt;op&gt;NotEqual&lt;/op&gt;
+                &lt;/condition&gt;
+              &lt;/conditions&gt;
+              &lt;action e="true"&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;ErrorMessage&lt;/var&gt;
+                  &lt;arg&gt;String:@Alert.WorkOrderMustMatchWorkOrderSetOnTheRelatedBooking&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+              &lt;/action&gt;
+            &lt;/if&gt;
+          &lt;/branch&gt;
+        &lt;/action&gt;
+      &lt;/if&gt;
+    &lt;/branch&gt;
+    &lt;branch info="If Service selected" e="true"&gt;
+      &lt;if e="true"&gt;
+        &lt;conditions e="true" op="And"&gt;
+          &lt;condition e="true"&gt;
+            &lt;var&gt;Entity.msdyn_service&lt;/var&gt;
+            &lt;op&gt;ContainsData&lt;/op&gt;
+          &lt;/condition&gt;
+        &lt;/conditions&gt;
+        &lt;action e="true"&gt;
+          &lt;definition e="false"&gt;
+            &lt;var&gt;service&lt;/var&gt;
+            &lt;arg&gt;var:Entity.msdyn_service&lt;/arg&gt;
+            &lt;arg&gt;String:product&lt;/arg&gt;
+            &lt;func&gt;LoadReference&lt;/func&gt;
+            &lt;type&gt;Entity&lt;/type&gt;
+          &lt;/definition&gt;
+          &lt;branch info="If Service contains data" e="true"&gt;
+            &lt;if e="true"&gt;
+              &lt;conditions e="true" op="And"&gt;
+                &lt;condition e="false"&gt;
+                  &lt;var&gt;service.@this&lt;/var&gt;
+                  &lt;op&gt;ContainsData&lt;/op&gt;
+                &lt;/condition&gt;
+              &lt;/conditions&gt;
+              &lt;action e="true"&gt;
+                &lt;branch info="If FieldServiceProductType does not equal to Service" e="true"&gt;
+                  &lt;if e="true"&gt;
+                    &lt;conditions e="true" op="And"&gt;
+                      &lt;condition e="false"&gt;
+                        &lt;var&gt;service.msdyn_fieldserviceproducttype&lt;/var&gt;
+                        &lt;arg&gt;Picklist:690970002&lt;/arg&gt;
+                        &lt;op&gt;NotEqual&lt;/op&gt;
+                      &lt;/condition&gt;
+                    &lt;/conditions&gt;
+                    &lt;action e="true"&gt;
+                      &lt;function e="false"&gt;
+                        &lt;var&gt;ErrorMessage&lt;/var&gt;
+                        &lt;arg&gt;String:@Alert.ProductTypeMustBeService&lt;/arg&gt;
+                        &lt;func&gt;Assign&lt;/func&gt;
+                      &lt;/function&gt;
+                    &lt;/action&gt;
+                  &lt;/if&gt;
+                &lt;/branch&gt;
+              &lt;/action&gt;
+            &lt;/if&gt;
+          &lt;/branch&gt;
+        &lt;/action&gt;
+      &lt;/if&gt;
+    &lt;/branch&gt;
+    &lt;branch info="If CustomerAsset and WorkOrder contain data" e="true"&gt;
+      &lt;if e="true"&gt;
+        &lt;conditions e="true" op="And"&gt;
+          &lt;group e="false" op="And"&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;customerAsset.@this&lt;/var&gt;
+              &lt;op&gt;ContainsData&lt;/op&gt;
+            &lt;/condition&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;workOrder.@this&lt;/var&gt;
+              &lt;op&gt;ContainsData&lt;/op&gt;
+            &lt;/condition&gt;
+          &lt;/group&gt;
+        &lt;/conditions&gt;
+        &lt;action e="true"&gt;
+          &lt;branch info="If CustomerAsset's Account does not equal to WorkOrder's ServiceAccount" e="true"&gt;
+            &lt;if e="true"&gt;
+              &lt;conditions e="true" op="And"&gt;
+                &lt;condition e="false"&gt;
+                  &lt;var&gt;customerAsset.msdyn_account&lt;/var&gt;
+                  &lt;arg&gt;var:workOrder.msdyn_serviceaccount&lt;/arg&gt;
+                  &lt;op&gt;NotEqual&lt;/op&gt;
+                &lt;/condition&gt;
+              &lt;/conditions&gt;
+              &lt;action e="true"&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;ErrorMessage&lt;/var&gt;
+                  &lt;arg&gt;String:@Alert.CustomerAssetMustBeRelatedToServiceAccountOfWorkOrder&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+              &lt;/action&gt;
+            &lt;/if&gt;
+          &lt;/branch&gt;
+        &lt;/action&gt;
+      &lt;/if&gt;
+    &lt;/branch&gt;
+    &lt;branch info="If WorkOrderIncodent and WorkOrder contain data" e="true"&gt;
+      &lt;if e="true"&gt;
+        &lt;conditions e="true" op="And"&gt;
+          &lt;group e="false" op="And"&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;workOrderIncident.@this&lt;/var&gt;
+              &lt;op&gt;ContainsData&lt;/op&gt;
+            &lt;/condition&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;Entity.msdyn_workorder&lt;/var&gt;
+              &lt;op&gt;ContainsData&lt;/op&gt;
+            &lt;/condition&gt;
+          &lt;/group&gt;
+        &lt;/conditions&gt;
+        &lt;action e="true"&gt;
+          &lt;branch info="If WorkOrderIncident's WorkOrder does not equal to WorkOrder" e="true"&gt;
+            &lt;if e="true"&gt;
+              &lt;conditions e="true" op="And"&gt;
+                &lt;condition e="false"&gt;
+                  &lt;var&gt;workOrderIncident.msdyn_workorder&lt;/var&gt;
+                  &lt;arg&gt;var:Entity.msdyn_workorder&lt;/arg&gt;
+                  &lt;op&gt;NotEqual&lt;/op&gt;
+                &lt;/condition&gt;
+              &lt;/conditions&gt;
+              &lt;action e="true"&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;ErrorMessage&lt;/var&gt;
+                  &lt;arg&gt;String:@Alert.WorkOrderMustMatchWorkOrderSetOnTheWorkOrderIncident&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+              &lt;/action&gt;
+            &lt;/if&gt;
+          &lt;/branch&gt;
+        &lt;/action&gt;
+      &lt;/if&gt;
+    &lt;/branch&gt;
+  &lt;/Workflow&gt;</WorkflowSave>
+  <SharedVariables>
+  &lt;SharedVariables&gt;
+    &lt;Variables&gt;
+      &lt;SharedVariable usage="OnLoadEnabled OnChangeEnabled"&gt;
+        &lt;CrmType&gt;Decimal&lt;/CrmType&gt;
+        &lt;Name&gt;currentDuration&lt;/Name&gt;
+      &lt;/SharedVariable&gt;
+    &lt;/Variables&gt;
+  &lt;/SharedVariables&gt;</SharedVariables>
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
+  <CacheMode>-1</CacheMode>
+  <UiSyncGuardMode>-1</UiSyncGuardMode>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <SharedVariableNames>
+    <string>currentDuration</string>
+  </SharedVariableNames>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="msdyn_name"/>
+        <DetailItem SchemaName="msdyn_service">
+          <LookupViews>&lt;extra&gt;&lt;filter entity="product"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="product"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="msdyn_fieldserviceproducttype" operator="eq" value="690970002" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_duration"/>
+        <DetailItem SchemaName="msdyn_durationtobill"/>
+        <DetailItem SchemaName="msdyn_description"/>
+        <DetailItem SchemaName="msdyn_internaldescription"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_linestatus"/>
+        <DetailItem SchemaName="msdyn_booking">
+          <LookupViews>&lt;extra&gt;&lt;filter entity="bookableresourcebooking"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="bookableresourcebooking"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="msdyn_workorder" operator="eq" value="{{msdyn_workorder}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_customerasset">
+          <LookupViews>&lt;extra&gt;&lt;filter entity="msdyn_customerasset"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="msdyn_customerasset"&amp;gt;&amp;lt;link-entity name="account" alias="L0" from="accountid" to="msdyn_account" link-type="inner"&amp;gt;&amp;lt;link-entity name="msdyn_workorder" alias="L1" from="msdyn_serviceaccount" to="accountid" link-type="inner"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="msdyn_workorderid" operator="eq" value="{{msdyn_workorder}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_workorderincident">
+          <LookupViews>&lt;extra&gt;&lt;filter entity="msdyn_workorderincident"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="msdyn_workorderincident"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="msdyn_workorder" operator="eq" value="{{msdyn_workorder}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_unit"/>
+        <DetailItem SchemaName="msdyn_pricelist"/>
+        <DetailItem SchemaName="msdyn_taxable" Style="Normal Transparent"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="IFrameTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>WorkOrderService</Name>
+      <Url>file://WorkOrderService/WorkOrderService.html</Url>
+      <IsVisible>false</IsVisible>
+      <DelayLoad>false</DelayLoad>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" flexi="1" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>Estimate</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="msdyn_estimateduration"/>
+        <DetailItem SchemaName="msdyn_estimateunitamount"/>
+        <DetailItem SchemaName="msdyn_estimatesubtotal"/>
+        <DetailItem SchemaName="msdyn_estimatediscountpercent"/>
+        <DetailItem SchemaName="msdyn_estimatediscountamount"/>
+        <DetailItem SchemaName="msdyn_estimatetotalamount"/>
+        <DetailItem SchemaName="msdyn_estimatecalculatedunitamount"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_estimateunitcost"/>
+        <DetailItem SchemaName="msdyn_estimatetotalcost"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" flexi="1" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>Pricing</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="msdyn_unitamount"/>
+        <DetailItem SchemaName="msdyn_subtotal"/>
+        <DetailItem SchemaName="msdyn_discountpercent"/>
+        <DetailItem SchemaName="msdyn_discountamount"/>
+        <DetailItem SchemaName="msdyn_totalamount"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_minimumchargeduration"/>
+        <DetailItem SchemaName="msdyn_minimumchargeamount"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_unitcost"/>
+        <DetailItem SchemaName="msdyn_additionalcost"/>
+        <DetailItem SchemaName="msdyn_commissioncosts"/>
+        <DetailItem SchemaName="msdyn_totalcost"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
+      <Name>Notes List</Name>
+      <Binding SchemaName="annotation.objectid"/>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

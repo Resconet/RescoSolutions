@@ -1,0 +1,53 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>msdyn_iotdevice</EntityName>
+    <CamelCase>msdyn_iotdevice</CamelCase>
+  </Attributes>
+  <Name>IoT Devices</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>msdyn_name</OrderBy>
+  <SerializedBindings>
+    <string>msdyn_account</string>
+    <string>msdyn_category</string>
+    <string>msdyn_connectionstate</string>
+    <string>msdyn_iotdeviceid</string>
+    <string>msdyn_name</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>64</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="msdyn_name">
+          <StyleName>primary</StyleName>
+          <Bounds>17,10,95,29</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="msdyn_account">
+          <StyleName>gray</StyleName>
+          <Bounds>17,38,126,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="msdyn_connectionstate">
+          <StyleName>r_gray</StyleName>
+          <Bounds>213,9,93,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="msdyn_category">
+          <StyleName>r_gray</StyleName>
+          <Bounds>159,33,147,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

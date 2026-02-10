@@ -1,0 +1,7 @@
+﻿Manufacturer=Microsoft Corporation
+ProductTitle=Field Service 2.0
+ProductSubTitle=
+PoweredBy=Powered by Resco
+Icon=Logo.Logo.png
+Website=https://dynamics.microsoft.com/
+SupportEmail=fs20@resco.net

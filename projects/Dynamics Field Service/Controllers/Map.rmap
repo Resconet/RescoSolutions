@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GlobalMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Items>
+    <GlobalMapComponent>
+      <EntityName>bookableresourcebooking</EntityName>
+      <ViewName>Bookings</ViewName>
+      <IsInitial>true</IsInitial>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
+      <EntityName>account</EntityName>
+      <ViewName>Default</ViewName>
+      <IsInitial>true</IsInitial>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
+      <EntityName>msdyn_workorder</EntityName>
+      <ViewName>WorkOrderList</ViewName>
+      <IsInitial>true</IsInitial>
+    </GlobalMapComponent>
+  </Items>
+</GlobalMap>

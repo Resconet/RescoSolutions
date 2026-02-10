@@ -1,0 +1,42 @@
+﻿<EntityForm xsi:dummy="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>appointment</EntityName>
+  <CamelCase>Appointment</CamelCase>
+  <PrimaryCommands>ConvertOpportunity|||ConvertCase|||PromoteAsResponse|||ChangeState||1;2|CheckIn||appointment#actualstart#actualend#actualdurationminutes###statuscode##5##3</PrimaryCommands>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand OnExecuteButton</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="regardingobjectid"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="subject"/>
+        <DetailItem SchemaName="location"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="scheduledstart"/>
+        <DetailItem SchemaName="scheduledend"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="prioritycode"/>
+        <DetailItem SchemaName="statuscode"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+      <Name>Details</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="organizer"/>
+        <DetailItem SchemaName="requiredattendees"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+      <Name>Notes List</Name>
+      <Binding SchemaName="annotation.objectid"/>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

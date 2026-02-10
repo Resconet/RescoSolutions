@@ -1,0 +1,994 @@
+﻿<fetchcollection>
+  <fetch version="1.0">
+    <entity name="account">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="bookableresource">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="bookableresourcecategory">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="bookableresourcecharacteristic">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="bookingstatus">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="campaign">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="characteristic">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="connection">
+      <link-entity name="msdyn_iotdevice" from="msdyn_iotdeviceid" to="record2id" link-type="inner" alias="L0">
+        <link-entity name="account" from="accountid" to="msdyn_account" link-type="inner" alias="L6">
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0"/>
+          </filter>
+          <link-entity name="msdyn_workorder" from="msdyn_serviceaccount" to="accountid" link-type="inner" alias="L7">
+            <filter type="and">
+              <condition attribute="statecode" operator="eq" value="0"/>
+              <condition attribute="msdyn_systemstatus" operator="in">
+                <value>690970000</value>
+                <value>690970001</value>
+                <value>690970002</value>
+                <value>690970003</value>
+              </condition>
+            </filter>
+            <link-entity name="bookableresourcebooking" from="msdyn_workorder" to="msdyn_workorderid" link-type="inner" alias="L8">
+              <filter type="and">
+                <filter type="or">
+                  <condition attribute="starttime" operator="next-x-days" value="14"/>
+                  <condition attribute="starttime" operator="last-x-days" value="14"/>
+                  <condition attribute="starttime" operator="today"/>
+                  <condition attribute="endtime" operator="next-x-days" value="14"/>
+                  <condition attribute="endtime" operator="last-x-days" value="14"/>
+                  <condition attribute="endtime" operator="today"/>
+                </filter>
+                <condition attribute="statecode" operator="eq" value="0"/>
+              </filter>
+              <link-entity name="bookingstatus" from="bookingstatusid" to="bookingstatus" link-type="inner" alias="L9">
+                <filter type="and">
+                  <condition attribute="msdyn_fieldservicestatus" operator="in">
+                    <value>690970000</value>
+                    <value>690970001</value>
+                    <value>690970002</value>
+                    <value>690970003</value>
+                  </condition>
+                  <condition attribute="statecode" operator="eq" value="0"/>
+                </filter>
+              </link-entity>
+              <link-entity name="bookableresource" from="bookableresourceid" to="resource" link-type="inner" alias="L10">
+                <filter type="and">
+                  <condition attribute="userid" operator="eq-userid"/>
+                  <condition attribute="statecode" operator="eq" value="0"/>
+                </filter>
+              </link-entity>
+            </link-entity>
+          </link-entity>
+        </link-entity>
+      </link-entity>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="connectionrole">
+      <filter type="and">
+        <condition attribute="connectionroleid" operator="eq" value="9c86f660-5f5b-e611-810b-00155dbd6a1d" uitype="connectionrole" uiname="Connected IoT Device"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="discounttype">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="businessunit">
+      <filter type="and">
+        <condition attribute="isdisabled" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="contact">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="resco_mobilereport">
+      <filter type="and">
+        <condition attribute="statuscode" operator="eq" value="1"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="uomschedule">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="quote">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="30"/>
+        <condition attribute="statecode" operator="ne" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="salesorder">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="30"/>
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="invoice">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="30"/>
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="systemuser">
+      <filter type="and">
+        <condition attribute="isdisabled" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="lead">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_bookingsetupmetadata">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="opportunity">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="60"/>
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="email">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="10"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="phonecall">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="10"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="task">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="10"/>
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="transactioncurrency">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="appointment">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="10"/>
+        <condition attribute="isdraft" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="incident">
+      <filter type="and">
+        <condition attribute="modifiedon" operator="last-x-days" value="15"/>
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_taxcodedetail">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="pricelevel">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_customerasset">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+      <link-entity name="account" from="accountid" to="msdyn_account" link-type="inner" alias="L6">
+        <filter type="and">
+          <condition attribute="statecode" operator="eq" value="0"/>
+        </filter>
+      </link-entity>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_fieldservicepricelistitem">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_incidenttype">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_priority">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_productinventory">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_resourcepaytype">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_servicetasktype">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_shipvia">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_taxcode">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="product">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="service">
+      <filter type="and">
+        <condition attribute="isschedulable" operator="eq" value="1"/>
+        <condition attribute="isvisible" operator="eq" value="1"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_workorder">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+        <condition attribute="msdyn_systemstatus" operator="in">
+          <value>690970005</value>
+          <value>690970004</value>
+          <value>690970003</value>
+          <value>690970002</value>
+          <value>690970001</value>
+          <value>690970000</value>
+        </condition>
+      </filter>
+      <link-entity name="bookableresourcebooking" from="msdyn_workorder" to="msdyn_workorderid" link-type="inner" alias="L0">
+        <filter type="and">
+          <filter type="or">
+            <condition attribute="starttime" operator="next-x-days" value="14"/>
+            <condition attribute="starttime" operator="last-x-days" value="14"/>
+            <condition attribute="starttime" operator="today"/>
+            <condition attribute="endtime" operator="next-x-days" value="14"/>
+            <condition attribute="endtime" operator="last-x-days" value="14"/>
+            <condition attribute="endtime" operator="today"/>
+          </filter>
+          <condition attribute="statecode" operator="eq" value="0"/>
+        </filter>
+        <link-entity name="bookingstatus" from="bookingstatusid" to="bookingstatus" link-type="inner" alias="L1">
+          <filter type="and">
+            <condition attribute="msdyn_fieldservicestatus" operator="in">
+              <value>690970005</value>
+              <value>690970004</value>
+              <value>690970003</value>
+              <value>690970002</value>
+              <value>690970000</value>
+              <value>690970001</value>
+            </condition>
+            <condition attribute="statecode" operator="eq" value="0"/>
+          </filter>
+        </link-entity>
+        <link-entity name="bookableresource" from="bookableresourceid" to="resource" link-type="inner" alias="L2">
+          <filter type="and">
+            <condition attribute="userid" operator="eq-userid"/>
+            <condition attribute="statecode" operator="eq" value="0"/>
+          </filter>
+        </link-entity>
+      </link-entity>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="bookableresourcebooking">
+      <filter type="and">
+        <filter type="or">
+          <condition attribute="starttime" operator="next-x-days" value="14"/>
+          <condition attribute="starttime" operator="last-x-days" value="14"/>
+          <condition attribute="starttime" operator="today"/>
+          <condition attribute="endtime" operator="next-x-days" value="14"/>
+          <condition attribute="endtime" operator="last-x-days" value="14"/>
+          <condition attribute="endtime" operator="today"/>
+        </filter>
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+      <link-entity name="msdyn_workorder" from="msdyn_workorderid" to="msdyn_workorder" link-type="outer" alias="L0">
+        <filter type="and">
+          <condition attribute="statecode" operator="eq" value="0"/>
+        </filter>
+      </link-entity>
+      <link-entity name="bookingstatus" from="bookingstatusid" to="bookingstatus" link-type="inner" alias="L1">
+        <filter type="and">
+          <condition attribute="msdyn_fieldservicestatus" operator="ne" value="690970005"/>
+          <condition attribute="statecode" operator="eq" value="0"/>
+        </filter>
+      </link-entity>
+      <link-entity name="bookableresource" from="bookableresourceid" to="resource" link-type="inner" alias="L2">
+        <filter type="and">
+          <condition attribute="userid" operator="eq-userid"/>
+          <condition attribute="statecode" operator="eq" value="0"/>
+        </filter>
+      </link-entity>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_workorderproduct">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+      <link-entity name="msdyn_workorder" from="msdyn_workorderid" to="msdyn_workorder" link-type="inner" alias="L0">
+        <filter type="and">
+          <condition attribute="statecode" operator="eq" value="0"/>
+          <condition attribute="msdyn_systemstatus" operator="in">
+            <value>690970003</value>
+            <value>690970002</value>
+            <value>690970001</value>
+            <value>690970000</value>
+          </condition>
+        </filter>
+        <link-entity name="bookableresourcebooking" from="msdyn_workorder" to="msdyn_workorderid" link-type="inner" alias="L1">
+          <filter type="and">
+            <filter type="or">
+              <condition attribute="starttime" operator="next-x-days" value="14"/>
+              <condition attribute="starttime" operator="last-x-days" value="14"/>
+              <condition attribute="starttime" operator="today"/>
+              <condition attribute="endtime" operator="next-x-days" value="14"/>
+              <condition attribute="endtime" operator="last-x-days" value="14"/>
+              <condition attribute="endtime" operator="today"/>
+            </filter>
+            <condition attribute="statecode" operator="eq" value="0"/>
+          </filter>
+          <link-entity name="bookingstatus" from="bookingstatusid" to="bookingstatus" link-type="inner" alias="L2">
+            <filter type="and">
+              <condition attribute="statecode" operator="eq" value="0"/>
+              <condition attribute="msdyn_fieldservicestatus" operator="in">
+                <value>690970003</value>
+                <value>690970002</value>
+                <value>690970001</value>
+                <value>690970000</value>
+              </condition>
+            </filter>
+          </link-entity>
+          <link-entity name="bookableresource" from="bookableresourceid" to="resource" link-type="inner" alias="L3">
+            <filter type="and">
+              <condition attribute="userid" operator="eq-userid"/>
+              <condition attribute="statecode" operator="eq" value="0"/>
+            </filter>
+          </link-entity>
+        </link-entity>
+      </link-entity>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_workorderincident">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+      <link-entity name="msdyn_workorder" from="msdyn_workorderid" to="msdyn_workorder" link-type="inner" alias="L0">
+        <filter type="and">
+          <condition attribute="statecode" operator="eq" value="0"/>
+          <condition attribute="msdyn_systemstatus" operator="in">
+            <value>690970005</value>
+            <value>690970004</value>
+            <value>690970003</value>
+            <value>690970002</value>
+            <value>690970001</value>
+            <value>690970000</value>
+          </condition>
+        </filter>
+        <link-entity name="bookableresourcebooking" from="msdyn_workorder" to="msdyn_workorderid" link-type="inner" alias="L1">
+          <filter type="and">
+            <filter type="or">
+              <condition attribute="starttime" operator="next-x-days" value="14"/>
+              <condition attribute="starttime" operator="last-x-days" value="14"/>
+              <condition attribute="starttime" operator="today"/>
+              <condition attribute="endtime" operator="next-x-days" value="14"/>
+              <condition attribute="endtime" operator="last-x-days" value="14"/>
+              <condition attribute="endtime" operator="today"/>
+            </filter>
+            <condition attribute="statecode" operator="eq" value="0"/>
+          </filter>
+          <link-entity name="bookingstatus" from="bookingstatusid" to="bookingstatus" link-type="inner" alias="L2">
+            <filter type="and">
+              <condition attribute="statecode" operator="eq" value="0"/>
+              <condition attribute="msdyn_fieldservicestatus" operator="in">
+                <value>690970005</value>
+                <value>690970004</value>
+                <value>690970003</value>
+                <value>690970002</value>
+                <value>690970000</value>
+                <value>690970001</value>
+              </condition>
+            </filter>
+          </link-entity>
+          <link-entity name="bookableresource" from="bookableresourceid" to="resource" link-type="inner" alias="L3">
+            <filter type="and">
+              <condition attribute="userid" operator="eq-userid"/>
+              <condition attribute="statecode" operator="eq" value="0"/>
+            </filter>
+          </link-entity>
+        </link-entity>
+      </link-entity>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_workorderservice">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+      <link-entity name="msdyn_workorder" from="msdyn_workorderid" to="msdyn_workorder" link-type="inner" alias="L0">
+        <filter type="and">
+          <condition attribute="statecode" operator="eq" value="0"/>
+          <condition attribute="msdyn_systemstatus" operator="in">
+            <value>690970003</value>
+            <value>690970002</value>
+            <value>690970001</value>
+            <value>690970000</value>
+          </condition>
+        </filter>
+        <link-entity name="bookableresourcebooking" from="msdyn_workorder" to="msdyn_workorderid" link-type="inner" alias="L1">
+          <filter type="and">
+            <filter type="or">
+              <condition attribute="starttime" operator="next-x-days" value="14"/>
+              <condition attribute="starttime" operator="last-x-days" value="14"/>
+              <condition attribute="starttime" operator="today"/>
+              <condition attribute="endtime" operator="next-x-days" value="14"/>
+              <condition attribute="endtime" operator="last-x-days" value="14"/>
+              <condition attribute="endtime" operator="today"/>
+            </filter>
+            <condition attribute="statecode" operator="eq" value="0"/>
+          </filter>
+          <link-entity name="bookingstatus" from="bookingstatusid" to="bookingstatus" link-type="inner" alias="L2">
+            <filter type="and">
+              <condition attribute="statecode" operator="eq" value="0"/>
+              <condition attribute="msdyn_fieldservicestatus" operator="in">
+                <value>690970003</value>
+                <value>690970002</value>
+                <value>690970001</value>
+                <value>690970000</value>
+              </condition>
+            </filter>
+          </link-entity>
+          <link-entity name="bookableresource" from="bookableresourceid" to="resource" link-type="inner" alias="L3">
+            <filter type="and">
+              <condition attribute="userid" operator="eq-userid"/>
+              <condition attribute="statecode" operator="eq" value="0"/>
+            </filter>
+          </link-entity>
+        </link-entity>
+      </link-entity>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_workorderservicetask">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+      <link-entity name="msdyn_workorder" from="msdyn_workorderid" to="msdyn_workorder" link-type="inner" alias="L0">
+        <filter type="and">
+          <condition attribute="statecode" operator="eq" value="0"/>
+          <condition attribute="msdyn_systemstatus" operator="in">
+            <value>690970003</value>
+            <value>690970002</value>
+            <value>690970001</value>
+            <value>690970000</value>
+          </condition>
+        </filter>
+        <link-entity name="bookableresourcebooking" from="msdyn_workorder" to="msdyn_workorderid" link-type="inner" alias="L1">
+          <filter type="and">
+            <filter type="or">
+              <condition attribute="starttime" operator="next-x-days" value="14"/>
+              <condition attribute="starttime" operator="last-x-days" value="14"/>
+              <condition attribute="starttime" operator="today"/>
+              <condition attribute="endtime" operator="next-x-days" value="14"/>
+              <condition attribute="endtime" operator="last-x-days" value="14"/>
+              <condition attribute="endtime" operator="today"/>
+            </filter>
+            <condition attribute="statecode" operator="eq" value="0"/>
+          </filter>
+          <link-entity name="bookingstatus" from="bookingstatusid" to="bookingstatus" link-type="inner" alias="L2">
+            <filter type="and">
+              <condition attribute="statecode" operator="eq" value="0"/>
+              <condition attribute="msdyn_fieldservicestatus" operator="in">
+                <value>690970003</value>
+                <value>690970002</value>
+                <value>690970001</value>
+                <value>690970000</value>
+              </condition>
+            </filter>
+          </link-entity>
+          <link-entity name="bookableresource" from="bookableresourceid" to="resource" link-type="inner" alias="L3">
+            <filter type="and">
+              <condition attribute="userid" operator="eq-userid"/>
+              <condition attribute="statecode" operator="eq" value="0"/>
+            </filter>
+          </link-entity>
+        </link-entity>
+      </link-entity>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_bookingtimestamp">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+      <link-entity name="bookableresourcebooking" from="bookableresourcebookingid" to="msdyn_booking" link-type="inner" alias="L0">
+        <filter type="and">
+          <filter type="or">
+            <condition attribute="starttime" operator="next-x-days" value="14"/>
+            <condition attribute="starttime" operator="last-x-days" value="14"/>
+            <condition attribute="starttime" operator="today"/>
+            <condition attribute="endtime" operator="next-x-days" value="14"/>
+            <condition attribute="endtime" operator="last-x-days" value="14"/>
+            <condition attribute="endtime" operator="today"/>
+          </filter>
+          <condition attribute="statecode" operator="eq" value="0"/>
+        </filter>
+        <link-entity name="bookableresource" from="bookableresourceid" to="resource" link-type="inner" alias="L1">
+          <filter type="and">
+            <condition attribute="userid" operator="eq-userid"/>
+            <condition attribute="statecode" operator="eq" value="0"/>
+          </filter>
+        </link-entity>
+      </link-entity>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_agreement">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+        <condition attribute="msdyn_systemstatus" operator="in">
+          <value>690970001</value>
+          <value>690970000</value>
+        </condition>
+        <condition attribute="modifiedon" operator="last-x-days" value="10"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_agreementbookingincident">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+        <condition attribute="msdyn_name" operator="eq" value="@NameFilter@"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_agreementinvoicedate">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+        <condition attribute="msdyn_name" operator="eq" value="@NameFilter@"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_agreementinvoiceproduct">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+        <condition attribute="msdyn_name" operator="eq" value="@NameFilter@"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_agreementinvoicesetup">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+        <condition attribute="msdyn_name" operator="eq" value="@NameFilter@"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_agreementbookingproduct">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+        <condition attribute="msdyn_name" operator="eq" value="@NameFilter@"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_agreementbookingsetup">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+        <condition attribute="msdyn_name" operator="eq" value="@NameFilter@"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_agreementbookingdate">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+        <condition attribute="msdyn_name" operator="eq" value="@NameFilter@"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_agreementbookingservice">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+        <condition attribute="msdyn_name" operator="eq" value="@NameFilter@"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_agreementbookingservicetask">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+        <condition attribute="msdyn_name" operator="eq" value="@NameFilter@"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_iotalert">
+      <link-entity name="msdyn_iotdevice" from="msdyn_iotdeviceid" to="msdyn_device" link-type="inner" alias="L0">
+        <link-entity name="account" from="accountid" to="msdyn_account" link-type="inner" alias="L6">
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0"/>
+          </filter>
+          <link-entity name="msdyn_workorder" from="msdyn_serviceaccount" to="accountid" link-type="inner" alias="L7">
+            <filter type="and">
+              <condition attribute="statecode" operator="eq" value="0"/>
+              <condition attribute="msdyn_systemstatus" operator="in">
+                <value>690970000</value>
+                <value>690970001</value>
+                <value>690970002</value>
+                <value>690970003</value>
+              </condition>
+            </filter>
+            <link-entity name="bookableresourcebooking" from="msdyn_workorder" to="msdyn_workorderid" link-type="inner" alias="L8">
+              <filter type="and">
+                <filter type="or">
+                  <condition attribute="starttime" operator="next-x-days" value="14"/>
+                  <condition attribute="starttime" operator="last-x-days" value="14"/>
+                  <condition attribute="starttime" operator="today"/>
+                  <condition attribute="endtime" operator="next-x-days" value="14"/>
+                  <condition attribute="endtime" operator="last-x-days" value="14"/>
+                  <condition attribute="endtime" operator="today"/>
+                </filter>
+                <condition attribute="statecode" operator="eq" value="0"/>
+              </filter>
+              <link-entity name="bookingstatus" from="bookingstatusid" to="bookingstatus" link-type="inner" alias="L9">
+                <filter type="and">
+                  <condition attribute="msdyn_fieldservicestatus" operator="in">
+                    <value>690970000</value>
+                    <value>690970001</value>
+                    <value>690970002</value>
+                    <value>690970003</value>
+                  </condition>
+                  <condition attribute="statecode" operator="eq" value="0"/>
+                </filter>
+              </link-entity>
+              <link-entity name="bookableresource" from="bookableresourceid" to="resource" link-type="inner" alias="L10">
+                <filter type="and">
+                  <condition attribute="userid" operator="eq-userid"/>
+                  <condition attribute="statecode" operator="eq" value="0"/>
+                </filter>
+              </link-entity>
+            </link-entity>
+          </link-entity>
+        </link-entity>
+      </link-entity>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_iotdevice">
+      <link-entity name="account" from="accountid" to="msdyn_account" link-type="inner" alias="L6">
+        <filter type="and">
+          <condition attribute="statecode" operator="eq" value="0"/>
+        </filter>
+        <link-entity name="msdyn_workorder" from="msdyn_serviceaccount" to="accountid" link-type="inner" alias="L7">
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0"/>
+            <condition attribute="msdyn_systemstatus" operator="in">
+              <value>690970000</value>
+              <value>690970001</value>
+              <value>690970002</value>
+              <value>690970003</value>
+            </condition>
+          </filter>
+          <link-entity name="bookableresourcebooking" from="msdyn_workorder" to="msdyn_workorderid" link-type="inner" alias="L8">
+            <filter type="and">
+              <filter type="or">
+                <condition attribute="starttime" operator="next-x-days" value="14"/>
+                <condition attribute="starttime" operator="last-x-days" value="14"/>
+                <condition attribute="starttime" operator="today"/>
+                <condition attribute="endtime" operator="next-x-days" value="14"/>
+                <condition attribute="endtime" operator="last-x-days" value="14"/>
+                <condition attribute="endtime" operator="today"/>
+              </filter>
+              <condition attribute="statecode" operator="eq" value="0"/>
+            </filter>
+            <link-entity name="bookingstatus" from="bookingstatusid" to="bookingstatus" link-type="inner" alias="L9">
+              <filter type="and">
+                <condition attribute="msdyn_fieldservicestatus" operator="in">
+                  <value>690970000</value>
+                  <value>690970001</value>
+                  <value>690970002</value>
+                  <value>690970003</value>
+                </condition>
+                <condition attribute="statecode" operator="eq" value="0"/>
+              </filter>
+            </link-entity>
+            <link-entity name="bookableresource" from="bookableresourceid" to="resource" link-type="inner" alias="L10">
+              <filter type="and">
+                <condition attribute="userid" operator="eq-userid"/>
+                <condition attribute="statecode" operator="eq" value="0"/>
+              </filter>
+            </link-entity>
+          </link-entity>
+        </link-entity>
+      </link-entity>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_iotdevicecommand">
+      <link-entity name="msdyn_iotdevice" from="msdyn_iotdeviceid" to="msdyn_device" link-type="inner" alias="L0">
+        <link-entity name="account" from="accountid" to="msdyn_account" link-type="inner" alias="L6">
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0"/>
+          </filter>
+          <link-entity name="msdyn_workorder" from="msdyn_serviceaccount" to="accountid" link-type="inner" alias="L7">
+            <filter type="and">
+              <condition attribute="statecode" operator="eq" value="0"/>
+              <condition attribute="msdyn_systemstatus" operator="in">
+                <value>690970000</value>
+                <value>690970001</value>
+                <value>690970002</value>
+                <value>690970003</value>
+              </condition>
+            </filter>
+            <link-entity name="bookableresourcebooking" from="msdyn_workorder" to="msdyn_workorderid" link-type="inner" alias="L8">
+              <filter type="and">
+                <filter type="or">
+                  <condition attribute="starttime" operator="next-x-days" value="14"/>
+                  <condition attribute="starttime" operator="last-x-days" value="14"/>
+                  <condition attribute="starttime" operator="today"/>
+                  <condition attribute="endtime" operator="next-x-days" value="14"/>
+                  <condition attribute="endtime" operator="last-x-days" value="14"/>
+                  <condition attribute="endtime" operator="today"/>
+                </filter>
+                <condition attribute="statecode" operator="eq" value="0"/>
+              </filter>
+              <link-entity name="bookingstatus" from="bookingstatusid" to="bookingstatus" link-type="inner" alias="L9">
+                <filter type="and">
+                  <condition attribute="msdyn_fieldservicestatus" operator="in">
+                    <value>690970000</value>
+                    <value>690970001</value>
+                    <value>690970002</value>
+                    <value>690970003</value>
+                  </condition>
+                  <condition attribute="statecode" operator="eq" value="0"/>
+                </filter>
+              </link-entity>
+              <link-entity name="bookableresource" from="bookableresourceid" to="resource" link-type="inner" alias="L10">
+                <filter type="and">
+                  <condition attribute="userid" operator="eq-userid"/>
+                  <condition attribute="statecode" operator="eq" value="0"/>
+                </filter>
+              </link-entity>
+            </link-entity>
+          </link-entity>
+        </link-entity>
+      </link-entity>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_rma">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_rmaproduct">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_rmareceipt">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_rmareceiptproduct">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_rtv">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_rtvproduct">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_timeoffrequest">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_warehouse">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_workordersubstatus">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="msdyn_workordertype">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="resco_questionnaire">
+      <filter type="and">
+        <filter type="or">
+          <filter type="and">
+            <condition attribute="resco_istemplate" operator="eq" value="1"/>
+            <condition attribute="statuscode" operator="in">
+              <value>1</value>
+              <value>473220002</value>
+              <value>473220004</value>
+            </condition>
+          </filter>
+          <filter type="and">
+            <filter type="or">
+              <condition attribute="modifiedon" operator="today"/>
+              <condition attribute="modifiedon" operator="last-x-days" value="30"/>
+            </filter>
+            <condition attribute="resco_istemplate" operator="eq" value="0"/>
+          </filter>
+        </filter>
+        <filter type="or">
+          <condition attribute="resco_issnippet" operator="eq" value="0"/>
+          <condition attribute="resco_issnippet" operator="null"/>
+        </filter>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="annotation"/>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="resco_usersettings">
+      <filter type="or">
+        <condition attribute="resco_kind" operator="like" value="App.%"/>
+        <condition attribute="resco_kind" operator="like" value="Global.%"/>
+      </filter>
+    </entity>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="rh_guide">
+      <filter type="and">
+        <condition attribute="statuscode" operator="eq" value="473220002"/>
+      </filter>
+    </entity>
+  </fetch>
+</fetchcollection>

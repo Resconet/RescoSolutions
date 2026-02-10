@@ -1,0 +1,14 @@
+﻿<RoutePlan>
+  <ActivityName>bookableresourcebooking</ActivityName>
+  <StartDateField>starttime</StartDateField>
+  <EndDateField>endtime</EndDateField>
+  <DefaultAction>-1</DefaultAction>
+  <LookupField>msdyn_workorder</LookupField>
+  <SourceViews>msdyn_workorder.All Work Orders</SourceViews>
+  <DisableCompletion>true</DisableCompletion>
+  <ViewMode>true</ViewMode>
+  <StartAtWork>true</StartAtWork>
+  <WorkLocation>47.627811,-122.118376</WorkLocation>
+  <EnabledWorkflows>OnRouteItemAdded OnRouteItemCompleted</EnabledWorkflows>
+  <AlternativeVisitLocation>msdyn_latitude;msdyn_longitude</AlternativeVisitLocation>
+</RoutePlan>

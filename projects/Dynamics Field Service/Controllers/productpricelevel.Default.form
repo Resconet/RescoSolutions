@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>productpricelevel</EntityName>
+  <CamelCase>ProductPriceLevel</CamelCase>
+  <ClassBinding />
+  <SerializedChildren />
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="pricelevelid">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="transactioncurrencyid">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="productid">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="uomid">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="discounttypeid">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="quantitysellingcode">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="pricingmethodcode">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="amount">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="percentage">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="roundingpolicycode">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="roundingoptioncode">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="roundingoptionamount">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="IFrameTab">
+      <Name>ProductPriceLevel</Name>
+      <Url>file://ProductPriceLevel/ProductPriceLevel.html</Url>
+      <DelayLoad>false</DelayLoad>
+	  <IsVisible>false</IsVisible>
+    </FormTab>
+  </SerializedChildrenV2>
+  <Navigation>
+    <Name>Navigation</Name>
+    <SerializedChildren />
+  </Navigation>
+  <WorkflowLoad>&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;
+    &lt;function e="false"&gt;
+      &lt;var&gt;Form.pricelevelid.Validate&lt;/var&gt;
+      &lt;arg&gt;Boolean:True&lt;/arg&gt;
+      &lt;func&gt;Assign&lt;/func&gt;
+    &lt;/function&gt;
+    &lt;function e="false"&gt;
+      &lt;var&gt;Form.uomid.Validate&lt;/var&gt;
+      &lt;arg&gt;Boolean:True&lt;/arg&gt;
+      &lt;func&gt;Assign&lt;/func&gt;
+    &lt;/function&gt;
+    &lt;function e="false"&gt;
+      &lt;var&gt;Form.productid.Validate&lt;/var&gt;
+      &lt;arg&gt;Boolean:True&lt;/arg&gt;
+      &lt;func&gt;Assign&lt;/func&gt;
+    &lt;/function&gt;
+    &lt;function e="false"&gt;
+      &lt;var&gt;Form.transactioncurrencyid.IsEnabled&lt;/var&gt;
+      &lt;arg&gt;Boolean:False&lt;/arg&gt;
+      &lt;func&gt;Assign&lt;/func&gt;
+    &lt;/function&gt;
+    &lt;function e="false"&gt;
+      &lt;var&gt;Form.pricelevelid.IsEnabled&lt;/var&gt;
+      &lt;arg&gt;var:Entity.IsNew&lt;/arg&gt;
+      &lt;func&gt;Assign&lt;/func&gt;
+    &lt;/function&gt;
+    &lt;branch info="Product is RO only if already set" e="true"&gt;
+      &lt;if e="true"&gt;
+        &lt;conditions e="true" op="And"&gt;
+          &lt;condition e="false"&gt;
+            &lt;var&gt;Entity.productid&lt;/var&gt;
+            &lt;op&gt;ContainsData&lt;/op&gt;
+          &lt;/condition&gt;
+        &lt;/conditions&gt;
+        &lt;action e="true"&gt;
+          &lt;function e="false"&gt;
+            &lt;var&gt;Form.productid.IsEnabled&lt;/var&gt;
+            &lt;arg&gt;Boolean:False&lt;/arg&gt;
+            &lt;func&gt;Assign&lt;/func&gt;
+          &lt;/function&gt;
+        &lt;/action&gt;
+      &lt;/if&gt;
+      &lt;if e="true"&gt;
+        &lt;conditions e="true" op="And"&gt;
+          &lt;condition e="false"&gt;
+            &lt;var&gt;Entity.productid&lt;/var&gt;
+            &lt;op&gt;DoesNotContainData&lt;/op&gt;
+          &lt;/condition&gt;
+        &lt;/conditions&gt;
+        &lt;action e="true"&gt;
+          &lt;function e="false"&gt;
+            &lt;var&gt;Form.productid.IsEnabled&lt;/var&gt;
+            &lt;arg&gt;Boolean:True&lt;/arg&gt;
+            &lt;func&gt;Assign&lt;/func&gt;
+          &lt;/function&gt;
+        &lt;/action&gt;
+      &lt;/if&gt;
+    &lt;/branch&gt;
+  &lt;/Workflow&gt;</WorkflowLoad>
+  <WorkflowItemChanged>&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;
+    &lt;branch e="true"&gt;
+      &lt;if e="true"&gt;
+        &lt;conditions e="true" op="And"&gt;
+          &lt;condition e="false"&gt;
+            &lt;var&gt;ChangedItem&lt;/var&gt;
+            &lt;arg&gt;String:pricingmethodcode&lt;/arg&gt;
+            &lt;op&gt;Equal&lt;/op&gt;
+          &lt;/condition&gt;
+        &lt;/conditions&gt;
+        &lt;action e="true"&gt;
+          &lt;branch info="Set required and read-only fields when Pricing Method changes" e="true"&gt;
+            &lt;if e="true"&gt;
+              &lt;conditions e="true" op="And"&gt;
+                &lt;condition e="false"&gt;
+                  &lt;var&gt;Entity.pricingmethodcode&lt;/var&gt;
+                  &lt;arg&gt;Picklist:1&lt;/arg&gt;
+                  &lt;op&gt;Equal&lt;/op&gt;
+                &lt;/condition&gt;
+              &lt;/conditions&gt;
+              &lt;action e="true"&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;Form.amount.Validate&lt;/var&gt;
+                  &lt;arg&gt;Boolean:True&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;Form.amount.IsEnabled&lt;/var&gt;
+                  &lt;arg&gt;Boolean:True&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;Entity.percentage&lt;/var&gt;
+                  &lt;func&gt;Clear&lt;/func&gt;
+                &lt;/function&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;Form.percentage.Validate&lt;/var&gt;
+                  &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;Form.percentage.IsEnabled&lt;/var&gt;
+                  &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;Entity.roundingpolicycode&lt;/var&gt;
+                  &lt;arg&gt;Picklist:-1&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;Form.roundingpolicycode.Validate&lt;/var&gt;
+                  &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;Form.roundingpolicycode.IsEnabled&lt;/var&gt;
+                  &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+              &lt;/action&gt;
+            &lt;/if&gt;
+            &lt;if e="true"&gt;
+              &lt;conditions e="true" op="And"&gt;
+                &lt;condition e="false"&gt;
+                  &lt;var&gt;Entity.pricingmethodcode&lt;/var&gt;
+                  &lt;arg&gt;Picklist:1&lt;/arg&gt;
+                  &lt;op&gt;NotEqual&lt;/op&gt;
+                &lt;/condition&gt;
+              &lt;/conditions&gt;
+              &lt;action e="true"&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;Entity.amount&lt;/var&gt;
+                  &lt;func&gt;Clear&lt;/func&gt;
+                &lt;/function&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;Form.amount.Validate&lt;/var&gt;
+                  &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;Form.amount.IsEnabled&lt;/var&gt;
+                  &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;Form.percentage.Validate&lt;/var&gt;
+                  &lt;arg&gt;Boolean:True&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;Form.percentage.IsEnabled&lt;/var&gt;
+                  &lt;arg&gt;Boolean:True&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;Form.roundingpolicycode.Validate&lt;/var&gt;
+                  &lt;arg&gt;Boolean:True&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;Form.roundingpolicycode.IsEnabled&lt;/var&gt;
+                  &lt;arg&gt;Boolean:True&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+              &lt;/action&gt;
+            &lt;/if&gt;
+          &lt;/branch&gt;
+        &lt;/action&gt;
+      &lt;/if&gt;
+      &lt;if e="true"&gt;
+        &lt;conditions e="true" op="And"&gt;
+          &lt;condition e="false"&gt;
+            &lt;var&gt;ChangedItem&lt;/var&gt;
+            &lt;arg&gt;String:roundingpolicycode&lt;/arg&gt;
+            &lt;op&gt;Equal&lt;/op&gt;
+          &lt;/condition&gt;
+        &lt;/conditions&gt;
+        &lt;action e="true"&gt;
+          &lt;branch info="Set required and read-only fields when Rounding Policy changes" e="true"&gt;
+            &lt;if e="true"&gt;
+              &lt;conditions e="true" op="And"&gt;
+                &lt;group e="false" op="Or"&gt;
+                  &lt;condition e="false"&gt;
+                    &lt;var&gt;Entity.roundingpolicycode&lt;/var&gt;
+                    &lt;arg&gt;Picklist:-1&lt;/arg&gt;
+                    &lt;op&gt;Equal&lt;/op&gt;
+                  &lt;/condition&gt;
+                &lt;condition e="false"&gt;
+                  &lt;var&gt;Entity.roundingpolicycode&lt;/var&gt;
+                  &lt;arg&gt;Picklist:1&lt;/arg&gt;
+                  &lt;op&gt;Equal&lt;/op&gt;
+                &lt;/condition&gt;
+              &lt;/group&gt;
+            &lt;/conditions&gt;
+            &lt;action e="true"&gt;
+              &lt;function e="false"&gt;
+                &lt;var&gt;Entity.roundingoptioncode&lt;/var&gt;
+                &lt;arg&gt;Picklist:-1&lt;/arg&gt;
+                &lt;func&gt;Assign&lt;/func&gt;
+              &lt;/function&gt;
+              &lt;function e="false"&gt;
+                &lt;var&gt;Form.roundingoptioncode.Validate&lt;/var&gt;
+                &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                &lt;func&gt;Assign&lt;/func&gt;
+              &lt;/function&gt;
+              &lt;function e="false"&gt;
+                &lt;var&gt;Form.roundingoptioncode.IsEnabled&lt;/var&gt;
+                &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                &lt;func&gt;Assign&lt;/func&gt;
+              &lt;/function&gt;
+              &lt;function e="false"&gt;
+                &lt;var&gt;Entity.roundingoptionamount&lt;/var&gt;
+                &lt;func&gt;Clear&lt;/func&gt;
+              &lt;/function&gt;
+              &lt;function e="false"&gt;
+                &lt;var&gt;Form.roundingoptionamount.Validate&lt;/var&gt;
+                &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                &lt;func&gt;Assign&lt;/func&gt;
+              &lt;/function&gt;
+              &lt;function e="false"&gt;
+                &lt;var&gt;Form.roundingoptionamount.IsEnabled&lt;/var&gt;
+                &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                &lt;func&gt;Assign&lt;/func&gt;
+              &lt;/function&gt;
+            &lt;/action&gt;
+          &lt;/if&gt;
+          &lt;if e="true"&gt;
+            &lt;conditions e="true" op="And" /&gt;
+              &lt;action e="true"&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;Form.roundingoptioncode.Validate&lt;/var&gt;
+                  &lt;arg&gt;Boolean:True&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;Form.roundingoptioncode.IsEnabled&lt;/var&gt;
+                  &lt;arg&gt;Boolean:True&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;Form.roundingoptionamount.Validate&lt;/var&gt;
+                  &lt;arg&gt;Boolean:True&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;Form.roundingoptionamount.IsEnabled&lt;/var&gt;
+                  &lt;arg&gt;Boolean:True&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+              &lt;/action&gt;
+            &lt;/if&gt;
+          &lt;/branch&gt;
+        &lt;/action&gt;
+      &lt;/if&gt;
+    &lt;/branch&gt;
+  &lt;/Workflow&gt;</WorkflowItemChanged>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedContactInfo />
+</EntityForm>

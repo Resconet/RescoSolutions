@@ -1,0 +1,50 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>connection</EntityName>
+  <CamelCase>connection</CamelCase>
+  <WorkflowLoad>&lt;?xml version="1.0"?&gt;
+    &lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;
+      &lt;function e="false"&gt;
+        &lt;var&gt;Form.record2id.Validate&lt;/var&gt;
+        &lt;func&gt;Assign&lt;/func&gt;
+        &lt;arg&gt;Boolean:True&lt;/arg&gt;
+      &lt;/function&gt;
+    &lt;/Workflow&gt;
+  </WorkflowLoad>
+  <WorkflowCommandCanExecute>&lt;?xml version="1.0"?&gt;
+    &lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;
+      &lt;branch e="true" info="SaveAndClose instead of Save"&gt;
+        &lt;if e="true"&gt;
+          &lt;conditions e="true" op="And"&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;Command.Name&lt;/var&gt;
+              &lt;op&gt;Equal&lt;/op&gt;
+              &lt;arg&gt;String:Save&lt;/arg&gt;
+            &lt;/condition&gt;
+          &lt;/conditions&gt;
+          &lt;action&gt;
+            &lt;function e="false"&gt;
+              &lt;var&gt;Command.IsEnabled&lt;/var&gt;
+              &lt;func&gt;Assign&lt;/func&gt;
+              &lt;arg&gt;Boolean:False&lt;/arg&gt;
+            &lt;/function&gt;
+          &lt;/action&gt;
+        &lt;/if&gt;
+      &lt;/branch&gt;
+    &lt;/Workflow&gt;
+  </WorkflowCommandCanExecute>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <SharedVariableNames/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" flexiHeader="0">
+      <Name>Connect To</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="record2id">
+          <LookupViews>@msdyn_iotdevice.*:msdyn_iotdevice.@IoT Device Lookup View</LookupViews>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

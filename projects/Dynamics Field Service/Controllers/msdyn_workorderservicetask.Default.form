@@ -1,0 +1,254 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2" layoutstrict="0" singlecardexpand="0">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>msdyn_workorderservicetask</EntityName>
+  <CamelCase>msdyn_workorderservicetask</CamelCase>
+  <WorkflowSave>&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;
+    &lt;definition e="false"&gt;
+      &lt;var&gt;workOrderIncident&lt;/var&gt;
+      &lt;arg&gt;var:Entity.msdyn_workorderincident&lt;/arg&gt;
+      &lt;arg&gt;String:msdyn_workorderincident&lt;/arg&gt;
+      &lt;func&gt;LoadReference&lt;/func&gt;
+      &lt;type&gt;Entity&lt;/type&gt;
+    &lt;/definition&gt;
+    &lt;branch info="If WorkOrderIncident and WorkOrder contain data" e="true"&gt;
+      &lt;if e="true"&gt;
+        &lt;conditions e="true" op="And"&gt;
+          &lt;group e="false" op="And"&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;workOrderIncident.@this&lt;/var&gt;
+              &lt;op&gt;ContainsData&lt;/op&gt;
+            &lt;/condition&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;Entity.msdyn_workorder&lt;/var&gt;
+              &lt;op&gt;ContainsData&lt;/op&gt;
+            &lt;/condition&gt;
+          &lt;/group&gt;
+        &lt;/conditions&gt;
+        &lt;action e="true"&gt;
+          &lt;branch info="If WorkOrderIncident's WorkOrder does not equal to WorkOrder" e="true"&gt;
+            &lt;if e="true"&gt;
+              &lt;conditions e="true" op="And"&gt;
+                &lt;condition e="false"&gt;
+                  &lt;var&gt;workOrderIncident.msdyn_workorder&lt;/var&gt;
+                  &lt;arg&gt;var:Entity.msdyn_workorder&lt;/arg&gt;
+                  &lt;op&gt;NotEqual&lt;/op&gt;
+                &lt;/condition&gt;
+              &lt;/conditions&gt;
+              &lt;action e="true"&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;ErrorMessage&lt;/var&gt;
+                  &lt;arg&gt;String:@Alert.WorkOrderMustMatchWorkOrderSetOnTheWorkOrderIncident&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+              &lt;/action&gt;
+            &lt;/if&gt;
+          &lt;/branch&gt;
+        &lt;/action&gt;
+      &lt;/if&gt;
+    &lt;/branch&gt;
+    &lt;definition e="false"&gt;
+      &lt;var&gt;customerAsset&lt;/var&gt;
+      &lt;arg&gt;var:Entity.msdyn_customerasset&lt;/arg&gt;
+      &lt;arg&gt;String:msdyn_customerasset&lt;/arg&gt;
+      &lt;func&gt;LoadReference&lt;/func&gt;
+      &lt;type&gt;Entity&lt;/type&gt;
+    &lt;/definition&gt;
+    &lt;definition e="false"&gt;
+      &lt;var&gt;workOrder&lt;/var&gt;
+      &lt;arg&gt;var:Entity.msdyn_workorder&lt;/arg&gt;
+      &lt;arg&gt;String:msdyn_workorder&lt;/arg&gt;
+      &lt;func&gt;LoadReference&lt;/func&gt;
+      &lt;type&gt;Entity&lt;/type&gt;
+    &lt;/definition&gt;
+    &lt;branch info="If CustomerAsset and WorkOrder contain data" e="true"&gt;
+      &lt;if e="true"&gt;
+        &lt;conditions e="true" op="And"&gt;
+          &lt;group e="false" op="And"&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;customerAsset.@this&lt;/var&gt;
+              &lt;op&gt;ContainsData&lt;/op&gt;
+            &lt;/condition&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;workOrder.@this&lt;/var&gt;
+              &lt;op&gt;ContainsData&lt;/op&gt;
+            &lt;/condition&gt;
+          &lt;/group&gt;
+        &lt;/conditions&gt;
+        &lt;action e="true"&gt;
+          &lt;branch info="If CustomerAsset's Account does not equal to WorkOrder's ServiceAccount" e="true"&gt;
+            &lt;if e="true"&gt;
+              &lt;conditions e="true" op="And"&gt;
+                &lt;condition e="false"&gt;
+                  &lt;var&gt;customerAsset.msdyn_account&lt;/var&gt;
+                  &lt;arg&gt;var:workOrder.msdyn_serviceaccount&lt;/arg&gt;
+                  &lt;op&gt;NotEqual&lt;/op&gt;
+                &lt;/condition&gt;
+              &lt;/conditions&gt;
+              &lt;action e="true"&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;ErrorMessage&lt;/var&gt;
+                  &lt;arg&gt;String:@Alert.CustomerAssetMustBeRelatedToServiceAccountOfWorkOrder&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+              &lt;/action&gt;
+            &lt;/if&gt;
+          &lt;/branch&gt;
+        &lt;/action&gt;
+      &lt;/if&gt;
+    &lt;/branch&gt;
+    &lt;definition e="false"&gt;
+      &lt;var&gt;booking&lt;/var&gt;
+      &lt;arg&gt;var:Entity.msdyn_booking&lt;/arg&gt;
+      &lt;arg&gt;String:bookableresourcebooking&lt;/arg&gt;
+      &lt;func&gt;LoadReference&lt;/func&gt;
+      &lt;type&gt;Entity&lt;/type&gt;
+    &lt;/definition&gt;
+    &lt;branch info="If Booking and WorkOrder contain data" e="true"&gt;
+      &lt;if e="true"&gt;
+        &lt;conditions e="true" op="And"&gt;
+          &lt;group e="false" op="And"&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;booking.@this&lt;/var&gt;
+              &lt;op&gt;ContainsData&lt;/op&gt;
+            &lt;/condition&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;Entity.msdyn_workorder&lt;/var&gt;
+              &lt;op&gt;ContainsData&lt;/op&gt;
+            &lt;/condition&gt;
+          &lt;/group&gt;
+        &lt;/conditions&gt;
+        &lt;action e="true"&gt;
+          &lt;branch info="If Booking's WorkOrder does not equal to WorkOrder" e="true"&gt;
+            &lt;if e="true"&gt;
+              &lt;conditions e="true" op="And"&gt;
+                &lt;condition e="false"&gt;
+                  &lt;var&gt;booking.msdyn_workorder&lt;/var&gt;
+                  &lt;arg&gt;var:Entity.msdyn_workorder&lt;/arg&gt;
+                  &lt;op&gt;NotEqual&lt;/op&gt;
+                &lt;/condition&gt;
+              &lt;/conditions&gt;
+              &lt;action e="true"&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;ErrorMessage&lt;/var&gt;
+                  &lt;arg&gt;String:@Alert.WorkOrderMustMatchWorkOrderSetOnTheRelatedBooking&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+              &lt;/action&gt;
+            &lt;/if&gt;
+          &lt;/branch&gt;
+        &lt;/action&gt;
+      &lt;/if&gt;
+    &lt;/branch&gt;
+  &lt;/Workflow&gt;</WorkflowSave>
+  <WorkflowCommandCanExecute>&lt;Workflow e="false" isvalid="true" syntaxVersion="11" version="0"&gt;
+    &lt;branch info="Command Can Execute" e="true"&gt;
+      &lt;if e="true"&gt;
+        &lt;conditions e="false" op="And"&gt;
+          &lt;condition e="false"&gt;
+            &lt;var&gt;Command.Name&lt;/var&gt;
+            &lt;arg&gt;String:custom_MarkComplete&lt;/arg&gt;
+            &lt;op&gt;Equal&lt;/op&gt;
+          &lt;/condition&gt;
+        &lt;/conditions&gt;
+        &lt;action e="true"&gt;
+          &lt;branch info="Show MarkComplete command if the percent complete does not equal 100 and entity is not new" e="true"&gt;
+            &lt;if e="true"&gt;
+              &lt;conditions e="true" op="And"&gt;
+                &lt;condition e="false"&gt;
+                  &lt;var&gt;Entity.msdyn_percentcomplete&lt;/var&gt;
+                  &lt;arg&gt;Integer:100&lt;/arg&gt;
+                  &lt;op&gt;NotEqual&lt;/op&gt;
+                &lt;/condition&gt;
+                &lt;condition e="false"&gt;
+                  &lt;var&gt;Entity.IsNew&lt;/var&gt;
+                  &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                  &lt;op&gt;Equal&lt;/op&gt;
+                &lt;/condition&gt;
+              &lt;/conditions&gt;
+              &lt;action e="true"&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;Command.IsEnabled&lt;/var&gt;
+                  &lt;arg&gt;Boolean:True&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+              &lt;/action&gt;
+            &lt;/if&gt;
+            &lt;if e="true"&gt;
+              &lt;conditions e="false" op="And" /&gt;
+              &lt;action e="true"&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;Command.IsEnabled&lt;/var&gt;
+                  &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+              &lt;/action&gt;
+            &lt;/if&gt;
+          &lt;/branch&gt;
+        &lt;/action&gt;
+      &lt;/if&gt;
+    &lt;/branch&gt;
+  &lt;/Workflow&gt;</WorkflowCommandCanExecute>
+  <WorkflowButtonCommand>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;definition e="false"&gt;&lt;var&gt;varTemplateName&lt;/var&gt;&lt;func&gt;Clear&lt;/func&gt;&lt;type&gt;String&lt;/type&gt;&lt;/definition&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:questionnaire&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.msdyn_tasktype&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Lookup:msdyn_servicetasktype,41ac8663-53f8-e611-8104-e0071b6a1051,Customer Satisfaction&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;varTemplateName&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Customer Satisfaction Survey (EN)&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.msdyn_tasktype&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Lookup:msdyn_servicetasktype,a7123d82-e1f3-e611-80f6-e0071b661f01,Review Procedure&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;varTemplateName&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Emergency Warning Systems (EN)&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.msdyn_tasktype&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Lookup:msdyn_servicetasktype,07ac45db-2ee7-e611-80f4-e0071b661f01,Standard Inspection&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;varTemplateName&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Template Regular Inspection (EN)&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.msdyn_tasktype&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Lookup:msdyn_servicetasktype,5f86dd54-df93-ec11-b400-0022489e2e72,Regular service&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;varTemplateName&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Service Report&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;varTemplateName&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:HazScan Checklist (EN)&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;definition e="false"&gt;&lt;var&gt;varQuestionnaire&lt;/var&gt;&lt;func&gt;LoadFetch&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;arg&gt;String:resco_questionnaire&lt;/arg&gt;&lt;arg&gt;Fetch:&amp;lt;fetch version=&amp;quot;1.0&amp;quot;&amp;gt;&amp;lt;entity name=&amp;quot;resco_questionnaire&amp;quot;&amp;gt;&amp;lt;filter type=&amp;quot;and&amp;quot;&amp;gt;&amp;lt;condition attribute=&amp;quot;resco_istemplate&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;1&amp;quot;/&amp;gt;&amp;lt;condition attribute=&amp;quot;resco_name&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;{{varTemplateName}}&amp;quot;/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/arg&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;varQuestionnaire.@this&lt;/var&gt;&lt;func&gt;OpenForm&lt;/func&gt;&lt;arg&gt;String:&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowButtonCommand>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
+  <CacheMode>-1</CacheMode>
+  <UiSyncGuardMode>-1</UiSyncGuardMode>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <SharedVariableNames/>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand OnExecuteButton</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="msdyn_tasktype"/>
+        <DetailItem SchemaName="msdyn_description"/>
+        <DetailItem SchemaName="msdyn_percentcomplete"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_workorderincident">
+          <LookupViews>&lt;extra&gt;&lt;filter entity="msdyn_workorderincident"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="msdyn_workorderincident"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="msdyn_workorder" operator="eq" value="{{msdyn_workorder}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_customerasset">
+          <LookupViews>&lt;extra&gt;&lt;filter entity="msdyn_customerasset"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="msdyn_customerasset"&amp;gt;&amp;lt;link-entity name="account" alias="L0" from="accountid" to="msdyn_account" link-type="inner"&amp;gt;&amp;lt;link-entity name="msdyn_workorder" alias="L1" from="msdyn_serviceaccount" to="accountid" link-type="inner"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="msdyn_workorderid" operator="eq" value="{{msdyn_workorder}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_booking">
+          <LookupViews>&lt;extra&gt;&lt;filter entity="bookableresourcebooking"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="bookableresourcebooking"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="msdyn_workorder" operator="eq" value="{{msdyn_workorder}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_estimatedduration"/>
+        <DetailItem SchemaName="msdyn_actualduration"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="questionnaire" button="true" buttonLabel="Inspection" buttonClickText="Inspection" buttonCommand="" Style="Button 2">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0" FlipMode="224">
+      <Name>Inspections</Name>
+      <CustomName>Inspections</CustomName>
+      <Binding SchemaName="resco_questionnaire.@virtual"/>
+      <Views>&lt;extra&gt;&lt;views&gt;resco_questionnaire.Answered Questionnaires&lt;/views&gt;&lt;filter entity="resco_questionnaire"&gt;&amp;lt;fetch&amp;gt;&amp;lt;entity name="resco_questionnaire"&amp;gt;	&amp;lt;filter type="and"&amp;gt;		&amp;lt;condition attribute='resco_istemplate' operator='eq' value='0' /&amp;gt;		&amp;lt;filter type="or"&amp;gt;			&amp;lt;condition attribute="resco_regardingid" operator="eq" value="{{msdyn_workorderservicetaskid}}"/&amp;gt;			&amp;lt;condition attribute="resco_rawidvalue" entityname="QuestionLinkAlias" operator="eq" value="{{msdyn_workorderservicetaskid}}"/&amp;gt;		&amp;lt;/filter&amp;gt;	&amp;lt;/filter&amp;gt;&amp;lt;link-entity name="resco_question" alias="QuestionLinkAlias" from="resco_questionnaireid" to="resco_questionnaireid" link-type="outer"/&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+      <LookupViews>&lt;extra&gt;&lt;views&gt;resco_questionnaire.Templates&lt;/views&gt;&lt;filter entity="resco_questionnaire"&gt;&amp;lt;fetch&amp;gt;&amp;lt;entity name='resco_questionnaire'&amp;gt;&amp;lt;filter&amp;gt;&amp;lt;condition attribute='resco_istemplate' operator='eq' value='1' /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
+    </FormTab>
+    <FormTab xsi:type="IFrameTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Web@2x.png" IsIconNameReadOnly="0">
+      <Name>Web</Name>
+      <Url>file://WorkOrderServiceTask/WorkOrderServiceTask.html</Url>
+      <IsVisible>false</IsVisible>
+      <DelayLoad>false</DelayLoad>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
+      <Name>Notes List</Name>
+      <Binding SchemaName="annotation.objectid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\activity@2x.png" IsIconNameReadOnly="0">
+      <Name>Activity List</Name>
+      <Binding SchemaName="activity.regardingobjectid"/>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

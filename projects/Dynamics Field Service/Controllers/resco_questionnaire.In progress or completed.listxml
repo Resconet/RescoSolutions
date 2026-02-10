@@ -1,0 +1,81 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>resco_questionnaire</EntityName>
+    <CamelCase>resco_questionnaire</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>In progress or completed</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>!createdon</OrderBy>
+  <FilterAllowedFields>createdby;createdon;modifiedon;resco_completionstatus;resco_name;resco_publishedon;resco_regardingidname;resco_templateid;resco_versionname</FilterAllowedFields>
+  <MultiSelectCommands>RunMobileReport||</MultiSelectCommands>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SerializedBindings>
+    <string>createdon</string>
+    <string>resco_description</string>
+    <string>resco_folder</string>
+    <string>resco_istemplate</string>
+    <string>resco_languagecode</string>
+    <string>modifiedon</string>
+    <string>resco_name</string>
+    <string>resco_questionnaireid</string>
+    <string>resco_rules</string>
+    <string>resco_script</string>
+    <string>statuscode</string>
+    <string>resco_styles</string>
+    <string>resco_templateid</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="resco_questionnaire">
+      <filter type="and">
+        <condition attribute="resco_istemplate" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>110</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="resco_name">
+          <StyleName>0102 h2</StyleName>
+          <Bounds>75,38,225,22</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resco_description">
+          <StyleName>0103 p grey</StyleName>
+          <Bounds>75,64,225,36</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="inspections.survey">
+          <IsConstant>true</IsConstant>
+          <StyleName>QuestionnaireIcon</StyleName>
+          <Bounds>15,15,42,42</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="createdon">
+          <StyleName>0110 date</StyleName>
+          <Bounds>75,15,128,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="createdon">
+          <StyleName>0111 time right</StyleName>
+          <Bounds>210,15,90,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

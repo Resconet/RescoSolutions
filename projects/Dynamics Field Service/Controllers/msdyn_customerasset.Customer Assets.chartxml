@@ -1,0 +1,31 @@
+﻿<EntityChart>
+  <Name>Customer Assets</Name>
+  <Kind>Column</Kind>
+  <LimitCount>3</LimitCount>
+  <MinValue>
+    <Color>#0000ff</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#0000ff</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#0000ff</Color>
+  </TargetValue>
+  <SerializedBindings/>
+  <Attributes>
+    <EntityName>msdyn_customerasset</EntityName>
+    <CamelCase>msdyn_customerasset</CamelCase>
+  </Attributes>
+  <Series>
+    <Series>
+      <Attribute>msdyn_name</Attribute>
+      <Color>#0000ff</Color>
+    </Series>
+  </Series>
+  <GroupBySeries>
+    <GroupBySeries>
+      <Attribute>msdyn_account</Attribute>
+    </GroupBySeries>
+  </GroupBySeries>
+  <Axis>msdyn_account</Axis>
+</EntityChart>

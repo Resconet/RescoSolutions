@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>site</EntityName>
+    <CamelCase>Site</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding />
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>Default</Name>
+  <Kind>List</Kind>
+  <IsDefault>false</IsDefault>
+  <HasGpsFields>true</HasGpsFields>
+  <AutoWideWidth>0</AutoWideWidth>
+  <MaxColumns>0</MaxColumns>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>address1_latitude</string>
+    <string>address1_longitude</string>
+    <string>address1_name</string>
+    <string>address1_city</string>
+    <string>address1_country</string>
+    <string>createdon</string>
+    <string>modifiedon</string>
+    <string>name</string>
+    <string>siteid</string>
+    <string>address1_stateorprovince</string>
+    <string>address1_line1</string>
+    <string>address1_line2</string>
+    <string>address1_line3</string>
+    <string>address1_postalcode</string>
+  </SerializedBindings>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>40</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>8,2,227,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <IFrameProvidesDS>false</IFrameProvidesDS>
+  <CustomProperties />
+  <Height>0</Height>
+</EntityList>

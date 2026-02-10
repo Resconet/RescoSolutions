@@ -1,0 +1,49 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>msdyn_bookingtimestamp</EntityName>
+    <CamelCase>msdyn_bookingtimestamp</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Default</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>msdyn_timestamptime</OrderBy>
+  <SerializedBindings>
+    <string>msdyn_booking</string>
+    <string>msdyn_bookingtimestampid</string>
+    <string>createdon</string>
+    <string>msdyn_generatejournals</string>
+    <string>modifiedon</string>
+    <string>msdyn_name</string>
+    <string>ownerid</string>
+    <string>msdyn_systemstatus</string>
+    <string>msdyn_timestampsource</string>
+    <string>msdyn_timestamptime</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>40</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="msdyn_timestamptime">
+          <StyleName>r_primary</StyleName>
+          <Bounds>122,5,110,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="msdyn_systemstatus">
+          <StyleName>primary</StyleName>
+          <Bounds>8,5,113,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

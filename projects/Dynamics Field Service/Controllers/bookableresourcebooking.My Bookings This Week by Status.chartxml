@@ -1,0 +1,43 @@
+﻿<EntityChart>
+  <Name>My Bookings This Week by Status</Name>
+  <Kind>Pie</Kind>
+  <LimitCount>3</LimitCount>
+  <Fetch version="1.0">
+    <entity name="bookableresourcebooking">
+      <filter type="and">
+        <condition attribute="starttime" operator="this-week"/>
+      </filter>
+      <link-entity name="bookableresource" alias="L0" from="bookableresourceid" to="resource" link-type="inner">
+        <filter type="and">
+          <condition attribute="userid" operator="eq-userid"/>
+        </filter>
+      </link-entity>
+    </entity>
+  </Fetch>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#FF0000FF</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#FF0000FF</Color>
+  </TargetValue>
+  <SerializedBindings/>
+  <Attributes>
+    <EntityName>bookableresourcebooking</EntityName>
+    <CamelCase>bookableresourcebooking</CamelCase>
+  </Attributes>
+  <Series>
+    <Series>
+      <Attribute>bookableresourcebookingid</Attribute>
+      <Color>#FF0000FF</Color>
+    </Series>
+  </Series>
+  <GroupBySeries>
+    <GroupBySeries>
+      <Attribute>bookingstatus</Attribute>
+    </GroupBySeries>
+  </GroupBySeries>
+  <Axis>bookingstatus</Axis>
+</EntityChart>

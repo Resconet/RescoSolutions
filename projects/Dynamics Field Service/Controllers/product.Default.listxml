@@ -1,0 +1,73 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>product</EntityName>
+    <CamelCase>Product</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Default</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>transactioncurrencyid</string>
+    <string>currentcost</string>
+    <string>entityimage</string>
+    <string>entityimageid</string>
+    <string>msdyn_fieldserviceproducttype</string>
+    <string>name</string>
+    <string>productid</string>
+    <string>productnumber</string>
+    <string>producttypecode</string>
+    <string>quantityonhand</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="product">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <Search>
+    <attribute schema="productnumber" method="Contains"/>
+    <attribute schema="name" method="Contains"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>64</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>70,12,134,29</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="msdyn_fieldserviceproducttype">
+          <StyleName>r_primary9</StyleName>
+          <Bounds>206,12,103,29</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="productnumber">
+          <StyleName>gray</StyleName>
+          <Bounds>70,43,134,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>ListEntityImageProduct</StyleName>
+          <Bounds>16,12,38,38</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

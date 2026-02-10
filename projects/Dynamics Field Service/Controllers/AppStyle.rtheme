@@ -1,0 +1,121 @@
+﻿<ThemeItem Version="2">
+  <IsCustom>false</IsCustom>
+  <Label>All Platforms</Label>
+  <colors name="ListBackground" color="PAL:0"/>
+  <colors name="ListSelBackground" color="PAL:1"/>
+  <colors name="ListForeground" color="PAL:2"/>
+  <colors name="ListSelForeground" color="PAL:3"/>
+  <colors name="ListSeparator" color="PAL:4"/>
+  <colors name="TitleBackground" color="PAL:5"/>
+  <colors name="TitleForeground" color="PAL:6"/>
+  <colors name="ListHeaderForeground" color="PAL:0"/>
+  <colors name="ListHeaderBackground" color="PAL:6"/>
+  <colors name="SearchBackground" color="PAL:0"/>
+  <colors name="SearchForeground" color="PAL:3"/>
+  <colors name="SearchSelForeground" color="PAL:3"/>
+  <colors name="TabBackground" color="PAL:0"/>
+  <colors name="TabForeground" color="PAL:7"/>
+  <colors name="TabSelForeground" color="PAL:6"/>
+  <colors name="CardBackground" color="PAL:8"/>
+  <colors name="CardForeground" color="PAL:9"/>
+  <colors name="CardBorder" color="PAL:10"/>
+  <colors name="FormBackground" color="PAL:11"/>
+  <colors name="FormItemEditorBackground" color="PAL:12"/>
+  <colors name="FormItemBackground" color="PAL:11"/>
+  <colors name="FormItemForeground" color="PAL:13"/>
+  <colors name="FormItemLabelForeground" color="PAL:6"/>
+  <colors name="FormItemDisabled" color="PAL:7"/>
+  <colors name="FormItemSelectedBackground" color="PAL:14"/>
+  <colors name="FormItemSelectedForeground" color="PAL:14"/>
+  <colors name="FormItemLink" color="PAL:13"/>
+  <colors name="FormItemSeparator" color="PAL:11"/>
+  <colors name="FormItemButton" color="PAL:6"/>
+  <colors name="FormItemBorder" color="PAL:14"/>
+  <colors name="FormItemSupportingTextForeground" color="PAL:14"/>
+  <colors name="FormError" color="PAL:14"/>
+  <colors name="GridBackground" color="PAL:15"/>
+  <colors name="GridBorder" color="PAL:16"/>
+  <colors name="HomeListBackground" color="PAL:15"/>
+  <colors name="HomeListSelBackground" color="PAL:16"/>
+  <colors name="HomeListForeground" color="PAL:17"/>
+  <colors name="HomeListSelForeground" color="PAL:18"/>
+  <colors name="HomeListSeparator" color="PAL:16"/>
+  <colors name="BrandColor" color="PAL:14"/>
+  <palette>4294967295</palette>
+  <palette>4292864765</palette>
+  <palette>4279056505</palette>
+  <palette>4285891280</palette>
+  <palette>4292599277</palette>
+  <palette>4294901503</palette>
+  <palette>4282930336</palette>
+  <palette>4289639117</palette>
+  <palette>4294177779</palette>
+  <palette>4287795858</palette>
+  <palette>4278216396</palette>
+  <palette>4294111991</palette>
+  <palette>16777215</palette>
+  <palette>4278221567</palette>
+  <palette>0</palette>
+  <palette>4294506486</palette>
+  <palette>4292401368</palette>
+  <palette>4281545523</palette>
+  <palette>4278198352</palette>
+  <tokens name="primary" dark="false" color="4288168033"/>
+  <tokens name="onPrimary" dark="false" color="4294967295"/>
+  <tokens name="primaryContainer" dark="false" color="4294957538"/>
+  <tokens name="onPrimaryContainer" dark="false" color="4282253341"/>
+  <tokens name="secondary" dark="false" color="4285814367"/>
+  <tokens name="onSecondary" dark="false" color="4294967295"/>
+  <tokens name="secondaryContainer" dark="false" color="4294957538"/>
+  <tokens name="onSecondaryContainer" dark="false" color="4281013532"/>
+  <tokens name="tertiary" dark="false" color="4286338613"/>
+  <tokens name="onTertiary" dark="false" color="4294967295"/>
+  <tokens name="tertiaryContainer" dark="false" color="4294958273"/>
+  <tokens name="onTertiaryContainer" dark="false" color="4281210112"/>
+  <tokens name="error" dark="false" color="4290386458"/>
+  <tokens name="onError" dark="false" color="4294967295"/>
+  <tokens name="errorContainer" dark="false" color="4294957782"/>
+  <tokens name="onErrorContainer" dark="false" color="4282449922"/>
+  <tokens name="background" dark="false" color="4294966271"/>
+  <tokens name="onBackground" dark="false" color="4280293915"/>
+  <tokens name="surface" dark="false" color="4294966271"/>
+  <tokens name="onSurface" dark="false" color="4280293915"/>
+  <tokens name="surfaceVariant" dark="false" color="4294106593"/>
+  <tokens name="onSurfaceVariant" dark="false" color="4283515719"/>
+  <tokens name="outline" dark="false" color="4286804855"/>
+  <tokens name="outlineVariant" dark="false" color="4292199110"/>
+  <tokens name="shadow" dark="false" color="4278190080"/>
+  <tokens name="scrim" dark="false" color="4278190080"/>
+  <tokens name="inverseSurface" dark="false" color="4281675568"/>
+  <tokens name="inverseOnSurface" dark="false" color="4294635247"/>
+  <tokens name="inversePrimary" dark="false" color="4294947272"/>
+  <tokens name="primary" dark="true" color="4294947272"/>
+  <tokens name="onPrimary" dark="true" color="4284354867"/>
+  <tokens name="primaryContainer" dark="true" color="4286261577"/>
+  <tokens name="onPrimaryContainer" dark="true" color="4294957538"/>
+  <tokens name="secondary" dark="true" color="4293115334"/>
+  <tokens name="onSecondary" dark="true" color="4282526001"/>
+  <tokens name="secondaryContainer" dark="true" color="4284104519"/>
+  <tokens name="onSecondaryContainer" dark="true" color="4294957538"/>
+  <tokens name="tertiary" dark="true" color="4293901716"/>
+  <tokens name="onTertiary" dark="true" color="4282919179"/>
+  <tokens name="tertiaryContainer" dark="true" color="4284628768"/>
+  <tokens name="onTertiaryContainer" dark="true" color="4294958273"/>
+  <tokens name="error" dark="true" color="4294948011"/>
+  <tokens name="onError" dark="true" color="4285071365"/>
+  <tokens name="errorContainer" dark="true" color="4287823882"/>
+  <tokens name="onErrorContainer" dark="true" color="4294948011"/>
+  <tokens name="background" dark="true" color="4280293915"/>
+  <tokens name="onBackground" dark="true" color="4293648609"/>
+  <tokens name="surface" dark="true" color="4280293915"/>
+  <tokens name="onSurface" dark="true" color="4293648609"/>
+  <tokens name="surfaceVariant" dark="true" color="4283515719"/>
+  <tokens name="onSurfaceVariant" dark="true" color="4292199110"/>
+  <tokens name="outline" dark="true" color="4288580752"/>
+  <tokens name="outlineVariant" dark="true" color="4283515719"/>
+  <tokens name="shadow" dark="true" color="4278190080"/>
+  <tokens name="scrim" dark="true" color="4278190080"/>
+  <tokens name="inverseSurface" dark="true" color="4293648609"/>
+  <tokens name="inverseOnSurface" dark="true" color="4281675568"/>
+  <tokens name="inversePrimary" dark="true" color="4288168033"/>
+</ThemeItem>

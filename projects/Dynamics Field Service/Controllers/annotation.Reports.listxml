@@ -1,0 +1,59 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>annotation</EntityName>
+    <CamelCase>annotation</CamelCase>
+  </Attributes>
+  <Name>Reports</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>!createdon</OrderBy>
+  <SerializedBindings>
+    <string>createdon</string>
+    <string>annotationid</string>
+    <string>objectid</string>
+    <string>subject</string>
+  </SerializedBindings>
+  <IsHidden>true</IsHidden>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="annotation">
+      <filter type="and">
+        <condition attribute="filename" operator="like" value="%.pdf"/>
+      </filter>
+      <link-entity name="resco_questionnaire" from="resco_questionnaireid" to="objectid" link-type="inner" alias="L0">
+        <filter type="and">
+          <condition attribute="resco_istemplate" operator="eq" value="0"/>
+        </filter>
+      </link-entity>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>64</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="subject">
+          <StyleName>primary</StyleName>
+          <Bounds>10,5,300,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="objectid">
+          <StyleName>gray</StyleName>
+          <Bounds>10,40,150,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="createdon">
+          <StyleName>r_gray</StyleName>
+          <Bounds>160,40,150,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

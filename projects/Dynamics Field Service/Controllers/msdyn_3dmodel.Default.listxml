@@ -1,0 +1,32 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>msdyn_3dmodel</EntityName>
+    <CamelCase>msdyn_3dmodel</CamelCase>
+  </Attributes>
+  <Name>Default</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>msdyn_name</OrderBy>
+  <SerializedBindings>
+    <string>msdyn_3dmodelid</string>
+    <string>msdyn_name</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>50</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="msdyn_name">
+          <StyleName>primary</StyleName>
+          <Bounds>15,8,290,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

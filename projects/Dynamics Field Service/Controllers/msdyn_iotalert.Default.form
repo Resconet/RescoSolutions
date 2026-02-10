@@ -1,0 +1,272 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>msdyn_iotalert</EntityName>
+  <CamelCase>msdyn_iotalert</CamelCase>
+  <WorkflowLoad>&lt;?xml version="1.0"?&gt;
+    &lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;
+      &lt;function e="false"&gt;
+        &lt;var&gt;Form.msdyn_description.IsEnabled&lt;/var&gt;
+        &lt;func&gt;Assign&lt;/func&gt;
+        &lt;arg&gt;Boolean:False&lt;/arg&gt;
+      &lt;/function&gt;
+      &lt;function e="false"&gt;
+        &lt;var&gt;Form.msdyn_alerttype.IsEnabled&lt;/var&gt;
+        &lt;func&gt;Assign&lt;/func&gt;
+        &lt;arg&gt;Boolean:False&lt;/arg&gt;
+      &lt;/function&gt;
+      &lt;function e="false"&gt;
+        &lt;var&gt;Form.msdyn_alerttoken.IsEnabled&lt;/var&gt;
+        &lt;func&gt;Assign&lt;/func&gt;
+        &lt;arg&gt;Boolean:False&lt;/arg&gt;
+      &lt;/function&gt;
+      &lt;function e="false"&gt;
+        &lt;var&gt;Form.msdyn_alerttime.IsEnabled&lt;/var&gt;
+        &lt;func&gt;Assign&lt;/func&gt;
+        &lt;arg&gt;Boolean:False&lt;/arg&gt;
+      &lt;/function&gt;
+      &lt;function e="false"&gt;
+        &lt;var&gt;Form.statuscode.IsEnabled&lt;/var&gt;
+        &lt;func&gt;Assign&lt;/func&gt;
+        &lt;arg&gt;Boolean:False&lt;/arg&gt;
+      &lt;/function&gt;
+      &lt;function e="false"&gt;
+        &lt;var&gt;Form.msdyn_alerturl.IsEnabled&lt;/var&gt;
+        &lt;func&gt;Assign&lt;/func&gt;
+        &lt;arg&gt;Boolean:False&lt;/arg&gt;
+      &lt;/function&gt;
+      &lt;function e="false"&gt;
+        &lt;var&gt;Form.msdyn_alertdata.IsVisible&lt;/var&gt;
+        &lt;func&gt;Assign&lt;/func&gt;
+        &lt;arg&gt;Boolean:False&lt;/arg&gt;
+      &lt;/function&gt;
+      &lt;branch e="true" info="Lock Customer Asset and Hierarchy tabs when the alert status is not active"&gt;
+        &lt;if e="true"&gt;
+          &lt;conditions e="true" op="And"&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;Entity.statecode&lt;/var&gt;
+              &lt;op&gt;Equal&lt;/op&gt;
+              &lt;arg&gt;State:0&lt;/arg&gt;
+            &lt;/condition&gt;
+          &lt;/conditions&gt;
+          &lt;action&gt;
+            &lt;function e="false"&gt;
+              &lt;var&gt;Form.msdyn_customerasset.IsEnabled&lt;/var&gt;
+              &lt;func&gt;Assign&lt;/func&gt;
+              &lt;arg&gt;Boolean:True&lt;/arg&gt;
+            &lt;/function&gt;
+            &lt;function e="false"&gt;
+              &lt;var&gt;Form.msdyn_device.IsEnabled&lt;/var&gt;
+              &lt;func&gt;Assign&lt;/func&gt;
+              &lt;arg&gt;Boolean:True&lt;/arg&gt;
+            &lt;/function&gt;
+            &lt;function e="false"&gt;
+              &lt;var&gt;Form.msdyn_deviceid.IsEnabled&lt;/var&gt;
+              &lt;func&gt;Assign&lt;/func&gt;
+              &lt;arg&gt;Boolean:True&lt;/arg&gt;
+            &lt;/function&gt;
+            &lt;function e="false"&gt;
+              &lt;var&gt;Form.msdyn_parentalert.IsEnabled&lt;/var&gt;
+              &lt;func&gt;Assign&lt;/func&gt;
+              &lt;arg&gt;Boolean:True&lt;/arg&gt;
+            &lt;/function&gt;
+            &lt;function e="false"&gt;
+              &lt;var&gt;Form.msdyn_parentalerttoken.IsEnabled&lt;/var&gt;
+              &lt;func&gt;Assign&lt;/func&gt;
+              &lt;arg&gt;Boolean:True&lt;/arg&gt;
+            &lt;/function&gt;
+          &lt;/action&gt;
+        &lt;/if&gt;
+        &lt;if e="true"&gt;
+          &lt;conditions e="true" op="And"&gt;
+          &lt;/conditions&gt;
+          &lt;action&gt;
+            &lt;function e="false"&gt;
+              &lt;var&gt;Form.msdyn_customerasset.IsEnabled&lt;/var&gt;
+              &lt;func&gt;Assign&lt;/func&gt;
+              &lt;arg&gt;Boolean:False&lt;/arg&gt;
+            &lt;/function&gt;
+            &lt;function e="false"&gt;
+              &lt;var&gt;Form.msdyn_device.IsEnabled&lt;/var&gt;
+              &lt;func&gt;Assign&lt;/func&gt;
+              &lt;arg&gt;Boolean:False&lt;/arg&gt;
+            &lt;/function&gt;
+            &lt;function e="false"&gt;
+              &lt;var&gt;Form.msdyn_deviceid.IsEnabled&lt;/var&gt;
+              &lt;func&gt;Assign&lt;/func&gt;
+              &lt;arg&gt;Boolean:False&lt;/arg&gt;
+            &lt;/function&gt;
+            &lt;function e="false"&gt;
+              &lt;var&gt;Form.msdyn_parentalert.IsEnabled&lt;/var&gt;
+              &lt;func&gt;Assign&lt;/func&gt;
+              &lt;arg&gt;Boolean:False&lt;/arg&gt;
+            &lt;/function&gt;
+            &lt;function e="false"&gt;
+              &lt;var&gt;Form.msdyn_parentalerttoken.IsEnabled&lt;/var&gt;
+              &lt;func&gt;Assign&lt;/func&gt;
+              &lt;arg&gt;Boolean:False&lt;/arg&gt;
+            &lt;/function&gt;
+          &lt;/action&gt;
+        &lt;/if&gt;
+      &lt;/branch&gt;
+      &lt;branch e="true" info="Hide PowerBI tab when entity is new"&gt;
+        &lt;if e="true"&gt;
+          &lt;conditions e="true" op="And"&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;Entity.IsNew&lt;/var&gt;
+              &lt;op&gt;Equal&lt;/op&gt;
+              &lt;arg&gt;Boolean:True&lt;/arg&gt;
+            &lt;/condition&gt;
+          &lt;/conditions&gt;
+          &lt;action&gt;
+            &lt;function e="false"&gt;
+              &lt;var&gt;Tabs.PowerBI.IsVisible&lt;/var&gt;
+              &lt;func&gt;Assign&lt;/func&gt;
+              &lt;arg&gt;Boolean:False&lt;/arg&gt;
+            &lt;/function&gt;
+          &lt;/action&gt;
+        &lt;/if&gt;
+        &lt;if e="true"&gt;
+          &lt;conditions e="true" op="And"&gt;
+          &lt;/conditions&gt;
+          &lt;action&gt;
+            &lt;function e="false"&gt;
+              &lt;var&gt;Tabs.PowerBI.IsVisible&lt;/var&gt;
+              &lt;func&gt;Assign&lt;/func&gt;
+              &lt;arg&gt;Boolean:True&lt;/arg&gt;
+            &lt;/function&gt;
+          &lt;/action&gt;
+        &lt;/if&gt;
+      &lt;/branch&gt;
+      &lt;function e="false"&gt;
+        &lt;var&gt;Shared.custom_SendIoTCommandEnabled&lt;/var&gt;
+        &lt;func&gt;Assign&lt;/func&gt;
+        &lt;arg&gt;Boolean:True&lt;/arg&gt;
+      &lt;/function&gt;
+    &lt;/Workflow&gt;
+  </WorkflowLoad>
+  <WorkflowCommandCanExecute>&lt;?xml version="1.0"?&gt;
+    &lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;
+      &lt;branch e="true" info="Enable or Disable IoT Commands"&gt;
+        &lt;if e="true"&gt;
+          &lt;conditions e="true" op="And"&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;Command.Name&lt;/var&gt;
+              &lt;op&gt;Equal&lt;/op&gt;
+              &lt;arg&gt;String:custom_SendIoTCommand&lt;/arg&gt;
+            &lt;/condition&gt;
+          &lt;/conditions&gt;
+          &lt;action&gt;
+            &lt;function e="false"&gt;
+              &lt;var&gt;Command.IsEnabled&lt;/var&gt;
+              &lt;func&gt;Assign&lt;/func&gt;
+              &lt;arg&gt;var:Shared.custom_SendIoTCommandEnabled&lt;/arg&gt;
+            &lt;/function&gt;
+          &lt;/action&gt;
+        &lt;/if&gt;
+      &lt;/branch&gt;
+      &lt;branch e="true" info="Disable IoT Command when entity is new"&gt;
+        &lt;if e="true"&gt;
+          &lt;conditions e="true" op="And"&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;Entity.IsNew&lt;/var&gt;
+              &lt;op&gt;Equal&lt;/op&gt;
+              &lt;arg&gt;Boolean:True&lt;/arg&gt;
+            &lt;/condition&gt;
+          &lt;/conditions&gt;
+          &lt;action&gt;
+            &lt;branch e="true" info=""&gt;
+              &lt;if e="true"&gt;
+                &lt;conditions e="true" op="And"&gt;
+                  &lt;condition e="false"&gt;
+                    &lt;var&gt;Command.Name&lt;/var&gt;
+                    &lt;op&gt;Equal&lt;/op&gt;
+                    &lt;arg&gt;String:custom_SendIoTCommand&lt;/arg&gt;
+                  &lt;/condition&gt;
+                &lt;/conditions&gt;
+                &lt;action&gt;
+                  &lt;function e="false"&gt;
+                    &lt;var&gt;Command.IsEnabled&lt;/var&gt;
+                    &lt;func&gt;Assign&lt;/func&gt;
+                    &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                  &lt;/function&gt;
+                &lt;/action&gt;
+              &lt;/if&gt;
+            &lt;/branch&gt;
+          &lt;/action&gt;
+        &lt;/if&gt;
+      &lt;/branch&gt;
+    &lt;/Workflow&gt;
+  </WorkflowCommandCanExecute>
+  <SharedVariables>
+    &lt;SharedVariables&gt;
+      &lt;Variables&gt;
+        &lt;SharedVariable usage="OnLoadEnabled"&gt;
+          &lt;Name&gt;custom_SendIoTCommandEnabled&lt;/Name&gt;
+          &lt;CrmType&gt;Boolean&lt;/CrmType&gt;
+        &lt;/SharedVariable&gt;
+      &lt;/Variables&gt;
+    &lt;/SharedVariables&gt;
+  </SharedVariables>
+  <PrimaryCommands>custom_SendIoTCommand|Cmd.SendIoTCommand|</PrimaryCommands>
+  <SharedVariableNames>
+    <string>custom_SendIoTCommandEnabled</string>
+  </SharedVariableNames>  
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="msdyn_description"/>
+        <DetailItem SchemaName="msdyn_alerttype"/>
+        <DetailItem SchemaName="msdyn_alerttoken"/>
+        <DetailItem SchemaName="msdyn_alerttime"/>
+        <DetailItem SchemaName="statuscode"/>
+        <DetailItem SchemaName="msdyn_alerturl"/>
+        <DetailItem SchemaName="msdyn_alertdata"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="IFrameTab">
+      <Name>IoT Alert</Name>
+      <Url>file://IoTAlert/IoTAlert.html</Url>
+      <IsVisible>false</IsVisible>
+      <DelayLoad>false</DelayLoad>
+    </FormTab>
+    <FormTab xsi:type="IFrameTab" flexiHeader="0">
+      <Name>Alert Data</Name>
+      <Url>file://JsonControl/IoTAlertDataJsonControl.html</Url>
+      <DelayLoad>false</DelayLoad>
+    </FormTab>
+    <FormTab xsi:type="DetailTab">
+      <Name>Customer Asset</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="msdyn_customerasset"/>
+        <DetailItem SchemaName="msdyn_device"/>
+        <DetailItem SchemaName="msdyn_deviceid"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab">
+      <Name>Hierarchy</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="msdyn_parentalert"/>
+        <DetailItem SchemaName="msdyn_parentalerttoken"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3">
+      <Name>Notes List</Name>
+      <Binding SchemaName="annotation.objectid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3" DocCommands="0" ListCommands="0">
+      <Name>IoT Device Commands List</Name>
+      <Binding SchemaName="msdyn_iotdevicecommand.msdyn_parentalert"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3">
+      <Name>IoT Device Commands List</Name>
+      <Binding SchemaName="msdyn_iotdevicecommand.msdyn_parentalert"/>
+    </FormTab>
+    <FormTab xsi:type="IFrameTab">
+      <Name>PowerBI</Name>
+      <Url>file://powerbi_device.json</Url>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

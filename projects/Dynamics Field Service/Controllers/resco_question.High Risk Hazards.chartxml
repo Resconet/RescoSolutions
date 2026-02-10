@@ -1,0 +1,50 @@
+﻿<EntityChart>
+  <Name>High Risk Hazards</Name>
+  <Kind>Donut</Kind>
+  <LimitCount>3</LimitCount>
+  <Fetch version="1.0">
+    <entity name="resco_question">
+      <filter type="and">
+        <condition attribute="resco_valuelabel" operator="eq" value="High"/>
+        <filter type="or">
+          <condition attribute="resco_label" operator="like" value="Risk of Slip%"/>
+          <condition attribute="resco_label" operator="like" value="Strain%"/>
+          <condition attribute="resco_label" operator="like" value="Moving Objects%"/>
+          <condition attribute="resco_label" operator="like" value="Contact with Harmful%"/>
+          <condition attribute="resco_label" operator="like" value="Harmful Objects%"/>
+        </filter>
+      </filter>
+      <link-entity name="resco_questionnaire" alias="L0" from="resco_questionnaireid" to="resco_questionnaireid" link-type="inner">
+        <filter type="and">
+          <condition attribute="resco_istemplate" operator="eq" value="0"/>
+        </filter>
+      </link-entity>
+    </entity>
+  </Fetch>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#FF0000FF</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#FF0000FF</Color>
+  </TargetValue>
+  <SerializedBindings/>
+  <Attributes>
+    <EntityName>resco_question</EntityName>
+    <CamelCase>resco_question</CamelCase>
+  </Attributes>
+  <Series>
+    <Series>
+      <Attribute>resco_valuelabel</Attribute>
+      <Color>#FF0000FF</Color>
+    </Series>
+  </Series>
+  <GroupBySeries>
+    <GroupBySeries>
+      <Attribute>resco_label</Attribute>
+    </GroupBySeries>
+  </GroupBySeries>
+  <Axis>resco_label</Axis>
+</EntityChart>

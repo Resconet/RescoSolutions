@@ -1,0 +1,55 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>msdyn_iotdevice</EntityName>
+    <CamelCase>msdyn_iotdevice</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+  </Attributes>
+  <Name>Associated IoT Devices</Name>
+  <Kind>AssociatedList</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy></OrderBy>
+  <SerializedBindings>
+    <string>msdyn_category</string>
+    <string>msdyn_connectionstate</string>
+    <string>createdon</string>
+    <string>msdyn_iotdeviceid</string>
+    <string>msdyn_name</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="msdyn_iotdevice">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>40</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="msdyn_name">
+          <StyleName>primary</StyleName>
+          <Bounds>8,3,109,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="msdyn_category">
+          <StyleName>gray</StyleName>
+          <Bounds>8,22,168,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="msdyn_category">
+          <StyleName>r_primary</StyleName>
+          <Bounds>116,3,115,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

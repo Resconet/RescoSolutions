@@ -1,0 +1,338 @@
+﻿html {
+    padding-left: 3px;
+}
+
+/* Styles only for windows */
+@supports (-ms-ime-align: auto) {
+    html {
+        padding-left: 6px;
+    }
+}
+
+body, input, textarea, select, button {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "SegoeUI", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.switch-to-json-view:before {
+    content: url(switch_json1.png);
+}
+
+.switch-to-designer-view:before {
+    content: url(switch_json2.png);
+}
+
+.expand-button:before {
+    content: url(json_expand.png);
+}
+
+.collapse-button:before {
+    content: url(json_collapse.png);
+}
+
+.jsonctrl-property-container {
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.validation-message-container {
+    padding-left: 20px;
+}
+
+div[id*='MetadataControlContainer'] > .validation-message-container {
+    padding-left: 0;
+}
+
+div[id*='MetadataControlContainer'] {
+    box-sizing: border-box;
+}
+
+    div[id*='MetadataControlContainer'] > div.jsonctrl-property-label-container,
+    div[id*='MetadataControlContainer'] > .jsonctrl-property-container {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+div.jsonctrl-property-label-container > button:nth-child(2) {
+    font-size: 0.9rem;
+    color: rgb(33, 33, 33);
+    font-weight: 600;
+}
+
+div.jsonctrl-property-label-container {
+    margin-left: -20px;
+    padding-bottom: 0;
+}
+
+.json-control-btn-default {
+    display: table;
+    border-width: initial;
+    border-style: initial;
+    border-color: transparent;
+    border-image: initial;
+    background-size: contain;
+    align-items: flex-start;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    -webkit-appearance: button;
+    background: #ffffff;
+    padding: 1px 6px;
+}
+
+    .json-control-btn-default:hover {
+        background-color: rgb(226, 226, 226);
+    }
+
+.jsonctrl-property-label-container {
+    display: flex;
+}
+
+p.title-paragraph {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI Semibold", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-variant: normal;
+    font-size: 0.95rem;
+    white-space: normal;
+    overflow-wrap: break-word;
+    line-height: 1.5em;
+    word-break: break-word;
+    text-align: inherit;
+    cursor: default;
+    margin-top: 0.5%;
+}
+
+div button.json-control-btn-default,
+div button.json-control-btn-default {
+    border-width: initial;
+    border-style: initial;
+    border-color: transparent;
+    border-image: initial;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+div label,
+div label {
+    font-style: normal;
+    font-variant: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: #5f5f5f;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI Regular", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    white-space: normal;
+    word-break: normal;
+    cursor: default;
+}
+
+div input[type="datetime-local"],
+div input[type="datetime-local"] {
+    align-items: center;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, monospace, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    cursor: default;
+    overflow: hidden;
+}
+
+    div input[type="datetime-local"]:hover,
+    div input[type="datetime-local"]:focus {
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, monospace, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+.emptyDate:before {
+    content: attr(placeholder) !important;
+    color: #929292;
+    margin-right: 0.5em;
+}
+
+.emptyDate :focus:before,
+.emptyDate :valid:before {
+    content: "";
+}
+
+div input,
+div input {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI Semibold", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+    white-space: normal;
+    word-break: normal;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    border-image: initial;
+    -webkit-appearance: textfield;
+    background-color: transparent;
+    cursor: text;
+    font-style: normal;
+    font-variant: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-size: 0.95rem;
+    width: 100%;
+    text-overflow: ellipsis;
+    border-style: solid;
+    box-sizing: border-box;
+    color: rgb(33, 33, 33);
+    padding: 0 0.5rem;
+    margin: 0;
+    border-width: 1px;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    border-color: transparent;
+}
+
+    div input:read-only,
+    div input:disabled,
+    div textarea:read-only,
+    div textarea:disabled {
+        color: #929292 !important;
+    }
+
+div input:hover:not([type=checkbox]),
+div input:focus:not([type=checkbox]) {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #000000;
+    box-sizing: border-box;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    width: 100%;
+    text-overflow: ellipsis;
+    font-weight: 400;
+    padding: 0px 0.5rem;
+    margin: inherit 0px;
+    border-style: solid;
+    border-width: 1px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(102, 102, 102);
+}
+
+textarea {
+    font-size: 15px;
+    width: calc(100% + 13px);
+    margin-left: -19px;
+}
+
+div button.json-control-btn-default:hover,
+div button.json-control-btn-default:hover {
+    background-color: rgb(226, 226, 226);
+}
+
+
+/* Slider */
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 38px;
+    height: 22px;
+}
+
+    .switch:active {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Hide default HTML checkbox */
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    margin-left: -10px;
+}
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 15px;
+        width: 15px;
+        left: 4px;
+        bottom: 3.5px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+input:checked + .slider {
+    background-color: #41A053;
+}
+
+    input:checked + .slider:before {
+        -webkit-transform: translateX(25px);
+        -ms-transform: translateX(25px);
+        transform: translateX(25px);
+    }
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 24px;
+}
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
+.validation-message-valid:before {
+    content: url(valid_btn.png);
+}
+
+.validation-message-error:before {
+    content: url(error_btn.png);
+}
+
+.validation-success {
+    outline: none !important;
+    background-color: rgba(6, 234, 0, 0.1);
+    color: green;
+    padding: 5px;
+    margin-top: 2px;
+}
+
+.validation-error {
+    outline: none !important;
+    background-color: rgba(234, 6, 0, 0.1);
+    color: red;
+    padding: 5px;
+    margin-top: 2px;
+}
+
+.boolean-switch-label {
+    margin-left: 7px;
+    max-width: 70%;
+    word-wrap: break-word;
+    word-break: break-word;
+    text-overflow: ellipsis;
+}
+
+.boolean-switch-container {
+    display: flex;
+}
+
+.err-message {
+    margin-right: 5%;
+}

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Attributes>
+    <EntityName>quotedetail</EntityName>
+    <CamelCase>QuoteDetail</CamelCase>
+    <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
+    <WrapperClass>MobileCrm.Model.QuoteDetail</WrapperClass>
+    <ClassBinding>
+      <SerializedClassBinding name="#Amount" label="Amount" type="String" />
+      <SerializedClassBinding name="#ExtendedAmountLabel" label="ExtendedAmountLabel" type="String" />
+      <SerializedClassBinding name="#IsEditable" label="IsEditable" type="String" />
+      <SerializedClassBinding name="#PricePerUnitLabel" label="PricePerUnitLabel" type="String" />
+      <SerializedClassBinding name="#PrimaryName" label="PrimaryName" type="String" />
+      <SerializedClassBinding name="#ProductPriceLevel" label="ProductPriceLevel" type="String" />
+      <SerializedClassBinding name="#Quote" label="Quote" type="String" />
+    </ClassBinding>
+  </Attributes>
+  <ComponentId>00000000-0000-0000-0000-000000000000</ComponentId>
+  <Name>Default</Name>
+  <Kind>List</Kind>
+  <IsDefault>false</IsDefault>
+  <SerializedBindings>
+    <string>createdon</string>
+    <string>transactioncurrencyid</string>
+    <string>productid</string>
+    <string>extendedamount</string>
+    <string>manualdiscountamount</string>
+    <string>modifiedon</string>
+    <string>ownerid</string>
+    <string>ispriceoverridden</string>
+    <string>priceperunit</string>
+    <string>quantity</string>
+    <string>quoteid</string>
+    <string>quotedetailid</string>
+    <string>isproductoverridden</string>
+    <string>tax</string>
+    <string>uomid</string>
+    <string>volumediscountamount</string>
+    <string>productdescription</string>
+  </SerializedBindings>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>40</Height>
+      <SerializedBackground>0</SerializedBackground>
+      <SerializedSelectedBackground>0</SerializedSelectedBackground>
+      <SerializedChildren>
+        <CellTemplate SchemaName="#PrimaryName">
+          <IsConstant>false</IsConstant>
+          <StyleName>primary</StyleName>
+          <Bounds>8,2,142,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#ExtendedAmountLabel">
+          <IsConstant>false</IsConstant>
+          <StyleName>r_currency</StyleName>
+          <Bounds>150,2,82,24</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="quantity">
+          <IsConstant>false</IsConstant>
+          <StyleName>gray_num</StyleName>
+          <Bounds>8,26,100,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#PricePerUnitLabel">
+          <IsConstant>false</IsConstant>
+          <StyleName>r_gray_currency</StyleName>
+          <Bounds>126,26,106,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties />
+  <SerializedChildren />
+  <Height>40</Height>
+</EntityList>

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="ms-https-connections-only" content="true">
+    <meta name="viewport" content="initial-scale=1, user-scalable=no" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <script type="text/javascript" src="../JSBridge.js"></script>
+    <script type="text/javascript" src="../JSBridgeExtension.js"></script>
+    <script type="text/javascript" src="../Schema.js"></script>
+    <script src="ScanCustomerAsset.js"></script>
+    <script type="text/javascript" src="../Telemetry.js"></script>
+    <style>
+        .button {
+            background-color: white;
+            border-style: solid;
+            border-color: black;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            position: absolute;
+            top: 43%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            height: auto;
+            width: 90%;
+            -webkit-appearance: none;
+            justify-content: center;
+            padding-right: 1%;
+            padding-left: 1%;
+            padding-top: 3%;
+            padding-bottom: 3%;
+        }
+    </style>
+</head>
+<body onload="FS.ScanCustomerAsset.customerAssetOnLoad(true)">
+    <input id="ScanCustomerAssetButton" type="button" class="button" value="Scan Customer Asset" onclick="FS.ScanCustomerAsset.scanCustomerAsset()">
+</body>
+</html>
