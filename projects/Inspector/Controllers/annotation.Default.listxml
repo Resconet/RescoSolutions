@@ -25,15 +25,15 @@
       <Width>320</Width>
       <Height>60</Height>
       <SerializedChildren>
-        <CellTemplate SchemaName="filename">
+        <CellTemplate SchemaName="subject">
           <StyleName>0102 h2</StyleName>
-          <Bounds>2,24,230,21</Bounds>
+          <Bounds>2,24,312,21</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="createdon">
           <StyleName>0110 date</StyleName>
-          <Bounds>2,4,230,19</Bounds>
+          <Bounds>2,4,312,19</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>

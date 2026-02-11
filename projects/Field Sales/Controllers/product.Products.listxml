@@ -37,26 +37,26 @@
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary</StyleName>
-          <Bounds>60,12,240,20</Bounds>
+          <Bounds>70,13,240,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="producttypecode">
           <StyleName>gray</StyleName>
-          <Bounds>60,57,240,18</Bounds>
+          <Bounds>70,57,240,15</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="img">
           <IsConstant>true</IsConstant>
           <StyleName>productImage</StyleName>
-          <Bounds>14,12,44,44</Bounds>
+          <Bounds>16,12,39,39</Bounds>
           <CellKind>1</CellKind>
           <Anchor>4</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="productnumber">
           <StyleName>gray</StyleName>
-          <Bounds>60,36,240,18</Bounds>
+          <Bounds>70,36,240,18</Bounds>
           <CellKind>0</CellKind>
           <Anchor>4</Anchor>
         </CellTemplate>
