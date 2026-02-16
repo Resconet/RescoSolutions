@@ -159,9 +159,6 @@
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
           <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
-        </DetailItem>
         <DetailItem SchemaName="msdyn_account"/>
         <DetailItem SchemaName="msdyn_parentasset">
           <LookupViews>&lt;lookup&gt;&lt;extra/&gt;&lt;extra&gt;&lt;views&gt;msdyn_customerasset.Default&lt;/views&gt;&lt;/extra&gt;&lt;/lookup&gt;</LookupViews>
