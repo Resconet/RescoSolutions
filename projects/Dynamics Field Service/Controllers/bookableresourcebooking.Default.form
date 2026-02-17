@@ -115,9 +115,6 @@
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
           <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
-        </DetailItem>
         <DetailItem SchemaName="starttime"/>
         <DetailItem SchemaName="endtime"/>
         <DetailItem SchemaName="duration"/>
