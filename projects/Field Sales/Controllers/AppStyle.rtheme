@@ -7,57 +7,56 @@
   <colors name="ListForeground" token="onSurface" color="PAL:2"/>
   <colors name="ListSelForeground" token="primary" color="PAL:3"/>
   <colors name="ListSeparator" token="surfaceVariant" color="PAL:4"/>
-  <colors name="TitleBackground" color="PAL:5"/>
-  <colors name="TitleForeground" token="onPrimary" color="PAL:6"/>
-  <colors name="ListHeaderForeground" token="onPrimary" color="PAL:6"/>
-  <colors name="ListHeaderBackground" token="onPrimaryContainer" color="PAL:7"/>
+  <colors name="TitleBackground" token="primary" color="PAL:3"/>
+  <colors name="TitleForeground" token="onPrimary" color="PAL:5"/>
+  <colors name="ListHeaderForeground" token="onPrimary" color="PAL:5"/>
+  <colors name="ListHeaderBackground" token="onPrimaryContainer" color="PAL:6"/>
   <colors name="SearchBackground" token="surfaceVariant" color="PAL:4"/>
-  <colors name="SearchForeground" token="onSurfaceVariant" color="PAL:8"/>
+  <colors name="SearchForeground" token="onSurfaceVariant" color="PAL:7"/>
   <colors name="SearchSelForeground" token="primary" color="PAL:3"/>
-  <colors name="TabBackground" token="inverseOnSurface" color="PAL:9"/>
-  <colors name="TabForeground" token="inverseSurface" color="PAL:10"/>
+  <colors name="TabBackground" token="inverseOnSurface" color="PAL:8"/>
+  <colors name="TabForeground" token="inverseSurface" color="PAL:9"/>
   <colors name="TabSelForeground" token="primary" color="PAL:3"/>
   <colors name="CardBackground" token="surface" color="PAL:0"/>
   <colors name="CardForeground" token="onSurface" color="PAL:2"/>
-  <colors name="CardBorder" token="outline" color="PAL:11"/>
-  <colors name="CardInteractiveForeground" color="PAL:12"/>
+  <colors name="CardBorder" token="outline" color="PAL:10"/>
+  <colors name="CardInteractiveForeground" token="primary" color="PAL:3"/>
   <colors name="FormBackground" token="surfaceVariant" color="PAL:4"/>
   <colors name="FormItemEditorBackground" token="surface" color="PAL:0"/>
   <colors name="FormItemBackground" token="surface" color="PAL:0"/>
   <colors name="FormItemForeground" token="onSurface" color="PAL:2"/>
   <colors name="FormItemLabelForeground" token="onSurface" color="PAL:2"/>
-  <colors name="FormItemDisabled" token="onSurfaceVariant" color="PAL:8"/>
+  <colors name="FormItemDisabled" token="onSurfaceVariant" color="PAL:7"/>
   <colors name="FormItemSelectedBackground" token="primaryContainer" color="PAL:1"/>
   <colors name="FormItemSelectedForeground" token="primary" color="PAL:3"/>
   <colors name="FormItemLink" token="primary" color="PAL:3"/>
   <colors name="FormItemSeparator" token="surfaceVariant" color="PAL:4"/>
   <colors name="FormItemButton" token="primary" color="PAL:3"/>
-  <colors name="FormItemBorder" token="outline" color="PAL:11"/>
+  <colors name="FormItemBorder" token="outline" color="PAL:10"/>
   <colors name="FormItemSupportingTextForeground" token="onSurface" color="PAL:2"/>
-  <colors name="FormError" token="error" color="PAL:13"/>
+  <colors name="FormError" token="error" color="PAL:11"/>
   <colors name="GridBackground" token="surface" color="PAL:0"/>
-  <colors name="GridBorder" token="onPrimary" color="PAL:6"/>
-  <colors name="HomeListBackground" token="onPrimary" color="PAL:6"/>
+  <colors name="GridBorder" token="onPrimary" color="PAL:5"/>
+  <colors name="HomeListBackground" token="onPrimary" color="PAL:5"/>
   <colors name="HomeListSelBackground" token="primaryContainer" color="PAL:1"/>
   <colors name="HomeListForeground" token="onSurface" color="PAL:2"/>
-  <colors name="HomeListSelForeground" token="onPrimaryContainer" color="PAL:7"/>
-  <colors name="HomeListSeparator" token="secondaryContainer" color="PAL:14"/>
-  <colors name="BrandColor" color="PAL:5"/>
+  <colors name="HomeListSelForeground" token="onPrimaryContainer" color="PAL:6"/>
+  <colors name="HomeListSeparator" token="secondaryContainer" color="PAL:12"/>
+  <colors name="BrandColor" color="PAL:13"/>
   <palette>4294900735</palette>
   <palette>4292469503</palette>
   <palette>4279966495</palette>
   <palette>4281818281</palette>
   <palette>4292993772</palette>
-  <palette>4282212265</palette>
   <palette>4294967295</palette>
   <palette>4278196549</palette>
   <palette>4282664527</palette>
   <palette>4294111476</palette>
   <palette>4281348148</palette>
   <palette>4285888384</palette>
-  <palette>4278216396</palette>
   <palette>4290386458</palette>
   <palette>4292666105</palette>
+  <palette>4282212265</palette>
   <tokens name="primary" dark="false" color="4281818281"/>
   <tokens name="onPrimary" dark="false" color="4294967295"/>
   <tokens name="primaryContainer" dark="false" color="4292469503"/>

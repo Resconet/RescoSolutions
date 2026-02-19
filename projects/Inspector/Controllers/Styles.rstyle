@@ -201,8 +201,8 @@
         <Property Name="RelativeLabelFontSize" Type="System.Int32">
           <Value>0</Value>
         </Property>
-        <Property Name="LabelForegroundColor" Type="System.Int32">
-          <Value>-16777216</Value>
+        <Property Name="LabelForegroundColor" Type="Color">
+          <Value>onSurface</Value>
         </Property>
       </Properties>
     </Style>
