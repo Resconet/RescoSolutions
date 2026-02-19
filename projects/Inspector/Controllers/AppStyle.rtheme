@@ -20,6 +20,7 @@
   <colors name="CardBackground" token="surface" color="PAL:0"/>
   <colors name="CardForeground" token="onSurface" color="PAL:2"/>
   <colors name="CardBorder" token="outline" color="PAL:9"/>
+  <colors name="CardInteractiveForeground" token="primary" color="PAL:3"/>
   <colors name="FormBackground" token="surfaceVariant" color="PAL:4"/>
   <colors name="FormItemEditorBackground" token="surface" color="PAL:0"/>
   <colors name="FormItemBackground" token="surface" color="PAL:0"/>
