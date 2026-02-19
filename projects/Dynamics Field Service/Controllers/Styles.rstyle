@@ -881,7 +881,7 @@
     <Style Name="Minus" Style="ImageCellStyle" Type="ImageCell">
       <Properties>
         <Property Name="BackColor" Type="Color">
-          <Value>-1</Value>
+          <Value>16777215</Value>
         </Property>
         <Property Name="ImageQuery" Type="System.String">
           <Value>msdyn_workorderproduct;msdyn_name|Controls.Remove@2x.png</Value>
@@ -1046,7 +1046,7 @@
         </Property>
       </Properties>
     </Style>
-    <Style Name="btn_blank" Style="btn_green" Type="TextCell" ComponentType="0">
+    <Style Name="btn_blank" Style="btn_green" Type="TextCell">
       <Properties>
         <Property Name="ForeColor" Type="Color">
           <Value>onPrimary</Value>
