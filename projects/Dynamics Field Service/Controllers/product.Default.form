@@ -143,33 +143,13 @@
   &lt;/if&gt;
 &lt;/branch&gt;
     &lt;/Workflow&gt;</WorkflowItemChanged>
-  <WorkflowSave>&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;
-&lt;branch e="true"&gt;
-  &lt;if e="true"&gt;
-    &lt;conditions e="true" op="And"&gt;
-      &lt;condition e="false"&gt;
-        &lt;var&gt;Entity.msdyn_purchasename&lt;/var&gt;
-        &lt;op&gt;DoesNotContainData&lt;/op&gt;
-      &lt;/condition&gt;
-      &lt;condition e="false"&gt;
-        &lt;var&gt;Entity.name&lt;/var&gt;
-        &lt;op&gt;ContainsData&lt;/op&gt;
-      &lt;/condition&gt;
-    &lt;/conditions&gt;
-    &lt;action e="true"&gt;
-      &lt;function e="true"&gt;
-        &lt;var&gt;Entity.msdyn_purchasename&lt;/var&gt;
-        &lt;arg&gt;var:Entity.name&lt;/arg&gt;
-        &lt;func&gt;Assign&lt;/func&gt;
-      &lt;/function&gt;
-    &lt;/action&gt;
-  &lt;/if&gt;
-&lt;/branch&gt;
-&lt;/Workflow&gt;</WorkflowSave>
+  <WorkflowSave>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="Assingn Purchase Name the Product Name if empty" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.msdyn_purchasename&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.name&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.msdyn_purchasename&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:Entity.name&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowSave>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <IsBulkUpdateForm>false</IsBulkUpdateForm>
   <CacheMode>-1</CacheMode>
   <UiSyncGuardMode>-1</UiSyncGuardMode>
   <PrimaryCommands>!defcmd</PrimaryCommands>
+  <SharedVariableNames/>
   <ClassBinding/>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled</EnabledWorkflows>
   <SerializedChildrenV2>
@@ -207,10 +187,6 @@
     <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>Price List Items List</Name>
       <Binding SchemaName="productpricelevel.productid"/>
-    </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
-      <Name>Invalid!</Name>
-      <Binding SchemaName="rh_guide.productid.resco_guide_product.rh_guideid"/>
     </FormTab>
     <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\resco_sharepointdoc@2x.png" IsIconNameReadOnly="0">
       <Name>SharePoint Documents</Name>

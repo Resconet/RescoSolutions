@@ -1,51 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?>
-<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2" layoutstrict="0" singlecardexpand="0">
   <IsContactForm>false</IsContactForm>
   <EntityName>site</EntityName>
   <CamelCase>Site</CamelCase>
-  <ClassBinding />
-  <SerializedChildren />
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
+  <CacheMode>-1</CacheMode>
+  <UiSyncGuardMode>-1</UiSyncGuardMode>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
   <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab" flexi="0" flexiHeader="1" flexiMaxLines="0">
+    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>General</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="name" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
+        <DetailItem SchemaName="name"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="DetailTab" flexi="0" flexiHeader="1" flexiMaxLines="0">
+    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Address@2x.png" IsIconNameReadOnly="0">
       <Name>Address</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="address1_line1" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_line2" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_line3" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_city" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_stateorprovince" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_postalcode" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_country" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
+        <DetailItem SchemaName="address1_line1"/>
+        <DetailItem SchemaName="address1_line2"/>
+        <DetailItem SchemaName="address1_line3"/>
+        <DetailItem SchemaName="address1_city"/>
+        <DetailItem SchemaName="address1_stateorprovince"/>
+        <DetailItem SchemaName="address1_postalcode"/>
+        <DetailItem SchemaName="address1_country"/>
       </SerializedChildren>
     </FormTab>
   </SerializedChildrenV2>
-  <Navigation flexi="0" flexiHeader="1" flexiMaxLines="0">
-    <Name>Navigation</Name>
-    <SerializedChildren />
-  </Navigation>
-  <PrimaryCommands>!defcmd</PrimaryCommands>
-  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
-  <SerializedContactInfo />
 </EntityForm>

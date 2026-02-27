@@ -1,4 +1,4 @@
-﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2" layoutstrict="0" singlecardexpand="0">
   <IsContactForm>false</IsContactForm>
   <EntityName>msdyn_iotalert</EntityName>
   <CamelCase>msdyn_iotalert</CamelCase>
@@ -207,14 +207,17 @@
       &lt;/Variables&gt;
     &lt;/SharedVariables&gt;
   </SharedVariables>
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
+  <CacheMode>-1</CacheMode>
+  <UiSyncGuardMode>-1</UiSyncGuardMode>
   <PrimaryCommands>custom_SendIoTCommand|Cmd.SendIoTCommand|</PrimaryCommands>
   <SharedVariableNames>
     <string>custom_SendIoTCommandEnabled</string>
-  </SharedVariableNames>  
+  </SharedVariableNames>
   <ClassBinding/>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
   <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab">
+    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>General</Name>
       <SerializedChildren>
         <DetailItem SchemaName="msdyn_description"/>
@@ -226,18 +229,18 @@
         <DetailItem SchemaName="msdyn_alertdata"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="IFrameTab">
+    <FormTab xsi:type="IFrameTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>IoT Alert</Name>
       <Url>file://IoTAlert/IoTAlert.html</Url>
       <IsVisible>false</IsVisible>
       <DelayLoad>false</DelayLoad>
     </FormTab>
-    <FormTab xsi:type="IFrameTab" flexiHeader="0">
+    <FormTab xsi:type="IFrameTab" flexiHeader="0" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>Alert Data</Name>
       <Url>file://JsonControl/IoTAlertDataJsonControl.html</Url>
       <DelayLoad>false</DelayLoad>
     </FormTab>
-    <FormTab xsi:type="DetailTab">
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>Customer Asset</Name>
       <SerializedChildren>
         <DetailItem SchemaName="msdyn_customerasset"/>
@@ -245,26 +248,26 @@
         <DetailItem SchemaName="msdyn_deviceid"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="DetailTab">
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>Hierarchy</Name>
       <SerializedChildren>
         <DetailItem SchemaName="msdyn_parentalert"/>
         <DetailItem SchemaName="msdyn_parentalerttoken"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="3">
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
       <Name>Notes List</Name>
       <Binding SchemaName="annotation.objectid"/>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="3" DocCommands="0" ListCommands="0">
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0" ListCommands="0">
       <Name>IoT Device Commands List</Name>
       <Binding SchemaName="msdyn_iotdevicecommand.msdyn_parentalert"/>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="3">
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>IoT Device Commands List</Name>
       <Binding SchemaName="msdyn_iotdevicecommand.msdyn_parentalert"/>
     </FormTab>
-    <FormTab xsi:type="IFrameTab">
+    <FormTab xsi:type="IFrameTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>PowerBI</Name>
       <Url>file://powerbi_device.json</Url>
     </FormTab>

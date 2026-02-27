@@ -1,92 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?>
-<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2" layoutstrict="0" singlecardexpand="0">
   <IsContactForm>true</IsContactForm>
   <EntityName>account</EntityName>
   <CamelCase>Account</CamelCase>
-  <SerializedChildren />
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
+  <CacheMode>-1</CacheMode>
+  <UiSyncGuardMode>-1</UiSyncGuardMode>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand OnExecuteButton</EnabledWorkflows>
   <SerializedChildrenV2>
-    <FormTab xsi:type="MapTab">
+    <FormTab xsi:type="ContactInfoTab" NameModified="0" IconModified="0" EntityIconName="" IsIconNameReadOnly="0">
+      <Name>Contact Info</Name>
+      <SerializedChildren>
+        <DetailItem Section="Address" xsi:type="ContactInfoSection"/>
+        <DetailItem Section="Call" xsi:type="ContactInfoSection"/>
+        <DetailItem Section="E-mail" xsi:type="ContactInfoSection"/>
+        <DetailItem Section="SMS" xsi:type="ContactInfoSection"/>
+        <DetailItem Section="Web" xsi:type="ContactInfoSection"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="MapTab" NameModified="0" IconModified="0" EntityIconName="" IsIconNameReadOnly="0">
       <Name>Map</Name>
       <CoordinatesBinding>address1_latitude;address1_longitude</CoordinatesBinding>
     </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="" IsIconNameReadOnly="0" AllowAddExisting="true">
+      <Name>Contacts List</Name>
+      <Binding SchemaName="contact.parentcustomerid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="" IsIconNameReadOnly="0">
+      <Name>Quotes List</Name>
+      <Binding SchemaName="quote.customerid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="" IsIconNameReadOnly="0">
+      <Name>Invoices List</Name>
+      <Binding SchemaName="invoice.customerid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="" IsIconNameReadOnly="0">
+      <Name>Activity List</Name>
+      <Binding SchemaName="activity.regardingobjectid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="" IsIconNameReadOnly="0">
+      <Name>Notes List</Name>
+      <Binding SchemaName="annotation.objectid"/>
+    </FormTab>
   </SerializedChildrenV2>
-  <Navigation>
-    <Name>Navigation</Name>
-    <SerializedChildren>
-      <DetailItem SchemaName="contact.parentcustomerid">
-        <IsConstant>false</IsConstant>
-      </DetailItem>
-      <DetailItem SchemaName="quote.customerid">
-        <IsConstant>false</IsConstant>
-      </DetailItem>
-      <DetailItem SchemaName="salesorder.customerid">
-        <IsConstant>false</IsConstant>
-      </DetailItem>
-      <DetailItem SchemaName="invoice.customerid">
-        <IsConstant>false</IsConstant>
-      </DetailItem>
-      <DetailItem SchemaName="activity.regardingobjectid">
-        <IsConstant>false</IsConstant>
-      </DetailItem>
-      <DetailItem SchemaName="annotation.objectid">
-        <IsConstant>false</IsConstant>
-      </DetailItem>
-    </SerializedChildren>
-  </Navigation>
-  <SerializedContactInfo>
-    <FormTab xsi:type="DetailTab">
-      <Name>Address</Name>
-      <SerializedChildren>
-        <DetailItem SchemaName="address1_line1">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_line2">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_line3">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_city">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_postalcode">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_stateorprovince">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_country">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-      </SerializedChildren>
-    </FormTab>
-    <FormTab xsi:type="DetailTab">
-      <Name>Call</Name>
-      <SerializedChildren>
-        <DetailItem SchemaName="telephone1">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-      </SerializedChildren>
-    </FormTab>
-    <FormTab xsi:type="DetailTab">
-      <Name>E-mail</Name>
-      <SerializedChildren>
-        <DetailItem SchemaName="emailaddress1">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-      </SerializedChildren>
-    </FormTab>
-    <FormTab xsi:type="DetailTab">
-      <Name>SMS</Name>
-      <SerializedChildren />
-    </FormTab>
-    <FormTab xsi:type="DetailTab">
-      <Name>Web</Name>
-      <SerializedChildren>
-        <DetailItem SchemaName="websiteurl">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-      </SerializedChildren>
-    </FormTab>
-  </SerializedContactInfo>
 </EntityForm>

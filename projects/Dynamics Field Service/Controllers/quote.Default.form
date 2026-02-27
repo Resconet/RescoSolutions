@@ -1,94 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?>
-<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2" layoutstrict="0" singlecardexpand="0">
   <IsContactForm>false</IsContactForm>
   <EntityName>quote</EntityName>
   <CamelCase>Quote</CamelCase>
-  <SerializedChildren />
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
+  <CacheMode>-1</CacheMode>
+  <UiSyncGuardMode>-1</UiSyncGuardMode>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand OnExecuteButton</EnabledWorkflows>
   <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab">
+    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>General</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="customerid">
-          <IsConstant>false</IsConstant>
+        <DetailItem SchemaName="customerid"/>
+        <DetailItem SchemaName="name"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="name">
-          <IsConstant>false</IsConstant>
+        <DetailItem SchemaName="transactioncurrencyid"/>
+        <DetailItem SchemaName="pricelevelid"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem xsi:type="SeparatorDetailItem">
-          <IsConstant>false</IsConstant>
+        <DetailItem SchemaName="totalamount"/>
+        <DetailItem SchemaName="discountamount"/>
+        <DetailItem SchemaName="discountpercentage"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="transactioncurrencyid">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="pricelevelid">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem xsi:type="SeparatorDetailItem">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="totalamount">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="discountamount">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="discountpercentage">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem xsi:type="SeparatorDetailItem">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="freightamount">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="freighttermscode">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
+        <DetailItem SchemaName="freightamount"/>
+        <DetailItem SchemaName="freighttermscode"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="DetailTab">
+    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Ship@2x.png" IsIconNameReadOnly="0">
       <Name>Ship</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="shipto_line1">
-          <IsConstant>false</IsConstant>
+        <DetailItem SchemaName="shipto_line1"/>
+        <DetailItem SchemaName="shipto_line2"/>
+        <DetailItem SchemaName="shipto_line3"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="shipto_line2">
-          <IsConstant>false</IsConstant>
+        <DetailItem SchemaName="shipto_city"/>
+        <DetailItem SchemaName="shipto_postalcode"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="shipto_line3">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem xsi:type="SeparatorDetailItem">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="shipto_city">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="shipto_postalcode">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem xsi:type="SeparatorDetailItem">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="shipto_stateorprovince">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="shipto_country">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
+        <DetailItem SchemaName="shipto_stateorprovince"/>
+        <DetailItem SchemaName="shipto_country"/>
       </SerializedChildren>
     </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>Quote Lines List</Name>
+      <Binding SchemaName="quotedetail.quoteid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
+      <Name>Notes List</Name>
+      <Binding SchemaName="annotation.objectid"/>
+    </FormTab>
   </SerializedChildrenV2>
-  <Navigation>
-    <Name>Navigation</Name>
-    <SerializedChildren>
-      <DetailItem SchemaName="quotedetail.quoteid">
-        <IsConstant>false</IsConstant>
-      </DetailItem>
-      <DetailItem SchemaName="annotation.objectid">
-        <IsConstant>false</IsConstant>
-      </DetailItem>
-    </SerializedChildren>
-  </Navigation>
-  <SerializedContactInfo />
 </EntityForm>

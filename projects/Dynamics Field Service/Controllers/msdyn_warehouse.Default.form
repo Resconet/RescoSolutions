@@ -1,35 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
-<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2" layoutstrict="0" singlecardexpand="0">
   <IsContactForm>false</IsContactForm>
   <EntityName>msdyn_warehouse</EntityName>
   <CamelCase>msdyn_warehouse</CamelCase>
-  <ClassBinding />
-  <SerializedChildren />
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
+  <CacheMode>-1</CacheMode>
+  <UiSyncGuardMode>-1</UiSyncGuardMode>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
   <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab">
+    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>General</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="msdyn_name">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="msdyn_description">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
+        <DetailItem SchemaName="msdyn_name"/>
+        <DetailItem SchemaName="msdyn_description"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab">
+    <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\msdyn_productinventory@2x.png" IsIconNameReadOnly="0">
       <Name>Product Inventory List</Name>
-      <LogicalName>msdyn_productinventory.msdyn_warehouse</LogicalName>
-      <Binding SchemaName="msdyn_productinventory.msdyn_warehouse">
-        <IsConstant>false</IsConstant>
-      </Binding>
+      <Binding SchemaName="msdyn_productinventory.msdyn_warehouse"/>
     </FormTab>
   </SerializedChildrenV2>
-  <Navigation>
-    <Name>Navigation</Name>
-    <SerializedChildren />
-  </Navigation>
-  <PrimaryCommands>!defcmd</PrimaryCommands>
-  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
-  <SerializedContactInfo />
 </EntityForm>

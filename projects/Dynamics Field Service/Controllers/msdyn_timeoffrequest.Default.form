@@ -1,30 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2" layoutstrict="0" singlecardexpand="0">
   <IsContactForm>false</IsContactForm>
   <EntityName>msdyn_timeoffrequest</EntityName>
   <CamelCase>msdyn_timeoffrequest</CamelCase>
-  <ClassBinding />
-  <SerializedChildren />
-  <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab">
-      <Name>General</Name>
-      <SerializedChildren>
-        <DetailItem SchemaName="msdyn_starttime">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="msdyn_endtime">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="msdyn_approvedby">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-      </SerializedChildren>
-    </FormTab>
-  </SerializedChildrenV2>
-  <Navigation>
-    <Name>Navigation</Name>
-    <SerializedChildren />
-  </Navigation>
   <WorkflowLoad>&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;
       &lt;branch info="Check if entity is new" e="true"&gt;
         &lt;if e="true"&gt;
@@ -148,7 +125,20 @@
         &lt;/if&gt;
       &lt;/branch&gt;
     &lt;/Workflow&gt;</WorkflowSave>
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
+  <CacheMode>-1</CacheMode>
+  <UiSyncGuardMode>-1</UiSyncGuardMode>
   <PrimaryCommands>!defcmd</PrimaryCommands>
+  <ClassBinding/>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled</EnabledWorkflows>
-  <SerializedContactInfo />
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="msdyn_starttime"/>
+        <DetailItem SchemaName="msdyn_endtime"/>
+        <DetailItem SchemaName="msdyn_approvedby"/>
+      </SerializedChildren>
+    </FormTab>
+  </SerializedChildrenV2>
 </EntityForm>
