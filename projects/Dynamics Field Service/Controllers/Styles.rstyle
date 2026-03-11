@@ -946,7 +946,7 @@
     <Style Name="btn_red" Style="btn_green" Type="TextCell">
       <Properties>
         <Property Name="BackColor" Type="Color">
-          <Value>-3451049</Value>
+          <Value>error</Value>
         </Property>
       </Properties>
     </Style>
@@ -963,7 +963,7 @@
     <Style Name="r_red" Style="r_green" Type="TextCell">
       <Properties>
         <Property Name="ForeColor" Type="Color">
-          <Value>-3451049</Value>
+          <Value>error</Value>
         </Property>
       </Properties>
     </Style>
@@ -1002,10 +1002,10 @@
           <Value>5</Value>
         </Property>
         <Property Name="EditorBackgroundColor" Type="Color">
-          <Value>-3451049</Value>
+          <Value>error</Value>
         </Property>
         <Property Name="EditorBorderColor" Type="Color">
-          <Value>-3451049</Value>
+          <Value>error</Value>
         </Property>
         <Property Name="BackgroundColor" Type="System.Int32">
           <Value>0</Value>
@@ -1020,7 +1020,7 @@
           <Value>0</Value>
         </Property>
         <Property Name="ButtonColor" Type="Color">
-          <Value>-3451049</Value>
+          <Value>error</Value>
         </Property>
       </Properties>
     </Style>
