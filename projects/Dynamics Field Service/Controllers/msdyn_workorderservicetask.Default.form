@@ -19,6 +19,7 @@
         <DetailItem SchemaName="msdyn_tasktype"/>
         <DetailItem SchemaName="msdyn_description"/>
         <DetailItem SchemaName="msdyn_percentcomplete"/>
+        <DetailItem SchemaName="msdyn_inspectiontaskresult"/>
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
           <IsConstant>true</IsConstant>
         </DetailItem>

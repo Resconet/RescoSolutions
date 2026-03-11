@@ -128,7 +128,7 @@
         </CellTemplate>
         <CellTemplate SchemaName="msdyn_inspectiontaskresult">
           <StyleName>r_green</StyleName>
-          <Bounds>202,41,27,12</Bounds>
+          <Bounds>202,40,27,13</Bounds>
           <CellKind>3</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
