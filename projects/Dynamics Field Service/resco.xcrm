@@ -568,7 +568,7 @@
         <property schema="mobilephone"/>
         <property schema="modifiedon"/>
         <property schema="ownerid"/>
-        <property schema="parentcustomerid"/>
+        <property schema="parentcustomerid" parentlookup="account"/>
         <property schema="statecode"/>
         <property schema="statuscode"/>
         <property schema="telephone1"/>
