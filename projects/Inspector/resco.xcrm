@@ -196,7 +196,7 @@
         <property schema="mobilephone"/>
         <property schema="modifiedon"/>
         <property schema="ownerid"/>
-        <property schema="parentcustomerid"/>
+        <property schema="parentcustomerid" parentlookup="account"/>
         <property schema="statecode"/>
         <property schema="statuscode"/>
         <property schema="telephone1"/>
@@ -556,12 +556,11 @@
         <property schema="modifiedon"/>
         <property schema="ownerid"/>
         <property schema="resco_account"/>
-        <property schema="resco_appointment"/>
         <property schema="resco_archivedon"/>
-        <property schema="resco_asset"/>
         <property schema="resco_autoreport"/>
         <property schema="resco_completionstatus"/>
         <property schema="resco_completionstatuscalculated"/>
+        <property schema="resco_customerasset"/>
         <property schema="resco_description"/>
         <property schema="resco_duration"/>
         <property schema="resco_featureversion"/>
@@ -569,7 +568,6 @@
         <property schema="resco_folderid"/>
         <property schema="resco_issnippet"/>
         <property schema="resco_istemplate"/>
-        <property schema="resco_job"/>
         <property schema="resco_languagecode"/>
         <property schema="resco_layout"/>
         <property schema="resco_localization"/>
@@ -589,11 +587,15 @@
         <property schema="resco_score"/>
         <property schema="resco_script"/>
         <property schema="resco_serializedanswers"/>
+        <property schema="resco_serializedtemplate"/>
         <property schema="resco_styles"/>
         <property schema="resco_templatedependent"/>
         <property schema="resco_templateid"/>
         <property schema="resco_version"/>
         <property schema="resco_versionname"/>
+        <property schema="resco_workorder"/>
+        <property schema="resco_workorderincident"/>
+        <property schema="resco_workorderservicetask"/>
         <property schema="statuscode"/>
       </properties>
       <indexes>
@@ -612,24 +614,14 @@
             <field schema="resco_account"/>
           </fields>
         </index>
-        <index schema="idx_resco_questionnaire_resco_appointment" issystem="true">
+        <index schema="idx_resco_questionnaire_resco_customerasset" issystem="true">
           <fields>
-            <field schema="resco_appointment"/>
-          </fields>
-        </index>
-        <index schema="idx_resco_questionnaire_resco_asset" issystem="true">
-          <fields>
-            <field schema="resco_asset"/>
+            <field schema="resco_customerasset"/>
           </fields>
         </index>
         <index schema="idx_resco_questionnaire_resco_folderid" issystem="true">
           <fields>
             <field schema="resco_folderid"/>
-          </fields>
-        </index>
-        <index schema="idx_resco_questionnaire_resco_job" issystem="true">
-          <fields>
-            <field schema="resco_job"/>
           </fields>
         </index>
         <index schema="idx_resco_questionnaire_resco_name" issystem="true">
@@ -640,6 +632,21 @@
         <index schema="idx_resco_questionnaire_resco_templateid" issystem="true">
           <fields>
             <field schema="resco_templateid"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_questionnaire_resco_workorder" issystem="true">
+          <fields>
+            <field schema="resco_workorder"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_questionnaire_resco_workorderincident" issystem="true">
+          <fields>
+            <field schema="resco_workorderincident"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_questionnaire_resco_workorderservicetask" issystem="true">
+          <fields>
+            <field schema="resco_workorderservicetask"/>
           </fields>
         </index>
       </indexes>
@@ -662,6 +669,8 @@
         <property schema="resco_score"/>
         <property schema="resco_serializedanswers"/>
         <property schema="resco_templateid"/>
+        <property schema="resco_workorder"/>
+        <property schema="resco_workorderservicetask"/>
         <property schema="statuscode"/>
       </properties>
       <indexes>
@@ -683,6 +692,16 @@
         <index schema="idx_resco_questionnaireanswer_resco_templateid" issystem="true">
           <fields>
             <field schema="resco_templateid"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_questionnaireanswer_resco_workorder" issystem="true">
+          <fields>
+            <field schema="resco_workorder"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_questionnaireanswer_resco_workorderservicetask" issystem="true">
+          <fields>
+            <field schema="resco_workorderservicetask"/>
           </fields>
         </index>
       </indexes>

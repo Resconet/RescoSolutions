@@ -196,7 +196,6 @@
     </entity>
     <entity schema="contact">
       <properties>
-        <property schema="accountid"/>
         <property schema="address1_city"/>
         <property schema="address1_country"/>
         <property schema="address1_latitude"/>
@@ -217,18 +216,13 @@
         <property schema="mobilephone" displayformat="PhoneNumber"/>
         <property schema="modifiedon"/>
         <property schema="ownerid"/>
-        <property schema="parentcustomerid"/>
+        <property schema="parentcustomerid" parentlookup="account"/>
         <property schema="preferredcontactmethodcode"/>
         <property schema="statecode"/>
         <property schema="statuscode"/>
         <property schema="telephone1" displayformat="PhoneNumber"/>
       </properties>
       <indexes>
-        <index schema="idx_contact_accountid" issystem="true">
-          <fields>
-            <field schema="accountid"/>
-          </fields>
-        </index>
         <index schema="idx_contact_fullname" issystem="true">
           <fields>
             <field schema="fullname"/>
@@ -1050,48 +1044,6 @@
           </fields>
         </index>
         <index schema="idx_resco_mobilereport_resco_name" issystem="true">
-          <fields>
-            <field schema="resco_name"/>
-          </fields>
-        </index>
-      </indexes>
-    </entity>
-    <entity schema="resco_tag">
-      <properties>
-        <property schema="createdon"/>
-        <property schema="modifiedon"/>
-        <property schema="ownerid"/>
-        <property schema="resco_accountid"/>
-        <property schema="resco_appointment"/>
-        <property schema="resco_assetid"/>
-        <property schema="resco_imagename"/>
-        <property schema="resco_name"/>
-        <property schema="resco_positionx"/>
-        <property schema="resco_positiony"/>
-        <property schema="resco_tagid"/>
-      </properties>
-      <indexes>
-        <index schema="idx_resco_tag_ownerid" issystem="true">
-          <fields>
-            <field schema="ownerid"/>
-          </fields>
-        </index>
-        <index schema="idx_resco_tag_resco_accountid" issystem="true">
-          <fields>
-            <field schema="resco_accountid"/>
-          </fields>
-        </index>
-        <index schema="idx_resco_tag_resco_appointment" issystem="true">
-          <fields>
-            <field schema="resco_appointment"/>
-          </fields>
-        </index>
-        <index schema="idx_resco_tag_resco_assetid" issystem="true">
-          <fields>
-            <field schema="resco_assetid"/>
-          </fields>
-        </index>
-        <index schema="idx_resco_tag_resco_name" issystem="true">
           <fields>
             <field schema="resco_name"/>
           </fields>
