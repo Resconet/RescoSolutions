@@ -143,6 +143,7 @@ FS.Schema.BookingTimestamp = {
     properties: {
         msdyn_booking: "msdyn_booking",
         msdyn_bookingTimestampId: "msdyn_bookingtimestampid",
+        msdyn_bookingStatus: "msdyn_bookingstatus",
         msdyn_generateJournals: "msdyn_generatejournals",
         msdyn_systemStatus: "msdyn_systemstatus",
         msdyn_timestampSource: "msdyn_timestampsource",

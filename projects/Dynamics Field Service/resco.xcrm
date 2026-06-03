@@ -938,6 +938,7 @@
         <property schema="createdon"/>
         <property schema="modifiedon"/>
         <property schema="msdyn_booking"/>
+        <property schema="msdyn_bookingstatus"/>
         <property schema="msdyn_bookingtimestampid"/>
         <property schema="msdyn_generatejournals"/>
         <property schema="msdyn_name"/>
@@ -952,6 +953,11 @@
         <index schema="idx_msdyn_bookingtimestamp_msdyn_booking" issystem="true">
           <fields>
             <field schema="msdyn_booking"/>
+          </fields>
+        </index>
+        <index schema="idx_msdyn_bookingtimestamp_msdyn_bookingstatus" issystem="true">
+          <fields>
+            <field schema="msdyn_bookingstatus"/>
           </fields>
         </index>
         <index schema="idx_msdyn_bookingtimestamp_msdyn_name" issystem="true">
