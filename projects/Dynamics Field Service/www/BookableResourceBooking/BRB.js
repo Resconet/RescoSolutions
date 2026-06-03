@@ -1,4 +1,4 @@
-/// <reference path="../JSBridge.js" />
+﻿/// <reference path="../JSBridge.js" />
 /// <reference path="../Schema.js" />
 /// <reference path="../Enums.js" />
 /// <reference path="../Common.js" />
@@ -275,9 +275,14 @@ FS.BookableResourceBooking = {
 
         if (workOrder && FS.BookableResourceBooking.lastTimestampStatus !== FS.BookableResourceBooking.currentFSStatus) {
             var bookingReference = new MobileCRM.Reference(entity.entityName, entity.id, entity.primaryName);
+            //var bookingStatusReference = new MobileCRM.Reference(FS.Schema.BookingStatus.name, entity.properties[FS.Schema.BookableResourceBooking.properties.msdyn_bookingStatus].id,  entity.properties[FS.Schema.BookableResourceBooking.properties.msdyn_bookingStatus].primaryName);
+            //var bookingStatusReference = entity.properties[FS.Schema.BookableResourceBooking.properties.bookingStatus] ? new MobileCRM.Reference(FS.Schema.BookingStatus.name, entity.properties[FS.Schema.BookableResourceBooking.properties.bookingStatus].id,  entity.properties[FS.Schema.BookingStatus.properties.msdyn_fieldServiceStatus]) : null;
+            var bookingStatusReference = entity.properties[FS.Schema.BookableResourceBooking.properties.bookingStatus];
+            
             var timestampProperties = {};
             timestampProperties[FS.Schema.BookingTimestamp.properties.msdyn_booking] = bookingReference;
             timestampProperties[FS.Schema.BookingTimestamp.properties.msdyn_systemStatus] = FS.BookableResourceBooking.currentFSStatus;
+            timestampProperties[FS.Schema.BookingTimestamp.properties.msdyn_bookingStatus] = bookingStatusReference;
             timestampProperties[FS.Schema.BookingTimestamp.properties.msdyn_timestampTime] = new Date();
             timestampProperties[FS.Schema.BookingTimestamp.properties.msdyn_timestampSource] = FS.Enums.msdyn_bookingtimestampmsdyn_TimestampSource.Mobile;
             timestampProperties[FS.Schema.BookingTimestamp.properties.msdyn_generateJournals] = FS.BookableResourceBooking.currentFSStatus === FS.Enums.msdyn_bookingtimestampmsdyn_SystemStatus.Completed;
