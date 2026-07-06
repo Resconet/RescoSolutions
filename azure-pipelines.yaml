@@ -20,6 +20,6 @@ resources:
                   variables['Build.SourceBranch'], 'refs/heads/master') }}
 
 extends:
-  template: deploy-resco-cloud.yml@devops
+  template: build-mobile-projects.yml@devops
   parameters:
     RepoName: self
