@@ -16,7 +16,7 @@ resources:
     type: git
     name: devops
 # https://developercommunity.visualstudio.com/t/Enable-SystemPullRequest-Variables-in/10867807
-    ref: ${{ iif(and(ne(variables['Build.Reason'], 'PullRequest'), or(eq(variables['Build.SourceBranch'], 'refs/heads/master'), startsWith(variables['Build.SourceBranch'], 'refs/heads/release/')))),
+    ref: ${{ iif(and(ne(variables['Build.Reason'], 'PullRequest'), or(eq(variables['Build.SourceBranch'], 'refs/heads/master'), startsWith(variables['Build.SourceBranch'], 'refs/heads/release/'))),
                   variables['Build.SourceBranch'], 'refs/heads/master') }}
 
 extends:
