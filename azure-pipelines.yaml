@@ -9,55 +9,17 @@ trigger:
   paths:
     include:
       - projects
-  tags:
-    include:
-      - "*"
 
-pool:
-  vmImage: ubuntu-latest
+resources:
+  repositories:
+  - repository: devops
+    type: git
+    name: devops
+# https://developercommunity.visualstudio.com/t/Enable-SystemPullRequest-Variables-in/10867807
+    ref: ${{ iif(and(ne(variables['Build.Reason'], 'PullRequest'), or(eq(variables['Build.SourceBranch'], 'refs/heads/master'), startsWith(variables['Build.SourceBranch'], 'refs/heads/release/')))),
+                  variables['Build.SourceBranch'], 'refs/heads/master') }}
 
-jobs:
-- job: build_mobile_projects
-  displayName: Build Mobile Projects
-  steps:
-  - checkout: self
-    fetchDepth: 1
-    fetchTags: false
-
-  - bash: |
-      find . -mindepth 1 -maxdepth 1 -type d -print0 | while read -d $'\0' dir; do
-        name=$(basename "$dir")
-        project=$(grep "displayname=\"$name\"" config.xml | sed 's/.* url="\(.*\)".*/\1/g')
-        [[ ! $project ]] && echo Unknown project: $name && exit 1
-        echo $name: $project
-        pushd "$dir"
-        zip -q -r ../data.zip *
-        mkdir -p "$(Build.ArtifactStagingDirectory)/$(dirname $project)"
-        echo -e -n '<?xml version="1.0" encoding="utf-8"?>\n<data xmlns="https://schema.resco.net/mobilecrm/woodford/config/data">' > "$(Build.ArtifactStagingDirectory)/$project"
-        base64 -w 0 ../data.zip >> "$(Build.ArtifactStagingDirectory)/$project"
-        echo '</data>' >> "$(Build.ArtifactStagingDirectory)/$project"
-        rm ../data.zip
-        popd
-      done
-      [[ $? -eq 0 ]] && cp -v config.* $(Build.ArtifactStagingDirectory) || exit 1
-    displayName: Prepare Mobile Projects
-    workingDirectory: projects
-
-  - publish: $(Build.ArtifactStagingDirectory)
-    displayName: Publish Artifact
-    enabled: ${{ ne(variables['Build.Reason'], 'PullRequest') }}
-    artifact: mobile-projects
-
-  - bash: |
-      if [[ $(Build.SourceBranch) == refs/tags/* ]]; then
-        version=$(echo $(Build.SourceBranch) | cut -d / -f 3)
-        owner="Release $version"
-      else
-        branch=$(echo $(Build.SourceBranch) | cut -d / -f 3-)
-        owner="Branch $branch"
-      fi
-      PAT=$(echo -n :$(System.AccessToken) | base64 -w 0)
-      URL=$(System.CollectionUri)$(System.TeamProject)/_apis/build/retention/leases?api-version=6.0-preview.1
-      curl -H "Content-Type: application/json" -H "Authorization: Basic $PAT" $URL --data "[{'daysValid': 90, 'definitionId': $(System.DefinitionId), 'ownerId': 'RM: $owner', 'protectPipeline': false, 'runId': $(Build.BuildId)}]"
-    displayName: Lease Build
-    enabled: ${{ eq(variables['Build.Reason'], 'BatchedCI') }}
+extends:
+  template: deploy-resco-cloud.yml@devops
+  parameters:
+    RepoName: self
