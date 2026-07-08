@@ -1,4 +1,4 @@
-﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2" layoutstrict="0" singlecardexpand="0">
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="1" fleximode="1" fullscreen="0" resize="0" version="2" layoutstrict="1" singlecardexpand="0" pagesposition="0" pageiconposition="0">
   <IsContactForm>false</IsContactForm>
   <EntityName>msdyn_workorder</EntityName>
   <CamelCase>msdyn_workorder</CamelCase>
@@ -51,6 +51,7 @@
       &lt;/branch&gt;
     &lt;/Workflow&gt;
   </WorkflowCommandCanExecute>
+  <WorkflowButtonCommand>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:Inspection&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;definition e="false"&gt;&lt;var&gt;Inspection&lt;/var&gt;&lt;func&gt;SelectEntity&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;arg&gt;String:resco_questionnaire&lt;/arg&gt;&lt;arg&gt;String:resco_questionnaire.@Templates&lt;/arg&gt;&lt;/definition&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowButtonCommand>
   <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;SharedVariable usage="OnChangeEnabled"&gt;&lt;Name&gt;isBillingAccountTaxExempt&lt;/Name&gt;&lt;CrmType&gt;Boolean&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;SharedVariable usage="OnChangeEnabled"&gt;&lt;Name&gt;isWOTypeTaxable&lt;/Name&gt;&lt;CrmType&gt;Boolean&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;SharedVariable usage="OnLoadEnabled"&gt;&lt;Name&gt;custom_SendIoTCommandEnabled&lt;/Name&gt;&lt;CrmType&gt;Boolean&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <IsBulkUpdateForm>false</IsBulkUpdateForm>
   <CacheMode>-1</CacheMode>
@@ -116,6 +117,14 @@
         <DetailItem SchemaName="msdyn_taxcode"/>
       </SerializedChildren>
     </FormTab>
+    <FormTab xsi:type="DetailTab" flexi="1" flexiWidth="1" flexiHeader="0" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="Inspection" button="true" buttonLabel="Inspection" buttonClickText="Inspection" buttonCommand="">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
     <FormTab xsi:type="IFrameTab" flexiHeader="2" flexiCollapsed="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>WorkOrder</Name>
       <Url>file://WorkOrder/WorkOrder.html</Url>
@@ -171,12 +180,9 @@
       <Name>Notes List</Name>
       <Binding SchemaName="annotation.objectid"/>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="3" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0" FlipMode="224">
-      <Name>Inspections</Name>
-      <CustomName>Inspections</CustomName>
-      <Binding SchemaName="resco_questionnaire.@virtual"/>
-      <Views>&lt;extra&gt;&lt;views&gt;resco_questionnaire.Answered Questionnaires&lt;/views&gt;&lt;filter entity="resco_questionnaire"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="resco_questionnaire"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="resco_istemplate" operator="eq" value="0" /&amp;gt;&amp;lt;filter type="or"&amp;gt;&amp;lt;condition attribute="resco_regardingid" operator="eq" value="{{msdyn_workorderid}}" /&amp;gt;&amp;lt;condition attribute="resco_rawidvalue" operator="eq" value="{{msdyn_workorderid}}" entityname="QuestionLinkAlias" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;link-entity name="resco_question" from="resco_questionnaireid" to="resco_questionnaireid" link-type="outer" alias="QuestionLinkAlias"&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
-      <LookupViews>&lt;extra&gt;&lt;views&gt;resco_questionnaire.Templates&lt;/views&gt;&lt;filter entity="resco_questionnaire"&gt;&amp;lt;fetch&amp;gt;&amp;lt;entity name='resco_questionnaire'&amp;gt;&amp;lt;filter&amp;gt;&amp;lt;condition attribute='resco_istemplate' operator='eq' value='1' /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="6" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>Questionnaire Answers List</Name>
+      <Binding SchemaName="resco_questionnaireanswer.resco_workorder"/>
     </FormTab>
     <FormTab xsi:type="AssociatedTab" flexiHeight="3" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0">
       <Name>Incidents</Name>
@@ -213,4 +219,27 @@
       <Views>&lt;extra&gt;&lt;filter entity="msdyn_bookingjournal"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="msdyn_bookingjournal"&amp;gt;&amp;lt;link-entity name="bookableresourcebooking" alias="L0" from="bookableresourcebookingid" to="msdyn_booking" link-type="inner"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="msdyn_workorder" operator="eq" value="{{msdyn_workorderid}}"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
     </FormTab>
   </SerializedChildrenV2>
+  <FormPages>
+    <FormPages layoutstrict="1" singlecardexpand="0" fleximode="1" iconposition="0">
+      <Name>Page</Name>
+      <IconName></IconName>
+      <TabIndexes>
+        <int>0</int>
+        <int>1</int>
+        <int>2</int>
+        <int>3</int>
+        <int>4</int>
+        <int>5</int>
+        <int>6</int>
+        <int>7</int>
+        <int>8</int>
+        <int>9</int>
+        <int>10</int>
+        <int>11</int>
+        <int>12</int>
+        <int>13</int>
+        <int>14</int>
+      </TabIndexes>
+    </FormPages>
+  </FormPages>
 </EntityForm>

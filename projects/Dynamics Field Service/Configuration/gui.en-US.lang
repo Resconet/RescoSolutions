@@ -1,43 +1,90 @@
-﻿#version=2
-#
-# -------------------- OVERRIDE --------------------
-#
-account.address1_city=City
-#account.address1_country=Country/Region # Removed by Microsoft
+﻿account.address1_city=City
 account.address1_line1=Street 1
 account.address1_line2=Street 2
 account.address1_line3=Street 3
 account.address1_postalcode=Postal Code
 account.address1_stateorprovince=State
-#
+appointment.requiredattendees=Required
+appointment.statuscode=Show As
+bookableresourcebooking=Booking
+bookableresourcebooking+s=Bookings
+bookableresourcebooking.bookableresourcebookingid=Booking
+connection=Associate Device
+connection.record2id=Device
 contact.address1_city=City
-#contact.address1_country=Country/Region # Removed by Microsoft
 contact.address1_line1=Street 1
 contact.address1_line2=Street 2
 contact.address1_line3=Street 3
 contact.address1_postalcode=Postal Code
 contact.address1_stateorprovince=State
 contact.parentcustomerid=Customer
-#  -------------------- QUOTE --------------------
+email.description=Description (HTML formatting removed)
+invoice.discountamount=Discount
+invoice.discountpercentage=Discount %
+invoice.freightamount=Freight
+invoice.shipto_city=City
+invoice.shipto_line1=Street 1
+invoice.shipto_line2=Street 2
+invoice.shipto_line3=Street 3
+invoice.shipto_postalcode=Postal Code
+invoice.shipto_stateorprovince=State
+invoicedetail.extendedamount=Total
+invoicedetail.productdescription=Description
+msdyn_iotalert.msdyn_alertdata=Alert Data
+msdyn_iotdevice.msdyn_devicereportedproperties=Device Reported Properties
+msdyn_iotdevice.msdyn_devicesettings=Device Settings
+msdyn_iotdevice.msdyn_tags=Device Tags
+msdyn_iotdevicecommand.msdyn_message=Message
 quote.customerid=Customer
 quote.discountamount=Discount
 quote.discountpercentage=Discount %
 quote.freightamount=Freight
 quote.shipto_city=City
-#quote.shipto_country=Country/Region # Removed by Microsoft
 quote.shipto_line1=Street 1
 quote.shipto_line2=Street 2
 quote.shipto_line3=Street 3
 quote.shipto_postalcode=Postal Code
 quote.shipto_stateorprovince=State
-quotedetail.productdescription=Description
 quotedetail.extendedamount=Total
-# -------------------- ORDER --------------------
+quotedetail.productdescription=Description
+resco_chattopic=Chat Channel
+resco_chattopic+s=Chat Channels
+resco_sharepointdoc.resco_sharepointdocid=Document ID
+resco_sharepointdoc.resco_name=Title
+resco_sharepointdoc.modifiedon=Modified On
+resco_sharepointdoc.createdon=Created On
+resco_sharepointdoc.resco_filename=File Name
+resco_sharepointdoc.resco_filesize=File Size
+resco_sharepointdoc.resco_lastmodified=Last Modified
+resco_sharepointdoc.resco_siteid=Site ID
+resco_sharepointdoc.resco_relativepath=Relative Path
+resco_sharepointdoc.resco_uniqueid=Unique ID
+resco_sharepointdoc.resco_source=Cloud Source
+resco_sharepointdoc.resco_revision=Revision
+resco_sharepointdoc.resco_regardingid=Regarding
+transactioncurrency.currencyprecision=Currency Precision
+bookableresourcebooking.DetailView.Booking=Booking
+msdyn_3dmodel.DetailView.3D_Viewer=3D Viewer
+msdyn_customerasset.DetailView.Sub Assets=Sub Assets
+msdyn_customerasset.DetailView.Connected Devices=Connected Devices
+msdyn_iotalert.DetailView.Customer Asset=Customer Asset
+msdyn_iotalert.DetailView.Hierarchy=Hierarchy
+msdyn_iotdevice.DetailView.Status=Status
+msdyn_iotdevice.DetailView.Settings=Settings
+msdyn_iotdevice.DetailView.Commands=Commands
+msdyn_workorder.DetailView.Signature=Signature
+msdyn_workorder.DetailView.Products=Products
+msdyn_workorder.DetailView.Services=Services
+msdyn_workorder.DetailView.Service Tasks=Service Tasks
+msdyn_workorder.DetailView.Other=Other
+msdyn_workorder.DetailView.Incidents=Incidents
+msdyn_workorder.DetailView.Bookings=Bookings
+msdyn_workorder.DetailView.Address=Address
+msdyn_workorder.View.WorkOrderList=Work Orders
 salesorder.discountamount=Discount
 salesorder.discountpercentage=Discount %
 salesorder.freightamount=Freight
 salesorder.shipto_city=City
-#salesorder.shipto_country=Country/Region # Removed by Microsoft
 salesorder.shipto_line1=Street 1
 salesorder.shipto_line2=Street 2
 salesorder.shipto_line3=Street 3
@@ -45,51 +92,25 @@ salesorder.shipto_postalcode=Postal Code
 salesorder.shipto_stateorprovince=State
 salesorderdetail.productdescription=Description
 salesorderdetail.extendedamount=Total
-# -------------------- INVOICE --------------------
-invoice.discountamount=Discount
-invoice.discountpercentage=Discount %
-invoice.freightamount=Freight
-invoice.shipto_city=City
-#invoice.shipto_country=Country/Region # Removed by Microsoft
-invoice.shipto_line1=Street 1
-invoice.shipto_line2=Street 2
-invoice.shipto_line3=Street 3
-invoice.shipto_postalcode=Postal Code
-invoice.shipto_stateorprovince=State
-invoicedetail.productdescription=Description
-invoicedetail.extendedamount=Total
-# -------------------- LEAD --------------------
-#lead.address1_country=Country/Region # Removed by Microsoft
 lead.address1_postalcode=Postal Code
 lead.address1_stateorprovince=State
-# -------------------- OPPORTUNITY --------------------
 opportunity.customerid=Customer
-opportunity.estimatedvalue=Est. Revenue
 opportunity.originatingleadid=Orig. Lead
 opportunityproduct.manualdiscountamount=Discount
 opportunityproduct.volumediscountamount=Vol. Discount
-OpportunityProduct.ProductDescription=Description
 opportunityproduct.extendedamount=Total
-#
-appointment.statuscode=Show As
-#
-email.description=Description (HTML formatting removed)
-#
-# -------------------- CUSTOM TEXT --------------------
-#
+OpportunityProduct.ProductDescription=Description
 activity=Activity
 activity+s=Activities
 Tourplan=Calendar
 Tourplan.Subtitle=Agenda and Calendar
 About=About
 About.Subtitle=Application Info
-# Following label is overriden by Microsoft
 Setup=Settings
 Setup.Subtitle=Setup Application
 FmtSubtitle=List of {0}
 FmtLookup=Lookup {0}
 FmtSearch=Search {0}
-# Following label is overriden by Microsoft
 FmtSearchMy=Search my {0}
 FmtSync=Syncing: {0}
 FmtSyncSent={0} Sent, {1} Received
@@ -102,16 +123,9 @@ Layouts=Layouts
 Sync.Connect=Connecting...
 Sync.Authenticating=Authenticating...
 Sync.Final=Finalizing...
-#
-# DETAILVIEW
-#
-# Following label is overriden by Microsoft
 DetailView.General=Summary
 DetailView.Address=Address
 DetailView.Ship=Ship
-#
-# LIST BUTTONS
-#
 Buttons.Call=Call
 Buttons.Email=E-mail
 Buttons.More=More
@@ -122,9 +136,6 @@ Buttons.Regarding=Regarding
 Buttons.Import=Import
 Buttons.Associate=Associate
 Buttons.Hide=Hide
-#
-# Login Dialog
-#
 LoginInfo.Url=URL
 LoginInfo.UserName=Username
 LoginInfo.Password=Password
@@ -133,12 +144,9 @@ LoginInfo.Domain=Domain
 LoginInfo.Organization=Organization
 LoginInfo.AuthenticationType=Type
 LoginInfo.AuthenticationType.0=Active Directory
-# Following label is overriden by Microsoft
 LoginInfo.AuthenticationType.1=Dynamics 365 Online US
 LoginInfo.AuthenticationType.2=Internet Facing
-# Following label is overriden by Microsoft
 LoginInfo.AuthenticationType.3=Dynamics 365 Online EMEA
-# Following label is overriden by Microsoft
 LoginInfo.AuthenticationType.4=Dynamics 365 Online APAC 
 LoginInfo.ApplicationLocked=Application Locked
 LoginInfo.SecurityChecking=Checking Security Settings
@@ -147,9 +155,6 @@ LoginInfo.Required=Required
 LoginInfo.Optional=Optional
 LoginInfo.AutodiscoverError=Exchange server discovery failed. Please specify the Exchange server URL and the Username.
 LoginInfo.ExchangeChecking=Checking...
-#
-# CallImport
-#
 CallImport=Call Import
 CallImport.Subtitle=Recent calls management
 CallImport.ImportCall=Import Phone Call
@@ -163,24 +168,15 @@ CallImport.DifferentRegarding=Regarding object differs
 CallImport.CallAlreadyClosed=Selected phone call was already closed.
 CallImport.Keep=Keep {0}
 CallImport.ChangeTo=Change to {0}
-#
-# SocialFeeds
-#
 SocialFeeds=What's New
 SocialFeeds.Subtitle=The latest social feeds
 Cmd.Post=Post
 Cmd.Info=Info
-#
-# MapView
-#
 Map=Map
 Map.Subtitle=View Entities on a Map
 Map.Map=Map
 Map.CurrentLocation=Current Location
 Map.NoMapData=No Map Data
-#
-# RoutePlanner
-#
 RoutePlan=My Route
 RoutePlan.Subtitle=Plan your route on a map
 RoutePlanner.RoutePlanner=Route Planner
@@ -203,27 +199,18 @@ RoutePlanner.NoStartLocation=No start location available. Please wait while GPS 
 RoutePlanner.Optimize=Optimize Route
 RoutePlanner.OptimizeSuccessMinutes=Your route was optimized. You saved approximately {0} minutes.
 RoutePlanner.OptimizeSuccess=Your route was optimized.
-#
-# GPS
-#
 Cmd.TakeGPS=Take GPS
 GPS.PostionFound=GPS Position Found
 GPS.Error=It is not possible to find out the GPS position.
 GPS.Reason=Reason:
 Cmd.UpdateFromRecordLocation=Update using existing record data
 Cmd.UpdateFromCurrentLocation=Update using current position
-#
-# HOME FRAME
-#
 Home.BusinessPhone=Business Phone
 Home.Mobile=Mobile Phone
 Home.Phone=Phone
 Home.Web=Browse Web page
 Home.SMS=SMS
 Home.Email=E-mail
-#
-# COMMANDS
-#
 Cmd.Yes=Yes
 Cmd.No=No
 Cmd.Action=Action
@@ -235,7 +222,7 @@ Cmd.Exit=Exit
 Cmd.Sync=Sync
 Cmd.Login=Login
 Cmd.Sms=Send SMS
-#Cmd.Email=Email # Removed by Microsoft
+Cmd.Email=Email
 Cmd.Web=Open Web
 Cmd.Call=Call
 Cmd.Edit=Edit
@@ -259,53 +246,41 @@ Cmd.Remove=Remove
 Cmd.Manage=Manage
 Cmd.Download=Download
 Cmd.eSignature=eSignature
-# HomeForm
 Cmd.DownloadUpdate=Update Ready
 Cmd.Error=Sync Error
 Cmd.Online=Go Online
 Cmd.Offline=Go Offline
-#
 Cmd.Cancel=Cancel
 Cmd.WonQuote=Won Quote
 Cmd.LostQuote=Close Quote
 Cmd.CancelQuote=Cancel Quote
 Cmd.ActivateQuote=Activate Quote
 Cmd.GetProducts=Get Products
-#
 Cmd.CompleteOrder=Complete Order
 Cmd.CompletePartially=Complete Partially
 Cmd.CancelOrder=Cancel Order
-#
 Cmd.WonOpportunity=Won Opportunity
 Cmd.OutSoldOpportunity=Lost - Out Sold
 Cmd.CancelOpportunity=Lost - Canceled
-#
 Cmd.PaidFully=Paid Fully
 Cmd.PaidPartially=Paid Partially
 Cmd.CancelInvoice=Cancel Invoice
-#
 Cmd.CompleteApp=Complete Appointment
 Cmd.CancelApp=Cancel Appointment
-#
 Cmd.CallMade=Set as Made
 Cmd.CallReceived=Set as Received
 Cmd.CallCancel=Cancel Call
-#
 Cmd.ResolveCas=Resolve Case
 Cmd.CancelCas=Cancel Case
-#
 Cmd.CompleteTask=Complete Task
 Cmd.CancelTask=Cancel Task
-#
 Cmd.NewContact=New Contact
 Cmd.AddExistingContact=Add Existing Contact
 Cmd.AskContactAssigned=Contact already Assigned
 Cmd.MoveContact=Move Contact
-#
 Cmd.SaveClose=Save and Close
 Cmd.Discard=Discard Changes
 Cmd.ContinueEdit=Continue editing
-#
 Cmd.CaptureInk=Signature
 Cmd.CapturePhoto=Capture Picture
 Cmd.SelectPhoto=Choose Picture
@@ -316,9 +291,6 @@ Cmd.Clear=Clear
 Cmd.View=View
 Cmd.OpenExternal=Open
 Cmd.SendTo=Send To
-#
-# ALERT
-#
 Alert.UnableComputePrice=Unable to compute product price.
 Alert.FmtFieldNotEmpty={0} must not be empty!
 Alert.ContactAlreadyAssigned=The Contact is already assigned to this Customer
@@ -327,74 +299,44 @@ Alert.PhoneEmpty=Phone number is empty!
 Alert.EmailEmpty=E-mail address is empty!
 Alert.CantSaveWhileSync=Please wait, cannot save during sync!
 Alert.AppUpdated=Application was updated.
-#
-# Dashboard
-#
 Dashboard=Dashboard
 Dashboard.Subtitle=Quick Overview
-#
-# QualifyLead
-#
 QualifyLead.Open=Open Entities
 Cmd.Qualify=Qualify
 Cmd.DisqualifyLost=Disqualify Lost
 Cmd.DisqualifyNoContact=Disqualify No Contact
 Cmd.DisqualifyNotInterested=Disqualify Not Interested
 Cmd.DisqualifyCanceled=Disqualify Canceled
-#
-# Sync Errors
-#
 Cmd.SyncErrorRetry=Clear Error & Retry
 Cmd.SyncErrorIgnore=Clear Error & Ignore
 Cmd.SyncErrorHelp=Help - About sync errors
-Cmd.Email=Email
 Buttons.Resolve=Resolve
 SyncErrors=Sync Errors
 SyncErrors.Subtitle=List of Sync Errors
-SyncErrors.BackgroundSyncError=Background synchronization has been canceled by the operating system. The app will continue to synchronize as normal when the app is in the foreground.
-#
-# Email 
-#
 Cmd.Send=Send
 Cmd.Reply=Reply
 Cmd.ReplyAll=Reply All
 Cmd.Forward=Forward
 Alert.NoEmailRecipient=The e-mail must have at least one recipient before it can be sent!
-#
-# Convert Activity
-#
 Cmd.ConvertOpportunity=Convert To Opportunity
 Cmd.ConvertCase=Convert To Case
 ConvertActivity.FmtOpenEntity=Open {0}
 ConvertActivity.FmtCloseEntity=Close {0}
-#
-# Navigate
-#
 Cmd.NavigateTo=Navigate To
 Cmd.UpdateGPS=Update GPS
 Cmd.UpdateAddress=Update Address
-#
-# Setup
-#
 Setup.DeleteData=Delete Data
-# Following label is overriden by Microsoft
 Setup.AskDeleteData=Do you want to Delete the local Database?
-# Following label is overriden by Microsoft
 Alert.DeleteDataSuccess=Database deleted!
-# Following label is overriden by Microsoft
 Alert.DeleteDataFailure=Database delete failed!
 Alert.NoExchangeIntergration=Exchange Support not enabled in Project.\nPlease contact your System Administrator.
 Alert.NoGoogleIntergration=Google Support not enabled in Project.\nPlease contact your System Administrator.
-#
-# OpportunityClose, QuoteClose
-#
 OpportunityCloseEntity.Won=Status
 OpportunityCloseEntity.StatusCode=Status Reason
 OpportunityCloseEntity.ActualEnd=Close Date
 OpportunityCloseEntity.ActualRevenue=Actual Revenue
 OpportunityCloseEntity.Competitor=Competitor
 OpportunityCloseEntity.Description=Description
-#
 QuoteCloseEntity.Won=Status
 QuoteCloseEntity.StatusCode=Status Reason
 QuoteCloseEntity.ActualEnd=Close Date
@@ -404,7 +346,6 @@ QuoteCloseEntity.ActualRevenue=Actual Revenue
 QuoteCloseEntity.CalculateRevenue.0=Override
 QuoteCloseEntity.CalculateRevenue.1=From Quote
 QuoteCloseEntity.Description=Description
-#
 Cmd.Convert=Convert
 Cmd.Delete=Delete
 Link.ClickHere=Click Here
@@ -458,10 +399,10 @@ ApplicationDensity.480=Extra Extra High
 ApplicationDensity.640=Extra Extra Extra High
 Setup.ListButtons=List Buttons
 Setup.MaxAttachment=Max Attachment Size
+Setup.AsyncAttachmentsDownload=Async Attachments Download
 Setup.MaxSync=Max Sync Records
 Setup.SyncLogin=Sync Login
 Setup.AppLogin=App Login
-# Following label is overriden by Microsoft
 Setup.UseCrmEmail=Use Dynamics 365 Email
 Setup.Reminders=Use Reminders
 Setup.DeviceSearch=Device Search
@@ -473,10 +414,13 @@ Setup.MaxImageSize=Max Image Size
 Setup.GoogleConnect=Google
 Setup.ClientCertificate=Client Certificate
 Setup.eSignature=eSignature service provider
+Setup.ACCOUNTS=ACCOUNTS
+Setup.NETWORK=NETWORK
+Setup.APPEARANCE=APPEARANCE
+Setup.ADVANCED=ADVANCED
 Alert.TryAgain=Try Again
 Alert.CertificateAdded=Certificate added to mobileCrm
 Alert.EnterCertificatePass=Please enter password for certificate
-# Following label is overriden by Microsoft
 Alert.reqIOS8=iOS 8.0 or higher is required
 ApplicationImageSize.0=Default
 ApplicationImageSize.1=640 x 480
@@ -488,13 +432,10 @@ Setup.RecordQuality=Record Quality
 ApplicationRecordQuality.0=Low
 ApplicationRecordQuality.1=Medium
 ApplicationRecordQuality.2=High
-#
-# Login&Sync
-#
 Alert.PleaseSaveData=Please save your data first
 Alert.SyncInProgress=Synchronization in progress
 Alert.CannotSetupDuringSync=Cannot change settings during sync
-# Alert.UnableToConnect=Application was unable to connect to the external server # Removed by Microsoft
+Alert.UnableToConnect=Application was unable to connect to the external server
 Alert.InvalidURL=Invalid URL!
 Alert.InvalidPassword=Invalid Password!
 Login.AskDeleteData=You have changed the server or user. Clear local data?
@@ -503,9 +444,6 @@ Alert.CannotResolveDuringSync=Cannot resolve errors during sync!
 Alert.DeleteLocalData=Delete local database and do a full sync to apply this setting!
 Alert.DisableSyncLogin=You must disable 'Sync Login' for background sync to work!
 Alert.ApplicationWiped=Application was wiped remotely.
-#
-# Activity Views
-#
 Filter.Show=Show
 Filter.View=View
 ActivityFilter.All=All
@@ -549,18 +487,15 @@ Setup.ChangeServer=Change Server
 Cmd.TakeServer=Take Server Version
 Alert.CannotResolveInOfflineMode=You must go online to resolve the error(s) by using the server version.
 Cmd.ConvertLead=Convert To Lead
-appointment.requiredattendees=Required
 FmtDurationMinutes={0} Minutes
 Setup.CrmWebServiceVersion=Web Service
 Entity=Entity
-#ApplicationLockReason
 Alert.Lock=Locked by Security Policy
 Alert.LockExplicit=Locked by Admin
 Alert.LockAfterNoConnect=Locked - No Server Connection
 Alert.LockDuring=Locked - Outside of business hours
 Alert.LockWrongPassword=Locked - Too many Failed Logins
 Sync.Title=Synchronizing
-# View Editor
 EntityViewDefinition.Name=Name
 EntityViewDefinition.IsEnabled=Enabled
 EntityViewDefinition.Priority=Priority
@@ -568,7 +503,6 @@ EntityViewDefinition.SortProperty=Sort By
 EntityViewDefinition.SortDirection=Sort Order
 Cmd.Execute=Execute
 Cmd.PromoteAsResponse=Promote as Response
-# overrides for status change commands
 invoice.ChangeStatus.100003=Cancel Invoice
 appointment.ChangeStatus.3=Complete Appointment
 appointment.ChangeStatus.4=Cancel Appointment
@@ -576,10 +510,8 @@ phonecall.ChangeStatus.3=Cancel Call
 incident.ChangeStatus.6=Cancel Case
 task.ChangeStatus.5=Complete Task
 task.ChangeStatus.6=Cancel Task
-# Chart Aggregate methods
 FmtChart.avg=Average({0})
 FmtChart.count=Count({0})
-# Following label is overriden by Microsoft
 FmtChart.countcolumn=Count({0})
 FmtChart.sum=Sum({0})
 FmtChart.min=Minimum({0})
@@ -597,14 +529,8 @@ Setup.PrivateViews=Private Views
 View.AdvancedFind=Advanced Find
 View.SearchResults=Search Results
 View.NewView=New View
-# 
-# Sync GoingOnline
-#
 Alert.PendingOfflineChanges=Going online: You have unsynced local changes
 LoginInfo.IsCustomerMode=External User
-#
-# AdvancedFind
-#
 AdvancedFind.Condition=Condition
 AdvancedFind.Group=Group
 AdvancedFind.OrderBy=Order By
@@ -670,7 +596,6 @@ Operator.NotEqualBusinessUnit=Does Not Equal Business Unit
 Operator.In=In
 Operator.NotIn=NotIn
 Operator.EqualUserTeam=Equals Current User's Teams
-#
 ActivityFilter.Include=Include
 ActivityFilter.ThisRecord=This Record
 ActivityFilter.RelatedRecords=Related Records
@@ -699,21 +624,16 @@ Setup.ShowSystemCalendars=Personal Calendars
 SyncCalendar.0=None
 SyncCalendar.1=Export Only
 SyncCalendar.2=Sync
-#
-# Chatter
-#
 DetailView.Wall=Wall
 Chatter=Chat
 Chatter.Subtitle=What's New
 Alert.CantChatWhileSync=Please wait, cannot chat during sync!
 Alert.AnonymousUsersCantChat=Chat does not work for anonymous users.
 DetailView.Process=Process
-# Advantage Compatibility
 deal=Deal
 deal+s=Deals
 dealline=Deal Line
 dealline+s=Deal Lines
-transactioncurrency.currencyprecision=Currency Precision
 Cmd.Paste=Paste
 Cmd.Copy=Copy
 Cmd.ResizeImage=Resize Image
@@ -750,16 +670,12 @@ Cmd.IncludeAttachments=Include Attachments
 Cmd.DontIncludeAttachments=No Attachments
 Cmd.Attach=Attach...
 GmailSync=Synchronize E-mail
-#
-# Duplicate Rule Detection
-#
 Cmd.SaveAnyway=Save Anyway
 Msg.ThisRecordMightBeADuplicate=This record might duplicate one of existing records
 Msg.ViolatedRules=Violated rules
 Msg.DuplicateDetectionFailed=Duplicate detection failed
 Msg.DuplicateDetection=Detecting Duplicates...
 Setup.UseHtmlEmail=HTML Emails
-Alert.RestartUIReplacement=Restart the application to apply the UI changes.
 ServerAccount.SharePoint=SharePoint
 ServerAccount.Exchange=Exchange
 LoginInfo.ServerType=Type
@@ -808,7 +724,7 @@ Permissions=Permissions
 Cleanup=Cleanup
 Alert.GettingEmail=Getting Email
 Alert.UnableToGetEmail=Unable to get the Email
-#Alert.AskTrackattachments=Track the attachments? # Removed by Microsoft
+Alert.AskTrackAttachments=Track the attachments?
 Alert.EmailWontSaveWithoutRegarding=Email will not be saved, until the 'regarding' field is set
 Alert.DownloadAttachments=Downloading Attachments
 Alert.FmtDownloadingAttachment=Downloading '{0}'
@@ -828,10 +744,9 @@ Alert.PasswordEmpty=Password must be filled
 Alert.NewPaswordEmpty=New password cannot be empty
 Alert.PasswordsDontMatch=Confirmed password does not match the new password
 Setup.GoogleLogin=Google Login
-# Setup.ClickToLogin=Click to login # Removed by Microsoft
+Setup.ClickToLogin=Click to login
 Setup.Password=Password
-# Setup.ClickToChangePassword=Click to change password # Removed by Microsoft
-# Following label is overriden by Microsoft
+Setup.ClickToChangePassword=Click to change password
 Cmd.LookupAddress=Lookup Up Address
 Msg.SyncedNow=Synced just now
 Msg.FmtSyncedAgo=Synced {0} minutes ago
@@ -842,7 +757,6 @@ Setup.AskBeforeExit=Ask Before Exit
 Alert.AskAppExitPassive=Press Back again to Exit
 Setup.OutgoingEmailMethod=Send Email Via
 OutgoingEmailMethodType.1=Device App
-# Following label is overriden by Microsoft
 OutgoingEmailMethodType.2=Dynamics 365 Server
 OutgoingEmailMethodType.4=Exchange
 OutgoingEmailMethodType.8=Gmail
@@ -875,9 +789,7 @@ Setup.EmailSettings=Email Settings
 Setup.EmailSignature=Email Signature
 Setup.ClickToSetSignature=Click to set signature
 Setup.Signature Source=Signature Source
-Setup.ClickToLogin=Click to login
 Setup.SetSignature=Set Email Signature
-Setup.ClickToChangePassword=Click to change password
 Err.NoFolderSelected=Please select a folder to move the email to
 Gmail.Inbox=Inbox
 Gmail.Sent=Sent
@@ -892,7 +804,6 @@ Gmail.Important=Important
 Gmail.Unread=Unread
 Gmail.Draft=Draft
 Gmail.Trash=Trash
-Alert.AskTrackAttachments=Track the attachments?
 Cmd.ShowRecords=Show Records
 processflow.NextStage=Next Stage
 processflow.PrevStage=Previous Stage
@@ -912,20 +823,6 @@ Cmd.Filter=Filter
 Cmd.ClearFilter=Clear Filter
 Cmd.Move=Move to Folder
 Alert.CustomizationSecurityViolation=Customization security was violated.\nSynchronize to get the safe customization.
-resco_sharepointdoc.createdon=Created On
-resco_sharepointdoc.modifiedon=Modified On
-resco_sharepointdoc.resco_filename=File Name
-# Following label is overriden by Microsoft
-resco_sharepointdoc.resco_filesize=File Size
-resco_sharepointdoc.resco_lastmodified=Last Modified
-resco_sharepointdoc.resco_name=Title
-resco_sharepointdoc.resco_regardingid=Regarding
-resco_sharepointdoc.resco_relativepath=Relative Path
-resco_sharepointdoc.resco_revision=Revision
-resco_sharepointdoc.resco_sharepointdocid=Document ID
-resco_sharepointdoc.resco_siteid=Site ID
-resco_sharepointdoc.resco_source=Cloud Source
-resco_sharepointdoc.resco_uniqueid=Unique ID
 Cmd.Assign=Assign
 Cmd.AssignToMe=Assign To Me
 Cmd.RunMobileReport=Run Mobile Report
@@ -956,7 +853,6 @@ Msg.RepairingAppData=Repairing ApplicationData...
 Msg.CheckingUserName=Checking User Name...
 Calendar.WeekLabelFmt={0:MMMM yyyy}, Week {1}
 Calendar.MonthLabelFmt={0:MMMM yyyy}
-# Following label is overriden by Microsoft
 CantConnect=Failed to connect. Please verify your login information and check your internet connection.
 ServerLoginFailed=Server Login Failed
 ServerError=Server Error
@@ -967,16 +863,6 @@ WebRequestFailed=Web request failed
 Setup.SendInvitations=Send Invites
 Cmd.Next=Next
 Cmd.Connect=Connect
-# ConnectRescoCrm.ContactInfoSeparator=Please fill in your contact information.\n\n # Removed by Microsoft
-# ConnectRescoCrm.ConfirmPassword=Confirm Password # Removed by Microsoft
-# ConnectRescoCrm.LoginInfoSeparator=We are creating your customization profile.\nYour access information will be sent to your email shortly.\nBe patient, this may take a while. # Removed by Microsoft
-# ConnectRescoCrm.LoginInfoSeparatorStandalone=Please create a unique Organization Name & Password to access your new account.\nAll fields are required.\nBe patient, this may take a while. # Removed by Microsoft
-# ConnectRescoCrm.Sales=Sales # Removed by Microsoft
-# ConnectRescoCrm.FieldService=Field Service # Removed by Microsoft
-# ConnectRescoCrm.ConsumerApps=Consumer Apps # Removed by Microsoft
-# ConnectRescoCrm.SalesSeparator=Get opportunities, quotes, leads and other data salesmen and reps work within sales scenarios.\n # Removed by Microsoft
-# ConnectRescoCrm.FieldServiceSeparator=Get activities, cases, contacts and other data service technicians and inspectors use in field service scenarios.\n # Removed by Microsoft
-# ConnectRescoCrm.ConsumerAppsSeparator=Get order history, invoices, product overview and other information relevant to customers, partners and business allies. # Removed by Microsoft
 ConnectRescoCrm.Inspections=Inspections
 ConnectRescoCrm.InspectionsSeparator=Create custom questionnaires, dynamic forms, surveys and more. Make inspections more effective for your field staff and analyze collected data afterwards – all with one solution.
 ConnectRescoCrm.Routes=Routes
@@ -986,12 +872,10 @@ Form.LoginInformation=Login Information
 Form.ChooseScenario=Choose Scenario
 Err.FillAllFields=All fields must be filled
 Err.PasswordsMustMatch=Password and Confirm Password don't match
-Alert.UnableToConnect=Application was unable to connect to the external server
 Form.WelcomeLabel=Welcome to Resco Mobile CRM
 FirstLaunchForm.InternalUser=Internal User
 FirstLaunchForm.ExternalUser=External User
 FirstLaunchForm.SignUp=Sign Up
-FirstLaunchForm.SkipAndUseDemoData=Skip & Use Demo Data
 FirstLaunchForm.ExistingHeader=\nConnect to your existing CRM account
 FirstLaunchForm.ExistingInfo=If you are an employee connect to your company's system as "Internal User" (standard mode). If you are a customer, partner, or other affiliate connect as "External User".\nThis applies to backend systems such as, Dynamics CRM, Oracle CX, Salesforce.com & Resco CRM.
 FirstLaunchForm.CreateAccountHeader=Create a new CRM organization
@@ -1003,22 +887,13 @@ Msg.CreatingXrmOrganization=Creating customization profile
 CheckYourDeviceTime=Check your device time
 FmtClientServerTimesDifferBy=Client/Server times differ by ~{0}secs
 ConnectForm.Skip=Skip
-# ConnectRescoCrm.HowToUseTheApp=\nHow would you like to use the app? # Removed by Microsoft
 Err.NotAnEmail=Incorrect e-mail format
 Cmd.UseLastPhotoTaken=Use Last Photo Taken
 Cmd.CreateWorkOrder=Create WorkOrder
-# ConnectRescoCrm.FullName=Full Name # Removed by Microsoft
-# ConnectRescoCrm.CompanyName=Company Name # Removed by Microsoft
-# ConnectRescoCrm.Country=Country/Region # Removed by Microsoft
-resco_chattopic=Chat Channel
-resco_chattopic+s=Chat Channels
 Downloading=Downloading
 Setup.LoadExternal=Show Images
 LoginInfo.Scan=Scan QR
 Setup.PrivateDashboards=Design Dashboards
-#
-# Chat
-#
 Chat.Channels=Channels
 Chat.DirectMessages=Direct Messages
 Chat.UnreadMesage=You have unread message.
@@ -1054,9 +929,6 @@ LoginInfo.AppPasswordHelp=Please create an App Password for protecting your Offl
 Setup.MarkEmailReadAfter=Mark Email Read
 Cmd.LoadFrom=Open From...
 Cmd.LoadFromMultiple=Open Multiple From...
-#
-# PrivateDashboard
-#
 PrivateDashboard.DesignerLabel=Private Dashboards
 PrivateDashboard.DesignerContextMenuRenameCmd=Rename
 PrivateDashboard.DesignerNoData=You haven't created any private dashboard.
@@ -1079,7 +951,6 @@ PrivateDashboard.EditorOptionsViewDefaultDisplaySection=Choose the default displ
 PrivateDashboard.EditorListViewShowViewsSection=Show/hide views
 PrivateDashboard.EditorChartViewShowChartsSection=Show/hide chart views
 PrivateDashboard.EditorChartViewNoData=Chart settings are not available because there are no chart views defined for your role. Please contact your system admin for assistance.
-# Following label is overriden by Microsoft
 PrivateDashboard.EditorMapViewMessage=The map will use the same views that are selected for the list view.\r\nTo show records on the Map, you need to add GPS coordinates to your records(you need to have fields that contain the latitude and longitude coordinates in your Dynamics 365). Then, you either fill in these fields on the server, or use the 'update GPS' functionality of the app once you are at the venue.
 Home.LevelUp=Level Up
 Alert.PasswordWeak=Weak Password. Use at least 6 characters.
@@ -1088,9 +959,6 @@ Alert.GPSNotFresh=Failed to get fresh GPS location.
 Alert.TimedOut=Timed out
 DateTimePicker.Time=Time
 DateTimePicker.Date=Date
-#
-# Chart
-#
 Chart.Chart=Chart
 Chart.None=None
 Chart.Apply=Apply
@@ -1101,13 +969,9 @@ Chart.Stacked=Stacked
 Chart.Expanded=Expanded
 Chart.Stream=Stream
 Chart.StackPercentage=Stack %
-
 Login.PasswordManager=Use Password Manager
 ShortcutCreate=Creates a new {0}
 Cmd.Year=Year
-#
-#PrivateChartEditor
-#
 PrivateChartEditor.EditorMainLabel=Private Charts
 PrivateChartEditor.SelectEntityLabel=Select Entity
 PrivateChartEditor.NoData=You haven’t created any chart.
@@ -1143,7 +1007,6 @@ PrivateChartEditor.ErrorGaugeMinimal=Gauge minimum value is not selected!
 PrivateChartEditor.ErrorLimitCount=Limit value is not in correct format!
 PrivateChartEditor.ErrorSeriesField=Series field is not selected!
 PrivateChartEditor.ErrorChartStyleDonut=Donut ratio value is not within the range of 1-99!
-#
 Downloading Documents=Downloading Documents
 Getting Currencies=Getting Currencies
 PasswordManager.NotAvailable=Not Available
@@ -1152,24 +1015,10 @@ Scheduler=Scheduler
 Scheduler.Subtitle=Assign Work to Resources
 Alert.ReportRequiresOAuth=OAuth required, contact your administrator.
 Cmd.Cut=Cut
-#
-#Scheduler
-#
-Scheduler.WOS.statuscode.0=New
-Scheduler.WOS.statuscode.1=Planned
-Scheduler.WOS.statuscode.2=Traveling
-Scheduler.WOS.statuscode.3=Arrived
-Scheduler.WOS.statuscode.4=Working
-Scheduler.WOS.statuscode.5=OnBreak
-Scheduler.WOS.statuscode.6=Completed
-Scheduler.WOS.statuscode.7=Canceled
-Scheduler.WOS.statuscode.TimeOff=Time-Off
 Scheduler.Err.NoTasks=There are no tasks.
-# Following label is overriden by Microsoft
 Scheduler.Err.NoResourceIdForNewTask=New task must have valid name.
 Scheduler.Err.NotValidNewResource=Task must have valid resource.
 Scheduler.Err.NotValidTaskResource=Task has set invalid resource.
-Scheduler.Err.TaskUpdate=Task update failed.
 Scheduler.Err.TaskInConflict=Task is in conflict with another Task's time frame.
 Scheduler.Err.ResourceHasTimeOff=At the required time the resource has planned Time-Off.
 Scheduler.Err.FreeWeekend=Work scheduled during weekend.
@@ -1186,12 +1035,8 @@ Scheduler.Err.ResourceTooBusy=Resource is too busy. There is no time slot long e
 Scheduler.Err.NotValidOfficeSettings=Office settings had to be locally modified, because the values{0} exceeding supported range!
 Scheduler.Err.CouldNotAccessGoogleMaps=Could not access Google Maps services!
 Scheduler.Msg.MissingResources=Missing Resources
-Scheduler.Msg.IgnoreUnscheduledTasksNewerThan=Do not offer to schedule tasks which have been scheduled for recent N days.
-Scheduler.Msg.NoReadyWorkOrders=Nothing to schedule
 Scheduler.Msg.LoadingRestOfResources=Loading rest of resources
 Scheduler.Msg.FilteredBy=FILTERED BY:
-Scheduler.Msg.SKILLS=SKILLS
-Scheduler.Msg.TERRITORIES=TERRITORIES
 Scheduler.Msg.TimeOffs=time-offs
 Scheduler.Msg.FilteredBySkills=skills
 Scheduler.Msg.FilteredByTerritories=territories
@@ -1202,7 +1047,6 @@ Scheduler.Msg.SETTINGS=SETTINGS
 Scheduler.Msg.VIEWS=VIEWS
 Scheduler.Msg.ResourceView=Resource View
 Scheduler.Msg.ScheduledTaskView=Scheduled Task View
-Scheduler.Msg.UnscheduledTaskView=Unscheduled Task View
 Scheduler.Msg.SourceView=Source (Unscheduled Task) View
 Scheduler.Msg.FilterSettings=Filter Settings.
 Scheduler.Msg.ScheduleTitle=Manual & Auto-schedule behavior.
@@ -1211,13 +1055,9 @@ Scheduler.Msg.ShowCompleted=Show completed or canceled tasks
 Scheduler.Msg.ShowWeekends=Show weekends
 Scheduler.Msg.ShowHolidays=Show holidays
 Scheduler.Msg.ShowTimeInterval=Working hours you will use on the scheduler view
-Scheduler.Msg.StartHour=Start hour:
-Scheduler.Msg.EndHour=End hour:
 Scheduler.Msg.ApplyStatus=Apply status to whole WorkOrder
 Scheduler.Msg.TravelUnavailability=Resource Availability – task must have a gap of at least {0} minutes from the previous location and {1} minutes to the next location.
 Scheduler.Msg.OutsideWorkingHours=Working Hours - task is scheduled outside of the resource working hours.
-Scheduler.Msg.WindowStart=Start - Start should be Later or Equal to that of the Window Start.
-Scheduler.Msg.WindowEnd=End - End should be Before or Equal to that of the Window End.
 Scheduler.Msg.OverlappingTimeOffs=Resource Time-Off Overlap - task overlaps time-off scheduled.
 Scheduler.Msg.OverlappingTasks=Coinciding Schedules - task overlaps with the following tasks:
 Scheduler.Msg.MissingSkills=Qualification Skills - The Resource is missing the following skills:
@@ -1237,8 +1077,6 @@ Scheduler.Msg.AskStopAutoSchedule=Auto-schedule is working. Do you want to abort
 Scheduler.Msg.AskRunAutoSchedule=Are you sure you want to run the optimization? This process can change scheduled times and assigned resources.
 Scheduler.Msg.AskRunSemiOptimization=Are you sure you want to run the optimization? This process can change already scheduled times.
 Scheduler.Msg.MANUAL_MOVE=MANUAL MOVE
-Scheduler.Msg.SCHEDULE=SCHEDULE
-Scheduler.Msg.AUTOSCHEDULE=AUTO-SCHEDULE
 Scheduler.Msg.RULES=RULES
 Scheduler.Msg.SearchForResource=Search for Resource
 Scheduler.Msg.SearchForSource=Search for Source
@@ -1264,7 +1102,6 @@ Scheduler.Msg.AutoScheduleRules=Auto-schedule rules.
 Scheduler.Msg.AutoScheduleSave=Saving optimized tasks
 Scheduler.Msg.ShiftBetweenTask=The minimum gap between the scheduled task and current time
 Scheduler.Msg.PauseBetweenTasks=The minimum gap between tasks
-# Following label is overriden by Microsoft
 Scheduler.Msg.CalculateTravel=Use Google Maps to calculate travel times<br>(Google API Key required)
 Scheduler.Msg.REPORT=REPORT
 Scheduler.Msg.CHANGES=CHANGES
@@ -1290,10 +1127,8 @@ Scheduler.Msg.Day=day
 Scheduler.Msg.Days=days
 Scheduler.Msg.Hours=hours
 Scheduler.Msg.Minutes=minutes
-Scheduler.Msg.ClickToFilter=Click to select filter items.
 Scheduler.Msg.OldUnscheduledTasks=Before start of optimization:
 Scheduler.Msg.DoNothing=No action required
-Scheduler.Msg.SetAsUnscheduled=Set incompleted tasks as Unscheduled (past tasks)
 Scheduler.Msg.SetAsCanceled=Set incompleted tasks as Canceled (past tasks)
 Scheduler.Msg.SavingUnrealizedTasks=Saving unrealized old tasks
 Scheduler.Msg.TaskDuration=Task Duration
@@ -1322,8 +1157,6 @@ Scheduler.Msg.NewTasks=New tasks
 Scheduler.Msg.TasksWithConflict=Tasks with conflict
 Scheduler.Msg.AlreadyScheduledTasks=Already scheduled tasks
 Scheduler.Msg.SavePrompt=Do you still want to save task?
-Scheduler.Msg.SHOWALL=SHOW ALL
-Scheduler.Msg.HIDEALL=HIDE ALL
 Err.RouteNotFound=Route not found.
 Err.TimesOutOfScope=Start and end times are out of scope.
 Err.CantModifyEntity=Can't modify entity
@@ -1377,11 +1210,11 @@ Msg.Minute={0} Minute
 Msg.Minutes={0} Minutes
 Msg.Search=search
 Msg.Items=Items
+Msg.Error=Error
 Msg.CalculateAggregate=Calculate Aggregate
 Cmd.GetTodaysProducts=Get Todays Products
 Cmd.GetThisWeekProducts=Get This Week Products
 Cmd.ClearWarehouse=Clear Warehouse
-
 Setup.CallDetection=Call Detection
 Setup.CallDetection.MsgTitle=Draw over other apps permission required
 Setup.CallDetection.Accept=Accept
@@ -1405,11 +1238,9 @@ Operator.Between=Between
 Operator.NotBetween=Not Between
 Alert.SaveQuestionnaireFirst=Please close the previous questionnaire first!
 Cmd.Recalculate=Recalculate
-# Following label is overriden by Microsoft
 Sync.Warning=Warning:\nDynamics 365 sync succeeded, {0} failed.\n(The reason is logged.)
 Msg.QuestionGroupCountErr=Group '{0}' must be repeated at least {1} times.
 Cmd.DeleteExchange=Delete Exchange Email
-# Following label is overriden by Microsoft
 Cmd.DeleteInternal=Delete Dynamics 365 Email
 Cmd.DeleteBoth=Delete Both
 Alert.Merge2Entities=Please Select 2 Records
@@ -1476,18 +1307,15 @@ AdvancedFind.HideSearchConditions=Hide Search Conditions
 AdvancedFind.ShowSearchConditions=Show Search Conditions
 Setup.WebBrowser=Web Browser
 Alert.OpportunityHasOpenQuotes=Please close the active or draft quotes associated with this opportunity.
-# Cmd.Ok=OK # Removed by Microsoft
-# Msg.DemoDataInstalled=Demo data were installed.\nPress "Sync" button to start synchronizing data with your Microsoft Dynamics 365 server. # Removed by Microsoft
-# extcontact.External=External Contact # Removed by Microsoft
-# extcontact.ExternalHelpTitle=Import Contact into CRM # Removed by Microsoft
-# extcontact.ExternalHelpMessage=To resolve the E-mail address\nSelect one of matching CRM records or\nCreate a new CRM record # Removed by Microsoft
-# HelpText.Login=(CRM Login) # Removed by Microsoft
+Cmd.Ok=Ok
+Msg.DemoDataInstalled=Demo data was installed.\nPress "Sync" button to start synchronizing data with your Microsoft Dynamics 365 server.
+extcontact.External=External contact
+extcontact.ExternalHelpTitle=Import contact into CRM
+extcontact.ExternalHelpMessage=To resolve the E-mail address\nSelect one of matching CRM records or\nCreate a new CRM record
+HelpText.Login=(Dynamics 365 Login)
 Msg.ChooseEntity=Choose Entity
 SelectBTDevice.Title=Select device
 Setup.RFIDDevice=RFID Device
-# ConnectRescoCrm.PrivacyPolicyText=This form collects your name and email so that we can add you to our list of trial version users of our products and to newsletter list for awesome products and company updates. Check out our privacy note and policy for the full story on how we protect and manage your submitted data. # Removed by Microsoft
-# ConnectRescoCrm.PrivacyPolicyLink=Privacy Note and Policy # Removed by Microsoft
-# ConnectRescoCrm.PrivacyPolicyConsent=I consent to having RESCO s.r.o collect my name and email # Removed by Microsoft
 Alert.ImportBack=Do you wish to import the file into the open form?
 Sync.WarningCantUpdateApp=Application can't be updated because of Sync Errors.\nPlease resolve them and synchronize again.
 Cmd.Prev=Previous
@@ -1502,9 +1330,6 @@ Cmd.MaximizeWindow=Maximize Window
 Cmd.TearOff=Open in a New Window
 AdvancedFind.SaveAs=Save As
 AdvancedFind.SelectField=Select Field
-#
-# CheckIn
-#
 Cmd.CheckIn=Check In
 Cmd.CheckOut=Check Out
 Msg.RetrievingLocation=Retrieving location...
@@ -1551,9 +1376,40 @@ VoiceControl.CantOpen=Unable to open.
 VoiceControl.AvailableCommands=Available commands
 VoiceControl.Listening=Listening...
 Err.PasswordNotComplex=Your password must contain at least 8 characters and must include: a digit, an upper case letter, and a special character.
-#
-# F1 strings
-#
+SharePointAccount.ServerType.0=Same as Dynamics 365
+Setup.PIM=PIM
+Setup.UseSystemOAuth=Use System OAuth
+Setup.AppFolder=App Folder
+Setup.PinnedCertificates=Pinned Certificates
+FirstLaunchForm.SkipAndUseDemoData=Skip & Use Demo Data
+opportunity.estimatedvalue=Est. Revenue
+SyncErrors.BackgroundSyncError=Background synchronization has been canceled by the operating system. The app will continue to synchronize as normal when the app is in the foreground.
+Alert.RestartUIReplacement=Restart the application to apply the UI changes.
+Scheduler.WOS.statuscode.0=New
+Scheduler.WOS.statuscode.1=Planned
+Scheduler.WOS.statuscode.2=Traveling
+Scheduler.WOS.statuscode.3=Arrived
+Scheduler.WOS.statuscode.4=Working
+Scheduler.WOS.statuscode.5=OnBreak
+Scheduler.WOS.statuscode.6=Completed
+Scheduler.WOS.statuscode.7=Canceled
+Scheduler.WOS.statuscode.TimeOff=Time-Off
+Scheduler.Err.TaskUpdate=Task update failed.
+Scheduler.Msg.IgnoreUnscheduledTasksNewerThan=Do not offer to schedule tasks which have been scheduled for recent N days.
+Scheduler.Msg.NoReadyWorkOrders=Nothing to schedule
+Scheduler.Msg.SKILLS=SKILLS
+Scheduler.Msg.TERRITORIES=TERRITORIES
+Scheduler.Msg.UnscheduledTaskView=Unscheduled Task View
+Scheduler.Msg.StartHour=Start hour:
+Scheduler.Msg.EndHour=End hour:
+Scheduler.Msg.WindowStart=Start - Start should be Later or Equal to that of the Window Start.
+Scheduler.Msg.WindowEnd=End - End should be Before or Equal to that of the Window End.
+Scheduler.Msg.SCHEDULE=SCHEDULE
+Scheduler.Msg.AUTOSCHEDULE=AUTO-SCHEDULE
+Scheduler.Msg.ClickToFilter=Click to select filter items.
+Scheduler.Msg.SetAsUnscheduled=Set incompleted tasks as Unscheduled (past tasks)
+Scheduler.Msg.SHOWALL=SHOW ALL
+Scheduler.Msg.HIDEALL=HIDE ALL
 Status.Status=Status
 Alert.RegisterIoTFailure=Unable to register devices with IoT. Please try again later.
 Alert.StartTimeLaterThanEndTime=The start time must be earlier than the end time.
@@ -1603,7 +1459,6 @@ Alert.MultipleBots=Error: More than one bot has been configured by your organiza
 Alert.NoBotsReceived=Error: No bots have been configured by your organization.
 Alert.BotAuthorizing.Failure=An error occurred while attempting to authenticate with the bot. Please try again later.
 Alert.BingSpeechAuthorizing.Failure=Error: Failed to authenticate with the Bing Speech service. The speech capability will be disabled for this session. Please try re-connecting later.
-
 Cmd.CaptureMultiple=Capture Multiple
 Cmd.SelectMultiple=Choose Multiple
 Cmd.FollowUp=Follow Up
@@ -1618,131 +1473,49 @@ Cmd.ThirdPartyAttributions=Third Party Attributions
 Cmd.RegisterIoT=Register Devices
 Cmd.IoT=IoT
 Cmd.SendFeedback=Send Feedback
-
-#
-# Custom Tab Captions
-#
 msdyn_workorderincident.custom.tab=Incidents
 msdyn_workorderservicetask.custom.tab=Service Tasks
 msdyn_workorderproduct.custom.tab=Products
 msdyn_workorderservice.custom.tab=Services
 bookableresourcebooking.custom.tab=Bookings
-#
-# Custom UI Elements
-#
 Duration.Minute=minute
 Duration.Minute+s=minutes
 Duration.Hour=hour
 Duration.Hour+s=hours
 Duration.Day=day
 Duration.Day+s=days
-
-#
-# Sync Authentication
-#
-#
-SharePointAccount.ServerType.0=Same as Dynamics 365
-
-#
-# SkyMobile
-#
 Setup.DefaultEmailSignature=Sent from {0}
 Setup.EnableGlympse=Enable Glympse
 Setup.LastMinimumVersionCheck=Last Minimum Version Check
 Setup.AllowCookies=Allow Cookies
 Alert.SkyMobile_ContainsRestrictedEntity=Your customization contains an entity ({0}) that can't be used. Please contact your administrator.
 Alert.SkyMobile_ContainsMoreThan10CustomEntities=Your customization contains {0} custom entities. You can only have up to 10 custom entities. Please contact your administrator.
-#
-
-#
-# SkyMobileConsentForm
-#
 SkyMobileConsentForm.FormTitle=Field Service Mobile Consent
 SkyMobileConsentForm.ConsentAgreementTitle=PLEASE READ AND ACCEPT
 SkyMobileConsentForm.ConsentAgreementMessage=Your trial has expired. To use this Field Service App, you need to agree to the terms and conditions listed below:
 SkyMobileConsentForm.AcceptConfirmation=Acceptance Confirmation
-
-#
-# Label
 UniqueNumber.UndefinedUntilSynchronizedWithServer=Undefined (until synchronization with server)
 annotation.Note.Title=Note created on {0}
-#
-
-# Tab labels
-bookableresourcebooking.DetailView.Booking=Booking
-msdyn_customerasset.DetailView.Connected Devices=Connected Devices
-msdyn_customerasset.DetailView.Sub Assets=Sub Assets
-msdyn_iotalert.DetailView.Customer Asset=Customer Asset
-msdyn_iotalert.DetailView.Hierarchy=Hierarchy
-msdyn_iotdevice.DetailView.Commands=Commands
-msdyn_iotdevice.DetailView.Settings=Settings
-msdyn_iotdevice.DetailView.Status=Status
-msdyn_workorder.DetailView.Signature=Signature
 msdyn_workorder.Signature.Signature=Signature
-msdyn_workorder.DetailView.Other=Other
-msdyn_workorder.DetailView.Incidents=Incidents
-msdyn_workorder.DetailView.Service Tasks=Service Tasks
-msdyn_workorder.DetailView.Products=Products
-msdyn_workorder.DetailView.Services=Services
-msdyn_workorder.DetailView.Bookings=Bookings
-msdyn_workorder.DetailView.Address=Address
 DetailView.Map=Map
 DetailView.Estimate=Estimate
 DetailView.Pricing=Pricing
-
-# Bookable Resource Booking views
 View.Bookings=Bookings
 View.BookingList=List of bookings
-
-# Services views
 View.ServiceList=Services list
 View.DetailedServiceList=Detailed list of services
-
-# Service tasks views
 View.ServiceTaskList=Service task list
 View.DetailedServiceTaskList=Detailed service task list
-
-# Incidents views
 View.IncidentList=Incident list
 View.DetailedIncidentList=Detailed incident list
-
-# Products views
 View.ProductList=Product list
 View.DetailedProductList=Detailed product list
-
-# Work Order views
-msdyn_workorder.View.WorkOrderList=Work Orders
-
-# Wait dialog messages
 Msg.PleaseWait=Please Wait...
-
-# Setup form messages
 Msg.RestartNeeded=You must restart the application now.
-HelpText.Login=(Dynamics 365 Login)
-
-# App database messages
-Msg.DemoDataInstalled=Demo data was installed.\nPress "Sync" button to start synchronizing data with your Microsoft Dynamics 365 server.
-
-# Generic "Error" text
-Msg.Error=Error
-
-# Ok button text
-Cmd.Ok=Ok
-
-# Glympse labels
 Glympse.PlatformNotSupported=Glympse is not supported on this platform.
 Glympse.InvalidCredentialsError=Your Glympse credentials in Dynamics 365 are invalid. Contact your system administrator to resolve this, and then try enabling Glympse again.
 Glympse.LocationUseDescription=Tracking location for Glympse.
-
-# Woodford Labels
 Alert.RecordHasBeenDeleted=This record has been removed. Please synchronize your data and contact your dispatcher if you have any questions.
-
-# Overrides
-bookableresourcebooking=Booking
-bookableresourcebooking+s=Bookings
-bookableresourcebooking.bookableresourcebookingid=Booking
-
-# iOS plist file labels
 NSLocationAlwaysUsageDescription=Your organization is requesting access to the location of your device at all times.
 NSLocationAlwaysAndWhenInUseUsageDescription=Your organization is requesting access to the location of your device at all times. 
 NSLocationWhenInUseUsageDescription=This app needs the location of your device while it is being used to enable in-app map features and, if configured by your organization, to share your device's location with your organization.
@@ -1756,27 +1529,11 @@ NSMotionUsageDescription=We'll only access your motion data for features in this
 kTCCServiceMediaLibrary=This app will access your media library when you want to include your media as notes in this app.
 NSFaceIDUsageDescription=This app will use Face ID to login to your Dynamics 365 organization.
 NSBluetoothPeripheralUsageDescription=This app needs to find nearby devices.
-
-# Setup form 
-Setup.ACCOUNTS=ACCOUNTS
-Setup.NETWORK=NETWORK
-Setup.APPEARANCE=APPEARANCE
-Setup.PIM=PIM
-Setup.ADVANCED=ADVANCED
 Setup.CertificateNone=(none)
 Setup.General=General
 Setup.Data=Data
-
-# Views
 View.Default=Default
-
-# Attachment view
 annotation.Attachment.Signature=Signature
-
-# External Contact view
-extcontact.External=External contact
-extcontact.ExternalHelpTitle=Import contact into CRM
-extcontact.ExternalHelpMessage=To resolve the E-mail address\nSelect one of matching CRM records or\nCreate a new CRM record
 extcontact.Mobile=Mobile phone
 extcontact.PhoneWork=Work phone
 extcontact.PhoneHome=Home phone
@@ -1790,42 +1547,17 @@ extcontact.firstname=First name
 extcontact.nickname=Nickname
 extcontact.jobtitle=Job Title
 extcontact.organization=Organization
-msdyn_3dmodel.DetailView.3D_Viewer=3D Viewer
-
-#HTML Title
 Title.Viewer3D=Three-Dimensional Model Viewer
-
 Alert.NoBarcode=No barcode
 Alert.BadBarcode=No Customer Asset was found for the code scanned. Synchronize your device with the server and try again.
 Cmd.ScanCustomerAsset=Scan Customer Asset
 ScanCustomerAsset=Scan Customer Asset
 Login=Sign in
 LoginForm.Caption=Sign in
-
-# Connection form 
-connection=Associate Device
-connection.record2id=Device
-
-# IoT Device form
-msdyn_iotdevice.msdyn_devicereportedproperties=Device Reported Properties
-msdyn_iotdevice.msdyn_devicesettings=Device Settings
-msdyn_iotdevice.msdyn_tags=Device Tags
-
-# IoT Alert form
-msdyn_iotalert.msdyn_alertdata=Alert Data
-
-# IoT Command form
-msdyn_iotdevicecommand.msdyn_message=Message
-
-# Setup form 
-Setup.UseSystemOAuth=Use System OAuth
 Setup.DisableSyncAnalyzer=Disable Sync Analyzer
-Setup.AsyncAttachmentsDownload=Async Attachments Download
 Setup.DiagnosticScripts=Diagnostic Scripts
 Setup.DiagnosticScriptsImport=Diagnostic Scripts Import
 Setup.EnableTelemetry=Enable Telemetry
-Setup.PinnedCertificates=Pinned Certificates
-Setup.AppFolder=App Folder
 Setup.ACCOUNT=ACCOUNT
 Setup.AdditionalLogging=Additional Logging
 Setup.LOCATIONTRACKING=LOCATION TRACKING
@@ -1835,15 +1567,9 @@ Setup.BookingTimeWindow=Booking Time Window
 BookingTimeWindow.0=Normal
 BookingTimeWindow.1=Expanded
 Setup.NetworkLogging=Network Logging
-
-# Work Order Service Task form
 msdyn_workorderservicetask.msdyn_guideid=Guide
-
-# Setup -> show map dropdown
 AppMapProvider.0=Default
 AppMapProvider.1=MapBox
-
-# Barcode scanner
 BarcodeScanner.Cancel=Cancel
 BarcodeScanner.Flash=Flash
 BarcodeScanner.CameraUnsupported=Unable to start camera for scanning
@@ -1851,16 +1577,11 @@ BarcodeScanner.BTScannerConnecting=Connecting...
 BarcodeScanner.BTScannerConnected=Connected
 BarcodeScanner.BTScannerConnectionFailed=Connection failed
 BarcodeScanner.BTScannerDisconnected=Disconnected
-
-# Workflow actions
 Alert.UnsupportedRequest=This request is only valid for Dynamics 365.
 Alert.NoServerResponse=The server has not returned a valid response.
 Alert.InvalidWorkflowActionParameters=Configuration error: the input parameters for the workflow action were invalid.
-
-# Audio permission denied
 Alert.AudioPermissionDenied=Unable to access the microphone. Please check the application's permissions in settings.
 Alert.NoMicrophoneDetected=No Microphone Detected!
-
 Alert.SyncCompleteDetailed=Your organization has received any changes you made. You are now both in sync.
 Feedback=Feedback
 Feedback.EnterBelowHeader=----- ENTER FEEDBACK BELOW -----
@@ -1929,14 +1650,10 @@ Cmd.CopyAddressAndSend=Copy Address and Send
 Msg.SendMailPopUpMessage=Clicking 'Copy Address and Send' will copy the email address of your organization's default log recipient ({0}) to your clipboard and open a pop-up where you can select an email client to send the log from. Right-click in the To line of the email and select Paste to enter the email you have copied.
 Msg.SendEmailShareDescription=Select an email client below and send the log to {0}.
 Msg.SendEmailShareDescriptionNoAddress=Select an email client to send the log from. For Microsoft Support, send the email to fsmobilesupport@microsoft.com.
-# JS Bridge
 Alert.FailedToDetectInternetConnectivity=Unable to determine if your device has an Internet connection.
-# Remote Assist actions
 Alert.RA_AppNotFound=Remote Assist Mobile must be installed to use this feature.
 Alert.NetworkTrafficAlert=Your network traffic will be logged locally.
 Alert.OpenHoloLensToSeeGuideofServiceTask=Login to the Dynamics 365 Guides App on the HoloLens to view.
-# Crew feature
 Alert.YouAreTheCrewLeader=You are the crew leader for this booking. Your changes can affect the bookings of other crew members. 
 Alert.YouAreACrewMember=You are a crew member for this booking. Certain fields have been made read-only as your crew leader will manage them for you.
-# Dynamics 365 Auth
 Alert.GetAuthUrlFromRedirect=Host {0} is unreachable
