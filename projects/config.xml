@@ -9,7 +9,7 @@
 			<mobileprojecttemplate id="resco:XrmDefault" displayname="Sales" target="Xrm" url="config/mobileprojects/xrm/default.zip.xml" />
 			<mobileprojecttemplate id="resco:XrmService" displayname="Field Service - Manager" target="Xrm" url="config/mobileprojects/xrm/defaultservice.zip.xml" />
 			<mobileprojecttemplate id="resco:XrmServiceTechnician" displayname="Field Service - Field Worker" target="Xrm" url="config/mobileprojects/xrm/defaultservicetechnician.zip.xml" />
-			<mobileprojecttemplate id="resco:XrmEssential" displayname="Essential" target="Xrm" url="config/mobileprojects/xrm/essential.zip.xml" />
+			<mobileprojecttemplate id="resco:XrmEssential" displayname="Resco Essential" target="Xrm" url="config/mobileprojects/xrm/essential.zip.xml" />
 			<mobileprojecttemplate id="resco:XrmSimple" displayname="Simple Sales" target="Xrm" url="config/mobileprojects/xrm/defaultsimple.zip.xml" />
 			<mobileprojecttemplate id="resco:XrmCustomer" displayname="External Customer" target="Xrm" url="config/mobileprojects/xrm/defaultcustomer.zip.xml" />
 			<mobileprojecttemplate id="resco:XrmCityOperator" displayname="City - Operator" target="Xrm" url="config/mobileprojects/xrm/cityoperator.zip.xml" />
