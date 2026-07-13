@@ -1,0 +1,8 @@
+﻿V1
+T;;240;216
+S;Manufacturer;0;large10;16;8;224;24;5
+S;ProductTitle;0;large14;16;32;224;32;5
+S;ProductSubTitle;0;large10;16;64;224;22;5
+S;PoweredBy;0;large10;16;90;224;36;5
+I;Icon;0;ImageCellStyle;16;130;208;36;5
+S;Website;0;large10;16;180;224;36;5
