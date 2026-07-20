@@ -1,0 +1,6 @@
+﻿V1
+T;;240;40
+S;Label;0;primary;8;2;166;24;13
+S;Operation;0;r_currency;174;2;60;24;9
+S;EntityLocalizedName;0;gray;8;26;92;11;5
+S;ExceptionText;0;gray;100;26;134;11;13
