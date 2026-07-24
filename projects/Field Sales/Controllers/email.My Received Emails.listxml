@@ -28,13 +28,15 @@
   <Kind>List</Kind>
   <IsDefault>true</IsDefault>
   <AutoWideWidth>0</AutoWideWidth>
-  <OrderBy>!createdon</OrderBy>
+  <OrderBy>!modifiedon</OrderBy>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;SharedVariable usage="None"&gt;&lt;Name&gt;sharedVarModifiedOn&lt;/Name&gt;&lt;CrmType&gt;String&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <SerializedBindings>
     <string>statecode</string>
     <string>createdon</string>
     <string>scheduledend</string>
     <string>activityid</string>
     <string>from</string>
+    <string>modifiedon</string>
     <string>ownerid</string>
     <string>regardingobjectid</string>
     <string>scheduledstart</string>
@@ -42,13 +44,14 @@
     <string>subject</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
+  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.sharedVarModifiedOn&lt;/var&gt;&lt;func&gt;FormatSingle&lt;/func&gt;&lt;arg&gt;String:{0:g}&lt;/arg&gt;&lt;arg&gt;var:Entity.modifiedon&lt;/arg&gt;&lt;/function&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
   <Fetch version="1.0">
     <entity name="email">
       <filter type="and">
         <condition attribute="statuscode" operator="eq" value="4"/>
         <condition attribute="directioncode" operator="eq" value="0"/>
       </filter>
-      <link-entity name="activityparty" from="activityid" to="activityid" link-type="inner">
+      <link-entity name="activityparty" from="activityid" to="activityid" link-type="inner" alias="L0">
         <filter type="and">
           <condition attribute="participationtypemask" operator="in">
             <value>3</value>
@@ -59,34 +62,67 @@
       </link-entity>
     </entity>
   </Fetch>
+  <Search>
+    <attribute schema="subject" method="Contains"/>
+  </Search>
   <SerializedTemplates>
     <RowTemplate>
       <DesignWidth>320</DesignWidth>
       <DesignHeight>48</DesignHeight>
       <Name>Default</Name>
       <Width>320</Width>
-      <Height>67</Height>
+      <Height>70</Height>
+      <NextTemplateName>800px</NextTemplateName>
       <SerializedChildren>
         <CellTemplate SchemaName="subject">
           <StyleName>primary</StyleName>
-          <Bounds>20,12,280,20</Bounds>
+          <Bounds>10,10,300,30</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="from">
           <StyleName>gray</StyleName>
-          <Bounds>20,36,180,16</Bounds>
+          <Bounds>10,40,180,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="createdon">
+        <CellTemplate SchemaName="sharedVarModifiedOn">
           <StyleName>r_gray</StyleName>
-          <Bounds>200,36,100,16</Bounds>
+          <Bounds>190,40,120,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>800px</Name>
+      <Width>800</Width>
+      <Height>50</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="subject">
+          <StyleName>primary</StyleName>
+          <Bounds>10,10,400,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="from">
+          <StyleName>primary</StyleName>
+          <Bounds>420,10,200,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="sharedVarModifiedOn">
+          <StyleName>primary right</StyleName>
+          <Bounds>630,10,160,30</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
   </SerializedTemplates>
-  <CustomProperties/>
+  <CustomProperties>
+    <SerializedClassBinding name="sharedVarModifiedOn" label="Shared.sharedVarModifiedOn" type="String"/>
+  </CustomProperties>
 </EntityList>

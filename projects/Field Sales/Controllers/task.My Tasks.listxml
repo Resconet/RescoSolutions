@@ -36,31 +36,63 @@
       </filter>
     </entity>
   </Fetch>
+  <Search>
+    <attribute schema="subject" method="Contains"/>
+  </Search>
   <SerializedTemplates>
     <RowTemplate>
       <DesignWidth>320</DesignWidth>
       <DesignHeight>48</DesignHeight>
       <Name>Default</Name>
       <Width>320</Width>
-      <Height>67</Height>
-      <Buttons>Delete</Buttons>
+      <Height>70</Height>
+      <NextTemplateName>800px</NextTemplateName>
+      <Buttons>none</Buttons>
       <SerializedChildren>
         <CellTemplate SchemaName="subject">
           <StyleName>primary</StyleName>
-          <Bounds>20,12,280,20</Bounds>
+          <Bounds>10,10,300,30</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="scheduledend">
-          <StyleName>gray</StyleName>
-          <Bounds>20,36,180,16</Bounds>
-          <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
-        </CellTemplate>
-        <CellTemplate SchemaName="statuscode">
+        <CellTemplate SchemaName="#DateLabel">
           <StyleName>r_gray</StyleName>
-          <Bounds>200,36,100,16</Bounds>
+          <Bounds>150,40,160,20</Bounds>
           <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="regardingobjectid">
+          <StyleName>link</StyleName>
+          <Bounds>10,40,140,20</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>800px</Name>
+      <Width>800</Width>
+      <Height>50</Height>
+      <Buttons>none</Buttons>
+      <SerializedChildren>
+        <CellTemplate SchemaName="subject">
+          <StyleName>primary</StyleName>
+          <Bounds>10,10,300,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#DateLabel">
+          <StyleName>primary right</StyleName>
+          <Bounds>580,10,210,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="regardingobjectid">
+          <StyleName>primary link</StyleName>
+          <Bounds>320,10,250,30</Bounds>
+          <CellKind>4</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
       </SerializedChildren>

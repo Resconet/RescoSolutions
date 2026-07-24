@@ -1,12 +1,18 @@
-﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="1" fleximode="2" fullscreen="0" resize="0" version="2" layoutstrict="1" singlecardexpand="0" pagesposition="1" pageiconposition="0">
   <IsContactForm>false</IsContactForm>
   <EntityName>incident</EntityName>
   <CamelCase>Incident</CamelCase>
+  <WorkflowLoad>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Form.statuscode.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/Workflow&gt;</WorkflowLoad>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
+  <CacheMode>-1</CacheMode>
+  <UiSyncGuardMode>-1</UiSyncGuardMode>
   <PrimaryCommands>!defcmd</PrimaryCommands>
+  <SharedVariableNames/>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
   <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
-      <Name>General</Name>
+    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>DETAILS</Name>
       <SerializedChildren>
         <DetailItem SchemaName="title"/>
         <DetailItem SchemaName="customerid"/>
@@ -14,7 +20,7 @@
           <IsConstant>true</IsConstant>
         </DetailItem>
         <DetailItem SchemaName="subjectid"/>
-        <DetailItem SchemaName="prioritycode"/>
+        <DetailItem SchemaName="prioritycode" Style="Priority Horizontal RadioButton"/>
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
           <IsConstant>true</IsConstant>
         </DetailItem>
@@ -23,16 +29,40 @@
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
           <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="statuscode"/>
+        <DetailItem SchemaName="$Table1" grid="true">
+          <Columns>*;*</Columns>
+          <Rows>Auto;Auto</Rows>
+          <Items>
+            <DetailItem SchemaName="statecode">
+              <GridPosition>0;0;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="statuscode">
+              <GridPosition>1;0;1;1</GridPosition>
+            </DetailItem>
+          </Items>
+        </DetailItem>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
-      <Name>Activity List</Name>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="6" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\activity@2x.png" IsIconNameReadOnly="0">
+      <Name>ACTIVITIES</Name>
+      <CustomName>ACTIVITIES</CustomName>
       <Binding SchemaName="activity.regardingobjectid"/>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeader="2" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
-      <Name>Notes List</Name>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="6" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
+      <Name>NOTES</Name>
+      <CustomName>NOTES</CustomName>
       <Binding SchemaName="annotation.objectid"/>
     </FormTab>
   </SerializedChildrenV2>
+  <FormPages>
+    <FormPages layoutstrict="1" singlecardexpand="0" fleximode="2" iconposition="0">
+      <Name>DETAILS</Name>
+      <IconName></IconName>
+      <TabIndexes>
+        <int>0</int>
+        <int>1</int>
+        <int>2</int>
+      </TabIndexes>
+    </FormPages>
+  </FormPages>
 </EntityForm>

@@ -1,27 +1,55 @@
-﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="0" fullscreen="0" resize="0" version="2" layoutstrict="0" singlecardexpand="0">
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="1" fleximode="2" fullscreen="0" resize="0" version="2" layoutstrict="1" singlecardexpand="0" pagesposition="1" pageiconposition="0">
   <IsContactForm>false</IsContactForm>
   <EntityName>phonecall</EntityName>
   <CamelCase>PhoneCall</CamelCase>
+  <WorkflowLoad>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Form.statuscode.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/Workflow&gt;</WorkflowLoad>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <IsBulkUpdateForm>false</IsBulkUpdateForm>
   <CacheMode>-1</CacheMode>
   <UiSyncGuardMode>-1</UiSyncGuardMode>
   <PrimaryCommands>!defcmd</PrimaryCommands>
+  <SharedVariableNames/>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
   <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
-      <Name>General</Name>
+    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>DETAILS</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="regardingobjectid"/>
         <DetailItem SchemaName="subject"/>
+        <DetailItem SchemaName="regardingobjectid"/>
+        <DetailItem SchemaName="description"/>
+        <DetailItem SchemaName="directioncode" Style="Checkbox"/>
+        <DetailItem SchemaName="prioritycode" Style="Priority Horizontal RadioButton"/>
+        <DetailItem SchemaName="scheduledstart"/>
         <DetailItem SchemaName="scheduledend"/>
-        <DetailItem SchemaName="actualdurationminutes"/>
-        <DetailItem SchemaName="directioncode"/>
-        <DetailItem SchemaName="description" hasOCREnabled="true" OCRReferenceImage="Do not save"/>
+        <DetailItem SchemaName="scheduleddurationminutes"/>
+        <DetailItem SchemaName="$Table1" grid="true">
+          <Columns>*;*</Columns>
+          <Rows>Auto</Rows>
+          <Items>
+            <DetailItem SchemaName="statecode">
+              <GridPosition>0;0;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="statuscode">
+              <GridPosition>1;0;1;1</GridPosition>
+            </DetailItem>
+          </Items>
+        </DetailItem>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="3" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
-      <Name>Notes List</Name>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="6" flexiWidth="1" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
+      <Name>NOTES</Name>
+      <CustomName>NOTES</CustomName>
       <Binding SchemaName="annotation.objectid"/>
     </FormTab>
   </SerializedChildrenV2>
+  <FormPages>
+    <FormPages layoutstrict="1" singlecardexpand="0" fleximode="2" iconposition="0">
+      <Name>DETAILS</Name>
+      <IconName></IconName>
+      <TabIndexes>
+        <int>0</int>
+        <int>1</int>
+      </TabIndexes>
+    </FormPages>
+  </FormPages>
 </EntityForm>

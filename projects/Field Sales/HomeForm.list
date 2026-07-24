@@ -35,17 +35,18 @@
           <DesignHeight>48</DesignHeight>
           <Name>Menu item</Name>
           <Width>320</Width>
-          <Height>44</Height>
+          <Height>50</Height>
+          <SerializedBackground>inverseOnSurface</SerializedBackground>
           <SerializedChildren>
             <CellTemplate SchemaName="#Icon">
               <StyleName>homeicon</StyleName>
-              <Bounds>16,10,24,24</Bounds>
+              <Bounds>10,10,30,30</Bounds>
               <CellKind>1</CellKind>
               <Anchor>5</Anchor>
             </CellTemplate>
             <CellTemplate SchemaName="#Title">
               <StyleName>primary</StyleName>
-              <Bounds>54,7,243,30</Bounds>
+              <Bounds>55,10,255,30</Bounds>
               <CellKind>0</CellKind>
               <Anchor>12</Anchor>
             </CellTemplate>
@@ -56,11 +57,12 @@
           <DesignHeight>48</DesignHeight>
           <Name>Section</Name>
           <Width>320</Width>
-          <Height>57</Height>
+          <Height>40</Height>
+          <SerializedBackground>inverseOnSurface</SerializedBackground>
           <SerializedChildren>
             <CellTemplate SchemaName="#SectionTitle">
               <StyleName>SectionTitleText</StyleName>
-              <Bounds>16,14,288,28</Bounds>
+              <Bounds>20,5,290,30</Bounds>
               <CellKind>0</CellKind>
               <Anchor>13</Anchor>
             </CellTemplate>

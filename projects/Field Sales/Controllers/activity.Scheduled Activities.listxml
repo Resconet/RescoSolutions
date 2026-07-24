@@ -15,12 +15,15 @@
   <Name>Scheduled Activities</Name>
   <Kind>List</Kind>
   <AutoWideWidth>0</AutoWideWidth>
-  <OrderBy>scheduledstart</OrderBy>
+  <OrderBy>!scheduledend</OrderBy>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <SerializedBindings>
     <string>activityid</string>
     <string>statecode</string>
+    <string>activitytypecode</string>
     <string>scheduledend</string>
     <string>ownerid</string>
+    <string>prioritycode</string>
     <string>regardingobjectid</string>
     <string>scheduledstart</string>
     <string>statuscode</string>
@@ -35,7 +38,7 @@
     </entity>
   </Fetch>
   <Search>
-    <attribute schema="subject" method="BeginsWith"/>
+    <attribute schema="subject" method="Contains"/>
   </Search>
   <SerializedTemplates>
     <RowTemplate>
@@ -43,31 +46,77 @@
       <DesignHeight>48</DesignHeight>
       <Name>Default</Name>
       <Width>320</Width>
-      <Height>67</Height>
+      <Height>70</Height>
+      <NextTemplateName>800px</NextTemplateName>
       <SerializedChildren>
         <CellTemplate SchemaName="subject">
           <StyleName>primary</StyleName>
-          <Bounds>60,12,240,20</Bounds>
+          <Bounds>75,10,235,30</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="#Icon">
           <StyleName>ImageCellStyle</StyleName>
-          <Bounds>15,14,30,30</Bounds>
+          <Bounds>20,10,30,30</Bounds>
           <CellKind>1</CellKind>
-          <Anchor>5</Anchor>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="regardingobjectid">
+          <StyleName>link</StyleName>
+          <Bounds>75,40,100,20</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="activitytypecode">
+          <StyleName>caption</StyleName>
+          <Bounds>0,43,70,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>6</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="#DateLabel">
-          <StyleName>gray</StyleName>
-          <Bounds>60,38,240,16</Bounds>
+          <StyleName>r_gray</StyleName>
+          <Bounds>175,40,135,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>800px</Name>
+      <Width>800</Width>
+      <Height>50</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="subject">
+          <StyleName>primary</StyleName>
+          <Bounds>75,10,300,30</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="statecode">
+        <CellTemplate SchemaName="#Icon">
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>20,2,30,30</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="regardingobjectid">
+          <StyleName>primary link</StyleName>
+          <Bounds>385,10,195,30</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="activitytypecode">
           <StyleName>caption</StyleName>
-          <Bounds>0,46,60,13</Bounds>
+          <Bounds>0,33,70,12</Bounds>
           <CellKind>0</CellKind>
           <Anchor>6</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#DateLabel">
+          <StyleName>primary right</StyleName>
+          <Bounds>590,10,200,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>

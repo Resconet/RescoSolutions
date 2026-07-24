@@ -1,32 +1,63 @@
-﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2" layoutstrict="1" singlecardexpand="0">
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="1" fleximode="0" fullscreen="0" resize="0" version="2" layoutstrict="1" singlecardexpand="0" pagesposition="1" pageiconposition="0">
   <IsContactForm>false</IsContactForm>
   <EntityName>productpricelevel</EntityName>
   <CamelCase>productpricelevel</CamelCase>
+  <WorkflowLoad>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.DETAILS.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/Workflow&gt;</WorkflowLoad>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <IsBulkUpdateForm>false</IsBulkUpdateForm>
   <CacheMode>-1</CacheMode>
   <UiSyncGuardMode>-1</UiSyncGuardMode>
   <PrimaryCommands>!defcmd</PrimaryCommands>
+  <SharedVariableNames/>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand OnExecuteButton</EnabledWorkflows>
   <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
-      <Name>General</Name>
+    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>DETAILS</Name>
       <SerializedChildren>
         <DetailItem SchemaName="pricelevelid"/>
         <DetailItem SchemaName="productid"/>
-        <DetailItem SchemaName="uomid"/>
-        <DetailItem SchemaName="roundingoptioncode"/>
-        <DetailItem SchemaName="roundingpolicycode"/>
-        <DetailItem SchemaName="roundingoptionamount"/>
-        <DetailItem SchemaName="quantitysellingcode"/>
-        <DetailItem SchemaName="pricingmethodcode"/>
-        <DetailItem SchemaName="percentage"/>
-        <DetailItem SchemaName="modifiedon"/>
-        <DetailItem SchemaName="discounttypeid"/>
-        <DetailItem SchemaName="transactioncurrencyid"/>
-        <DetailItem SchemaName="createdon"/>
         <DetailItem SchemaName="amount"/>
-        <DetailItem SchemaName="productpricelevelid"/>
+        <DetailItem SchemaName="uomid"/>
+        <DetailItem SchemaName="$Table1" grid="true">
+          <Columns>*;*</Columns>
+          <Rows>Auto;Auto;Auto;Auto</Rows>
+          <Items>
+            <DetailItem SchemaName="roundingoptioncode">
+              <GridPosition>0;0;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="roundingpolicycode">
+              <GridPosition>1;0;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="roundingoptionamount">
+              <GridPosition>0;1;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="quantitysellingcode">
+              <GridPosition>1;1;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="pricingmethodcode">
+              <GridPosition>0;2;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="percentage">
+              <GridPosition>1;2;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="discounttypeid">
+              <GridPosition>0;3;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="transactioncurrencyid">
+              <GridPosition>1;3;1;1</GridPosition>
+            </DetailItem>
+          </Items>
+        </DetailItem>
       </SerializedChildren>
     </FormTab>
   </SerializedChildrenV2>
+  <FormPages>
+    <FormPages layoutstrict="1" singlecardexpand="0" fleximode="0" iconposition="0">
+      <Name>DETAILS</Name>
+      <IconName></IconName>
+      <TabIndexes>
+        <int>0</int>
+      </TabIndexes>
+    </FormPages>
+  </FormPages>
 </EntityForm>

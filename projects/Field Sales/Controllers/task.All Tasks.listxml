@@ -15,7 +15,8 @@
   <Name>All Tasks</Name>
   <Kind>List</Kind>
   <AutoWideWidth>0</AutoWideWidth>
-  <OrderBy>subject</OrderBy>
+  <OrderBy>!scheduledend</OrderBy>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <SerializedBindings>
     <string>statecode</string>
     <string>scheduledend</string>
@@ -27,31 +28,89 @@
     <string>activityid</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
+  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statecode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;State:0&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Row. .Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:color / danger&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statecode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;State:1&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Row. .Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:color / success&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statecode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;State:2&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Row. .Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:color / primary&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <Search>
+    <attribute schema="subject" method="Contains"/>
+  </Search>
   <SerializedTemplates>
     <RowTemplate>
       <DesignWidth>320</DesignWidth>
       <DesignHeight>48</DesignHeight>
       <Name>Default</Name>
       <Width>320</Width>
-      <Height>67</Height>
+      <Height>70</Height>
+      <NextTemplateName>800px</NextTemplateName>
       <SerializedChildren>
         <CellTemplate SchemaName="subject">
           <StyleName>primary</StyleName>
-          <Bounds>20,12,280,20</Bounds>
+          <Bounds>70,10,240,30</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="scheduledend">
-          <StyleName>gray</StyleName>
-          <Bounds>20,36,180,16</Bounds>
-          <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
-        </CellTemplate>
-        <CellTemplate SchemaName="statuscode">
+        <CellTemplate SchemaName="#DateLabel">
           <StyleName>r_gray</StyleName>
-          <Bounds>200,36,100,16</Bounds>
+          <Bounds>170,40,140,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="regardingobjectid">
+          <StyleName>link</StyleName>
+          <Bounds>70,40,100,20</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName=" ">
+          <IsConstant>true</IsConstant>
+          <StyleName>color / primary</StyleName>
+          <Bounds>20,15,20,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statecode">
+          <StyleName>caption</StyleName>
+          <Bounds>0,43,60,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>800px</Name>
+      <Width>800</Width>
+      <Height>50</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="subject">
+          <StyleName>primary</StyleName>
+          <Bounds>70,10,300,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#DateLabel">
+          <StyleName>primary right</StyleName>
+          <Bounds>590,10,200,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="regardingobjectid">
+          <StyleName>primary link</StyleName>
+          <Bounds>380,10,200,30</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName=" ">
+          <IsConstant>true</IsConstant>
+          <StyleName>color / primary</StyleName>
+          <Bounds>20,8,20,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statecode">
+          <StyleName>caption</StyleName>
+          <Bounds>0,33,60,12</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>4</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>

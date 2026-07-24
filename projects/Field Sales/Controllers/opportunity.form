@@ -1,75 +1,123 @@
-﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="0" fullscreen="0" resize="0" version="2" layoutstrict="0" singlecardexpand="0">
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="1" fleximode="2" fullscreen="0" resize="0" version="2" layoutstrict="1" singlecardexpand="0" pagesposition="1" pageiconposition="0">
   <IsContactForm>false</IsContactForm>
   <EntityName>opportunity</EntityName>
   <CamelCase>Opportunity</CamelCase>
+  <WorkflowLoad>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Form.statuscode.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/Workflow&gt;</WorkflowLoad>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <IsBulkUpdateForm>false</IsBulkUpdateForm>
   <CacheMode>-1</CacheMode>
   <UiSyncGuardMode>-1</UiSyncGuardMode>
   <PrimaryCommands>!defcmd</PrimaryCommands>
+  <SharedVariableNames/>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
   <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
-      <Name>General</Name>
+    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>DETAILS</Name>
       <SerializedChildren>
+        <DetailItem SchemaName="name">
+          <GridPosition>0;0;2;1</GridPosition>
+        </DetailItem>
+        <DetailItem SchemaName="customerid">
+          <GridPosition>0;1;2;1</GridPosition>
+        </DetailItem>
+        <DetailItem SchemaName="pricelevelid">
+          <GridPosition>0;3;2;1</GridPosition>
+        </DetailItem>
+        <DetailItem SchemaName="opportunityratingcode" Style="Rating Horizontal RadioButton">
+          <GridPosition>0;0;2;1</GridPosition>
+        </DetailItem>
+        <DetailItem SchemaName="isrevenuesystemcalculated" Style="Checkbox">
+          <GridPosition>0;4;2;1</GridPosition>
+        </DetailItem>
         <DetailItem SchemaName="$Table1" grid="true">
           <Columns>*;*</Columns>
-          <Rows>Auto;Auto;Auto;Auto;Auto;Auto;Auto;Auto;Auto;Auto;Auto</Rows>
+          <Rows>Auto;Auto;Auto;Auto;Auto</Rows>
           <Items>
-            <DetailItem SchemaName="name">
-              <GridPosition>0;0;2;1</GridPosition>
+            <DetailItem SchemaName="closeprobability">
+              <GridPosition>0;0;1;1</GridPosition>
             </DetailItem>
-            <DetailItem SchemaName="customerid">
-              <GridPosition>0;1;2;1</GridPosition>
-            </DetailItem>
-            <DetailItem SchemaName="transactioncurrencyid">
-              <GridPosition>0;9;2;1</GridPosition>
-            </DetailItem>
-            <DetailItem SchemaName="pricelevelid">
-              <GridPosition>0;3;2;1</GridPosition>
-            </DetailItem>
-            <DetailItem SchemaName="isrevenuesystemcalculated">
-              <GridPosition>0;4;2;1</GridPosition>
+            <DetailItem SchemaName="purchasetimeframe">
+              <GridPosition>1;0;1;1</GridPosition>
             </DetailItem>
             <DetailItem SchemaName="estimatedvalue">
-              <GridPosition>0;5;2;1</GridPosition>
+              <GridPosition>0;1;1;1</GridPosition>
             </DetailItem>
             <DetailItem SchemaName="estimatedclosedate">
-              <GridPosition>0;6;2;1</GridPosition>
+              <GridPosition>1;1;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="actualvalue">
+              <GridPosition>0;2;1;1</GridPosition>
             </DetailItem>
             <DetailItem SchemaName="actualclosedate">
-              <GridPosition>0;7;2;1</GridPosition>
+              <GridPosition>1;2;1;1</GridPosition>
             </DetailItem>
             <DetailItem SchemaName="stepname">
-              <GridPosition>0;8;2;1</GridPosition>
+              <GridPosition>0;3;1;1</GridPosition>
             </DetailItem>
-            <DetailItem SchemaName="opportunityratingcode" Style="Rating Horizontal RadioButton">
-              <GridPosition>0;2;2;1</GridPosition>
+            <DetailItem SchemaName="transactioncurrencyid">
+              <GridPosition>1;3;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="statecode">
+              <GridPosition>0;4;1;1</GridPosition>
             </DetailItem>
             <DetailItem SchemaName="statuscode">
-              <GridPosition>0;10;1;1</GridPosition>
-            </DetailItem>
-            <DetailItem SchemaName="closeprobability">
-              <GridPosition>1;10;1;1</GridPosition>
+              <GridPosition>1;4;1;1</GridPosition>
             </DetailItem>
           </Items>
         </DetailItem>
+        <DetailItem SchemaName="description"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="3" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0">
-      <Name>Opportunity Products List</Name>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="10" flexiWidth="1" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0">
+      <Name>PRODUCTS AND SERVICES</Name>
+      <CustomName>PRODUCTS AND SERVICES</CustomName>
       <Binding SchemaName="opportunityproduct.opportunityid"/>
+      <LookupViews>&lt;extra&gt;&lt;views&gt;product.@Products&lt;/views&gt;&lt;filter entity="product"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="product"&amp;gt;&amp;lt;link-entity name="productpricelevel" from="productid" to="productid" link-type="inner" alias="L0"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="pricelevelid" operator="eq" value="{{pricelevelid}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="3" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\quote@2x.png" IsIconNameReadOnly="0" DocCommands="0" FlipMode="224">
-      <Name>Quotes List</Name>
+    <FormTab xsi:type="AssociatedTab" flexi="0" flexiHeight="10" flexiHeader="0" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\quote@2x.png" IsIconNameReadOnly="0" DocCommands="0">
+      <Name>QUOTES</Name>
+      <CustomName>QUOTES</CustomName>
       <Binding SchemaName="quote.opportunityid"/>
+      <Views>quote.@Subgrid</Views>
+      <LookupViews>quote.@Subgrid</LookupViews>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexi="0" flexiHeight="3" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\activity@2x.png" IsIconNameReadOnly="0">
-      <Name>Activity List</Name>
+    <FormTab xsi:type="AssociatedTab" flexi="0" flexiHeight="10" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\activity@2x.png" IsIconNameReadOnly="0" DocCommands="0">
+      <Name>ACTIVITIES</Name>
+      <CustomName>ACTIVITIES</CustomName>
       <Binding SchemaName="activity.regardingobjectid"/>
+      <Views>@activity.*:activity.@My Activities:appointment.*:email.*:phonecall.*:serviceappointment.*:task.*</Views>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="3" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
-      <Name>Notes List</Name>
+    <FormTab xsi:type="AssociatedTab" flexi="0" flexiHeight="10" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
+      <Name>NOTES</Name>
+      <CustomName>NOTES</CustomName>
       <Binding SchemaName="annotation.objectid"/>
+      <Views>annotation.Default</Views>
+      <LookupViews>annotation.Default</LookupViews>
     </FormTab>
   </SerializedChildrenV2>
+  <FormPages>
+    <FormPages layoutstrict="1" singlecardexpand="0" fleximode="2" iconposition="0">
+      <Name>DETAILS</Name>
+      <IconName></IconName>
+      <TabIndexes>
+        <int>0</int>
+        <int>1</int>
+      </TabIndexes>
+    </FormPages>
+    <FormPages layoutstrict="1" singlecardexpand="0" fleximode="0" iconposition="0">
+      <Name>QUOTES</Name>
+      <IconName></IconName>
+      <TabIndexes>
+        <int>2</int>
+      </TabIndexes>
+    </FormPages>
+    <FormPages layoutstrict="1" singlecardexpand="0" fleximode="0" iconposition="0">
+      <Name>ACTIVITIES + NOTES</Name>
+      <IconName></IconName>
+      <TabIndexes>
+        <int>3</int>
+        <int>4</int>
+      </TabIndexes>
+    </FormPages>
+  </FormPages>
 </EntityForm>
