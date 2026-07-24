@@ -10,12 +10,15 @@
   <IsDefault>true</IsDefault>
   <AutoWideWidth>0</AutoWideWidth>
   <OrderBy>name</OrderBy>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <SerializedBindings>
     <string>transactioncurrencyid</string>
     <string>currentcost</string>
+    <string>defaultuomid</string>
     <string>name</string>
     <string>productid</string>
     <string>productnumber</string>
+    <string>productstructure</string>
     <string>producttypecode</string>
     <string>quantityonhand</string>
   </SerializedBindings>
@@ -27,38 +30,63 @@
       </filter>
     </entity>
   </Fetch>
+  <Search>
+    <attribute schema="name" method="Contains"/>
+    <attribute schema="productnumber" method="Contains"/>
+  </Search>
   <SerializedTemplates>
     <RowTemplate>
       <DesignWidth>320</DesignWidth>
       <DesignHeight>48</DesignHeight>
       <Name>Default</Name>
       <Width>320</Width>
-      <Height>80</Height>
+      <Height>70</Height>
+      <NextTemplateName>800px</NextTemplateName>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
           <StyleName>primary</StyleName>
-          <Bounds>70,13,240,20</Bounds>
+          <Bounds>10,10,300,30</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="producttypecode">
           <StyleName>gray</StyleName>
-          <Bounds>70,57,240,15</Bounds>
+          <Bounds>10,40,130,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="img">
-          <IsConstant>true</IsConstant>
-          <StyleName>productImage</StyleName>
-          <Bounds>16,12,39,39</Bounds>
-          <CellKind>1</CellKind>
-          <Anchor>4</Anchor>
+        <CellTemplate SchemaName="productnumber">
+          <StyleName>r_gray</StyleName>
+          <Bounds>140,40,170,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>800px</Name>
+      <Width>800</Width>
+      <Height>50</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>10,10,300,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="producttypecode">
+          <StyleName>primary</StyleName>
+          <Bounds>320,10,240,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="productnumber">
-          <StyleName>gray</StyleName>
-          <Bounds>70,36,240,18</Bounds>
+          <StyleName>primary right</StyleName>
+          <Bounds>570,10,220,30</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>4</Anchor>
+          <Anchor>12</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>

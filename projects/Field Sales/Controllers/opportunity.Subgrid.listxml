@@ -5,7 +5,7 @@
     <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
     <ClassBinding/>
   </Attributes>
-  <Name>Default</Name>
+  <Name>Subgrid</Name>
   <Kind>List</Kind>
   <AutoWideWidth>0</AutoWideWidth>
   <OrderBy>!estimatedclosedate</OrderBy>
@@ -20,6 +20,7 @@
     <string>statuscode</string>
     <string>name</string>
   </SerializedBindings>
+  <IsHidden>true</IsHidden>
   <MaxColumns>0</MaxColumns>
   <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.integer&lt;/var&gt;&lt;func&gt;Clear&lt;/func&gt;&lt;/function&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.estimatedclosedate&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.EstCloseDate&lt;/var&gt;&lt;func&gt;FormatSingle&lt;/func&gt;&lt;arg&gt;String:{0:d}&lt;/arg&gt;&lt;arg&gt;var:Entity.estimatedclosedate&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.EstCloseDate&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String: -&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.estimatedvalue&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.EstRevenue&lt;/var&gt;&lt;func&gt;FormatSingle&lt;/func&gt;&lt;arg&gt;String:{0:c}&lt;/arg&gt;&lt;arg&gt;var:Entity.estimatedvalue&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.EstRevenue&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String: -&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.sharedVarTitle&lt;/var&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;arg&gt;String:[&lt;/arg&gt;&lt;arg&gt;var:Entity.statuscode&lt;/arg&gt;&lt;arg&gt;String:]&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.sharedVarTitle&lt;/var&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;arg&gt;var:Shared.sharedVarTitle&lt;/arg&gt;&lt;arg&gt;String: &lt;/arg&gt;&lt;arg&gt;var:Entity.name&lt;/arg&gt;&lt;/function&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.opportunityratingcode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Picklist:2&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:2&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.opportunityratingcode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Picklist:3&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:1&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
   <Search>
@@ -31,7 +32,7 @@
       <DesignHeight>48</DesignHeight>
       <Name>hot</Name>
       <Width>320</Width>
-      <Height>90</Height>
+      <Height>70</Height>
       <NextTemplateName>hot_800px</NextTemplateName>
       <SerializedChildren>
         <CellTemplate SchemaName="sharedVarTitle">
@@ -40,48 +41,42 @@
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="customerid">
-          <StyleName>gray</StyleName>
-          <Bounds>50,40,260,20</Bounds>
-          <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
-        </CellTemplate>
         <CellTemplate SchemaName="opportunityratingcode">
           <StyleName>caption</StyleName>
-          <Bounds>0,55,50,15</Bounds>
+          <Bounds>0,43,50,15</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="EstRevenue">
           <StyleName>gray</StyleName>
-          <Bounds>210,60,100,20</Bounds>
+          <Bounds>210,40,100,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>8</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="View.rating hot.png">
           <IsConstant>true</IsConstant>
           <StyleName>ImageCellStyle</StyleName>
-          <Bounds>10,20,30,30</Bounds>
+          <Bounds>10,12,30,30</Bounds>
           <CellKind>1</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="EstCloseDate">
           <StyleName>gray</StyleName>
-          <Bounds>70,60,110,20</Bounds>
+          <Bounds>70,40,110,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="View.DueDate.png">
           <IsConstant>true</IsConstant>
           <StyleName>IconGray</StyleName>
-          <Bounds>50,62,16,16</Bounds>
+          <Bounds>50,42,16,16</Bounds>
           <CellKind>1</CellKind>
           <Anchor>4</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="View.Revenue.png">
           <IsConstant>true</IsConstant>
           <StyleName>IconGray</StyleName>
-          <Bounds>190,62,16,16</Bounds>
+          <Bounds>190,42,16,16</Bounds>
           <CellKind>1</CellKind>
           <Anchor>8</Anchor>
         </CellTemplate>
@@ -92,7 +87,7 @@
       <DesignHeight>48</DesignHeight>
       <Name>cold</Name>
       <Width>320</Width>
-      <Height>90</Height>
+      <Height>70</Height>
       <NextTemplateName>cold_800px</NextTemplateName>
       <SerializedChildren>
         <CellTemplate SchemaName="sharedVarTitle">
@@ -101,48 +96,42 @@
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="customerid">
-          <StyleName>gray</StyleName>
-          <Bounds>50,40,260,20</Bounds>
-          <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
-        </CellTemplate>
         <CellTemplate SchemaName="opportunityratingcode">
           <StyleName>caption</StyleName>
-          <Bounds>0,55,50,15</Bounds>
+          <Bounds>0,43,50,15</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="EstRevenue">
           <StyleName>gray</StyleName>
-          <Bounds>210,60,100,20</Bounds>
+          <Bounds>210,40,100,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>8</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="View.rating cold.png">
           <IsConstant>true</IsConstant>
           <StyleName>ImageCellStyle</StyleName>
-          <Bounds>10,20,30,30</Bounds>
+          <Bounds>10,12,30,30</Bounds>
           <CellKind>1</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="EstCloseDate">
           <StyleName>gray</StyleName>
-          <Bounds>70,60,110,20</Bounds>
+          <Bounds>70,40,110,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>4</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="View.DueDate.png">
           <IsConstant>true</IsConstant>
           <StyleName>IconGray</StyleName>
-          <Bounds>50,62,16,16</Bounds>
+          <Bounds>50,42,16,16</Bounds>
           <CellKind>1</CellKind>
           <Anchor>4</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="View.Revenue.png">
           <IsConstant>true</IsConstant>
           <StyleName>IconGray</StyleName>
-          <Bounds>190,62,16,16</Bounds>
+          <Bounds>190,42,16,16</Bounds>
           <CellKind>1</CellKind>
           <Anchor>8</Anchor>
         </CellTemplate>
@@ -153,7 +142,7 @@
       <DesignHeight>48</DesignHeight>
       <Name>warm</Name>
       <Width>320</Width>
-      <Height>90</Height>
+      <Height>70</Height>
       <NextTemplateName>warm_800px</NextTemplateName>
       <SerializedChildren>
         <CellTemplate SchemaName="sharedVarTitle">
@@ -162,48 +151,42 @@
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="customerid">
-          <StyleName>gray</StyleName>
-          <Bounds>50,40,260,20</Bounds>
-          <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
-        </CellTemplate>
         <CellTemplate SchemaName="opportunityratingcode">
           <StyleName>caption</StyleName>
-          <Bounds>0,55,50,15</Bounds>
+          <Bounds>0,43,50,15</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="EstCloseDate">
           <StyleName>gray</StyleName>
-          <Bounds>70,60,110,20</Bounds>
+          <Bounds>70,40,110,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>4</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="View.rating warm.png">
           <IsConstant>true</IsConstant>
           <StyleName>ImageCellStyle</StyleName>
-          <Bounds>10,20,30,30</Bounds>
+          <Bounds>10,12,30,30</Bounds>
           <CellKind>1</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="EstRevenue">
           <StyleName>gray</StyleName>
-          <Bounds>210,60,100,20</Bounds>
+          <Bounds>210,40,100,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>8</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="View.DueDate.png">
           <IsConstant>true</IsConstant>
           <StyleName>IconGray</StyleName>
-          <Bounds>50,62,16,16</Bounds>
+          <Bounds>50,42,16,16</Bounds>
           <CellKind>1</CellKind>
           <Anchor>4</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="View.Revenue.png">
           <IsConstant>true</IsConstant>
           <StyleName>IconGray</StyleName>
-          <Bounds>190,62,16,16</Bounds>
+          <Bounds>190,42,16,16</Bounds>
           <CellKind>1</CellKind>
           <Anchor>8</Anchor>
         </CellTemplate>
@@ -218,15 +201,9 @@
       <SerializedChildren>
         <CellTemplate SchemaName="sharedVarTitle">
           <StyleName>primary</StyleName>
-          <Bounds>50,10,150,30</Bounds>
+          <Bounds>50,10,465,30</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
-        </CellTemplate>
-        <CellTemplate SchemaName="customerid">
-          <StyleName>primary</StyleName>
-          <Bounds>210,10,305,30</Bounds>
-          <CellKind>0</CellKind>
-          <Anchor>8</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="opportunityratingcode">
           <StyleName>caption</StyleName>
@@ -278,15 +255,9 @@
       <SerializedChildren>
         <CellTemplate SchemaName="sharedVarTitle">
           <StyleName>primary</StyleName>
-          <Bounds>50,10,150,30</Bounds>
+          <Bounds>50,10,465,30</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
-        </CellTemplate>
-        <CellTemplate SchemaName="customerid">
-          <StyleName>primary</StyleName>
-          <Bounds>210,10,305,30</Bounds>
-          <CellKind>0</CellKind>
-          <Anchor>8</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="opportunityratingcode">
           <StyleName>caption</StyleName>
@@ -338,15 +309,9 @@
       <SerializedChildren>
         <CellTemplate SchemaName="sharedVarTitle">
           <StyleName>primary</StyleName>
-          <Bounds>50,10,150,30</Bounds>
+          <Bounds>50,10,465,30</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
-        </CellTemplate>
-        <CellTemplate SchemaName="customerid">
-          <StyleName>primary</StyleName>
-          <Bounds>210,10,305,30</Bounds>
-          <CellKind>0</CellKind>
-          <Anchor>8</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="opportunityratingcode">
           <StyleName>caption</StyleName>

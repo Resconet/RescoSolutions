@@ -16,11 +16,12 @@
   <Kind>List</Kind>
   <IsDefault>true</IsDefault>
   <AutoWideWidth>0</AutoWideWidth>
-  <OrderBy>scheduledstart</OrderBy>
+  <OrderBy>!scheduledstart</OrderBy>
   <SerializedBindings>
     <string>activityid</string>
     <string>scheduledend</string>
     <string>ownerid</string>
+    <string>prioritycode</string>
     <string>regardingobjectid</string>
     <string>scheduledstart</string>
     <string>statecode</string>
@@ -32,7 +33,6 @@
     <entity name="appointment">
       <filter type="and">
         <condition attribute="statecode" operator="in">
-          <value>1</value>
           <value>0</value>
           <value>3</value>
         </condition>
@@ -41,52 +41,70 @@
         <filter type="and">
           <condition attribute="partyid" operator="eq-userid"/>
           <condition attribute="participationtypemask" operator="in">
+            <value>6</value>
             <value>7</value>
             <value>9</value>
             <value>5</value>
-            <value>6</value>
           </condition>
         </filter>
       </link-entity>
     </entity>
   </Fetch>
+  <Search>
+    <attribute schema="subject" method="Contains"/>
+  </Search>
   <SerializedTemplates>
     <RowTemplate>
       <DesignWidth>320</DesignWidth>
       <DesignHeight>48</DesignHeight>
       <Name>Default</Name>
       <Width>320</Width>
-      <Height>86</Height>
-      <Buttons>ChangeStatus.appointment.4,3</Buttons>
+      <Height>70</Height>
+      <NextTemplateName>800px</NextTemplateName>
+      <Buttons>Open.appointment.regardingobjectid;ChangeStatus.appointment.4,3</Buttons>
       <SerializedChildren>
         <CellTemplate SchemaName="subject">
           <StyleName>primary</StyleName>
-          <Bounds>59,12,241,20</Bounds>
+          <Bounds>10,10,300,30</Bounds>
           <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="regardingobjectid">
+          <StyleName>link</StyleName>
+          <Bounds>10,40,140,20</Bounds>
+          <CellKind>4</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="#DateLabel">
-          <StyleName>gray</StyleName>
-          <Bounds>59,62,165,18</Bounds>
+          <StyleName>r_gray</StyleName>
+          <Bounds>150,40,160,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>800px</Name>
+      <Width>800</Width>
+      <Height>50</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="subject">
+          <StyleName>primary</StyleName>
+          <Bounds>10,10,300,30</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="statecode">
-          <StyleName>r_gray</StyleName>
-          <Bounds>226,62,74,18</Bounds>
-          <CellKind>0</CellKind>
-          <Anchor>9</Anchor>
-        </CellTemplate>
-        <CellTemplate SchemaName="Activity.resco_appointment">
-          <IsConstant>true</IsConstant>
-          <StyleName>ImageCellStyle</StyleName>
-          <Bounds>13,13,39,39</Bounds>
-          <CellKind>1</CellKind>
-          <Anchor>4</Anchor>
-        </CellTemplate>
         <CellTemplate SchemaName="regardingobjectid">
-          <StyleName>gray</StyleName>
-          <Bounds>59,37,241,20</Bounds>
+          <StyleName>primary link</StyleName>
+          <Bounds>320,10,250,30</Bounds>
+          <CellKind>4</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#DateLabel">
+          <StyleName>primary right</StyleName>
+          <Bounds>580,10,210,30</Bounds>
           <CellKind>0</CellKind>
           <Anchor>12</Anchor>
         </CellTemplate>

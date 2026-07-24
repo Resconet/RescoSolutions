@@ -1,0 +1,147 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>quote</EntityName>
+    <CamelCase>Quote</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Subgrid</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>!effectiveto</OrderBy>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;SharedVariable usage="None"&gt;&lt;Name&gt;sharedVarTitle&lt;/Name&gt;&lt;CrmType&gt;String&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;SharedVariable usage="None"&gt;&lt;Name&gt;SharedVarEffectiveTo&lt;/Name&gt;&lt;CrmType&gt;String&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;SharedVariable usage="None"&gt;&lt;Name&gt;sharedVarTotalAmount&lt;/Name&gt;&lt;CrmType&gt;String&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SerializedBindings>
+    <string>transactioncurrencyid</string>
+    <string>effectiveto</string>
+    <string>modifiedon</string>
+    <string>name</string>
+    <string>customerid</string>
+    <string>quoteid</string>
+    <string>quotenumber</string>
+    <string>statecode</string>
+    <string>statuscode</string>
+    <string>totalamount</string>
+  </SerializedBindings>
+  <IsHidden>true</IsHidden>
+  <MaxColumns>0</MaxColumns>
+  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.sharedVarTitle&lt;/var&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;arg&gt;String:[&lt;/arg&gt;&lt;arg&gt;var:Entity.statuscode&lt;/arg&gt;&lt;arg&gt;String:]&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.sharedVarTitle&lt;/var&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;arg&gt;var:Shared.sharedVarTitle&lt;/arg&gt;&lt;arg&gt;String: &lt;/arg&gt;&lt;arg&gt;var:Entity.name&lt;/arg&gt;&lt;/function&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.effectiveto&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.SharedVarEffectiveTo&lt;/var&gt;&lt;func&gt;FormatSingle&lt;/func&gt;&lt;arg&gt;String:{0:d}&lt;/arg&gt;&lt;arg&gt;var:Entity.effectiveto&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.SharedVarEffectiveTo&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String: -&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.totalamount&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.sharedVarTotalAmount&lt;/var&gt;&lt;func&gt;FormatSingle&lt;/func&gt;&lt;arg&gt;String:{0:c}&lt;/arg&gt;&lt;arg&gt;var:Entity.totalamount&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.sharedVarTotalAmount&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String: -&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statecode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;State:0&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Row. .Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:color / primary&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statecode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;State:1&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Row. .Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:color / info&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statecode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;State:2&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Row. .Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:color / success&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statecode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;State:3&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Row. .Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:color / danger&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <Search>
+    <attribute schema="quotenumber" method="Contains"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>320px</Name>
+      <Width>320</Width>
+      <Height>70</Height>
+      <NextTemplateName>800px</NextTemplateName>
+      <SerializedChildren>
+        <CellTemplate SchemaName="sharedVarTitle">
+          <StyleName>primary</StyleName>
+          <Bounds>50,10,260,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="sharedVarTotalAmount">
+          <StyleName>gray</StyleName>
+          <Bounds>210,40,100,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="SharedVarEffectiveTo">
+          <StyleName>gray</StyleName>
+          <Bounds>70,40,110,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName=" ">
+          <IsConstant>true</IsConstant>
+          <StyleName>color / primary</StyleName>
+          <Bounds>15,15,20,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="View.Revenue.png">
+          <IsConstant>true</IsConstant>
+          <StyleName>IconGray</StyleName>
+          <Bounds>190,42,16,16</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>8</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statecode">
+          <StyleName>caption</StyleName>
+          <Bounds>0,43,50,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="View.DueDate.png">
+          <IsConstant>true</IsConstant>
+          <StyleName>IconGray</StyleName>
+          <Bounds>50,42,16,16</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>800px</Name>
+      <Width>800</Width>
+      <Height>50</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="sharedVarTitle">
+          <StyleName>primary</StyleName>
+          <Bounds>50,10,465,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="sharedVarTotalAmount">
+          <StyleName>primary</StyleName>
+          <Bounds>680,10,110,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="SharedVarEffectiveTo">
+          <StyleName>primary</StyleName>
+          <Bounds>540,10,110,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>8</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName=" ">
+          <IsConstant>true</IsConstant>
+          <StyleName>color / primary</StyleName>
+          <Bounds>15,8,20,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="View.Revenue.png">
+          <IsConstant>true</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>662,18,16,16</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>8</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statecode">
+          <StyleName>caption</StyleName>
+          <Bounds>0,33,50,12</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="View.DueDate.png">
+          <IsConstant>true</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>522,18,16,16</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>8</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties>
+    <SerializedClassBinding name="sharedVarTitle" label="Shared.sharedVarTitle" type="String"/>
+    <SerializedClassBinding name="SharedVarEffectiveTo" label="Shared.SharedVarEffectiveTo" type="String"/>
+    <SerializedClassBinding name="sharedVarTotalAmount" label="Shared.sharedVarTotalAmount" type="String"/>
+  </CustomProperties>
+</EntityList>

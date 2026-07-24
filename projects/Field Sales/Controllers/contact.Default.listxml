@@ -8,7 +8,7 @@
   <Kind>List</Kind>
   <AutoWideWidth>0</AutoWideWidth>
   <OrderBy>fullname</OrderBy>
-  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;SharedVariable usage="None"&gt;&lt;Name&gt;subtitle&lt;/Name&gt;&lt;CrmType&gt;String&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <SerializedBindings>
     <string>telephone1</string>
     <string>parentcustomerid</string>
@@ -21,57 +21,62 @@
     <string>ownerid</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
-  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.subtitle&lt;/var&gt;&lt;func&gt;Concat3&lt;/func&gt;&lt;arg&gt;var:Entity.jobtitle&lt;/arg&gt;&lt;arg&gt;String: @ &lt;/arg&gt;&lt;arg&gt;var:Entity.parentcustomerid&lt;/arg&gt;&lt;/function&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
   <SerializedTemplates>
     <RowTemplate>
       <DesignWidth>320</DesignWidth>
       <DesignHeight>48</DesignHeight>
-      <Name>Default</Name>
+      <Name>320px</Name>
       <Width>320</Width>
-      <Height>86</Height>
+      <Height>70</Height>
+      <NextTemplateName>800px</NextTemplateName>
       <SerializedChildren>
         <CellTemplate SchemaName="fullname">
           <StyleName>primary</StyleName>
-          <Bounds>76,12,230,20</Bounds>
+          <Bounds>10,10,300,30</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="telephone1">
-          <StyleName>link</StyleName>
-          <Bounds>93,59,85,16</Bounds>
+        <CellTemplate SchemaName="parentcustomerid">
+          <StyleName>gray</StyleName>
+          <Bounds>10,40,150,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>12</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="emailaddress1">
+        <CellTemplate SchemaName="jobtitle">
           <StyleName>r_gray</StyleName>
-          <Bounds>184,59,122,16</Bounds>
+          <Bounds>160,40,150,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>8</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>800px</Name>
+      <Width>800</Width>
+      <Height>50</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="fullname">
+          <StyleName>primary</StyleName>
+          <Bounds>10,10,250,30</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="View.phone.png">
-          <IsConstant>true</IsConstant>
-          <StyleName>ImageCellStyle</StyleName>
-          <Bounds>76,60,13,14</Bounds>
-          <CellKind>1</CellKind>
-          <Anchor>5</Anchor>
-        </CellTemplate>
-        <CellTemplate SchemaName="subtitle">
-          <StyleName>gray</StyleName>
-          <Bounds>76,32,230,22</Bounds>
+        <CellTemplate SchemaName="parentcustomerid">
+          <StyleName>primary</StyleName>
+          <Bounds>270,10,310,30</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
+          <Anchor>12</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="img">
-          <IsConstant>true</IsConstant>
-          <StyleName>FormImage</StyleName>
-          <Bounds>16,12,50,50</Bounds>
-          <CellKind>1</CellKind>
-          <Anchor>5</Anchor>
+        <CellTemplate SchemaName="jobtitle">
+          <StyleName>primary</StyleName>
+          <Bounds>590,10,200,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
   </SerializedTemplates>
-  <CustomProperties>
-    <SerializedClassBinding name="subtitle" label="Shared.subtitle" type="String"/>
-  </CustomProperties>
+  <CustomProperties/>
 </EntityList>

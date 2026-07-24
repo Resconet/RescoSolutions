@@ -14,11 +14,7 @@
     </entity>
   </fetch>
   <fetch version="1.0">
-    <entity name="quote">
-      <filter type="and">
-        <condition attribute="modifiedon" operator="last-x-days" value="30"/>
-      </filter>
-    </entity>
+    <entity name="quote"/>
   </fetch>
   <fetch version="1.0">
     <entity name="salesorder"/>
@@ -27,49 +23,25 @@
     <entity name="invoice"/>
   </fetch>
   <fetch version="1.0">
-    <entity name="opportunity">
-      <filter type="and">
-        <condition attribute="modifiedon" operator="last-x-days" value="60"/>
-      </filter>
-    </entity>
+    <entity name="opportunity"/>
   </fetch>
   <fetch version="1.0">
-    <entity name="email">
-      <filter type="and">
-        <condition attribute="modifiedon" operator="last-x-days" value="60"/>
-      </filter>
-    </entity>
+    <entity name="email"/>
   </fetch>
   <fetch version="1.0">
-    <entity name="phonecall">
-      <filter type="and">
-        <condition attribute="modifiedon" operator="last-x-days" value="60"/>
-      </filter>
-    </entity>
+    <entity name="phonecall"/>
   </fetch>
   <fetch version="1.0">
-    <entity name="task">
-      <filter type="and">
-        <condition attribute="modifiedon" operator="last-x-days" value="60"/>
-      </filter>
-    </entity>
+    <entity name="task"/>
   </fetch>
   <fetch version="1.0">
     <entity name="appointment"/>
   </fetch>
   <fetch version="1.0">
-    <entity name="serviceappointment">
-      <filter type="and">
-        <condition attribute="modifiedon" operator="last-x-days" value="60"/>
-      </filter>
-    </entity>
+    <entity name="serviceappointment"/>
   </fetch>
   <fetch version="1.0">
-    <entity name="incident">
-      <filter type="and">
-        <condition attribute="modifiedon" operator="last-x-days" value="60"/>
-      </filter>
-    </entity>
+    <entity name="incident"/>
   </fetch>
   <fetch version="1.0">
     <entity name="resco_usersettings">
@@ -80,10 +52,6 @@
     </entity>
   </fetch>
   <fetch version="1.0">
-    <entity name="product">
-      <filter type="and">
-        <condition attribute="name" operator="like" value="%Filter%"/>
-      </filter>
-    </entity>
+    <entity name="product"/>
   </fetch>
 </fetchcollection>

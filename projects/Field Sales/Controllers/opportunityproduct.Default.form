@@ -1,7 +1,7 @@
 ﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="1" fleximode="0" fullscreen="0" resize="0" version="2" layoutstrict="1" singlecardexpand="0" pagesposition="0" pageiconposition="0">
   <IsContactForm>false</IsContactForm>
-  <EntityName>salesorderdetail</EntityName>
-  <CamelCase>SalesOrderDetail</CamelCase>
+  <EntityName>opportunityproduct</EntityName>
+  <CamelCase>OpportunityProduct</CamelCase>
   <IsBulkUpdateForm>false</IsBulkUpdateForm>
   <CacheMode>-1</CacheMode>
   <UiSyncGuardMode>-1</UiSyncGuardMode>
