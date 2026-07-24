@@ -21,6 +21,7 @@
 			<mobileprojecttemplate id="resco:SalesforceDefault" displayname="Default (Mobile Sales scenario)" target="Salesforce" url="config/mobileprojects/salesforce/default.zip.xml" />
 			<mobileprojecttemplate id="resco:SalesforceInspections" displayname="Inspections (requires Resco custom objects)" target="Salesforce" url="config/mobileprojects/salesforce/inspections.zip.xml" />
 			<mobileprojecttemplate id="resco:SalesforceFieldService" displayname="Field Service (requires Field Service Lightning objects)" target="Salesforce" url="config/mobileprojects/salesforce/fieldservice.zip.xml" />
+			<mobileprojecttemplate id="resco:SalesforceEssential" displayname="Essential (Custom UI)" target="Salesforce" url="config/mobileprojects/salesforce/essential.zip.xml" />
 		</mobileprojecttemplates>
 	</woodford>
 </configuration>
