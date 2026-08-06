@@ -14,32 +14,35 @@
   </Attributes>
   <Name>My Activities</Name>
   <Kind>List</Kind>
+  <IsDefault>true</IsDefault>
   <AutoWideWidth>0</AutoWideWidth>
-  <OrderBy>!scheduledend;scheduledstart</OrderBy>
+  <OrderBy>!scheduledend</OrderBy>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <SerializedBindings>
     <string>activityid</string>
     <string>statecode</string>
+    <string>activitytypecode</string>
     <string>scheduledend</string>
+    <string>ownerid</string>
+    <string>regardingobjectid</string>
     <string>scheduledstart</string>
+    <string>statuscode</string>
     <string>subject</string>
-    <string>regardingobjectid.account.address1_latitude</string>
-    <string>regardingobjectid.account.address1_longitude</string>
   </SerializedBindings>
-  <HasGpsFields>true</HasGpsFields>
   <MaxColumns>0</MaxColumns>
   <Fetch version="1.0">
     <entity name="activity">
       <filter type="and">
+        <condition attribute="ownerid" operator="eq-userid"/>
         <condition attribute="statecode" operator="in">
           <value>0</value>
           <value>3</value>
         </condition>
-        <condition attribute="ownerid" operator="eq-userid"/>
       </filter>
     </entity>
   </Fetch>
   <Search>
-    <attribute schema="subject" method="BeginsWith"/>
+    <attribute schema="subject" method="Contains"/>
   </Search>
   <SerializedTemplates>
     <RowTemplate>
@@ -47,31 +50,79 @@
       <DesignHeight>48</DesignHeight>
       <Name>Default</Name>
       <Width>320</Width>
-      <Height>60</Height>
+      <Height>70</Height>
+      <NextTemplateName>800px</NextTemplateName>
+      <Buttons>none</Buttons>
       <SerializedChildren>
         <CellTemplate SchemaName="subject">
-          <StyleName>Primary</StyleName>
-          <Bounds>60,10,245,22</Bounds>
+          <StyleName>primary</StyleName>
+          <Bounds>75,10,235,30</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="#Icon">
           <StyleName>ImageCellStyle</StyleName>
-          <Bounds>15,15,30,30</Bounds>
+          <Bounds>20,10,30,30</Bounds>
           <CellKind>1</CellKind>
-          <Anchor>5</Anchor>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statecode">
+          <StyleName>gray</StyleName>
+          <Bounds>75,40,100,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="activitytypecode">
+          <StyleName>caption</StyleName>
+          <Bounds>0,43,70,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>6</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="#DateLabel">
-          <StyleName>Secondary</StyleName>
-          <Bounds>60,35,160,15</Bounds>
+          <StyleName>r_gray</StyleName>
+          <Bounds>175,40,135,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>800px</Name>
+      <Width>800</Width>
+      <Height>50</Height>
+      <Buttons>none</Buttons>
+      <SerializedChildren>
+        <CellTemplate SchemaName="subject">
+          <StyleName>primary</StyleName>
+          <Bounds>75,10,300,30</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
+        <CellTemplate SchemaName="#Icon">
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>20,2,30,30</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>4</Anchor>
+        </CellTemplate>
         <CellTemplate SchemaName="statecode">
-          <StyleName>Secondary Right</StyleName>
-          <Bounds>226,35,80,15</Bounds>
+          <StyleName>primary</StyleName>
+          <Bounds>385,10,195,30</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>9</Anchor>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="activitytypecode">
+          <StyleName>caption</StyleName>
+          <Bounds>0,33,70,12</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>6</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#DateLabel">
+          <StyleName>primary right</StyleName>
+          <Bounds>590,10,200,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>

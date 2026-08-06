@@ -4,7 +4,7 @@
     <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
     <ClassBinding/>
   </Attributes>
-  <Name>Reports</Name>
+  <Name>Documents</Name>
   <Kind>List</Kind>
   <AutoWideWidth>0</AutoWideWidth>
   <OrderBy>!modifiedon</OrderBy>
@@ -32,7 +32,7 @@
         </filter>
         <condition attribute="isdocument" operator="eq" value="1"/>
       </filter>
-      <link-entity name="resco_questionnaire" from="resco_questionnaireid" to="objectid" link-type="inner" alias="L0"/>
+      <link-entity name="resco_questionnaireanswer" from="resco_questionnaireanswerid" to="objectid" link-type="inner" alias="L0"/>
     </entity>
   </Fetch>
   <Search>

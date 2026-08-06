@@ -1,109 +1,113 @@
-<?xml version="1.0"?>
-<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" flexi="1" version="2">
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="1" fleximode="2" fullscreen="0" resize="0" version="2" layoutstrict="1" singlecardexpand="0" pagesposition="1" pageiconposition="0">
   <IsContactForm>false</IsContactForm>
   <EntityName>contact</EntityName>
   <CamelCase>contact</CamelCase>
-  <ClassBinding />
-  <SerializedChildren />
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
+  <CacheMode>-1</CacheMode>
+  <UiSyncGuardMode>-1</UiSyncGuardMode>
+  <PrimaryCommands></PrimaryCommands>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled</EnabledWorkflows>
   <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab" flexi="0" flexiHeader="1" flexiMaxLines="0">
-      <Name>General</Name>
+    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>DETAILS</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="parentcustomerid" Style="Normal" image="false" separator="false">
-          <IsConstant>false</IsConstant>
+        <DetailItem SchemaName="$Table1" grid="true">
+          <Columns>*;*</Columns>
+          <Rows>Auto;Auto;Auto;Auto;Auto</Rows>
+          <Items>
+            <DetailItem SchemaName="firstname" Style="Normal">
+              <GridPosition>0;0;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="lastname" Style="Normal">
+              <GridPosition>1;0;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="parentcustomerid" Style="Normal">
+              <GridPosition>0;1;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="jobtitle">
+              <GridPosition>0;2;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="mobilephone" Style="Normal">
+              <GridPosition>0;3;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="telephone1" Style="Normal">
+              <GridPosition>1;3;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="emailaddress1" Style="Normal">
+              <GridPosition>0;4;2;1</GridPosition>
+            </DetailItem>
+          </Items>
         </DetailItem>
-        <DetailItem SchemaName="ownerid" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem xsi:type="SeparatorDetailItem" Style="Normal" image="false" separator="true">
-          <IsConstant>true</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="lastname" Style="Normal" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="firstname" Style="Normal" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="jobtitle" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem xsi:type="SeparatorDetailItem" Style="Normal" image="false" separator="true">
-          <IsConstant>true</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="mobilephone" Style="Normal" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="telephone1" Style="Normal" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem xsi:type="SeparatorDetailItem" Style="Normal" image="false" separator="true">
-          <IsConstant>true</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="emailaddress1" Style="Normal" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="fax" Style="Normal" image="false" separator="false">
-          <IsConstant>false</IsConstant>
+        <DetailItem SchemaName="ownerid"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" flexi="1" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>ADDRESS</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="$Table2" grid="true">
+          <Columns>*;*</Columns>
+          <Rows>Auto;Auto;Auto;Auto;Auto</Rows>
+          <Items>
+            <DetailItem SchemaName="address1_line1" Style="Normal">
+              <GridPosition>0;0;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="address1_line2" Style="Normal">
+              <GridPosition>0;1;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="address1_line3" Style="Normal">
+              <GridPosition>0;2;2;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="address1_city" Style="Normal">
+              <GridPosition>0;3;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="address1_postalcode" Style="Normal">
+              <GridPosition>1;3;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="address1_stateorprovince" Style="Normal">
+              <GridPosition>0;4;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="address1_country" Style="Normal">
+              <GridPosition>1;4;1;1</GridPosition>
+            </DetailItem>
+          </Items>
         </DetailItem>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="DetailTab" flexi="0" flexiHeader="1" flexiMaxLines="0">
-      <Name>Address</Name>
-      <SerializedChildren>
-        <DetailItem SchemaName="address1_line1" Style="Normal" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_line2" Style="Normal" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_line3" Style="Normal" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem xsi:type="SeparatorDetailItem" Style="Normal" image="false" separator="true">
-          <IsConstant>true</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_city" Style="Normal" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_postalcode" Style="Normal" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem xsi:type="SeparatorDetailItem" Style="Normal" image="false" separator="true">
-          <IsConstant>true</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_stateorprovince" Style="Normal" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="address1_country" Style="Normal" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-      </SerializedChildren>
-    </FormTab>
-    <FormTab xsi:type="MapTab" flexi="1" flexiHeight="1" flexiWidth="1" flexiHeader="1" flexiMaxLines="0">
+    <FormTab xsi:type="MapTab" flexiHeight="450px" flexiHeader="0" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
       <Name>Map</Name>
       <CoordinatesBinding>address1_latitude;address1_longitude</CoordinatesBinding>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeight="9" flexiHeader="1" flexiOrientation="1" flexiMaxLines="9" FlipMode="0">
-      <Name />
-      <LogicalName>activity.regardingobjectid</LogicalName>
-	  <Views>activity.*:activity.@All Activities</Views>
-      <Binding SchemaName="activity.regardingobjectid">
-        <IsConstant>false</IsConstant>
-      </Binding>
+    <FormTab xsi:type="AssociatedTab" flexi="0" flexiHeight="6" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\activity@2x.png" IsIconNameReadOnly="0" DocCommands="0" FlipMode="96">
+      <Name>ACTIVITIES</Name>
+      <CustomName>ACTIVITIES</CustomName>
+      <Binding SchemaName="activity.regardingobjectid"/>
+      <Views>@activity.*:activity.@My Activities:appointment.*:task.*</Views>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeight="9" flexiHeader="1" flexiOrientation="1" flexiMaxLines="9" FlipMode="0">
-      <Name />
-      <LogicalName>annotation.objectid</LogicalName>
-      <Binding SchemaName="annotation.objectid">
-        <IsConstant>false</IsConstant>
-      </Binding>
+    <FormTab xsi:type="AssociatedTab" flexi="0" flexiHeight="6" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0" FlipMode="224">
+      <Name>NOTES</Name>
+      <CustomName>NOTES</CustomName>
+      <Binding SchemaName="annotation.objectid"/>
+      <Views>annotation.@Default</Views>
     </FormTab>
   </SerializedChildrenV2>
-  <Navigation flexi="0" flexiHeader="1" flexiMaxLines="0">
-    <Name>Navigation</Name>
-    <SerializedChildren />
-  </Navigation>
-  <PrimaryCommands/>
-  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled</EnabledWorkflows>
-  <SerializedContactInfo />
+  <FormPages>
+    <FormPages layoutstrict="1" singlecardexpand="0" fleximode="2" iconposition="0">
+      <Name>DETAILS</Name>
+      <IconName></IconName>
+      <TabIndexes>
+        <int>0</int>
+        <int>1</int>
+        <int>2</int>
+      </TabIndexes>
+    </FormPages>
+    <FormPages layoutstrict="1" singlecardexpand="0" fleximode="0" iconposition="0">
+      <Name>ACTIVITIES + NOTES</Name>
+      <IconName></IconName>
+      <TabIndexes>
+        <int>3</int>
+        <int>4</int>
+      </TabIndexes>
+    </FormPages>
+  </FormPages>
 </EntityForm>

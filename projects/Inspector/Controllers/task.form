@@ -1,40 +1,92 @@
-﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="1" fleximode="1" fullscreen="0" resize="0" version="2">
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="1" fleximode="2" fullscreen="0" resize="0" version="2" layoutstrict="1" singlecardexpand="0" pagesposition="1" pageiconposition="0">
   <IsContactForm>false</IsContactForm>
   <EntityName>task</EntityName>
   <CamelCase>task</CamelCase>
+  <WorkflowLoad>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Form.statuscode.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.INSPECTIONS.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.INSPECTION REPORTS.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/Workflow&gt;</WorkflowLoad>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <IsBulkUpdateForm>false</IsBulkUpdateForm>
   <CacheMode>-1</CacheMode>
+  <UiSyncGuardMode>-1</UiSyncGuardMode>
   <PrimaryCommands>!defcmd</PrimaryCommands>
+  <SharedVariableNames/>
   <ClassBinding/>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled</EnabledWorkflows>
   <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
-      <Name>General</Name>
+    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>DETAILS</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="regardingobjectid" Style="Normal"/>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem" Style="Normal">
-          <IsConstant>true</IsConstant>
-        </DetailItem>
         <DetailItem SchemaName="subject"/>
-        <DetailItem SchemaName="prioritycode" Style="Normal"/>
-        <DetailItem SchemaName="scheduledend" Style="Normal"/>
-        <DetailItem SchemaName="actualdurationminutes" Style="Normal"/>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem" Style="Normal">
-          <IsConstant>true</IsConstant>
-        </DetailItem>
+        <DetailItem SchemaName="regardingobjectid" Style="Normal"/>
         <DetailItem SchemaName="description"/>
+        <DetailItem SchemaName="scheduledstart"/>
+        <DetailItem SchemaName="scheduledend" Style="Normal"/>
+        <DetailItem SchemaName="scheduleddurationminutes"/>
+        <DetailItem SchemaName="prioritycode" Style="Horizontal Segmented Button"/>
+        <DetailItem SchemaName="$Table1" grid="true">
+          <Columns>*;*</Columns>
+          <Rows>Auto</Rows>
+          <Items>
+            <DetailItem SchemaName="statecode">
+              <GridPosition>0;0;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="statuscode">
+              <GridPosition>1;0;1;1</GridPosition>
+            </DetailItem>
+          </Items>
+        </DetailItem>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
-      <Name>Inspections</Name>
-      <CustomName>Inspections</CustomName>
-      <Binding SchemaName="resco_questionnaire.@virtual"/>
-      <Views>&lt;extra&gt;&lt;views&gt;resco_questionnaire.Answered Questionnaires:resco_questionnaire.Associated Questionnaires:resco_questionnaire.Completed This Week:resco_questionnaire.In progress or completed&lt;/views&gt;&lt;filter entity="resco_questionnaire"&gt;&amp;lt;fetch&amp;gt;&amp;lt;entity name="resco_questionnaire"&amp;gt;	&amp;lt;filter type="and"&amp;gt;		&amp;lt;condition attribute='resco_istemplate' operator='eq' value='0' /&amp;gt;		&amp;lt;filter type="or"&amp;gt;			&amp;lt;condition attribute="resco_regardingid" operator="eq" value="{{activityid}}"/&amp;gt;			&amp;lt;condition attribute="resco_rawidvalue" entityname="QuestionLinkAlias" operator="eq" value="{{activityid}}"/&amp;gt;		&amp;lt;/filter&amp;gt;	&amp;lt;/filter&amp;gt;&amp;lt;link-entity name="resco_question" alias="QuestionLinkAlias" from="resco_questionnaireid" to="resco_questionnaireid" link-type="outer"/&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
-      <LookupViews>&lt;extra&gt;&lt;views&gt;resco_questionnaire.Answered Questionnaires:resco_questionnaire.Associated Questionnaires:resco_questionnaire.Questionnaire Templates Lookup:resco_questionnaire.Templates&lt;/views&gt;&lt;filter entity="resco_questionnaire"&gt;&amp;lt;fetch&amp;gt;&amp;lt;entity name='resco_questionnaire'&amp;gt;&amp;lt;filter&amp;gt;&amp;lt;condition attribute='resco_istemplate' operator='eq' value='1' /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="6" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0" FlipMode="224">
+      <Name>ANSWERED QUESTIONNAIRES</Name>
+      <CustomName>ANSWERED QUESTIONNAIRES</CustomName>
+      <Binding SchemaName="resco_questionnaireanswer.@virtual"/>
+      <Views>&lt;extra&gt;&lt;views&gt;resco_questionnaireanswer.@Subgrid&lt;/views&gt;&lt;filter entity="resco_questionnaireanswer"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="resco_questionnaireanswer"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="resco_regardingid" operator="eq" value="{{activityid}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+      <LookupViews>resco_questionnaire.Templates</LookupViews>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="6" flexiOrientation="1" flexiMaxLines="9" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
-      <Name>Notes List</Name>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="6" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0" DocCommands="0" FlipMode="224" ListCommands="0">
+      <Name>GENERATED DOCUMENTS</Name>
+      <CustomName>GENERATED DOCUMENTS</CustomName>
+      <Binding SchemaName="annotation.@virtual"/>
+      <Views>&lt;extra&gt;&lt;views&gt;annotation.@Documents&lt;/views&gt;&lt;filter entity="annotation"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="annotation"&amp;gt;&amp;lt;link-entity name="resco_questionnaireanswer" from="resco_questionnaireanswerid" to="objectid" link-type="inner" alias="L0"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="resco_regardingid" operator="eq" value="{{activityid}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="6" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0" FlipMode="224">
+      <Name>INSPECTIONS</Name>
+      <CustomName>INSPECTIONS</CustomName>
+      <Binding SchemaName="resco_questionnaire.@virtual"/>
+      <Views>&lt;extra&gt;&lt;views&gt;resco_questionnaire.@Answered Questionnaires&lt;/views&gt;&lt;filter entity="resco_questionnaire"&gt;&amp;lt;fetch&amp;gt;&amp;lt;entity name="resco_questionnaire"&amp;gt;	&amp;lt;filter type="and"&amp;gt;		&amp;lt;condition attribute='resco_istemplate' operator='eq' value='0' /&amp;gt;		&amp;lt;filter type="or"&amp;gt;			&amp;lt;condition attribute="resco_regardingid" operator="eq" value="{{activityid}}"/&amp;gt;			&amp;lt;condition attribute="resco_rawidvalue" entityname="QuestionLinkAlias" operator="eq" value="{{activityid}}"/&amp;gt;		&amp;lt;/filter&amp;gt;	&amp;lt;/filter&amp;gt;&amp;lt;link-entity name="resco_question" alias="QuestionLinkAlias" from="resco_questionnaireid" to="resco_questionnaireid" link-type="outer"/&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+      <LookupViews>&lt;extra&gt;&lt;views&gt;resco_questionnaire.Templates&lt;/views&gt;&lt;filter entity="resco_questionnaire"&gt;&amp;lt;fetch&amp;gt;&amp;lt;entity name='resco_questionnaire'&amp;gt;&amp;lt;filter&amp;gt;&amp;lt;condition attribute='resco_istemplate' operator='eq' value='1' /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="6" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0" DocCommands="0" FlipMode="224" ListCommands="0">
+      <Name>INSPECTION REPORTS</Name>
+      <CustomName>INSPECTION REPORTS</CustomName>
+      <Binding SchemaName="annotation.@virtual"/>
+      <Views>&lt;extra&gt;&lt;views&gt;annotation.@Reports&lt;/views&gt;&lt;filter entity="annotation"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="annotation"&amp;gt;&amp;lt;link-entity name="resco_questionnaire" from="resco_questionnaireid" to="objectid" link-type="inner" alias="L0"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="resco_regardingid" operator="eq" value="{{activityid}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;link-entity name="resco_question" from="resco_questionnaireid" to="resco_questionnaireid" link-type="outer" alias="L2"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="resco_rawidvalue" operator="eq" value="{{activityid}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="0" flexiHeight="10" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0" FlipMode="224">
+      <Name>NOTES</Name>
+      <CustomName>NOTES</CustomName>
       <Binding SchemaName="annotation.objectid"/>
+      <Views>annotation.@Default</Views>
     </FormTab>
   </SerializedChildrenV2>
+  <FormPages>
+    <FormPages layoutstrict="1" singlecardexpand="0" fleximode="2" iconposition="0">
+      <Name>DETAILS</Name>
+      <IconName></IconName>
+      <TabIndexes>
+        <int>0</int>
+        <int>1</int>
+        <int>2</int>
+        <int>3</int>
+        <int>4</int>
+      </TabIndexes>
+    </FormPages>
+    <FormPages layoutstrict="1" singlecardexpand="0" fleximode="0" iconposition="0">
+      <Name>NOTES</Name>
+      <IconName></IconName>
+      <TabIndexes>
+        <int>5</int>
+      </TabIndexes>
+    </FormPages>
+  </FormPages>
 </EntityForm>
