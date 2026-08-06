@@ -13,7 +13,7 @@
   <Kind>List</Kind>
   <IsDefault>true</IsDefault>
   <AutoWideWidth>0</AutoWideWidth>
-  <OrderBy>modifiedon</OrderBy>
+  <OrderBy>resco_name</OrderBy>
   <FilterAllowedFields>createdby;createdon;resco_name;resco_publishedon;resco_templateid;resco_version;statuscode</FilterAllowedFields>
   <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <SerializedBindings>
@@ -41,30 +41,63 @@
       </filter>
     </entity>
   </Fetch>
+  <Search>
+    <attribute schema="resco_name" method="Contains"/>
+    <attribute schema="resco_description" method="Contains"/>
+  </Search>
   <SerializedTemplates>
     <RowTemplate>
       <DesignWidth>320</DesignWidth>
       <DesignHeight>48</DesignHeight>
       <Name>Default</Name>
       <Width>320</Width>
-      <Height>90</Height>
+      <Height>70</Height>
+      <NextTemplateName>800px</NextTemplateName>
       <SerializedChildren>
         <CellTemplate SchemaName="#Name">
-          <StyleName>0102 h2</StyleName>
-          <Bounds>75,15,240,21</Bounds>
+          <StyleName>primary</StyleName>
+          <Bounds>70,10,240,30</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="#Description">
-          <StyleName>0103 p grey</StyleName>
-          <Bounds>75,39,240,39</Bounds>
+          <StyleName>gray</StyleName>
+          <Bounds>70,40,240,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="inspections.green">
           <IsConstant>true</IsConstant>
           <StyleName>QuestionnaireIcon</StyleName>
-          <Bounds>15,15,42,42</Bounds>
+          <Bounds>10,10,50,50</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>800px</Name>
+      <Width>800</Width>
+      <Height>50</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="#Name">
+          <StyleName>primary</StyleName>
+          <Bounds>50,10,300,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="#Description">
+          <StyleName>primary</StyleName>
+          <Bounds>360,10,430,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="inspections.green">
+          <IsConstant>true</IsConstant>
+          <StyleName>QuestionnaireIcon</StyleName>
+          <Bounds>10,10,30,30</Bounds>
           <CellKind>1</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>

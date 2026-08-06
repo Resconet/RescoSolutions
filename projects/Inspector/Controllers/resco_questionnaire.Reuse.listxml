@@ -16,6 +16,7 @@
   <SerializedBindings>
     <string>createdby</string>
     <string>createdon</string>
+    <string>resco_description</string>
     <string>resco_featureversion</string>
     <string>resco_istemplate</string>
     <string>resco_localization</string>
@@ -28,37 +29,66 @@
     <string>resco_templateid.resco_questionnaire.resco_options</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
-  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.resco_istemplate&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:0&lt;/arg&gt;&lt;/condition&gt;&lt;group e="true" op="Or"&gt;&lt;group e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.resco_templatedependent&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:1&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.(resco_templateid.resco_questionnaire.resco_options)&lt;/var&gt;&lt;op&gt;Contains&lt;/op&gt;&lt;arg&gt;Memo:&amp;quot;copyStaticImages&amp;quot;:false&lt;/arg&gt;&lt;/condition&gt;&lt;/group&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.resco_options&lt;/var&gt;&lt;op&gt;Contains&lt;/op&gt;&lt;arg&gt;Memo:&amp;quot;copyStaticImages&amp;quot;:false&lt;/arg&gt;&lt;/condition&gt;&lt;/group&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Row.(inspections.green).Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:0112 green&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <Fetch version="1.0">
+    <entity name="resco_questionnaire"/>
+  </Fetch>
+  <Search>
+    <attribute schema="resco_name" method="Contains"/>
+    <attribute schema="resco_description" method="Contains"/>
+  </Search>
   <SerializedTemplates>
     <RowTemplate>
       <DesignWidth>320</DesignWidth>
       <DesignHeight>48</DesignHeight>
       <Name>Default</Name>
       <Width>320</Width>
-      <Height>52</Height>
+      <Height>70</Height>
+      <NextTemplateName>800px</NextTemplateName>
       <SerializedChildren>
         <CellTemplate SchemaName="#Name">
-          <StyleName>0102 h2</StyleName>
-          <Bounds>62,2,250,28</Bounds>
+          <StyleName>primary</StyleName>
+          <Bounds>70,10,240,30</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="createdby">
-          <StyleName>0103 p grey</StyleName>
-          <Bounds>62,31,131,15</Bounds>
-          <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
-        </CellTemplate>
-        <CellTemplate SchemaName="createdon">
-          <StyleName>0103 p grey</StyleName>
-          <Bounds>194,31,117,15</Bounds>
+        <CellTemplate SchemaName="resco_description">
+          <StyleName>gray</StyleName>
+          <Bounds>70,40,240,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>15</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="inspections.green">
           <IsConstant>true</IsConstant>
           <StyleName>QuestionnaireIcon</StyleName>
-          <Bounds>9,3,42,42</Bounds>
+          <Bounds>10,10,50,50</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>800px</Name>
+      <Width>800</Width>
+      <Height>50</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="#Name">
+          <StyleName>primary</StyleName>
+          <Bounds>50,10,300,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resco_description">
+          <StyleName>primary</StyleName>
+          <Bounds>360,10,430,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>15</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="inspections.green">
+          <IsConstant>true</IsConstant>
+          <StyleName>QuestionnaireIcon</StyleName>
+          <Bounds>10,10,30,30</Bounds>
           <CellKind>1</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
