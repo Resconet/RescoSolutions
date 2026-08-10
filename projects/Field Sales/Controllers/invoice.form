@@ -8,7 +8,7 @@
   <IsBulkUpdateForm>false</IsBulkUpdateForm>
   <CacheMode>-1</CacheMode>
   <UiSyncGuardMode>-1</UiSyncGuardMode>
-  <PrimaryCommands>GetProducts|||ChangeState||2;3|RunMobileReport|Invoice PDF|fc62488a-6e7e-f011-b4cb-6045bd92fd6a</PrimaryCommands>
+  <PrimaryCommands>GetProducts|||ChangeState||2;3</PrimaryCommands>
   <SharedVariableNames/>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
   <SerializedChildrenV2>

@@ -10,12 +10,12 @@
   <colors name="TitleBackground" token="primary" color="PAL:3"/>
   <colors name="TitleForeground" token="onPrimary" color="PAL:5"/>
   <colors name="ListHeaderForeground" token="onPrimary" color="PAL:5"/>
-  <colors name="ListHeaderBackground" token="onPrimaryContainer" color="PAL:6"/>
-  <colors name="SearchBackground" token="surfaceVariant" color="PAL:7"/>
-  <colors name="SearchForeground" token="onSurfaceVariant" color="PAL:8"/>
+  <colors name="ListHeaderBackground" token="primary" color="PAL:3"/>
+  <colors name="SearchBackground" token="inverseOnSurface" color="PAL:4"/>
+  <colors name="SearchForeground" token="onSurfaceVariant" color="PAL:6"/>
   <colors name="SearchSelForeground" token="primary" color="PAL:3"/>
-  <colors name="TabBackground" token="inverseOnSurface" color="PAL:4"/>
-  <colors name="TabForeground" token="inverseSurface" color="PAL:9"/>
+  <colors name="TabBackground" token="surfaceVariant" color="PAL:7"/>
+  <colors name="TabForeground" token="secondary" color="PAL:8"/>
   <colors name="TabSelForeground" token="primary" color="PAL:3"/>
   <colors name="CardBackground" token="surface" color="PAL:0"/>
   <colors name="CardForeground" token="onSurface" color="PAL:2"/>
@@ -26,20 +26,20 @@
   <colors name="FormItemBackground" token="surface" color="PAL:0"/>
   <colors name="FormItemForeground" token="onSurface" color="PAL:2"/>
   <colors name="FormItemLabelForeground" token="onSurface" color="PAL:2"/>
-  <colors name="FormItemDisabled" token="onSurfaceVariant" color="PAL:8"/>
+  <colors name="FormItemDisabled" token="onSurfaceVariant" color="PAL:6"/>
   <colors name="FormItemSelectedBackground" token="primaryContainer" color="PAL:1"/>
   <colors name="FormItemSelectedForeground" token="primary" color="PAL:3"/>
   <colors name="FormItemLink" token="primary" color="PAL:3"/>
   <colors name="FormItemSeparator" token="surface" color="PAL:0"/>
   <colors name="FormItemButton" token="primary" color="PAL:3"/>
-  <colors name="FormItemBorder" token="outline" color="PAL:10"/>
+  <colors name="FormItemBorder" token="outline" color="PAL:9"/>
   <colors name="FormItemSupportingTextForeground" token="onSurface" color="PAL:2"/>
-  <colors name="FormError" token="error" color="PAL:11"/>
+  <colors name="FormError" token="error" color="PAL:10"/>
   <colors name="GridBackground" token="surface" color="PAL:0"/>
   <colors name="GridBorder" token="onPrimary" color="PAL:5"/>
   <colors name="HomeListBackground" token="inverseOnSurface" color="PAL:4"/>
   <colors name="HomeListSelBackground" token="primaryContainer" color="PAL:1"/>
-  <colors name="HomeListForeground" token="onPrimaryContainer" color="PAL:6"/>
+  <colors name="HomeListForeground" token="onPrimaryContainer" color="PAL:11"/>
   <colors name="HomeListSelForeground" token="primary" color="PAL:3"/>
   <colors name="HomeListSeparator" color="PAL:12"/>
   <colors name="BrandColor" color="PAL:13"/>
@@ -49,12 +49,12 @@
   <palette>4281818281</palette>
   <palette>4294111476</palette>
   <palette>4294967295</palette>
-  <palette>4278196549</palette>
-  <palette>4292993772</palette>
   <palette>4282664527</palette>
-  <palette>4281348148</palette>
+  <palette>4292993772</palette>
+  <palette>4283915889</palette>
   <palette>4285888384</palette>
   <palette>4290386458</palette>
+  <palette>4278196549</palette>
   <palette>16777215</palette>
   <palette>4282212265</palette>
   <tokens name="primary" dark="false" color="4281818281"/>

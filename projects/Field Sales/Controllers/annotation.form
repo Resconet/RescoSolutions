@@ -1,4 +1,4 @@
-﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="1" fleximode="1" fullscreen="0" resize="0" version="2" layoutstrict="1" singlecardexpand="0" pagesposition="0" pageiconposition="0">
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="1" fleximode="2" fullscreen="0" resize="0" version="2" layoutstrict="1" singlecardexpand="0" pagesposition="1" pageiconposition="0">
   <IsContactForm>false</IsContactForm>
   <EntityName>annotation</EntityName>
   <CamelCase>Annotation</CamelCase>
@@ -10,20 +10,17 @@
   <SharedVariableNames/>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
   <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab" flexiHeader="0" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
-      <Name>General</Name>
+    <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>DETAILS</Name>
       <SerializedChildren>
         <DetailItem SchemaName="subject"/>
         <DetailItem SchemaName="notetext"/>
-        <DetailItem SchemaName="filesize"/>
-        <DetailItem SchemaName="mimetype"/>
-        <DetailItem SchemaName="objecttypecode"/>
       </SerializedChildren>
     </FormTab>
   </SerializedChildrenV2>
   <FormPages>
-    <FormPages layoutstrict="1" singlecardexpand="0" fleximode="1" iconposition="0">
-      <Name>Page</Name>
+    <FormPages layoutstrict="1" singlecardexpand="0" fleximode="2" iconposition="0">
+      <Name>DETAILS</Name>
       <IconName></IconName>
       <TabIndexes>
         <int>0</int>
