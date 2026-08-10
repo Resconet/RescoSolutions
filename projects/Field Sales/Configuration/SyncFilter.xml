@@ -54,4 +54,11 @@
   <fetch version="1.0">
     <entity name="product"/>
   </fetch>
+  <fetch version="1.0">
+    <entity name="resco_mobilereport">
+      <filter type="and">
+        <condition attribute="statuscode" operator="eq" value="1"/>
+      </filter>
+    </entity>
+  </fetch>
 </fetchcollection>
