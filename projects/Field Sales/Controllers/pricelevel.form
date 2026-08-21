@@ -34,6 +34,7 @@
       <Name>PRICE LIST ITEMS</Name>
       <CustomName>PRICE LIST ITEMS</CustomName>
       <Binding SchemaName="productpricelevel.pricelevelid"/>
+      <Views>productpricelevel.*:productpricelevel.@Default</Views>
     </FormTab>
   </SerializedChildrenV2>
   <FormPages>
