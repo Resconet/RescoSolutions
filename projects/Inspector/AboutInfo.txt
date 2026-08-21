@@ -1,6 +1,6 @@
 ﻿Manufacturer=Resco
-ProductTitle=RESCO FORMS
-ProductSubTitle=
+ProductTitle=Resco Forms
+ProductSubTitle=For Microsoft Power Platform and Dynamics 365
 PoweredBy=Powered by Resco.Net
 Icon=Logo.Logo.png
 Website=www.resco.net
