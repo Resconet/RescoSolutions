@@ -1,5 +1,5 @@
 ﻿Manufacturer=Resco
-ProductTitle=FIELD SALES
+ProductTitle=Field Sales
 ProductSubTitle=For Microsoft Dynamics 365 Sales
 PoweredBy=Powered by Resco.Net
 Icon=Logo.Logo.png

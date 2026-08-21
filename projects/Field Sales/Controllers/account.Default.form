@@ -15,25 +15,25 @@
     <FormTab xsi:type="DetailTab" flexiHeader="2" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>DETAILS</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="name" Style="Table">
+        <DetailItem SchemaName="name">
           <GridPosition>0;0;2;1</GridPosition>
         </DetailItem>
-        <DetailItem SchemaName="emailaddress1" Style="Table">
+        <DetailItem SchemaName="emailaddress1">
           <GridPosition>0;1;2;1</GridPosition>
         </DetailItem>
-        <DetailItem SchemaName="websiteurl" Style="Table">
+        <DetailItem SchemaName="websiteurl">
           <GridPosition>0;2;2;1</GridPosition>
         </DetailItem>
-        <DetailItem SchemaName="telephone1" Style="Table">
+        <DetailItem SchemaName="telephone1">
           <GridPosition>0;3;2;1</GridPosition>
         </DetailItem>
-        <DetailItem SchemaName="industrycode" Style="Table">
+        <DetailItem SchemaName="industrycode">
           <GridPosition>0;4;2;1</GridPosition>
         </DetailItem>
-        <DetailItem SchemaName="transactioncurrencyid" Style="Table">
+        <DetailItem SchemaName="transactioncurrencyid">
           <GridPosition>0;6;2;1</GridPosition>
         </DetailItem>
-        <DetailItem SchemaName="defaultpricelevelid" Style="Table">
+        <DetailItem SchemaName="defaultpricelevelid">
           <GridPosition>0;7;2;1</GridPosition>
         </DetailItem>
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
@@ -59,7 +59,7 @@
           <Columns>*;*</Columns>
           <Rows>Auto;Auto;Auto;Auto;Auto</Rows>
           <Items>
-            <DetailItem SchemaName="address1_line1" Style="Table">
+            <DetailItem SchemaName="address1_line1">
               <GridPosition>0;0;2;1</GridPosition>
             </DetailItem>
             <DetailItem SchemaName="address1_line2">
@@ -68,16 +68,16 @@
             <DetailItem SchemaName="address1_line3">
               <GridPosition>0;2;2;1</GridPosition>
             </DetailItem>
-            <DetailItem SchemaName="address1_city" Style="Table">
+            <DetailItem SchemaName="address1_city">
               <GridPosition>0;3;1;1</GridPosition>
             </DetailItem>
-            <DetailItem SchemaName="address1_postalcode" Style="Table">
+            <DetailItem SchemaName="address1_postalcode">
               <GridPosition>1;3;1;1</GridPosition>
             </DetailItem>
-            <DetailItem SchemaName="address1_stateorprovince" Style="Table">
+            <DetailItem SchemaName="address1_stateorprovince">
               <GridPosition>0;4;1;1</GridPosition>
             </DetailItem>
-            <DetailItem SchemaName="address1_country" Style="Table">
+            <DetailItem SchemaName="address1_country">
               <GridPosition>1;4;1;1</GridPosition>
             </DetailItem>
           </Items>

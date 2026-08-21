@@ -6,7 +6,7 @@
   <Name>Default</Name>
   <Kind>List</Kind>
   <AutoWideWidth>0</AutoWideWidth>
-  <OrderBy></OrderBy>
+  <OrderBy>productid</OrderBy>
   <SerializedBindings>
     <string>amount</string>
     <string>productid</string>
@@ -14,6 +14,9 @@
     <string>uomid</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
+  <Search>
+    <attribute schema="productid" method="Contains" reference="true"/>
+  </Search>
   <SerializedTemplates>
     <RowTemplate>
       <DesignWidth>320</DesignWidth>

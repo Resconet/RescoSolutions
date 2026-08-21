@@ -1,0 +1,53 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>productpricelevel</EntityName>
+    <CamelCase>productpricelevel</CamelCase>
+  </Attributes>
+  <Name>Grid</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>productid</OrderBy>
+  <SerializedBindings>
+    <string>amount</string>
+    <string>productid</string>
+    <string>productpricelevelid</string>
+    <string>uomid</string>
+  </SerializedBindings>
+  <MaxColumns>1000</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="productpricelevel"/>
+  </Fetch>
+  <Search>
+    <attribute schema="productid" method="Contains" reference="true"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>120</Width>
+      <Height>200</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="img">
+          <IsConstant>true</IsConstant>
+          <StyleName>ProductEntityImage</StyleName>
+          <Bounds>10,10,100,80</Bounds>
+          <CellKind>1</CellKind>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="productid">
+          <StyleName>primary small</StyleName>
+          <Bounds>10,140,100,50</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="amount">
+          <StyleName>primary bold</StyleName>
+          <Bounds>10,100,100,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>
