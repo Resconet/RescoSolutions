@@ -80,25 +80,25 @@
           <Columns>*;*</Columns>
           <Rows>Auto;Auto;Auto;Auto</Rows>
           <Items>
-            <DetailItem SchemaName="shipto_line1" Style="Table">
+            <DetailItem SchemaName="shipto_line1">
               <GridPosition>0;0;2;1</GridPosition>
             </DetailItem>
-            <DetailItem SchemaName="shipto_line2" Style="Table">
+            <DetailItem SchemaName="shipto_line2">
               <GridPosition>0;1;1;1</GridPosition>
             </DetailItem>
-            <DetailItem SchemaName="shipto_line3" Style="Table">
+            <DetailItem SchemaName="shipto_line3">
               <GridPosition>1;1;1;1</GridPosition>
             </DetailItem>
-            <DetailItem SchemaName="shipto_city" Style="Table">
+            <DetailItem SchemaName="shipto_city">
               <GridPosition>0;2;1;1</GridPosition>
             </DetailItem>
-            <DetailItem SchemaName="shipto_postalcode" Style="Table">
+            <DetailItem SchemaName="shipto_postalcode">
               <GridPosition>1;2;1;1</GridPosition>
             </DetailItem>
-            <DetailItem SchemaName="shipto_stateorprovince" Style="Table">
+            <DetailItem SchemaName="shipto_stateorprovince">
               <GridPosition>0;3;1;1</GridPosition>
             </DetailItem>
-            <DetailItem SchemaName="shipto_country" Style="Table">
+            <DetailItem SchemaName="shipto_country">
               <GridPosition>1;3;1;1</GridPosition>
             </DetailItem>
           </Items>
