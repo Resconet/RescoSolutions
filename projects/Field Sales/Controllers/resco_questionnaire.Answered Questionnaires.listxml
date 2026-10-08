@@ -17,6 +17,7 @@
   <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;SharedVariable usage="None"&gt;&lt;Name&gt;sharedVarCompletionStatus&lt;/Name&gt;&lt;CrmType&gt;String&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <SerializedBindings>
     <string>resco_completionstatus</string>
+    <string>createdby</string>
     <string>createdon</string>
     <string>resco_description</string>
     <string>resco_featureversion</string>
@@ -24,7 +25,6 @@
     <string>resco_istemplate</string>
     <string>resco_languagecode</string>
     <string>resco_localization</string>
-    <string>modifiedby</string>
     <string>modifiedon</string>
     <string>resco_name</string>
     <string>resco_options</string>
@@ -66,7 +66,7 @@
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="modifiedby">
+        <CellTemplate SchemaName="createdby">
           <StyleName>gray</StyleName>
           <Bounds>70,40,120,20</Bounds>
           <CellKind>0</CellKind>
@@ -106,7 +106,7 @@
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="modifiedby">
+        <CellTemplate SchemaName="createdby">
           <StyleName>primary</StyleName>
           <Bounds>480,10,150,30</Bounds>
           <CellKind>0</CellKind>
