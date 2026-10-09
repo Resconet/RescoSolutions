@@ -18,7 +18,6 @@
     <string>createdby</string>
     <string>createdon</string>
     <string>resco_languagecode</string>
-    <string>modifiedby</string>
     <string>modifiedon</string>
     <string>resco_name</string>
     <string>resco_questionnaireanswerid</string>
@@ -52,7 +51,7 @@
           <CellKind>0</CellKind>
           <Anchor>12</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="modifiedby">
+        <CellTemplate SchemaName="createdby">
           <StyleName>gray</StyleName>
           <Bounds>70,40,120,20</Bounds>
           <CellKind>0</CellKind>
@@ -92,7 +91,7 @@
           <CellKind>0</CellKind>
           <Anchor>12</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="modifiedby">
+        <CellTemplate SchemaName="createdby">
           <StyleName>primary</StyleName>
           <Bounds>480,10,150,30</Bounds>
           <CellKind>0</CellKind>
