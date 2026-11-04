@@ -1,0 +1,134 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>resco_questionnaireanswer</EntityName>
+    <CamelCase>resco_questionnaireanswer</CamelCase>
+    <ClassBinding>
+      <SerializedClassBinding name="#Name" label="Localized Name" type="String"/>
+      <SerializedClassBinding name="#Description" label="Localized Description" type="String"/>
+      <SerializedClassBinding name="#LocalizedResult" label="Localized Result" type="String"/>
+    </ClassBinding>
+  </Attributes>
+  <Name>Default</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>!modifiedon</OrderBy>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;SharedVariable usage="None"&gt;&lt;Name&gt;sharedVarCompletionStatus&lt;/Name&gt;&lt;CrmType&gt;String&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SerializedBindings>
+    <string>resco_completionstatus</string>
+    <string>createdby</string>
+    <string>createdon</string>
+    <string>resco_languagecode</string>
+    <string>modifiedon</string>
+    <string>resco_name</string>
+    <string>resco_questionnaireanswerid</string>
+    <string>resco_regardingidlabel</string>
+    <string>resco_result</string>
+    <string>resco_score</string>
+    <string>statuscode</string>
+    <string>resco_templateid</string>
+    <string>resco_templateid.resco_questionnaire.resco_featureversion</string>
+    <string>resco_templateid.resco_questionnaire.resco_localization</string>
+    <string>resco_templateid.resco_questionnaire.resco_options</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="Or"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.resco_completionstatus&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.resco_completionstatus&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.sharedVarCompletionStatus&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:In Progress&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row. .Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:RedTag1&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.resco_completionstatus&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Integer:1&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.sharedVarCompletionStatus&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Completed&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row. .Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:GreenTag1&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.resco_completionstatus&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Integer:2&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.sharedVarCompletionStatus&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Canceled&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Row. .Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Color Gray&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <Fetch version="1.0">
+    <entity name="resco_questionnaireanswer"/>
+  </Fetch>
+  <Search>
+    <attribute schema="resco_name" method="Contains"/>
+    <attribute schema="resco_regardingidlabel" method="Contains"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>70</Height>
+      <NextTemplateName>Default_800px</NextTemplateName>
+      <SerializedChildren>
+        <CellTemplate SchemaName="#Name">
+          <StyleName>primary</StyleName>
+          <Bounds>70,10,240,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="createdby">
+          <StyleName>gray</StyleName>
+          <Bounds>70,40,120,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="modifiedon">
+          <StyleName>r_gray</StyleName>
+          <Bounds>190,40,120,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName=" ">
+          <IsConstant>true</IsConstant>
+          <StyleName>Color Gray</StyleName>
+          <Bounds>20,15,20,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="sharedVarCompletionStatus">
+          <StyleName>gray</StyleName>
+          <Bounds>0,43,60,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default_800px</Name>
+      <Width>800</Width>
+      <Height>50</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="#Name">
+          <StyleName>primary</StyleName>
+          <Bounds>70,10,200,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="createdby">
+          <StyleName>primary</StyleName>
+          <Bounds>480,10,150,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="modifiedon">
+          <StyleName>r_gray</StyleName>
+          <Bounds>640,10,150,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName=" ">
+          <IsConstant>true</IsConstant>
+          <StyleName>Color Gray</StyleName>
+          <Bounds>20,8,20,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="sharedVarCompletionStatus">
+          <StyleName>gray</StyleName>
+          <Bounds>0,33,60,12</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resco_regardingidlabel">
+          <StyleName>primary</StyleName>
+          <Bounds>280,10,190,30</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>12</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties>
+    <SerializedClassBinding name="sharedVarCompletionStatus" label="Shared.sharedVarCompletionStatus" type="String"/>
+  </CustomProperties>
+</EntityList>
